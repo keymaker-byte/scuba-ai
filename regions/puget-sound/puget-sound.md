@@ -38,22 +38,9 @@ Ordered by what actually kills a dive plan in the Sound:
 2. **Wind** (secondary). Wind decides whether the entry is diveable at all: chop on the entry, surf on the beach, a surface swim into a fetch. Wind against current is worse than either alone. Get the forecast for the beach, not the region.
 3. **Viz** (informational). Won't stop the dive, but sets expectations and gear (torch, reel).
 
-## Depth convention: normalized to MLLW
-
-Depth is not a property of a site. The seabed is fixed, the surface is not, and the Sound swings 3 to 4 m between high and low water, so an un-normalized depth is not comparable to any other dive. Every depth worth keeping is normalized to the MLLW datum, the datum NOAA charts and predictions use. Never mix datums.
-
-```
-depth below MLLW datum  =  observed depth (computer)  -  tide height at that moment
-depth below surface     =  datum depth                +  predicted tide height
-```
-
-Tide height is signed. It goes negative on a minus tide, so a low-water dive reads shallower than the site's datum depth; subtracting a negative makes the datum depth the deeper number.
-
 ## Hood Canal
 
 A fjord, not a sound: a narrow trench separating the Kitsap Peninsula from the Olympic Peninsula, entered between Foulweather Bluff and Tala Point south of Admiralty Inlet. It runs about 80 km southwest to Union, turns sharply northeast at the Great Bend, and continues about 24 km to Belfair, ending in the shallow tidelands of Lynch Cove. Average width is about 2.4 km, mean depth about 54 m, maximum depth about 180 m. Dabob Bay is the largest bay off it, and the Skokomish, Hamma Hamma, Duckabush, Dosewallips and Big Quilcene come in off the Olympics.
-
-The shape is the reason for everything below: a long narrow basin behind a shallow sill flushes poorly and resonates, which gives the canal both its hypoxia and its unusual tidal behaviour. Three things follow, and all three bite in planning.
 
 - **Dissolved oxygen is genuinely low.** It has fallen from 5 to 6 mg/L in the 1950s to under 0.2 mg/L in places this century, with recurring fish kills, worst in the southern reaches and Lynch Cove and worst in late summer and autumn. Not a diver safety issue directly, but it changes what is alive at depth and is why a wall can look bare below a certain contour.
 - **Slack falls at high and low water.** This reach behaves as a standing wave, so slack sits within about half an hour of the tide extremes rather than midway between them. This is the exception to the region rule that high water is not slack. It matters because almost nothing in the canal has a governing current station: the nearest one publishing predictions is Hazel Point (PUG1601) up at the entrance. With no station, the tide extremes at the governing tide station are the slack guide. Apply this rule only if you are further into the Hood Canal, closer to the entrance might still behave as the rest of Puget Sound.
