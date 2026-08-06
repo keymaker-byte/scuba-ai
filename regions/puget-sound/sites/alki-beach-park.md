@@ -89,3 +89,43 @@ The bottom is an even slope from an eelgrass band in the shallows, across the to
 * **Sea stars.** A wide star fauna over the sand and structure, including sunflower, morning sun, Stimpson's sun, leather, spiny, purple and equal sea stars.
 * **Invertebrates.** White plumose and aggregating anemones, orange sea pens standing in the sand, light-bulb tunicates, striped and frosted nudibranchs, kelp crabs, red rock crabs, hermit crabs, moon snails and geoduck clams.
 * **Eelgrass shallows.** A thick eelgrass band runs along the shallows to the top of the slope, nursery habitat that shelters small animals and holds the safety-stop interest around the old boardwalk pilings.
+
+## Site map
+
+The junkyard debris runs along a guide rope for about 165 m, laid out roughly parallel to the beach rather than straight out from it. The entry swim meets the rope close to its middle, near the old crab pots at around the 109 m mark, not at either end, so a diver working the rope goes west toward the wheel hub and the cylinder spur, or east toward the tire pile, and returns along the same stretch either way. Distances in the table below are measured along the rope from its western end in the eelgrass, not from the beach. A looser scatter of debris, read as broken bottles and a submerged bathtub, lies off the rope to the north in slightly deeper water, and the piling stubs described under Navigation and landmarks sit in the shallows west of where the rope begins.
+
+```
+ west end                                                                    east end
+   A────────────B───────C──────────D──────────E─────────F─────G────────────H───────I
+                                                     │
+                                                     │  swim from the entry
+                                                     ▼
+                                                     ●  stairs, Alki Avenue SW
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                Alki Avenue SW, boardwalk and parking
+```
+
+| Point | Along rope | Feature | Below MLLW |
+|---|---|---|---|
+| A | 0 m | West end of the rope, top of the eelgrass | 15 m |
+|  | 7 m | Teapot | 15 m |
+|  | 13 m | Half buried log | 15 m |
+|  | 16 m | Cinderblock pile | 15 m |
+| B | 26 m | Big cylinder on its side, on a short spur | 17 m |
+|  | 38 m | Blocks with chains, on the same spur | 17 m |
+| C | 43 m | Wheel hub, the junction with the shore swim line | 15 m |
+|  | 46 m | Pile of pipes, I beams and cinderblock | 15 m |
+|  | 49 m | Upside down bathtub | 15 m |
+|  | 52 m | Columnar drums, read as the innards of a washing machine | 14 m |
+|  | 62 m | Buoy rope, about 3 m tall | 13 m |
+| D | 67 m | A block with ropes attached | 13 m |
+|  | 78 m | Sphere piles and loose wheels | 13 m |
+|  | 85 m | Grating pile | 13 m |
+| E | 89 m | Second wheel hub | 13 m |
+|  | 97 m | Short log | 13 m |
+| F | 109 m | Old crab pots, roughly where the entry swim meets the rope | 13 m |
+|  | 114 m | A second grating pile, possibly more crab pots | 13 m |
+| G | 121 m | Spheres and sphere piles | 12 m |
+|  | 127 m | A frame built of PVC | 12 m |
+| H | 149 m | Loose tires | 10 m |
+| I | 165 m | Large tire pile, the end of the rope | 10 m |

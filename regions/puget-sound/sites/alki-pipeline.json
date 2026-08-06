@@ -2,6 +2,7 @@
   "slug": "alki-pipeline",
   "lat": 47.57219,
   "lon": -122.42109,
+  "tz": "America/Los_Angeles",
   "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
   "extracted_utc": "2026-07-18T23:15:29Z",
   "water_depth_m": 18.0,

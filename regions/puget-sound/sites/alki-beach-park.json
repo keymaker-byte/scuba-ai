@@ -2,6 +2,7 @@
   "slug": "alki-beach-park",
   "lat": 47.57968,
   "lon": -122.4145,
+  "tz": "America/Los_Angeles",
   "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
   "extracted_utc": "2026-07-18T23:15:28Z",
   "water_depth_m": 17.0,

@@ -2,6 +2,7 @@
   "slug": "seacrest-cove-2",
   "lat": 47.58932,
   "lon": -122.37826,
+  "tz": "America/Los_Angeles",
   "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
   "extracted_utc": "2026-07-20T03:57:48Z",
   "water_depth_m": 24.3,

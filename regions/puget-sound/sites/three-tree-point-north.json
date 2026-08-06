@@ -2,6 +2,7 @@
   "slug": "three-tree-point-north",
   "lat": 47.45336,
   "lon": -122.38006,
+  "tz": "America/Los_Angeles",
   "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
   "extracted_utc": "2026-07-18T23:15:41Z",
   "water_depth_m": 32.0,

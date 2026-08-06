@@ -20,8 +20,9 @@ import re
 import sys
 import time
 import urllib.request
-from datetime import date, timedelta
+from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 HOME = "https://pnwdiving.com/"
 CACHE = Path(__file__).parent / ".cache" / "pnwdiving_home.html"
@@ -38,6 +39,9 @@ def _cfg(key, default):
 
 CACHE_HOURS = _cfg("cache_hours", 6)
 FT = 0.3048
+# pnwdiving.com reports are all Pacific Northwest sites, dated in the site's own local time;
+# "today" must be reckoned in that zone, not whatever zone this script happens to run in.
+DEFAULT_TZ = _cfg("default_tz", "America/Los_Angeles")
 
 # Qualitative words the community uses, worst to best.
 QUALITY = ["chunky", "silty", "murky", "hazy", "clear"]
@@ -127,10 +131,17 @@ def main():
     p.add_argument("--max-age", type=int, default=99, metavar="DAYS")
     p.add_argument("--refresh", action="store_true")
     p.add_argument("--raw", action="store_true", help="keep feet as reported, no conversion")
+    p.add_argument("--tz", default=DEFAULT_TZ,
+                   help=f"IANA timezone the reports are dated in, default {DEFAULT_TZ}")
     a = p.parse_args()
 
+    try:
+        tz = ZoneInfo(a.tz)
+    except Exception:
+        sys.exit(f"Unknown timezone '{a.tz}'. Pass an IANA name, e.g. America/Los_Angeles.")
+
     rows = parse(fetch(a.refresh))
-    today = date.today()
+    today = datetime.now(tz).date()
 
     rows = [r for r in rows if age_days(r["updated"]) <= a.max_age]
     if a.site:

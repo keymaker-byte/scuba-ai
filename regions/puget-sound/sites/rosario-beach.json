@@ -2,6 +2,7 @@
   "slug": "rosario-beach",
   "lat": 48.41745,
   "lon": -122.6668,
+  "tz": "America/Los_Angeles",
   "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
   "extracted_utc": "2026-07-18T23:15:39Z",
   "water_depth_m": 10.0,

@@ -2,6 +2,7 @@
   "slug": "mukilteo-t-dock",
   "lat": 47.95029,
   "lon": -122.30297,
+  "tz": "America/Los_Angeles",
   "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
   "extracted_utc": "2026-07-18T23:15:37Z",
   "water_depth_m": 20.0,

@@ -2,6 +2,7 @@
   "slug": "scenic-beach",
   "lat": 47.65104,
   "lon": -122.85048,
+  "tz": "America/Los_Angeles",
   "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
   "extracted_utc": "2026-07-20T02:15:45Z",
   "water_depth_m": 18.2,

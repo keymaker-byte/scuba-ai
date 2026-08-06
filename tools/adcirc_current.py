@@ -9,16 +9,20 @@ asymmetry of real rapids, so treat it as the big picture, not the last word.
 
 Two use cases, two paths:
 
-  extract SLUG --near LAT LON [--water-depth M]
+  extract SLUG --near LAT LON --tz ZONE [--water-depth M]
                                   pull the harmonic constituents at a site from the database
                                   (writes SLUG.json beside the site's SLUG.md in
                                   regions/<region>/sites/). Needed once when writing a new
-                                  site file. Pass --water-depth (m below MLLW, from
-                                  ncei_depth.py) to enable depth scaling. Downloads the
-                                  ~700 MB database on first use if tools/db/ is empty.
-  predict SLUG [--date D] [--depth M]   slack / max flood / max ebb from the site's extract
-  window  SLUG [--date D] [--depth M]   diveable windows under a speed threshold
-  at      SLUG --time "..." [--depth M] instantaneous current vector
+                                  site file. --tz is the site's own IANA timezone (e.g.
+                                  America/Los_Angeles, America/New_York); it is stored in the
+                                  extract so every later prediction runs in the site's own
+                                  local time, not a workspace-wide guess. Pass --water-depth
+                                  (m below MLLW, from ncei_depth.py) to enable depth scaling.
+                                  Downloads the ~700 MB database on first use if tools/db/ is
+                                  empty.
+  predict SLUG [--date D] [--depth M] [--tz ZONE]   slack / max flood / max ebb
+  window  SLUG [--date D] [--depth M] [--tz ZONE]   diveable windows under a speed threshold
+  at      SLUG --time "..." [--depth M] [--tz ZONE] instantaneous current vector
 
 Prediction reads only the tiny per-site extract; it never touches the big database.
 
@@ -26,7 +30,10 @@ The model current is depth-AVERAGED (the column mean, which runs slower than the
 flow). Pass --depth to scale it toward your dive depth through a boundary-layer profile:
 slower near the seabed, faster up high. Slack times do not move, only speeds. It is
 approximate and ignores stratification, so where a proven NOAA station exists, trust the
-station's depth bin. Times are America/Los_Angeles.
+station's depth bin. Times are local to the site: predict/window/at read the timezone stored
+in the site's own extract, so a Puget Sound site and an East Coast site each run in their own
+zone automatically. --tz on those commands only overrides that stored value; it never needs to
+be set day to day.
 """
 import argparse
 import glob
@@ -58,7 +65,6 @@ TAR_VEL = "ENPAC15_tidaldatabase/wc2015-v1a_1200tau1dt1VDatum_fort.54.gz"
 # seabed depth with --water-depth (get it from tools/ncei_depth.py, which owns bathymetry);
 # the coarse mesh depth is only a fallback when none is given.
 
-PACIFIC = ZoneInfo("America/Los_Angeles")
 UTC = timezone.utc
 
 
@@ -69,6 +75,26 @@ def _cfg(key, default):
             return json.load(f).get("adcirc_current", {}).get(key, default)
     except (OSError, ValueError):
         return default
+
+
+def resolve_tz(name):
+    """IANA zone name -> ZoneInfo, or exit with a clear error on a bad name."""
+    try:
+        return ZoneInfo(name)
+    except Exception:
+        sys.exit(f"Unknown timezone '{name}'. Pass an IANA name, e.g. America/Los_Angeles.")
+
+
+def site_tz(doc, override):
+    """The zone to plan a site in: an explicit --tz wins, otherwise the zone the site was
+    extracted in (stored in its .json alongside lat/lon). No other fallback: guessing a
+    site's timezone is exactly the kind of silent error that shifts a slack window and looks
+    entirely plausible, so a site with no stored zone must fail, not default."""
+    name = override or doc.get("tz")
+    if not name:
+        sys.exit(f"'{doc.get('slug')}' has no stored timezone.\n"
+                 f"  Re-run extract --force --tz <zone> to fix, or pass --tz on this command.")
+    return resolve_tz(name)
 
 # ADCIRC run wc2015_v1a: fort.15 REFTIME 0.0, run id "410day_start_11162004". The nodal
 # factors and equilibrium arguments in the fort.53/54 headers are therefore referenced to
@@ -442,9 +468,10 @@ def cmd_extract(a):
             "name": name, "f_ref": fnf, "v0u_deg": eqarg,
             "u_amp": u_amp, "u_phase": u_ph, "v_amp": v_amp, "v_phase": v_ph,
         })
+    tz = resolve_tz(a.tz)  # validate before writing
     os.makedirs(os.path.dirname(path), exist_ok=True)
     doc = {
-        "slug": slug, "lat": qlat, "lon": qlon,
+        "slug": slug, "lat": qlat, "lon": qlon, "tz": a.tz,
         "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
         "extracted_utc": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "water_depth_m": water_depth_m,
@@ -454,7 +481,7 @@ def cmd_extract(a):
     }
     with open(path, "w") as fh:
         json.dump(doc, fh, indent=2)
-    axis, _ = principal_axis(doc)
+    axis, _ = principal_axis(doc, tz)
     print(f"\nWrote {path}")
     print(f"  {len(cons)} constituents. Principal current axis {axis:.0f}°/{(axis + 180) % 360:.0f}° T.")
     print(f"  Water depth {water_depth_m:.0f} m (enables --depth scaling in predict/window).")
@@ -471,10 +498,10 @@ def load_extract(slug):
         return json.load(fh)
 
 
-def series(doc, day):
+def series(doc, day, tz):
     """(local_datetime, u_east, v_north) every 6 minutes across the local day, plus a margin."""
     cons, C = doc["constituents"], calibrate(doc["constituents"])
-    start = datetime(day.year, day.month, day.day, tzinfo=PACIFIC)
+    start = datetime(day.year, day.month, day.day, tzinfo=tz)
     out = []
     for i in range(-20, 240 + 20):  # -2h .. +26h at 6-min steps
         t_local = start + timedelta(minutes=6 * i)
@@ -485,10 +512,10 @@ def series(doc, day):
     return out
 
 
-def principal_axis(doc, day=None):
+def principal_axis(doc, tz, day=None):
     """Return (bearing_deg, samples). Bearing of the dominant flow axis (°T)."""
     day = day or date.today()
-    samp = series(doc, day)
+    samp = series(doc, day, tz)
     sxx = sxy = syy = 0.0
     for _, u, v in samp:
         sxx += u * u
@@ -616,8 +643,9 @@ def slacks_and_peaks(sig, signed_fn=None):
 
 def cmd_predict(a):
     doc = load_extract(a.slug)
+    tz = site_tz(doc, a.tz)
     factor, note = depth_factor(doc, a.depth)
-    bearing, samp = principal_axis(doc, a.date)
+    bearing, samp = principal_axis(doc, tz, a.date)
     sig = _signed(samp, bearing)
     signed_fn, _ = reconstructors(doc, bearing)
     axis_a, axis_b = bearing % 360, (bearing + 180) % 360
@@ -643,8 +671,9 @@ def cmd_predict(a):
 
 def cmd_window(a):
     doc = load_extract(a.slug)
+    tz = site_tz(doc, a.tz)
     factor, note = depth_factor(doc, a.depth)
-    bearing, samp = principal_axis(doc, a.date)
+    bearing, samp = principal_axis(doc, tz, a.date)
     sig = _signed(samp, bearing)
     _, mag_fn = reconstructors(doc, bearing)
     lim = a.max_speed
@@ -671,7 +700,7 @@ def cmd_window(a):
         runs.append((t0, t1, peak))
         i = j + 1
     # keep runs overlapping the target day, clipped to it
-    day0 = datetime(a.date.year, a.date.month, a.date.day, tzinfo=PACIFIC)
+    day0 = datetime(a.date.year, a.date.month, a.date.day, tzinfo=tz)
     day1 = day0 + timedelta(days=1)
     shown = [(max(t0, day0), min(t1, day1), pk) for t0, t1, pk in runs
              if t1 > day0 and t0 < day1]
@@ -687,8 +716,9 @@ def cmd_window(a):
 
 def cmd_at(a):
     doc = load_extract(a.slug)
+    tz = site_tz(doc, a.tz)
     factor, note = depth_factor(doc, a.depth)
-    t_local = datetime.strptime(a.time, "%Y-%m-%d %H:%M").replace(tzinfo=PACIFIC)
+    t_local = datetime.strptime(a.time, "%Y-%m-%d %H:%M").replace(tzinfo=tz)
     cons, C = doc["constituents"], calibrate(doc["constituents"])
     t_utc = t_local.astimezone(UTC)
     u = reconstruct(cons, C, t_utc, "u") * factor
@@ -764,16 +794,22 @@ def main():
     s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True)
     s.add_argument("--water-depth", type=float, metavar="M",
                    help="seabed depth below MLLW (from ncei_depth.py); enables --depth scaling")
+    s.add_argument("--tz", required=True,
+                   help="IANA timezone of the dive site (e.g. America/Los_Angeles, "
+                        "America/New_York); stored in the extract and used by predict/window/at")
     s.add_argument("--force", action="store_true", help="overwrite an existing extract")
     s.add_argument("--region", help="region folder for a brand-new site (default: the only one)")
     s.set_defaults(fn=cmd_extract)
 
     depth_help = "m below surface; scale the column mean to your dive depth (default: no scaling)"
+    tz_help = ("override the site's stored timezone (IANA name); normally unneeded, the "
+               "extract already knows which zone the site is in")
 
     def dated(sp):
         sp.add_argument("slug")
         sp.add_argument("--date", type=date.fromisoformat, default=date.today())
         sp.add_argument("--depth", type=float, help=depth_help)
+        sp.add_argument("--tz", default=None, help=tz_help)
 
     s = sub.add_parser("predict", help="slack / max flood / max ebb")
     dated(s)
@@ -789,6 +825,7 @@ def main():
     s.add_argument("slug")
     s.add_argument("--time", required=True, metavar="YYYY-MM-DD HH:MM")
     s.add_argument("--depth", type=float, help=depth_help)
+    s.add_argument("--tz", default=None, help=tz_help)
     s.set_defaults(fn=cmd_at)
 
     s = sub.add_parser("list", help="list extracted sites")

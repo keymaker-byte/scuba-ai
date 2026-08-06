@@ -18,7 +18,7 @@ Import these companion files into context alongside it at session start:
 - `site_template.md` is the template to write descriptions for new dive sites.
 - Each diving region is a folder under `regions/` holding one `<region>.md` steering file and a `sites/` subfolder. Each site is a pair in `sites/`: `<slug>.md`, the guidebook description, and `<slug>.json`, its ENPAC15 current extract, machine-read by `tools/adcirc_current.py` and never hand-edited.
 
-## Units
+## Units: use metric
 
 - Use metric: bar, metres, litres, C.
 - Do the arithmetic in metric, present results in metric, and don't append imperial conversions in parentheses unless asked. Gas planning in bar and litres, depth in metres, temperature in C, cylinder size in litres and working pressure in bar.
@@ -28,6 +28,16 @@ Import these companion files into context alongside it at session start:
 
 - Dive sites and planning should use the dive site local time zone. Never carry a UTC timestamp into a plan, a site file, or the log.
 - This is a strict rule because slack, wind, and entry time are only useful against each other. A source silently read in the wrong zone or time shifts the slack window by 7 to 8 hours, which is obvious, or by exactly one hour across a DST boundary, which is not obvious and looks entirely plausible.
+
+## Depth convention: normalized to MLLW
+
+- Depth is not a property of a site. The seabed is fixed, the surface is not, so an un-normalized depth is not comparable to any other dive. Every depth worth keeping is normalized to the MLLW datum, the datum NOAA charts and predictions use. Never mix datums.
+- Tide height is signed. It goes negative on a minus tide, so a low-water dive reads shallower than the site's datum depth; subtracting a negative makes the datum depth the deeper number.
+
+```
+depth below MLLW datum  =  observed depth (computer)  -  tide height at that moment
+depth below surface     =  datum depth                +  predicted tide height
+```
 
 ## Sources and tools
 
@@ -324,6 +334,10 @@ python3 tools/pnwdiving_viz.py --raw            # feet, as the reporter wrote it
 
 The canonical structure is `site_template.md`. All site files, new and old, follow it: a title, a plain-prose description, a facts table, then `##` sections whose bullets each open with a bold topic followed by the explanation. Section order: Getting there, Navigation and landmarks, Current, Depth and tide, Hazards, Wind, Visibility, Temperature, Marine life. Include a section only when there is data for it.
 
+A coordinate handed to you for a new site is a first reference, not the final one. Check its seabed depth (`ncei_depth.py`) before writing anything; a point mid-channel or off the drop is not the dive. If it is too deep, or off the divable slope, walk it toward shore and re-check, comparing candidate depths against the source description (the guidebook, the community reports, the site's own terrain narrative) until the coordinate's depth matches what is actually described as being dived. It also has to stay inside the ENPAC15 mesh: `adcirc_current.py extract` reports `mesh.inside` and `boundary_dist_km` on the result, and a coordinate walked too close to shore can fall outside the wet mesh or snap to its boundary, which reads as near-still water rather than the site's real current. Don't walk it past that edge; if the divable depth and mesh coverage conflict, keep the coordinate on the mesh side and note the shallower part of the dive separately. Extract ADCIRC and pick the governing current and tide stations against that corrected coordinate, not the original.
+
+Creating a site file draws on every source under Sources and tools that applies, and beyond them always run a comprehensive web search for the site by name. Sources outside the fixed list, a dive shop's site page, a forum thread, a recent trip report, an incident writeup, turn up facts none of the standing sources carry alone (an access change, a renamed park, a hazard). Don't stop at the standing source list; go find what's out there.
+
 Keep the facts, drop the bookkeeping. A fact goes in the file whether it came from public data (NOAA) or from what we saw over repeated dives: coordinates, depth ranges, the governing current station and its bin, the offset, current behaviour, entry, hazards, temperatures, marine life. Our own apparatus does not: no confidence flags (`derived` / `observed` / `unverified`), no logged dive stats (dive counts, runtimes, a specific dive number, a computer bookmark), no source attributions (Fischnaller, the forums, our own log). A derived number is written as a plain fact, stated flatly, without naming where it came from.
 
 The confidence work still happens, it just doesn't live in the file. Verify a station still publishes, verify the tide station's name and position, reason through the offset and how sure you are of it. That reasoning belongs in the chat and its results in `plan_log.csv` (predicted beside observed); the site file carries only the best number it produced. A number you are unsure of is stated conservatively, not annotated.
@@ -340,13 +354,24 @@ Every site file carries two stations, and they are not the same station: a gover
 
 - CSV, UTF-8 with a BOM (`utf-8-sig`). The BOM is what makes Excel read the accents, arrows and degree signs (`°`, `−`, `→`, `≈`) correctly on a double-click; keep writing it. If a session regenerates the file, write it with `encoding="utf-8-sig"`.
 - Hybrid schema. Clean numerics are typed into their own columns; irreducibly-prose fields stay as single text columns. Metric throughout, same as the rest of the workspace (convert wind to m/s, depths to m, temps to C). Ranges are split into `*_min` / `*_max` pairs; a single reading fills both. A value-with-time-and-comment (a max flood, a tank summary) keeps the whole string in one prose cell.
-- Columns (39), in order:
+- Columns (40), in order:
   - *identity:* `plan_id`, `date`, `site`, `record_type`
-  - *times / profile:* `entry_time`, `exit_time`, `runtime_min`. On a predicted row, `exit_time` is entry plus runtime.
+  - *times / profile:* `entry_time`, `exit_time`, `runtime_min`, `dive_plan`. On a predicted row, `exit_time` is entry plus runtime.
   - *current:* `slack_time`, `slack_note`, `current_at_entry`, `spatial_entry_speed_ms`, `spatial_entry_dir_deg`, `spatial_exit_speed_ms`, `spatial_exit_dir_deg`, `set_direction`, `set_strength`, `reversal_at_slack`, `max_flood`, `max_ebb`, `diveable_window`, `ebb_exchange_size`. The `spatial_*` columns are the ENPAC15 prediction at the site (`adcirc_current.py at <slug> --time ...`) at entry and exit: depth-averaged speed in m/s and set direction in degrees true, un-offset, filled on the predicted row.
   - *visibility:* `viz_depth_min_m`, `viz_depth_max_m`, `viz_shallows_min_m`, `viz_shallows_max_m`, `viz_note`
   - *wind / surface:* `wind_speed_ms`, `wind_dir`, `sea_state`, `air_temp_min_c`, `air_temp_max_c`, `surface_note`
   - *water / depth:* `water_temp_min_c`, `water_temp_max_c`, `water_temp_note`, `max_depth_read_m`, `max_depth_normalized_m`, `depth_note`, `tide_across_dive`
+
+### Dive plan
+
+`dive_plan` is a single prose column, filled on the predicted row: the actual plan from entry to exit, in the order it happens, not a restatement of the typed columns around it. Where the excursion goes, in what order, and when to turn for the exit.
+
+Every plan follows the same rules, regardless of site:
+
+- **Non-decompression only.** Plan inside the no-decompression limit for the depth and gas on the day. Never plan a decompression dive.
+- **Safety stop, always.** Every plan carries a stop before surfacing, whatever the profile.
+- **EAN32 by default.** If the diver holds an Enriched Air certification, assume EAN32 for planning, matching `standard_configuration.back_gas` in `diver-profile.json`, unless the plan states a different mix. Without that certification, or with no mix specified, assume Air.
+- **Never plan the return against the current.** Order the excursion so the leg back to the entry point runs with the current or through slack, never against it. Where the governing current sets a known direction after slack, work the far leg first, upstream of the entry, and turn for home before the current builds against a return swim; a plan that has the diver kicking home into a developing current is a planning failure, not a detail to note afterward.
 
 ### How to use it
 

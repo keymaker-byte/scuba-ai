@@ -2,6 +2,7 @@
   "slug": "edmonds-underwater-park",
   "lat": 47.81574,
   "lon": -122.38457,
+  "tz": "America/Los_Angeles",
   "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
   "extracted_utc": "2026-07-18T23:15:33Z",
   "water_depth_m": 7.0,

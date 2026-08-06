@@ -2,6 +2,7 @@
   "slug": "sund-rock",
   "lat": 47.43416,
   "lon": -123.105,
+  "tz": "America/Los_Angeles",
   "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
   "extracted_utc": "2026-07-19T00:38:11Z",
   "water_depth_m": 130.0,
