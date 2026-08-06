@@ -5,9 +5,9 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 | | |
 |---|---|
 | **Location** | Nordland, WA. East shore of Marrowstone Island, Fort Flagler Historical State Park, on Admiralty Inlet |
-| **Coordinates** | Dive area 48.09127, -122.68855 (seabed about 14 m below MLLW). Entry off the beach roughly 200 m west, near 48.0913, -122.6913 |
+| **Coordinates** | Dive area 48.09127, -122.68855 (seabed about 15 m below MLLW). Entry off the beach roughly 200 m west, near 48.0913, -122.6913 |
 | **Type** | Shore |
-| **Depth range** | 0 m at the beach to about 14 m below MLLW at the dive coordinate above; the rubble field beyond it runs a couple of metres deeper |
+| **Depth range** | 0 m at the beach to about 15 m below MLLW at the dive coordinate above; the rubble field beyond it runs a couple of metres deeper |
 | **Skill level** | Intermediate to advanced, current dependent; the shallows near the old pier line are workable for a beginner right at slack |
 
 ## Getting there
@@ -48,7 +48,7 @@ Admiralty Inlet's tide swings a few metres a day here, and because the outer ree
 | **Series** | High and low water only |
 | **Typical range** | Median daily around 2.8 m, up to about 4.2 m on a big exchange; 2026 span roughly 2.2 to 4.2 m |
 
-The 14 m reef point reads about 14.5 m below the surface near a low around 0 m, and about 17 m below the surface near a high around +2.8 m.
+The 15 m reef point reads about 14.7 m below the surface near a low around 0 m, and about 17.5 m below the surface near a high around +2.8 m.
 
 ## Hazards
 

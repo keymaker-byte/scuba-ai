@@ -244,11 +244,14 @@ NOAA NCEI's coastal digital elevation model: the seabed depth at a point, at ~3 
 #### `tools/ncei_depth.py`
 
 ```sh
-python3 tools/ncei_depth.py 47.95029 -122.30297          # depth below NAVD88 (~mean sea level)
-python3 tools/ncei_depth.py 47.95029 -122.30297 --mllw   # also convert to depth below MLLW
+python3 tools/ncei_depth.py 47.95029 -122.30297                       # depth below NAVD88 (~mean sea level)
+python3 tools/ncei_depth.py 47.95029 -122.30297 --mllw                # also convert to depth below MLLW
+python3 tools/ncei_depth.py 47.95029 -122.30297 --mllw --region R     # pick the VDatum region explicitly
 ```
 
 Site files quote depth below MLLW, so use `--mllw`. It converts via NOAA VDatum, falling back to the NAVD88-to-MLLW offset from the nearest tide station publishing both datums, then to a flat nominal if neither answers, reporting which it used. The offset is not constant: about 0.1 m in the Strait of Juan de Fuca to about 0.7 m in the south Sound.
+
+⚠️ VDatum tiles the world into named regions and will not infer one from the coordinate; the wrong region, or its own `contiguous` default (Atlantic/Gulf coasts), fails with an opaque "Uncaught error" rather than a useful message. `python3 tools/ncei_depth.py --help` lists every valid region code. `--region` overrides `ncei_depth.default_region` in `tool-config.json`, which holds this workspace's default (`westcoast`). Some regions additionally require a specific target horizontal frame for a tidal target datum (westcoast wants IGS14); VDatum names the required frame in its own error when this applies, and the tool retries once with whatever it names, so that quirk never needs to be handled by the caller.
 
 ### NWS point forecast (wind and surface conditions)
 
