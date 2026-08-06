@@ -1,0 +1,68 @@
+{
+  "diver": {
+    "name": "<full name>",
+    "date_of_birth": "<YYYY-MM-DD>",
+    "address": "<street, city, state, zip>"
+  },
+
+  "certifications": {
+    "top_qualification": "<e.g. Rescue Diver>",
+    "issuer": {
+      "store": "<dive shop name>",
+      "store_no": "<shop number>",
+      "locations": "<city / region>",
+      "instructor": "<instructor id>"
+    },
+    "list": [
+      { "certification": "<e.g. Open Water Diver>", "diver_no": "<certification number>", "date": "<YYYY-MM-DD>", "instructor": "<instructor id>" }
+    ]
+  },
+
+  "dan_membership": {
+    "member_name": "<name on membership>",
+    "member_no": "<member number>",
+    "membership": "<membership tier>",
+    "member_since": "<year>",
+    "membership_expires": "<YYYY-MM-DD>",
+    "dive_accident_coverage": "<plan name>",
+    "guardian_plan_expires": "<YYYY-MM>",
+    "account_email": "<email>"
+  },
+
+  "equipment": {
+    "life_support_back_gas": [
+      { "brand": "<brand>", "model": "<model>", "type": "Regulator (1st stage)" },
+      { "brand": "<brand>", "model": "<model>", "type": "Regulator (2nd stage)" },
+      { "brand": "<brand>", "model": "<model>", "type": "SPG" },
+      { "brand": "<brand>", "model": "<model>", "type": "BCD" },
+      { "brand": "<brand>", "model": "<model>", "type": "Tank", "size_litres": 0, "working_pressure_bar": 0 }
+    ],
+    "life_support_bailout_pony": [
+      { "brand": "<brand>", "model": "<model>", "type": "Regulator (1st stage)" },
+      { "brand": "<brand>", "model": "<model>", "type": "Regulator (2nd stage)" },
+      { "brand": "<brand>", "model": "<model>", "type": "Tank", "size_litres": 0, "working_pressure_bar": 0 }
+    ],
+    "exposure_protection": [
+      { "brand": "<brand>", "model": "<model>", "type": "Drysuit" }
+    ],
+    "propulsion": [
+      { "brand": "<brand>", "model": "<model>", "type": "Fins" }
+    ],
+    "instruments_and_vision": [
+      { "brand": "<brand>", "model": "<model>", "type": "Computer" },
+      { "brand": "<brand>", "model": "<model>", "type": "Mask" }
+    ],
+    "lights_signaling_tools": [
+      { "brand": "<brand>", "model": "<model>", "type": "Torch" }
+    ]
+  },
+
+  "standard_configuration": {
+    "back_gas": "<e.g. Faber HP 80 steel. Full. Normally EAN32.>",
+    "bailout": "<e.g. Pony, on air. Full.>",
+    "octopus": false,
+    "octopus_note": "<redundancy note, if octopus is false>",
+    "exposure_default": "<default exposure protocol>",
+    "gas_turn_reserve": "<gas reserve rule for ending a dive>"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "note": "Per-tool parameters: one subsection per tool in tools/, named after the script. A tool reads only its own subsection, and a missing key falls back to the tool's built-in default. Paths: ~ expands to home, relative paths resolve against the workspace root. The nws section covers the documented curl fetch, which has no script.",
+
+  "subsurface_log": {
+    "file": "~/Library/Application Support/Subsurface/<your-log>.xml"
+  },
+
+  "noaa_current": {
+    "max_speed_ms": 0.25
+  },
+
+  "noaa_tide": {},
+
+  "adcirc_current": {
+    "max_speed_ms": 0.25
+  },
+
+  "ncei_depth": {
+    "user_agent_email": "<your-email>@example.com"
+  },
+
+  "pnwdiving_viz": {
+    "cache_hours": 6,
+    "default_tz": "America/Los_Angeles"
+  },
+
+  "nws": {
+    "user_agent_email": "<your-email>@example.com"
+  }
+}
