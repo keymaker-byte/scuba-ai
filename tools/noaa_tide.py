@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""NOAA tide predictions for Puget Sound dive planning. Metric (metres), MLLW, local time.
+"""NOAA tide predictions, for any station in its network. Metric (metres), MLLW, local time.
 
   stations --near LAT LON            find live tide-prediction stations near a dive site
   predict STATION [--date D]         high/low water for the day
@@ -7,7 +7,7 @@
   normalize STATION --time T --depth D   observed depth  ->  depth below MLLW datum
   project STATION --datum-depth X [--date D]   datum depth -> depth below surface, all day
 
-Why this exists: depth in the Sound is not a fixed property of a site. The seabed sits at a
+Why this exists: depth is not a fixed property of a site. The seabed sits at a
 fixed depth below the MLLW *datum*; the surface moves 3-4 m over it. A depth read off the
 computer is only comparable to another dive's depth once the tide is taken out of it.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""NOAA current predictions for Puget Sound dive planning. Metric (m/s, metres).
+"""NOAA current predictions, for any station in its network. Metric (m/s, metres).
 
   stations --near LAT LON        find live current-prediction stations near a dive site
   bins STATION                   which bins actually publish predictions, and at what depth
