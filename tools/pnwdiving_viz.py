@@ -25,7 +25,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 HOME = "https://pnwdiving.com/"
-CACHE = Path(__file__).parent / ".cache" / "pnwdiving_home.html"
+CACHE = Path(__file__).parent / "db" / "pnwdiving_home.html"
 
 
 def _cfg(key, default):
