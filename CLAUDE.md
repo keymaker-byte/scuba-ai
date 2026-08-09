@@ -8,7 +8,6 @@ Import these companion files into context alongside it at session start:
 - @tool-config.json
 - @plan_log.csv
 - @site_template.md
-- @regions/puget-sound/puget-sound.md
 
 ## Workspace structure
 
@@ -16,7 +15,7 @@ Import these companion files into context alongside it at session start:
 - `tool-config.json` holds per-tool parameters, one subsection per tool in `tools/`; a missing key falls back to the tool's built-in default.
 - `plan_log.csv` holds dive plans vs observed data.
 - `site_template.md` is the template to write descriptions for new dive sites.
-- Each diving region is a folder under `regions/` holding one `<region>.md` steering file and a `sites/` subfolder. Each site is a pair in `sites/`: `<slug>.md`, the guidebook description, and `<slug>.json`, its ENPAC15 current extract, machine-read by `tools/adcirc_current.py` and never hand-edited.
+- Each diving region is a folder under `regions/` holding one `<region>.md` steering file and a `sites/` subfolder. Each site is a pair in `sites/`: `<slug>.md`, the guidebook description, and `<slug>.json`, its ENPAC15 current extract, machine-read by `tools/adcirc_current.py` and never hand-edited. A region's steering file is not loaded at session start; load it whenever working on or referencing a site `.md` or `.json` in that region's `sites/` folder, before acting on that site.
 
 ## Units: use metric
 
