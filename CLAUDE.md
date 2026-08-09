@@ -9,6 +9,8 @@ Import these companion files into context alongside it at session start:
 - @plan_log.csv
 - @site_template.md
 
+`diver-profile.json`, `tool-config.json` and `plan_log.csv` hold personal data and are gitignored, so a fresh clone of this workspace won't have them. If any is missing at session start, don't proceed as if it's empty and don't invent values for it: tell the user it's missing and ask them to copy the matching `diver-profile_template.json`, `tool-config_template.json` or `plan_log_template.csv` to the real filename and fill it in, then continue once it exists.
+
 ## Workspace structure
 
 - `diver-profile.json` holds the user's specific diver profile and personal data.
