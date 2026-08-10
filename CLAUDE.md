@@ -115,6 +115,7 @@ Two products, two station networks, both authoritative, both needed: currents gi
 
 The slack time and direction, on the day, for the reference station that governs the site. This is the number the whole plan hangs off.
 
+- Use it for: the slack time and direction on the day, at the station governing the site, plus the max flood/ebb speeds bracketing the window.
 - Read the whole day, not just the one slack. Slacks are not evenly spaced and not equal: a slack between two weak maxes is a wide window, between two strong maxes a narrow one. Note the max flood/ebb speeds either side of your window; they bracket how fast the site turns on you if you're late.
 - ⚠️ Mind the bin: the default is near-surface. The stations are ADCPs with many depth bins, NOAA publishes predictions for only a few, and the default is a shallow one, not the water we dive. Pick the published bin nearest the site's working depth, and record which bin the offset was derived against; an offset against one bin is not the same number as against another. At Burrows Pass the default bin sits at 4.6 m and the deepest published bin at 30.6 m; on a test day the deep slack ran 20 minutes earlier than the surface slack, with max flood weaker (1.41 vs 1.61 m/s) and the flood axis rotated 286°→275°. Still pull the other bins: a wide spread between them is itself a warning that the offset is depth-sensitive.
 - Watch for: diurnal inequality (the two daily exchanges are not the same size), and big exchanges around new and full moon.
@@ -151,6 +152,7 @@ Two things it does not do, on purpose: the threshold is a placeholder, not a con
 
 The predicted tide across the entry window: how deep the site is that day. This is what turns a depth reading into a number that means something on any other day.
 
+- Use it for: the tide height across the entry window, and the day's high and low water, at a station in the same body of water as the site.
 - ⚠️ Pick a station in the same body of water. Water level varies smoothly, so the nearest station is usually right, but "near" has to mean hydraulically near, not near on a map. Verify the station's name and position before trusting the label; a mislabelled tide station once cost about 1 m at high water.
 - ⚠️ Most Sound stations are subordinate: they publish high/low water only, no 6-minute series.
 - Datum: MLLW. It is what the charts and the predictions use. Never mix datums.
@@ -198,7 +200,7 @@ On subordinate stations it interpolates harmonically between the high/low extrem
 
 A depth-averaged tidal current field for the whole Eastern North Pacific: the ENPAC15 harmonic constituent database, 37 constituents on an unstructured mesh of ~554k nodes refined into harbours, produced by the University of Oklahoma with NOAA's Coast Survey Development Laboratory using the ADCIRC model. Where NOAA gives the current at scattered station points, this is a continuous field: it can predict at sites with no station near them and in the water between stations.
 
-- Use it for: the primary current prediction at a site with no governing NOAA station or an unproven offset, and a cross-check on slack and set direction where one exists. It supplements the station network, never replaces it: where a proven station governs, trust the station.
+- Use it for: current speed, direction and slack timing at any point inside the mesh, for any date, scaled to any working depth through the boundary layer profile. It predicts continuously across the whole domain rather than at scattered points, so it covers a site with no current station of its own and the water between existing stations equally well.
 - ⚠️ Depth-averaged, not a depth bin: the mean over the whole column, which runs slower than the near-surface water and slower than the bin a NOAA station reports. It is also smooth: it under-represents the sharp flood/ebb asymmetry of real rapids, softens the diurnal inequality, and is only approximate at any single point. It holds the semidiurnal slacks and the axis well; treat the unequal exchange and the peak speeds as approximate.
 - ⚠️ Coverage is not uniform. Channels and passes are resolved; some shore entries fall just outside the wet mesh and snap to the boundary. The tool records how far out: a few hundred metres is a shore entry at the model edge, usable with care; kilometres out is unresolved.
 - ⚠️ Behaviour, not the flood/ebb label. It gives the current axis, the slack times, and the peak speeds; which of the two axis directions is the flood is site-specific and has to be fixed against the tide or a station.
