@@ -34,7 +34,7 @@ The sills matter to planning because they are where the water accelerates. The t
 
 Ordered by what actually kills a dive plan in the Sound:
 
-1. **Current** (primary). Nearly everything is a slack-tide dive; the window, not the site, is the plan. Get the slack from a NOAA current station, not a tide station (outside Hood Canal, high or low water is not slack), then apply the site's known offset and correction to that station.
+1. **Current** (primary). Nearly everything is a slack-tide dive; the window, not the site, is the plan. Get the slack from a NOAA current station, not a tide station (outside Hood Canal, high or low water is not slack), then apply the site's known offset and correction to that station. Always cross-check that station prediction's slack time and set direction against the site's own ENPAC15 extract (`adcirc_current.py predict` / `window`) before calling a window, even where the station is a well proven one, and reconcile the two rather than trusting the station alone: the Sound is four basins separated by sills that locally accelerate and redirect the flow, so a station some distance away does not always represent the site's own water.
 2. **Wind** (secondary). Wind decides whether the entry is diveable at all: chop on the entry, surf on the beach, a surface swim into a fetch. Wind against current is worse than either alone. Get the forecast for the beach, not the region.
 3. **Viz** (informational). Won't stop the dive, but sets expectations and gear (torch, reel).
 
