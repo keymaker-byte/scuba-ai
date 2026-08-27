@@ -81,7 +81,7 @@ A higher tide also makes the entry and the surface swim out easier, covering the
 
 ## Visibility
 
-* **Recent form.** A recent report put the site at a clear 6 m or more. Visibility here is variable, though, and often more modest.
+* **Recent form.** Visibility here is variable, though, and often modest.
 * **Blooms.** Spring and summer plankton blooms are the usual spoiler.
 * **Silt.** The bottom is fine white sand that stirs easily, so careful trim and finning keep the water clear, especially on the shallow swim in and out.
 

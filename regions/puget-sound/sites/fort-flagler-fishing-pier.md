@@ -65,7 +65,7 @@ The 15 m reef point reads about 14.7 m below the surface near a low around 0 m, 
 
 ## Visibility
 
-* **Best on a clean slack.** Divers report 7.6 m or better on a good low exchange day, especially on the ebb to flood turn.
+* **Best on a clean slack.** Better on a good low exchange day, especially on the ebb to flood turn.
 * **Current dependent.** Being exposed to the main channel, a strong exchange stirs up the bottom and cuts visibility even where the dive itself stays safe.
 
 ## Temperature

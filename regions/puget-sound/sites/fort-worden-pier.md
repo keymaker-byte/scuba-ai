@@ -68,7 +68,7 @@ The pier end and reef, at about 6.5 m below MLLW datum, read about 5.8 m below t
 
 ## Visibility
 
-* **Best on the flood.** Incoming water from Admiralty Inlet is the cleanest the site sees, particularly toward the end of the flood; reports of 7.6 m or better are not unusual on a good day.
+* **Best on the flood.** Incoming water from Admiralty Inlet is the cleanest the site sees, particularly toward the end of the flood.
 * **Blooms cut it hard.** Like the rest of the Sound, spring and summer plankton blooms are the main thing that degrades visibility here.
 
 ## Temperature

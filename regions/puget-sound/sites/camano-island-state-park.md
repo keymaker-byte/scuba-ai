@@ -63,7 +63,7 @@ The 28.8 m dive point reads close to that near a low around 0 m, and swings to a
 
 ## Visibility
 
-* **Best in summer.** Divers report the site is at its best when the kelp is in bloom through summer, with better conditions and more to see than the rest of the year.
+* **Best in summer.** Best when the kelp is in bloom through summer, with better conditions and more to see than the rest of the year.
 
 ## Temperature
 
