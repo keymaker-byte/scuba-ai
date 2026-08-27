@@ -5,7 +5,7 @@ Shore dive off Tongue Point, inside the Tongue Point Marine Life Sanctuary at Sa
 | | |
 |---|---|
 | **Location** | Port Angeles, WA. South shore of the Strait of Juan de Fuca, at Tongue Point, Salt Creek Recreation Area |
-| **Coordinates** | Dive site 48.1695, -123.7060 (seabed about 18.5 m below MLLW), the outer boulder ground beyond the reef; shore entries lie along the rocky shoreline near 48.168, -123.704, east of the point |
+| **Coordinates** | Dive site 48.1695, -123.7060 (seabed about 18.5 m below MLLW), the outer boulder ground beyond the reef; entry at 48.166947, -123.704313, the stairs near campsite 67 that lead out onto Tongue Point itself |
 | **Type** | Shore, direct entry off the rock, no surface swim |
 | **Depth range** | Roughly 3 to 18.5 m below MLLW |
 | **Skill level** | Advanced |
@@ -15,7 +15,7 @@ Shore dive off Tongue Point, inside the Tongue Point Marine Life Sanctuary at Sa
 * **Entry.** Four beach access trails reach the water. Three lead onto rock ledges along the shore east of Tongue Point: one past campsite 5, one between campsites 55 and 57, one opposite campsite 62. A fourth, steeper and longer, cuts through the day use area west of campsite 67 and comes out on Tongue Point itself, where entry is possible on either side, rock to the east, sand into Crescent Bay to the west. Watch the height and frequency of the waves before committing to any of them; do not enter while waves are breaking continuously against the shore, and move offshore quickly once in.
 * **Parking.** A dedicated day use area at Salt Creek Recreation Area, a Clallam County park. For the campsite 62 entry, park right at the campsite 62 turnout; it holds only about six cars and fills quickly, so arrive early.
 * **Access.** Gate hours are seasonal; verify them before a day trip. Campsite registration runs through self serve kiosks.
-* **Facilities.** Restrooms and coin operated hot showers at the campground, picnic areas and a playground. No dive gear in the coin operated showers. Air fills are in Port Angeles.
+* **Facilities.** Restrooms and coin operated hot showers at the campground, picnic areas and a playground. No dive gear in the coin operated showers. Air fills at Curley's Resort and Dive Center, 291 Front St, Sekiu, about 45 km (40 minutes) west on Highway 112; hours run shorter outside peak season.
 
 ## Navigation and landmarks
 
