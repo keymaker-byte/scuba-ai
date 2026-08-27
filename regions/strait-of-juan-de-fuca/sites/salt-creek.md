@@ -71,7 +71,7 @@ The strait's tide swings up to about 3 m here, so depths are given below the MLL
 ## Visibility
 
 * **Kelp season.** Thick summer and fall kelp cuts light and complicates navigation even when the water itself is clear.
-* **Best conditions.** Tend to run late summer into fall, per the strait generally, though a bloom can shut a site down for weeks regardless of season. No current visibility reports are on file for this site; check for a recent one before diving.
+* **Best conditions.** Tend to run late summer into fall, per the strait generally, though a bloom can shut a site down for weeks regardless of season.
 
 ## Temperature
 

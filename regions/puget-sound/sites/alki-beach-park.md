@@ -72,7 +72,7 @@ The bottom is an even slope from an eelgrass band in the shallows, across the to
 
 ## Visibility
 
-* **Recent form.** Recent reports run to a clear 6 m or more in the shallows on a high tide. Visibility here is usually workable rather than exceptional.
+* **Recent form.** Visibility here is usually workable rather than exceptional.
 * **Blooms.** Spring and summer plankton blooms are the usual spoiler; a late-spring dive here has come up poor.
 * **Silt.** The bottom is fine sand, so it stirs easily. Careful trim and finning keep the shallows clear, and a low fin near the sand will fog the water behind you.
 
