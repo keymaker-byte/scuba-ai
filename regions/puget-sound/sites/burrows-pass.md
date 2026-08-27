@@ -5,7 +5,7 @@ Shore dive on the north side of Burrows Pass, between Fidalgo Head and Burrows I
 | | |
 |---|---|
 | **Location** | Anacortes, WA. Burrows Pass, at its west end where it opens into Rosario Strait |
-| **Coordinates** | Dive site 48.49042, -122.69148 (seabed about 20 m below MLLW), mid pass; beach entry near 48.4911, -122.6899 |
+| **Coordinates** | Dive site 48.49042, -122.69148 (seabed about 20 m below MLLW), mid pass; beach entry near 48.492229, -122.687593, by the parking area |
 | **Type** | Shore, with a surface swim of about 10 minutes |
 | **Depth range** | 7.9 to 23.5 m below MLLW |
 | **Skill level** | Advanced |

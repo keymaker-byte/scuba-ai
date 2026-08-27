@@ -5,15 +5,15 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 | | |
 |---|---|
 | **Location** | Port Townsend, WA. Port Townsend Bay, on the downtown waterfront |
-| **Coordinates** | 48.11189, -122.75435 (11.6 m below MLLW), off the abandoned ferry pier and its four pylons, northeast of the current wharf. Entry near 48.1129, -122.7568, at the foot of Adams Street |
+| **Coordinates** | 48.11189, -122.75435 (11.6 m below MLLW), off the abandoned ferry pier and its four pylons, northeast of the current wharf. Entry near 48.114285, -122.754999, at the foot of Adams Street |
 | **Type** | Shore |
 | **Depth range** | 0 m at the beach to about 11.6 m below MLLW off the pylons; the water off the current, smaller Union Wharf runs shallower, about 5 to 8 m below MLLW |
 | **Skill level** | Intermediate |
 
 ## Getting there
 
-* **Entry.** A short sandy cobblestone beach at the foot of Adams Street, an easy swim to either of two areas: southwest to the current Union Wharf, or northeast, past the wharf, to the abandoned ferry pier and its four offshore pylons.
-* **Parking.** A small lot at the end of Adams Street; parking directly at the street end has been reduced in recent years. Additional public parking runs along Water Street toward Madison and Monroe Streets.
+* **Entry.** A short sandy cobblestone beach at the foot of Adams Street, in front of Adams Street Park, an easy swim to either of two areas: southwest to the current Union Wharf, or northeast, past the wharf, to the abandoned ferry pier and its four offshore pylons.
+* **Parking.** The street end itself is a small landscaped park, flower beds and benches, with no vehicle access. Street parking only, along Water Street and Adams Street.
 * **Access.** The beach is open 24 hours.
 * **Facilities.** Public restrooms at Pope Marine Park, on Water Street at Madison, a couple of blocks northeast of Adams Street. Air fills are available in Port Townsend and Port Hadlock.
 
