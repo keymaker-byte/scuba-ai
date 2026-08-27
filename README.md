@@ -25,6 +25,11 @@ Scuba AI is a collection of steering files, tools and dive site descriptions for
 
 NWS wind forecasts are fetched directly (no wrapper script). All tools read parameters from `tool-config.json` and print metric units in local time.
 
+## Platform
+
+- Requires Python 3.9 or later (for `zoneinfo`).
+- Developed and tested only on macOS. It should run on Linux with no changes, since every tool is pure Python standard library (`urllib`, `json`, `csv`, `xml.etree`, `zoneinfo`, no pip packages required) and none of the code paths are macOS specific. Windows is untested; `zoneinfo` there needs the `tzdata` package (`pip install tzdata`) since Windows has no system IANA time zone database.
+
 ## Things you can ask it
 
 - "Plan a dive at [site] for Saturday morning around slack tide."
