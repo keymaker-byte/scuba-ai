@@ -5,7 +5,7 @@ Rosario Beach is a pebble and sand beach in Deception Pass State Park, at the so
 | | |
 |---|---|
 | **Location** | Deception Pass State Park, Fidalgo Island, WA. Rosario Bay, on Rosario Strait, just north of Deception Pass |
-| **Coordinates** | Dive site 48.41745, -122.66680 (seabed about 10 m below MLLW); beach entry at the south end of Rosario Beach. Rosario Head about 48.4155, -122.6720; Northwest Island about 0.3 km northwest of the beach |
+| **Coordinates** | Dive site 48.41745, -122.66680 (seabed about 10 m below MLLW); beach entry at the south end of Rosario Beach |
 | **Type** | Shore. A sheltered bay dive, or advanced swims to Rosario Head and Sharpe Cove and out to Northwest Island |
 | **Depth range** | Rocky reef about 8 to 12 m below MLLW around Urchin Rocks and Rosario Head, sand beyond sloping to roughly 15 m; the outer walls of Northwest Island drop past 30 m |
 | **Skill level** | All divers in the bay; advanced for Rosario Head, Sharpe Cove and Northwest Island |
