@@ -5,7 +5,7 @@ Shore dive along the boulder jetty that shelters the Coupeville to Port Townsend
 | | |
 |---|---|
 | **Location** | Fort Casey State Park, Whidbey Island, WA. Admiralty Bay, west side of Admiralty Inlet, beside the Coupeville to Port Townsend ferry terminal, five miles south of Coupeville |
-| **Coordinates** | Dive site 48.15683, -122.67062 (seabed about 12 m below MLLW), off the jetty; entry from the underwater park beach on the east side |
+| **Coordinates** | Dive site 48.15683, -122.67062 (seabed about 12 m below MLLW), off the jetty; entry at 48.157535, -122.671067, about 85 m north-northwest, the underwater park beach on the east side |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 16 m below MLLW; the end of the jetty is the deepest point |
 | **Skill level** | Intermediate |
@@ -15,7 +15,7 @@ Shore dive along the boulder jetty that shelters the Coupeville to Port Townsend
 * **Entry.** Enter the water on the east side of the jetty, submerge, and work along the large boulders. The jetty is built like a pyramid, with far more rock below the waterline than above. Divers with a dive-kayak can launch from the ramp and paddle the 200 m around the jetty rather than swim it, leaving the kayak on the far beach and entering on the east side. Do not swim that gap, as the current is strong and it crosses the ferry lane.
 * **Parking.** In the Keystone State Park lot. A Washington Discover Pass or a day fee is required.
 * **Access.** 08:00 to dusk. About 47 mi from Seattle, 66 mi from Bellingham.
-* **Facilities.** Restrooms with wheelchair-accessible flush toilets and hot showers, an outside cold shower for rinsing gear, picnic tables, barbecue stands, a boat launch and ample parking on site. A restaurant across the street. Camping across the harbour at Fort Casey Historical State Park. Dive guiding and air fills in Oak Harbor, with air fills also in Port Townsend and Anacortes.
+* **Facilities.** Restrooms with wheelchair-accessible flush toilets and hot showers, an outside cold shower for rinsing gear, picnic tables, barbecue stands, a boat launch and ample parking on site. A restaurant across the street. Camping across the harbour at Fort Casey Historical State Park.
 
 ## Navigation and landmarks
 

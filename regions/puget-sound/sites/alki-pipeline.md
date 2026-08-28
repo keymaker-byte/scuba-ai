@@ -16,7 +16,7 @@ Shore dive on the southwest side of Alki Point in West Seattle, off Constellatio
 * **Parking.** On the street along Beach Drive SW by Charles Richey Sr. Viewpoint and Constellation Park, in the 6300 block. Free, and it fills on summer weekends.
 * **Access.** Under Seattle park hours, roughly 04:00 to 23:30. About 18 km from central Seattle over the West Seattle Bridge, then Harbor Avenue SW and Alki Avenue SW around the point to 63rd Avenue SW and Beach Drive SW.
 * **Marine reserve.** The site sits in the Constellation Park Marine Reserve. Taking of fish, shellfish and seaweed is prohibited. Diving and observing are fine.
-* **Facilities.** A portable toilet stands at the foot of the entry ramp by the pump station. More complete restrooms, a picnic beach and interpretive tidepool art are at Constellation Park, toward the north end of 63rd Avenue SW. Fast food nearby across the neighbourhood. Air fills are in Seattle, not on site.
+* **Facilities.** A portable toilet stands at the foot of the entry ramp by the pump station. More complete restrooms, a picnic beach and interpretive tidepool art are at Constellation Park, toward the north end of 63rd Avenue SW. Fast food nearby across the neighbourhood.
 
 ## Navigation and landmarks
 

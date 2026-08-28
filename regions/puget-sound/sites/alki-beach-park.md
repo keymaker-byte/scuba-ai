@@ -5,7 +5,7 @@ Shore dive on the north-facing Alki shore of West Seattle, just northeast of Alk
 | | |
 |---|---|
 | **Location** | West Seattle, WA. North-facing Alki shore at the southwest entrance to Elliott Bay, about 0.3 km northeast of Alki Point |
-| **Coordinates** | Dive site 47.57968, -122.41450 (seabed about 17 m below MLLW); entry at the southwest end of the sea wall near 64th Avenue SW |
+| **Coordinates** | Dive site 47.57968, -122.41450 (seabed about 17 m below MLLW); entry at 47.578382, -122.414514, about 150 m south, the southwest end of the sea wall near 64th Avenue SW |
 | **Type** | Shore, with a short surface swim out from the sea wall |
 | **Depth range** | Roughly 6 to 24 m below MLLW |
 | **Skill level** | All divers |
@@ -16,7 +16,7 @@ Shore dive on the north-facing Alki shore of West Seattle, just northeast of Alk
 * **Parking.** On the street along Alki Avenue SW, on either side of the road by the southwest end of the beach. Free, but it fills through summer and on weekends, so arrive early.
 * **Access.** Park hours are 05:00 to 23:00. About 18 km from central Seattle over the West Seattle Bridge, then Harbor Avenue SW and Alki Avenue SW to the southwest end of the sea wall.
 * **Octopus preserve.** The site is a designated octopus preserve. Taking or harassing octopus is prohibited on the bottom here. Diving and observing are fine; a giant Pacific octopus stays where it is found.
-* **Facilities.** Restrooms, benches, picnic tables, barbecue stands and a beach walkway along the park. Restaurants and shops sit across Alki Avenue. Air fills are in Seattle and Federal Way, not on site.
+* **Facilities.** Restrooms, benches, picnic tables, barbecue stands and a beach walkway along the park. Restaurants and shops sit across Alki Avenue.
 
 ## Navigation and landmarks
 

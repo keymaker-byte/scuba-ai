@@ -15,7 +15,7 @@ Shore dive on the Mukilteo waterfront, on the shoreline south of Elliott Point i
 * **Entry.** From the sandy beach at the south end of the park, near the restrooms and the traffic circle. Enter directly off the beach and head straight out; no boat needed.
 * **Parking.** Free, in the lot at the south end of the park near the traffic circle. Fills on summer weekends.
 * **Access.** Park hours run 04:00 to 22:00 May through September and 06:00 to 22:00 October through April. Reached off Highway 525 (the Mukilteo Speedway) via Front Street, past the ferry terminal and the lighthouse, to the park at the road's end.
-* **Facilities.** Restrooms, picnic tables, six first come first served fire pits along the beach, a playground and a public boat launch at the north end of the park. Air fills are not on site; the nearest are in Everett, Lynnwood and Edmonds.
+* **Facilities.** Restrooms, picnic tables, six first come first served fire pits along the beach, a playground and a public boat launch at the north end of the park.
 
 ## Navigation and landmarks
 

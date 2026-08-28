@@ -15,7 +15,7 @@ A shore dive at the Port Townsend Marine Science Center pier, inside Fort Worden
 * **Entry.** From the sandy beach beside the Marine Science Center pier and boat ramp. Walk in from the parking area, swim out along a piling and follow it down.
 * **Parking.** A lot across the road from the pier, at the Marine Science Center. A Discover Pass is required on any vehicle parked in the park, sold as a one day or annual pass at the park office or a self serve kiosk near the beach.
 * **Access.** Park hours run 6:30 a.m. to dusk from April 1 to October 15, and 8 a.m. to dusk the rest of the year.
-* **Facilities.** Restrooms and a cold shower for rinsing gear behind the Cable House, across the road from the pier. Picnic tables and a snack stand nearby. Camping in the park year round. Air fills in Port Townsend, Port Hadlock and Port Angeles.
+* **Facilities.** Restrooms and a cold shower for rinsing gear behind the Cable House, across the road from the pier. Picnic tables and a snack stand nearby. Camping in the park year round.
 
 ## Navigation and landmarks
 

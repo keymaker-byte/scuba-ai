@@ -15,7 +15,7 @@ Shore dive on the north side of Burrows Pass, between Fidalgo Head and Burrows I
 * **Entry.** At the end of Cabana Way by Skyline Marina, where the public road ends at a fence marked "Private Property". The beach north of the fence is private.
 * **Parking.** On the street, or in the adjacent marina lot, which is free but limited.
 * **Access.** Open 24 hours. About 75 mi from Seattle and 43 mi from Bellingham.
-* **Facilities.** None on site. Washington Park, 0.9 mi away, has restrooms, picnic tables and barbecues. Air fills are available in Anacortes and Oak Harbor.
+* **Facilities.** None on site. Washington Park, 0.9 mi away, has restrooms, picnic tables and barbecues.
 
 ## Navigation and landmarks
 

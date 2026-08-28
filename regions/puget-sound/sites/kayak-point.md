@@ -15,7 +15,7 @@ Kayak Point County Park sits on the east shore of Port Susan, a bay of Puget Sou
 * **Entry.** From the beach at Kayak Point County Park. A fishing pier and boat ramp sit in the middle of the shoreline, dividing it into a north and a south beach; enter from almost any point along either, staying at least 30 m north of the boat ramp and 30 m south of the pier.
 * **Parking.** A day-use lot above the beach, a short walk down. A day-use parking fee applies. Discover Pass is not accepted here; an annual county pass can be bought online or at the parks office.
 * **Access.** Park hours run 7 a.m. to dusk. A day-use area improvement project has been under construction through 2026: the access road and the north day-use area reopened 1 July 2026 with portable toilets and limited parking, while the south day-use area remains closed for construction, expected through fall 2026.
-* **Facilities.** Restrooms with a dry changing area, covered picnic shelters, beach fire rings, a campground, and the boat ramp. Nearest air fills are in Marysville, Everett or Lynnwood.
+* **Facilities.** Restrooms with a dry changing area, covered picnic shelters, beach fire rings, a campground, and the boat ramp.
 
 ## Navigation and landmarks
 

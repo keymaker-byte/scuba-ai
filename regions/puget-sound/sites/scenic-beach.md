@@ -5,8 +5,8 @@ Scenic Beach State Park is a gently sloping sand and cobble beach on the east sh
 | | |
 |---|---|
 | **Location** | Seabeck, Washington. Hood Canal, east shore, just south of Misery Point |
-| **Coordinates** | Dive site 47.65104, -122.85048 (seabed 18.2 m below MLLW), about 250 m northwest of the beach. Entry from the concrete stairs at the middle of the park beach |
-| **Type** | Shore. Swimming the 250 m out on the surface saves gas; descending early and following the slope out works just as well |
+| **Coordinates** | Dive site 47.65104, -122.85048 (seabed 18.2 m below MLLW), about 280 m northwest of the beach. Entry at 47.65005, -122.846968, the concrete stairs at the middle of the park beach |
+| **Type** | Shore. Swimming the 280 m out on the surface saves gas; descending early and following the slope out works just as well |
 | **Depth range** | Cobble shallows into eelgrass from about 1.5 m below MLLW, then a sandy slope dropping steadily past 20 m |
 | **Skill level** | All divers. A natural site for a first cold-water dive or a gear shakedown |
 
@@ -15,7 +15,7 @@ Scenic Beach State Park is a gently sloping sand and cobble beach on the east sh
 * **Entry.** Anywhere along the roughly 500 m park beach, but the concrete stairs at the middle of the beach are the natural spot. The beach is sand and cobble, easy underfoot in boots, with no surf and no ledges. On a minus tide the gentle slope means a long wade before the water is deep enough to swim.
 * **Parking.** Day-use lots inside the park, a short carry from the stairs. A Discover Pass is required on the vehicle, 45 US dollars annual or 10 US dollars for a day.
 * **Access.** The park is open year round, 08:00 to dusk. From Highway 3 take the Newberry Hill Road exit, follow Newberry Hill Road 4.8 km to its end, turn right onto Seabeck Highway for 8.2 km through Seabeck, right onto Miami Beach Road NW for 2.1 km, then right on Scenic Beach Road NW into the park. About 26 km from the Bremerton ferry terminal, or reachable via the Kingston ferry from Edmonds.
-* **Facilities.** Restrooms with hot showers, picnic shelters, and a campground of about 50 sites, half open year round and the rest April through October. Air fills in Bremerton or on Bainbridge Island.
+* **Facilities.** Restrooms with hot showers, picnic shelters, and a campground of about 50 sites, half open year round and the rest April through October.
 
 ## Navigation and landmarks
 

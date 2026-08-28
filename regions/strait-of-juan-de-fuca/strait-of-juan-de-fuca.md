@@ -42,6 +42,16 @@ Sekiu, Neah Bay, Cape Flattery, Tatoosh Island and Duncan Rock are a different t
 
 Both the ADCIRC mesh and the high-resolution coastal bathymetry thin out right at this corner: a point off Tatoosh Island lands close enough to the mesh edge to need caution on timing, and the fine-grained depth data gives out entirely around Tatoosh Island and Duncan Rock, falling back to a coarse global grid. Treat current predictions and quoted depths out here as a starting point to verify on the day, not a settled number.
 
+## Dive shops and air fills
+
+Tank fill spots for this folder's sites.
+
+- **Curley's Resort and Dive Center.** 291 Front St, Sekiu, WA 98381. (360) 963-2281. curleysresort.com. Air fills to 241 bar; hours run shorter outside peak season.
+- **Octopus Gardens Diving.** 2410 Washington St, Port Townsend, WA 98368. (360) 385-3483. octopusgardensdiving.com. Air and nitrox.
+- **Dano's Dive Service.** Home based fill station near Ediz Hook, Port Angeles. Air only, no nitrox, arranged by phone in advance at (360) 461-9843; current hydro required. No public address or website found.
+- **Scuba Supplies Co.** 120 E Front St, Port Angeles, WA 98362. (360) 457-3190. Air and nitrox fills, run out of the back of a bike and kayak shop. Not confirmed still in business; call ahead before relying on it.
+- **Snow Creek Resort.** 691 WA-112, Neah Bay, WA 98357. (800) 883-1464. A campground and general store with an air compressor, about 2 miles east of Neah Bay, closer to Neah Bay and Cape Flattery than Curley's in Sekiu.
+
 ## Shipping
 
 A formal Traffic Separation Scheme and Vessel Traffic Service cover the length of the strait, one of the busiest approaches on the US west coast for tankers, container ships and cruise traffic. The lanes run mid channel; boat sites well offshore, Duncan Rock and the wreck of the Diamond Knot among them, sit close enough to that traffic to warrant a real look at vessel positions before the dive, not just a glance at the chart. Shore sites are generally well clear of the lanes themselves, but Ediz Hook and the Port Angeles approach see steady harbor and ferry traffic worth checking before an entry near the harbor mouth.

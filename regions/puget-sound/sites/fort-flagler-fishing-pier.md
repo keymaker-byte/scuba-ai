@@ -5,7 +5,7 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 | | |
 |---|---|
 | **Location** | Nordland, WA. East shore of Marrowstone Island, Fort Flagler Historical State Park, on Admiralty Inlet |
-| **Coordinates** | Dive area 48.09127, -122.68855 (seabed about 15 m below MLLW). Entry off the beach roughly 200 m west, near 48.0913, -122.6913 |
+| **Coordinates** | Dive area 48.09127, -122.68855 (seabed about 15 m below MLLW). Entry off the beach roughly 300 m west, at 48.09133, -122.69265 |
 | **Type** | Shore |
 | **Depth range** | 0 m at the beach to about 15 m below MLLW at the dive coordinate above; the rubble field beyond it runs a couple of metres deeper |
 | **Skill level** | Intermediate to advanced, current dependent; the shallows near the old pier line are workable for a beginner right at slack |
@@ -15,7 +15,7 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 * **Entry.** A stairway drops from the bluff to the beach on the north side of the old pier site. Enter from either side and head out; the pier itself is gone, so the swim to the reef is longer than it once was, over open sand with only scattered pilings to follow.
 * **Parking.** A gravel lot at the end of Flagler Road, by the old pier site. Discover Pass required, sold as a one day or annual pass.
 * **Access.** Park hours run 6:30 a.m. to dusk in summer, 8 a.m. to dusk in winter.
-* **Facilities.** Restrooms with showers at the lower and upper campgrounds, a short walk up from the beach. Camping, picnic areas and a boat launch elsewhere in the park. Nearest air fills are in Port Hadlock and Port Townsend.
+* **Facilities.** Restrooms with showers at the lower and upper campgrounds, a short walk up from the beach. Camping, picnic areas and a boat launch elsewhere in the park.
 
 ## Navigation and landmarks
 

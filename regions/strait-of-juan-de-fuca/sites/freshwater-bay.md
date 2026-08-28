@@ -15,7 +15,7 @@ Freshwater Bay opens north onto the Strait of Juan de Fuca between Angeles Point
 * **Entry.** The county park's concrete boat ramp, at the end of Freshwater Bay Road. Snorkel or fin the crossing on the surface rather than swimming it submerged in full gear, or tow a kayak or paddleboard carrying your kit and gear up once at the rock.
 * **Parking.** Free day use lot at the park, no fee. An upper overflow area sits further up the hill, past a small wildlife pond.
 * **Access.** The lower area, ramp, sani can, and beach, is open year round, 24 hours a day. The upper picnic area and its flush restroom are seasonal, open 15 May through 15 September only.
-* **Facilities.** Sani can at the lower area year round, flush restroom seasonally in the upper area, picnic tables, a fire pit, and benches. Air fills at Curley's Resort and Dive Center, 291 Front St, Sekiu, about 50 km (45 minutes) west on Highway 112; hours run shorter outside peak season.
+* **Facilities.** Sani can at the lower area year round, flush restroom seasonally in the upper area, picnic tables, a fire pit, and benches.
 
 ## Navigation and landmarks
 

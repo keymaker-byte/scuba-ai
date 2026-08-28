@@ -15,7 +15,7 @@ Ediz Hook is the long sand spit that curls out from the base of Port Angeles and
 * **Entry.** A gravel pull-off along Ediz Hook Road, with a restroom across the street. Walk down onto the beach for a direct entry; the bottom shelves gently through the shallows, so at low tide it can be more of a trudge over an exposed flat than a swim.
 * **Parking.** Free, at the gravel pull-off. This is separate from Harborview Park, the developed park with its own parking near the spit's outer end, closer to the Coast Guard station; this entry sits further back down the road, roughly between the park and a cell tower along the route.
 * **Access.** Reached from Highway 101 through Port Angeles: follow Front Street west past the marina and along the edge of the paper mill, currently McKinley Paper on the site of the former Nippon mill, onto Ediz Hook Road, then a couple of miles further out the spit.
-* **Facilities.** Restroom across the street from the pull-off. Older reports mention informal fresh water taps near a salmon net-pen shed and a kayak club picnic shed further along the road, but treat these as unreliable and not guaranteed. Air fills come from Dano's Dive Service, a home based fill station near Ediz Hook, air only, no nitrox, arranged by phone in advance at 360-461-9843, current hydro required. Nitrox has to come from further afield, Curley's Resort and Dive Center in Sekiu is the nearest known source, about 84 km (52 miles, 1.5 hours) west on Highway 112.
+* **Facilities.** Restroom across the street from the pull-off. Older reports mention informal fresh water taps near a salmon net-pen shed and a kayak club picnic shed further along the road, but treat these as unreliable and not guaranteed.
 
 ## Navigation and landmarks
 

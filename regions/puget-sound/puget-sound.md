@@ -44,3 +44,35 @@ A fjord, not a sound: a narrow trench separating the Kitsap Peninsula from the O
 
 - **Dissolved oxygen is genuinely low.** It has fallen from 5 to 6 mg/L in the 1950s to under 0.2 mg/L in places this century, with recurring fish kills, worst in the southern reaches and Lynch Cove and worst in late summer and autumn. Not a diver safety issue directly, but it changes what is alive at depth and is why a wall can look bare below a certain contour.
 - **Slack falls at high and low water.** This reach behaves as a standing wave, so slack sits within about half an hour of the tide extremes rather than midway between them. This is the exception to the region rule that high water is not slack. It matters because almost nothing in the canal has a governing current station: the nearest one publishing predictions is Hazel Point (PUG1601) up at the entrance. With no station, the tide extremes at the governing tide station are the slack guide. Apply this rule only if you are further into the Hood Canal, closer to the entrance might still behave as the rest of Puget Sound.
+
+## Dive shops and air fills
+
+Tank fill spots near this folder's sites, by area.
+
+**Seattle and South Sound**
+
+- **Underwater Sports, Seattle.** 10545 Aurora Ave N, Seattle, WA 98133. (206) 362-3310. underwatersports.com. Air and nitrox, hydro testing.
+- **Underwater Sports, Federal Way.** 34428 Pacific Highway S, Federal Way, WA 98003. (253) 874-9387. underwatersports.com. Air and nitrox.
+- **Underwater Sports, Lakewood.** 9606 40th Ave SW, Lakewood, WA 98499. (253) 588-6634. underwatersports.com. Air and nitrox.
+- **Silent World Diving Systems, Bellevue.** 1910 132nd Ave NE, Suite 11, Bellevue, WA 98005. (425) 747-8842. silent-world.com. Air and nitrox.
+- **Underwater Sports, Bellevue.** 12003 NE 12th St, Suite 59, Bellevue, WA 98005. (425) 454-5168. underwatersports.com. Air and nitrox.
+
+**North Sound: Everett, Edmonds, Lynnwood**
+
+- **Underwater Sports, Edmonds.** 264 Railroad Ave, Edmonds, WA 98020. (425) 771-6322. underwatersports.com. Air and nitrox. On the same street as, and a few blocks from, Edmonds Underwater Park.
+- **Lighthouse Diving Center, Lynnwood.** 13718 31st Ave W, Lynnwood, WA 98087. (425) 771-2679. lighthousediving.com. Air and nitrox.
+- **Evergreen Dive Service, Everett.** 4610 Evergreen Way, Suite 1, Everett, WA 98203. (425) 512-8811. evergreendive.com. Air and nitrox.
+
+**Whidbey Island and Anacortes**
+
+- **Anacortes Diving and Supply.** 2502 Commercial Ave, Anacortes, WA 98221. (360) 293-2070. anacortesdiving.com. Air, nitrox and argon.
+
+**Kitsap Peninsula and Hood Canal**
+
+- **Sound Dive Center, Bremerton.** 5000 Burwell St, Bremerton, WA 98312. (360) 373-6141. sounddivecenter.com. Air, nitrox and CO2 fills.
+- **Exotic Aquatics Scuba and Kayaking, Bainbridge Island.** 328 Madison Ave N, Suite B, Bainbridge Island, WA 98110. (206) 842-1980. exoticaquaticsscuba.com. Air and nitrox.
+- **YSS Dive, Hoodsport.** 22320 N US Highway 101, Shelton, WA 98584. (360) 877-2318. yssdive.com. Air, nitrox and trimix.
+
+**Jefferson County**
+
+- **Octopus Gardens Diving, Port Townsend.** 2410 Washington St, Port Townsend, WA 98368. (360) 385-3483. octopusgardensdiving.com. Air and nitrox.
