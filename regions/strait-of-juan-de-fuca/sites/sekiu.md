@@ -15,7 +15,7 @@ Sekiu Jetty is a shore dive in the town of Sekiu, on the western reach of the St
 * **Entry.** Shore entry over a rock embankment at either end of the parking area on the north side of Mason's Olson Resort, formerly Olson's Resort and Marina, reached by a steel ramp down to the beach. Enter to one end for the jetty itself, or the other for the rocky, kelp covered ground to the northwest, the more interesting of the two.
 * **Parking.** A gravel lot at the boat launch, now owned by the Washington Department of Fish and Wildlife. Day use only, a Discover Pass or WDFW Vehicle Access Pass is required, and there is no additional launch fee beyond it. Overnight parking is not allowed. The marina, moorage floats and breakwater alongside the lot remain privately operated.
 * **Access.** Shore access is available 24 hours a day.
-* **Facilities.** Restrooms at the boat launch. Food, lodging, boat rentals and moorage at Mason's Olson Resort and elsewhere in Sekiu and Clallam Bay. Air fills, to 241 bar, are available at Curley's Resort and Dive Center in Sekiu, and also in Joyce and Port Angeles.
+* **Facilities.** Restrooms at the boat launch. Food, lodging, boat rentals and moorage at Mason's Olson Resort and elsewhere in Sekiu and Clallam Bay.
 
 ## Navigation and landmarks
 

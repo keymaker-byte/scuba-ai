@@ -5,7 +5,7 @@ Shore dive on the north side of Three Tree Point, a wooded residential point tha
 | | |
 |---|---|
 | **Location** | Burien, WA. North side of Three Tree Point, East Passage, Puget Sound |
-| **Coordinates** | Dive site 47.45336, -122.38006 (seabed about 32 m below MLLW); north-side beach access at the end of SW 170th Street |
+| **Coordinates** | Dive site 47.45336, -122.38006 (seabed about 32 m below MLLW); entry at 47.452230, -122.379188, about 140 m south-southeast, the north-side beach access at the end of SW 170th Street |
 | **Type** | Shore, with a short surface swim to the offshore buoys before descending |
 | **Depth range** | Reef roughly 5 to 27 m below MLLW; the sand slope continues past 40 m |
 | **Skill level** | Intermediate; the shallow reef suits all divers, but the slope drops fast |
@@ -15,7 +15,7 @@ Shore dive on the north side of Three Tree Point, a wooded residential point tha
 * **Entry.** From the public beach access at the end of SW 170th Street, a gated dirt path that runs down between private houses to a concrete platform above the beach. Enter directly in front of where the path meets the water. The beaches on either side are private, so stay off them.
 * **Parking.** A small, unmarked paved area by a private residence at the head of the path, with room for only four or five cars. It fills during salmon fishing season. Watch for No Parking signs on the approach, which belong to the neighbours and to Three Tree Point South around the curve.
 * **Access.** Dawn to dusk, posted with a fine for violators. About 18 km south of central Seattle by way of Highway 518 west through Burien, then Ambaum Boulevard, SW 152nd Street and the long, winding descent of Maplewild Avenue SW to SW 170th Street.
-* **Facilities.** None on site; this is a quiet residential neighbourhood, so keep noise down, especially at night, and do not block driveways. Air fills are in Kent, Federal Way and Tacoma.
+* **Facilities.** None on site; this is a quiet residential neighbourhood, so keep noise down, especially at night, and do not block driveways.
 
 ## Navigation and landmarks
 

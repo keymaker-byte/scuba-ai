@@ -5,7 +5,7 @@ Rosario Beach is a pebble and sand beach in Deception Pass State Park, at the so
 | | |
 |---|---|
 | **Location** | Deception Pass State Park, Fidalgo Island, WA. Rosario Bay, on Rosario Strait, just north of Deception Pass |
-| **Coordinates** | Dive site 48.41745, -122.66680 (seabed about 10 m below MLLW); beach entry at the south end of Rosario Beach |
+| **Coordinates** | Dive site 48.41745, -122.66680 (seabed about 10 m below MLLW); entry at 48.417293, -122.664069, about 200 m east, the south end of Rosario Beach |
 | **Type** | Shore. A sheltered bay dive, or advanced swims to Rosario Head and Sharpe Cove and out to Northwest Island |
 | **Depth range** | Rocky reef about 8 to 12 m below MLLW around Urchin Rocks and Rosario Head, sand beyond sloping to roughly 15 m; the outer walls of Northwest Island drop past 30 m |
 | **Skill level** | All divers in the bay; advanced for Rosario Head, Sharpe Cove and Northwest Island |
@@ -15,7 +15,7 @@ Rosario Beach is a pebble and sand beach in Deception Pass State Park, at the so
 * **Entry.** An easy walk-in over sand at the south end of Rosario Beach. Follow the footpath south from the parking area, past the stone picnic shelter, to the beach: Rosario Bay is on the right, Sharpe Cove on the left. From the south end of the beach, swim out toward Urchin Rocks.
 * **Parking.** Limited parking at the Rosario Beach picnic area and along the access road. A Washington Discover Pass is required to park for the day.
 * **Access.** Open 6:30 a.m. to dusk. In Deception Pass State Park off Highway 20, about 16 km south of Anacortes; from Highway 20 take Rosario Road and follow the signs to Rosario Beach and the marine laboratory. Roughly 120 km from Seattle and 68 km from Bellingham. No ferry needed.
-* **Facilities.** Picnic tables, a covered shelter with a stone fireplace, changing areas, and restrooms at the beach, the restrooms seasonal. Hot showers, an outdoor cold shower for rinsing gear, and camping year round elsewhere in the park (Bowman Bay, Cranberry Lake and North Beach). Air fills in Anacortes and Oak Harbor. The Walla Walla University Rosario Beach Marine Laboratory sits above the beach, and its Discovery Center opens on summer weekends.
+* **Facilities.** Picnic tables, a covered shelter with a stone fireplace, changing areas, and restrooms at the beach, the restrooms seasonal. Hot showers, an outdoor cold shower for rinsing gear, and camping year round elsewhere in the park (Bowman Bay, Cranberry Lake and North Beach). The Walla Walla University Rosario Beach Marine Laboratory sits above the beach, and its Discovery Center opens on summer weekends.
 
 ## Navigation and landmarks
 

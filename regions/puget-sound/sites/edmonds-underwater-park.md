@@ -5,7 +5,7 @@ Edmonds Underwater Park is a shore dive on the Puget Sound waterfront at Edmonds
 | | |
 |---|---|
 | **Location** | Edmonds, WA. East shore of the main basin of Puget Sound, immediately north of the Edmonds to Kingston ferry terminal |
-| **Coordinates** | Dive site 47.81574, -122.38457 (seabed about 7 m below MLLW); entry at Brackett's Landing North, descending at the base of the piling nearest the ferry pier |
+| **Coordinates** | Dive site 47.81574, -122.38457 (seabed about 7 m below MLLW); entry at 47.813508, -122.382235, about 300 m southeast, Brackett's Landing North, descending at the base of the piling nearest the ferry pier |
 | **Type** | Shore, with a long surface or bottom swim out to the structures |
 | **Depth range** | Roughly 3 to 12 m below MLLW, reaching about 13 m at the south end near the ferry |
 | **Skill level** | Intermediate |
@@ -16,7 +16,7 @@ Edmonds Underwater Park is a shore dive on the Puget Sound waterfront at Edmonds
 * **Parking.** The park lot is limited and has a four hour limit, with accessible spaces and a gear drop-off zone; it fills early on weekends. Overflow parking is in the private lots south of Main Street and east of Railroad Avenue.
 * **Access.** Open roughly 7 a.m. to dusk. Diving after sunset requires an evening dive permit from Edmonds Parks and Recreation, applied for at least 72 hours ahead, with no fee, and the named applicant must be onsite for the dive. Reached via I-5 exit 177 and Highway 104 west into Edmonds, then down to Railroad Avenue and the park just past the ferry pier.
 * **Rules.** A marine sanctuary and bird sanctuary: taking marine life, or any part of the sunken vessels, is prohibited. Buddy diving is required and boats are not allowed inside the park. Divers must stay north of the ferry terminal, inside the marked boundary.
-* **Facilities.** Restrooms and dry changing rooms, wheelchair accessible and open year round, plus an outside cold freshwater shower for rinsing gear that is shut off in winter. Extensive interpretive displays on site, and a map of the underwater structures is posted by the changerooms at the west end of the restroom. Air fills are a few blocks away at the dive shop on the Edmonds waterfront, with more fills in Lynnwood, Bothell and Seattle.
+* **Facilities.** Restrooms and dry changing rooms, wheelchair accessible and open year round, plus an outside cold freshwater shower for rinsing gear that is shut off in winter. Extensive interpretive displays on site, and a map of the underwater structures is posted by the changerooms at the west end of the restroom.
 
 ## Navigation and landmarks
 

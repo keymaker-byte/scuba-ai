@@ -5,7 +5,7 @@ Shore dive at Seacrest Park on the West Seattle waterfront, also known as Alki C
 | | |
 |---|---|
 | **Location** | West Seattle, WA. Southwest shore of Elliott Bay on Harbor Avenue SW, at Seacrest Park |
-| **Coordinates** | Dive site 47.58932, -122.37826 (seabed about 24 m below MLLW); entry from the beach beside the Marination Ma Kai café |
+| **Coordinates** | Dive site 47.58932, -122.37826 (seabed about 24 m below MLLW); entry at 47.588669, -122.379838, about 140 m southwest, the beach beside the Marination Ma Kai café |
 | **Type** | Shore, with a short surface swim out to the buoys |
 | **Depth range** | From the beach down past 40 m; the slope continues beyond the recreational limit |
 | **Skill level** | All divers; the easily reached deep water also makes it a standing technical training site |
@@ -15,7 +15,7 @@ Shore dive at Seacrest Park on the West Seattle waterfront, also known as Alki C
 * **Entry.** The cobble beach immediately southeast of the Marination Ma Kai café (in the old Seacrest boathouse building) and the water taxi dock, at the 1600 block of Harbor Avenue SW. Concrete stairs flank the beach at either end, and the entry is mildly steep rock and cobble giving way to the slope. The beach faces northeast; swim out northeast toward the white boundary buoys before dropping, with the dock on your left.
 * **Parking.** Curbside along Harbor Avenue SW, free. It fills early on summer weekends and around class schedules; arrive early or expect a walk.
 * **Access.** From I-5, exit 163 to the West Seattle Bridge, then the Harbor Avenue exit, turn right, and follow the waterfront about 3 km to Seacrest Park. The site is also reachable without a car: the King County Water Taxi from Pier 50 downtown lands at the Seacrest dock.
-* **Facilities.** Restrooms in the pier building, the Marination Ma Kai café and kayak rentals in the boathouse building, picnic tables, and a seasonal outdoor rinse shower. Boat launch ramps are at Don Armeni Park just northwest. No air fills on site.
+* **Facilities.** Restrooms in the pier building, the Marination Ma Kai café and kayak rentals in the boathouse building, picnic tables, and a seasonal outdoor rinse shower. Boat launch ramps are at Don Armeni Park just northwest.
 
 ## Navigation and landmarks
 

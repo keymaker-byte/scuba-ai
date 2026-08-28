@@ -15,7 +15,7 @@ Picnic Point is a shore dive on the east shore of Possession Sound, on the mainl
 * **Entry.** From the grass lawn behind the beach, across the cobblestone shore and into the water. The bottom turns to sand a short distance out, with an eelgrass bed beginning shortly beyond that.
 * **Parking.** A parking lot at the end of Picnic Point Road, at 7231 Picnic Point Road, Edmonds. Small, and a real limitation on weekends.
 * **Access.** Open 7 a.m. to dusk. A footbridge, ADA accessible, crosses the BNSF railroad tracks between the parking lot and the beach, a walk of roughly 265 m each way. Stay within the park boundary; private property lies immediately north of the park.
-* **Facilities.** Picnic tables and barbecue stands on the grass lawn, and restrooms in the parking lot. No other facilities on site. Air fills are available in Everett, Lynnwood and Edmonds.
+* **Facilities.** Picnic tables and barbecue stands on the grass lawn, and restrooms in the parking lot. No other facilities on site.
 
 ## Navigation and landmarks
 

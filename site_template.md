@@ -5,7 +5,7 @@ Two to five sentences of plain prose: what the site is, where it is, its charact
 | | |
 |---|---|
 | **Location** | Town, state, and the body of water |
-| **Coordinates** | Decimal degrees of the dive site (the area actually dived, not the entry), with the seabed depth at that point in parentheses (m below MLLW), and the entry called out if it differs |
+| **Coordinates** | Decimal degrees of the dive site (the area actually dived, not the entry), with the seabed depth at that point in parentheses (m below MLLW), and the entry point coordinates and location description |
 | **Type** | Shore or boat, and surface swim time if any |
 | **Depth range** | Below MLLW where a datum is known, otherwise the observed range |
 | **Skill level** | Only if known; omit the row otherwise |
@@ -15,7 +15,7 @@ Two to five sentences of plain prose: what the site is, where it is, its charact
 * **Entry.** Where and how to get in the water.
 * **Parking.** Where to leave the car, and cost.
 * **Access.** Hours, distances, restrictions.
-* **Facilities.** Restrooms, air fills, anything on or near site.
+* **Facilities.** Restrooms, anything on or near site.
 
 ## Navigation and landmarks
 
@@ -60,7 +60,7 @@ Optional table of features by depth below MLLW, and how they read at a low and a
 
 ## Visibility
 
-* **Topic.** What drives visibility here and when it is best or worst.
+* **Topic.** What drives visibility here and when it is best or worst. Overall description not based on single day anecdotes.
 
 ## Temperature
 

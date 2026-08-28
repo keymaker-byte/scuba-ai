@@ -15,7 +15,7 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 * **Entry.** A short sandy cobblestone beach at the foot of Adams Street, in front of Adams Street Park, an easy swim to either of two areas: southwest to the current Union Wharf, or northeast, past the wharf, to the abandoned ferry pier and its four offshore pylons.
 * **Parking.** The street end itself is a small landscaped park, flower beds and benches, with no vehicle access. Street parking only, along Water Street and Adams Street.
 * **Access.** The beach is open 24 hours.
-* **Facilities.** Public restrooms at Pope Marine Park, on Water Street at Madison, a couple of blocks northeast of Adams Street. Air fills are available in Port Townsend and Port Hadlock.
+* **Facilities.** Public restrooms at Pope Marine Park, on Water Street at Madison, a couple of blocks northeast of Adams Street.
 
 ## Navigation and landmarks
 

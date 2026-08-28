@@ -15,7 +15,7 @@ North Beach County Park sits on the Quimper Peninsula between McCurdy Point and 
 * **Entry.** Shore entry at the park's boat launch off Kuhn Street. Swim out over the sand and clay bottom to reach the kelp, then drop under the canopy.
 * **Parking.** Free gravel lot at the park, limited in size; the park sits in a residential area, so keep groups small and consider carpooling.
 * **Access.** Day use only, sunrise to sunset. Wood and charcoal fires are subject to a seasonal county burn ban that typically runs July through September; check current status before relying on the fire boxes, propane stoves are unaffected.
-* **Facilities.** A small covered shelter, picnic tables and a grass lawn; portable toilets, no fixed restroom on site. Air and nitrox fills at Octopus Gardens Diving, 2410 Washington St, Port Townsend, about a 10 minute drive south near the Boat Haven.
+* **Facilities.** A small covered shelter, picnic tables and a grass lawn; portable toilets, no fixed restroom on site.
 
 ## Navigation and landmarks
 

@@ -5,26 +5,26 @@ Sund Rock is a rocky point on the west shore of Hood Canal, between Hoodsport an
 | | |
 |---|---|
 | **Location** | Hoodsport, Washington. Hood Canal, west shore, between Hoodsport and Lilliwaup |
-| **Coordinates** | Dive site 47.43416, -123.11925 (seabed about 28 m below MLLW). Private ramp entry puts you roughly 50 m from the rock; the public entry is about 3 km north of Hoodsport with a 200 m swim |
+| **Coordinates** | Dive site 47.43416, -123.11925 (seabed about 28 m below MLLW), off the south wall. Private access has two separate entries: the south wall entry at 47.434712, -123.120138, a footpath down to a small beach right at the wall; the north wall entry at 47.435419, -123.120401, about 80 m north, an easy ramp near the bench and boulder garden. The public entry is about 3 km north of Hoodsport with a 200 m swim |
 | **Type** | Shore, or kayak. No meaningful surface swim from the private entry |
 | **Depth range** | Boulder garden 5 to 9 m below MLLW, ledges to about 17 m, wall base into silty sand at 19 to 21 m, slope beyond continuing past 32 m |
 | **Skill level** | All divers in the boulder garden and along the shallow ledge; the deeper slope needs depth discipline |
 
 ## Getting there
 
-* **Entry.** From the private ramp, a short flat walk to a pebble beach and a walk-in entry, then a swim of about 50 m right toward Sund Rock. Descend to the boulder garden shortly before reaching the part of the wall that stands above water. From the public entry, walk the steep curving trail down to the beach and swim about 200 m north to the rock.
+* **Entry.** The private property has two separate walk-in entries, not one shared beach. The main entry, an easy ramp down to a pebble beach by the bench and boulder garden, serves the north wall directly and also reaches the south wall by a swim of a hundred metres or more along the shore. A separate footpath off to the right, down to a small, almost hidden beach, drops right onto the south wall itself, the shorter way to it. From the public entry, walk the steep curving trail down to the beach and swim about 200 m north to the rock.
 * **Reservation.** The private access is reservation only, booked in advance at sundrock.com. Entry is about 23 US dollars per diver including tax, with a reduced rate for veterans and first responders, and a dive card covering six dives for 100 US dollars bought on site. Reservations start at 08:00, or 09:00 on Mondays and Fridays, the last reservation is taken at 12:30, and the property closes to everyone at 17:00 sharp. After hours and night access is arranged separately through the dive shop in Hoodsport.
 * **Parking.** Space for 10 to 12 vehicles at the gated ramp, which fills on a good weekend, so carpool. The public lay-by holds only 3 or 4 cars.
 * **Access.** Beside Highway 101 about 3.5 km north of Hoodsport, roughly 60 km north of Olympia and 115 km from Seattle by road. The tidelands above the extreme low water line are private and posted, so from the public entry stay in the water beyond the entry point.
-* **Facilities.** Chemical toilet, gear-up benches and a rinse area at the private ramp. Nothing at the public entry. Air fills in Hoodsport, Lilliwaup and Shelton. Potlatch State Park about 8.5 km south has restrooms, camping, picnic tables and hot showers.
+* **Facilities.** Chemical toilet, gear-up benches and a rinse area at the private ramp. Nothing at the public entry. Potlatch State Park about 8.5 km south has restrooms, camping, picnic tables and hot showers.
 
 ## Navigation and landmarks
 
-Several distinct dives run off the one entry, and the rock itself is the reference for all of them.
+Several distinct dives run off the property's two entries, and the rock itself is the reference for all of them.
 
-* **Boulder garden.** Straight out from the ramp in 6 to 9 m, over sand and cobble with eelgrass. The natural place to begin and end, and shallow enough to hold a long safety stop among the tube-dwelling anemones.
-* **South wall.** Right from the entry, following the shore at about 8 m until the rock face begins. Boulder formations between 6 and 15 m, and the best of the wolf eel and octopus holes.
-* **North wall.** Left from the entry, marked by a white buoy off the north end of the parking area. Drop at the buoy and descend to the top of the wall, which starts around 5 to 8 m and steps down in ledges.
+* **Boulder garden.** Straight out from the main ramp entry in 6 to 9 m, over sand and cobble with eelgrass. The natural place to begin and end, and shallow enough to hold a long safety stop among the tube-dwelling anemones.
+* **South wall.** Reached directly from its own footpath entry, right onto the wall with no swim needed, or from the main entry by following the shore south at about 8 m until the rock face begins, a longer approach. Boulder formations between 6 and 15 m, and the best of the wolf eel and octopus holes.
+* **North wall.** Reached from the main ramp entry, marked by a white buoy off the north end of the parking area. Drop at the buoy and descend to the top of the wall, which starts around 5 to 8 m and steps down in ledges.
 * **Fish bowl.** North of the site, a bowl in the slope that holds schooling fish, with the wall below it running deeper.
 * **Wreck.** An old fishing vessel lies north of the beach, its bow marked by an orange buoy. Either surface swim to the buoy and descend, or take a compass heading north from the north wall and run it underwater.
 * **Getting home.** The rock is the only unambiguous landmark. Keep the wall on one shoulder outbound and the other inbound, and the shallow bench will lead back to the entry.
