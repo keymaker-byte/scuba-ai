@@ -338,6 +338,18 @@ python3 tools/pnwdiving_viz.py --site skyline   # one site
 python3 tools/pnwdiving_viz.py --raw            # feet, as the reporter wrote it
 ```
 
+## Regions
+
+A new region file is warranted when a site falls outside every region folder listed in Workspace structure. Check the existing regions' own Boundaries subsections first: a region's coverage can reach past a strict geographic definition of it, so the site may already belong to one of them. A new region file covers a body of water, or a category of water, with no folder covering it yet.
+
+The canonical structure is `region_template.md`. Every region file, new and old, follows it: a title, one to three sentences of intro prose, a "Sites currently covered" table, then `##` sections in order: The region (with an optional sub area table and a Boundaries subsection), Conditions, How planning works here. After that, add whatever this region actually needs and nothing it doesn't: a section for a subarea that behaves differently from the rest of the region, a Dive shops and air fills section once real shops are known, a section for a hazard particular to this region (commercial shipping traffic, say), and so on. Skip a section entirely rather than filling it with placeholder text; site files drop a section with no data, and a region file does the same.
+
+Creating a region draws on the same standard as creating a site: real research, not invention. Establish the region's basic geography (length, width, depth, how it connects to neighbouring water), its typical water temperature and visibility, and reason through what actually decides whether a dive goes well here, in priority order, the way each existing region file's "How planning works here" does; that ordering is specific to the region's own hydrography and should not be copied from another region's file without re-deriving it for this one.
+
+Every new region needs a row in the README's own "Regions currently covered" table: the region name linking to `regions/<slug>/<slug>.md`, and a brief description in the same geographical register as that table's other rows, not a diving-oriented one.
+
+Style: no bold text inside paragraphs (bold is for a bullet's lead topic and the table's left column); avoid the dash as a connector or separator (use commas, periods, parentheses, or "to" for a range). Genuine hyphens in names and compound words are fine.
+
 ## Sites
 
 **Important!** Write site files like an entry in a public dive guidebook. Factual, readable, and useful to any diver preparing for the site, not a page of our own notes.
@@ -354,9 +366,11 @@ The confidence work still happens, it just doesn't live in the file. Verify a st
 
 Air fills and dive shops belong in the region's steering file, not the site file. A site's Facilities row names what's at the site and the nearest town; it doesn't name a specific shop.
 
-Style, same as the files themselves: metric only; no bold text inside paragraphs (bold is for a bullet's lead topic and the table's left column); avoid the dash as a connector or separator (use commas, periods, parentheses, or "to" for a range). Genuine hyphens in names and compound words are fine.
+Style: no bold text inside paragraphs (bold is for a bullet's lead topic and the table's left column); avoid the dash as a connector or separator (use commas, periods, parentheses, or "to" for a range). Genuine hyphens in names and compound words are fine.
 
 Every site file carries two stations, and they are not the same station: a governing current station (with its bin and offset) and a tide station in the same body of water (name and position verified, not just its ID). Every depth is quoted as a datum depth (m below MLLW), because a raw depth is only true at the tide it was read at. The companion `<slug>.json` extract stays data beside the guidebook: never edited by hand, never folded into the prose.
+
+A new site file also needs a row in its region's steering file, under that file's "Sites currently covered" table: the site name linking to `sites/<slug>.md`, plus a brief one-line description matching the tone of that table's other rows. Keep this table current the other way too: if a site file is renamed, removed, or its opening description changes enough that the table's line no longer matches, update or remove the row in the same pass.
 
 ## Plan log
 
