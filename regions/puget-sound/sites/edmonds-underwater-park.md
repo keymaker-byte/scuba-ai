@@ -107,24 +107,24 @@ The park's guide ropes form a grid of named trails: the columns below run roughl
                                                                                                                                                    --> north
                                      DeLion     Enhancement     Jetty      Cathedral   Centennial      Happy       Erratic      Bashful     Casper's
                                        Way          Way          Way          Way          Way        Trails         Way          Way          Way
-                                        |            |            |            |            |            |            |            |            |
-    Boundary Way    FERRY               +------------+------------+------------+------------+------------+------------+------------+------------+
-                    #               A   |            |            |            |            |            |            |            |            |
-                    #                   |            |            |            |   F        |            |            |            |            |
-     Triumph Way    #                   +------------+            +------------+------------+------------+            |            |            |
-                    #                   |        C   |            |        G   |            |            |            |            |            |
-                    #                   |            |   D        |            |            |            |            |            |            |
+                                        |            |            |            |            |            |                         |            |
+    Boundary Way    FERRY               +------------+------------+------------+------------+------------+-------------------------+------------+
+                    #               A   |            |            |            |            |      m     |                         |            |
+                    #                   |            |            |            |   F        |            |                         |            |
+     Triumph Way    #                   +------------+            +------------+------------+------------+                         |            |
+                    #                   |        C   |            |        G   |   O        |            |                         |            |
+                    #                   |            |   D        |            |   P  N M   |            |                         |            |
  Northern Lights    #                   +------------+------------+------------+------------+------------+------------+------------+------------+
-                    #                   |            |        E   |   H        |            |            |            |            |            |
-                    #               B   |            |            |   I        |            |            |            |            |            |
+                    #                   |            |        E   |   H        |        R   |      T     |            |      c     |   i        |
+                    #               B   |        L   |     K  J   |   I        |   n    Q   |   U        |        a   |            |            |
    Telegraph Way   LANE                 +------------+------------+------------+------------+------------+------------+------------+------------+
-                                        |            |            |            |            |            |            |            |            |
-                                        |            |            |            |            |            |            |            |            |
+                                        |            |            |            |   S    o   |   V        |            |          g |            |
+                                        |            |            |            |   p        |   W  Y  Z  |        b   |   d  e   f | k   j      |
      Glacier Way                        |            |            +------------+------------+------------+------------+------------+------------+
-                                        |            |            |            |            |            |            |            |            |
-                                        |            |            |            |            |            |            |            |            |
+                                        |            |            |            |            |   X  q     |            |            |        l   |
+                                        |            |            |            |            |            |  r     h   |            |            |
       Rocky Road                        |            |            |            |            +------------+------------+------------+------------+
-                                        |            |            |            |            |            |            |            |            |
+                                        |            |            |            |            |            |            |   s        |            |
                                                                   ^
                                                                 entry
 ```
@@ -136,9 +136,45 @@ The park's guide ropes form a grid of named trails: the columns below run roughl
 | C | Fossil Wreck |
 | D | Enhancement (artificial structure) |
 | E | Blocks |
-| F | Triumph, the biggest wreck in the park |
+| F | Lopez Pontoon & Triumph |
 | G | Cathedrals |
 | H | H R Jackson (wreck) |
 | I | Boat Yard |
+| J | Cinclant (small vessel) |
+| K | Slinky |
+| L | Jungle Gym |
+| M | SeaBus (wreck) |
+| N | Cupid (wreck) |
+| O | Mesmerized (wreck) |
+| P | Genius (wreck) |
+| Q | Sleepy |
+| R | Tuning Fork |
+| S | Sebastian's Tower |
+| T | Tube Henge |
+| U | Doc |
+| V | Mono Rails |
+| W | Train Station |
+| X | Cottages |
+| Y | Sinko-D-My-O-Dos (small wreck) |
+| Z | Hiccup & Others (collection of very small vessels) |
+| a | Happy House |
+| b | The Erratics |
+| c | Frame |
+| d | Right One |
+| e | Arch |
+| f | Zig Zag |
+| g | Maze |
+| h | Erratic Rock |
+| i | Bashful |
+| j | Sea Horse |
+| k | 1040 Hull |
+| l | Jim's Rock |
+| m | On Edge |
+| n | Melinda II / Dopey |
+| o | Giza (pyramid) |
+| p | Monster Island |
+| q | Shay 1&2 |
+| r | MATTerHorn |
+| s | Matt's Place |
 
 The `#` column is the Edmonds to Kingston ferry lane, immediately west of the DeLion Dry Dock, off limits and never to be entered.
