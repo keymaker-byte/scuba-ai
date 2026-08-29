@@ -352,6 +352,8 @@ Keep the facts, drop the bookkeeping. A fact goes in the file whether it came fr
 
 The confidence work still happens, it just doesn't live in the file. Verify a station still publishes, verify the tide station's name and position, reason through the offset and how sure you are of it. That reasoning belongs in the chat and its results in `plan_log.csv` (predicted beside observed); the site file carries only the best number it produced. A number you are unsure of is stated conservatively, not annotated.
 
+Air fills and dive shops belong in the region's steering file, not the site file. A site's Facilities row names what's at the site and the nearest town; it doesn't name a specific shop.
+
 Style, same as the files themselves: metric only; no bold text inside paragraphs (bold is for a bullet's lead topic and the table's left column); avoid the dash as a connector or separator (use commas, periods, parentheses, or "to" for a range). Genuine hyphens in names and compound words are fine.
 
 Every site file carries two stations, and they are not the same station: a governing current station (with its bin and offset) and a tide station in the same body of water (name and position verified, not just its ID). Every depth is quoted as a datum depth (m below MLLW), because a raw depth is only true at the tide it was read at. The companion `<slug>.json` extract stays data beside the guidebook: never edited by hand, never folded into the prose.
