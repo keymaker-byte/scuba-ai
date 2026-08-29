@@ -12,6 +12,14 @@ Scuba AI is a collection of steering files, tools and dive site descriptions for
 
 `diver-profile.json`, `tool-config.json` and `plan_log.csv` hold personal data (identity, gear, dive history) and are gitignored. A `_template` version of each is included as a starting point for setting up your own.
 
+## Regions currently covered
+
+| Region | Description |
+|---|---|
+| [Puget Sound](regions/puget-sound/puget-sound.md) | An estuary in western Washington, reaching the Pacific through the Strait of Juan de Fuca. Made up of four basins, the Main Basin, Whidbey Basin, Hood Canal and South Sound, separated by submarine sills. |
+| [Strait of Juan de Fuca](regions/strait-of-juan-de-fuca/strait-of-juan-de-fuca.md) | The strait running between Vancouver Island, British Columbia, and the Olympic Peninsula, Washington, connecting the inland Salish Sea to the open Pacific. |
+| [Washington State Lakes](regions/washington-state-lakes/washington-state-lakes.md) | Freshwater lakes across Washington State. |
+
 ## Tools
 
 | Script | Source | Does |

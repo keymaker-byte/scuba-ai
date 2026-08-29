@@ -2,6 +2,30 @@
 
 Region steering file for diving Puget Sound: the environment, how a plan comes together here, and the two conventions every number follows, local time and MLLW depth. The conventions exist because a number that looks right in the wrong frame is more dangerous than a number that is obviously missing.
 
+## Sites currently covered
+
+| Site | Description |
+|---|---|
+| [Alki Beach Park (Junkyard)](sites/alki-beach-park.md) | Wide, sandy Alki shore beach, an easy training entry with a dumped debris "junkyard" reef and a designated octopus preserve; overhead boat traffic is the hazard. |
+| [Alki Pipeline](sites/alki-pipeline.md) | Shallow, easy old outfall pipeline off Constellation Park, a common night dive with the pipe itself as a guide rope; surf on the exposed beach is the risk. |
+| [Burrows Pass (Skyline Wall)](sites/burrows-pass.md) | Advanced current dive on rock ledges dropping into a tidal channel near Anacortes; only the slack before the ebb is reliably diveable. |
+| [Camano Island State Park](sites/camano-island-state-park.md) | Slope steepening into a wall at the island's southwest tip, with genuine current unlike the island's other shores; a fish-rich site best planned tight to slack. |
+| [Edmonds Underwater Park (Brackett's Landing)](sites/edmonds-underwater-park.md) | The region's most dived site, a sanctuary built around a sunken dry dock and scuttled vessels on a shallow sandy bottom; ferry traffic and poor viz are the hazards. |
+| [Fort Flagler Fishing Pier](sites/fort-flagler-fishing-pier.md) | Remote reef of pilings and dumped concrete cylinders straight into Admiralty Inlet; current runs hard and dictates a low exchange window. |
+| [Fort Worden Pier](sites/fort-worden-pier.md) | Pier pilings and a tire and concrete reef at the Port Townsend Marine Science Center, thick with rockfish and resident wolf eels; only works within a slack window on the current. |
+| [Kayak Point County Park](sites/kayak-point.md) | Easy, low current beginner site on Port Susan, limited mainly by often poor visibility and a working pier and boat ramp overhead. |
+| [Keystone Jetty (Fort Casey)](sites/keystone-jetty.md) | Boulder jetty marine preserve on Admiralty Inlet with strong, erratic current that never fully slacks; planned off a current table, not a tide table. |
+| [Mukilteo Lighthouse Park (Clay Wall)](sites/mukilteo-lighthouse-park.md) | Current sensitive clay slope riddled with wolf eel and octopus holes on the Mukilteo waterfront; comfortable on slack, dangerous on a big exchange. |
+| [Mukilteo T-Dock](sites/mukilteo-t-dock.md) | Sheltered, unusually deep shore dive at the mouth of Possession Sound; the ferry lane, now east of the entry since the terminal moved, is the one hard hazard. |
+| [Picnic Point Park](sites/picnic-point-park.md) | Mild, low current sand and eelgrass slope between Mukilteo and Edmonds; the main inconvenience is the long walk in, not the dive itself. |
+| [Rosario Beach](sites/rosario-beach.md) | Protected sanctuary bay at Deception Pass with an easy sheltered dive around Urchin Rocks and harder, current driven options further out. |
+| [Saltwater State Park](sites/salt-water-state-park.md) | Boulder and concrete piling reef fingers off a decayed barge wreck at Des Moines, reached by a long tide dependent surface swim; a marine protected area. |
+| [Scenic Beach](sites/scenic-beach.md) | Negligible current Hood Canal sand and cobble bottom with a rare sea whip forest; not a slack dive, the hazard is small boat traffic. |
+| [Seacrest Cove 2](sites/seacrest-cove-2.md) | The city's most dived night diving site, an old marina's pilings and sunken dories on a silty slope across from downtown Seattle; ferry dock and boat traffic overhead. |
+| [Sund Rock](sites/sund-rock.md) | Rich, reliable Hood Canal boulder garden and rock walls, a marine preserve with tame lingcod, wolf eels and octopus; negligible current, so access and viz are the limiting factors. |
+| [Three Tree Point (North)](sites/three-tree-point-north.md) | Artificial junk reef on a sand and cobble slope that continues past 40 m, so depth control is the standing concern; mild current, dives well day or night. |
+| [Union Wharf](sites/union-wharf.md) | Port Townsend waterfront dive for period glass and crockery among wharf and pier wreckage rather than a reef; sparse life and unpredictable, if usually weak, current. |
+
 ## The region
 
 Puget Sound is an estuary in western Washington, running about 160 km from Deception Pass in the north to Olympia in the south. It reaches the Pacific through the Strait of Juan de Fuca by three entrances: Admiralty Inlet, which carries most of the exchange, plus Deception Pass and the Swinomish Channel. Surface area is about 2,640 km², volume about 110 km³, mean depth about 137 m, and the deepest water about 283 m off Jefferson Point. Roughly 2,140 km of shoreline make it a shore-diving region.
