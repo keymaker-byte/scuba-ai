@@ -101,7 +101,7 @@ The deepest ground lies at the south end toward the ferry, inside the off-limits
 
 ## Site map
 
-The park's guide ropes form a grid of named trails: the columns below run roughly shore to open water, west to east across the park (north is to the right), and the rows run roughly shore-parallel, from Boundary Way at the offshore edge down to Rocky Road nearest the beach. Not every trail runs the full width or depth of the grid; several exist only between two named crossings, shown here as an unconnected segment. The jetty entry sits at the bottom of the Jetty Way column, since Jetty Way is a straight projection out from the jetty itself. This map is a work in progress, built up trail by trail rather than surveyed in one pass, so treat it as a sketch of the grid's shape rather than a complete or precisely scaled chart.
+The park's guide ropes form a grid of named trails: the columns below run roughly shore to open water, west to east across the park (north is to the right), and the rows run roughly shore-parallel. The jetty entry sits at the bottom of the Jetty Way column.
 
 ```
                                                                                                                                                    --> north
@@ -109,14 +109,19 @@ The park's guide ropes form a grid of named trails: the columns below run roughl
                                        Way          Way          Way          Way          Way        Trails         Way          Way          Way
                                         |            |            |            |            |            |            |            |            |
     Boundary Way    FERRY               +------------+------------+------------+------------+------------+------------+------------+------------+
-                    #              A    |            |            |            |            |            |            |            |            |
+                    #               A   |            |            |            |            |            |            |            |            |
+                    #                   |            |            |            |   F        |            |            |            |            |
      Triumph Way    #                   +------------+            +------------+------------+------------+            |            |            |
-                    #                   |            |            |            |            |            |            |            |            |
+                    #                   |        C   |            |        G   |            |            |            |            |            |
+                    #                   |            |   D        |            |            |            |            |            |            |
  Northern Lights    #                   +------------+------------+------------+------------+------------+------------+------------+------------+
-                    #              B    |            |            |            |            |            |            |            |            |
+                    #                   |            |        E   |   H        |            |            |            |            |            |
+                    #               B   |            |            |   I        |            |            |            |            |            |
    Telegraph Way   LANE                 +------------+------------+------------+------------+------------+------------+------------+------------+
                                         |            |            |            |            |            |            |            |            |
+                                        |            |            |            |            |            |            |            |            |
      Glacier Way                        |            |            +------------+------------+------------+------------+------------+------------+
+                                        |            |            |            |            |            |            |            |            |
                                         |            |            |            |            |            |            |            |            |
       Rocky Road                        |            |            |            |            +------------+------------+------------+------------+
                                         |            |            |            |            |            |            |            |            |
@@ -124,9 +129,16 @@ The park's guide ropes form a grid of named trails: the columns below run roughl
                                                                 entry
 ```
 
-| Point | Feature | Position |
-|---|---|---|
-| A | DeLion Dry Dock (end) | Below Boundary Way, west of DeLion Way |
-| B | DeLion Dry Dock (beginning) | Above Telegraph Way, west of DeLion Way |
+| Point | Feature |
+|---|---|
+| A | DeLion Dry Dock (end) |
+| B | DeLion Dry Dock (beginning) |
+| C | Fossil Wreck |
+| D | Enhancement (artificial structure) |
+| E | Blocks |
+| F | Triumph, the biggest wreck in the park |
+| G | Cathedrals |
+| H | H R Jackson (wreck) |
+| I | Boat Yard |
 
 The `#` column is the Edmonds to Kingston ferry lane, immediately west of the DeLion Dry Dock, off limits and never to be entered.
