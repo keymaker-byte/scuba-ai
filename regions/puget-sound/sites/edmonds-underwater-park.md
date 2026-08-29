@@ -34,15 +34,18 @@ Current is a secondary factor here and the site is genuinely mild for the Sound,
 
 | | |
 |---|---|
-| **Governing station** | NOAA Edmonds, 2.5 miles West of (PUG1503), about 4.6 km west-southwest, mid-channel |
-| **Recommended bin** | bin 34, at 20.5 m, the shallowest published; the station sits in deep water off the site |
-| **Time offset** | None applied; the current is light and the useful window is wide |
-| **Flood axis** | south-southeast, 161° |
-| **Ebb axis** | north, 358° |
+| **Governing station** | NOAA Possession Sound Entrance (PUG1605), about 9.5 km north, mid-channel |
+| **Recommended bin** | bin 40, at 18 m, the shallowest published; the station sits in deep water off the site |
+| **Time offset** | Not firmly established; the station's slack runs anywhere from close to the park's own turn to a little over an hour behind it, so treat it as approximate and pad the window |
+| **Flood axis, at the station** | northeast, 31° |
+| **Ebb axis, at the station** | southwest, 204° |
+| **Flood axis, at the park** | northeast, about 40° |
+| **Ebb axis, at the park** | southwest, about 220° |
 
-* **Flood.** Sets south-southeast down the main basin into Puget Sound. Modest, generally well under 0.5 m/s on ordinary exchanges.
-* **Ebb.** Sets north up the basin toward Admiralty Inlet, and is the stronger of the two, still usually under about 0.6 m/s, but reaching around 1 m/s on a large spring exchange.
-* **Local current.** In the park the flow is lighter than at the station and is shaped by wind and by the ferry's propeller wash at the adjacent slip, so it can run when the tide is nominally slack and set across your path rather than along it. About 0.5 m/s is comfortable; twice that is workable but no fun. A small exchange, under roughly 1.2 m, leaves almost no current.
+* **Flood.** Sets northeast, both at the station and at the park, off the ferry slip rather than onto it. Modest, generally well under 0.5 m/s on ordinary exchanges.
+* **Ebb.** Sets southwest, both at the station and at the park, with the component that carries toward the ferry slip; this is the phase to watch for the ferry hazard. Usually under about 0.6 m/s, reaching around 1 m/s on a large spring exchange.
+* **ENPAC15 extract.** The site's own ADCIRC extract confirms this axis and the slack timing above, but it does not label which direction is flood and which is ebb. Take those labels from the station, not from the extract.
+* **Local current.** The flow in the park is lighter than at the station and is also shaped by wind and by the ferry's propeller wash at the adjacent slip, so it can run when the tide is nominally slack and set across your path rather than along the axis above. About 0.5 m/s is comfortable; twice that is workable but no fun. A small exchange, under roughly 1.2 m, leaves almost no current.
 * **Diveable window.** The window is wide because the current is weak, and a common approach is simply to ride the light flow out on one phase and back on the other. High slack is preferred, for an easier entry across a covered beach and cleaner, less silt-laden water. A big exchange or a very low tide is what raises the risk of being carried toward the ferry, so those are the days to be conservative. Surface current-indicator buoys with tails at the site show the set direction.
 
 ## Depth and tide
@@ -65,7 +68,7 @@ The deepest ground lies at the south end toward the ferry, inside the off-limits
 
 ## Hazards
 
-* **Ferry lane.** The Edmonds to Kingston ferry slip is immediately south of the park and ferries run constantly. The park boundary is marked on the bottom by a row of tires; stay inside them, north of the ferry terminal, and never enter the ferry lane. Being set sideways toward the slip without noticing, or surfacing short of shore on a long swim, is the recognised way divers end up near the ferry, and a diver forced up mid-site has needed a ferry-assisted rescue.
+* **Ferry lane.** The Edmonds to Kingston ferry slip is immediately south of the park and ferries run constantly. The park boundary is marked on the bottom by a row of tires; stay inside them, north of the ferry terminal, and never enter the ferry lane. Being set sideways toward the slip without noticing, or surfacing short of shore on a long swim, is the recognised way divers end up near the ferry, and a diver forced up mid-site has needed a ferry-assisted rescue. This risk is greatest on the ebb, when the park's own current sets southwest toward the slip; the flood sets northeast, away from it.
 * **Disorientation.** Most of the site is featureless sand, and the trails lead well out from shore. It is easy to lose the way back, or to follow a trail farther out than intended and then face a long swim home in poor visibility. Stay on the rope, carry and use a compass, and turn the dive with air and distance in hand.
 * **Long swim.** The structures are a long way out, and on a low tide there is a long walk across the exposed beach as well. Watch your gas, avoid a long surface swim, and keep some sights back for a second dive. Many divers plan one longer dive here rather than two.
 * **Kelp.** Bull kelp grows on the dry dock and other structures in summer and can entangle. Carry a knife.
@@ -75,9 +78,9 @@ The deepest ground lies at the south end toward the ferry, inside the off-limits
 ## Wind
 
 * **Orientation.** The beach faces roughly west to northwest, onto the open main basin of Puget Sound.
-* **Bad.** West through northwest, with open fetch across the basin, builds chop and surge on the entry and swell over the shallow structures. A strong onshore wind is felt as surge close to shore even when the deeper water is calmer.
+* **Bad.** North through northwest, with open fetch across the basin, builds chop and surge on the entry and swell over the shallow structures. A strong onshore wind is felt as surge close to shore even when the deeper water is calmer. A rock breakwater just north of the entry gives the beach some shelter from a north wind, but not from northwest.
 * **Fine.** East and southeast are offshore and leave the entry sheltered.
-* **Wind against current.** The ebb sets north, so a northerly opposing it steepens the chop, but the greater problem here is that any wind adds its own surface drift toward the ferry lane and stirs silt in the shallows, worsening an already marginal viz.
+* **Wind against current.** The ebb sets southwest, so a southwest wind opposing it steepens the chop, but the greater problem here is that any wind adds its own surface drift toward the ferry lane and stirs silt in the shallows, worsening an already marginal viz.
 
 ## Visibility
 
