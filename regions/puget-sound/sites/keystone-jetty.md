@@ -7,7 +7,7 @@ Shore dive along the boulder jetty that shelters the Coupeville to Port Townsend
 | **Location** | Fort Casey State Park, Whidbey Island, WA. Admiralty Bay, west side of Admiralty Inlet, beside the Coupeville to Port Townsend ferry terminal, five miles south of Coupeville |
 | **Coordinates** | Dive site 48.15683, -122.67062 (seabed about 12 m below MLLW), off the jetty; entry at 48.157535, -122.671067, about 85 m north-northwest, the underwater park beach on the east side |
 | **Type** | Shore |
-| **Depth range** | Roughly 3 to 16 m below MLLW; the end of the jetty is the deepest point |
+| **Depth range** | Roughly 3 to 19 m below MLLW; the end of the jetty is the deepest point |
 | **Skill level** | Intermediate |
 
 ## Getting there
@@ -34,9 +34,9 @@ Current is the defining constraint, strong and erratic, and it does not behave s
 
 | | |
 |---|---|
-| **Governing station** | NOAA Marrowstone Point, 1.65 mi. NE of (PUG1620), about 4.7 km across Admiralty Inlet |
+| **Governing station** | NOAA Marrowstone Point, 1.65 mi. NE of (PUG1620), about 4.2 km across Admiralty Inlet |
 | **Recommended bin** | bin 28, at 7.9 m |
-| **Time offset** | About 31 minutes before the station's slack before flood; the site goes slack ahead of it |
+| **Time offset** | About 31 minutes before the station's slack before flood; the site goes slack ahead of it. The correction does not hold consistently from one exchange to the next, so treat it as a starting point rather than a fixed number |
 | **Flood axis** | southeast, 145° |
 | **Ebb axis** | northwest, 333° |
 
@@ -44,21 +44,22 @@ Current is the defining constraint, strong and erratic, and it does not behave s
 * **Ebb.** Sets northwest out of the inlet at the station, peaking around 1.3 to 1.4 m/s. Locally the flow runs southwest, past the wharf toward the jetty, then turns and flows out along the rocks at the jetty.
 * **Diveable window.** The slack before flood only, entered about half an hour before the corrected station slack. True slack before ebb does not happen here, the current merely slows before building again, so it is not a window. The current can run hard at the exposed end even when the shore looks calm. The flow is slower on the bottom, the boulders give hand holds and shelter, and the rule in current is to swim with it or across it, never against it.
 * **When the slack fails to arrive.** A slack at the station is necessary but not sufficient. The jetty current is a local eddy off the main channel, and on some exchanges the channel passes through slack while the eddy keeps running southwest and never truly stops. The pattern to watch for is a strongly diurnal day, or a flood following the slack that is much weaker than the ebb before it: the flood is what resets the flow, and a weak one may leave the current simply running on. Before committing, read the max flood and ebb either side of the slack rather than the slack alone. Prefer a slack flanked by two moderate, roughly equal maxes; be wary when the following flood is weak or the window is short, since the site then turns fast and being a few minutes late leaves you in current. Be ready to abort if it is still running at the end of the jetty.
+* **Read the surface before committing.** The clock and the station prediction only get you close; confirm from the beach before gearing up. Floating logs and other debris drifting across the harbour show whether the water is actually moving and which way, a direct read on the eddy that the corrected slack time cannot promise on its own.
 
 ## Depth and tide
 
-Admiralty Inlet swings roughly 2 to 3 m between high and low water here, so depths are given relative to the MLLW chart datum. A low tide reads shallower than the datum figure; a high tide reads deeper.
+Admiralty Inlet swings roughly 2.7 m between high and low water here on a typical day, more on a big exchange, so depths are given relative to the MLLW chart datum. A low tide reads shallower than the datum figure; a high tide reads deeper.
 
 | | |
 |---|---|
-| **Tide station** | NOAA Admiralty Head tide station (9447905), about 0.5 km from the site on the same shore |
+| **Tide station** | NOAA Admiralty Head tide station (9447905), about 0.3 km from the site on the same shore |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 2.5 m, up to about 3.2 m |
+| **Typical range** | Median daily about 2.7 m, up to about 4.1 m; 2026 span -1.3 m to +3.0 m |
 
 | Feature | Below MLLW | At a +0.5 m low | At a +2.7 m high |
 |---|---|---|---|
 | Octopus den, shallows | 8.1 m | 8.6 m | 10.8 m |
-| Sand at the end of the jetty | about 16 m | about 16.5 m | about 18.7 m |
+| Sand at the end of the jetty | about 19 m | about 19.5 m | about 21.7 m |
 
 The wharf pilings east of the jetty stand over sand at roughly 6 to 11 m below datum.
 
