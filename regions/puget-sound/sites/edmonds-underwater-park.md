@@ -101,7 +101,9 @@ The deepest ground lies at the south end toward the ferry, inside the off-limits
 
 ## Site map
 
-The park's guide ropes form a grid of named trails: the columns below run roughly shore to open water, west to east across the park (north is to the right), and the rows run roughly shore-parallel. The jetty entry sits at the bottom of the Jetty Way column.
+The park's guide ropes form a grid of named trails: the columns below run roughly shore to open water, west to east across the park, and the rows run roughly shore-parallel. The jetty entry sits at the bottom of the Jetty Way column.
+
+Important! north is to the right.
 
 ```
                                                                                                                                                    --> north

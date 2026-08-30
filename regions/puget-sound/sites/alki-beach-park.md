@@ -94,6 +94,8 @@ The bottom is an even slope from an eelgrass band in the shallows, across the to
 
 The junkyard debris runs along a guide rope for about 165 m, laid out roughly parallel to the beach rather than straight out from it. The entry swim meets the rope close to its middle, near the old crab pots at around the 109 m mark, not at either end, so a diver working the rope goes west toward the wheel hub and the cylinder spur, or east toward the tire pile, and returns along the same stretch either way. Distances in the table below are measured along the rope from its western end in the eelgrass, not from the beach. A looser scatter of debris, read as broken bottles and a submerged bathtub, lies off the rope to the north in slightly deeper water, and the piling stubs described under Navigation and landmarks sit in the shallows west of where the rope begins.
 
+Important! north is up-right.
+
 ```
  west end                                                                    east end
    A────────────B───────C──────────D──────────E─────────F─────G────────────H───────I
