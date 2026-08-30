@@ -7,7 +7,6 @@ Import these companion files into context alongside it at session start:
 - @diver-profile.json
 - @tool-config.json
 - @plan_log.csv
-- @site_template.md
 
 `diver-profile.json`, `tool-config.json` and `plan_log.csv` hold personal data and are gitignored, so a fresh clone of this workspace won't have them. If any is missing at session start, don't proceed as if it's empty and don't invent values for it: tell the user it's missing and ask them to copy the matching `diver-profile_template.json`, `tool-config_template.json` or `plan_log_template.csv` to the real filename and fill it in, then continue once it exists.
 
@@ -16,7 +15,6 @@ Import these companion files into context alongside it at session start:
 - `diver-profile.json` holds the user's specific diver profile and personal data.
 - `tool-config.json` holds per-tool parameters, one subsection per tool in `tools/`; a missing key falls back to the tool's built-in default.
 - `plan_log.csv` holds dive plans vs observed data.
-- `site_template.md` is the template to write descriptions for new dive sites.
 - Each diving region is a folder under `regions/` holding one `<region>.md` steering file and a `sites/` subfolder. Each site is a pair in `sites/`: `<slug>.md`, the guidebook description, and `<slug>.json`, its ENPAC15 current extract, machine-read by `tools/adcirc_current.py` and never hand-edited. A region's steering file is not loaded at session start; load it whenever working on or referencing a site `.md` or `.json` in that region's `sites/` folder, before acting on that site.
 
 ## Units: use metric
