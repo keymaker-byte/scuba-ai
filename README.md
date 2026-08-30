@@ -2,12 +2,21 @@
 
 Scuba AI is a collection of steering files, tools and dive site descriptions for scuba diving recreational planning within no-decompression limits. Point an LLM (e.g. Claude Code) at this workspace and it can plan dives, write up new dive sites, and answer questions using live NOAA current and tide predictions, tidal current models, bathymetry, wind forecasts and your own dive log, instead of guessing.
 
+## Safety
+
+This is a planning aid, not a dive plan by itself and not a substitute for training or judgement. It predicts; it does not guarantee.
+
+- Dive only within the limits of your certification and training. Treat every prediction here as a starting point to verify against what you actually see, not a fact to trust blindly.
+- Currents, tides and visibility are forecasts, built from models and stations some distance from the actual site. Conditions on the day can differ from any prediction, sometimes by a lot; confirm from the surface before committing, and abort if what you find does not match the plan.
+- If you do not know a site or the area, dive it with a local guide or someone who does, especially the first time.
+- Use this workspace, its tools and its site files at your own risk. None of it replaces proper training, a dive buddy, and your own judgement in the water.
+
 ## What's here
 
 - `tools/` — scripts that pull live data: NOAA current and tide predictions, ADCIRC (ENPAC15) tidal current fields, NCEI bathymetry, NWS wind forecasts, and a reader for a Subsurface dive log.
 - `regions/` — one steering file plus a `sites/` folder per diving region; each site is a guidebook style description paired with a machine read current extract.
-- `plan_log.csv` — a log of dive plans versus what was actually observed, used to calibrate current and tide offsets over time.
-- `site_template.md` — the template every site file follows.
+- `site_template.md` — the canonical structure every dive site file follows.
+- `region_template.md` — the canonical structure every region steering file follows.
 - `CLAUDE.md` — the steering file tying it all together: units, conventions (local time, depth datum), and when to use each source.
 
 `diver-profile.json`, `tool-config.json` and `plan_log.csv` hold personal data (identity, gear, dive history) and are gitignored. A `_template` version of each is included as a starting point for setting up your own.
