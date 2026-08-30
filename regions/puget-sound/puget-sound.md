@@ -18,6 +18,7 @@ Region steering file for diving Puget Sound: the environment, how a plan comes t
 | [Mukilteo Lighthouse Park (Clay Wall)](sites/mukilteo-lighthouse-park.md) | Current sensitive clay slope riddled with wolf eel and octopus holes on the Mukilteo waterfront; comfortable on slack, dangerous on a big exchange. |
 | [Mukilteo T-Dock](sites/mukilteo-t-dock.md) | Sheltered, unusually deep shore dive at the mouth of Possession Sound; the ferry lane, now east of the entry since the terminal moved, is the one hard hazard. |
 | [Picnic Point Park](sites/picnic-point-park.md) | Mild, low current sand and eelgrass slope between Mukilteo and Edmonds; the main inconvenience is the long walk in, not the dive itself. |
+| [Rockaway Beach (Norrander's Reef)](sites/rockaway-beach.md) | Bainbridge Island's one shore dive, a narrow natural rock reef at the mouth of Blakely Harbor thick with lingcod, octopus and nudibranchs, with usually mild current. |
 | [Rosario Beach](sites/rosario-beach.md) | Protected sanctuary bay at Deception Pass with an easy sheltered dive around Urchin Rocks and harder, current driven options further out. |
 | [Saltwater State Park](sites/salt-water-state-park.md) | Boulder and concrete piling reef fingers off a decayed barge wreck at Des Moines, reached by a long tide dependent surface swim; a marine protected area. |
 | [Scenic Beach](sites/scenic-beach.md) | Negligible current Hood Canal sand and cobble bottom with a rare sea whip forest; not a slack dive, the hazard is small boat traffic. |
