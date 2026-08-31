@@ -386,9 +386,21 @@ A new site file also needs a row in its region's steering file, under that file'
   - *wind / surface:* `wind_speed_ms`, `wind_dir`, `sea_state`, `air_temp_min_c`, `air_temp_max_c`, `surface_note`
   - *water / depth:* `water_temp_min_c`, `water_temp_max_c`, `water_temp_note`, `max_depth_read_m`, `max_depth_normalized_m`, `depth_note`, `tide_across_dive`
 
+### Predicted-row-only columns
+
+Most columns are shared: the predicted row states what's expected, the observed row states what actually happened, same column, opposite tense. A fixed set of columns are model or forecast output with nothing aboard to re-measure them by (no anemometer, no thermometer, no station readout at depth), so they stay predicted-only and are left blank on the observed row:
+
+- `spatial_entry_speed_ms`, `spatial_entry_dir_deg`, `spatial_exit_speed_ms`, `spatial_exit_dir_deg`, the ADCIRC prediction at entry and exit.
+- `max_flood`, `max_ebb`, `ebb_exchange_size`, the NOAA station's bracketing peaks and the day's exchange size.
+- `wind_speed_ms`, `wind_dir`, `air_temp_min_c`, `air_temp_max_c`, the NWS forecast.
+
+Everything else takes a value on both rows, predicted stating the plan or forecast and observed stating what was actually seen, felt, timed or logged, including `entry_time`, `slack_time`, `set_direction`, the viz/water/depth columns and `tide_across_dive`. `diveable_window` shifts register between the two: predicted carries the numeric window(s) from `window`, observed is a short prose note on whether a limiting current ever actually showed up.
+
 ### Dive plan
 
-`dive_plan` is a single prose column, filled on the predicted row: the actual plan from entry to exit, in the order it happens, not a restatement of the typed columns around it. Where the excursion goes, in what order, and when to turn for the exit.
+`dive_plan` is a prose column, filled on both rows in opposite voice: forward-looking on the predicted row, a past-tense recap on the observed row. Never leave it blank on either row, a short recap is fine for an uneventful dive that ran exactly as planned, but write one.
+
+On the **predicted** row: the actual plan from entry to exit, in the order it happens, not a restatement of the typed columns around it. Where the excursion goes, in what order, and when to turn for the exit.
 
 Every plan follows the same rules, regardless of site:
 
@@ -396,6 +408,8 @@ Every plan follows the same rules, regardless of site:
 - **Safety stop, always.** Every plan carries a stop before surfacing, whatever the profile.
 - **EAN32 by default.** If the diver holds an Enriched Air certification, assume EAN32 for planning, matching `standard_configuration.back_gas` in `diver-profile.json`, unless the plan states a different mix. Without that certification, or with no mix specified, assume Air.
 - **Never plan the return against the current.** Order the excursion so the leg back to the entry point runs with the current or through slack, never against it. Where the governing current sets a known direction after slack, work the far leg first, upstream of the entry, and turn for home before the current builds against a return swim; a plan that has the diver kicking home into a developing current is a planning failure, not a detail to note afterward.
+
+On the **observed** row: what actually happened, entry to exit, in the order it happened, pulled from the dive computer log and the diver's own notes (`subsurface_log.py show`). Say plainly where it departed from the plan, a different route, a late entry, an unplanned find, and what that changed (a shallower max depth, a shorter or longer runtime); this is the row that later shows whether a plan's assumptions actually held.
 
 ### How to use it
 
