@@ -34,7 +34,7 @@ Current is a secondary factor here and the site is genuinely mild for the Sound,
 |---|---|
 | **Governing station** | NOAA Possession Sound Entrance (PUG1605), about 9.5 km north, mid-channel |
 | **Recommended bin** | bin 40, at 18 m, the shallowest published; the station sits in deep water off the site |
-| **Time offset** | Not firmly established; the station's slack runs anywhere from close to the park's own turn to a little over an hour behind it, so treat it as approximate and pad the window. The park sits where the main flow of Puget Sound splits, part north into Possession Sound and part continuing south through the main basin, so take the flood/ebb direction from the station reading, not from a modeled current vector at the park itself, which is least reliable on local direction right at a split like this |
+| **Time offset** | Not firmly established; the station's slack runs anywhere from close to the park's own turn to a little over an hour behind it, so treat it as approximate and pad the window. The park sits where the main flow of Puget Sound splits, part north into Possession Sound and part continuing south through the main basin |
 | **Flood axis, at the station** | northeast, 31° |
 | **Ebb axis, at the station** | southwest, 204° |
 | **Flood axis, at the park** | northeast, about 40° |
@@ -43,7 +43,7 @@ Current is a secondary factor here and the site is genuinely mild for the Sound,
 * **Flood.** Sets northeast, both at the station and at the park, off the ferry slip rather than onto it. Modest, generally well under 0.5 m/s on ordinary exchanges.
 * **Ebb.** Sets southwest, both at the station and at the park, with the component that carries toward the ferry slip; this is the phase to watch for the ferry hazard. Usually under about 0.6 m/s, reaching around 1 m/s on a large spring exchange.
 * **Local current.** The flow in the park is lighter than at the station and is also shaped by wind and by the ferry's propeller wash at the adjacent slip, so it can run when the tide is nominally slack and set across your path rather than along the axis above. About 0.5 m/s is comfortable; twice that is workable but no fun. A small exchange, under roughly 1.2 m, leaves almost no current.
-* **Diveable window.** The window is wide because the current is weak, and a common approach is simply to ride the light flow out on one phase and back on the other. High slack is preferred, for an easier entry across a covered beach and cleaner, less silt-laden water. A big exchange or a very low tide is what raises the risk of being carried toward the ferry, so those are the days to be conservative. Surface current-indicator buoys with tails at the site show the set direction.
+* **Diveable window.** The window is wide because the current is weak. High slack is preferred, for an easier entry across a covered beach and cleaner, less silt-laden water. A big exchange or a very low tide is what raises the risk of being carried toward the ferry, so those are the days to be conservative. Surface current-indicator buoys with tails at the site show the set direction.
 
 ## Depth and tide
 
