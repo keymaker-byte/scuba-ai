@@ -92,20 +92,11 @@ The authority on what actually goes wrong, and why: dive medicine, accident data
 
 ### Books
 
-Print dive guides for the region. There is no copy of their contents in this workspace and you cannot read them: when a book is likely to cover a site, ask the diver for the relevant pages. Take the behaviour, never the numbers; their figures are dated, so re-derive every current and depth figure against NOAA before it enters a site file. Both are snapshots, too: verify access, parking, fees, and closures against a recent report before driving out.
+Print dive guides for the region: site-specific current behaviour and entries, hazards, marine life, and access, spanning shore dives as well as boat access to sites further afield. There is no copy of their contents in this workspace and you cannot read them: when a book is likely to cover a site, ask the diver for the relevant pages.
 
-#### Northwest Shore Dives (Stephen Fischnaller)
-
-Site-specific current behaviour and entries, focused on Puget Sound shore dives. It documents most established ones.
-
-- Use it for: where the entry is, what the site actually does on the flood vs. the ebb, whether it's slack-only, hazards, parking. Its method (reference station plus a site correction) is the right one and is what we follow.
-- ⚠️ Its reference stations are legacy: the corrections are stated against NOAA current stations that in most cases no longer publish predictions, and an offset is only meaningful against the station it was derived from. Do not apply a book offset to a modern station; that is how you end up in the water at max ebb holding a plan that says slack. Per site, pick the governing modern NOAA station, establish our own offset to it, and track its confidence in `plan_log.csv`.
-
-#### 151 Dives in the Protected Waters of British Columbia and Washington State (Betty Pratt-Johnson)
-
-Wider in scope than Fischnaller: it reaches beyond Puget Sound shore dives into the San Juans, the Strait of Juan de Fuca, the Gulf Islands, and British Columbia, and it covers boat access as well as shore.
-
-- Use it for: where the entry is, how the site is dived, hazards, marine life, and access, especially for sites north and west of the Sound that Fischnaller does not reach.
+- Use it for: where the entry is, what the site actually does on the flood vs. the ebb, whether it's slack-only, hazards, parking, marine life, and access. A book's method of reference station plus a site correction is the right one and is what we follow.
+- Take the behaviour, never the numbers; their figures are dated, so re-derive every current and depth figure against NOAA before it enters a site file. Both are snapshots, too: verify access, parking, fees, and closures against a recent report before driving out.
+- ⚠️ A book's reference stations can be legacy: a stated correction is against a NOAA current station that may no longer publish predictions, and an offset is only meaningful against the station it was derived from. Do not apply a book offset to a modern station; that is how you end up in the water at max ebb holding a plan that says slack. Per site, pick the governing modern NOAA station, establish our own offset to it, and track its confidence in `plan_log.csv`.
 
 ### NOAA CO-OPS (current predictions and water levels)
 
@@ -119,27 +110,27 @@ The slack time and direction, on the day, for the reference station that governs
 
 - Use it for: the slack time and direction on the day, at the station governing the site, plus the max flood/ebb speeds bracketing the window.
 - Read the whole day, not just the one slack. Slacks are not evenly spaced and not equal: a slack between two weak maxes is a wide window, between two strong maxes a narrow one. Note the max flood/ebb speeds either side of your window; they bracket how fast the site turns on you if you're late.
-- ⚠️ Mind the bin: the default is near-surface. The stations are ADCPs with many depth bins, NOAA publishes predictions for only a few, and the default is a shallow one, not the water we dive. Pick the published bin nearest the site's working depth, and record which bin the offset was derived against; an offset against one bin is not the same number as against another. At Burrows Pass the default bin sits at 4.6 m and the deepest published bin at 30.6 m; on a test day the deep slack ran 20 minutes earlier than the surface slack, with max flood weaker (1.41 vs 1.61 m/s) and the flood axis rotated 286°→275°. Still pull the other bins: a wide spread between them is itself a warning that the offset is depth-sensitive.
+- ⚠️ Mind the bin: the default is near-surface. The stations are ADCPs with many depth bins, NOAA publishes predictions for only a few, and the default is a shallow one, not the water we dive. Pick the published bin nearest the site's working depth, and record which bin the offset was derived against; an offset against one bin is not the same number as against another. At a fast-moving pass the default bin might sit at 4.6 m and the deepest published bin at 30.6 m; on a test day the deep slack ran 20 minutes earlier than the surface slack, with max flood weaker (1.41 vs 1.61 m/s) and the flood axis rotated 286°→275°. Still pull the other bins: a wide spread between them is itself a warning that the offset is depth-sensitive.
 - Watch for: diurnal inequality (the two daily exchanges are not the same size), and big exchanges around new and full moon.
-- API, no key, machine-readable predictions for arbitrary future dates. ~412 live current-prediction stations sit inside the Puget Sound box, searchable by position; that is how a site gets re-based off a dead Fischnaller station onto a live one.
+- API, no key, machine-readable predictions for arbitrary future dates. Hundreds of live current-prediction stations sit along the coast, searchable by position; that is how a site gets re-based off a dead book-era station onto a live one.
 
 ##### `tools/noaa_current.py`
 
 ```sh
 # Re-base a site: which live stations are near it?
-python3 tools/noaa_current.py stations --near 48.4895 -122.6867
+python3 tools/noaa_current.py stations --near <lat> <lon>
 
 # Which bins publish, and at what depth?
-python3 tools/noaa_current.py bins PUG1738
+python3 tools/noaa_current.py bins STATION_ID
 
 # Slack / max flood / max ebb, at the dive-depth bin
-python3 tools/noaa_current.py predict PUG1738 --bin 1 --date 2026-07-12
+python3 tools/noaa_current.py predict STATION_ID --bin 1 --date 2026-07-12
 
 # The number that actually matters: how long the window stays diveable
-python3 tools/noaa_current.py window PUG1738 --bin 1 --date 2026-07-12 --max-speed 0.25
+python3 tools/noaa_current.py window STATION_ID --bin 1 --date 2026-07-12 --max-speed 0.25
 ```
 
-`window` is the planning command. Rather than a single slack instant it reports every span where the current stays under a threshold (default 0.25 m/s), with its duration and peak, so a 72-minute window and a 20-minute one stop looking alike. Sample output, Burrows Pass, bin 1, 12 Jul:
+`window` is the planning command. Rather than a single slack instant it reports every span where the current stays under a threshold (default 0.25 m/s), with its duration and peak, so a 72-minute window and a 20-minute one stop looking alike. Sample output, bin 1, 12 Jul:
 
 ```
   01:06 - 02:12    72 min   peak 0.23 m/s
@@ -156,7 +147,7 @@ The predicted tide across the entry window: how deep the site is that day. This 
 
 - Use it for: the tide height across the entry window, and the day's high and low water, at a station in the same body of water as the site.
 - ⚠️ Pick a station in the same body of water. Water level varies smoothly, so the nearest station is usually right, but "near" has to mean hydraulically near, not near on a map. Verify the station's name and position before trusting the label; a mislabelled tide station once cost about 1 m at high water.
-- ⚠️ Most Sound stations are subordinate: they publish high/low water only, no 6-minute series.
+- ⚠️ Many stations in enclosed or nearshore waters are subordinate: they publish high/low water only, no 6-minute series.
 - Datum: MLLW. It is what the charts and the predictions use. Never mix datums.
 - Times: `lst_ldt`, local, like everything else here.
 
@@ -166,30 +157,30 @@ The tool behind the depth convention: it is what makes a depth comparable betwee
 
 ```sh
 # Which tide stations are near the site? (VERIFY the name - IDs are not self-describing)
-python3 tools/noaa_tide.py stations --near 47.9497 -122.3026
+python3 tools/noaa_tide.py stations --near <lat> <lon>
 
 # High/low water for the day, and the day's range
-python3 tools/noaa_tide.py predict 9447814 --date 2026-07-12
+python3 tools/noaa_tide.py predict STATION_ID --date 2026-07-12
 
 # Tide height at a moment
-python3 tools/noaa_tide.py at 9447814 --time "2026-07-12 09:18"
+python3 tools/noaa_tide.py at STATION_ID --time "2026-07-12 09:18"
 
 # LOGGING: observed depth -> depth below MLLW datum. The number that carries between dives.
-python3 tools/noaa_tide.py normalize 9447814 --time "2026-07-12 09:21" --depth 14.5
+python3 tools/noaa_tide.py normalize STATION_ID --time "2026-07-12 09:21" --depth 14.5
 
 # PLANNING: a known datum depth -> how deep it actually reads, through the day
-python3 tools/noaa_tide.py project 9447814 --datum-depth 15.4 --date 2026-07-12
+python3 tools/noaa_tide.py project STATION_ID --datum-depth 15.4 --date 2026-07-12
 ```
 
 `normalize` is the logging command, `project` is the planning command, and they are inverses:
 
 ```
-$ noaa_tide.py normalize 9447814 --time "2026-07-12 09:21" --depth 14.5
+$ noaa_tide.py normalize STATION_ID --time "2026-07-12 09:21" --depth 14.5
   observed depth        14.5 m
   tide height          -0.94 m
   depth below MLLW      15.4 m   <-- log this
 
-$ noaa_tide.py project 9447814 --datum-depth 15.4 --date 2026-07-12
+$ noaa_tide.py project STATION_ID --datum-depth 15.4 --date 2026-07-12
   09:37  LOW   tide -0.95 m   ->  reads  14.4 m below surface
   17:44  HIGH  tide +3.36 m   ->  reads  18.8 m below surface
 ```
@@ -216,8 +207,8 @@ Two uses, on different files.
 1. Writing a new site file (needs the database). Get the seabed depth at the dive-area coordinate from `ncei_depth.py`, then extract the constituents, passing that depth in:
 
    ```sh
-   python3 tools/ncei_depth.py 48.49042 -122.69148 --mllw
-   python3 tools/adcirc_current.py extract <slug> --near 48.49042 -122.69148 --water-depth 20
+   python3 tools/ncei_depth.py <lat> <lon> --mllw
+   python3 tools/adcirc_current.py extract <slug> --near <lat> <lon> --water-depth 20
    ```
 
    Use the coordinate of the dive area (the deeper part actually dived), not the beach entry: a dive-area point lands inside the mesh and reads the current you experience, a shoreline point snaps to the mesh edge and reads near-still water. The extract is written as `<slug>.json` beside the site's `<slug>.md`. The `--water-depth` (m below MLLW) is what `--depth` scaling later uses; without it the extract falls back to the coarse mesh depth and the scaling is rough.
@@ -231,7 +222,7 @@ Two uses, on different files.
    python3 tools/adcirc_current.py list                                           # extracted sites
    ```
 
-   It prints the principal current axis and, per exchange, the slack times and peak speeds, un-offset at the extract point (the site correction is yours to apply, same as the station tools) and unlabelled for flood vs. ebb. `--depth M` (below MLLW) scales the depth-averaged speed toward your dive depth through a boundary-layer profile (slower near the seabed, faster higher up); it moves speeds and window widths but never slack times, refuses if the dive depth exceeds the site's water depth, and is approximate, ignoring the Sound's brackish surface layer. Put the `predict`/`window` output, predicted beside observed, in `plan_log.csv`.
+   It prints the principal current axis and, per exchange, the slack times and peak speeds, un-offset at the extract point (the site correction is yours to apply, same as the station tools) and unlabelled for flood vs. ebb. `--depth M` (below MLLW) scales the depth-averaged speed toward your dive depth through a boundary-layer profile (slower near the seabed, faster higher up); it moves speeds and window widths but never slack times, refuses if the dive depth exceeds the site's water depth, and is approximate, ignoring any brackish surface layer. Put the `predict`/`window` output, predicted beside observed, in `plan_log.csv`.
 
 Validate a new extract against the site's NOAA station before trusting its timing. `python3 tools/adcirc_current.py selftest` verifies the astronomy against the database's own reference values.
 
@@ -239,7 +230,7 @@ Validate a new extract against the site's NOAA station before trusting its timin
 
 <https://gis.ngdc.noaa.gov/arcgis/rest/services/DEM_mosaics/DEM_all/ImageServer>
 
-NOAA NCEI's coastal digital elevation model: the seabed depth at a point, at ~3 m resolution (1/9 arc-second) in Puget Sound. A separate NOAA service from the currents and VDatum APIs. It owns bathymetry for the workspace.
+NOAA NCEI's coastal digital elevation model: the seabed depth at a point, at up to ~3 m resolution (1/9 arc-second) in the best-mapped areas. A separate NOAA service from the currents and VDatum APIs. It owns bathymetry for the workspace.
 
 - Use it for: the water depth at a dive point, which goes in the site file's Coordinates row and into `adcirc_current.py extract --water-depth`. The ENPAC mesh cannot supply it: its elements can span from the beach to the deep basin, so its nearshore depth can be wrong by tens of metres. The DEM's 3 m soundings are the authority.
 - Also a sanity check on a coordinate: is this point underwater at all, and at a divable depth? It reads the actual bottom where a nautical chart gives scattered soundings between wide contours.
@@ -249,12 +240,12 @@ NOAA NCEI's coastal digital elevation model: the seabed depth at a point, at ~3 
 #### `tools/ncei_depth.py`
 
 ```sh
-python3 tools/ncei_depth.py 47.95029 -122.30297                       # depth below NAVD88 (~mean sea level)
-python3 tools/ncei_depth.py 47.95029 -122.30297 --mllw                # also convert to depth below MLLW
-python3 tools/ncei_depth.py 47.95029 -122.30297 --mllw --region R     # pick the VDatum region explicitly
+python3 tools/ncei_depth.py <lat> <lon>                               # depth below NAVD88 (~mean sea level)
+python3 tools/ncei_depth.py <lat> <lon> --mllw                        # also convert to depth below MLLW
+python3 tools/ncei_depth.py <lat> <lon> --mllw --region R             # pick the VDatum region explicitly
 ```
 
-Site files quote depth below MLLW, so use `--mllw`. It converts via NOAA VDatum, falling back to the NAVD88-to-MLLW offset from the nearest tide station publishing both datums, then to a flat nominal if neither answers, reporting which it used. The offset is not constant: about 0.1 m in the Strait of Juan de Fuca to about 0.7 m in the south Sound.
+Site files quote depth below MLLW, so use `--mllw`. It converts via NOAA VDatum, falling back to the NAVD88-to-MLLW offset from the nearest tide station publishing both datums, then to a flat nominal if neither answers, reporting which it used. The offset is not constant: it can run from a few centimetres in some areas to most of a metre in others.
 
 ⚠️ VDatum tiles the world into named regions and will not infer one from the coordinate; the wrong region, or its own `contiguous` default (Atlantic/Gulf coasts), fails with an opaque "Uncaught error" rather than a useful message. `python3 tools/ncei_depth.py --help` lists every valid region code. `--region` overrides `ncei_depth.default_region` in `tool-config.json`, which holds this workspace's default (`westcoast`). Some regions additionally require a specific target horizontal frame for a tidal target datum (westcoast wants IGS14); VDatum names the required frame in its own error when this applies, and the tool retries once with whatever it names, so that quirk never needs to be handled by the caller.
 
@@ -269,7 +260,7 @@ The wind source. Wind is the second-order factor that decides whether the entry 
 
   ```sh
   curl -s -H "User-Agent: dive-planning (<contact-email>)" \
-    "https://api.weather.gov/points/47.9497,-122.3026" | jq -r .properties.forecastHourly
+    "https://api.weather.gov/points/<lat>,<lon>" | jq -r .properties.forecastHourly
   # then GET that URL - hourly periods with windSpeed, windDirection, temperature, shortForecast
   ```
 
@@ -300,7 +291,7 @@ Big one. Conditions chatter, closures, buddy finding, general local knowledge.
 The better of the two forums for site descriptions: community write-ups of how to dive a specific site, and recommendations on where to go. Narrower and more local than ScubaBoard.
 
 - Use it for: how a site is dived, where the entry is, what's worth seeing, what to expect. Also site recommendations when picking somewhere new.
-- It complements the Fischnaller book, with the opposite failure mode: the book is coherent and authoritative but frozen in time, the forum is current but unedited and uneven. Where they overlap, prefer the book for behaviour and the forum for access.
+- It complements the books, with the opposite failure mode: a book is coherent and authoritative but frozen in time, the forum is current but unedited and uneven. Where they overlap, prefer the book for behaviour and the forum for access.
 - ⚠️ Same rule as the books: take the behaviour, never the numbers. A forum post's depths are raw computer readings at an unrecorded tide, and its slack times carry no station. Re-derive both against NOAA CO-OPS, and normalize any depth to datum before it is comparable to ours.
 - ⚠️ The live site blocks our fetches (HTTP 403), so read it through the Wayback Machine: query `https://archive.org/wayback/available?url=<page>` for the closest snapshot, then pull the archived copy. `web.archive.org` refuses the fetch tool too, so `curl --compressed` the snapshot URL. A snapshot lags the live thread, but site descriptions age slowly; check the snapshot date and verify anything time-sensitive against a fresher source.
 
@@ -358,7 +349,7 @@ A coordinate handed to you for a new site is a first reference, not the final on
 
 Creating a site file draws on every source under Sources and tools that applies, and beyond them always run a comprehensive web search for the site by name. Sources outside the fixed list, a dive shop's site page, a forum thread, a recent trip report, an incident writeup, turn up facts none of the standing sources carry alone (an access change, a renamed park, a hazard). Don't stop at the standing source list; go find what's out there. If that search turns up a page that looks relevant but won't load, an archived copy that's broken, or a fetch that's blocked, stop rather than writing the file around the gap: tell the user what turned up and what wouldn't come through, and ask them to paste the content in, or confirm it's out of reach for them too, before continuing.
 
-Keep the facts, drop the bookkeeping. A fact goes in the file whether it came from public data (NOAA) or from what we saw over repeated dives: coordinates, depth ranges, the governing current station and its bin, the offset, current behaviour, entry, hazards, temperatures, marine life. Our own apparatus does not: no confidence flags (`derived` / `observed` / `unverified`), no logged dive stats (dive counts, runtimes, a specific dive number, a computer bookmark), no source attributions (Fischnaller, the forums, our own log). A derived number is written as a plain fact, stated flatly, without naming where it came from.
+Keep the facts, drop the bookkeeping. A fact goes in the file whether it came from public data (NOAA) or from what we saw over repeated dives: coordinates, depth ranges, the governing current station and its bin, the offset, current behaviour, entry, hazards, temperatures, marine life. Our own apparatus does not: no confidence flags (`derived` / `observed` / `unverified`), no logged dive stats (dive counts, runtimes, a specific dive number, a computer bookmark), no source attributions (a book, the forums, our own log). A derived number is written as a plain fact, stated flatly, without naming where it came from.
 
 The confidence work still happens, it just doesn't live in the file. Verify a station still publishes, verify the tide station's name and position, reason through the offset and how sure you are of it. That reasoning belongs in the chat and its results in `plan_log.csv` (predicted beside observed); the site file carries only the best number it produced. A number you are unsure of is stated conservatively, not annotated.
 
