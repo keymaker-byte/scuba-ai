@@ -6,6 +6,7 @@ Region steering file for diving Puget Sound: the environment, how a plan comes t
 
 | Site | Description |
 |---|---|
+| [Agate Pass](sites/agate-pass.md) | Fast tidal strait between Bainbridge Island and the Kitsap Peninsula at Suquamish, dived as a slack dive at the bridge pylons or a 1.6 km ebb drift to Old Man House Park; strong current and boat traffic overhead are the hazards. |
 | [Alki Beach Park (Junkyard)](sites/alki-beach-park.md) | Wide, sandy Alki shore beach, an easy training entry with a dumped debris "junkyard" reef and a designated octopus preserve; overhead boat traffic is the hazard. |
 | [Alki Pipeline](sites/alki-pipeline.md) | Shallow, easy old outfall pipeline off Constellation Park, a common night dive with the pipe itself as a guide rope; surf on the exposed beach is the risk. |
 | [Burrows Pass (Skyline Wall)](sites/burrows-pass.md) | Advanced current dive on rock ledges dropping into a tidal channel near Anacortes; only the slack before the ebb is reliably diveable. |
