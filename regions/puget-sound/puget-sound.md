@@ -23,6 +23,7 @@ Region steering file for diving Puget Sound: the environment, how a plan comes t
 | [Mukilteo T-Dock](sites/mukilteo-t-dock.md) | Sheltered, unusually deep shore dive at the mouth of Possession Sound; the ferry lane, now east of the entry since the terminal moved, is the one hard hazard. |
 | [Old Man House Park](sites/old-man-house-park.md) | Suquamish Tribe park at the north mouth of Agate Passage, the take-out for the Agate Pass Bridge drift and a shorter dive of its own in weaker current; boat traffic in Port Madison is the hazard. |
 | [Picnic Point Park](sites/picnic-point-park.md) | Mild, low current sand and eelgrass slope between Mukilteo and Edmonds; the main inconvenience is the long walk in, not the dive itself. |
+| [Point Whitney](sites/point-whitney.md) | WDFW shellfish lab shore dive on Hood Canal near Brinnon, built around an old discharge pipe thick with giant Pacific octopus dens and, well beyond it, a deep sea whip field; negligible current, easy straight-out navigation. |
 | [Richmond Beach Park (Richmond Beach Saltwater Park)](sites/richmond-beach-park.md) | Casual Shoreline shore dive over a sand and cobble shelf that was once a ship breaking ground, its scattered debris, chain and concrete anchor blocks the main draw; the railroad crossing to reach it is the real hazard. |
 | [Rockaway Beach (Norrander's Reef)](sites/rockaway-beach.md) | Bainbridge Island's one shore dive, a narrow natural rock reef at the mouth of Blakely Harbor thick with lingcod, octopus and nudibranchs, with usually mild current. |
 | [Rosario Beach](sites/rosario-beach.md) | Protected sanctuary bay at Deception Pass with an easy sheltered dive around Urchin Rocks and harder, current driven options further out. |
@@ -104,6 +105,7 @@ Tank fill spots near this folder's sites, by area.
 - **Sound Dive Center, Bremerton.** 5000 Burwell St, Bremerton, WA 98312. (360) 373-6141. sounddivecenter.com. Air, nitrox and CO2 fills.
 - **Exotic Aquatics Scuba and Kayaking, Bainbridge Island.** 328 Madison Ave N, Suite B, Bainbridge Island, WA 98110. (206) 842-1980. exoticaquaticsscuba.com. Air and nitrox.
 - **YSS Dive, Hoodsport.** 22320 N US Highway 101, Shelton, WA 98584. (360) 877-2318. yssdive.com. Air, nitrox and trimix.
+- **Jade Scuba Adventures, Brinnon (seasonal).** (360) 300-7810. jadescubaadventures.com. Air fills near Point Whitney; seasonal, opening for the season in June, call ahead before relying on it.
 
 **Jefferson County**
 
