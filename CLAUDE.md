@@ -35,6 +35,7 @@ Use these sources when writing a new dive site file, planning a dive, or answeri
 - @tools/adcirc_current.md
 - @tools/ncei_depth.md
 - @tools/nws_forecast.md
+- @tools/open_meteo_wind.md
 - @tools/pnwdiving_viz.md
 - @tools/subsurface_log.md
 - @tools/dan.md
