@@ -75,6 +75,17 @@ The canonical structure is `region_template.md`.
 
 Every region needs a row in the README's own "Regions currently covered" table: the region name linking to `regions/<slug>/<slug>.md`, and a brief description. Keep this table current.
 
+A region also needs an entry in `map/data.js`'s top-level `regions` object, keyed by the region's folder slug:
+
+```json
+"<region-slug>": {
+  "name": "<region display name, matching the README table>",
+  "file": "regions/<region-slug>/<region-slug>.md"
+}
+```
+
+A site's `region` field is only a lookup key into this object; `map.html` reads a site's region name and steering-file link from here rather than deriving either from the slug. Keep this entry current.
+
 ## Site Files
 
 The canonical structure is `site_template.md`.
