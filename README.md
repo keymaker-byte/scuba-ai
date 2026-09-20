@@ -50,10 +50,9 @@ NWS wind forecasts are fetched directly (no wrapper script) for US regions. All 
 ## Platform
 
 - Requires Python 3.9 or later (for `zoneinfo`).
-- Developed and tested only on macOS. 
-- It should run on Linux with no changes.
+- Developed and tested only on macOS.
+- It should run on Linux with no changes, since every tool is pure Python standard library (`urllib`, `json`, `csv`, `xml.etree`, `zoneinfo`, no pip packages required) and none of the code paths are macOS specific.
 - Windows is untested; `zoneinfo` there needs the `tzdata` package (`pip install tzdata`) since Windows has no system IANA time zone database.
-- Dependencies outside the standard library: `feedparser` (`pip install feedparser`).
 
 ## Things you can ask it
 
