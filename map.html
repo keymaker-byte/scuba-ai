@@ -85,13 +85,19 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
 }).addTo(map);
 
-function regionFile(region) {
-  return `regions/${region}/${region}.md`;
+function regionInfo(slug) {
+  const info = (window.MAP_DATA.regions || {})[slug];
+  if (!info) throw new Error(`no regions entry for "${slug}" in map/data.js`);
+  return info;
 }
 
 function regionLink(site) {
-  const label = site.region.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-  return `<a href="${encodeURI(regionFile(site.region))}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`;
+  const { name, file } = regionInfo(site.region);
+  return `<a href="${encodeURI(file)}" target="_blank" rel="noopener">${escapeHtml(name)}</a>`;
+}
+
+function siteLink(site) {
+  return `<a href="${encodeURI(site.file)}" target="_blank" rel="noopener">${escapeHtml(site.name)}</a>`;
 }
 
 function siteMarker(site) {
@@ -100,9 +106,8 @@ function siteMarker(site) {
     radius: 7, color: '#fff', weight: 1.5, fillColor: color, fillOpacity: 0.9,
   });
   m.bindPopup(
-    `<strong>${escapeHtml(site.name)}</strong><br>` +
-    `${regionLink(site)} &middot; ${site.type === 'shore' ? 'Shore' : 'Boat'} dive<br>` +
-    `<a href="${encodeURI(site.file)}" target="_blank" rel="noopener">Open site file</a>`
+    `<strong>${siteLink(site)}</strong><br>` +
+    `${regionLink(site)} &middot; ${site.type === 'shore' ? 'Shore' : 'Boat'} dive`
   );
   return m;
 }
@@ -112,9 +117,8 @@ function entryMarker(site) {
     radius: 6, color: '#fff', weight: 1.5, fillColor: COLORS.entry, fillOpacity: 0.95,
   });
   m.bindPopup(
-    `<strong>${escapeHtml(site.name)}</strong> &middot; entry point<br>` +
-    `${regionLink(site)}<br>` +
-    `<a href="${encodeURI(site.file)}" target="_blank" rel="noopener">Open site file</a>`
+    `<strong>${siteLink(site)}</strong><br>` +
+    `${regionLink(site)} &middot; Entry point`
   );
   return m;
 }
@@ -180,11 +184,12 @@ try {
   if (!window.MAP_DATA) throw new Error('window.MAP_DATA is not defined');
   allSites = window.MAP_DATA.sites || [];
 
-  const regions = [...new Set(allSites.map(s => s.region))].sort();
-  for (const r of regions) {
+  const regionSlugs = [...new Set(allSites.map(s => s.region))]
+    .sort((a, b) => regionInfo(a).name.localeCompare(regionInfo(b).name));
+  for (const slug of regionSlugs) {
     const opt = document.createElement('option');
-    opt.value = r;
-    opt.textContent = r.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    opt.value = slug;
+    opt.textContent = regionInfo(slug).name;
     regionSelect.appendChild(opt);
   }
 
