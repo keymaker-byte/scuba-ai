@@ -29,6 +29,7 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 | [Puget Sound](regions/puget-sound/puget-sound.md) | An estuary in western Washington, reaching the Pacific through the Strait of Juan de Fuca. Made up of four basins, the Main Basin, Whidbey Basin, Hood Canal and South Sound, separated by submarine sills. |
 | [Strait of Juan de Fuca](regions/strait-of-juan-de-fuca/strait-of-juan-de-fuca.md) | The strait running between Vancouver Island, British Columbia, and the Olympic Peninsula, Washington, connecting the inland Salish Sea to the open Pacific. |
 | [Washington State Lakes](regions/washington-state-lakes/washington-state-lakes.md) | Freshwater lakes scattered across Washington State, from glacial lakes in the Olympics and Cascades to lowland lakes near Puget Sound. |
+| [Bonaire](regions/bonaire/bonaire.md) | A Caribbean island in the Netherlands' ABC islands, ringed by a near-continuous fringing reef dived almost entirely from shore at marked yellow rocks, with wind driven rather than tidal current. |
 
 ## Python Tools
 
@@ -40,8 +41,9 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 | `ncei_depth.py` | NCEI coastal DEM | Seabed depth at a coordinate, with conversion to depth below MLLW via NOAA VDatum. |
 | `subsurface_log.py` | Subsurface logbook | Read-only access to a Subsurface dive log: list dives, show a dive's aggregates and notes, or pull its full depth/temperature/pressure profile. |
 | `pnwdiving_viz.py` | pnwdiving.com | Recent visibility reports by site, from the public summary table, cached locally. |
+| `open_meteo_wind.py` | Open-Meteo (ECMWF IFS + GFS) | Hourly wind speed, direction and gusts at any coordinate worldwide, for regions outside NWS coverage; ECMWF as the primary model, GFS as an independent cross-check. |
 
-NWS wind forecasts are fetched directly (no wrapper script). All tools read parameters from `tool-config.json` and print metric units in local time.
+NWS wind forecasts are fetched directly (no wrapper script) for US regions. All tools read parameters from `tool-config.json` and print metric units in local time.
 
 ## Platform
 
