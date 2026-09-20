@@ -28,6 +28,7 @@ This folder covers Bonaire and Klein Bonaire only.
 The following tools should be used in this region:
 
 - open_meteo_wind.md
+- emodnet_depth.md
 - subsurface_log.md
 - dan.md
 
