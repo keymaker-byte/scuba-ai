@@ -64,4 +64,6 @@ Air and nitrox fills concentrate in and around Kralendijk, serving the whole wes
 
 ## Emergency
 
-Ambulance: 114. A hyperbaric recompression chamber operates adjacent to Hospital San Francisco (Kaya Soeur Bartola 2, Kralendijk), reached through the hospital's emergency room.
+Local emergency number: 911, covering ambulance, police and fire with multilingual (Dutch, English, Spanish, Papiamentu) operators; 114 also reaches ambulance dispatch directly. Call EMS first; call DAN once the diver is stabilized and transport is underway.
+
+- **Recompression Chamber Bonaire, Kralendijk.** Adjacent to Hospital San Francisco, Kaya Soeur Bartola 2. Admission is through the hospital's emergency room; the chamber's own line, +599 717 8187, is staffed only during an active treatment, not as a round the clock front desk. o2bonaire.com. The island's only chamber, and it depends on a single on-call dive physician; it has closed for months at a time when that position sat vacant, most recently in early 2025.
