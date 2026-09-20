@@ -1,0 +1,55 @@
+# 16. 1000 Steps
+
+A shore dive beside the Radio Nederland transmission towers, named for the climb back up after the dive, 67 limestone steps that feel far more than that in full gear. The stairs were built in the late 1960s, financed by Bonaire's first dive shop together with Radio Nederland, replacing what had been a dangerous scramble over sharp limestone to reach the bay. Under the boat mooring, star coral has grown into pagoda-like towers whose hollow cores shelter reef creatures, and sergeant majors guard bluish patches of eggs inside them.
+
+| | |
+|---|---|
+| **Location** | Northwest coast, Bonaire, about 9 km northwest of Kralendijk, beside the Radio Nederland towers |
+| **Coordinates** | 12.210183, -68.322317 (dive area, about 3 m); entry at 12.21062, -68.32173, the top of the steps down from the road |
+| **Type** | Boat, shore or snorkel |
+| **Depth range** | 6 to 30 m, sloping further beyond recreational range |
+
+## Getting there
+
+* **Entry.** Down 67 limestone steps from the road to the beach; the climb back out in full gear is the site's namesake.
+* **Parking.** Roadside at the top of the steps.
+* **Access.** Open. Look for the Radio Nederland towers as the landmark from the road.
+* **Facilities.** None at the site.
+
+## Navigation and landmarks
+
+* **Boat mooring.** Sits directly over the outstanding star coral formations.
+* **Star coral towers.** Pagoda-like structures with hollow cores, home to reef creatures and guarded sergeant major eggs.
+
+## Current
+
+No tidal current here; Bonaire's currents are wind driven.
+
+## Depth
+
+Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef begins around 3 m and slopes down through the recreational range past 30 m.
+
+## Hazards
+
+* **The climb out.** 67 steps in full dive gear after the dive; pace the exit and rest as needed.
+
+## Wind
+
+* **Orientation.** Faces northwest.
+* **Bad.** Any wind with north or west in it raises swell.
+* **Fine.** The prevailing east to southeast trade winds blow offshore to cross-shore.
+* **Wind against current.** A building northerly against any current here is the combination to avoid.
+
+## Visibility
+
+West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+
+## Temperature
+
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
+* **Surface layer.** No sharp difference from depth here.
+
+## Marine life
+
+* **Star coral towers.** Sergeant majors guard bluish patches of eggs inside the hollow cores.
+* **Open water.** Passing whale sharks have been spotted here.
