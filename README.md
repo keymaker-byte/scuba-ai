@@ -13,11 +13,12 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 
 ## What's here
 
-- `tools/` — scripts that pull live data: NOAA current and tide predictions, ADCIRC (ENPAC15) tidal current fields, NCEI bathymetry, NWS wind forecasts, and a reader for a Subsurface dive log.
+- `CLAUDE.md` — the steering file tying it all together: units, conventions (local time, depth datum), and workspace-wide rules.
 - `regions/` — one steering file plus a `sites/` folder per diving region; each site is a guidebook style description paired with a machine read current extract.
+- `tools/` — one self-contained markdown doc per source or tool (what it's for, its caveats, its CLI if it has one), each paired with a `.py` script where the source has one.
 - `site_template.md` — the canonical structure every dive site file follows.
 - `region_template.md` — the canonical structure every region steering file follows.
-- `CLAUDE.md` — the steering file tying it all together: units, conventions (local time, depth datum), and when to use each source.
+
 
 `diver-profile.json`, `tool-config.json` and `plan_log.csv` hold personal data (identity, gear, dive history) and are gitignored. A `_template` version of each is included as a starting point for setting up your own.
 
@@ -27,9 +28,9 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 |---|---|
 | [Puget Sound](regions/puget-sound/puget-sound.md) | An estuary in western Washington, reaching the Pacific through the Strait of Juan de Fuca. Made up of four basins, the Main Basin, Whidbey Basin, Hood Canal and South Sound, separated by submarine sills. |
 | [Strait of Juan de Fuca](regions/strait-of-juan-de-fuca/strait-of-juan-de-fuca.md) | The strait running between Vancouver Island, British Columbia, and the Olympic Peninsula, Washington, connecting the inland Salish Sea to the open Pacific. |
-| [Washington State Lakes](regions/washington-state-lakes/washington-state-lakes.md) | Freshwater lakes across Washington State. |
+| [Washington State Lakes](regions/washington-state-lakes/washington-state-lakes.md) | Freshwater lakes scattered across Washington State, from glacial lakes in the Olympics and Cascades to lowland lakes near Puget Sound. |
 
-## Tools
+## Python Tools
 
 | Script | Source | Does |
 |---|---|---|
