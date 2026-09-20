@@ -99,7 +99,7 @@ A site file also needs an entry in `map/data.js`, the index `map.html` draws its
 ```json
 {
   "slug": "<site-slug>",
-  "name": "<site name, as the file's H1, without any numbering prefix>",
+  "name": "<site name>",
   "region": "<region folder slug>",
   "type": "shore" or "boat",
   "file": "regions/<region>/sites/<slug>.md",

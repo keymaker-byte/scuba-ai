@@ -23,6 +23,13 @@
   }
   #panel .section { margin-bottom: 10px; }
   #panel .swatch { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 6px; border: 1px solid rgba(0,0,0,0.3); vertical-align: middle; }
+  #panel .hint { color: #555; font-size: 12px; margin-bottom: 2px; }
+  #coord-readout { font-family: SFMono-Regular, Consolas, monospace; cursor: text; }
+  #coord-copy {
+    width: 100%; box-sizing: border-box; margin-top: 4px; padding: 5px 6px;
+    border: 1px solid #ccc; border-radius: 4px; font-size: 12px; background: #f3f4f6; cursor: pointer;
+  }
+  #coord-copy:hover { background: #e5e7eb; }
   #count { color: #555; font-size: 12px; margin-top: 6px; }
 
   #error-banner {
@@ -64,6 +71,16 @@
       <span class="swatch" style="background:#1e3a8a"></span>Shore entry points</label>
   </div>
 
+  <div class="section">
+    <label><input type="checkbox" id="toggle-satellite">Satellite imagery</label>
+  </div>
+
+  <div class="section">
+    <div class="hint">Click the map to grab coordinates</div>
+    <input type="text" id="coord-readout" readonly placeholder="lat, lon">
+    <button type="button" id="coord-copy">Copy</button>
+  </div>
+
   <div id="count"></div>
 </div>
 
@@ -78,12 +95,18 @@ const COLORS = {
   entry: "#1e3a8a",
 };
 
-const map = L.map('map', { worldCopyJump: true }).setView([20, -60], 3);
+const map = L.map('map', { worldCopyJump: true, zoomControl: false }).setView([20, -60], 3);
+L.control.zoom({ position: 'topright' }).addTo(map);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+const defaultLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   maxZoom: 19,
 }).addTo(map);
+
+const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community',
+  maxZoom: 19,
+});
 
 function regionInfo(slug) {
   const info = (window.MAP_DATA.regions || {})[slug];
@@ -145,7 +168,55 @@ const regionSelect = document.getElementById('region-filter');
 const toggleShore = document.getElementById('toggle-shore');
 const toggleBoat = document.getElementById('toggle-boat');
 const toggleEntry = document.getElementById('toggle-entry');
+const toggleSatellite = document.getElementById('toggle-satellite');
 const countEl = document.getElementById('count');
+
+toggleSatellite.addEventListener('change', () => {
+  if (toggleSatellite.checked) {
+    map.removeLayer(defaultLayer);
+    map.addLayer(satelliteLayer);
+  } else {
+    map.removeLayer(satelliteLayer);
+    map.addLayer(defaultLayer);
+  }
+});
+
+const coordReadout = document.getElementById('coord-readout');
+const coordCopyBtn = document.getElementById('coord-copy');
+let coordPickMarker = null;
+
+async function copyCoordText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+
+map.on('click', async (e) => {
+  const coordText = `${e.latlng.lat.toFixed(6)}, ${e.latlng.lng.toFixed(6)}`;
+  coordReadout.value = coordText;
+
+  if (coordPickMarker) map.removeLayer(coordPickMarker);
+  coordPickMarker = L.circleMarker(e.latlng, {
+    radius: 5, color: '#fff', weight: 1.5, fillColor: '#16a34a', fillOpacity: 1,
+  }).addTo(map);
+
+  const copied = await copyCoordText(coordText);
+  coordCopyBtn.textContent = copied ? 'Copied' : 'Copy';
+  setTimeout(() => { coordCopyBtn.textContent = 'Copy'; }, 1500);
+});
+
+coordCopyBtn.addEventListener('click', async () => {
+  if (!coordReadout.value) return;
+  coordReadout.select();
+  const copied = await copyCoordText(coordReadout.value);
+  coordCopyBtn.textContent = copied ? 'Copied' : 'Copy';
+  setTimeout(() => { coordCopyBtn.textContent = 'Copy'; }, 1500);
+});
+
+coordReadout.addEventListener('click', () => coordReadout.select());
 
 function rebuild() {
   shoreLayer.clearLayers();
