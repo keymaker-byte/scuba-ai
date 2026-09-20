@@ -6,7 +6,7 @@ Sitting on Klein Bonaire's exposed southwest tip immediately west of Forest, ope
 |---|---|
 | **Location** | Klein Bonaire, southwest tip, west of Forest |
 | **Coordinates** | 12.14955, -68.3295 (about 33 m) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 5 to 30 m |
 
 ## Getting there

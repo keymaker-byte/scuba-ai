@@ -6,7 +6,7 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 |---|---|
 | **Location** | Bainbridge Island and Suquamish, WA. Agate Passage, between Puget Sound's main basin and Port Madison |
 | **Coordinates** | Dive site 47.7124, -122.5661 (seabed 9.2 m below MLLW, at the bridge pylons); entry at 47.711832, -122.563798, the Reitan Road pulloff on the Bainbridge Island side, under the bridge |
-| **Type** | Shore. Either a stationary slack dive at the bridge with no swim needed, or a drift with the ebb from the bridge to Old Man House Park (about 1.6 km, one way, needs a shuttle or a pickup boat) |
+| **Type** | Shore |
 | **Depth range** | Roughly 7 to 10 m below MLLW along the channel, shallowest toward Suquamish and deepest at the bridge |
 | **Skill level** | Intermediate for a slack dive at the bridge or along the Bainbridge shore; advanced for the full drift across the channel to the Suquamish exit |
 

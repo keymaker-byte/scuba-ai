@@ -6,7 +6,7 @@ The southernmost dive site on Bonaire's leeward coast, next to the orange painte
 |---|---|
 | **Location** | South coast, Bonaire, at the southern tip, next to the orange slave huts |
 | **Coordinates** | 12.02555, -68.2518 (about 5 m) |
-| **Type** | Boat or shore |
+| **Type** | Shore |
 | **Depth range** | 6 to 25 m |
 | **Skill level** | Advanced |
 

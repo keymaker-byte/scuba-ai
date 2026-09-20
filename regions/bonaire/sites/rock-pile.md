@@ -6,7 +6,7 @@ Named for a cluster of rocks on the shoreline beach opposite the mooring, one of
 |---|---|
 | **Location** | Klein Bonaire, west side |
 | **Coordinates** | 12.147917, -68.311183 (about 43 m at the mooring, shallower on the reef) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 6 to 30 m |
 
 ## Getting there

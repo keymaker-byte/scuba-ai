@@ -6,7 +6,7 @@ One of Bonaire's few true vertical walls, entered by boat at a rock ledge that g
 |---|---|
 | **Location** | Northwest coast, Bonaire, just north of Karpata |
 | **Coordinates** | 12.2175, -68.3495 (the ledge, about 1 m, dropping straight into the wall) |
-| **Type** | Boat, no shore access |
+| **Type** | Boat |
 | **Depth range** | 5 to 30 m |
 | **Skill level** | Experienced diver; a guide is recommended for the entry, exit and drift |
 

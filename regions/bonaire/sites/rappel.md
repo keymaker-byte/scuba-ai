@@ -6,7 +6,7 @@ One of Bonaire's most popular boat dives, named for the era before boat diving w
 |---|---|
 | **Location** | Northwest coast, Bonaire, south of Karpata |
 | **Coordinates** | 12.21745, -68.3438 (about 2 m on the shallow plateau) |
-| **Type** | Boat, no shore access |
+| **Type** | Boat |
 | **Depth range** | 9 to 30 m |
 
 ## Getting there

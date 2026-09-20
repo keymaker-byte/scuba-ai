@@ -6,7 +6,7 @@ Shore dive at Marina Beach Park in Edmonds, at the southwest end of the Port of 
 |---|---|
 | **Location** | Edmonds, WA. West-facing shore of the main basin of Puget Sound, at Marina Beach Park, at the southwest end of the Port of Edmonds marina |
 | **Coordinates** | Dive site 47.80441, -122.39792 (seabed about 13 m below MLLW, right where the sand flat gives way to a steep drop-off; the old dock's remnants lie beyond and below it, in 18 to 20 m or more); entry at 47.804704, -122.394844, on the beach at Marina Beach Park, about 230 m east of the dive site |
-| **Type** | Shore, with a long surface or bottom swim, roughly 230 m, to reach the drop-off |
+| **Type** | Shore |
 | **Depth range** | Roughly 0 to 13 m below MLLW on the sand flat, falling away quickly beyond that to at least 20 m along the old dock line |
 | **Skill level** | Intermediate |
 

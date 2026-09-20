@@ -6,7 +6,7 @@ A classic double reef dive on the south coast, marked by yellow stones at the pa
 |---|---|
 | **Location** | South coast, Bonaire, near the Cargill sign |
 | **Coordinates** | 12.099233, -68.286217 (about 5 m) |
-| **Type** | Boat or shore |
+| **Type** | Shore |
 | **Depth range** | 7 to 30 m |
 
 ## Getting there

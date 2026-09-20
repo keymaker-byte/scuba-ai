@@ -6,7 +6,7 @@ A must dive at any level, on Klein Bonaire's south coast, with the mooring ancho
 |---|---|
 | **Location** | Klein Bonaire, south coast |
 | **Coordinates** | 12.150117, -68.31735 (mooring, about 9 m, on the drop-off edge) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 6 to 30 m |
 | **Skill level** | Any level |
 

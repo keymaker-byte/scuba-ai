@@ -7,7 +7,8 @@ This workspace is for scuba diving planning and data analysis.
 - `diver-profile.json` holds the user's specific diver profile and personal data.
 - `tool-config.json` holds per-tool parameters, one subsection per tool in `tools/`.
 - `plan_log.csv` holds dive plans vs observed data.
-- Each diving region is a folder under `regions/` holding one `<region>.md` steering file and a `sites/` subfolder containing `<site>.md` files. 
+- Each diving region is a folder under `regions/` holding one `<region>.md` steering file and a `sites/` subfolder containing `<site>.md` files.
+- `map.html`, with its supporting files under `map/`, is a local map viewer. It reads `map/data.js`, the index of every site's coordinates.
 
 ## Session Context
 
@@ -79,6 +80,24 @@ Every region needs a row in the README's own "Regions currently covered" table: 
 The canonical structure is `site_template.md`.
 
 A site file also needs a row in its region's steering file, under that file's "Sites currently covered" table: the site name linking to `sites/<slug>.md`, plus a brief one-line description. Keep this table current.
+
+**Type is exactly "Shore" or "Boat", nothing else.** Shore is anything reachable from land, however long the surface swim. Boat only applies when there is no shore access at all. Don't qualify it ("Boat or shore", "Shore, guided only", "Boat, shore or snorkel"); a surface swim distance, an access restriction, or a guided-only requirement belongs in Getting There, not folded into the Type value.
+
+A site file also needs an entry in `map/data.js`, the index `map.html` draws its pins from. It is a single `window.MAP_DATA = { "sites": [...] };` assignment; add one object to the `sites` array:
+
+```json
+{
+  "slug": "<site-slug>",
+  "name": "<site name, as the file's H1, without any numbering prefix>",
+  "region": "<region folder slug>",
+  "type": "shore" or "boat",
+  "file": "regions/<region>/sites/<slug>.md",
+  "site": { "lat": <dive site latitude>, "lon": <dive site longitude> },
+  "entry": { "lat": <entry latitude>, "lon": <entry longitude> } or null
+}
+```
+
+`site` is the dive site's own coordinate, the same one in the file's Coordinates row, never the entry point. `type` is `"shore"` or `"boat"`, lowercased from the file's Type row. `entry` is only set when the site is shore-accessed and the Coordinates row gives a separate entry coordinate; leave it `null` for a boat-only site or a shore site with no separate entry coordinate on file. Keep this file current.
 
 A coordinate handed to you for a new site is a first reference. Check its seabed depth before writing anything; a point mid-channel or off the drop is not the dive. If it is too deep, or off the divable slope, walk it toward shore and re-check, comparing candidate depths against the source description (a guidebook, community reports, the site's own terrain narrative) until the coordinate's depth matches what is actually described as being dived. It also has to stay inside the coverage of the region's spatial current model, where it has one: extracting a prediction at the coordinate reports whether the point landed inside the model's domain and how far outside it sits when it didn't, and a coordinate walked too close to shore can fall outside that coverage or snap to its boundary, which reads as near-still water rather than the site's real current. Don't walk it past that edge; if the divable depth and model coverage conflict, keep the coordinate on the covered side and note the shallower part of the dive separately. Extract the spatial current prediction and pick the governing current and tide stations against that corrected coordinate, not the original.
 

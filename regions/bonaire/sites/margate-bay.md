@@ -6,7 +6,7 @@ A double reef site on the southwest coast, its entrance slightly hidden among ma
 |---|---|
 | **Location** | Southwest coast, Bonaire, behind mangrove bushes off the coast road |
 | **Coordinates** | 12.05135, -68.2734 (dive area, about 4 m); entry at 12.05325, -68.27448, through the gap in the mangrove bushes |
-| **Type** | Boat, shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | 6 to 30 m |
 
 ## Getting there

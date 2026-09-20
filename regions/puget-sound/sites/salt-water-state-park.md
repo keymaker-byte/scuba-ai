@@ -6,7 +6,7 @@ Shore dive at Saltwater State Park in Des Moines, on the mainland shore of East 
 |---|---|
 | **Location** | Des Moines, WA. Saltwater State Park, East Passage, Puget Sound |
 | **Coordinates** | Dive site 47.370328, -122.328359 (seabed about 12.9 m below MLLW, on the middle of the reef fingers), about 360 m from the entry on a bearing of 231°; entry at 47.372339, -122.324648, the beach below the concrete stairs at the north end of the park beach, near where McSorley Creek drains into the Sound |
-| **Type** | Shore, with a surface swim of up to about 270 m out to the buoy over the wreck at high tide, shorter at low tide once the flat has drained, at the cost of a longer walk to reach the water |
+| **Type** | Shore |
 | **Depth range** | Reef fingers roughly 7 to 24 m below MLLW; beyond them the bottom falls away sharply into much deeper water |
 | **Skill level** | Intermediate to advanced. The reef itself suits a confident diver, but the long surface swim, the depth at the reef's outer end and the steep drop past it call for fitness and good buoyancy control |
 

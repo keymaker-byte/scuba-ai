@@ -6,7 +6,7 @@ A healthy coral garden just south of La Machaca, named for a grid system once bu
 |---|---|
 | **Location** | West coast, Bonaire, off Captain Don's Habitat, just south of La Machaca |
 | **Coordinates** | 12.172176, -68.2898 (dive area, about 7 m); entry at 12.17222, -68.28962, the same pier and ladder at Captain Don's Habitat used for La Machaca |
-| **Type** | Shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | Around 13 m |
 
 ## Getting there

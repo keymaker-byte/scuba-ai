@@ -6,7 +6,7 @@ The first double reef site south of Salt Pier, named for its proximity to the sa
 |---|---|
 | **Location** | South coast, Bonaire, just south of Salt Pier |
 | **Coordinates** | 12.07942, -68.28219 (dive area, about 5 m); entry at 12.0825, -68.28172, the roadside beach |
-| **Type** | Boat, shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | 6 to 30 m; the second reef begins around 21 m |
 
 ## Getting there

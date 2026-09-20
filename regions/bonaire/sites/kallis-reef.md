@@ -6,7 +6,7 @@ A popular stretch of reef between Jeff Davis Memorial and Oil Slick Leap, named 
 |---|---|
 | **Location** | Northwest coast, Bonaire, between Jeff Davis Memorial and Oil Slick Leap |
 | **Coordinates** | 12.201567, -68.31075 (about 1 m) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 9 to 30 m |
 
 ## Getting there

@@ -6,7 +6,7 @@ The only dive site on Klein Bonaire reachable from shore, directly in front of t
 |---|---|
 | **Location** | Klein Bonaire, west side, facing Bonaire |
 | **Coordinates** | 12.168717, -68.30515 (beach entry) |
-| **Type** | Shore or boat |
+| **Type** | Shore |
 | **Depth range** | 9 to 30 m |
 | **Skill level** | Beginner, minimal current |
 

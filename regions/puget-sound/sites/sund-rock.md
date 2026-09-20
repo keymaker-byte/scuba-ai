@@ -6,7 +6,7 @@ Sund Rock is a rocky point on the west shore of Hood Canal, between Hoodsport an
 |---|---|
 | **Location** | Hoodsport, Washington. Hood Canal, west shore, between Hoodsport and Lilliwaup |
 | **Coordinates** | Dive site 47.43416, -123.11925 (seabed about 28 m below MLLW), off the south wall. Private access has two separate entries: the south wall entry at 47.434712, -123.120138, a footpath down to a small beach right at the wall; the north wall entry at 47.435419, -123.120401, about 80 m north, an easy ramp near the bench and boulder garden. The public entry is about 3 km north of Hoodsport with a 200 m swim |
-| **Type** | Shore, or kayak. No meaningful surface swim from the private entry |
+| **Type** | Shore |
 | **Depth range** | Boulder garden 5 to 9 m below MLLW, ledges to about 17 m, wall base into silty sand at 19 to 21 m, slope beyond continuing past 32 m |
 | **Skill level** | All divers in the boulder garden and along the shallow ledge; the deeper slope needs depth discipline |
 

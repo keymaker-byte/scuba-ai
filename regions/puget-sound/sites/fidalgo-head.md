@@ -6,7 +6,7 @@ Shore dive across the shallow bay at Washington Park, on the west end of Fidalgo
 |---|---|
 | **Location** | Anacortes, WA. Fidalgo Head, the rocky south shoreline of Washington Park's bay, at the west end of Fidalgo Island, at the west mouth of Burrows Pass where it opens into Rosario Strait |
 | **Coordinates** | Dive site 48.49216, -122.70335 (seabed about 11.7 m below MLLW), on the outer third of the headland where the rock gives way to sand; entry at 48.497696, -122.701209, the concrete stairs at the sharp bend in Washington Park's Loop Road, at the north side of the bay |
-| **Type** | Shore, with a surface swim of about 15 minutes across the bay at slack |
+| **Type** | Shore |
 | **Depth range** | Roughly 3 to 12 m below MLLW along the base of the outer rock, shelving onto sand beyond it |
 | **Skill level** | Advanced |
 

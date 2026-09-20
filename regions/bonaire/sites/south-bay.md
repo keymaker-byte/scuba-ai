@@ -6,7 +6,7 @@ A protected site on Klein Bonaire with mild current, beautiful coral formations 
 |---|---|
 | **Location** | Klein Bonaire, south side |
 | **Coordinates** | 12.14965, -68.320133 (about 0 m at the shore-side edge, deepening offshore) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 9 to 30 m |
 
 ## Getting there

@@ -6,7 +6,7 @@ Shore dive on the north-facing Alki shore of West Seattle, just northeast of Alk
 |---|---|
 | **Location** | West Seattle, WA. North-facing Alki shore at the southwest entrance to Elliott Bay, about 0.3 km northeast of Alki Point |
 | **Coordinates** | Dive site 47.57968, -122.41450 (seabed about 17 m below MLLW); entry at 47.578382, -122.414514, about 150 m south, the southwest end of the sea wall near 64th Avenue SW |
-| **Type** | Shore, with a short surface swim out from the sea wall |
+| **Type** | Shore |
 | **Depth range** | Roughly 6 to 24 m below MLLW |
 | **Skill level** | All divers |
 

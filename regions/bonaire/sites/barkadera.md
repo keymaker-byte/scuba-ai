@@ -6,7 +6,7 @@ A boat dive directly opposite the STINAPA and Bonaire National Marine Park headq
 |---|---|
 | **Location** | Northwest coast, Bonaire, opposite STINAPA headquarters, Barcadera |
 | **Coordinates** | 12.197542, -68.304702 (about 1 m) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 9 to 30 m |
 
 ## Getting there

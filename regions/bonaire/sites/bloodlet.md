@@ -6,7 +6,7 @@ A boat dive named for the shore entry that gave it its name, technically possibl
 |---|---|
 | **Location** | Northwest coast, Bonaire, south of Karpata |
 | **Coordinates** | 12.215249, -68.3418 (reef ledge, about 3 m, dropping beyond to deep water) |
-| **Type** | Boat; a shore entry exists but is not recommended |
+| **Type** | Shore |
 | **Depth range** | 6 to 25 m |
 | **Skill level** | Intermediate to experienced |
 

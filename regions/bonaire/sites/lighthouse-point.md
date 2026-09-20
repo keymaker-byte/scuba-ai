@@ -6,7 +6,7 @@ A southern site of sand flats and fringing reef where current runs from south to
 |---|---|
 | **Location** | South coast, Bonaire |
 | **Coordinates** | 12.11435, -68.295417 (about 5 m) |
-| **Type** | Boat or shore, advanced |
+| **Type** | Shore |
 | **Depth range** | 9 to 30 m |
 | **Skill level** | Advanced, drift diving experience expected |
 

@@ -6,7 +6,7 @@ The second of the double reef sites, named for the lake shaped patch of sand lyi
 |---|---|
 | **Location** | Southwest coast, Bonaire, just south of Punt Vierkant |
 | **Coordinates** | 12.106167, -68.290367 (dive area, about 5 m); entry at 12.10703, -68.29033, the roadside beach |
-| **Type** | Boat or shore |
+| **Type** | Shore |
 | **Depth range** | 5 to 30 m |
 
 ## Getting there

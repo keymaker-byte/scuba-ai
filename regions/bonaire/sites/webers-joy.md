@@ -6,7 +6,7 @@ A double reef system on the protected coast south of 1000 Steps, officially name
 |---|---|
 | **Location** | Northwest coast, Bonaire, south of 1000 Steps |
 | **Coordinates** | 12.2069, -68.3178 (dive area, about 3 m); entry at 12.20645, -68.3165, the top of the paved path down to the rocky beach |
-| **Type** | Boat, shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | 6 to 30 m, some routes to 40 m |
 
 ## Getting there

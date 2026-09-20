@@ -6,7 +6,7 @@ The southernmost of the double reef sites, just south of Salt Pier, with an easy
 |---|---|
 | **Location** | South coast, Bonaire, just south of Salt Pier |
 | **Coordinates** | 12.07754, -68.28136 (about 6 m) |
-| **Type** | Boat, shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | 6 to 30 m |
 
 ## Getting there

@@ -6,7 +6,7 @@ A beautiful reef off a long stretch of coral beach just north of 1000 Steps, nam
 |---|---|
 | **Location** | Northwest coast, Bonaire, just north of 1000 Steps |
 | **Coordinates** | 12.2145, -68.339 (near shore, under 1 m) |
-| **Type** | Boat, shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | 6 to 27 m |
 
 ## Getting there

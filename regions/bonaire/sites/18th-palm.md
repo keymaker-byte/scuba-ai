@@ -6,7 +6,7 @@ Plaza Resort's house reef, in front of the Lt. Governor's house and its yard of 
 |---|---|
 | **Location** | Southwest coast, Bonaire, at Plaza Resort, about 5 minutes from Kralendijk |
 | **Coordinates** | 12.13735, -68.277617 (dive area, about 9 m); entry at 12.137806, -68.276472, the beach at Plaza Resort's northwest entrance |
-| **Type** | Boat, shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | 6 to 27 m |
 | **Skill level** | Beginner |
 

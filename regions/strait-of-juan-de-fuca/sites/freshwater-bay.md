@@ -6,7 +6,7 @@ Freshwater Bay opens north onto the Strait of Juan de Fuca between Angeles Point
 |---|---|
 | **Location** | Port Angeles, WA. South shore of the Strait of Juan de Fuca, Freshwater Bay County Park |
 | **Coordinates** | Dive site 48.15111, -123.63571 (seabed about 17.6 m below MLLW), the base of the outer, strait facing wall of Bachelor Rock. Entry is the county park boat ramp at 48.14647, -123.64149, about 0.7 km away across the bay |
-| **Type** | Shore, with a 30 to 40 minute surface swim each way across the bay |
+| **Type** | Shore |
 | **Depth range** | 0 to about 17.6 m below MLLW: a shallow, partly drying sand and eelgrass crossing giving way to a rocky reef and Bachelor Rock's wall |
 | **Skill level** | Advanced |
 

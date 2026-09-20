@@ -6,7 +6,7 @@ Just off one of Bonaire's most famous beaches, its pink tinge coming from forami
 |---|---|
 | **Location** | South coast, Bonaire, at Pink Beach |
 | **Coordinates** | 12.064333, -68.283267 (dive area, about 5 m); entry at 12.062973, -68.28185, the beach itself |
-| **Type** | Boat, shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | 8 to 30 m |
 
 ## Getting there

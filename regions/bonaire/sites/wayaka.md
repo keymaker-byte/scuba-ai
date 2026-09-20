@@ -6,7 +6,7 @@ A little dived site inside Washington Slagbaai National Park, named for the loca
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire |
 | **Coordinates** | 12.26925, -68.414983 (reef, spanning about 5 to 30 m within the site's grid cell before the seabed falls away toward 75 m) |
-| **Type** | Boat; also reached by 4x4 over the beach |
+| **Type** | Shore |
 | **Depth range** | 10 to 30 m |
 | **Skill level** | Advanced |
 
