@@ -43,13 +43,17 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 | `subsurface_log.py` | Subsurface logbook | Read-only access to a Subsurface dive log: list dives, show a dive's aggregates and notes, or pull its full depth/temperature/pressure profile. |
 | `pnwdiving_viz.py` | pnwdiving.com | Recent visibility reports by site, from the public summary table, cached locally. |
 | `open_meteo_wind.py` | Open-Meteo (ECMWF IFS + GFS) | Hourly wind speed, direction and gusts at any coordinate worldwide, for regions outside NWS coverage; ECMWF as the primary model, GFS as an independent cross-check. |
+| `scubaboard.py` | ScubaBoard | Recent threads by region or by topic, via each forum's own RSS feed. |
 
 NWS wind forecasts are fetched directly (no wrapper script) for US regions. All tools read parameters from `tool-config.json` and print metric units in local time.
 
 ## Platform
 
 - Requires Python 3.9 or later (for `zoneinfo`).
-- Developed and tested only on macOS. It should run on Linux with no changes, since every tool is pure Python standard library (`urllib`, `json`, `csv`, `xml.etree`, `zoneinfo`, no pip packages required) and none of the code paths are macOS specific. Windows is untested; `zoneinfo` there needs the `tzdata` package (`pip install tzdata`) since Windows has no system IANA time zone database.
+- Developed and tested only on macOS. 
+- It should run on Linux with no changes.
+- Windows is untested; `zoneinfo` there needs the `tzdata` package (`pip install tzdata`) since Windows has no system IANA time zone database.
+- Dependencies outside the standard library: `feedparser` (`pip install feedparser`).
 
 ## Things you can ask it
 

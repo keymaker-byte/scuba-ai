@@ -34,5 +34,7 @@
   "open_meteo_wind": {
     "primary_model": "ecmwf_ifs",
     "cross_check_model": "gfs_seamless"
-  }
+  },
+
+  "scubaboard": {}
 }

@@ -31,6 +31,7 @@ The following tools should be used in this region:
 - emodnet_depth.md
 - subsurface_log.md
 - dan.md
+- scubaboard.md
 
 ## Conventions
 
