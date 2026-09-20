@@ -6,7 +6,7 @@ Mi Dushi means my sweetheart in Papiamentu, a double reef site on Klein Bonaire'
 |---|---|
 | **Location** | Klein Bonaire, southwest side |
 | **Coordinates** | 12.159917, -68.32585 (about 41 m offshore of the mooring) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 8 to 30 m |
 | **Skill level** | Beginner |
 

@@ -6,7 +6,7 @@ Old Man House Park is a small Suquamish Tribe park on the Kitsap Peninsula shore
 |---|---|
 | **Location** | Suquamish, WA. Kitsap Peninsula, at the north mouth of Agate Passage where it opens into Port Madison |
 | **Coordinates** | Dive site 47.7241, -122.5540 (seabed 9.0 m below MLLW, off the point); entry at 47.723903, -122.557519, the Old Man House Park beach |
-| **Type** | Shore, little or no surface swim. Also the north end of a 1.6 km ebb drift that starts at the Agate Pass Bridge, up the channel to the south |
+| **Type** | Shore |
 | **Depth range** | Roughly 3 to 9 m below MLLW close to the park, deepening gradually into the pass channel |
 | **Skill level** | Intermediate. Current is real here, though markedly weaker than the channel can run further south near the bridge, over 1 m/s at times |
 

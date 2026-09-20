@@ -6,7 +6,7 @@ A shore dive beside the Radio Nederland transmission towers, named for the climb
 |---|---|
 | **Location** | Northwest coast, Bonaire, about 9 km northwest of Kralendijk, beside the Radio Nederland towers |
 | **Coordinates** | 12.210183, -68.322317 (dive area, about 3 m); entry at 12.21062, -68.32173, the top of the steps down from the road |
-| **Type** | Boat, shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | 6 to 30 m, sloping further beyond recreational range |
 
 ## Getting there

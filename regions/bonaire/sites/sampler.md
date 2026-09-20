@@ -6,7 +6,7 @@ Klein Bonaire's northernmost dive site, well visited and one of the most photogr
 |---|---|
 | **Location** | Klein Bonaire, north coast, the northernmost site |
 | **Coordinates** | 12.168817, -68.31005 (about 51 m) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 6 to 30 m |
 
 ## Getting there

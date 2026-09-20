@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dive Site Map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="map/leaflet.css">
+<style>
+  html, body { height: 100%; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  #map { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+
+  #panel {
+    position: absolute; top: 12px; left: 12px; z-index: 1000;
+    background: rgba(255,255,255,0.96); border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    padding: 12px 14px; width: 240px; font-size: 13px; color: #1a1a1a;
+  }
+  #panel h1 { font-size: 15px; margin: 0 0 8px 0; }
+  #panel label { display: block; margin: 4px 0; cursor: pointer; }
+  #panel input[type="text"], #panel select {
+    width: 100%; box-sizing: border-box; padding: 5px 6px; margin-top: 4px;
+    border: 1px solid #ccc; border-radius: 4px; font-size: 13px;
+  }
+  #panel .section { margin-bottom: 10px; }
+  #panel .swatch { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 6px; border: 1px solid rgba(0,0,0,0.3); vertical-align: middle; }
+  #count { color: #555; font-size: 12px; margin-top: 6px; }
+
+  #error-banner {
+    display: none; position: absolute; top: 0; left: 0; right: 0; z-index: 2000;
+    background: #7f1d1d; color: #fff; padding: 14px 20px; font-size: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  }
+  #error-banner code {
+    background: rgba(255,255,255,0.15); padding: 2px 6px; border-radius: 4px;
+    font-family: SFMono-Regular, Consolas, monospace;
+  }
+
+  .leaflet-popup-content { font-size: 13px; line-height: 1.5; }
+  .leaflet-popup-content a { color: #1d4ed8; }
+</style>
+</head>
+<body>
+
+<div id="error-banner"></div>
+<div id="panel">
+  <h1>Dive Sites</h1>
+
+  <div class="section">
+    <input type="text" id="search" placeholder="Search site name...">
+  </div>
+
+  <div class="section">
+    <select id="region-filter">
+      <option value="">All regions</option>
+    </select>
+  </div>
+
+  <div class="section">
+    <label><input type="checkbox" id="toggle-shore" checked>
+      <span class="swatch" style="background:#2563eb"></span>Shore dive sites</label>
+    <label><input type="checkbox" id="toggle-boat" checked>
+      <span class="swatch" style="background:#ea580c"></span>Boat dive sites</label>
+    <label><input type="checkbox" id="toggle-entry" checked>
+      <span class="swatch" style="background:#1e3a8a"></span>Shore entry points</label>
+  </div>
+
+  <div id="count"></div>
+</div>
+
+<div id="map"></div>
+
+<script src="map/leaflet.js"></script>
+<script src="map/data.js"></script>
+<script>
+const COLORS = {
+  shoreSite: "#2563eb",
+  boatSite: "#ea580c",
+  entry: "#1e3a8a",
+};
+
+const map = L.map('map', { worldCopyJump: true }).setView([20, -60], 3);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 19,
+}).addTo(map);
+
+function regionFile(region) {
+  return `regions/${region}/${region}.md`;
+}
+
+function regionLink(site) {
+  const label = site.region.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  return `<a href="${encodeURI(regionFile(site.region))}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`;
+}
+
+function siteMarker(site) {
+  const color = site.type === 'shore' ? COLORS.shoreSite : COLORS.boatSite;
+  const m = L.circleMarker([site.site.lat, site.site.lon], {
+    radius: 7, color: '#fff', weight: 1.5, fillColor: color, fillOpacity: 0.9,
+  });
+  m.bindPopup(
+    `<strong>${escapeHtml(site.name)}</strong><br>` +
+    `${regionLink(site)} &middot; ${site.type === 'shore' ? 'Shore' : 'Boat'} dive<br>` +
+    `<a href="${encodeURI(site.file)}" target="_blank" rel="noopener">Open site file</a>`
+  );
+  return m;
+}
+
+function entryMarker(site) {
+  const m = L.circleMarker([site.entry.lat, site.entry.lon], {
+    radius: 6, color: '#fff', weight: 1.5, fillColor: COLORS.entry, fillOpacity: 0.95,
+  });
+  m.bindPopup(
+    `<strong>${escapeHtml(site.name)}</strong> &middot; entry point<br>` +
+    `${regionLink(site)}<br>` +
+    `<a href="${encodeURI(site.file)}" target="_blank" rel="noopener">Open site file</a>`
+  );
+  return m;
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+
+function showError(html) {
+  const el = document.getElementById('error-banner');
+  el.innerHTML = html;
+  el.style.display = 'block';
+}
+
+let allSites = [];
+const shoreLayer = L.layerGroup().addTo(map);
+const boatLayer = L.layerGroup().addTo(map);
+const entryLayer = L.layerGroup().addTo(map);
+
+const searchInput = document.getElementById('search');
+const regionSelect = document.getElementById('region-filter');
+const toggleShore = document.getElementById('toggle-shore');
+const toggleBoat = document.getElementById('toggle-boat');
+const toggleEntry = document.getElementById('toggle-entry');
+const countEl = document.getElementById('count');
+
+function rebuild() {
+  shoreLayer.clearLayers();
+  boatLayer.clearLayers();
+  entryLayer.clearLayers();
+
+  const query = searchInput.value.trim().toLowerCase();
+  const region = regionSelect.value;
+  let shownSites = 0, shownEntries = 0;
+
+  for (const site of allSites) {
+    if (region && site.region !== region) continue;
+    if (query && !site.name.toLowerCase().includes(query)) continue;
+
+    if (site.type === 'shore' && toggleShore.checked) {
+      siteMarker(site).addTo(shoreLayer);
+      shownSites++;
+    } else if (site.type === 'boat' && toggleBoat.checked) {
+      siteMarker(site).addTo(boatLayer);
+      shownSites++;
+    }
+    if (site.entry && toggleEntry.checked && (!region || site.region === region) &&
+        (!query || site.name.toLowerCase().includes(query))) {
+      entryMarker(site).addTo(entryLayer);
+      shownEntries++;
+    }
+  }
+  countEl.textContent = `${shownSites} site${shownSites === 1 ? '' : 's'} shown` +
+    (shownEntries ? `, ${shownEntries} entry point${shownEntries === 1 ? '' : 's'}` : '');
+}
+
+[searchInput].forEach(el => el.addEventListener('input', rebuild));
+[regionSelect, toggleShore, toggleBoat, toggleEntry].forEach(el => el.addEventListener('change', rebuild));
+
+try {
+  if (!window.MAP_DATA) throw new Error('window.MAP_DATA is not defined');
+  allSites = window.MAP_DATA.sites || [];
+
+  const regions = [...new Set(allSites.map(s => s.region))].sort();
+  for (const r of regions) {
+    const opt = document.createElement('option');
+    opt.value = r;
+    opt.textContent = r.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    regionSelect.appendChild(opt);
+  }
+
+  rebuild();
+
+  const allLatLngs = [];
+  for (const s of allSites) {
+    allLatLngs.push([s.site.lat, s.site.lon]);
+    if (s.entry) allLatLngs.push([s.entry.lat, s.entry.lon]);
+  }
+  if (allLatLngs.length) {
+    map.fitBounds(L.latLngBounds(allLatLngs), { padding: [30, 30] });
+  }
+} catch (err) {
+  showError(
+    `<strong>Could not load map/data.js</strong> (${escapeHtml(err.message)}). ` +
+    `It should sit at map/data.js, alongside map.html, and define <code>window.MAP_DATA</code>.`
+  );
+}
+</script>
+</body>
+</html>

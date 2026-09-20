@@ -6,7 +6,7 @@ Sekiu Jetty is a shore dive in the town of Sekiu, on the western reach of the St
 |---|---|
 | **Location** | Sekiu, Clallam County, WA. South shore of the Strait of Juan de Fuca, at Clallam Bay |
 | **Coordinates** | Dive site 48.26852, -124.29716 (seabed about 13.5 m below MLLW), the rocky, kelp covered ground northwest of the jetty; entry is at the marina parking area near 48.2666, -124.2985 |
-| **Type** | Shore, short swim (roughly 50 to 100 m) from the beach to the rocks; the jetty itself can also be dived directly off the beach |
+| **Type** | Shore |
 | **Depth range** | About 6 to 21 m below MLLW |
 | **Skill level** | Advanced for the rocky, kelp covered ground; the jetty and the beach nearer the marina suit less experienced divers in good conditions |
 

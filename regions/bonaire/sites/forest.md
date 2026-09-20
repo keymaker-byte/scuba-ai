@@ -6,7 +6,7 @@ Named for its forest of black coral, on a small southwestern peninsula of Klein 
 |---|---|
 | **Location** | Klein Bonaire, southwest peninsula |
 | **Coordinates** | 12.14903, -68.32651 (about 44 m offshore of the mooring) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 8 to 30 m |
 
 ## Getting there

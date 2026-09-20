@@ -6,7 +6,7 @@ A boat dive on Klein Bonaire for any level, with a mild current typical for the 
 |---|---|
 | **Location** | Klein Bonaire |
 | **Coordinates** | 12.156999, -68.327 (about 29 m offshore of the mooring) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 9 to 30 m |
 | **Skill level** | Any level |
 

@@ -6,7 +6,7 @@ One of the most photographed dive sites in the world, and the one site on Bonair
 |---|---|
 | **Location** | Kralendijk harbour, Bonaire |
 | **Coordinates** | 12.151047, -68.278587 (about 8 m) |
-| **Type** | Boat or shore, advanced, guided only |
+| **Type** | Shore |
 | **Depth range** | 3 to 10 m |
 | **Skill level** | Advanced; harbourmaster permission and a local guide are mandatory |
 

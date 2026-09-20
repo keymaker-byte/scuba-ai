@@ -6,7 +6,7 @@ A remote beach in Washington Slagbaai National Park fronting some of the most pr
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire |
 | **Coordinates** | 12.29085, -68.413067 (dive area, about 12 m); entry at 12.29022, -68.41192, the beach at the end of the well-worn path down from the parking area |
-| **Type** | Shore, no surface swim |
+| **Type** | Shore |
 | **Depth range** | 4 to 30 m |
 | **Skill level** | Advanced |
 

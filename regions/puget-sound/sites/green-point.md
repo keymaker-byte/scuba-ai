@@ -6,7 +6,7 @@ Shore dive on the low, rocky point at the northwest corner of Washington Park, a
 |---|---|
 | **Location** | Anacortes, WA. Green Point, the northwest corner of Washington Park, at the west end of Fidalgo Island, opening onto Burrows Bay and Rosario Strait |
 | **Coordinates** | Dive site 48.49995, -122.70132 (seabed about 15.6 m below MLLW), the outer point; entry at 48.497696, -122.701209, the concrete stairs at the sharp bend in Washington Park's Loop Road |
-| **Type** | Shore, direct entry, no real surface swim |
+| **Type** | Shore |
 | **Depth range** | Roughly 3 to 16 m below MLLW |
 | **Skill level** | Advanced |
 

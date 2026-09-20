@@ -6,7 +6,7 @@ A site about 400 m north of Salt Pier with a shallow, sandy plateau flanked by r
 |---|---|
 | **Location** | South coast, Bonaire, about 400 m north of Salt Pier |
 | **Coordinates** | 12.0869, -68.2842 (dive area, about 6 m); entry at 12.08665, -68.28265, the boulder and reef-ledge shore entry |
-| **Type** | Boat or shore |
+| **Type** | Shore |
 | **Depth range** | 9 to 30 m |
 | **Skill level** | Any level, mild to moderate current |
 

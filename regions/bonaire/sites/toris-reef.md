@@ -6,7 +6,7 @@ Directly opposite the outflow from the Cargill salt works, where fresh outlet wa
 |---|---|
 | **Location** | South coast, Bonaire, opposite the outflow from the Cargill salt works |
 | **Coordinates** | 12.07115, -68.281667 (about 6 m) |
-| **Type** | Boat, shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | 6 to 30 m |
 
 ## Getting there

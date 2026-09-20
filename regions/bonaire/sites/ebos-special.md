@@ -6,7 +6,7 @@ Also known as Jerry's Jam, one of the most beautiful sites in the north of Klein
 |---|---|
 | **Location** | Klein Bonaire, north side |
 | **Coordinates** | 12.165783, -68.31925 (about 54 m offshore of the mooring) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 4 to 30 m |
 
 ## Getting there

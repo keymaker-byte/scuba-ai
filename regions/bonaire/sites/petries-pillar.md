@@ -6,7 +6,7 @@ A shore dive good for beginners, terrain much like neighbouring Andrea I and II,
 |---|---|
 | **Location** | West coast, Bonaire, between Andrea I and Small Wall |
 | **Coordinates** | 12.186267, -68.297 (dive area, reef edge, shallow ledge around 5 to 6 m); entry at 12.18195, -68.29452, the roadside beach |
-| **Type** | Shore or snorkel |
+| **Type** | Shore |
 | **Depth range** | 9 to 30 m |
 | **Skill level** | Beginner |
 

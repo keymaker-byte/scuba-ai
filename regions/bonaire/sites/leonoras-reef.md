@@ -6,7 +6,7 @@ A beautiful site on Klein Bonaire's north coast, with a flat bottom at the entry
 |---|---|
 | **Location** | Klein Bonaire, north coast |
 | **Coordinates** | 12.167333, -68.315417 (about 22 m) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 7 to 30 m, some routes to 40 m |
 | **Skill level** | Beginner on the shallow plateau |
 

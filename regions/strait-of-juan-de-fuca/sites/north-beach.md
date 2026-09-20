@@ -6,7 +6,7 @@ North Beach County Park sits on the Quimper Peninsula between McCurdy Point and 
 |---|---|
 | **Location** | Port Townsend, Jefferson County, WA. South shore of the Strait of Juan de Fuca at the mouth of Admiralty Inlet, at North Beach County Park, between McCurdy Point and Point Wilson |
 | **Coordinates** | Dive site 48.14529, -122.78255 (seabed about 8.2 m below MLLW), the outer edge of the bull kelp bed; entry at the park's boat launch near 48.1428, -122.78255 |
-| **Type** | Shore, surface swim roughly 200 to 280 m out through the shallow kelp to the working depth |
+| **Type** | Shore |
 | **Depth range** | Roughly 3 to 9 m below MLLW across the kelp bed; current builds quickly past that, and few dives go deeper |
 | **Skill level** | Advanced past the kelp's outer edge, where current picks up quickly; a shorter dive that stays inside the bed suits a broader range of divers in calm conditions |
 

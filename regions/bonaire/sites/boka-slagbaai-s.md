@@ -6,7 +6,7 @@ The southern of two routes at Boka Slagbaai and the southernmost dive site insid
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire |
 | **Coordinates** | 12.264983, -68.414517 (dive area, reef terrace, about 5 m); entry at 12.26433, -68.41378, the same sandy beach by the historic yellow building shared with Boka Slagbaai N |
-| **Type** | Boat or shore |
+| **Type** | Shore |
 | **Depth range** | 3 to 24 m |
 | **Skill level** | Advanced |
 

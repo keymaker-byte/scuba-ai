@@ -6,7 +6,7 @@ Also known as South Belnem, one of the first sites heading south where shore acc
 |---|---|
 | **Location** | South Belnem, Bonaire, south of Kralendijk |
 | **Coordinates** | 12.1191, -68.293217 (about 5 m) |
-| **Type** | Boat, or shore for a tricky entry and exit |
+| **Type** | Shore |
 | **Depth range** | 9 to 30 m, a second reef at about 37 m for experienced divers |
 
 ## Getting there

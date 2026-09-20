@@ -6,7 +6,7 @@ Sunchi means kiss in Papiamentu. The site starts on a shallow sandy plateau befo
 |---|---|
 | **Location** | Klein Bonaire, west side |
 | **Coordinates** | 12.149833, -68.314933 (about 9 m) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 6 to 30 m |
 | **Skill level** | Beginner on the plateau, more advanced on the wall |
 

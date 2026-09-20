@@ -6,7 +6,7 @@ A vertical wall in front of the Black Durgon Inn, beginning around 6 m and leadi
 |---|---|
 | **Location** | West coast, Bonaire, in front of the Black Durgon Inn |
 | **Coordinates** | 12.179567, -68.2938 (about 13 m) |
-| **Type** | Boat; shore access only with permission from the Black Durgon Inn |
+| **Type** | Shore |
 | **Depth range** | 6 to 18 m |
 
 ## Getting there

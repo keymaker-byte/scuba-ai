@@ -6,7 +6,7 @@ Named after underwater photographer Carl Roessler, on the northwest tip of Klein
 |---|---|
 | **Location** | Klein Bonaire, northwest tip |
 | **Coordinates** | 12.16421, -68.323728 (about 31 m) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 6 to 30 m |
 | **Skill level** | Advanced, given possible strong currents |
 

@@ -6,7 +6,7 @@ An isolated dive and snorkel site off the coast road north of Kralendijk, named 
 |---|---|
 | **Location** | Northwest coast, Bonaire, off Queens Highway north of Kralendijk |
 | **Coordinates** | 12.204133, -68.313417 (about 6 m) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 6 to 30 m |
 
 ## Getting there

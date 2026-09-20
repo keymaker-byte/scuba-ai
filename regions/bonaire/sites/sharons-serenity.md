@@ -6,7 +6,7 @@ On Klein Bonaire's southwest corner, with the mooring close enough to shore to m
 |---|---|
 | **Location** | Klein Bonaire, southwest corner |
 | **Coordinates** | 12.155, -68.329 (about 5 m) |
-| **Type** | Boat or snorkel |
+| **Type** | Boat |
 | **Depth range** | 6 to 30 m |
 | **Skill level** | Intermediate, given the moderate current |
 
