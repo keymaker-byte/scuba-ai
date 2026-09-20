@@ -44,7 +44,8 @@ Covers two kinds of forum:
 
 ## `tools/scubaboard.py`
 
-Needs the `feedparser` package (see the workspace README's Platform section).
+Pure standard library, `xml.etree.ElementTree` parses the RSS directly; no extra package
+to install.
 
 ```sh
 python3 tools/scubaboard.py list                                 # every region and topic covered

@@ -34,11 +34,19 @@ import re
 import sys
 import urllib.error
 import urllib.request
+import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 
-import feedparser
-
 USER_AGENT = "dive-planning"
+
+# XenForo's RSS namespaces for the two tags we read beyond the bare RSS 2.0 spec:
+# dc:creator (a clean display name; the plain <author> tag holds "email (name)"
+# instead) and content:encoded (the opening post's HTML, RSS 2.0 has no <description>
+# here).
+_NS = {
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "content": "http://purl.org/rss/1.0/modules/content/",
+}
 
 # name, slug.id -- taken straight from each forum's own URL on scubaboard.com.
 REGIONS = {
@@ -143,6 +151,16 @@ def when(published):
         return published
 
 
+def author_name(item):
+    """dc:creator is a clean display name; the plain <author> tag holds "email (name)"."""
+    creator = item.findtext("dc:creator", namespaces=_NS)
+    if creator:
+        return creator.strip()
+    raw = (item.findtext("author") or "").strip()
+    m = re.search(r"\(([^)]+)\)\s*$", raw)
+    return m.group(1) if m else (raw or "Unknown")
+
+
 def fetch_threads(source):
     url = feed_url(source)
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -152,20 +170,22 @@ def fetch_threads(source):
     except urllib.error.URLError as e:
         sys.exit(f"Could not reach {url}: {e}")
 
-    feed = feedparser.parse(xml_data)
-    if feed.bozo and not feed.entries:
-        sys.exit(f"{url} did not parse as a feed ({feed.bozo_exception}). "
+    try:
+        root = ET.fromstring(xml_data)
+    except ET.ParseError as e:
+        sys.exit(f"{url} did not parse as XML ({e}). "
                  f"The forum may have been renamed or removed; check its URL on scubaboard.com.")
 
+    items = root.findall("./channel/item")
     return [
         {
-            "title": clean_html(entry.get("title", "")),
-            "author": clean_html(entry.get("author", "Unknown")),
-            "link": entry.get("link", ""),
-            "published": when(entry.get("published", "")),
-            "summary": clean_html(entry.get("summary", "")),
+            "title": clean_html(item.findtext("title") or ""),
+            "author": author_name(item),
+            "link": (item.findtext("link") or "").strip(),
+            "published": when(item.findtext("pubDate") or ""),
+            "summary": clean_html(item.findtext("content:encoded", namespaces=_NS) or ""),
         }
-        for entry in feed.entries
+        for item in items
     ]
 
 
