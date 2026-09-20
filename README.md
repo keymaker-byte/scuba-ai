@@ -38,7 +38,8 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 | `noaa_current.py` | NOAA CO-OPS | Current predictions at a NOAA current station: slack, max flood/ebb, and diveable windows under a speed threshold, at a chosen depth bin. |
 | `noaa_tide.py` | NOAA CO-OPS | Tide height predictions at a NOAA tide station; converts an observed depth to depth below MLLW datum and back (`normalize` / `project`). |
 | `adcirc_current.py` | ENPAC15 (ADCIRC) | Extracts a site specific tidal current prediction from the ENPAC15 model (for sites with no nearby current station), then predicts slacks, peaks and diveable windows from that extract. |
-| `ncei_depth.py` | NCEI coastal DEM | Seabed depth at a coordinate, with conversion to depth below MLLW via NOAA VDatum. |
+| `ncei_depth.py` | NCEI coastal DEM | Seabed depth at a coordinate, with conversion to depth below MLLW via NOAA VDatum. US only. |
+| `emodnet_depth.py` | EMODnet Bathymetry + GEBCO | Seabed depth at a coordinate outside the US, from real survey soundings where EMODnet has coverage, falling back to the global GEBCO grid. |
 | `subsurface_log.py` | Subsurface logbook | Read-only access to a Subsurface dive log: list dives, show a dive's aggregates and notes, or pull its full depth/temperature/pressure profile. |
 | `pnwdiving_viz.py` | pnwdiving.com | Recent visibility reports by site, from the public summary table, cached locally. |
 | `open_meteo_wind.py` | Open-Meteo (ECMWF IFS + GFS) | Hourly wind speed, direction and gusts at any coordinate worldwide, for regions outside NWS coverage; ECMWF as the primary model, GFS as an independent cross-check. |

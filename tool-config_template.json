@@ -20,6 +20,8 @@
     "default_region": "<VDatum region for your coordinates, e.g. westcoast; see tools/ncei_depth.py --help>"
   },
 
+  "emodnet_depth": {},
+
   "pnwdiving_viz": {
     "cache_hours": 6,
     "default_tz": "America/Los_Angeles"
