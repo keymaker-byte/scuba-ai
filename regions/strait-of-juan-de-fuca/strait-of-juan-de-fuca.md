@@ -93,3 +93,9 @@ Tank fill spots for this folder's sites.
 - **Scuba Supplies Co.** 120 E Front St, Port Angeles, WA 98362. (360) 457-3190. Air and nitrox fills, run out of the back of a bike and kayak shop. Not confirmed still in business; call ahead before relying on it.
 - **Snow Creek Resort.** 691 WA-112, Neah Bay, WA 98357. (800) 883-1464. A campground and general store with an air compressor, about 2 miles east of Neah Bay, closer to Neah Bay and Cape Flattery than Curley's in Sekiu.
 
+## Emergency
+
+Local emergency number: 911. Call EMS first; call DAN once the diver is stabilized and transport is underway.
+
+- **Virginia Mason Franciscan Health, Center for Hyperbaric Medicine, Seattle.** 1100 9th Ave, Seattle, WA 98101. (206) 583-6543. The only multiplace recompression chamber in Western Washington and the referral chamber for this region too; no closer chamber operates anywhere on the strait. About 2 to 2.5 hours from Port Angeles via the Kingston-Edmonds ferry, and about 4.5 to 5 hours by road from Neah Bay, the region's most remote dive town. Weigh that distance into the go, no go call on any dive out toward the western reach, where the section above already flags the risk as genuinely higher.
+

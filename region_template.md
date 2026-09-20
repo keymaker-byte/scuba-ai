@@ -52,3 +52,9 @@ Ordered by what actually decides whether a dive goes well in this region, most i
 Optional until real shops are known. Tank fill spots for this folder's sites, grouped by area if the region is large enough to need it.
 
 - **Shop name, town.** Address. Phone. Website. What they fill (air, nitrox, trimix), and any caveat (limited hours, unconfirmed still open).
+
+## Emergency
+
+The local emergency number, then every operating hyperbaric recompression chamber that could plausibly serve this region, nearest first, so there is a real alternative on hand if one is unreachable, closed, or unstaffed when it matters. Call local EMS first, then DAN, once the diver is stabilized and transport is underway, not instead of it.
+
+- **Chamber name, location.** How it's reached (through a hospital's own emergency room, a direct line, or both), and its distance or driving time from the region's own sites, especially a remote reach of it, since evacuation time is the safety-relevant fact. Note if it's restricted (military or otherwise not publicly accessible) rather than omitting it outright.

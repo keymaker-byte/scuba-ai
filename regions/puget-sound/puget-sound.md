@@ -135,3 +135,9 @@ Tank fill spots near this folder's sites, by area.
 **Jefferson County**
 
 - **Octopus Gardens Diving, Port Townsend.** 2410 Washington St, Port Townsend, WA 98368. (360) 385-3483. octopusgardensdiving.com. Air and nitrox.
+
+## Emergency
+
+Local emergency number: 911. Call EMS first; call DAN once the diver is stabilized and transport is underway.
+
+- **Virginia Mason Franciscan Health, Center for Hyperbaric Medicine, Seattle.** 1100 9th Ave, Seattle, WA 98101. (206) 583-6543. The only multiplace recompression chamber in Western Washington, UHMS accredited with distinction, with board certified hyperbaric physicians on staff. The region's chamber; no other public-access facility is known to operate in the Puget Sound area.
