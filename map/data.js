@@ -28,7 +28,7 @@ window.MAP_DATA = {
   "sites": [
     {
       "slug": "16-1000-steps",
-      "name": "1000 Steps",
+      "name": "16. 1000 Steps",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/16-1000-steps.md",
@@ -43,7 +43,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "35-18th-palm",
-      "name": "18th Palm",
+      "name": "35. 18th Palm",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/35-18th-palm.md",
@@ -58,7 +58,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "45-alice-in-wonderland",
-      "name": "Alice in Wonderland",
+      "name": "45. Alice in Wonderland",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/45-alice-in-wonderland.md",
@@ -70,7 +70,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "23-andrea-i",
-      "name": "Andrea I",
+      "name": "23. Andrea I",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/23-andrea-i.md",
@@ -85,7 +85,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "22-andrea-ii",
-      "name": "Andrea II",
+      "name": "22. Andrea II",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/22-andrea-ii.md",
@@ -100,7 +100,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "44-angel-city",
-      "name": "Angel City",
+      "name": "44. Angel City",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/44-angel-city.md",
@@ -115,7 +115,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "46-aquarius",
-      "name": "Aquarius",
+      "name": "46. Aquarius",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/46-aquarius.md",
@@ -127,7 +127,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "57-atlantis",
-      "name": "Atlantis",
+      "name": "57. Atlantis",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/57-atlantis.md",
@@ -139,7 +139,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "38-bachelors-beach",
-      "name": "Bachelor's Beach",
+      "name": "38. Bachelor's Beach",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/38-bachelors-beach.md",
@@ -154,7 +154,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "30-baris-reef",
-      "name": "Bari's Reef",
+      "name": "30. Bari's Reef",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/30-baris-reef.md",
@@ -166,7 +166,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "21-barkadera",
-      "name": "Barkadera",
+      "name": "21. Barkadera",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/21-barkadera.md",
@@ -178,7 +178,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "04-bise-morto",
-      "name": "Bise Morto",
+      "name": "4. Bise Morto",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/04-bise-morto.md",
@@ -190,7 +190,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "12-bloodlet",
-      "name": "Bloodlet",
+      "name": "12. Bloodlet",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/12-bloodlet.md",
@@ -202,7 +202,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "01-boka-bartol",
-      "name": "Boka Bartol",
+      "name": "1. Boka Bartol",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/01-boka-bartol.md",
@@ -214,7 +214,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "06-boka-slagbaai-n",
-      "name": "Boka Slagbaai N",
+      "name": "6. Boka Slagbaai N",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/06-boka-slagbaai-n.md",
@@ -229,7 +229,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "06a-boka-slagbaai-s",
-      "name": "Boka Slagbaai S",
+      "name": "6a. Boka Slagbaai S",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/06a-boka-slagbaai-s.md",
@@ -244,7 +244,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "15-bon-bini-na-kas",
-      "name": "Bon Bini na Kas",
+      "name": "15. Bon Bini na Kas",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/15-bon-bini-na-kas.md",
@@ -256,7 +256,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "g-bonaventure",
-      "name": "Bonaventure",
+      "name": "G. Bonaventure",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/g-bonaventure.md",
@@ -268,7 +268,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "29-buddys-reef",
-      "name": "Buddy's Reef",
+      "name": "29. Buddy's Reef",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/29-buddys-reef.md",
@@ -283,7 +283,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "63-cai",
-      "name": "Cai",
+      "name": "63. Cai",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/63-cai.md",
@@ -298,7 +298,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "34-calabas-reef",
-      "name": "Calabas Reef",
+      "name": "34. Calabas Reef",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/34-calabas-reef.md",
@@ -310,7 +310,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "k-capt-dons-reef",
-      "name": "Capt. Don's Reef",
+      "name": "K. Capt. Don's Reef",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/k-capt-dons-reef.md",
@@ -322,7 +322,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "08-carels-vision",
-      "name": "Carel's Vision",
+      "name": "8. Carel's Vision",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/08-carels-vision.md",
@@ -334,7 +334,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "v-carls-hill",
-      "name": "Carl's Hill",
+      "name": "V. Carl's Hill",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/v-carls-hill.md",
@@ -346,7 +346,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "u-ch-annex",
-      "name": "C.H. Annex (Yellow M.)",
+      "name": "U. C.H. Annex (Yellow M.)",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/u-ch-annex.md",
@@ -358,7 +358,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "39-chez-hines",
-      "name": "Chez Hines",
+      "name": "39. Chez Hines",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/39-chez-hines.md",
@@ -370,7 +370,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "26-cliff",
-      "name": "Cliff",
+      "name": "26. Cliff",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/26-cliff.md",
@@ -385,7 +385,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "37-corporal-meiss",
-      "name": "Corporal Meiss",
+      "name": "37. Corporal Meiss",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/37-corporal-meiss.md",
@@ -397,7 +397,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "14-country-garden",
-      "name": "Country Garden",
+      "name": "14. Country Garden",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/14-country-garden.md",
@@ -409,7 +409,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "b-ebos-reef",
-      "name": "Ebo's Reef",
+      "name": "B. Ebo's Reef",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/b-ebos-reef.md",
@@ -421,7 +421,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "w-ebos-special",
-      "name": "Ebo's Special",
+      "name": "W. Ebo's Special",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/w-ebos-special.md",
@@ -433,7 +433,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "n-forest",
-      "name": "Forest",
+      "name": "N. Forest",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/n-forest.md",
@@ -445,7 +445,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "31-front-porch",
-      "name": "Front Porch",
+      "name": "31. Front Porch",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/31-front-porch.md",
@@ -460,7 +460,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "m-hands-off",
-      "name": "Hands Off",
+      "name": "M. Hands Off",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/m-hands-off.md",
@@ -472,7 +472,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "43-hilma-hooker",
-      "name": "Hilma Hooker",
+      "name": "43. Hilma Hooker",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/43-hilma-hooker.md",
@@ -484,7 +484,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "51-invisibles",
-      "name": "Invisibles",
+      "name": "51. Invisibles",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/51-invisibles.md",
@@ -496,7 +496,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "48-jeannies-glory",
-      "name": "Jeannie's Glory",
+      "name": "48. Jeannie's Glory",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/48-jeannies-glory.md",
@@ -511,7 +511,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "18-jeff-davis-memorial",
-      "name": "Jeff Davis Memorial",
+      "name": "18. Jeff Davis Memorial",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/18-jeff-davis-memorial.md",
@@ -523,7 +523,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "c-jerrys-reef",
-      "name": "Jerry's Reef",
+      "name": "C. Jerry's Reef",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/c-jerrys-reef.md",
@@ -535,7 +535,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "j-joannes-sunchi",
-      "name": "Joanne's Sunchi",
+      "name": "J. Joanne's Sunchi",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/j-joannes-sunchi.md",
@@ -547,7 +547,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "d-just-a-nice-dive",
-      "name": "Just a Nice Dive",
+      "name": "D. Just a Nice Dive",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/d-just-a-nice-dive.md",
@@ -559,7 +559,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "19-kallis-reef",
-      "name": "Kalli's Reef",
+      "name": "19. Kalli's Reef",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/19-kallis-reef.md",
@@ -571,7 +571,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "09-karpata",
-      "name": "Karpata",
+      "name": "9. Karpata",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/09-karpata.md",
@@ -586,7 +586,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "f-keepsake",
-      "name": "Keepsake",
+      "name": "F. Keepsake",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/f-keepsake.md",
@@ -598,7 +598,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "y-knife",
-      "name": "Knife",
+      "name": "Y. Knife",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/y-knife.md",
@@ -610,7 +610,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "10-la-danias-leap",
-      "name": "La Dania's Leap",
+      "name": "10. La Dania's Leap",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/10-la-danias-leap.md",
@@ -622,7 +622,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "27-la-machaca",
-      "name": "La Machaca",
+      "name": "27. La Machaca",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/27-la-machaca.md",
@@ -637,7 +637,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "47-larrys-lair",
-      "name": "Larry's Lair",
+      "name": "47. Larry's Lair",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/47-larrys-lair.md",
@@ -652,7 +652,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "x-leonoras-reef",
-      "name": "Leonora's Reef",
+      "name": "X. Leonora's Reef",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/x-leonoras-reef.md",
@@ -664,7 +664,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "40-lighthouse-point",
-      "name": "Lighthouse Point",
+      "name": "40. Lighthouse Point",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/40-lighthouse-point.md",
@@ -676,7 +676,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "55-margate-bay",
-      "name": "Margate Bay",
+      "name": "55. Margate Bay",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/55-margate-bay.md",
@@ -691,7 +691,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "t-mi-dushi",
-      "name": "Mi Dushi",
+      "name": "T. Mi Dushi",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/t-mi-dushi.md",
@@ -703,7 +703,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "h-montes-divi",
-      "name": "Monte's Divi",
+      "name": "H. Monte's Divi",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/h-montes-divi.md",
@@ -715,7 +715,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "p-munks-haven",
-      "name": "Munk's Haven",
+      "name": "P. Munk's Haven",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/p-munks-haven.md",
@@ -727,7 +727,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "e-nearest-point",
-      "name": "Nearest Point",
+      "name": "E. Nearest Point",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/e-nearest-point.md",
@@ -739,7 +739,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "a-no-name-beach",
-      "name": "No Name Beach",
+      "name": "A. No Name Beach",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/a-no-name-beach.md",
@@ -751,7 +751,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "07-nukove",
-      "name": "Nukove",
+      "name": "7. Nukove",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/07-nukove.md",
@@ -766,7 +766,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "20-oil-slick-leap",
-      "name": "Oil Slick Leap",
+      "name": "20. Oil Slick Leap",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/20-oil-slick-leap.md",
@@ -781,7 +781,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "24-petries-pillar",
-      "name": "Petries Pillar",
+      "name": "24. Petries Pillar",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/24-petries-pillar.md",
@@ -796,7 +796,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "53-pink-beach",
-      "name": "Pink Beach",
+      "name": "53. Pink Beach",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/53-pink-beach.md",
@@ -811,7 +811,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "02-playa-benge",
-      "name": "Playa Benge",
+      "name": "2. Playa Benge",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/02-playa-benge.md",
@@ -826,7 +826,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "03-playa-funchi",
-      "name": "Playa Funchi",
+      "name": "3. Playa Funchi",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/03-playa-funchi.md",
@@ -841,7 +841,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "41-punt-vierkant",
-      "name": "Punt Vierkant",
+      "name": "41. Punt Vierkant",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/41-punt-vierkant.md",
@@ -856,7 +856,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "11-rappel",
-      "name": "Rappel",
+      "name": "11. Rappel",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/11-rappel.md",
@@ -868,7 +868,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "56-red-beryl",
-      "name": "Red Beryl",
+      "name": "56. Red Beryl",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/56-red-beryl.md",
@@ -880,7 +880,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "60-red-slave",
-      "name": "Red Slave",
+      "name": "60. Red Slave",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/60-red-slave.md",
@@ -892,7 +892,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "28-reef-scientifico",
-      "name": "Reef Scientifico",
+      "name": "28. Reef Scientifico",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/28-reef-scientifico.md",
@@ -907,7 +907,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "i-rock-pile",
-      "name": "Rock Pile",
+      "name": "I. Rock Pile",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/i-rock-pile.md",
@@ -919,7 +919,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "50-salt-city",
-      "name": "Salt City",
+      "name": "50. Salt City",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/50-salt-city.md",
@@ -934,7 +934,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "49-salt-pier",
-      "name": "Salt Pier",
+      "name": "49. Salt Pier",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/49-salt-pier.md",
@@ -946,7 +946,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "z-sampler",
-      "name": "Sampler",
+      "name": "Z. Sampler",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/z-sampler.md",
@@ -958,7 +958,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "r-sharons-serenity",
-      "name": "Sharon's Serenity",
+      "name": "R. Sharon's Serenity",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/r-sharons-serenity.md",
@@ -970,7 +970,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "25-small-wall",
-      "name": "Small Wall",
+      "name": "25. Small Wall",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/25-small-wall.md",
@@ -982,7 +982,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "32-something-special",
-      "name": "Something Special",
+      "name": "32. Something Special",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/32-something-special.md",
@@ -994,7 +994,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "l-south-bay",
-      "name": "South Bay",
+      "name": "L. South Bay",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/l-south-bay.md",
@@ -1006,7 +1006,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "o-south-west-corner",
-      "name": "South West Corner",
+      "name": "O. South West Corner",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/o-south-west-corner.md",
@@ -1018,7 +1018,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "59-sweet-dreams",
-      "name": "Sweet Dreams",
+      "name": "59. Sweet Dreams",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/59-sweet-dreams.md",
@@ -1033,7 +1033,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "42-the-lake",
-      "name": "The Lake",
+      "name": "42. The Lake",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/42-the-lake.md",
@@ -1048,7 +1048,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "13-tolo",
-      "name": "Tolo (Ol' Blue)",
+      "name": "13. Tolo (Ol' Blue)",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/13-tolo.md",
@@ -1060,7 +1060,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "52-toris-reef",
-      "name": "Tori's Reef",
+      "name": "52. Tori's Reef",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/52-toris-reef.md",
@@ -1072,7 +1072,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "33-town-pier",
-      "name": "Town Pier",
+      "name": "33. Town Pier",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/33-town-pier.md",
@@ -1084,7 +1084,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "q-twixt",
-      "name": "Twixt",
+      "name": "Q. Twixt",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/q-twixt.md",
@@ -1096,7 +1096,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "s-valeries-hill",
-      "name": "Vallerie's Hill",
+      "name": "S. Vallerie's Hill",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/s-valeries-hill.md",
@@ -1108,7 +1108,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "58-vista-blue",
-      "name": "Vista Blue",
+      "name": "58. Vista Blue",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/58-vista-blue.md",
@@ -1120,7 +1120,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "05-wayaka",
-      "name": "Wayaka",
+      "name": "5. Wayaka",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/05-wayaka.md",
@@ -1132,7 +1132,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "17-webers-joy",
-      "name": "Weber's Joy (Witch's Hut)",
+      "name": "17. Weber's Joy (Witch's Hut)",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/17-webers-joy.md",
@@ -1147,7 +1147,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "62-white-hole",
-      "name": "White Hole",
+      "name": "62. White Hole",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/62-white-hole.md",
@@ -1159,7 +1159,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "54-white-slave",
-      "name": "White Slave",
+      "name": "54. White Slave",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/54-white-slave.md",
@@ -1174,7 +1174,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "61-willemstoren-lighthouse",
-      "name": "Willemstoren Lighthouse",
+      "name": "61. Willemstoren Lighthouse",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/61-willemstoren-lighthouse.md",
@@ -1189,7 +1189,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "36-windsock",
-      "name": "Windsock",
+      "name": "36. Windsock",
       "region": "bonaire",
       "type": "shore",
       "file": "regions/bonaire/sites/36-windsock.md",
