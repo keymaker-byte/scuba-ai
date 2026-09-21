@@ -5,7 +5,7 @@ A site in the heart of Kralendijk, on J.E. Irausquin Boulevard next to the Betwe
 | | |
 |---|---|
 | **Location** | Kralendijk, Bonaire, on J.E. Irausquin Boulevard by the marina entrance |
-| **Coordinates** | 12.161, -68.2865 (reef edge and the sandy bottom beyond) |
+| **Coordinates** | 12.160958, -68.284499 (reef edge and the sandy bottom beyond); entry at 12.161435, -68.283404 |
 | **Type** | Shore |
 | **Depth range** | 6 to 25 m |
 | **Skill level** | Beginner |

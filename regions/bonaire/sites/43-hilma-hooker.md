@@ -5,7 +5,7 @@ Bonaire's most famous wreck and one of the most iconic wreck dives in the Caribb
 | | |
 |---|---|
 | **Location** | West coast, Bonaire, near the start of the double reef system, next to Angel City |
-| **Coordinates** | 12.104117, -68.28965 (stern mooring, about 19 m) |
+| **Coordinates** | 12.104117, -68.28965 (stern mooring, about 19 m); entry at 12.104568, -68.288071 |
 | **Type** | Shore |
 | **Depth range** | 8 to 30 m; the top of the wreck at about 18 m, the mast at about 30 m |
 | **Skill level** | Advanced, given the depth and limited bottom time it leaves |

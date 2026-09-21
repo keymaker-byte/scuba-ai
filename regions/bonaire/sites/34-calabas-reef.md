@@ -5,7 +5,7 @@ Divi Flamingo Beach Resort's house reef, one of the better protected sites on Bo
 | | |
 |---|---|
 | **Location** | Kralendijk, Bonaire, at Divi Flamingo Beach Resort, Abraham Boulevard |
-| **Coordinates** | 12.14511, -68.276527 (about 3 m) |
+| **Coordinates** | 12.14511, -68.276527 (about 3 m); entry at 12.144905, -68.276419 |
 | **Type** | Shore |
 | **Depth range** | 6 to 30 m |
 

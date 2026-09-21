@@ -131,7 +131,7 @@ SCTLD precaution applies uniformly across the park rather than by site: disinfec
 | [61. Willemstoren Lighthouse](sites/61-willemstoren-lighthouse.md) | The island's southern tip, current-driven and advanced only. |
 | [62. White Hole](sites/62-white-hole.md) | A sand-filled reef crack off Lac Bay, boat access only. |
 | [63. Cai](sites/63-cai.md) | A guided, current-swept dive at the mouth of Lac Bay. |
-| [A. No Name Beach](sites/a-no-name-beach.md) | Klein Bonaire's only shore-accessible site, gentle and beginner-friendly. |
+| [A. No Name Beach](sites/a-no-name-beach.md) | Klein Bonaire's only walk-in beach entry, gentle and beginner-friendly. |
 | [B. Ebo's Reef](sites/b-ebos-reef.md) | Giant elephant ear sponges past a deep water mooring swim. |
 | [C. Jerry's Reef](sites/c-jerrys-reef.md) | A sponge garden near Ebo's Reef, reliable for eagle rays. |
 | [D. Just a Nice Dive](sites/d-just-a-nice-dive.md) | A relaxed macro and night dive on Klein's east side. |

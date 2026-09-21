@@ -5,7 +5,7 @@ An easy double reef dive on the south coast, about 1.7 km north of Salt Pier, wi
 | | |
 |---|---|
 | **Location** | South coast, Bonaire, about 1.7 km north of Salt Pier |
-| **Coordinates** | 12.094233, -68.284988 (about 5 m) |
+| **Coordinates** | 12.098195, -68.285925 (about 5 m); entry at 12.098410, -68.284777 |
 | **Type** | Shore |
 | **Depth range** | 6 to 30 m on the recreational profile; the second reef's outer edge runs well beyond |
 | **Skill level** | Beginner on the shallow reef and sand |

@@ -30,6 +30,11 @@
     border: 1px solid #ccc; border-radius: 4px; font-size: 12px; background: #f3f4f6; cursor: pointer;
   }
   #coord-copy:hover { background: #e5e7eb; }
+  #data-refresh {
+    width: 100%; box-sizing: border-box; padding: 5px 6px;
+    border: 1px solid #ccc; border-radius: 4px; font-size: 12px; background: #f3f4f6; cursor: pointer;
+  }
+  #data-refresh:hover { background: #e5e7eb; }
   #count { color: #555; font-size: 12px; margin-top: 6px; }
 
   #error-banner {
@@ -81,6 +86,10 @@
     <button type="button" id="coord-copy">Copy</button>
   </div>
 
+  <div class="section">
+    <button type="button" id="data-refresh">Refresh site data</button>
+  </div>
+
   <div id="count"></div>
 </div>
 
@@ -97,6 +106,23 @@ const COLORS = {
 
 const map = L.map('map', { worldCopyJump: true, zoomControl: false }).setView([20, -60], 3);
 L.control.zoom({ position: 'topright' }).addTo(map);
+
+const VIEW_STORAGE_KEY = 'diveMapView';
+let restoredView = false;
+try {
+  const saved = JSON.parse(localStorage.getItem(VIEW_STORAGE_KEY) || 'null');
+  if (saved && Number.isFinite(saved.lat) && Number.isFinite(saved.lng) && Number.isFinite(saved.zoom)) {
+    map.setView([saved.lat, saved.lng], saved.zoom);
+    restoredView = true;
+  }
+} catch (err) { /* localStorage unavailable, fall through to fitBounds */ }
+
+map.on('moveend', () => {
+  try {
+    const c = map.getCenter();
+    localStorage.setItem(VIEW_STORAGE_KEY, JSON.stringify({ lat: c.lat, lng: c.lng, zoom: map.getZoom() }));
+  } catch (err) { /* ignore */ }
+});
 
 const defaultLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -251,6 +277,53 @@ function rebuild() {
 [searchInput].forEach(el => el.addEventListener('input', rebuild));
 [regionSelect, toggleShore, toggleBoat, toggleEntry].forEach(el => el.addEventListener('change', rebuild));
 
+function refreshRegionOptions() {
+  const previous = regionSelect.value;
+  while (regionSelect.options.length > 1) regionSelect.remove(1);
+  const regionSlugs = [...new Set(allSites.map(s => s.region))]
+    .sort((a, b) => regionInfo(a).name.localeCompare(regionInfo(b).name));
+  for (const slug of regionSlugs) {
+    const opt = document.createElement('option');
+    opt.value = slug;
+    opt.textContent = regionInfo(slug).name;
+    regionSelect.appendChild(opt);
+  }
+  if (regionSlugs.includes(previous)) regionSelect.value = previous;
+}
+
+const dataRefreshBtn = document.getElementById('data-refresh');
+dataRefreshBtn.addEventListener('click', () => {
+  dataRefreshBtn.textContent = 'Refreshing...';
+  dataRefreshBtn.disabled = true;
+
+  const old = document.getElementById('data-reload-script');
+  if (old) old.remove();
+
+  const s = document.createElement('script');
+  s.id = 'data-reload-script';
+  s.src = 'map/data.js?_=' + Date.now();
+  s.onload = () => {
+    try {
+      if (!window.MAP_DATA) throw new Error('window.MAP_DATA is not defined');
+      allSites = window.MAP_DATA.sites || [];
+      refreshRegionOptions();
+      rebuild();
+      dataRefreshBtn.textContent = 'Refreshed';
+    } catch (err) {
+      showError(`<strong>Could not reload map/data.js</strong> (${escapeHtml(err.message)}).`);
+      dataRefreshBtn.textContent = 'Refresh site data';
+    }
+    dataRefreshBtn.disabled = false;
+    setTimeout(() => { dataRefreshBtn.textContent = 'Refresh site data'; }, 1500);
+  };
+  s.onerror = () => {
+    showError('<strong>Could not reload map/data.js</strong> (script failed to load).');
+    dataRefreshBtn.textContent = 'Refresh site data';
+    dataRefreshBtn.disabled = false;
+  };
+  document.body.appendChild(s);
+});
+
 try {
   if (!window.MAP_DATA) throw new Error('window.MAP_DATA is not defined');
   allSites = window.MAP_DATA.sites || [];
@@ -266,13 +339,15 @@ try {
 
   rebuild();
 
-  const allLatLngs = [];
-  for (const s of allSites) {
-    allLatLngs.push([s.site.lat, s.site.lon]);
-    if (s.entry) allLatLngs.push([s.entry.lat, s.entry.lon]);
-  }
-  if (allLatLngs.length) {
-    map.fitBounds(L.latLngBounds(allLatLngs), { padding: [30, 30] });
+  if (!restoredView) {
+    const allLatLngs = [];
+    for (const s of allSites) {
+      allLatLngs.push([s.site.lat, s.site.lon]);
+      if (s.entry) allLatLngs.push([s.entry.lat, s.entry.lon]);
+    }
+    if (allLatLngs.length) {
+      map.fitBounds(L.latLngBounds(allLatLngs), { padding: [30, 30] });
+    }
   }
 } catch (err) {
   showError(

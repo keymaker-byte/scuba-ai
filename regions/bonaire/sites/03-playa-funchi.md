@@ -5,7 +5,7 @@ A protected cove in Washington Slagbaai National Park, popular for both diving a
 | | |
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire |
-| **Coordinates** | 12.282367, -68.4146 (dive area, reef edge, about 6 m, dropping past 100 m within the same grid cell); entry at 12.28223, -68.41408, the cove beach |
+| **Coordinates** | 12.282367, -68.4146 (dive area, reef edge, about 6 m, dropping past 100 m within the same grid cell); entry at 12.282340, -68.413770, the cove beach |
 | **Type** | Shore |
 
 ## Getting there

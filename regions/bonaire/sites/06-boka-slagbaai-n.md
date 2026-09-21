@@ -5,7 +5,7 @@ The northern of two routes at Boka Slagbaai, a sheltered bay in Washington Slagb
 | | |
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire |
-| **Coordinates** | 12.265367, -68.41435 (dive area, reef terrace, about 5 m); entry at 12.26433, -68.41378, the sandy beach by the historic yellow building |
+| **Coordinates** | 12.265367, -68.41435 (dive area, reef terrace, about 5 m); entry at 12.264696, -68.413442, the sandy beach by the historic yellow building |
 | **Type** | Shore |
 | **Depth range** | 6 to 24 m |
 | **Skill level** | Advanced |

@@ -5,7 +5,7 @@ A shore dive fronting a protected beach with no car access, since sea turtles co
 | | |
 |---|---|
 | **Location** | South coast, Bonaire |
-| **Coordinates** | 12.030733, -68.2578 (dive area, about 10 m); entry at 12.03152, -68.25857, the protected nesting beach |
+| **Coordinates** | 12.033425, -68.262645 (dive area, about 12 m); entry at 12.034480, -68.261372, the protected nesting beach |
 | **Type** | Shore |
 | **Depth range** | 9 to 30 m |
 | **Skill level** | Advanced |

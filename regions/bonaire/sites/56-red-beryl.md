@@ -5,7 +5,7 @@ A versatile shore dive about 3 km south of Kralendijk, marked by a row of yellow
 | | |
 |---|---|
 | **Location** | South coast, Bonaire, about 3 km south of Kralendijk, beside Atlantis Beach |
-| **Coordinates** | 12.038456, -68.265213 (about 4 m) |
+| **Coordinates** | 12.046550, -68.268957 (about 10 m); entry at 12.047054, -68.268083 |
 | **Type** | Shore |
 | **Depth range** | 3 to 30 m, the wall continuing well beyond |
 | **Skill level** | Advanced |

@@ -5,7 +5,7 @@ A popular shore dive at the end of the one-way section of the north coast road, 
 | | |
 |---|---|
 | **Location** | Northwest coast, Bonaire, at the end of the one-way section of the coastal road, just south of the closed Washington Slagbaai stretch |
-| **Coordinates** | 12.218936, -68.3545 (dive area, reef ledge, about 3 m, dropping beyond to deep water); entry at 12.2195, -68.3520, the concrete platform at the end of the coastal road |
+| **Coordinates** | 12.218936, -68.3545 (dive area, reef ledge, about 3 m, dropping beyond to deep water); entry at 12.219548, -68.351902, the concrete platform at the end of the coastal road |
 | **Type** | Shore |
 | **Depth range** | 3 to 30 m |
 
