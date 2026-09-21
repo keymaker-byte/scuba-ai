@@ -5,7 +5,7 @@ A small sandy cove reached by turning off just before the Bonaire Petroleum Corp
 | | |
 |---|---|
 | **Location** | Northwest coast, Bonaire, just north of the BOPEC oil terminal |
-| **Coordinates** | 12.240933, -68.413333 (dive area, about 4 m); entry at 12.2409, -68.41243, the sandy cove beach |
+| **Coordinates** | 12.240933, -68.413333 (dive area, about 4 m); entry at 12.240728, -68.412150, the sandy cove beach |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
 | **Skill level** | Advanced |

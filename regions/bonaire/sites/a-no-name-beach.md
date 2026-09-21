@@ -1,19 +1,19 @@
 # A. No Name Beach
 
-The only dive site on Klein Bonaire reachable from shore, directly in front of the islet's wide white sand beach and one of the most popular sites on Klein. Every other Klein Bonaire site is boat access only; this one can be reached by the public water taxi from Kralendijk as well as by a dive operator's boat. Coral heads are sparse in the shallow sandy shore area, but the sand itself is alive with yellow headed jawfish poking out of holes in the rubble and blackish sailfin blennies.
+Klein Bonaire has no roads or vehicle access, so every dive site on the islet is reached by boat, either a dive operator's boat or the public water taxi from Kralendijk. This site is distinguished from the rest by what happens after that boat ride: rather than rolling straight off the boat at a mooring, divers land on the islet's wide white sand beach and walk in from shore, the gentlest entry on Klein Bonaire and one of the most popular sites on Klein. Coral heads are sparse in the shallow sandy shore area, but the sand itself is alive with yellow headed jawfish poking out of holes in the rubble and blackish sailfin blennies.
 
 | | |
 |---|---|
 | **Location** | Klein Bonaire, west side, facing Bonaire |
 | **Coordinates** | 12.168717, -68.30515 (beach entry) |
-| **Type** | Shore |
+| **Type** | Boat |
 | **Depth range** | 9 to 30 m |
 | **Skill level** | Beginner, minimal current |
 
 ## Getting there
 
-* **Entry.** A straightforward walk-in from the beach, the gentlest entry on Klein Bonaire.
-* **Parking.** Not applicable; reached by water taxi (about $25 per person round trip from Kralendijk, roughly a 10 minute crossing) or by a dive operator's boat.
+* **Entry.** A straightforward walk-in from the beach after landing, the gentlest entry on Klein Bonaire.
+* **Parking.** Not applicable; Klein Bonaire has no vehicle access. Reached by water taxi (about $25 per person round trip from Kralendijk, roughly a 10 minute crossing) or by a dive operator's boat.
 * **Access.** Open. Klein Bonaire has no facilities beyond an open shelter on this beach, an information board and the ruins of 19th century slave huts; bring your own food, water and reef-safe sunscreen.
 * **Facilities.** An open beach shelter; no toilets, food or drinking water anywhere on the island.
 

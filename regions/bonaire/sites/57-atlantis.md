@@ -5,7 +5,7 @@ Bonaire's official kitesurfing site, also called Kite Beach, best dived on a win
 | | |
 |---|---|
 | **Location** | Southwest coast, Bonaire, at Kite Beach |
-| **Coordinates** | 12.0345, -68.2635 (reef edge, about 1 m) |
+| **Coordinates** | 12.043843, -68.267795 (reef edge, about 10 m); entry at 12.044341, -68.266361 |
 | **Type** | Shore |
 | **Depth range** | 9 to 30 m, advanced divers reaching 40 m on the slope |
 | **Skill level** | Advanced |

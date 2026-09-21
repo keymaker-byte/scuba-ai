@@ -5,7 +5,7 @@ The Sand Dollar Resort's house reef and, by REEF survey count, the single best s
 | | |
 |---|---|
 | **Location** | West coast, Bonaire, at Sand Dollar Resort |
-| **Coordinates** | 12.169206, -68.287819 (about 4 m) |
+| **Coordinates** | 12.167345, -68.287797 (about 8 m); entry at 12.167355, -68.286815 |
 | **Type** | Shore |
 | **Depth range** | 9 to 30 m |
 

@@ -5,7 +5,7 @@ One of Bonaire's better wall dives, in front of the Hamlet Oasis Villas just nor
 | | |
 |---|---|
 | **Location** | West coast, Bonaire, about 2.5 km north of Kralendijk, in front of the Hamlet Oasis Villas |
-| **Coordinates** | 12.1734, -68.28995 (dive area, about 2 m); entry at 12.17327, -68.28958, the sandy beach in front of the Hamlet Oasis Villas |
+| **Coordinates** | 12.1734, -68.28995 (dive area, about 2 m); entry at 12.174476, -68.289900, the sandy beach in front of the Hamlet Oasis Villas |
 | **Type** | Shore |
 | **Depth range** | 6 to 23 m |
 | **Skill level** | Experienced diver, given the current and depth on the wall |

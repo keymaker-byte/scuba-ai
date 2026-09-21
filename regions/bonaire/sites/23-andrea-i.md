@@ -5,7 +5,7 @@ The twin of Andrea II, about half a mile north of the desalination plant and jus
 | | |
 |---|---|
 | **Location** | West coast, Bonaire, about 0.8 km north of the desalination plant, adjacent to Andrea II |
-| **Coordinates** | 12.189217, -68.297483 (dive area, about 6 m); entry at 12.18823, -68.29698, the roadside beach |
+| **Coordinates** | 12.189217, -68.297483 (dive area, about 6 m); entry at 12.188068, -68.296546, the roadside beach |
 | **Type** | Shore |
 | **Depth range** | 6 to 30 m |
 | **Skill level** | Beginner |

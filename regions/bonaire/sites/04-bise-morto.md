@@ -5,7 +5,7 @@ A remote site in Washington Slagbaai National Park whose name means dead calf, a
 | | |
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire |
-| **Coordinates** | 12.2825, -68.4145 (reef edge, about 6 m, dropping past 100 m within the same grid cell) |
+| **Coordinates** | 12.279766, -68.414758 (reef edge, about 6 m, dropping past 100 m within the same grid cell); entry at 12.279677, -68.414000 |
 | **Type** | Shore |
 | **Depth range** | 6 to 30 m |
 
