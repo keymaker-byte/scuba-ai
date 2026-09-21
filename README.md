@@ -15,7 +15,7 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 
 - `CLAUDE.md` — the steering file tying it all together: units, conventions (local time, depth datum), and workspace-wide rules.
 - `regions/` — one steering file plus a `sites/` folder per diving region; each site is a guidebook style description paired with a machine read current extract.
-- `tools/` — one self-contained markdown doc per source or tool (what it's for, its caveats, its CLI if it has one), each paired with a `.py` script where the source has one.
+- `tools/` — one self-contained markdown doc per source or tool (what it's for, its caveats, its CLI if it has one), paired with a `.py` script for the sources that have one.
 - `site_template.md` — the canonical structure every dive site file follows.
 - `region_template.md` — the canonical structure every region steering file follows.
 - `map.html` (with `map/`) — a local map of every dive site, colored by shore or boat access, with entry point pins for shore dives. Reads from `map/data.js`, which every site file has an entry in.
@@ -27,26 +27,30 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 
 | Region | Description |
 |---|---|
+| [Bonaire](regions/bonaire/bonaire.md) | A Caribbean island in the Netherlands' ABC islands, ringed by a near-continuous fringing reef dived almost entirely from shore at marked yellow rocks, with wind driven rather than tidal current. |
 | [Puget Sound](regions/puget-sound/puget-sound.md) | An estuary in western Washington, reaching the Pacific through the Strait of Juan de Fuca. Made up of four basins, the Main Basin, Whidbey Basin, Hood Canal and South Sound, separated by submarine sills. |
 | [Strait of Juan de Fuca](regions/strait-of-juan-de-fuca/strait-of-juan-de-fuca.md) | The strait running between Vancouver Island, British Columbia, and the Olympic Peninsula, Washington, connecting the inland Salish Sea to the open Pacific. |
 | [Washington State Lakes](regions/washington-state-lakes/washington-state-lakes.md) | Freshwater lakes scattered across Washington State, from glacial lakes in the Olympics and Cascades to lowland lakes near Puget Sound. |
-| [Bonaire](regions/bonaire/bonaire.md) | A Caribbean island in the Netherlands' ABC islands, ringed by a near-continuous fringing reef dived almost entirely from shore at marked yellow rocks, with wind driven rather than tidal current. |
 
-## Python Tools
+## Tools
 
-| Script | Source | Does |
-|---|---|---|
-| `noaa_current.py` | NOAA CO-OPS | Current predictions at a NOAA current station: slack, max flood/ebb, and diveable windows under a speed threshold, at a chosen depth bin. |
-| `noaa_tide.py` | NOAA CO-OPS | Tide height predictions at a NOAA tide station; converts an observed depth to depth below MLLW datum and back (`normalize` / `project`). |
-| `adcirc_current.py` | ENPAC15 (ADCIRC) | Extracts a site specific tidal current prediction from the ENPAC15 model (for sites with no nearby current station), then predicts slacks, peaks and diveable windows from that extract. |
-| `ncei_depth.py` | NCEI coastal DEM | Seabed depth at a coordinate, with conversion to depth below MLLW via NOAA VDatum. US only. |
-| `emodnet_depth.py` | EMODnet Bathymetry + GEBCO | Seabed depth at a coordinate outside the US, from real survey soundings where EMODnet has coverage, falling back to the global GEBCO grid. |
-| `subsurface_log.py` | Subsurface logbook | Read-only access to a Subsurface dive log: list dives, show a dive's aggregates and notes, or pull its full depth/temperature/pressure profile. |
-| `pnwdiving_viz.py` | pnwdiving.com | Recent visibility reports by site, from the public summary table, cached locally. |
-| `open_meteo_wind.py` | Open-Meteo (ECMWF IFS + GFS) | Hourly wind speed, direction and gusts at any coordinate worldwide, for regions outside NWS coverage; ECMWF as the primary model, GFS as an independent cross-check. |
-| `scubaboard.py` | ScubaBoard | Recent threads by region or by topic, via each forum's own RSS feed. |
+| Tool | Source | Does | Script |
+|---|---|---|---|
+| [NOAA CO-OPS currents](tools/noaa_current.md) | NOAA CO-OPS | Current predictions at a NOAA current station: slack, max flood/ebb, and diveable windows under a speed threshold, at a chosen depth bin. | `noaa_current.py` |
+| [NOAA CO-OPS water levels](tools/noaa_tide.md) | NOAA CO-OPS | Tide height predictions at a NOAA tide station; converts an observed depth to depth below MLLW datum and back (`normalize` / `project`). | `noaa_tide.py` |
+| [ENPAC15 (ADCIRC spatial tidal currents)](tools/adcirc_current.md) | ADCIRC / ENPAC15 | Extracts a site specific tidal current prediction from the ENPAC15 model (for sites with no nearby current station), then predicts slacks, peaks and diveable windows from that extract. | `adcirc_current.py` |
+| [NCEI coastal DEM](tools/ncei_depth.md) | NOAA NCEI | Seabed depth at a coordinate, with conversion to depth below MLLW via NOAA VDatum. US only. | `ncei_depth.py` |
+| [EMODnet Bathymetry](tools/emodnet_depth.md) | EMODnet + GEBCO | Seabed depth at a coordinate outside the US, from real survey soundings where EMODnet has coverage, falling back to the global GEBCO grid. | `emodnet_depth.py` |
+| [NWS point forecast](tools/nws_forecast.md) | National Weather Service | Hourly wind speed and direction, sea state, air temperature and rain at a US coordinate, via a documented curl fetch of the point forecast. | none, documented curl fetch |
+| [Open-Meteo wind](tools/open_meteo_wind.md) | Open-Meteo (ECMWF IFS + GFS) | Hourly wind speed, direction and gusts at any coordinate worldwide, for regions outside NWS coverage; ECMWF as the primary model, GFS as an independent cross-check. | `open_meteo_wind.py` |
+| [PNW Diving](tools/pnwdiving_viz.md) | pnwdiving.com | Recent visibility reports by site, from the public summary table, cached locally. | `pnwdiving_viz.py` |
+| [Subsurface dive log](tools/subsurface_log.md) | Subsurface logbook | Read-only access to a Subsurface dive log: list dives, show a dive's aggregates and notes, or pull its full depth/temperature/pressure profile. | `subsurface_log.py` |
+| [DAN](tools/dan.md) | Divers Alert Network | Dive medicine, accident data and case narratives, incident summaries, and DAN's emergency and non-emergency contact numbers. | none, reference site |
+| [ScubaBoard forum feeds](tools/scubaboard.md) | ScubaBoard | Recent threads by region or by topic, via each forum's own RSS feed. | `scubaboard.py` |
+| [NW Dive Club](tools/nwdiveclub.md) | nwdiveclub.com | Community site write-ups (entry, what's worth seeing, hazards) and site recommendations, read via the Wayback Machine since the live site blocks direct fetches. | none, read via Wayback Machine |
+| [The Perfect Dive](tools/theperfectdive.md) | theperfectdive.com (archived) | A defunct structured PNW dive site catalog (type, difficulty, entry, attractions) plus marine-life galleries, read from its 2022 Wayback snapshot. | none, read via Wayback Machine |
 
-NWS wind forecasts are fetched directly (no wrapper script) for US regions. All tools read parameters from `tool-config.json` and print metric units in local time.
+Tools with a script read parameters from their own subsection of `tool-config.json` (a missing key falls back to a built-in default) and print metric units in local time. NWS also reads a subsection of `tool-config.json` (the contact email for its required User-Agent) despite having no script. DAN, NW Dive Club and The Perfect Dive have no script or config section; they're read directly by page or feed.
 
 ## Platform
 
