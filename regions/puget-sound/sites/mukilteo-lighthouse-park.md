@@ -5,7 +5,7 @@ Shore dive on the Mukilteo waterfront, on the shoreline south of Elliott Point i
 | | |
 |---|---|
 | **Location** | Mukilteo, WA. South of Elliott Point, Possession Sound, Mukilteo Lighthouse Park (formerly Mukilteo State Park) |
-| **Coordinates** | Dive site 47.9466, -122.3093 (seabed about 21 m below MLLW); entry off the beach near the restrooms and the traffic circle at the park's south end |
+| **Coordinates** | Dive site 47.9466, -122.3093 (seabed about 21 m below MLLW), about 113 m from the entry on a bearing of 278°; entry at 47.946462, -122.307792, off the beach near the restrooms and the traffic circle at the park's south end |
 | **Type** | Shore |
 | **Depth range** | Roughly 2 to 23 m below MLLW on the dived slope, deeper beyond it |
 | **Skill level** | Intermediate; current sensitive |

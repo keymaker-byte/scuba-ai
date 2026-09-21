@@ -5,7 +5,7 @@ A shore dive at the Port Townsend Marine Science Center pier, inside Fort Worden
 | | |
 |---|---|
 | **Location** | Port Townsend, WA. Fort Worden State Park, on Admiralty Inlet at the entrance to Port Townsend Bay |
-| **Coordinates** | Dive area 48.1356, -122.7590 (seabed about 10.7 m below MLLW), the outer sand beyond the reef. The pier and the tire reef it sits over are about 150 m west, off the beach by the Marine Science Center (seabed 6 to 7 m below MLLW at the pier's end) |
+| **Coordinates** | Dive area 48.1356, -122.7590 (seabed about 10.7 m below MLLW), the outer sand beyond the reef, about 234 m from the entry on a bearing of 107°. Entry at 48.136197, -122.762019, off the beach by the Marine Science Center, near the pier and the tire reef it sits over (seabed 6 to 7 m below MLLW at the pier's end) |
 | **Type** | Shore |
 | **Depth range** | 0 m at the beach to about 13 m below MLLW at the outer edge of the underwater park; the pilings, hallways under the pier deck and tire reef sit around 6 to 7 m |
 | **Skill level** | All divers and snorkelers; current sensitive on a large exchange |
