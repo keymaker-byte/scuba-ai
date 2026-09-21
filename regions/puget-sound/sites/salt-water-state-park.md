@@ -5,7 +5,7 @@ Shore dive at Saltwater State Park in Des Moines, on the mainland shore of East 
 | | |
 |---|---|
 | **Location** | Des Moines, WA. Saltwater State Park, East Passage, Puget Sound |
-| **Coordinates** | Dive site 47.370328, -122.328359 (seabed about 12.9 m below MLLW, on the middle of the reef fingers), about 360 m from the entry on a bearing of 231°; entry at 47.372339, -122.324648, the beach below the concrete stairs at the north end of the park beach, near where McSorley Creek drains into the Sound |
+| **Coordinates** | Dive site 47.372870, -122.328268 (seabed about 12.4 m below MLLW, on the middle of the reef fingers), about 311 m from the entry on a bearing of 278°; entry at 47.372478, -122.324175, the beach below the concrete stairs at the north end of the park beach, near where McSorley Creek drains into the Sound |
 | **Type** | Shore |
 | **Depth range** | Reef fingers roughly 7 to 24 m below MLLW; beyond them the bottom falls away sharply into much deeper water |
 | **Skill level** | Intermediate to advanced. The reef itself suits a confident diver, but the long surface swim, the depth at the reef's outer end and the steep drop past it call for fitness and good buoyancy control |
@@ -52,7 +52,7 @@ East Passage swings up to about 5 m between high and low water here, and combine
 | Feature | Below MLLW | At a -1.0 m low | At a +3.5 m high |
 |---|---|---|---|
 | Reef fingers begin | 7.6 m | 6.6 m | 11.1 m |
-| Mid reef, buoy line | 12.9 m | 11.9 m | 16.4 m |
+| Mid reef, buoy line | 12.4 m | 11.4 m | 15.9 m |
 | Base of reef, edge of drop off | 20.4 m | 19.4 m | 23.9 m |
 
 ## Hazards

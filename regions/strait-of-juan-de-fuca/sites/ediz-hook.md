@@ -5,7 +5,7 @@ Ediz Hook is the long sand spit that curls out from the base of Port Angeles and
 | | |
 |---|---|
 | **Location** | Port Angeles, WA. Inner harbor shore of Ediz Hook, the sand spit enclosing Port Angeles Harbor, on the Strait of Juan de Fuca |
-| **Coordinates** | Dive site 48.140383, -123.430747 (seabed about 18.5 m below MLLW), the reef edge where the shallow shelf drops away into the open log slope; entry at 48.141314, -123.428924, a gravel pull-off on Ediz Hook Road, about 210 m away |
+| **Coordinates** | Dive site 48.140383, -123.430747 (seabed about 18.5 m below MLLW), the reef edge where the shallow shelf drops away into the open log slope; entry at 48.141603, -123.429036, a gravel pull-off on Ediz Hook Road, about 186 m away |
 | **Type** | Shore |
 | **Depth range** | 0 to well beyond 40 m below MLLW. The colorful, life covered shelf stays inside about 18 m; beyond the reef edge the bottom keeps dropping over log debris with no defined limit |
 | **Skill level** | All divers on the shelf, inside the reef edge; the open slope beyond it needs real depth discipline, given the lack of any natural stopping point |

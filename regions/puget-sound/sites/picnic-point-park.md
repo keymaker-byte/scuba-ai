@@ -5,7 +5,7 @@ Picnic Point is a shore dive on the east shore of Possession Sound, on the mainl
 | | |
 |---|---|
 | **Location** | Edmonds, WA. East shore of Possession Sound, between Mukilteo and Edmonds |
-| **Coordinates** | Dive site 47.88024, -122.33748 (seabed about 17.7 m below MLLW); entry at the base of the footbridge, on the cobble beach |
+| **Coordinates** | Dive site 47.88024, -122.33748 (seabed about 17.7 m below MLLW), about 302 m from the entry on a bearing of 265°; entry at 47.880474, -122.333451, the base of the footbridge, on the cobble beach |
 | **Type** | Shore |
 | **Depth range** | Roughly 2 to 21 m below MLLW on the gentle slope; beyond about 21 m the bottom drops away quickly into deeper water |
 | **Skill level** | All divers |

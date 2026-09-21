@@ -5,7 +5,7 @@ Natural rock reef shore dive on the southeast shore of Bainbridge Island, at the
 | | |
 |---|---|
 | **Location** | Bainbridge Island, WA. Southeast shore, at the mouth of Blakely Harbor, Puget Sound main basin |
-| **Coordinates** | Dive site 47.59920, -122.49606 (seabed about 17.5 m below MLLW); entry at 47.599238, -122.498315, about 170 m west of the dive site, the stairway at the north end of Rockaway Beach Park |
+| **Coordinates** | Dive site 47.59920, -122.49606 (seabed about 17.5 m below MLLW); entry at 47.599177, -122.498621, about 192 m west of the dive site, the stairway at the north end of Rockaway Beach Park |
 | **Type** | Shore |
 | **Depth range** | Reef roughly 8 to 18 m below MLLW; the rock rib continues to about 26 m at its outer, southern edge |
 | **Skill level** | Intermediate to advanced; workable for less experienced divers with a guide |
