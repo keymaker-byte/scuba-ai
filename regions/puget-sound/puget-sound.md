@@ -62,11 +62,13 @@ depth below MLLW datum  =  observed depth (computer)  -  tide height at that mom
 depth below surface     =  datum depth                +  predicted tide height
 ```
 
+Get a site's median daily tidal range, its largest daily range, and its high/low span across the year by running `noaa_tide.py range STATION --year Y`, which pulls every high and low for the year in one call and reports exactly those three figures.
+
 ## How planning works here
 
 Ordered by what actually kills a dive plan in the Sound:
 
-1. **Current** (primary). Nearly everything is a slack-tide dive; the window, not the site, is the plan. Get the slack from a NOAA current station, not a tide station (outside Hood Canal, high or low water is not slack), then apply the site's known offset and correction to that station. Always cross-check that station prediction's slack time and set direction against the site's own ENPAC15 extract (`tools/adcirc_current.py predict` / `window`) before calling a window, even where the station is a well proven one, and reconcile the two rather than trusting the station alone: the Sound is four basins separated by sills that locally accelerate and redirect the flow, so a station some distance away does not always represent the site's own water.
+1. **Current** (primary). Nearly everything is a slack-tide dive; the window, not the site, is the plan. Get the slack from a NOAA current station, not a tide station (outside Hood Canal, high or low water is not slack), then apply the site's known offset and correction to that station. Always cross-check that station prediction's slack time and set direction against the site's own ENPAC15 extract (`tools/adcirc_current.py predict` / `window`) before calling a window, even where the station is a well proven one, and reconcile the two rather than trusting the station alone: the Sound is four basins separated by sills that locally accelerate and redirect the flow, so a station some distance away does not always represent the site's own water. When the two disagree on axis rather than just timing, a site file's Current table still carries the governing station's own axis, since that is what the station publishes; the site's real local behavior, from the ADCIRC extract or a shore-parallel set the station's open-water position wouldn't show, goes in the prose underneath, not the table.
 2. **Wind** (secondary). Wind decides whether the entry is diveable at all: chop on the entry, surf on the beach, a surface swim into a fetch. Wind against current is worse than either alone. Get the forecast for the beach, not the region.
 3. **Viz** (informational). Won't stop the dive, but sets expectations and gear (torch, reel).
 

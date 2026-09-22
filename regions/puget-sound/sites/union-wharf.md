@@ -41,18 +41,18 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 
 ## Depth and tide
 
-The tide swings the site's depth by a bit over 3 m on a big exchange. The deep end, off the pylons, runs from about 11 m at low water to about 14 m at high; the water off the current wharf runs 5 to 8 m across the same swing.
+The tide swings the site's depth by up to about 4 m on the year's biggest exchange. The deep end, off the pylons, runs from about 10 m at low water to about 15 m at high; the water off the current wharf runs about 5 to 9 m across the same swing.
 
 | | |
 |---|---|
 | **Tide station** | Port Townsend (9444900), 0.4 km from the site |
 | **Series** | High and low water only |
-| **Typical range** | Median around 2.5 m, up to about 3.3 m on a large exchange |
+| **Typical range** | Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m |
 
-| Feature | Low water | High water |
-|---|---|---|
-| Off the current Union Wharf | 5.1 m | 8.5 m |
-| Off the ferry pier pylons | 10.9 m | 14.3 m |
+| Feature | Below MLLW | At a -1.22 m low | At a +3.04 m high |
+|---|---|---|---|
+| Off the current Union Wharf | 5.8 m | 4.6 m | 8.8 m |
+| Off the ferry pier pylons | 11.6 m | 10.4 m | 14.6 m |
 
 ## Hazards
 

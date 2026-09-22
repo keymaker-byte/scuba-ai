@@ -47,12 +47,12 @@ The strait's tide swings up to about 3 m here, so depths are given below the MLL
 |---|---|
 | **Tide station** | NOAA Crescent Bay tide station (9443826), about 1.7 km west |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 2.2 m, up to about 3.2 m; 2026 span about -1.0 m to +2.4 m |
+| **Typical range** | Median daily 2.10 m, up to 3.25 m on the year's biggest exchange; 2026 span -0.98 m to +2.44 m |
 
-| Feature | Below MLLW | At a -0.9 m low | At a +2.4 m high |
+| Feature | Below MLLW | At a -0.98 m low | At a +2.44 m high |
 |---|---|---|---|
-| Reef edge | 13.7 m | 12.8 m | 16.1 m |
-| Outer boulders | 18.5 m | 17.6 m | 20.9 m |
+| Reef edge | 13.7 m | 12.7 m | 16.1 m |
+| Outer boulders | 18.5 m | 17.5 m | 20.9 m |
 
 ## Hazards
 

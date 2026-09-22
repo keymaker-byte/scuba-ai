@@ -49,14 +49,14 @@ The strait's tide swings over 3 m here at springs, so depths are given below the
 |---|---|
 | **Tide station** | NOAA Crescent Bay tide station (9443826), about 6.7 km west |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 2.2 m, up to about 3.2 m; 2026 span about -1.0 m to +2.4 m |
+| **Typical range** | Median daily 2.10 m, up to 3.25 m on the year's biggest exchange; 2026 span -0.98 m to +2.44 m |
 
-| Feature | Below MLLW | At a -1.0 m low | At a +2.4 m high |
+| Feature | Below MLLW | At a -0.98 m low | At a +2.44 m high |
 |---|---|---|---|
 | Crossing, deepest point | 5.4 m | 4.4 m | 7.8 m |
 | Reef top, bay side | 4.5 m | 3.5 m | 6.9 m |
 | Reef edge | 11.5 m | 10.5 m | 13.9 m |
-| Bachelor Rock's outer wall | 17.6 m | 16.6 m | 20.0 m |
+| Bachelor Rock's outer wall | 17.6 m | 16.6 m | 20 m |
 
 ## Hazards
 

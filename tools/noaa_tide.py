@@ -6,6 +6,7 @@
   at STATION --time "YYYY-MM-DD HH:MM"   tide height at a moment
   normalize STATION --time T --depth D   observed depth  ->  depth below MLLW datum
   project STATION --datum-depth X [--date D]   datum depth -> depth below surface, all day
+  range STATION [--year Y]           exact median/max/min daily range and span, whole year in one call
 
 Why this exists: depth is not a fixed property of a site. The seabed sits at a
 fixed depth below the MLLW *datum*; the surface moves 3-4 m over it. A depth read off the
@@ -135,6 +136,31 @@ def cmd_predict(a):
     print(f"\n  range {hi - lo:.2f} m — a fixed seabed feature reads {hi - lo:.2f} m deeper at the high than the low.")
 
 
+def cmd_range(a):
+    year_start = date(a.year, 1, 1)
+    year_end = date(a.year, 12, 31)
+    hilo = predictions(a.station, year_start, "hilo", end=year_end)
+
+    by_day = {}
+    for p in hilo:
+        by_day.setdefault(p["t"][:10], []).append(float(p["v"]))
+
+    daily = sorted(((d, max(vs) - min(vs)) for d, vs in by_day.items()), key=lambda x: x[1])
+    n = len(daily)
+    median = daily[n // 2][1] if n % 2 else (daily[n // 2 - 1][1] + daily[n // 2][1]) / 2
+    lo_day, hi_day = daily[0], daily[-1]
+
+    all_vals = [float(p["v"]) for p in hilo]
+    print(f"{a.station}  {a.year}  high/low range across the year, m MLLW\n")
+    print(f"  {n} days, {len(hilo)} highs and lows, one API call\n")
+    print(f"  median daily range   {median:.2f} m")
+    print(f"  max daily range      {hi_day[1]:.2f} m  on {hi_day[0]}")
+    print(f"  min daily range      {lo_day[1]:.2f} m  on {lo_day[0]}")
+    print(f"  year span            {min(all_vals):+.2f} m to {max(all_vals):+.2f} m")
+    print("\n  Use these for a site file's \"Typical range\" row: median as \"typical,\"")
+    print("  max daily range as \"up to,\" year span as printed.")
+
+
 def cmd_at(a):
     h = height_at(a.station, a.time)
     print(f"{a.station}  {a.time:%Y-%m-%d %H:%M}  tide {h:+.2f} m MLLW")
@@ -177,6 +203,11 @@ def main():
     s.add_argument("station")
     s.add_argument("--date", type=date.fromisoformat, default=date.today())
     s.set_defaults(fn=cmd_predict)
+
+    s = sub.add_parser("range", help="exact median/max/min daily range and span, whole year in one call")
+    s.add_argument("station")
+    s.add_argument("--year", type=int, default=date.today().year)
+    s.set_defaults(fn=cmd_range)
 
     s = sub.add_parser("at", help="tide height at a moment")
     s.add_argument("station")

@@ -49,13 +49,13 @@ Hood Canal swings harder than the main basin, and on this gentle slope the tide 
 |---|---|
 | **Tide station** | Seabeck, Seabeck Bay (9445303), 47.6417, -122.828, about 2 km southeast |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 3.46 m, up to 5.18 m; 2026 span −1.39 m to +4.00 m |
+| **Typical range** | Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m |
 
-| Feature | Below MLLW | Reads at a −1.0 m low | Reads at a +3.5 m high |
+| Feature | Below MLLW | At a -1.39 m low | At a +4.00 m high |
 |---|---|---|---|
-| Eelgrass edge | about 1.5 m | 0.5 m, wading depth | 5 m |
-| Sea whip beds | 18 to 20 m | 17 to 19 m | 21.5 to 23.5 m |
-| Sand slope beyond | past 20 m | past 19 m | past 23.5 m |
+| Eelgrass edge | about 1.5 m | about 0.1 m, wading depth | about 5.5 m |
+| Sea whip beds | 18 to 20 m | 16.6 to 18.6 m | 22 to 24 m |
+| Sand slope beyond | past 20 m | past 18.6 m | past 24 m |
 
 ## Hazards
 

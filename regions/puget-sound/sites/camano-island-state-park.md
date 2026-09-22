@@ -44,7 +44,7 @@ Saratoga Passage swings several metres between high and low water, and the site'
 |---|---|
 | **Tide station** | NOAA Greenbank, Whidbey Island (9447883), about 6.1 km west across the passage |
 | **Series** | High and low water only |
-| **Typical range** | Median daily around 3.5 m, up to about 5.3 m on a big exchange; 2026 span roughly -1.1 m to +4.2 m |
+| **Typical range** | Median daily 3.42 m, up to 5.40 m on the year's biggest exchange; 2026 span -1.39 m to +4.16 m |
 
 The 28.8 m dive point reads close to that near a low around 0 m, and swings to about 32 m near a high around +3.6 m.
 

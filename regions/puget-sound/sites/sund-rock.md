@@ -54,15 +54,15 @@ Hood Canal swings hard here, more than the main basin of the Sound, and the tide
 |---|---|
 | **Tide station** | Union, Hood Canal (9445478), 47.3583, -123.0980, about 8.6 km southeast |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 3.47 m, up to 5.51 m; 2026 span -1.26 m to +4.25 m |
+| **Typical range** | Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m |
 
-| Feature | Below MLLW | Reads at a -1.0 m low | Reads at a +3.5 m high |
+| Feature | Below MLLW | At a -1.40 m low | At a +4.32 m high |
 |---|---|---|---|
-| Boulder garden | 5 to 9 m | 4 to 8 m | 8.5 to 12.5 m |
-| Top of the walls | 5 to 8 m | 4 to 7 m | 8.5 to 11.5 m |
-| Second ledge | about 17 m | 16 m | 20.5 m |
-| Wall base, silty sand | 19 to 21 m | 18 to 20 m | 22.5 to 24.5 m |
-| Slope beyond | past 32 m | past 31 m | past 35.5 m |
+| Boulder garden | 5 to 9 m | 3.6 to 7.6 m | 9.3 to 13.3 m |
+| Top of the walls | 5 to 8 m | 3.6 to 6.6 m | 9.3 to 12.3 m |
+| Second ledge | about 17 m | about 15.6 m | about 21.3 m |
+| Wall base, silty sand | 19 to 21 m | 17.6 to 19.6 m | 23.3 to 25.3 m |
+| Slope beyond | past 32 m | past 30.6 m | past 36.3 m |
 
 ## Hazards
 

@@ -46,12 +46,12 @@ Possession Sound swings up to about 5 m between high and low water here, so dept
 |---|---|
 | **Tide station** | NOAA Glendale, Possession Sound tide station (9447814), about 3.6 km west |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 3.3 m, up to about 4.9 m; 2026 span -1.30 m to +3.85 m |
+| **Typical range** | Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m |
 
-| Feature | Below MLLW | At a -1.3 m low | At a +3.85 m high |
+| Feature | Below MLLW | At a -1.30 m low | At a +3.85 m high |
 |---|---|---|---|
-| Shelf break | 6.5 m | 5.2 m | 10.4 m |
-| Upper clay bank | 12 m | 10.7 m | 15.9 m |
+| Shelf break | 6.5 m | 5.2 m | 10.3 m |
+| Upper clay bank | 12 m | 10.7 m | 15.8 m |
 | Middle clay bank | 18 m | 16.7 m | 21.9 m |
 | Lower clay bank | 22 m | 20.7 m | 25.9 m |
 

@@ -46,7 +46,7 @@ Admiralty Inlet's tide swings a few metres a day here, and because the outer ree
 |---|---|
 | **Tide station** | Marrowstone Point (9444972), at the site |
 | **Series** | High and low water only |
-| **Typical range** | Median daily around 2.8 m, up to about 4.2 m on a big exchange; 2026 span roughly 2.2 to 4.2 m |
+| **Typical range** | Median daily 2.77 m, up to 4.22 m on the year's biggest exchange; 2026 span -1.25 m to +3.16 m |
 
 The 15 m reef point reads about 14.7 m below the surface near a low around 0 m, and about 17.5 m below the surface near a high around +2.8 m.
 

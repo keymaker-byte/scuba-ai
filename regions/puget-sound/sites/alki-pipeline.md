@@ -53,12 +53,12 @@ The site is shallow the whole way, sloping gradually from the shallows at the re
 |---|---|
 | **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 6.9 km northeast |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 3.3 m, up to about 4.8 m; 2026 span -1.28 m to +3.96 m |
+| **Typical range** | Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m |
 
-| Feature | Below MLLW | At a -1.0 m low | At a +3.5 m high |
+| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
 |---|---|---|---|
-| Apparent end of pipe | 11 m | 10 m | 14.5 m |
-| True end of pipe | 12 m | 11 m | 15.5 m |
+| Apparent end of pipe | 11 m | 9.7 m | 15 m |
+| True end of pipe | 12 m | 10.7 m | 16 m |
 
 A higher tide also makes the entry and the surface swim out easier, covering the cobble and shortening the walk to water.
 

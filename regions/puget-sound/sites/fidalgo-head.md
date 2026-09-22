@@ -48,11 +48,11 @@ The site swings roughly 2.5 m between an average high and low water, more around
 |---|---|
 | **Tide station** | NOAA Ship Harbor, Fidalgo Island (9448772), about 2.5 km northeast |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 2.5 m, up to about 3.9 m; 2026 span -1.3 m to +2.8 m |
+| **Typical range** | Median daily 2.44 m, up to 3.88 m on the year's biggest exchange; 2026 span -1.25 m to +2.83 m |
 
-| Feature | Below MLLW | At a -0.9 m low | At a +2.5 m high |
+| Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |
 |---|---|---|---|
-| Outer rock into sand | 11.7 m | 10.8 m | 14.2 m |
+| Outer rock into sand | 11.7 m | 10.4 m | 14.5 m |
 
 ## Hazards
 

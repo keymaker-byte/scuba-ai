@@ -47,13 +47,13 @@ East Passage swings up to about 5 m between high and low water here, and combine
 |---|---|
 | **Tide station** | NOAA Des Moines, East Passage (9446248), about 3.3 km north on the same shore |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 3.4 m, up to about 5.2 m; 2026 span about -1.2 m to +4.0 m |
+| **Typical range** | Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m |
 
-| Feature | Below MLLW | At a -1.0 m low | At a +3.5 m high |
+| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
 |---|---|---|---|
-| Reef fingers begin | 7.6 m | 6.6 m | 11.1 m |
-| Mid reef, buoy line | 12.4 m | 11.4 m | 15.9 m |
-| Base of reef, edge of drop off | 20.4 m | 19.4 m | 23.9 m |
+| Reef fingers begin | 7.6 m | 6.3 m | 11.7 m |
+| Mid reef, buoy line | 12.4 m | 11.1 m | 16.5 m |
+| Base of reef, edge of drop off | 20.4 m | 19.1 m | 24.5 m |
 
 ## Hazards
 

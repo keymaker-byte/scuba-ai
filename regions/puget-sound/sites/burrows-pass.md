@@ -61,14 +61,14 @@ The pass swings roughly 2 to 4 m between high and low water, so depths are given
 |---|---|
 | **Tide station** | NOAA Burrows Bay (Allan Island) tide station (9448683), about 3.3 km south |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 2.5 m, up to about 3.8 m; 2026 span -1.07 m to +2.89 m |
+| **Typical range** | Median daily 2.49 m, up to 3.79 m on the year's biggest exchange; 2026 span -1.07 m to +2.89 m |
 
-| Feature | Below MLLW | At a -0.9 m low | At a +2.5 m high |
+| Feature | Below MLLW | At a -1.07 m low | At a +2.89 m high |
 |---|---|---|---|
-| Top of near ledge | 7.9 m | 7.0 m | 10.4 m |
-| Southwest end of that ledge | 17.4 m | 16.5 m | 19.9 m |
-| Outer rock structure | 22.3 m | 21.4 m | 24.8 m |
-| Outer structure, deepest | 23.5 m | 22.6 m | 26.0 m |
+| Top of near ledge | 7.9 m | 6.8 m | 10.8 m |
+| Southwest end of that ledge | 17.4 m | 16.3 m | 20.3 m |
+| Outer rock structure | 22.3 m | 21.2 m | 25.2 m |
+| Outer structure, deepest | 23.5 m | 22.4 m | 26.4 m |
 
 The current-layer boundary near 13.7 m is measured from the surface, not from datum, so it is not normalized to MLLW.
 

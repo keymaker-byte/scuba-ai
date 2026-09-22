@@ -46,13 +46,13 @@ The site sits on the open main basin, and tide swings the depth here by several 
 |---|---|
 | **Tide station** | NOAA Port Blakely (9445913), about 0.9 km northwest, the same shore, just inside the mouth of the harbor |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 3.5 m, up to about 5.1 m; 2026 span about -1.3 m to +4.0 m |
+| **Typical range** | Median daily 3.45 m, up to 5.10 m on the year's biggest exchange; 2026 span -1.30 m to +4.00 m |
 
-| Feature | Below MLLW | At a -1.0 m low | At a +3.5 m high |
+| Feature | Below MLLW | At a -1.30 m low | At a +4.00 m high |
 |---|---|---|---|
-| Shallow ledges | 8 to 11 m | 7 to 10 m | 11.5 to 14.5 m |
-| Main reef, working depth | 15 to 18 m | 14 to 17 m | 18.5 to 21.5 m |
-| Outer edge of the rock rib | about 26 m | about 25 m | about 29.5 m |
+| Shallow ledges | 8 to 11 m | 6.7 to 9.7 m | 12 to 15 m |
+| Main reef, working depth | 15 to 18 m | 13.7 to 16.7 m | 19 to 22 m |
+| Outer edge of the rock rib | about 26 m | about 24.7 m | about 30 m |
 
 ## Hazards
 

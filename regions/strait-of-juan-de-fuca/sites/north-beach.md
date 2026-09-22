@@ -46,12 +46,12 @@ The strait's tide swings up to about 3.4 m here, so depths are given below the M
 |---|---|
 | **Tide station** | NOAA Port Townsend tide station (9444900), about 4.2 km south-southeast, around Point Wilson in Port Townsend Bay |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 2.3 m, up to about 3.4 m; 2026 span about -1.0 m to +2.8 m |
+| **Typical range** | Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m |
 
-| Feature | Below MLLW | At a -1.0 m low | At a +2.8 m high |
+| Feature | Below MLLW | At a -1.22 m low | At a +3.04 m high |
 |---|---|---|---|
-| Inner kelp edge | 6.1 m | 5.1 m | 8.9 m |
-| Outer kelp edge | 8.2 m | 7.2 m | 11.0 m |
+| Inner kelp edge | 6.1 m | 4.9 m | 9.1 m |
+| Outer kelp edge | 8.2 m | 7 m | 11.2 m |
 
 ## Hazards
 

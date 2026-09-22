@@ -48,16 +48,16 @@ East Passage swings 3 to 5 m between high and low water here, a large fraction o
 |---|---|
 | **Tide station** | NOAA Des Moines, East Passage (9446248), about 7.0 km south on the same shore |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 3.4 m, up to about 5.2 m; 2026 span about -1.2 m to +4.0 m |
+| **Typical range** | Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m |
 
-| Feature | Below MLLW | At a -1.0 m low | At a +3.5 m high |
+| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
 |---|---|---|---|
-| Eelgrass band | 5 to 8 m | 4 to 7 m | 8.5 to 11.5 m |
-| Shallow tire cluster | 13 m | 12 m | 16.5 m |
-| Sunken cabin cruiser, bow | 14 m | 13 m | 17.5 m |
-| Deeper tire cluster | 18 m | 17 m | 21.5 m |
-| Fiberform boat | 21 m | 20 m | 24.5 m |
-| Base of reef, silt line | 27 m | 26 m | 30.5 m |
+| Eelgrass band | 5 to 8 m | 3.7 to 6.7 m | 9.1 to 12.1 m |
+| Shallow tire cluster | 13 m | 11.7 m | 17.1 m |
+| Sunken cabin cruiser, bow | 14 m | 12.7 m | 18.1 m |
+| Deeper tire cluster | 18 m | 16.7 m | 22.1 m |
+| Fiberform boat | 21 m | 19.7 m | 25.1 m |
+| Base of reef, silt line | 27 m | 25.7 m | 31.1 m |
 
 ## Hazards
 
