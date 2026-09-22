@@ -68,6 +68,7 @@ If a tool errors out, an API is unreachable, or a site is down, stop and report 
 - **Avoid the dash as a connector or separator.** Use commas, periods, parentheses, or "to" for a range. Genuine hyphens in names and compound words are fine.
 - **State a fact flatly.** No confidence flags, no source attributions (a book, the forums, our own log), no logged dive stats standing in for a fact (dive counts, runtimes, a specific dive number, a computer bookmark). A derived number is written as a plain fact; a number you're unsure of is stated conservatively.
 - **Write like an entry in a public dive guidebook.** Factual, readable, and useful to any diver preparing for the region or site, not a page of our own notes.
+- **A site file stands alone.** Never reference another site by name as a comparison or shorthand; describe the behavior itself.
 
 ## Region Files
 
