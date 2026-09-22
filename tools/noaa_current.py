@@ -100,6 +100,12 @@ def cmd_bins(a):
     print(f"  project: {meta.get('project')}  ({meta.get('project_type')})")
     if meta.get("deployed"):
         print(f"  deployed {meta['deployed'][:10]}  retrieved {str(meta.get('retrieved'))[:10]}")
+    if not bins.get("bins"):
+        sys.exit(
+            f"{a.station} publishes 0 depth bins (a harmonic/subordinate station, not a "
+            "survey station with an ADCP record). It has no bin-level current data usable "
+            "here; pick a different, PUG-prefixed survey station instead."
+        )
     print(f"  {bins['nbr_of_bins']} bins, {bins['bin_size']} m each\n")
 
     # Only some bins publish predictions; NOAA reports which in an error message.
