@@ -1785,6 +1785,21 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "fay-bainbridge",
+      "name": "Fay Bainbridge Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/fay-bainbridge.md",
+      "site": {
+        "lat": 47.70333,
+        "lon": -122.50332
+      },
+      "entry": {
+        "lat": 47.702275,
+        "lon": -122.507386
+      }
+    },
+    {
       "slug": "lake-crescent",
       "name": "Lake Crescent",
       "region": "washington-state-lakes",
