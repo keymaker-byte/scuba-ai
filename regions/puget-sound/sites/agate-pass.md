@@ -45,7 +45,7 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 |---|---|
 | **Tide station** | NOAA Port Madison (9445753), about 3.2 km north |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 3.4 m, up to about 5.6 m on a big exchange; 2026 span -0.96 m to +4.76 m |
+| **Typical range** | Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m |
 
 ## Hazards
 

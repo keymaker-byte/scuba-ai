@@ -50,7 +50,7 @@ Rosario Bay swings roughly 2 to 4 m between high and low water, so depths are gi
 |---|---|
 | **Tide station** | NOAA Deception Pass State Park, Bowman Bay tide station (9448614), about 1.2 km north |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 2.4 m, up to about 3.8 m; 2026 span -1.20 m to +2.77 m |
+| **Typical range** | Median daily 2.38 m, up to 3.80 m on the year's biggest exchange; 2026 span -1.20 m to +2.77 m |
 
 ## Hazards
 

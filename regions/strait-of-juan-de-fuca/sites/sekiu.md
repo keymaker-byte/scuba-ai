@@ -46,12 +46,12 @@ The strait's tide swings up to about 3.5 m here, so depths are given below the M
 |---|---|
 | **Tide station** | NOAA Sekiu, Clallam Bay tide station (9443361), about 0.6 km east, the same bay |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 2.2 m, up to about 3.5 m; 2026 span about -0.9 m to +2.8 m |
+| **Typical range** | Median daily 2.21 m, up to 3.85 m on the year's biggest exchange; 2026 span -0.98 m to +3.04 m |
 
-| Feature | Below MLLW | At a -0.9 m low | At a +2.8 m high |
+| Feature | Below MLLW | At a -0.98 m low | At a +3.04 m high |
 |---|---|---|---|
-| Rocky area edge | 10.7 m | 9.8 m | 13.5 m |
-| Sandy, shell covered bottom | 20.7 m | 19.8 m | 23.5 m |
+| Rocky area edge | 10.7 m | 9.7 m | 13.7 m |
+| Sandy, shell covered bottom | 20.7 m | 19.7 m | 23.7 m |
 
 ## Hazards
 

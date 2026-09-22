@@ -47,12 +47,12 @@ The harbor's tide swings over 3 m at springs, so depths are given below the MLLW
 |---|---|
 | **Tide station** | NOAA Ediz Hook, Port Angeles tide station (9444122), about 1.3 km away |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 2.2 m, up to about 3.4 m at springs; 2026 span roughly -1.1 m to +2.5 m |
+| **Typical range** | Median daily 2.13 m, up to 3.39 m on the year's biggest exchange; 2026 span -1.10 m to +2.47 m |
 
-| Feature | Below MLLW | At a -1.1 m low | At a +2.5 m high |
+| Feature | Below MLLW | At a -1.10 m low | At a +2.47 m high |
 |---|---|---|---|
 | Shoreline at the entry | 0.1 m | dries | 2.6 m |
-| Reef edge | 18.5 m | 17.4 m | 21.0 m |
+| Reef edge | 18.5 m | 17.4 m | 21 m |
 
 ## Hazards
 

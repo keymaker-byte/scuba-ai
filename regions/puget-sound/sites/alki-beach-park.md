@@ -49,13 +49,13 @@ The bottom is an even slope from an eelgrass band in the shallows, across the to
 |---|---|
 | **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 6.7 km northeast |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 3.3 m, up to about 4.6 m; 2026 span -1.28 m to +3.96 m |
+| **Typical range** | Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m |
 
-| Feature | Below MLLW | At a -0.8 m low | At a +3.4 m high |
+| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
 |---|---|---|---|
-| Eelgrass shallows, top of slope | 6.7 m | 5.9 m | 10.1 m |
-| Guide rope, lower turn | 20 m | 19.2 m | 23.4 m |
-| Base of the main slope | 24 m | 23.2 m | 27.4 m |
+| Eelgrass shallows, top of slope | 6.7 m | 5.4 m | 10.7 m |
+| Guide rope, lower turn | 20 m | 18.7 m | 24 m |
+| Base of the main slope | 24 m | 22.7 m | 28 m |
 
 ## Hazards
 

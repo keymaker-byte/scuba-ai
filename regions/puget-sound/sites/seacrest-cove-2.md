@@ -50,12 +50,12 @@ Elliott Bay swings 3 to 4 m between high and low water, so depths are given agai
 |---|---|
 | **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 3.3 km northeast across the bay |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 3.3 m, up to about 4.6 m; 2026 span -1.28 m to +3.96 m |
+| **Typical range** | Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m |
 
-| Feature | Below MLLW | At a -0.8 m low | At a +3.4 m high |
+| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
 |---|---|---|---|
-| Honey Bear remains | 8 m | 7.2 m | 11.4 m |
-| Mid-slope at the site coordinate | 24 m | 23.2 m | 27.4 m |
+| Honey Bear remains | 8 m | 6.7 m | 12 m |
+| Mid-slope at the site coordinate | 24 m | 22.7 m | 28 m |
 
 ## Hazards
 

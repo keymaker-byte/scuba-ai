@@ -44,12 +44,12 @@ The site sits open to the main basin, and tide swings the depth here by several 
 |---|---|
 | **Tide station** | NOAA Port Madison (9445753), about 1.6 km, same shore |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 3.5 m, up to about 5.0 m on a big exchange; 2026 span about -1.3 m to +3.9 m |
+| **Typical range** | Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m |
 
-| Feature | Below MLLW | At a -1.3 m low | At a +3.7 m high |
+| Feature | Below MLLW | At a -1.30 m low | At a +3.96 m high |
 |---|---|---|---|
-| Mid slope | 13.8 m | 12.5 m | 17.5 m |
-| Working depth | 21.9 m | 20.6 m | 25.6 m |
+| Mid slope | 13.8 m | 12.5 m | 17.8 m |
+| Working depth | 21.9 m | 20.6 m | 25.9 m |
 
 ## Hazards
 

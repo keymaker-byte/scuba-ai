@@ -54,12 +54,12 @@ Admiralty Inlet swings roughly 2.7 m between high and low water here on a typica
 |---|---|
 | **Tide station** | NOAA Admiralty Head tide station (9447905), about 0.3 km from the site on the same shore |
 | **Series** | High and low water only |
-| **Typical range** | Median daily about 2.7 m, up to about 4.1 m; 2026 span -1.3 m to +3.0 m |
+| **Typical range** | Median daily 2.65 m, up to 4.10 m on the year's biggest exchange; 2026 span -1.25 m to +3.04 m |
 
-| Feature | Below MLLW | At a +0.5 m low | At a +2.7 m high |
+| Feature | Below MLLW | At a -1.25 m low | At a +3.04 m high |
 |---|---|---|---|
-| Octopus den, shallows | 8.1 m | 8.6 m | 10.8 m |
-| Sand at the end of the jetty | about 19 m | about 19.5 m | about 21.7 m |
+| Octopus den, shallows | 8.1 m | 6.8 m | 11.1 m |
+| Sand at the end of the jetty | about 19 m | about 17.8 m | about 22 m |
 
 The wharf pilings east of the jetty stand over sand at roughly 6 to 11 m below datum.
 

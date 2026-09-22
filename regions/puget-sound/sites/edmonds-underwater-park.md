@@ -53,11 +53,11 @@ The park is shallow and the bottom is gentle, so the tide is a large fraction of
 |---|---|
 | **Tide station** | NOAA Edmonds tide station (9447427), at the site |
 | **Series** | High and low water only |
-| **Typical range** | Median daily around 3.5 m, up to about 4.9 m; 2026 span about -1.2 m to +3.7 m |
+| **Typical range** | Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m |
 
-| Feature | Below MLLW | At a -1.0 m low | At a +3.0 m high |
+| Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |
 |---|---|---|---|
-| Deepest ground, south near ferry | about 13 m | about 12 m | about 16 m |
+| Deepest ground, south near ferry | about 13 m | about 11.7 m | about 16.8 m |
 
 The deepest ground lies at the south end toward the ferry, inside the off-limits zone, so most diving stays between about 8 and 12 m below datum.
 

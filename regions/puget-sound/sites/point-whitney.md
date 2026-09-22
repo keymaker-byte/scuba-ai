@@ -51,14 +51,14 @@ Hood Canal's tide swings more here than in the main basin of the Sound, and at P
 |---|---|
 | **Tide station** | Whitney Point (9445246), 47.7617, -122.8500, about 0.3 km |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 3.46 m, up to 5.18 m; 2026 span −1.39 m to +4.00 m |
+| **Typical range** | Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m |
 
-| Feature | Below MLLW | Reads at a −1.0 m low | Reads at a +3.5 m high |
+| Feature | Below MLLW | At a -1.39 m low | At a +4.00 m high |
 |---|---|---|---|
-| Pipe start, at the fence gap | about 4.6 m | 3.6 m | 8.1 m |
-| Concrete dividers alongside the pipe | 9 to 10 m | 8 to 9 m | 12.5 to 13.5 m |
-| Pipe end and its deep supports | 26 to 30 m | 25 to 29 m | 29.5 to 33.5 m |
-| Sea whip field beyond | from about 30 m | from about 29 m | from about 33.5 m |
+| Pipe start, at the fence gap | about 4.6 m | about 3.2 m | about 8.6 m |
+| Concrete dividers alongside the pipe | 9 to 10 m | 7.6 to 8.6 m | 13 to 14 m |
+| Pipe end and its deep supports | 26 to 30 m | 24.6 to 28.6 m | 30 to 34 m |
+| Sea whip field beyond | from about 30 m | from about 28.6 m | from about 34 m |
 
 ## Hazards
 

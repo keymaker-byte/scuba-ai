@@ -46,12 +46,12 @@ The site is shallow enough that the tide matters through the shoal but the deep 
 |---|---|
 | **Tide station** | NOAA Edmonds (9447427), about 1.5 km away, same shore |
 | **Series** | High and low water only |
-| **Typical range** | Median daily around 3.5 m, up to about 4.9 m; 2026 span about -1.2 m to +3.7 m |
+| **Typical range** | Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m |
 
-| Feature | Below MLLW | At a -1.0 m low | At a +3.0 m high |
+| Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |
 |---|---|---|---|
-| Drop-off edge | 13 m | 12 m | 16 m |
-| Old dock remnants | about 19 m | about 18 m | about 22 m |
+| Drop-off edge | 13 m | 11.7 m | 16.8 m |
+| Old dock remnants | about 19 m | about 17.7 m | about 22.8 m |
 
 ## Hazards
 
