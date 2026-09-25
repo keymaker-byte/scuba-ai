@@ -1395,6 +1395,21 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "fort-ward",
+      "name": "Fort Ward Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/fort-ward.md",
+      "site": {
+        "lat": 47.585970,
+        "lon": -122.533532
+      },
+      "entry": {
+        "lat": 47.588409,
+        "lon": -122.531172
+      }
+    },
+    {
       "slug": "fort-worden-pier",
       "name": "Fort Worden Pier",
       "region": "puget-sound",
