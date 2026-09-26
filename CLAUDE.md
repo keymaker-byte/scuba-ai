@@ -8,7 +8,7 @@ This workspace is for scuba diving planning and data analysis.
 - `tool-config.json` holds per-tool parameters, one subsection per tool in `tools/`.
 - `plan_log.csv` holds dive plans vs observed data.
 - Each diving region is a folder under `regions/` holding one `<region>.md` steering file and a `sites/` subfolder containing `<site>.md` files.
-- `map.html`, with its supporting files under `map/`, is a local map viewer. It reads `map/data.js`, the index of every site's coordinates.
+- `docs/` is a local map viewer (published via GitHub Pages). It reads `docs/js/data.js`, the index of every site's coordinates.
 
 ## Session Context
 
@@ -76,7 +76,7 @@ The canonical structure is `region_template.md`.
 
 Every region needs a row in the README's own "Regions currently covered" table: the region name linking to `regions/<slug>/<slug>.md`, and a brief description. Keep this table current.
 
-A region also needs an entry in `map/data.js`'s top-level `regions` object, keyed by the region's folder slug:
+A region also needs an entry in `docs/js/data.js`'s top-level `regions` object, keyed by the region's folder slug:
 
 ```json
 "<region-slug>": {
@@ -85,7 +85,7 @@ A region also needs an entry in `map/data.js`'s top-level `regions` object, keye
 }
 ```
 
-A site's `region` field is only a lookup key into this object; `map.html` reads a site's region name and steering-file link from here rather than deriving either from the slug. Keep this entry current.
+A site's `region` field is only a lookup key into this object; `docs/index.html` reads a site's region name and steering-file link from here rather than deriving either from the slug. Keep this entry current.
 
 ## Site Files
 
@@ -95,7 +95,7 @@ A site file also needs a row in its region's steering file, under that file's "S
 
 **Type is exactly "Shore" or "Boat", nothing else.** Shore is anything reachable from land, however long the surface swim. Boat only applies when there is no shore access at all. Don't qualify it ("Boat or shore", "Shore, guided only", "Boat, shore or snorkel"); a surface swim distance, an access restriction, or a guided-only requirement belongs in Getting There, not folded into the Type value.
 
-A site file also needs an entry in `map/data.js`, the index `map.html` draws its pins from. It is a single `window.MAP_DATA = { "sites": [...] };` assignment; add one object to the `sites` array:
+A site file also needs an entry in `docs/js/data.js`, the index `docs/index.html` draws its pins from. It is a single `window.MAP_DATA = { "sites": [...] };` assignment; add one object to the `sites` array:
 
 ```json
 {
