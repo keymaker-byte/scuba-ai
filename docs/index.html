@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Dive Site Map</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="map/leaflet.css">
+<link rel="stylesheet" href="css/leaflet.css">
 <style>
   html, body { height: 100%; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   #map { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
@@ -97,8 +97,8 @@
 
 <div id="map"></div>
 
-<script src="map/leaflet.js"></script>
-<script src="map/data.js"></script>
+<script src="js/leaflet.js"></script>
+<script src="js/data.js"></script>
 <script>
 const COLORS = {
   shoreSite: "#2563eb",
@@ -207,17 +207,17 @@ const emodnetContourLayer = L.tileLayer.wms('https://ows.emodnet-bathymetry.eu/w
 
 function regionInfo(slug) {
   const info = (window.MAP_DATA.regions || {})[slug];
-  if (!info) throw new Error(`no regions entry for "${slug}" in map/data.js`);
+  if (!info) throw new Error(`no regions entry for "${slug}" in js/data.js`);
   return info;
 }
 
 function regionLink(site) {
   const { name, file } = regionInfo(site.region);
-  return `<a href="${encodeURI(file)}" target="_blank" rel="noopener">${escapeHtml(name)}</a>`;
+  return `<a href="${encodeURI('../' + file)}" target="_blank" rel="noopener">${escapeHtml(name)}</a>`;
 }
 
 function siteLink(site) {
-  return `<a href="${encodeURI(site.file)}" target="_blank" rel="noopener">${escapeHtml(site.name)}</a>`;
+  return `<a href="${encodeURI('../' + site.file)}" target="_blank" rel="noopener">${escapeHtml(site.name)}</a>`;
 }
 
 function siteMarker(site) {
@@ -390,7 +390,7 @@ dataRefreshBtn.addEventListener('click', () => {
 
   const s = document.createElement('script');
   s.id = 'data-reload-script';
-  s.src = 'map/data.js?_=' + Date.now();
+  s.src = 'js/data.js?_=' + Date.now();
   s.onload = () => {
     try {
       if (!window.MAP_DATA) throw new Error('window.MAP_DATA is not defined');
@@ -399,14 +399,14 @@ dataRefreshBtn.addEventListener('click', () => {
       rebuild();
       dataRefreshBtn.textContent = 'Refreshed';
     } catch (err) {
-      showError(`<strong>Could not reload map/data.js</strong> (${escapeHtml(err.message)}).`);
+      showError(`<strong>Could not reload js/data.js</strong> (${escapeHtml(err.message)}).`);
       dataRefreshBtn.textContent = 'Refresh site data';
     }
     dataRefreshBtn.disabled = false;
     setTimeout(() => { dataRefreshBtn.textContent = 'Refresh site data'; }, 1500);
   };
   s.onerror = () => {
-    showError('<strong>Could not reload map/data.js</strong> (script failed to load).');
+    showError('<strong>Could not reload js/data.js</strong> (script failed to load).');
     dataRefreshBtn.textContent = 'Refresh site data';
     dataRefreshBtn.disabled = false;
   };
@@ -440,8 +440,8 @@ try {
   }
 } catch (err) {
   showError(
-    `<strong>Could not load map/data.js</strong> (${escapeHtml(err.message)}). ` +
-    `It should sit at map/data.js, alongside map.html, and define <code>window.MAP_DATA</code>.`
+    `<strong>Could not load js/data.js</strong> (${escapeHtml(err.message)}). ` +
+    `It should sit at js/data.js, alongside index.html, and define <code>window.MAP_DATA</code>.`
   );
 }
 </script>

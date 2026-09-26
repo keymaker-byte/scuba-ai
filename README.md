@@ -18,7 +18,7 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 - `tools/` — one self-contained markdown doc per source or tool (what it's for, its caveats, its CLI if it has one), paired with a `.py` script for the sources that have one.
 - `site_template.md` — the canonical structure every dive site file follows.
 - `region_template.md` — the canonical structure every region steering file follows.
-- `map.html` (with `map/`) — a local map of every dive site, colored by shore or boat access, with entry point pins for shore dives. Reads from `map/data.js`, which every site file has an entry in.
+- `docs/` — a map of every dive site, colored by shore or boat access, with entry point pins for shore dives. Reads from `docs/js/data.js`.
 
 
 `diver-profile.json`, `tool-config.json` and `plan_log.csv` hold personal data (identity, gear, dive history) and are gitignored. A `_template` version of each is included as a starting point for setting up your own.
