@@ -49,6 +49,18 @@
 
   .leaflet-popup-content { font-size: 13px; line-height: 1.5; }
   .leaflet-popup-content a { color: #1d4ed8; }
+  .leaflet-popup-content .popup-row { margin-bottom: 2px; }
+  .leaflet-popup-content .popup-label {
+    display: inline-block; width: 44px; font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.03em; color: #6b7280;
+  }
+  .leaflet-popup-content .type-badge {
+    display: inline-block; margin-top: 5px; padding: 2px 9px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; color: #fff;
+  }
+  .leaflet-popup-content .type-badge.type-shore { background: #2563eb; }
+  .leaflet-popup-content .type-badge.type-boat { background: #ea580c; }
+  .leaflet-popup-content .type-badge.type-entry { background: #1e3a8a; }
 
   #content-modal-overlay {
     display: none; position: fixed; inset: 0; z-index: 3000;
@@ -280,12 +292,15 @@ function siteLink(site) {
 
 function siteMarker(site) {
   const color = site.type === 'shore' ? COLORS.shoreSite : COLORS.boatSite;
+  const badgeClass = site.type === 'shore' ? 'type-shore' : 'type-boat';
+  const badgeLabel = site.type === 'shore' ? 'Shore dive' : 'Boat dive';
   const m = L.circleMarker([site.site.lat, site.site.lon], {
     radius: 7, color: '#fff', weight: 1.5, fillColor: color, fillOpacity: 0.9,
   });
   m.bindPopup(
-    `<strong>${siteLink(site)}</strong><br>` +
-    `${regionLink(site)} &middot; ${site.type === 'shore' ? 'Shore' : 'Boat'} dive`
+    `<div class="popup-row"><span class="popup-label">Site</span><strong>${siteLink(site)}</strong></div>` +
+    `<div class="popup-row"><span class="popup-label">Region</span>${regionLink(site)}</div>` +
+    `<span class="type-badge ${badgeClass}">${badgeLabel}</span>`
   );
   return m;
 }
@@ -295,8 +310,9 @@ function entryMarker(site) {
     radius: 6, color: '#fff', weight: 1.5, fillColor: COLORS.entry, fillOpacity: 0.95,
   });
   m.bindPopup(
-    `<strong>${siteLink(site)}</strong><br>` +
-    `${regionLink(site)} &middot; Entry point`
+    `<div class="popup-row"><span class="popup-label">Site</span><strong>${siteLink(site)}</strong></div>` +
+    `<div class="popup-row"><span class="popup-label">Region</span>${regionLink(site)}</div>` +
+    `<span class="type-badge type-entry">Entry point</span>`
   );
   return m;
 }
@@ -319,6 +335,33 @@ const modalSource = document.getElementById('content-modal-source');
 const modalBody = document.getElementById('content-modal-body');
 const modalCloseBtn = document.getElementById('content-modal-close');
 
+// A link inside a fetched .md file is written relative to THAT file's own folder
+// (e.g. a region file linking "sites/foo.md"), not relative to map.html at the
+// workspace root. Resolve it against the fetched file's directory before use.
+function isExternalHref(href) {
+  return /^([a-z][a-z0-9+.-]*:|\/\/)/i.test(href) || href.startsWith('#');
+}
+
+function resolveContentPath(basePath, href) {
+  const base = new URL(basePath, 'https://_workspace_.invalid/');
+  return decodeURIComponent(new URL(href, base).pathname).replace(/^\//, '');
+}
+
+function contentRendererFor(basePath) {
+  const renderer = new marked.Renderer();
+  renderer.link = function ({ href, title, text, tokens }) {
+    const body = this.parser.parseInline(tokens);
+    if (isExternalHref(href)) {
+      const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
+      return `<a href="${escapeHtml(href)}"${titleAttr} target="_blank" rel="noopener">${body}</a>`;
+    }
+    const resolvedPath = resolveContentPath(basePath, href);
+    const linkTitle = title || text;
+    return `<a href="#" class="content-link" data-path="${escapeHtml(resolvedPath)}" data-title="${escapeHtml(linkTitle)}">${body}</a>`;
+  };
+  return renderer;
+}
+
 function openContentModal(path, title) {
   modalTitle.textContent = title;
   modalSource.innerHTML = `<a href="${encodeURI(path)}" target="_blank" rel="noopener">Open raw file</a>`;
@@ -330,7 +373,7 @@ function openContentModal(path, title) {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return res.text();
     })
-    .then(md => { modalBody.innerHTML = marked.parse(md); })
+    .then(md => { modalBody.innerHTML = marked.parse(md, { renderer: contentRendererFor(path) }); })
     .catch(err => {
       modalBody.innerHTML =
         `<div id="content-modal-error"><strong>Could not load ${escapeHtml(path)}</strong> ` +
