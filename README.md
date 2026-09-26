@@ -2,6 +2,8 @@
 
 Scuba AI is a collection of steering files, tools and dive site descriptions for scuba diving recreational planning within no-decompression limits. Point an LLM (e.g. Claude Code) at this workspace and it can plan dives, write up new dive sites, and answer questions using live NOAA current and tide predictions, tidal current models, bathymetry, wind forecasts and your own dive log, instead of guessing.
 
+**[Dive Atlas](https://keymaker-byte.github.io/scuba-ai/)** — a live map of every dive site in this repo (no planning fuctionality directly in this map yet)
+
 ## Safety
 
 This is a planning aid, not a dive plan by itself and not a substitute for training or judgement. It predicts; it does not guarantee.
@@ -18,7 +20,7 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 - `tools/` — one self-contained markdown doc per source or tool (what it's for, its caveats, its CLI if it has one), paired with a `.py` script for the sources that have one.
 - `site_template.md` — the canonical structure every dive site file follows.
 - `region_template.md` — the canonical structure every region steering file follows.
-- `map.html` — a local map of every dive site, colored by shore or boat access, with entry point pins for shore dives. Reads from `map/data.js`, which every site file has an entry in.
+- `map.html` — a map of every dive site, colored by shore or boat access, with entry point pins for shore dives. Reads from `map/data.js`, which every site file has an entry in.
 
 
 `diver-profile.json`, `tool-config.json` and `plan_log.csv` hold personal data (identity, gear, dive history) and are gitignored. A `_template` version of each is included as a starting point for setting up your own.
