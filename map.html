@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <title>Dive Site Map</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="map/favicon.svg">
 <link rel="stylesheet" href="map/leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&display=swap" rel="stylesheet">
 <style>
   html, body { height: 100%; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   #map { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
@@ -15,7 +19,21 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.25);
     padding: 12px 14px; width: 240px; font-size: 13px; color: #1a1a1a;
   }
+  #panel.collapsed { width: auto; padding: 8px 10px; }
   #panel h1 { font-size: 15px; margin: 0 0 8px 0; }
+  #panel-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  #brand { display: flex; align-items: center; gap: 8px; }
+  #brand .brand-wordmark {
+    font-family: 'Fraunces', serif; font-weight: 600; font-size: 17px; color: #1a1a1a;
+  }
+  #brand .brand-wordmark .brand-dive { color: #2563eb; }
+  #panel-toggle {
+    border: none; background: #f3f4f6; border-radius: 6px; cursor: pointer;
+    font-size: 13px; line-height: 1; padding: 5px 9px; color: #1a1a1a; flex-shrink: 0;
+  }
+  #panel-toggle:hover { background: #e5e7eb; }
+  #panel-body { margin-top: 10px; }
+  #panel.collapsed #panel-body { display: none; }
   #panel label { display: block; margin: 4px 0; cursor: pointer; }
   #panel input[type="text"], #panel select {
     width: 100%; box-sizing: border-box; padding: 5px 6px; margin-top: 4px;
@@ -111,44 +129,59 @@
 
 <div id="error-banner"></div>
 <div id="panel">
-  <h1>Dive Sites</h1>
-
-  <div class="section">
-    <input type="text" id="search" placeholder="Search site name...">
+  <div id="panel-header">
+    <div id="brand">
+      <svg width="26" height="29" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 100 C50 100 14 60 14 38 A36 36 0 1 1 86 38 C86 60 50 100 50 100 Z" fill="#1e3a8a"/>
+        <circle cx="50" cy="38" r="18" fill="#ffffff"/>
+        <path d="M34 34 Q42 26 50 34 T66 34" stroke="#2563eb" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+        <path d="M34 44 Q42 36 50 44 T66 44" stroke="#60a5fa" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+        <circle cx="76" cy="15" r="7" fill="#ea580c"/>
+        <circle cx="63" cy="4" r="4" fill="#93c5fd"/>
+      </svg>
+      <span class="brand-wordmark"><span class="brand-dive">Dive</span> Atlas</span>
+    </div>
+    <button type="button" id="panel-toggle" aria-expanded="true" aria-label="Collapse panel">&#9662;</button>
   </div>
 
-  <div class="section">
-    <select id="region-filter">
-      <option value="">All regions</option>
-    </select>
-  </div>
+  <div id="panel-body">
+    <div class="section">
+      <input type="text" id="search" placeholder="Search site name...">
+    </div>
 
-  <div class="section">
-    <label><input type="checkbox" id="toggle-shore" checked>
-      <span class="swatch" style="background:#2563eb"></span>Shore dive sites</label>
-    <label><input type="checkbox" id="toggle-boat" checked>
-      <span class="swatch" style="background:#ea580c"></span>Boat dive sites</label>
-    <label><input type="checkbox" id="toggle-entry" checked>
-      <span class="swatch" style="background:#1e3a8a"></span>Shore entry points</label>
-  </div>
+    <div class="section">
+      <select id="region-filter">
+        <option value="">All regions</option>
+      </select>
+    </div>
 
-  <div class="section">
-    <label><input type="checkbox" id="toggle-satellite">Satellite imagery</label>
-    <label><input type="checkbox" id="toggle-depth-contours-noaa">Depth contours (NOAA)</label>
-    <label><input type="checkbox" id="toggle-depth-contours-emodnet">Depth contours (EMODnet)</label>
-  </div>
+    <div class="section">
+      <label><input type="checkbox" id="toggle-shore" checked>
+        <span class="swatch" style="background:#2563eb"></span>Shore dive sites</label>
+      <label><input type="checkbox" id="toggle-boat" checked>
+        <span class="swatch" style="background:#ea580c"></span>Boat dive sites</label>
+      <label><input type="checkbox" id="toggle-entry" checked>
+        <span class="swatch" style="background:#1e3a8a"></span>Shore entry points</label>
+    </div>
 
-  <div class="section">
-    <div class="hint">Click the map to grab coordinates</div>
-    <input type="text" id="coord-readout" readonly placeholder="lat, lon">
-    <button type="button" id="coord-copy">Copy</button>
-  </div>
+    <div class="section">
+      <label><input type="checkbox" id="toggle-satellite">Satellite imagery</label>
+      <label><input type="checkbox" id="toggle-depth-contours-noaa">Depth contours (NOAA)</label>
+      <label><input type="checkbox" id="toggle-depth-contours-emodnet">Depth contours (EMODnet)</label>
+    </div>
 
-  <div class="section">
-    <button type="button" id="data-refresh">Refresh site data</button>
-  </div>
+    <div class="section">
+      <div class="hint">Click the map to grab coordinates</div>
+      <input type="text" id="coord-readout" readonly placeholder="lat, lon">
+      <button type="button" id="coord-copy">Copy</button>
+    </div>
 
-  <div id="count"></div>
+    <div class="section">
+      <button type="button" id="data-refresh">Refresh site data</button>
+    </div>
+
+    <div id="count"></div>
+  </div>
 </div>
 
 <div id="map"></div>
@@ -175,6 +208,28 @@ const COLORS = {
   boatSite: "#ea580c",
   entry: "#1e3a8a",
 };
+
+const PANEL_COLLAPSE_KEY = 'diveMapPanelCollapsed';
+const panelEl = document.getElementById('panel');
+const panelToggleBtn = document.getElementById('panel-toggle');
+
+function setPanelCollapsed(collapsed) {
+  panelEl.classList.toggle('collapsed', collapsed);
+  panelToggleBtn.innerHTML = collapsed ? '&#9656;' : '&#9662;';
+  panelToggleBtn.setAttribute('aria-expanded', String(!collapsed));
+  panelToggleBtn.setAttribute('aria-label', collapsed ? 'Expand panel' : 'Collapse panel');
+  try { localStorage.setItem(PANEL_COLLAPSE_KEY, collapsed ? '1' : '0'); } catch (err) { /* localStorage unavailable */ }
+}
+
+let initialPanelCollapsed;
+try {
+  const storedCollapsed = localStorage.getItem(PANEL_COLLAPSE_KEY);
+  initialPanelCollapsed = storedCollapsed !== null ? storedCollapsed === '1' : window.innerWidth < 640;
+} catch (err) {
+  initialPanelCollapsed = window.innerWidth < 640;
+}
+setPanelCollapsed(initialPanelCollapsed);
+panelToggleBtn.addEventListener('click', () => setPanelCollapsed(!panelEl.classList.contains('collapsed')));
 
 const map = L.map('map', { worldCopyJump: true, zoomControl: false }).setView([20, -60], 3);
 L.control.zoom({ position: 'topright' }).addTo(map);
