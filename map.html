@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Dive Site Map</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/leaflet.css">
+<link rel="stylesheet" href="map/leaflet.css">
 <style>
   html, body { height: 100%; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   #map { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
@@ -49,6 +49,50 @@
 
   .leaflet-popup-content { font-size: 13px; line-height: 1.5; }
   .leaflet-popup-content a { color: #1d4ed8; }
+
+  #content-modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 3000;
+    background: rgba(0,0,0,0.5);
+    align-items: center; justify-content: center; padding: 24px;
+  }
+  #content-modal {
+    background: #fff; border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    width: 100%; max-width: 720px; max-height: 84vh;
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  #content-modal-header {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 14px 18px; border-bottom: 1px solid #e5e7eb; flex-shrink: 0;
+  }
+  #content-modal-header h2 { font-size: 16px; margin: 0; }
+  #content-modal-header .links { font-size: 12px; color: #555; }
+  #content-modal-header .links a { color: #1d4ed8; }
+  #content-modal-close {
+    border: none; background: #f3f4f6; border-radius: 6px; cursor: pointer;
+    font-size: 16px; line-height: 1; padding: 6px 10px; color: #1a1a1a;
+  }
+  #content-modal-close:hover { background: #e5e7eb; }
+  #content-modal-body {
+    padding: 16px 20px 22px; overflow-y: auto; font-size: 14px; color: #1a1a1a;
+  }
+  #content-modal-body h1 { font-size: 20px; margin: 0 0 10px; }
+  #content-modal-body h2 { font-size: 17px; margin: 20px 0 8px; }
+  #content-modal-body h3 { font-size: 15px; margin: 16px 0 6px; }
+  #content-modal-body p { line-height: 1.55; margin: 0 0 12px; }
+  #content-modal-body ul, #content-modal-body ol { margin: 0 0 12px; padding-left: 22px; line-height: 1.5; }
+  #content-modal-body li { margin-bottom: 4px; }
+  #content-modal-body a { color: #1d4ed8; }
+  #content-modal-body table { border-collapse: collapse; width: 100%; margin: 0 0 14px; font-size: 13px; }
+  #content-modal-body th, #content-modal-body td {
+    border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; vertical-align: top;
+  }
+  #content-modal-body code {
+    background: #f3f4f6; padding: 1px 5px; border-radius: 4px;
+    font-family: SFMono-Regular, Consolas, monospace; font-size: 12px;
+  }
+  #content-modal-loading, #content-modal-error { color: #555; }
+  #content-modal-error { color: #7f1d1d; }
+  #content-modal-error a { color: #1d4ed8; }
 </style>
 </head>
 <body>
@@ -97,8 +141,22 @@
 
 <div id="map"></div>
 
-<script src="js/leaflet.js"></script>
-<script src="js/data.js"></script>
+<div id="content-modal-overlay">
+  <div id="content-modal" role="dialog" aria-modal="true">
+    <div id="content-modal-header">
+      <h2 id="content-modal-title"></h2>
+      <div class="links">
+        <span id="content-modal-source"></span>
+        <button type="button" id="content-modal-close" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <div id="content-modal-body"></div>
+  </div>
+</div>
+
+<script src="map/marked.umd.js"></script>
+<script src="map/leaflet.js"></script>
+<script src="map/data.js"></script>
 <script>
 const COLORS = {
   shoreSite: "#2563eb",
@@ -207,17 +265,17 @@ const emodnetContourLayer = L.tileLayer.wms('https://ows.emodnet-bathymetry.eu/w
 
 function regionInfo(slug) {
   const info = (window.MAP_DATA.regions || {})[slug];
-  if (!info) throw new Error(`no regions entry for "${slug}" in js/data.js`);
+  if (!info) throw new Error(`no regions entry for "${slug}" in map/data.js`);
   return info;
 }
 
 function regionLink(site) {
   const { name, file } = regionInfo(site.region);
-  return `<a href="${encodeURI('../' + file)}" target="_blank" rel="noopener">${escapeHtml(name)}</a>`;
+  return `<a href="#" class="content-link" data-path="${escapeHtml(file)}" data-title="${escapeHtml(name)}">${escapeHtml(name)}</a>`;
 }
 
 function siteLink(site) {
-  return `<a href="${encodeURI('../' + site.file)}" target="_blank" rel="noopener">${escapeHtml(site.name)}</a>`;
+  return `<a href="#" class="content-link" data-path="${escapeHtml(site.file)}" data-title="${escapeHtml(site.name)}">${escapeHtml(site.name)}</a>`;
 }
 
 function siteMarker(site) {
@@ -254,6 +312,53 @@ function showError(html) {
   el.innerHTML = html;
   el.style.display = 'block';
 }
+
+const modalOverlay = document.getElementById('content-modal-overlay');
+const modalTitle = document.getElementById('content-modal-title');
+const modalSource = document.getElementById('content-modal-source');
+const modalBody = document.getElementById('content-modal-body');
+const modalCloseBtn = document.getElementById('content-modal-close');
+
+function openContentModal(path, title) {
+  modalTitle.textContent = title;
+  modalSource.innerHTML = `<a href="${encodeURI(path)}" target="_blank" rel="noopener">Open raw file</a>`;
+  modalBody.innerHTML = '<div id="content-modal-loading">Loading&hellip;</div>';
+  modalOverlay.style.display = 'flex';
+
+  fetch(encodeURI(path))
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.text();
+    })
+    .then(md => { modalBody.innerHTML = marked.parse(md); })
+    .catch(err => {
+      modalBody.innerHTML =
+        `<div id="content-modal-error"><strong>Could not load ${escapeHtml(path)}</strong> ` +
+        `(${escapeHtml(err.message)}). Opening a plain <code>file://</code> page blocks this fetch in most ` +
+        `browsers; serving the workspace over a local HTTP server (e.g. <code>python3 -m http.server</code>) ` +
+        `fixes it. <a href="${encodeURI(path)}" target="_blank" rel="noopener">Open the raw file</a> instead.</div>`;
+    });
+}
+
+function closeContentModal() {
+  modalOverlay.style.display = 'none';
+  modalBody.innerHTML = '';
+}
+
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('.content-link');
+  if (!link) return;
+  e.preventDefault();
+  openContentModal(link.dataset.path, link.dataset.title);
+});
+
+modalCloseBtn.addEventListener('click', closeContentModal);
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) closeContentModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalOverlay.style.display !== 'none') closeContentModal();
+});
 
 let allSites = [];
 const shoreLayer = L.layerGroup().addTo(map);
@@ -390,7 +495,7 @@ dataRefreshBtn.addEventListener('click', () => {
 
   const s = document.createElement('script');
   s.id = 'data-reload-script';
-  s.src = 'js/data.js?_=' + Date.now();
+  s.src = 'map/data.js?_=' + Date.now();
   s.onload = () => {
     try {
       if (!window.MAP_DATA) throw new Error('window.MAP_DATA is not defined');
@@ -399,14 +504,14 @@ dataRefreshBtn.addEventListener('click', () => {
       rebuild();
       dataRefreshBtn.textContent = 'Refreshed';
     } catch (err) {
-      showError(`<strong>Could not reload js/data.js</strong> (${escapeHtml(err.message)}).`);
+      showError(`<strong>Could not reload map/data.js</strong> (${escapeHtml(err.message)}).`);
       dataRefreshBtn.textContent = 'Refresh site data';
     }
     dataRefreshBtn.disabled = false;
     setTimeout(() => { dataRefreshBtn.textContent = 'Refresh site data'; }, 1500);
   };
   s.onerror = () => {
-    showError('<strong>Could not reload js/data.js</strong> (script failed to load).');
+    showError('<strong>Could not reload map/data.js</strong> (script failed to load).');
     dataRefreshBtn.textContent = 'Refresh site data';
     dataRefreshBtn.disabled = false;
   };
@@ -440,8 +545,8 @@ try {
   }
 } catch (err) {
   showError(
-    `<strong>Could not load js/data.js</strong> (${escapeHtml(err.message)}). ` +
-    `It should sit at js/data.js, alongside index.html, and define <code>window.MAP_DATA</code>.`
+    `<strong>Could not load map/data.js</strong> (${escapeHtml(err.message)}). ` +
+    `It should sit at map/data.js, alongside map.html, and define <code>window.MAP_DATA</code>.`
   );
 }
 </script>
