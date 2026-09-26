@@ -1455,6 +1455,21 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "illahee-town-dock",
+      "name": "Illahee Town Dock",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/illahee-town-dock.md",
+      "site": {
+        "lat": 47.612796,
+        "lon": -122.593710
+      },
+      "entry": {
+        "lat": 47.612637,
+        "lon": -122.596508
+      }
+    },
+    {
       "slug": "kayak-point",
       "name": "Kayak Point County Park",
       "region": "puget-sound",
