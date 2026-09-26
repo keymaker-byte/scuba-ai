@@ -1440,6 +1440,21 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "illahee-state-park",
+      "name": "Illahee State Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/illahee-state-park.md",
+      "site": {
+        "lat": 47.600492,
+        "lon": -122.593673
+      },
+      "entry": {
+        "lat": 47.599895,
+        "lon": -122.596167
+      }
+    },
+    {
       "slug": "kayak-point",
       "name": "Kayak Point County Park",
       "region": "puget-sound",
