@@ -88,6 +88,13 @@
   .leaflet-popup-content .type-badge.type-boat { background: #ea580c; }
   .leaflet-popup-content .type-badge.type-entry { background: #1e3a8a; }
   .leaflet-popup-content .type-badge.type-parking { background: #0284c7; }
+  .leaflet-popup-content .popup-share-btn {
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+    width: 100%; box-sizing: border-box; margin-top: 8px; padding: 5px 8px;
+    border: 1px solid #ccc; border-radius: 4px; font-size: 12px; background: #f3f4f6; cursor: pointer;
+  }
+  .leaflet-popup-content .popup-share-btn svg { flex-shrink: 0; }
+  .leaflet-popup-content .popup-share-btn:hover { background: #e5e7eb; }
 
   #content-modal-overlay {
     display: none; position: fixed; inset: 0; z-index: 3000;
@@ -447,7 +454,12 @@ function parkingMarker(site) {
   m.bindPopup(
     `<span class="type-badge type-parking">Parking</span>` +
     `<div class="popup-row"><span class="popup-label">Region</span>${regionLink(site)}</div>` +
-    `<div class="popup-row"><span class="popup-label">Site</span><strong>${siteLink(site)}</strong></div>`
+    `<div class="popup-row"><span class="popup-label">Site</span><strong>${siteLink(site)}</strong></div>` +
+    `<button type="button" class="popup-share-btn" data-lat="${site.parking.lat}" data-lon="${site.parking.lon}" ` +
+    `data-label="${escapeHtml(site.name + ' parking')}">` +
+    `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ` +
+    `stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7.5 7.5L12 3l4.5 4.5"/>` +
+    `<path d="M5 12v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg> Share location&hellip;</button>`
   );
   return m;
 }
@@ -536,6 +548,30 @@ document.addEventListener('click', (e) => {
   if (!link) return;
   e.preventDefault();
   openContentModal(link.dataset.path, link.dataset.title);
+});
+
+// Hands the parking coordinate off to whatever the OS offers (Maps, a
+// messaging app, CarPlay/Android Auto, etc.) via the native share sheet.
+// This map never computes or displays directions itself.
+async function shareParkingLocation(lat, lon, label) {
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: label, text: label, url: mapsUrl });
+      return;
+    } catch (err) {
+      if (err && err.name === 'AbortError') return; // user dismissed the share sheet
+      // fall through to the new-tab fallback below
+    }
+  }
+  window.open(mapsUrl, '_blank', 'noopener');
+}
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.popup-share-btn');
+  if (!btn) return;
+  e.preventDefault();
+  shareParkingLocation(btn.dataset.lat, btn.dataset.lon, btn.dataset.label);
 });
 
 modalCloseBtn.addEventListener('click', closeContentModal);
