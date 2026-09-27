@@ -5,7 +5,9 @@ The most challenging and celebrated dive on Bonaire's east coast, entered off th
 | | |
 |---|---|
 | **Location** | East coast, Bonaire, at the mouth of Lac Bay |
-| **Coordinates** | 12.10191, -68.221214 (dive area, about 6 m); entry at 12.102942, -68.222018, near the conch shell boat ramp at the mouth of Lac Bay |
+| **Coordinates** | 12.10191, -68.221214 (dive area, about 6 m) |
+| **Parking coordinates** | 12.102942, -68.222018, near the conch shell boat ramp at the mouth of Lac Bay |
+| **Entry point coordinates** | 12.102627, -68.221675 |
 | **Type** | Shore |
 | **Depth range** | 9 to 30 m |
 | **Skill level** | Advanced, a local guide is required |

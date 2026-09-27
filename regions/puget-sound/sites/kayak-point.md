@@ -5,7 +5,9 @@ Kayak Point County Park sits on the east shore of Port Susan, a bay of Puget Sou
 | | |
 |---|---|
 | **Location** | Stanwood, WA. East shore of Port Susan, Snohomish County |
-| **Coordinates** | Dive area 48.1360, -122.3695 (seabed about 28 m below MLLW), about 111 m from the entry on a bearing of 277°. Entry off the beach at 48.135886, -122.368013 |
+| **Coordinates** | Dive area 48.1360, -122.3695 (seabed about 28 m below MLLW), about 120 m from the entry on a bearing of 265° |
+| **Parking coordinates** | 48.136423, -122.366173, the day-use lot |
+| **Entry point coordinates** | 48.136101, -122.367890, off the beach |
 | **Type** | Shore |
 | **Depth range** | 0 m at the beach to over 30 m below MLLW, reached within roughly 150 m of the entry |
 | **Skill level** | All divers |

@@ -5,7 +5,9 @@ An active industrial pier where Cargill loads salt from the adjacent salt works,
 | | |
 |---|---|
 | **Location** | Southwest coast, Bonaire, at the Cargill salt works |
-| **Coordinates** | 12.08329, -68.28377 (about 16 m); entry at 12.083581, -68.281869 |
+| **Coordinates** | 12.08329, -68.28377 (about 16 m) |
+| **Parking coordinates** | 12.083581, -68.281869 |
+| **Entry point coordinates** | 12.083413, -68.282025 |
 | **Type** | Shore |
 | **Depth range** | 4 to 15 m |
 | **Skill level** | Beginner |

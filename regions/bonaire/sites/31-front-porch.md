@@ -5,7 +5,9 @@ An easy dive at the old Sunset Beach Resort, entered from shore just north of th
 | | |
 |---|---|
 | **Location** | West coast, Bonaire, at the old Sunset Beach Resort, near Eden Beach |
-| **Coordinates** | 12.164287, -68.287636 (dive area, reef edge and the deep zone beyond); entry at 12.16432, -68.28717, the beach at the old Sunset Beach Resort |
+| **Coordinates** | 12.164287, -68.287636 (dive area, reef edge and the deep zone beyond) |
+| **Parking coordinates** | 12.164754, -68.286692, at Eden Beach |
+| **Entry point coordinates** | 12.164487, -68.287164 |
 | **Type** | Shore |
 | **Depth range** | 6 to 25 m, the tugboat wreck deeper still |
 

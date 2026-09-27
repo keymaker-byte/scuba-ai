@@ -5,16 +5,18 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 | | |
 |---|---|
 | **Location** | Bainbridge Island and Suquamish, WA. Agate Passage, between Puget Sound's main basin and Port Madison |
-| **Coordinates** | Dive site 47.7124, -122.5661 (seabed 9.2 m below MLLW, at the bridge pylons); entry at 47.711832, -122.563798, the Reitan Road pulloff on the Bainbridge Island side, under the bridge |
+| **Coordinates** | Dive site 47.7124, -122.5661 (seabed 9.2 m below MLLW, at the bridge pylons) |
+| **Parking coordinates** | 47.711761, -122.563847, under the power line near Reitan Road |
+| **Entry point coordinates** | 47.711983, -122.563831, under the bridge |
 | **Type** | Shore |
 | **Depth range** | Roughly 7 to 10 m below MLLW along the channel, shallowest toward Suquamish and deepest at the bridge |
 | **Skill level** | Intermediate for a slack dive at the bridge or along the Bainbridge shore; advanced for the full drift across the channel to the Suquamish exit |
 
 ## Getting there
 
-* **Entry, Bainbridge side.** SR 305 crosses the pass on the Agate Pass Bridge. Just east of the bridge on the Bainbridge Island side, Reitan Road leaves the highway; its own road end is dense brush over a steep bank with no shore access, but a narrow gap under the PSE power lines near the bridge supports, reached shortly after leaving SR 305, gets a diver to the water. This is the put-in for the bridge dive and for the classic ebb drift.
-* **Entry, Suquamish side.** Old Man House Park, on Division Avenue in Suquamish, sits at the north end of the pass and is the take-out for the drift. It also works as its own, gentler entry, since current here runs markedly weaker than at the bridge.
-* **Parking.** Space for one or two cars only under the power line on the Bainbridge side. Old Man House Park has a proper lot. A one way drift needs either two vehicles, one staged at each end, or a non-diving driver to shuttle between them; a live boat can also run pickup.
+* **Entry.** SR 305 crosses the pass on the Agate Pass Bridge. Just east of the bridge on the Bainbridge Island side, Reitan Road leaves the highway; its own road end is dense brush over a steep bank with no shore access, but a narrow gap under the PSE power lines near the bridge supports, reached shortly after leaving SR 305, gets a diver to the water. This is the put-in for the bridge dive and for the classic ebb drift.
+* **Take-out, Suquamish side.** Old Man House Park, on Division Avenue in Suquamish, sits at the north end of the pass and is the take-out for the drift.
+* **Parking.** Space for one or two cars only under the power line on the Bainbridge side. A one way drift needs either two vehicles, one staged at each end (the second at Old Man House Park), or a non-diving driver to shuttle between them; a live boat can also run pickup.
 * **Access.** Shore access at both ends is open during daylight hours. Old Man House Park is Suquamish Tribe land and a day use park.
 * **Facilities.** None on the Bainbridge side. Old Man House Park has picnic tables and a restroom in season.
 

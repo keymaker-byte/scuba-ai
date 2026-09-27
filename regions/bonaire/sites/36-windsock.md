@@ -5,7 +5,9 @@ A sandy beach with shaded patches, a favourite for a post-dive picnic, fronting 
 | | |
 |---|---|
 | **Location** | South of Kralendijk, Bonaire, at Grand Windsock Resort |
-| **Coordinates** | 12.128741, -68.286613 (about 19 m); entry at 12.130388, -68.284578 |
+| **Coordinates** | 12.128741, -68.286613 (about 19 m) |
+| **Parking coordinates** | 12.130388, -68.284578 |
+| **Entry point coordinates** | 12.130446, -68.284777 |
 | **Type** | Shore |
 | **Depth range** | 6 to 25 m |
 | **Skill level** | Beginner |

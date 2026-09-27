@@ -5,7 +5,9 @@ Suquamish Dock is a long public dock and boat ramp on the Suquamish waterfront, 
 | | |
 |---|---|
 | **Location** | Suquamish, WA. Port Madison, Kitsap Peninsula, on the Port Madison Indian Reservation |
-| **Coordinates** | Dive site 47.7291, -122.5490 (seabed 5.3 m below MLLW, off the end of the dock); entry at 47.7290, -122.5518, the Suquamish boat ramp on Suquamish Way NE, next to the dock |
+| **Coordinates** | Dive site 47.7291, -122.5490 (seabed 5.3 m below MLLW, off the end of the dock) |
+| **Parking coordinates** | 47.729221, -122.551809, across the road on Suquamish Way NE |
+| **Entry point coordinates** | 47.729010, -122.551825, the Suquamish boat ramp, next to the dock |
 | **Type** | Shore |
 | **Depth range** | Roughly 2 to 9 m below MLLW near the dock, on a gently sloping sand bottom that deepens further out into the bay |
 | **Skill level** | Beginner and up |

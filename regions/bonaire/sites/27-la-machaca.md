@@ -5,7 +5,9 @@ The house reef at Captain Don's Habitat, and a chance for a novice diver to do a
 | | |
 |---|---|
 | **Location** | West coast, Bonaire, off Captain Don's Habitat |
-| **Coordinates** | 12.171976, -68.2898 (dive area, about 7 m); entry at 12.172326, -68.289063, Captain Don's Habitat's dedicated diver pier and ladder |
+| **Coordinates** | 12.171976, -68.2898 (dive area, about 7 m) |
+| **Parking coordinates** | 12.172232, -68.288451 |
+| **Entry point coordinates** | 12.172321, -68.289111, Captain Don's Habitat's dedicated diver pier and ladder |
 | **Type** | Shore |
 | **Depth range** | 6 to 23 m |
 | **Skill level** | Beginner, including a first wreck dive |

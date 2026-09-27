@@ -5,7 +5,9 @@ Shore dive on the southwest side of Alki Point in West Seattle, off Constellatio
 | | |
 |---|---|
 | **Location** | West Seattle, WA. Southwest side of Alki Point, facing the main basin of Puget Sound |
-| **Coordinates** | Dive site 47.57219, -122.42109 (seabed about 18 m below MLLW); entry at 47.574617, -122.418224, the pump station off the south end of 63rd Avenue SW; Alki Point lies about 0.4 km northwest |
+| **Coordinates** | Dive site 47.569906, -122.416610 (seabed 11.9 m below MLLW, at the end of the pipe); Alki Point lies about 0.7 km northwest |
+| **Parking coordinates** | 47.572746, -122.414088, on the street along Beach Drive SW |
+| **Entry point coordinates** | 47.572449, -122.413841, the beach in front of the pump station |
 | **Type** | Shore |
 | **Depth range** | Roughly 8 to 12 m below MLLW; shallow throughout |
 | **Skill level** | All divers |
@@ -35,7 +37,7 @@ Currents here are light to moderate, and the site dives easily inside the point,
 
 | | |
 |---|---|
-| **Governing station** | NOAA Alki Point, West of (PUG1516), about 0.7 km northwest off the point |
+| **Governing station** | NOAA Alki Point, West of (PUG1516), about 1.1 km northwest |
 | **Recommended bin** | bin 17, at 11.5 m, which matches the working depth. The deeper published bins (31 m, 59 m) sit in the channel, below anything dived here |
 | **Time offset** | Not firmly established; the station sits off the point and the point speeds the flow nearby, so treat its slack as approximate and give it margin |
 | **Flood axis** | south-southwest, 215° |
@@ -51,7 +53,7 @@ The site is shallow the whole way, sloping gradually from the shallows at the re
 
 | | |
 |---|---|
-| **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 6.9 km northeast |
+| **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 6.8 km northeast |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m |
 

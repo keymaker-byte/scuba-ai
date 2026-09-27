@@ -5,7 +5,9 @@ Illahee State Park sits on the Kitsap Peninsula's east shore in Bremerton, on th
 | | |
 |---|---|
 | **Location** | Bremerton, Washington. East shore of the Kitsap Peninsula, on the Port Orchard reach across from Bainbridge Island |
-| **Coordinates** | Dive site 47.600492, -122.593673 (seabed 13.6 m below MLLW), about 200 m out past the pier and its pilings. Entry at 47.599895, -122.596167, the stairs beside the fishing pier at the boat launch and pier day use area |
+| **Coordinates** | Dive site 47.600492, -122.593673 (seabed 13.6 m below MLLW), about 170 m out past the pier and its pilings |
+| **Parking coordinates** | 47.599929, -122.596200, the boat launch and pier day use area lot |
+| **Entry point coordinates** | 47.599640, -122.595569, the stairs beside the fishing pier |
 | **Type** | Shore |
 | **Depth range** | 0 to about 13.6 m below MLLW along the pier and the sand slope normally worked past the pilings; the same bottom keeps dropping beyond that, reaching roughly 25 to 30 m within another 100 to 200 m, well outside the area normally dived |
 | **Skill level** | All divers |

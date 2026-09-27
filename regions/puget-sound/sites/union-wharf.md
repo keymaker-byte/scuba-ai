@@ -5,7 +5,9 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 | | |
 |---|---|
 | **Location** | Port Townsend, WA. Port Townsend Bay, on the downtown waterfront |
-| **Coordinates** | 48.11189, -122.75435 (11.6 m below MLLW), off the abandoned ferry pier and its four pylons, northeast of the current wharf. Entry near 48.114285, -122.754999, at the foot of Adams Street |
+| **Coordinates** | 48.11189, -122.75435 (11.6 m below MLLW), off the abandoned ferry pier and its four pylons, northeast of the current wharf |
+| **Parking coordinates** | 48.114982, -122.755759, on the street along Water Street and Adams Street |
+| **Entry point coordinates** | 48.114344, -122.755067, the beach at the foot of Adams Street |
 | **Type** | Shore |
 | **Depth range** | 0 m at the beach to about 11.6 m below MLLW off the pylons; the water off the current, smaller Union Wharf runs shallower, about 5 to 8 m below MLLW |
 | **Skill level** | Intermediate |

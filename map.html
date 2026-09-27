@@ -41,6 +41,7 @@
   }
   #panel .section { margin-bottom: 10px; }
   #panel .swatch { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 6px; border: 1px solid rgba(0,0,0,0.3); vertical-align: middle; }
+  #panel .swatch.swatch-icon { width: 15px; height: 15px; margin-right: 4px; border-radius: 0; border: none; }
   #panel .hint { color: #555; font-size: 12px; margin-bottom: 2px; }
   #coord-readout { font-family: SFMono-Regular, Consolas, monospace; cursor: text; }
   #coord-copy {
@@ -80,12 +81,13 @@
     text-transform: uppercase; letter-spacing: 0.03em; color: #6b7280;
   }
   .leaflet-popup-content .type-badge {
-    display: inline-block; margin-top: 5px; padding: 2px 9px; border-radius: 999px;
+    display: inline-block; margin-bottom: 5px; padding: 2px 9px; border-radius: 999px;
     font-size: 11px; font-weight: 600; color: #fff;
   }
   .leaflet-popup-content .type-badge.type-shore { background: #2563eb; }
   .leaflet-popup-content .type-badge.type-boat { background: #ea580c; }
   .leaflet-popup-content .type-badge.type-entry { background: #1e3a8a; }
+  .leaflet-popup-content .type-badge.type-parking { background: #0284c7; }
 
   #content-modal-overlay {
     display: none; position: fixed; inset: 0; z-index: 3000;
@@ -102,7 +104,10 @@
     padding: 14px 18px; border-bottom: 1px solid #e5e7eb; flex-shrink: 0;
   }
   #content-modal-header h2 { font-size: 16px; margin: 0; }
-  #content-modal-header .links { font-size: 12px; color: #555; }
+  #content-modal-header h2 a { color: #1d4ed8; text-decoration: none; }
+  #content-modal-header h2 a:hover { text-decoration: underline; }
+  #content-modal-header h2 .breadcrumb-sep { margin: 0 6px; color: #9ca3af; font-weight: 400; }
+  #content-modal-header .links { display: flex; align-items: center; gap: 14px; font-size: 12px; color: #555; }
   #content-modal-header .links a { color: #1d4ed8; }
   #content-modal-close {
     border: none; background: #f3f4f6; border-radius: 6px; cursor: pointer;
@@ -163,12 +168,25 @@
     </div>
 
     <div class="section">
-      <label><input type="checkbox" id="toggle-shore" checked>
-        <span class="swatch" style="background:#2563eb"></span>Shore dive sites</label>
       <label><input type="checkbox" id="toggle-boat" checked>
         <span class="swatch" style="background:#ea580c"></span>Boat dive sites</label>
+      <label><input type="checkbox" id="toggle-shore" checked>
+        <span class="swatch" style="background:#2563eb"></span>Shore dive sites</label>
       <label><input type="checkbox" id="toggle-entry" checked>
-        <span class="swatch" style="background:#1e3a8a"></span>Shore entry points</label>
+        <svg class="swatch swatch-icon" width="15" height="15" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="11" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+          <path d="M12 5v7" stroke="#1e3a8a" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M8.7 9.3L12 12.6l3.3-3.3" fill="none" stroke="#1e3a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 14.3c1.4-1.3 2.9-1.3 4.3 0s2.9 1.3 4.3 0 2.9-1.3 4.3 0 2.9 1.3 4.3 0" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M4 17.8c1.4-1.3 2.9-1.3 4.3 0s2.9 1.3 4.3 0 2.9-1.3 4.3 0 2.9 1.3 4.3 0" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>Entry points (shore dives)</label>
+      <label><input type="checkbox" id="toggle-parking" checked>
+        <svg class="swatch swatch-icon" width="15" height="15" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="11" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+          <path d="M5.5 12.5l1.1-3.3A2 2 0 0 1 8.5 7.8h7a2 2 0 0 1 1.9 1.4l1.1 3.3h.5a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1h-.6a1.8 1.8 0 1 1-3.6 0H9.2a1.8 1.8 0 1 1-3.6 0H5a1 1 0 0 1-1-1v-2.5a1 1 0 0 1 1-1h.5z" fill="#0284c7"/>
+          <circle cx="8.4" cy="15.8" r="1.3" fill="#1e293b"/>
+          <circle cx="15.6" cy="15.8" r="1.3" fill="#1e293b"/>
+        </svg>Parking (shore dives)</label>
     </div>
 
     <div class="section">
@@ -223,7 +241,33 @@ const COLORS = {
   shoreSite: "#2563eb",
   boatSite: "#ea580c",
   entry: "#1e3a8a",
+  parking: "#0284c7",
 };
+
+const parkingIcon = L.divIcon({
+  className: 'parking-icon',
+  html: `<svg width="20" height="20" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="11" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <path d="M5.5 12.5l1.1-3.3A2 2 0 0 1 8.5 7.8h7a2 2 0 0 1 1.9 1.4l1.1 3.3h.5a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1h-.6a1.8 1.8 0 1 1-3.6 0H9.2a1.8 1.8 0 1 1-3.6 0H5a1 1 0 0 1-1-1v-2.5a1 1 0 0 1 1-1h.5z" fill="${COLORS.parking}"/>
+    <circle cx="8.4" cy="15.8" r="1.3" fill="#1e293b"/>
+    <circle cx="15.6" cy="15.8" r="1.3" fill="#1e293b"/>
+  </svg>`,
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+});
+
+const entryIcon = L.divIcon({
+  className: 'entry-icon',
+  html: `<svg width="20" height="20" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="11" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <path d="M12 5v7" stroke="${COLORS.entry}" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M8.7 9.3L12 12.6l3.3-3.3" fill="none" stroke="${COLORS.entry}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4 14.3c1.4-1.3 2.9-1.3 4.3 0s2.9 1.3 4.3 0 2.9-1.3 4.3 0 2.9 1.3 4.3 0" fill="none" stroke="${COLORS.entry}" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M4 17.8c1.4-1.3 2.9-1.3 4.3 0s2.9 1.3 4.3 0 2.9-1.3 4.3 0 2.9 1.3 4.3 0" fill="none" stroke="${COLORS.entry}" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>`,
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+});
 
 const PANEL_COLLAPSE_KEY = 'diveMapPanelCollapsed';
 const panelEl = document.getElementById('panel');
@@ -249,6 +293,17 @@ panelToggleBtn.addEventListener('click', () => setPanelCollapsed(!panelEl.classL
 
 const map = L.map('map', { worldCopyJump: true, zoomControl: false }).setView([20, -60], 3);
 L.control.zoom({ position: 'topright' }).addTo(map);
+
+// Stacking order where pins overlap on screen: parking lowest, then entry,
+// then shore dives, then boat dives on top. Leaflet's default markerPane
+// (z-index 600) always sits above overlayPane (z-index 400) regardless of
+// add order, which is why the parking icon (an L.marker) was floating above
+// the circleMarker pins (in overlayPane) no matter what. Explicit panes with
+// their own z-index give each pin type a fixed, order-independent layer.
+map.createPane('paneParking'); map.getPane('paneParking').style.zIndex = 410;
+map.createPane('paneEntry');   map.getPane('paneEntry').style.zIndex = 420;
+map.createPane('paneShore');   map.getPane('paneShore').style.zIndex = 430;
+map.createPane('paneBoat');    map.getPane('paneBoat').style.zIndex = 440;
 
 const VIEW_STORAGE_KEY = 'diveMapView';
 let restoredView = false;
@@ -367,23 +422,32 @@ function siteMarker(site) {
   const badgeLabel = site.type === 'shore' ? 'Shore dive' : 'Boat dive';
   const m = L.circleMarker([site.site.lat, site.site.lon], {
     radius: 7, color: '#fff', weight: 1.5, fillColor: color, fillOpacity: 0.9,
+    pane: site.type === 'shore' ? 'paneShore' : 'paneBoat',
   });
   m.bindPopup(
-    `<div class="popup-row"><span class="popup-label">Site</span><strong>${siteLink(site)}</strong></div>` +
+    `<span class="type-badge ${badgeClass}">${badgeLabel}</span>` +
     `<div class="popup-row"><span class="popup-label">Region</span>${regionLink(site)}</div>` +
-    `<span class="type-badge ${badgeClass}">${badgeLabel}</span>`
+    `<div class="popup-row"><span class="popup-label">Site</span><strong>${siteLink(site)}</strong></div>`
   );
   return m;
 }
 
 function entryMarker(site) {
-  const m = L.circleMarker([site.entry.lat, site.entry.lon], {
-    radius: 6, color: '#fff', weight: 1.5, fillColor: COLORS.entry, fillOpacity: 0.95,
-  });
+  const m = L.marker([site.entry.lat, site.entry.lon], { icon: entryIcon, pane: 'paneEntry' });
   m.bindPopup(
-    `<div class="popup-row"><span class="popup-label">Site</span><strong>${siteLink(site)}</strong></div>` +
+    `<span class="type-badge type-entry">Entry point</span>` +
     `<div class="popup-row"><span class="popup-label">Region</span>${regionLink(site)}</div>` +
-    `<span class="type-badge type-entry">Entry point</span>`
+    `<div class="popup-row"><span class="popup-label">Site</span><strong>${siteLink(site)}</strong></div>`
+  );
+  return m;
+}
+
+function parkingMarker(site) {
+  const m = L.marker([site.parking.lat, site.parking.lon], { icon: parkingIcon, pane: 'paneParking' });
+  m.bindPopup(
+    `<span class="type-badge type-parking">Parking</span>` +
+    `<div class="popup-row"><span class="popup-label">Region</span>${regionLink(site)}</div>` +
+    `<div class="popup-row"><span class="popup-label">Site</span><strong>${siteLink(site)}</strong></div>`
   );
   return m;
 }
@@ -433,8 +497,16 @@ function contentRendererFor(basePath) {
   return renderer;
 }
 
+function modalTitleHtml(path, title) {
+  const site = allSites.find(s => s.file === path);
+  if (!site) return escapeHtml(title);
+  const region = regionInfo(site.region);
+  return `<a href="#" class="content-link" data-path="${escapeHtml(region.file)}" data-title="${escapeHtml(region.name)}">${escapeHtml(region.name)}</a>` +
+    `<span class="breadcrumb-sep">&rsaquo;</span>${escapeHtml(title)}`;
+}
+
 function openContentModal(path, title) {
-  modalTitle.textContent = title;
+  modalTitle.innerHTML = modalTitleHtml(path, title);
   modalSource.innerHTML = `<a href="${encodeURI(path)}" target="_blank" rel="noopener">Open raw file</a>`;
   modalBody.innerHTML = '<div id="content-modal-loading">Loading&hellip;</div>';
   modalOverlay.style.display = 'flex';
@@ -478,18 +550,20 @@ let allSites = [];
 const shoreLayer = L.layerGroup().addTo(map);
 const boatLayer = L.layerGroup().addTo(map);
 const entryLayer = L.layerGroup().addTo(map);
+const parkingLayer = L.layerGroup().addTo(map);
 
 const searchInput = document.getElementById('search');
 const regionSelect = document.getElementById('region-filter');
 const toggleShore = document.getElementById('toggle-shore');
 const toggleBoat = document.getElementById('toggle-boat');
 const toggleEntry = document.getElementById('toggle-entry');
+const toggleParking = document.getElementById('toggle-parking');
 const toggleSatellite = document.getElementById('toggle-satellite');
 const toggleDepthContoursNoaa = document.getElementById('toggle-depth-contours-noaa');
 const toggleDepthContoursEmodnet = document.getElementById('toggle-depth-contours-emodnet');
 const countEl = document.getElementById('count');
 
-toggleSatellite.addEventListener('change', () => {
+function applySatelliteToggle() {
   if (toggleSatellite.checked) {
     map.removeLayer(defaultLayer);
     map.addLayer(satelliteLayer);
@@ -497,23 +571,73 @@ toggleSatellite.addEventListener('change', () => {
     map.removeLayer(satelliteLayer);
     map.addLayer(defaultLayer);
   }
-});
-
-toggleDepthContoursNoaa.addEventListener('change', () => {
+}
+function applyNoaaContourToggle() {
   if (toggleDepthContoursNoaa.checked) {
     map.addLayer(noaaContourLayer);
   } else {
     map.removeLayer(noaaContourLayer);
   }
-});
-
-toggleDepthContoursEmodnet.addEventListener('change', () => {
+}
+function applyEmodnetContourToggle() {
   if (toggleDepthContoursEmodnet.checked) {
     map.addLayer(emodnetContourLayer);
   } else {
     map.removeLayer(emodnetContourLayer);
   }
-});
+}
+toggleSatellite.addEventListener('change', applySatelliteToggle);
+toggleDepthContoursNoaa.addEventListener('change', applyNoaaContourToggle);
+toggleDepthContoursEmodnet.addEventListener('change', applyEmodnetContourToggle);
+
+// Menu state (search, region filter, every toggle) survives a page refresh,
+// the same way the map's own position and zoom already do.
+const MENU_STATE_KEY = 'diveMapMenuState';
+const persistedControls = {
+  search: searchInput,
+  region: regionSelect,
+  shore: toggleShore,
+  boat: toggleBoat,
+  entry: toggleEntry,
+  parking: toggleParking,
+  satellite: toggleSatellite,
+  contoursNoaa: toggleDepthContoursNoaa,
+  contoursEmodnet: toggleDepthContoursEmodnet,
+};
+
+function saveMenuState() {
+  try {
+    const state = {};
+    for (const [key, el] of Object.entries(persistedControls)) {
+      state[key] = el.type === 'checkbox' ? el.checked : el.value;
+    }
+    localStorage.setItem(MENU_STATE_KEY, JSON.stringify(state));
+  } catch (err) { /* localStorage unavailable */ }
+}
+
+let savedMenuState = null;
+try {
+  savedMenuState = JSON.parse(localStorage.getItem(MENU_STATE_KEY) || 'null');
+} catch (err) { /* localStorage unavailable or corrupt */ }
+
+if (savedMenuState) {
+  searchInput.value = savedMenuState.search || '';
+  toggleShore.checked = !!savedMenuState.shore;
+  toggleBoat.checked = !!savedMenuState.boat;
+  toggleEntry.checked = !!savedMenuState.entry;
+  toggleParking.checked = !!savedMenuState.parking;
+  toggleSatellite.checked = !!savedMenuState.satellite;
+  toggleDepthContoursNoaa.checked = !!savedMenuState.contoursNoaa;
+  toggleDepthContoursEmodnet.checked = !!savedMenuState.contoursEmodnet;
+  // region-filter's own options don't exist yet; restored once they're built, below.
+  applySatelliteToggle();
+  applyNoaaContourToggle();
+  applyEmodnetContourToggle();
+}
+
+for (const [key, el] of Object.entries(persistedControls)) {
+  el.addEventListener(key === 'search' ? 'input' : 'change', saveMenuState);
+}
 
 const coordReadout = document.getElementById('coord-readout');
 const coordCopyBtn = document.getElementById('coord-copy');
@@ -556,10 +680,11 @@ function rebuild() {
   shoreLayer.clearLayers();
   boatLayer.clearLayers();
   entryLayer.clearLayers();
+  parkingLayer.clearLayers();
 
   const query = searchInput.value.trim().toLowerCase();
   const region = regionSelect.value;
-  let shownSites = 0, shownEntries = 0;
+  let shownSites = 0, shownEntries = 0, shownParking = 0;
 
   for (const site of allSites) {
     if (region && site.region !== region) continue;
@@ -572,18 +697,22 @@ function rebuild() {
       siteMarker(site).addTo(boatLayer);
       shownSites++;
     }
-    if (site.entry && toggleEntry.checked && (!region || site.region === region) &&
-        (!query || site.name.toLowerCase().includes(query))) {
+    if (site.entry && toggleEntry.checked) {
       entryMarker(site).addTo(entryLayer);
       shownEntries++;
     }
+    if (site.parking && toggleParking.checked) {
+      parkingMarker(site).addTo(parkingLayer);
+      shownParking++;
+    }
   }
   countEl.textContent = `${shownSites} site${shownSites === 1 ? '' : 's'} shown` +
+    (shownParking ? `, ${shownParking} parking spot${shownParking === 1 ? '' : 's'}` : '') +
     (shownEntries ? `, ${shownEntries} entry point${shownEntries === 1 ? '' : 's'}` : '');
 }
 
 [searchInput].forEach(el => el.addEventListener('input', rebuild));
-[regionSelect, toggleShore, toggleBoat, toggleEntry].forEach(el => el.addEventListener('change', rebuild));
+[regionSelect, toggleShore, toggleBoat, toggleEntry, toggleParking].forEach(el => el.addEventListener('change', rebuild));
 
 function refreshRegionOptions() {
   const previous = regionSelect.value;
@@ -643,6 +772,9 @@ try {
     opt.value = slug;
     opt.textContent = regionInfo(slug).name;
     regionSelect.appendChild(opt);
+  }
+  if (savedMenuState && savedMenuState.region && regionSlugs.includes(savedMenuState.region)) {
+    regionSelect.value = savedMenuState.region;
   }
 
   rebuild();

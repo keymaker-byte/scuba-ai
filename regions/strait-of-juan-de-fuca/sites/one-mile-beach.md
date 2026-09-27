@@ -5,7 +5,9 @@ One Mile Beach is a shore dive on the Strait of Juan de Fuca about a mile west o
 | | |
 |---|---|
 | **Location** | Sekiu, Clallam County, WA. South shore of the Strait of Juan de Fuca, about 1.6 km (1 mile) west of the Sekiu boat launch |
-| **Coordinates** | Dive site 48.27378, -124.31724 (seabed about 12.1 m below MLLW), the rock and kelp ledge before the bottom drops away; entry at 48.271936, -124.316764, where the railroad grade trail comes down onto the beach |
+| **Coordinates** | Dive site 48.27378, -124.31724 (seabed about 12.1 m below MLLW), the rock and kelp ledge before the bottom drops away |
+| **Parking coordinates** | 48.266619, -124.299257, the Sekiu boat launch |
+| **Entry point coordinates** | 48.271908, -124.316772, where the railroad grade trail comes down onto the beach |
 | **Type** | Shore |
 | **Depth range** | About 2 to 20 m below MLLW on the rock and kelp ground, dropping away rapidly beyond |
 | **Skill level** | Advanced |

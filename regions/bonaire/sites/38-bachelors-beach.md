@@ -5,7 +5,9 @@ A small white sand beach in Belnem, about 5 km southwest of Kralendijk, at the b
 | | |
 |---|---|
 | **Location** | Belnem, Bonaire, about 5 km southwest of Kralendijk |
-| **Coordinates** | 12.125899, -68.288135 (dive area, about 4 m); entry at 12.125443, -68.287218, the seven step limestone stairway, about 800 m south of the airport |
+| **Coordinates** | 12.125899, -68.288135 (dive area, about 4 m), about 800 m south of the airport |
+| **Parking coordinates** | 12.125443, -68.287218 |
+| **Entry point coordinates** | 12.125500, -68.287336, the bottom of the seven step limestone stairway |
 | **Type** | Shore |
 | **Depth range** | 5 to 30 m |
 

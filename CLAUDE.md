@@ -105,11 +105,12 @@ A site file also needs an entry in `map/data.js`, the index `map.html` draws its
   "type": "shore" or "boat",
   "file": "regions/<region>/sites/<slug>.md",
   "site": { "lat": <dive site latitude>, "lon": <dive site longitude> },
+  "parking": { "lat": <parking latitude>, "lon": <parking longitude> } or null,
   "entry": { "lat": <entry latitude>, "lon": <entry longitude> } or null
 }
 ```
 
-`site` is the dive site's own coordinate, the same one in the file's Coordinates row, never the entry point. `type` is `"shore"` or `"boat"`, lowercased from the file's Type row. `entry` is only set when the site is shore-accessed and the Coordinates row gives a separate entry coordinate; leave it `null` for a boat-only site or a shore site with no separate entry coordinate on file. Keep this file current.
+`site` is the dive site's own coordinate, the same one in the file's Coordinates row, never the parking or the entry point. `type` is `"shore"` or `"boat"`, lowercased from the file's Type row. `parking` and `entry` come from the file's own Parking coordinates and Entry point coordinates rows; both are shore-only, `null` for a boat-only site. Keep this file current.
 
 A coordinate handed to you for a new site is a first reference. Check its seabed depth before writing anything; a point mid-channel or off the drop is not the dive. If it is too deep, or off the divable slope, walk it toward shore and re-check, comparing candidate depths against the source description (a guidebook, community reports, the site's own terrain narrative) until the coordinate's depth matches what is actually described as being dived. It also has to stay inside the coverage of the region's spatial current model, where it has one: extracting a prediction at the coordinate reports whether the point landed inside the model's domain and how far outside it sits when it didn't, and a coordinate walked too close to shore can fall outside that coverage or snap to its boundary, which reads as near-still water rather than the site's real current. Don't walk it past that edge; if the divable depth and model coverage conflict, keep the coordinate on the covered side and note the shallower part of the dive separately. Extract the spatial current prediction and pick the governing current and tide stations against that corrected coordinate, not the original.
 

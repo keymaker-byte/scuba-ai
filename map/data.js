@@ -1,8 +1,10 @@
 // The index of every dive site's coordinates, read by map.html. A new site file
 // needs an entry here too: { slug, name, region, type ("shore" or "boat"), file,
-// site: { lat, lon }, entry: { lat, lon } or null }. `site` is the dive site's own
-// coordinate from the file's Coordinates row, never the entry point. `entry` is
-// only set for a shore site whose Coordinates row gives a separate entry coordinate.
+// site: { lat, lon }, parking: { lat, lon } or null, entry: { lat, lon } or null }.
+// `site` is the dive site's own coordinate from the file's Coordinates row, never
+// the entry or the parking. `parking` and `entry` come from the file's own Parking
+// coordinates and Entry point coordinates rows; both are shore-only, null for a
+// boat-only site.
 // A site's `region` is only a lookup key into `regions` below, never a path or a
 // label to derive from; a new region folder needs an entry here too, keyed by its
 // folder slug, giving its display name and the full path to its own steering file.
@@ -37,6 +39,10 @@ window.MAP_DATA = {
         "lon": -68.322317
       },
       "entry": {
+        "lat": 12.210819,
+        "lon": -68.321801
+      },
+      "parking": {
         "lat": 12.210771,
         "lon": -68.321427
       }
@@ -52,8 +58,12 @@ window.MAP_DATA = {
         "lon": -68.277617
       },
       "entry": {
-        "lat": 12.137806,
-        "lon": -68.276472
+        "lat": 12.138323,
+        "lon": -68.276306
+      },
+      "parking": {
+        "lat": 12.139089,
+        "lon": -68.275807
       }
     },
     {
@@ -67,6 +77,10 @@ window.MAP_DATA = {
         "lon": -68.286217
       },
       "entry": {
+        "lat": 12.099763,
+        "lon": -68.285356
+      },
+      "parking": {
         "lat": 12.099821,
         "lon": -68.285238
       }
@@ -82,6 +96,10 @@ window.MAP_DATA = {
         "lon": -68.297483
       },
       "entry": {
+        "lat": 12.188403,
+        "lon": -68.296632
+      },
+      "parking": {
         "lat": 12.188068,
         "lon": -68.296546
       }
@@ -97,6 +115,10 @@ window.MAP_DATA = {
         "lon": -68.2986
       },
       "entry": {
+        "lat": 12.191665,
+        "lon": -68.297882
+      },
+      "parking": {
         "lat": 12.191581,
         "lon": -68.297662
       }
@@ -112,6 +134,10 @@ window.MAP_DATA = {
         "lon": -68.288267
       },
       "entry": {
+        "lat": 12.103335,
+        "lon": -68.287277
+      },
+      "parking": {
         "lat": 12.10338,
         "lon": -68.28722
       }
@@ -127,6 +153,10 @@ window.MAP_DATA = {
         "lon": -68.285925
       },
       "entry": {
+        "lat": 12.098373,
+        "lon": -68.284879
+      },
+      "parking": {
         "lat": 12.09841,
         "lon": -68.284777
       }
@@ -142,6 +172,10 @@ window.MAP_DATA = {
         "lon": -68.267795
       },
       "entry": {
+        "lat": 12.044189,
+        "lon": -68.266715
+      },
+      "parking": {
         "lat": 12.044341,
         "lon": -68.266361
       }
@@ -157,6 +191,10 @@ window.MAP_DATA = {
         "lon": -68.288135
       },
       "entry": {
+        "lat": 12.1255,
+        "lon": -68.287336
+      },
+      "parking": {
         "lat": 12.125443,
         "lon": -68.287218
       }
@@ -172,6 +210,10 @@ window.MAP_DATA = {
         "lon": -68.287797
       },
       "entry": {
+        "lat": 12.167271,
+        "lon": -68.287153
+      },
+      "parking": {
         "lat": 12.167355,
         "lon": -68.286815
       }
@@ -186,7 +228,8 @@ window.MAP_DATA = {
         "lat": 12.197542,
         "lon": -68.304702
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "04-bise-morto",
@@ -199,8 +242,12 @@ window.MAP_DATA = {
         "lon": -68.414758
       },
       "entry": {
+        "lat": 12.279661,
+        "lon": -68.414086
+      },
+      "parking": {
         "lat": 12.279677,
-        "lon": -68.414000
+        "lon": -68.414
       }
     },
     {
@@ -213,7 +260,8 @@ window.MAP_DATA = {
         "lat": 12.215249,
         "lon": -68.3418
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "01-boka-bartol",
@@ -226,6 +274,10 @@ window.MAP_DATA = {
         "lon": -68.398804
       },
       "entry": {
+        "lat": 12.303201,
+        "lon": -68.398433
+      },
+      "parking": {
         "lat": 12.303096,
         "lon": -68.398304
       }
@@ -241,6 +293,10 @@ window.MAP_DATA = {
         "lon": -68.41435
       },
       "entry": {
+        "lat": 12.264879,
+        "lon": -68.413619
+      },
+      "parking": {
         "lat": 12.264696,
         "lon": -68.413442
       }
@@ -256,6 +312,10 @@ window.MAP_DATA = {
         "lon": -68.414429
       },
       "entry": {
+        "lat": 12.264486,
+        "lon": -68.413711
+      },
+      "parking": {
         "lat": 12.264696,
         "lon": -68.413442
       }
@@ -270,7 +330,8 @@ window.MAP_DATA = {
         "lat": 12.2122,
         "lon": -68.3306
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "g-bonaventure",
@@ -282,7 +343,8 @@ window.MAP_DATA = {
         "lat": 12.14535,
         "lon": -68.30445
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "29-buddys-reef",
@@ -297,6 +359,10 @@ window.MAP_DATA = {
       "entry": {
         "lat": 12.17075,
         "lon": -68.28843
+      },
+      "parking": {
+        "lat": 12.171482,
+        "lon": -68.287738
       }
     },
     {
@@ -310,6 +376,10 @@ window.MAP_DATA = {
         "lon": -68.221214
       },
       "entry": {
+        "lat": 12.102627,
+        "lon": -68.221675
+      },
+      "parking": {
         "lat": 12.102942,
         "lon": -68.222018
       }
@@ -327,6 +397,10 @@ window.MAP_DATA = {
       "entry": {
         "lat": 12.144905,
         "lon": -68.276419
+      },
+      "parking": {
+        "lat": 12.145309,
+        "lon": -68.276054
       }
     },
     {
@@ -339,7 +413,8 @@ window.MAP_DATA = {
         "lat": 12.150117,
         "lon": -68.31735
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "08-carels-vision",
@@ -351,7 +426,8 @@ window.MAP_DATA = {
         "lat": 12.235,
         "lon": -68.4135
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "v-carls-hill",
@@ -363,7 +439,8 @@ window.MAP_DATA = {
         "lat": 12.16421,
         "lon": -68.323728
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "u-ch-annex",
@@ -375,7 +452,8 @@ window.MAP_DATA = {
         "lat": 12.164597,
         "lon": -68.323728
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "39-chez-hines",
@@ -387,7 +465,8 @@ window.MAP_DATA = {
         "lat": 12.1191,
         "lon": -68.293217
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "26-cliff",
@@ -400,6 +479,10 @@ window.MAP_DATA = {
         "lon": -68.28995
       },
       "entry": {
+        "lat": 12.174198,
+        "lon": -68.290179
+      },
+      "parking": {
         "lat": 12.174476,
         "lon": -68.2899
       }
@@ -415,8 +498,12 @@ window.MAP_DATA = {
         "lon": -68.282685
       },
       "entry": {
-        "lat": 12.132712,
-        "lon": -68.28239
+        "lat": 12.132775,
+        "lon": -68.282443
+      },
+      "parking": {
+        "lat": 12.132565,
+        "lon": -68.282272
       }
     },
     {
@@ -429,7 +516,8 @@ window.MAP_DATA = {
         "lat": 12.213389,
         "lon": -68.3346
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "b-ebos-reef",
@@ -441,7 +529,8 @@ window.MAP_DATA = {
         "lat": 12.165383,
         "lon": -68.2964
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "w-ebos-special",
@@ -453,7 +542,8 @@ window.MAP_DATA = {
         "lat": 12.165783,
         "lon": -68.31925
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "n-forest",
@@ -465,7 +555,8 @@ window.MAP_DATA = {
         "lat": 12.14903,
         "lon": -68.32651
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "31-front-porch",
@@ -478,8 +569,12 @@ window.MAP_DATA = {
         "lon": -68.287636
       },
       "entry": {
-        "lat": 12.16432,
-        "lon": -68.28717
+        "lat": 12.164487,
+        "lon": -68.287164
+      },
+      "parking": {
+        "lat": 12.164754,
+        "lon": -68.286692
       }
     },
     {
@@ -492,7 +587,8 @@ window.MAP_DATA = {
         "lat": 12.1502,
         "lon": -68.323517
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "43-hilma-hooker",
@@ -505,6 +601,10 @@ window.MAP_DATA = {
         "lon": -68.28965
       },
       "entry": {
+        "lat": 12.10451,
+        "lon": -68.288146
+      },
+      "parking": {
         "lat": 12.104568,
         "lon": -68.288071
       }
@@ -520,6 +620,10 @@ window.MAP_DATA = {
         "lon": -68.28136
       },
       "entry": {
+        "lat": 12.077659,
+        "lon": -68.280271
+      },
+      "parking": {
         "lat": 12.077695,
         "lon": -68.280147
       }
@@ -535,8 +639,12 @@ window.MAP_DATA = {
         "lon": -68.2842
       },
       "entry": {
-        "lat": 12.08665,
-        "lon": -68.28265
+        "lat": 12.086629,
+        "lon": -68.282787
+      },
+      "parking": {
+        "lat": 12.086665,
+        "lon": -68.28254
       }
     },
     {
@@ -549,7 +657,8 @@ window.MAP_DATA = {
         "lat": 12.204133,
         "lon": -68.313417
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "c-jerrys-reef",
@@ -561,7 +670,8 @@ window.MAP_DATA = {
         "lat": 12.164683,
         "lon": -68.29505
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "j-joannes-sunchi",
@@ -573,7 +683,8 @@ window.MAP_DATA = {
         "lat": 12.149833,
         "lon": -68.314933
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "d-just-a-nice-dive",
@@ -585,7 +696,8 @@ window.MAP_DATA = {
         "lat": 12.148783,
         "lon": -68.296
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "19-kallis-reef",
@@ -597,7 +709,8 @@ window.MAP_DATA = {
         "lat": 12.201567,
         "lon": -68.31075
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "09-karpata",
@@ -610,6 +723,10 @@ window.MAP_DATA = {
         "lon": -68.3545
       },
       "entry": {
+        "lat": 12.219349,
+        "lon": -68.352014
+      },
+      "parking": {
         "lat": 12.219548,
         "lon": -68.351902
       }
@@ -624,7 +741,8 @@ window.MAP_DATA = {
         "lat": 12.146389,
         "lon": -68.298236
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "y-knife",
@@ -636,7 +754,8 @@ window.MAP_DATA = {
         "lat": 12.168667,
         "lon": -68.313183
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "10-la-danias-leap",
@@ -648,7 +767,8 @@ window.MAP_DATA = {
         "lat": 12.2175,
         "lon": -68.3495
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "27-la-machaca",
@@ -661,8 +781,12 @@ window.MAP_DATA = {
         "lon": -68.2898
       },
       "entry": {
-        "lat": 12.172326,
-        "lon": -68.289063
+        "lat": 12.172321,
+        "lon": -68.289111
+      },
+      "parking": {
+        "lat": 12.172232,
+        "lon": -68.288451
       }
     },
     {
@@ -676,6 +800,10 @@ window.MAP_DATA = {
         "lon": -68.2846
       },
       "entry": {
+        "lat": 12.090358,
+        "lon": -68.283457
+      },
+      "parking": {
         "lat": 12.090379,
         "lon": -68.2832
       }
@@ -690,7 +818,8 @@ window.MAP_DATA = {
         "lat": 12.167333,
         "lon": -68.315417
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "40-lighthouse-point",
@@ -703,6 +832,10 @@ window.MAP_DATA = {
         "lon": -68.295417
       },
       "entry": {
+        "lat": 12.114108,
+        "lon": -68.294899
+      },
+      "parking": {
         "lat": 12.114108,
         "lon": -68.294771
       }
@@ -718,6 +851,10 @@ window.MAP_DATA = {
         "lon": -68.2734
       },
       "entry": {
+        "lat": 12.051555,
+        "lon": -68.272149
+      },
+      "parking": {
         "lat": 12.051768,
         "lon": -68.271853
       }
@@ -732,7 +869,8 @@ window.MAP_DATA = {
         "lat": 12.159917,
         "lon": -68.32585
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "h-montes-divi",
@@ -744,7 +882,8 @@ window.MAP_DATA = {
         "lat": 12.14565,
         "lon": -68.30855
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "p-munks-haven",
@@ -756,7 +895,8 @@ window.MAP_DATA = {
         "lat": 12.151583,
         "lon": -68.329883
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "e-nearest-point",
@@ -768,7 +908,8 @@ window.MAP_DATA = {
         "lat": 12.153846,
         "lon": -68.293098
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "a-no-name-beach",
@@ -780,7 +921,8 @@ window.MAP_DATA = {
         "lat": 12.168717,
         "lon": -68.30515
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "07-nukove",
@@ -793,8 +935,12 @@ window.MAP_DATA = {
         "lon": -68.413333
       },
       "entry": {
+        "lat": 12.240712,
+        "lon": -68.412275
+      },
+      "parking": {
         "lat": 12.240728,
-        "lon": -68.412150
+        "lon": -68.41215
       }
     },
     {
@@ -808,8 +954,12 @@ window.MAP_DATA = {
         "lon": -68.308633
       },
       "entry": {
-        "lat": 12.20015,
-        "lon": -68.30857
+        "lat": 12.200149,
+        "lon": -68.308632
+      },
+      "parking": {
+        "lat": 12.200248,
+        "lon": -68.308552
       }
     },
     {
@@ -822,7 +972,8 @@ window.MAP_DATA = {
         "lat": 12.186267,
         "lon": -68.297
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "53-pink-beach",
@@ -835,6 +986,10 @@ window.MAP_DATA = {
         "lon": -68.283267
       },
       "entry": {
+        "lat": 12.065934,
+        "lon": -68.281692
+      },
+      "parking": {
         "lat": 12.065908,
         "lon": -68.281478
       }
@@ -852,6 +1007,10 @@ window.MAP_DATA = {
       "entry": {
         "lat": 12.290169,
         "lon": -68.411502
+      },
+      "parking": {
+        "lat": 12.289956,
+        "lon": -68.411946
       }
     },
     {
@@ -865,6 +1024,10 @@ window.MAP_DATA = {
         "lon": -68.4146
       },
       "entry": {
+        "lat": 12.282301,
+        "lon": -68.413995
+      },
+      "parking": {
         "lat": 12.28234,
         "lon": -68.41377
       }
@@ -880,8 +1043,12 @@ window.MAP_DATA = {
         "lon": -68.291983
       },
       "entry": {
-        "lat": 12.109446,
-        "lon": -68.292212
+        "lat": 12.109288,
+        "lon": -68.292303
+      },
+      "parking": {
+        "lat": 12.109645,
+        "lon": -68.291885
       }
     },
     {
@@ -894,7 +1061,8 @@ window.MAP_DATA = {
         "lat": 12.21745,
         "lon": -68.3438
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "56-red-beryl",
@@ -907,6 +1075,10 @@ window.MAP_DATA = {
         "lon": -68.268957
       },
       "entry": {
+        "lat": 12.046954,
+        "lon": -68.268287
+      },
+      "parking": {
         "lat": 12.047054,
         "lon": -68.268083
       }
@@ -922,6 +1094,10 @@ window.MAP_DATA = {
         "lon": -68.2518
       },
       "entry": {
+        "lat": 12.026288,
+        "lon": -68.251255
+      },
+      "parking": {
         "lat": 12.026535,
         "lon": -68.251045
       }
@@ -937,8 +1113,12 @@ window.MAP_DATA = {
         "lon": -68.2898
       },
       "entry": {
-        "lat": 12.172326,
-        "lon": -68.289063
+        "lat": 12.172321,
+        "lon": -68.289111
+      },
+      "parking": {
+        "lat": 12.172232,
+        "lon": -68.288451
       }
     },
     {
@@ -951,7 +1131,8 @@ window.MAP_DATA = {
         "lat": 12.147917,
         "lon": -68.311183
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "50-salt-city",
@@ -964,6 +1145,10 @@ window.MAP_DATA = {
         "lon": -68.28219
       },
       "entry": {
+        "lat": 12.081829,
+        "lon": -68.281515
+      },
+      "parking": {
         "lat": 12.082233,
         "lon": -68.281446
       }
@@ -979,6 +1164,10 @@ window.MAP_DATA = {
         "lon": -68.28377
       },
       "entry": {
+        "lat": 12.083413,
+        "lon": -68.282025
+      },
+      "parking": {
         "lat": 12.083581,
         "lon": -68.281869
       }
@@ -993,7 +1182,8 @@ window.MAP_DATA = {
         "lat": 12.168817,
         "lon": -68.31005
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "r-sharons-serenity",
@@ -1005,7 +1195,8 @@ window.MAP_DATA = {
         "lat": 12.155,
         "lon": -68.329
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "25-small-wall",
@@ -1017,7 +1208,8 @@ window.MAP_DATA = {
         "lat": 12.179567,
         "lon": -68.2938
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "32-something-special",
@@ -1030,6 +1222,10 @@ window.MAP_DATA = {
         "lon": -68.284499
       },
       "entry": {
+        "lat": 12.161377,
+        "lon": -68.283452
+      },
+      "parking": {
         "lat": 12.161435,
         "lon": -68.283404
       }
@@ -1044,7 +1240,8 @@ window.MAP_DATA = {
         "lat": 12.14965,
         "lon": -68.320133
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "o-south-west-corner",
@@ -1056,7 +1253,8 @@ window.MAP_DATA = {
         "lat": 12.14955,
         "lon": -68.3295
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "59-sweet-dreams",
@@ -1069,6 +1267,10 @@ window.MAP_DATA = {
         "lon": -68.262645
       },
       "entry": {
+        "lat": 12.034321,
+        "lon": -68.261544
+      },
+      "parking": {
         "lat": 12.03448,
         "lon": -68.261372
       }
@@ -1084,6 +1286,10 @@ window.MAP_DATA = {
         "lon": -68.290367
       },
       "entry": {
+        "lat": 12.107075,
+        "lon": -68.290184
+      },
+      "parking": {
         "lat": 12.107206,
         "lon": -68.290066
       }
@@ -1099,6 +1305,10 @@ window.MAP_DATA = {
         "lon": -68.339
       },
       "entry": {
+        "lat": 12.215317,
+        "lon": -68.33752
+      },
+      "parking": {
         "lat": 12.215411,
         "lon": -68.337364
       }
@@ -1114,6 +1324,10 @@ window.MAP_DATA = {
         "lon": -68.281667
       },
       "entry": {
+        "lat": 12.070587,
+        "lon": -68.280512
+      },
+      "parking": {
         "lat": 12.07054,
         "lon": -68.28033
       }
@@ -1131,6 +1345,10 @@ window.MAP_DATA = {
       "entry": {
         "lat": 12.150107,
         "lon": -68.278066
+      },
+      "parking": {
+        "lat": 12.150259,
+        "lon": -68.277208
       }
     },
     {
@@ -1143,7 +1361,8 @@ window.MAP_DATA = {
         "lat": 12.153521,
         "lon": -68.32965
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "s-valeries-hill",
@@ -1155,7 +1374,8 @@ window.MAP_DATA = {
         "lat": 12.156999,
         "lon": -68.327
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "58-vista-blue",
@@ -1168,6 +1388,10 @@ window.MAP_DATA = {
         "lon": -68.263761
       },
       "entry": {
+        "lat": 12.036078,
+        "lon": -68.263088
+      },
+      "parking": {
         "lat": 12.036246,
         "lon": -68.262836
       }
@@ -1183,6 +1407,10 @@ window.MAP_DATA = {
         "lon": -68.414983
       },
       "entry": {
+        "lat": 12.269681,
+        "lon": -68.413877
+      },
+      "parking": {
         "lat": 12.269566,
         "lon": -68.413711
       }
@@ -1198,6 +1426,10 @@ window.MAP_DATA = {
         "lon": -68.3178
       },
       "entry": {
+        "lat": 12.206482,
+        "lon": -68.316599
+      },
+      "parking": {
         "lat": 12.206655,
         "lon": -68.316507
       }
@@ -1212,7 +1444,8 @@ window.MAP_DATA = {
         "lat": 12.091167,
         "lon": -68.229626
       },
-      "entry": null
+      "entry": null,
+      "parking": null
     },
     {
       "slug": "54-white-slave",
@@ -1225,6 +1458,10 @@ window.MAP_DATA = {
         "lon": -68.2805
       },
       "entry": {
+        "lat": 12.057247,
+        "lon": -68.280888
+      },
+      "parking": {
         "lat": 12.057693,
         "lon": -68.280759
       }
@@ -1240,8 +1477,12 @@ window.MAP_DATA = {
         "lon": -68.236553
       },
       "entry": {
-        "lat": 12.02813,
-        "lon": -68.237355
+        "lat": 12.027999,
+        "lon": -68.237291
+      },
+      "parking": {
+        "lat": 12.028287,
+        "lon": -68.237489
       }
     },
     {
@@ -1255,6 +1496,10 @@ window.MAP_DATA = {
         "lon": -68.286613
       },
       "entry": {
+        "lat": 12.130446,
+        "lon": -68.284777
+      },
+      "parking": {
         "lat": 12.130388,
         "lon": -68.284578
       }
@@ -1270,8 +1515,12 @@ window.MAP_DATA = {
         "lon": -122.5661
       },
       "entry": {
-        "lat": 47.711832,
-        "lon": -122.563798
+        "lat": 47.711983,
+        "lon": -122.563831
+      },
+      "parking": {
+        "lat": 47.711761,
+        "lon": -122.563847
       }
     },
     {
@@ -1285,8 +1534,12 @@ window.MAP_DATA = {
         "lon": -122.4145
       },
       "entry": {
-        "lat": 47.578382,
-        "lon": -122.414514
+        "lat": 47.578369,
+        "lon": -122.414576
+      },
+      "parking": {
+        "lat": 47.578225,
+        "lon": -122.413876
       }
     },
     {
@@ -1296,12 +1549,16 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/puget-sound/sites/alki-pipeline.md",
       "site": {
-        "lat": 47.57219,
-        "lon": -122.42109
+        "lat": 47.569906,
+        "lon": -122.41661
       },
       "entry": {
-        "lat": 47.574617,
-        "lon": -122.418224
+        "lat": 47.572449,
+        "lon": -122.413841
+      },
+      "parking": {
+        "lat": 47.572746,
+        "lon": -122.414088
       }
     },
     {
@@ -1316,7 +1573,11 @@ window.MAP_DATA = {
       },
       "entry": {
         "lat": 48.492318,
-        "lon": -122.687561
+        "lon": -122.687631
+      },
+      "parking": {
+        "lat": 48.492507,
+        "lon": -122.687545
       }
     },
     {
@@ -1330,8 +1591,12 @@ window.MAP_DATA = {
         "lon": -122.491
       },
       "entry": {
-        "lat": 48.1214,
-        "lon": -122.491
+        "lat": 48.12108,
+        "lon": -122.490984
+      },
+      "parking": {
+        "lat": 48.121571,
+        "lon": -122.491212
       }
     },
     {
@@ -1345,8 +1610,12 @@ window.MAP_DATA = {
         "lon": -122.39792
       },
       "entry": {
-        "lat": 47.804704,
-        "lon": -122.394844
+        "lat": 47.804706,
+        "lon": -122.394792
+      },
+      "parking": {
+        "lat": 47.804724,
+        "lon": -122.394138
       }
     },
     {
@@ -1360,8 +1629,12 @@ window.MAP_DATA = {
         "lon": -122.38457
       },
       "entry": {
-        "lat": 47.813209,
-        "lon": -122.382411
+        "lat": 47.813587,
+        "lon": -122.382224
+      },
+      "parking": {
+        "lat": 47.813236,
+        "lon": -122.382132
       }
     },
     {
@@ -1375,8 +1648,12 @@ window.MAP_DATA = {
         "lon": -122.70335
       },
       "entry": {
-        "lat": 48.497696,
-        "lon": -122.701209
+        "lat": 48.497048,
+        "lon": -122.700551
+      },
+      "parking": {
+        "lat": 48.497994,
+        "lon": -122.700806
       }
     },
     {
@@ -1390,8 +1667,12 @@ window.MAP_DATA = {
         "lon": -122.68855
       },
       "entry": {
-        "lat": 48.09133,
-        "lon": -122.69265
+        "lat": 48.091333,
+        "lon": -122.692536
+      },
+      "parking": {
+        "lat": 48.091336,
+        "lon": -122.693132
       }
     },
     {
@@ -1401,12 +1682,16 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/puget-sound/sites/fort-ward.md",
       "site": {
-        "lat": 47.585970,
+        "lat": 47.58597,
         "lon": -122.533532
       },
       "entry": {
-        "lat": 47.588409,
-        "lon": -122.531172
+        "lat": 47.587812,
+        "lon": -122.531236
+      },
+      "parking": {
+        "lat": 47.588358,
+        "lon": -122.531159
       }
     },
     {
@@ -1420,8 +1705,12 @@ window.MAP_DATA = {
         "lon": -122.759
       },
       "entry": {
-        "lat": 48.136197,
-        "lon": -122.762019
+        "lat": 48.136278,
+        "lon": -122.761603
+      },
+      "parking": {
+        "lat": 48.136147,
+        "lon": -122.762059
       }
     },
     {
@@ -1435,8 +1724,12 @@ window.MAP_DATA = {
         "lon": -122.70132
       },
       "entry": {
-        "lat": 48.497696,
-        "lon": -122.701209
+        "lat": 48.497675,
+        "lon": -122.70124
+      },
+      "parking": {
+        "lat": 48.497994,
+        "lon": -122.700806
       }
     },
     {
@@ -1450,8 +1743,12 @@ window.MAP_DATA = {
         "lon": -122.593673
       },
       "entry": {
-        "lat": 47.599895,
-        "lon": -122.596167
+        "lat": 47.59964,
+        "lon": -122.595569
+      },
+      "parking": {
+        "lat": 47.599929,
+        "lon": -122.5962
       }
     },
     {
@@ -1462,10 +1759,14 @@ window.MAP_DATA = {
       "file": "regions/puget-sound/sites/illahee-town-dock.md",
       "site": {
         "lat": 47.612796,
-        "lon": -122.593710
+        "lon": -122.59371
       },
       "entry": {
-        "lat": 47.612637,
+        "lat": 47.612635,
+        "lon": -122.596063
+      },
+      "parking": {
+        "lat": 47.612655,
         "lon": -122.596508
       }
     },
@@ -1480,8 +1781,12 @@ window.MAP_DATA = {
         "lon": -122.3695
       },
       "entry": {
-        "lat": 48.135886,
-        "lon": -122.368013
+        "lat": 48.136101,
+        "lon": -122.36789
+      },
+      "parking": {
+        "lat": 48.136423,
+        "lon": -122.366173
       }
     },
     {
@@ -1495,8 +1800,12 @@ window.MAP_DATA = {
         "lon": -122.67062
       },
       "entry": {
-        "lat": 48.157634,
-        "lon": -122.671033
+        "lat": 48.1576,
+        "lon": -122.671052
+      },
+      "parking": {
+        "lat": 48.157895,
+        "lon": -122.670765
       }
     },
     {
@@ -1510,8 +1819,12 @@ window.MAP_DATA = {
         "lon": -122.3093
       },
       "entry": {
-        "lat": 47.946462,
-        "lon": -122.307792
+        "lat": 47.946514,
+        "lon": -122.307873
+      },
+      "parking": {
+        "lat": 47.946282,
+        "lon": -122.307248
       }
     },
     {
@@ -1525,8 +1838,12 @@ window.MAP_DATA = {
         "lon": -122.30297
       },
       "entry": {
-        "lat": 47.94944,
-        "lon": -122.302566
+        "lat": 47.949416,
+        "lon": -122.302541
+      },
+      "parking": {
+        "lat": 47.949328,
+        "lon": -122.302664
       }
     },
     {
@@ -1540,8 +1857,12 @@ window.MAP_DATA = {
         "lon": -122.554
       },
       "entry": {
-        "lat": 47.723903,
-        "lon": -122.557519
+        "lat": 47.723938,
+        "lon": -122.557699
+      },
+      "parking": {
+        "lat": 47.724294,
+        "lon": -122.558222
       }
     },
     {
@@ -1555,8 +1876,12 @@ window.MAP_DATA = {
         "lon": -122.33748
       },
       "entry": {
-        "lat": 47.880474,
-        "lon": -122.333451
+        "lat": 47.880524,
+        "lon": -122.333531
+      },
+      "parking": {
+        "lat": 47.880211,
+        "lon": -122.332066
       }
     },
     {
@@ -1570,8 +1895,12 @@ window.MAP_DATA = {
         "lon": -122.85172
       },
       "entry": {
-        "lat": 47.762052,
-        "lon": -122.852223
+        "lat": 47.762059,
+        "lon": -122.85249
+      },
+      "parking": {
+        "lat": 47.76199,
+        "lon": -122.852503
       }
     },
     {
@@ -1585,8 +1914,12 @@ window.MAP_DATA = {
         "lon": -122.38776
       },
       "entry": {
-        "lat": 47.763445,
-        "lon": -122.385919
+        "lat": 47.763413,
+        "lon": -122.385973
+      },
+      "parking": {
+        "lat": 47.764689,
+        "lon": -122.383811
       }
     },
     {
@@ -1600,8 +1933,12 @@ window.MAP_DATA = {
         "lon": -122.49606
       },
       "entry": {
-        "lat": 47.599177,
-        "lon": -122.498621
+        "lat": 47.599182,
+        "lon": -122.498575
+      },
+      "parking": {
+        "lat": 47.598768,
+        "lon": -122.498591
       }
     },
     {
@@ -1615,8 +1952,12 @@ window.MAP_DATA = {
         "lon": -122.6668
       },
       "entry": {
-        "lat": 48.417620,
-        "lon": -122.663630
+        "lat": 48.417563,
+        "lon": -122.6637
+      },
+      "parking": {
+        "lat": 48.4183,
+        "lon": -122.662734
       }
     },
     {
@@ -1626,12 +1967,16 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/puget-sound/sites/salt-water-state-park.md",
       "site": {
-        "lat": 47.372870,
+        "lat": 47.37287,
         "lon": -122.328268
       },
       "entry": {
-        "lat": 47.372478,
-        "lon": -122.324175
+        "lat": 47.372431,
+        "lon": -122.324328
+      },
+      "parking": {
+        "lat": 47.372665,
+        "lon": -122.323955
       }
     },
     {
@@ -1645,8 +1990,12 @@ window.MAP_DATA = {
         "lon": -122.85048
       },
       "entry": {
-        "lat": 47.65005,
-        "lon": -122.846968
+        "lat": 47.650009,
+        "lon": -122.846938
+      },
+      "parking": {
+        "lat": 47.649207,
+        "lon": -122.845768
       }
     },
     {
@@ -1660,23 +2009,50 @@ window.MAP_DATA = {
         "lon": -122.37826
       },
       "entry": {
-        "lat": 47.588669,
-        "lon": -122.379838
+        "lat": 47.588696,
+        "lon": -122.379871
+      },
+      "parking": {
+        "lat": 47.588514,
+        "lon": -122.380105
       }
     },
     {
-      "slug": "sund-rock",
-      "name": "Sund Rock",
+      "slug": "sund-rock-north-wall",
+      "name": "Sund Rock North Wall",
       "region": "puget-sound",
       "type": "shore",
-      "file": "regions/puget-sound/sites/sund-rock.md",
+      "file": "regions/puget-sound/sites/sund-rock-north-wall.md",
       "site": {
-        "lat": 47.43416,
-        "lon": -123.11925
+        "lat": 47.436223,
+        "lon": -123.119477
+      },
+      "parking": {
+        "lat": 47.435316,
+        "lon": -123.120486
       },
       "entry": {
-        "lat": 47.434712,
-        "lon": -123.120138
+        "lat": 47.435722,
+        "lon": -123.12026
+      }
+    },
+    {
+      "slug": "sund-rock-south-wall",
+      "name": "Sund Rock South Wall",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/sund-rock-south-wall.md",
+      "site": {
+        "lat": 47.434256,
+        "lon": -123.11959
+      },
+      "parking": {
+        "lat": 47.435316,
+        "lon": -123.120486
+      },
+      "entry": {
+        "lat": 47.434743,
+        "lon": -123.120024
       }
     },
     {
@@ -1690,8 +2066,12 @@ window.MAP_DATA = {
         "lon": -122.549
       },
       "entry": {
-        "lat": 47.729,
-        "lon": -122.5518
+        "lat": 47.72901,
+        "lon": -122.551825
+      },
+      "parking": {
+        "lat": 47.729221,
+        "lon": -122.551809
       }
     },
     {
@@ -1705,8 +2085,12 @@ window.MAP_DATA = {
         "lon": -122.38006
       },
       "entry": {
-        "lat": 47.45223,
-        "lon": -122.379188
+        "lat": 47.452233,
+        "lon": -122.379252
+      },
+      "parking": {
+        "lat": 47.451762,
+        "lon": -122.37886
       }
     },
     {
@@ -1720,8 +2104,12 @@ window.MAP_DATA = {
         "lon": -122.75435
       },
       "entry": {
-        "lat": 48.114285,
-        "lon": -122.754999
+        "lat": 48.114344,
+        "lon": -122.755067
+      },
+      "parking": {
+        "lat": 48.114982,
+        "lon": -122.755759
       }
     },
     {
@@ -1735,8 +2123,12 @@ window.MAP_DATA = {
         "lon": -123.430747
       },
       "entry": {
-        "lat": 48.141603,
-        "lon": -123.429036
+        "lat": 48.141467,
+        "lon": -123.430125
+      },
+      "parking": {
+        "lat": 48.141628,
+        "lon": -123.428575
       }
     },
     {
@@ -1750,8 +2142,12 @@ window.MAP_DATA = {
         "lon": -123.63571
       },
       "entry": {
-        "lat": 48.146179,
-        "lon": -123.641738
+        "lat": 48.146525,
+        "lon": -123.641596
+      },
+      "parking": {
+        "lat": 48.146296,
+        "lon": -123.641655
       }
     },
     {
@@ -1766,7 +2162,11 @@ window.MAP_DATA = {
       },
       "entry": {
         "lat": 48.142469,
-        "lon": -122.782554
+        "lon": -122.782162
+      },
+      "parking": {
+        "lat": 48.142315,
+        "lon": -122.782393
       }
     },
     {
@@ -1780,8 +2180,12 @@ window.MAP_DATA = {
         "lon": -124.31724
       },
       "entry": {
-        "lat": 48.271936,
-        "lon": -124.316764
+        "lat": 48.271908,
+        "lon": -124.316772
+      },
+      "parking": {
+        "lat": 48.266619,
+        "lon": -124.299257
       }
     },
     {
@@ -1795,8 +2199,12 @@ window.MAP_DATA = {
         "lon": -124.46778
       },
       "entry": {
-        "lat": 48.323794,
-        "lon": -124.469359
+        "lat": 48.323751,
+        "lon": -124.469411
+      },
+      "parking": {
+        "lat": 48.323537,
+        "lon": -124.469084
       }
     },
     {
@@ -1810,8 +2218,12 @@ window.MAP_DATA = {
         "lon": -123.706
       },
       "entry": {
-        "lat": 48.166506,
-        "lon": -123.704582
+        "lat": 48.166688,
+        "lon": -123.704333
+      },
+      "parking": {
+        "lat": 48.166488,
+        "lon": -123.704596
       }
     },
     {
@@ -1825,8 +2237,12 @@ window.MAP_DATA = {
         "lon": -124.29716
       },
       "entry": {
-        "lat": 48.2666,
-        "lon": -124.2985
+        "lat": 48.266559,
+        "lon": -124.298775
+      },
+      "parking": {
+        "lat": 48.266619,
+        "lon": -124.299257
       }
     },
     {
@@ -1840,23 +2256,31 @@ window.MAP_DATA = {
         "lon": -122.50332
       },
       "entry": {
-        "lat": 47.702275,
-        "lon": -122.507386
+        "lat": 47.70247,
+        "lon": -122.506418
+      },
+      "parking": {
+        "lat": 47.702303,
+        "lon": -122.507252
       }
     },
     {
-      "slug": "lake-crescent",
-      "name": "Lake Crescent",
+      "slug": "lake-crescent-east-beach",
+      "name": "Lake Crescent East Beach",
       "region": "washington-state-lakes",
       "type": "shore",
-      "file": "regions/washington-state-lakes/sites/lake-crescent.md",
+      "file": "regions/washington-state-lakes/sites/lake-crescent-east-beach.md",
       "site": {
         "lat": 48.085275,
         "lon": -123.744945
       },
       "entry": {
-        "lat": 48.085738,
-        "lon": -123.743042
+        "lat": 48.085592,
+        "lon": -123.743128
+      },
+      "parking": {
+        "lat": 48.08561,
+        "lon": -123.743013
       }
     }
   ]

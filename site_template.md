@@ -5,7 +5,9 @@ Two to five sentences of plain prose: what the site is, where it is, its charact
 | | |
 |---|---|
 | **Location** | Town, state, and the body of water |
-| **Coordinates** | Decimal degrees of the dive site (the area actually dived, not the entry), with the seabed depth at that point in parentheses (m below MLLW), and the entry point coordinates and location description |
+| **Coordinates** | Decimal degrees of the dive site (the area actually dived, not the entry or the parking), with the seabed depth at that point in parentheses (m below MLLW) |
+| **Parking coordinates** | Decimal degrees of where to park, with a brief description. Shore sites only; omit this row for a boat-only site |
+| **Entry point coordinates** | Decimal degrees of where you actually step into the water, with a brief description. Shore sites only; omit this row for a boat-only site |
 | **Type** | Shore or Boat only. Surface swim time or other access notes go in Getting There, not here |
 | **Depth range** | Below MLLW where a datum is known, otherwise the observed range |
 | **Skill level** | Only if known; omit the row otherwise |

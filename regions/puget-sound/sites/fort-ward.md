@@ -5,7 +5,9 @@ Shore dive on the southwest shore of Bainbridge Island, on Rich Passage between 
 | | |
 |---|---|
 | **Location** | Bainbridge Island, WA. Southwest shore, on Rich Passage |
-| **Coordinates** | Dive site 47.585970, -122.533532 (seabed about 17.7 m below MLLW); entry at 47.588409, -122.531172, the beach below the boat ramp at the park's day use area, about 324 m northeast of the dive site |
+| **Coordinates** | Dive site 47.585970, -122.533532 (seabed about 17.7 m below MLLW), about 270 m southwest of the entry |
+| **Parking coordinates** | 47.588358, -122.531159, the day use area and boat ramp lot |
+| **Entry point coordinates** | 47.587812, -122.531236, the beach below the boat ramp |
 | **Type** | Shore |
 | **Depth range** | 0 to about 18 m below MLLW on the sand and cobble slope worked from shore; the same bottom keeps dropping past that, leveling around 28 to 30 m roughly 500 to 650 m offshore, well outside the area normally worked |
 | **Skill level** | Open Water and above; current sensitive away from slack |

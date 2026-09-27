@@ -5,7 +5,9 @@ Scenic Beach State Park is a gently sloping sand and cobble beach on the east sh
 | | |
 |---|---|
 | **Location** | Seabeck, Washington. Hood Canal, east shore, just south of Misery Point |
-| **Coordinates** | Dive site 47.65104, -122.85048 (seabed 18.2 m below MLLW), about 280 m northwest of the beach. Entry at 47.65005, -122.846968, the concrete stairs at the middle of the park beach |
+| **Coordinates** | Dive site 47.65104, -122.85048 (seabed 18.2 m below MLLW), about 290 m northwest of the entry |
+| **Parking coordinates** | 47.649207, -122.845768, the day-use lot |
+| **Entry point coordinates** | 47.650009, -122.846938, the concrete stairs at the middle of the park beach |
 | **Type** | Shore |
 | **Depth range** | Cobble shallows into eelgrass from about 1.5 m below MLLW, then a sandy slope dropping steadily past 20 m |
 | **Skill level** | All divers. A natural site for a first cold-water dive or a gear shakedown |

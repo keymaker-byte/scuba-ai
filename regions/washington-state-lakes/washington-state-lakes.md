@@ -38,4 +38,4 @@ Ordered by what actually decides whether a lake dive goes well:
 
 | Site | Description |
 |---|---|
-| [Lake Crescent](sites/lake-crescent.md) | Deep, exceptionally clear glacial lake in Olympic National Park where clarity itself is the hazard, letting a diver run past their planned depth before it feels deep. |
+| [Lake Crescent East Beach](sites/lake-crescent-east-beach.md) | Deep, exceptionally clear glacial lake in Olympic National Park where clarity itself is the hazard, letting a diver run past their planned depth before it feels deep. |

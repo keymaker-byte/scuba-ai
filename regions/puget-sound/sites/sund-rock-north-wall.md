@@ -1,33 +1,32 @@
-# Sund Rock
+# Sund Rock North Wall
 
-Sund Rock is a rocky point on the west shore of Hood Canal, between Hoodsport and Lilliwaup, and one of the richest and most reliable shore dives in Washington. A boulder garden and two rock walls, known locally as the north wall and the south wall, drop in ledges and crevices from a shallow bench to silty sand, with a slope continuing past 30 m beyond. It is a marine preserve closed to harvesting, and the protection shows: tame lingcod, wolf eels and giant Pacific octopus are the reason people drive here. Current is negligible at every stage of the tide, which makes it one of the few sites in the Sound that is not a slack dive, so the limiting factors are access and visibility rather than water movement.
+Sund Rock North Wall is a rocky point on the west shore of Hood Canal, between Hoodsport and Lilliwaup, reached down an easy ramp to a pebble beach by a shallow boulder garden. From there the wall itself begins, marked by a white buoy off the north end of the parking area, stepping down in ledges from about 5 to 8 m to a second ledge near 17 m, then a base in silty sand at 19 to 21 m before the slope continues past 32 m. A fish bowl in the slope holds schooling fish, and an old wreck lies north of the beach, marked by an orange buoy. It is a marine preserve closed to harvesting, and tame lingcod, wolf eels and giant Pacific octopus are the reason people drive here. Current is negligible at every stage of the tide, so this is one of the few shore dives in the region that is not a slack dive, and access and visibility are the real limiting factors.
 
 | | |
 |---|---|
 | **Location** | Hoodsport, Washington. Hood Canal, west shore, between Hoodsport and Lilliwaup |
-| **Coordinates** | Dive site 47.43416, -123.11925 (seabed about 28 m below MLLW), off the south wall. Private access has two separate entries: the south wall entry at 47.434712, -123.120138, a footpath down to a small beach right at the wall; the north wall entry at 47.435419, -123.120401, about 80 m north, an easy ramp near the bench and boulder garden. The public entry is about 3 km north of Hoodsport with a 200 m swim |
+| **Coordinates** | Dive site 47.436223, -123.119477 (seabed about 13 m below MLLW, on the wall itself, marked by a white buoy off the north end of the parking area), about 80 m from the entry on a bearing of 047° |
+| **Parking coordinates** | 47.435316, -123.120486, the gated ramp |
+| **Entry point coordinates** | 47.435722, -123.120260, the easy ramp down to the pebble beach by the bench and boulder garden |
 | **Type** | Shore |
-| **Depth range** | Boulder garden 5 to 9 m below MLLW, ledges to about 17 m, wall base into silty sand at 19 to 21 m, slope beyond continuing past 32 m |
+| **Depth range** | Boulder garden 5 to 9 m below MLLW at the entry, the wall itself starting around 5 to 8 m and stepping down in ledges to about 17 m, with the base in silty sand at 19 to 21 m and the slope beyond continuing past 32 m |
 | **Skill level** | All divers in the boulder garden and along the shallow ledge; the deeper slope needs depth discipline |
 
 ## Getting there
 
-* **Entry.** The private property has two separate walk-in entries, not one shared beach. The main entry, an easy ramp down to a pebble beach by the bench and boulder garden, serves the north wall directly and also reaches the south wall by a swim of a hundred metres or more along the shore. A separate footpath off to the right, down to a small, almost hidden beach, drops right onto the south wall itself, the shorter way to it. From the public entry, walk the steep curving trail down to the beach and swim about 200 m north to the rock.
-* **Reservation.** The private access is reservation only, booked in advance at sundrock.com. Entry is about 23 US dollars per diver including tax, with a reduced rate for veterans and first responders, and a dive card covering six dives for 100 US dollars bought on site. Reservations start at 08:00, or 09:00 on Mondays and Fridays, the last reservation is taken at 12:30, and the property closes to everyone at 17:00 sharp. After hours and night access is arranged separately through the dive shop in Hoodsport.
-* **Parking.** Space for 10 to 12 vehicles at the gated ramp, which fills on a good weekend, so carpool. The public lay-by holds only 3 or 4 cars.
+* **Entry.** An easy ramp down to a pebble beach by the bench and boulder garden. From the beach, swim out to the white buoy off the north end of the parking area and descend onto the wall.
+* **Reservation.** The private access is reservation only, booked in advance at sundrock.com. Entry is about 23 US dollars per diver including tax, with a reduced rate for veterans and first responders, and a dive card covering six dives for 100 US dollars bought on site. Reservations start at 08:00, or 09:00 on Mondays and Fridays, the last reservation is taken at 12:30, and the property closes to everyone at 17:00 sharp.
+* **Parking.** Space for 10 to 12 vehicles at the gated ramp, which fills on a good weekend.
 * **Access.** Beside Highway 101 about 3.5 km north of Hoodsport, roughly 60 km north of Olympia and 115 km from Seattle by road. The tidelands above the extreme low water line are private and posted, so from the public entry stay in the water beyond the entry point.
-* **Facilities.** Chemical toilet, gear-up benches and a rinse area at the private ramp. Nothing at the public entry. Potlatch State Park about 8.5 km south has restrooms, camping, picnic tables and hot showers.
+* **Facilities.** Chemical toilet, gear-up benches and a rinse area.
 
 ## Navigation and landmarks
 
-Several distinct dives run off the property's two entries, and the rock itself is the reference for all of them.
-
-* **Boulder garden.** Straight out from the main ramp entry in 6 to 9 m, over sand and cobble with eelgrass. The natural place to begin and end, and shallow enough to hold a long safety stop among the tube-dwelling anemones.
-* **South wall.** Reached directly from its own footpath entry, right onto the wall with no swim needed, or from the main entry by following the shore south at about 8 m until the rock face begins, a longer approach. Boulder formations between 6 and 15 m, and the best of the wolf eel and octopus holes.
-* **North wall.** Reached from the main ramp entry, marked by a white buoy off the north end of the parking area. Drop at the buoy and descend to the top of the wall, which starts around 5 to 8 m and steps down in ledges.
+* **Boulder garden.** Straight out from the ramp entry in 6 to 9 m, over sand and cobble with eelgrass. The natural place to begin and end, and shallow enough to hold a long safety stop among the tube-dwelling anemones.
+* **North wall.** Marked by a white buoy off the north end of the parking area. Drop at the buoy and descend to the top of the wall, which starts around 5 to 8 m and steps down in ledges.
 * **Fish bowl.** North of the site, a bowl in the slope that holds schooling fish, with the wall below it running deeper.
-* **Wreck.** An old fishing vessel lies north of the beach, its bow marked by an orange buoy. Either surface swim to the buoy and descend, or take a compass heading north from the north wall and run it underwater.
-* **Getting home.** The rock is the only unambiguous landmark. Keep the wall on one shoulder outbound and the other inbound, and the shallow bench will lead back to the entry.
+* **Wreck.** An old fishing vessel lies north of the beach, its bow marked by an orange buoy. Either surface swim to the buoy and descend, or take a compass heading north from the wall and run it underwater.
+* **Getting home.** Keep the wall on one shoulder outbound and the other inbound, and the shallow bench will lead back to the entry.
 
 ## Current
 
@@ -52,7 +51,7 @@ Hood Canal swings hard here, more than the main basin of the Sound, and the tide
 
 | | |
 |---|---|
-| **Tide station** | Union, Hood Canal (9445478), 47.3583, -123.0980, about 8.6 km southeast |
+| **Tide station** | Union, Hood Canal (9445478), 47.3583, -123.0980, about 8.8 km southeast |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m |
 
@@ -68,7 +67,7 @@ Hood Canal swings hard here, more than the main basin of the Sound, and the tide
 
 * **Boat traffic.** Small boats work this stretch of the canal all year. Listen throughout the dive, ascend up the wall or in the shallows rather than in open water, and look up the whole way. Fly a marker buoy.
 * **Silt.** The bottom below the wall is fine silt over mud and shale, and a fin kick will erase the visibility for everyone behind you. Establish neutral buoyancy at each new depth and stay off the bottom.
-* **Depth creep.** The slope keeps going well past the wall base, the good light and the fish are above 15 m, and the deep water offers nothing that the shallows do not. It is easy to follow a wall down further than planned.
+* **Depth creep.** The slope keeps going well past the wall base, the good light and the fish are above 15 m, and the deep water offers nothing that the shallows do not. It is easy to follow the wall down further than planned.
 * **Closing time.** The gate shuts at 17:00 sharp, which caps the second dive and the surface interval. Plan the day backward from it.
 * **Private property.** The tidelands above the extreme low water line are private and posted. From the public entry, stay in the water beyond the entry point and do not walk the beach.
 * **Marine preserve.** No taking of marine life of any kind.
@@ -86,7 +85,6 @@ Hood Canal swings hard here, more than the main basin of the Sound, and the tide
 
 * **Season.** Best from October through March, when the water is cold, the plankton is down and the tides run high in daylight. A good winter day is clear enough to make the walls worth the drive.
 * **Worst case.** Spring and summer plankton blooms and river runoff drop it sharply, and a bad summer day can be a couple of metres or less. Summer viz is usually better at depth than in the shallows, where the warm surface layer holds the bloom.
-* **Night.** The site is exceptional at night, and the reduced visibility of the warm months matters less when you are working off a torch anyway.
 * **Torch.** Carry one on every dive. The colour in the crevices and the fish holding in them do not show without it.
 
 ## Temperature

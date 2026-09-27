@@ -5,7 +5,9 @@ A beginner-friendly reef about half a mile north of the desalination plant, one 
 | | |
 |---|---|
 | **Location** | West coast, Bonaire, about 0.8 km north of the desalination plant |
-| **Coordinates** | 12.1916, -68.2986 (dive area, about 8 m); entry at 12.191581, -68.297662, just past the desalination plant |
+| **Coordinates** | 12.1916, -68.2986 (dive area, about 8 m) |
+| **Parking coordinates** | 12.191581, -68.297662, just past the desalination plant |
+| **Entry point coordinates** | 12.191665, -68.297882 |
 | **Type** | Shore |
 | **Depth range** | 6 to 30 m |
 | **Skill level** | Beginner |

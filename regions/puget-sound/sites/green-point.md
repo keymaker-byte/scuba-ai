@@ -5,7 +5,9 @@ Shore dive on the low, rocky point at the northwest corner of Washington Park, a
 | | |
 |---|---|
 | **Location** | Anacortes, WA. Green Point, the northwest corner of Washington Park, at the west end of Fidalgo Island, opening onto Burrows Bay and Rosario Strait |
-| **Coordinates** | Dive site 48.49995, -122.70132 (seabed about 15.6 m below MLLW), the outer point; entry at 48.497696, -122.701209, the concrete stairs at the sharp bend in Washington Park's Loop Road |
+| **Coordinates** | Dive site 48.49995, -122.70132 (seabed about 15.6 m below MLLW), the outer point |
+| **Parking coordinates** | 48.497994, -122.700806, the roadside pullouts near the stairs |
+| **Entry point coordinates** | 48.497675, -122.701240, the concrete stairs at the sharp bend in Washington Park's Loop Road |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 16 m below MLLW |
 | **Skill level** | Advanced |
@@ -13,8 +15,8 @@ Shore dive on the low, rocky point at the northwest corner of Washington Park, a
 ## Getting there
 
 * **Entry.** Concrete stairs at the sharp bend in Loop Road lead down onto flat basalt rock at the edge of West Beach. Enter over the rock and swim northwest along the low shoreline, rounding the point to the north.
-* **Parking.** A handful of single-car pullouts along the road shoulder near the stairs, free, first come first served, and easily full on a weekend. The larger day-use lot sits back near the boat launch by Sunset Beach, before Loop Road begins; from there it is most of a mile around the one-way loop to the Green Point stairs.
-* **Access.** The park is open 6 a.m. to 10 p.m. year round. Loop Road itself is one-way, about 2.2 miles end to end, open to pedestrians and bicycles from 6 a.m. but closed to vehicles until 10 a.m. A slack that falls before 10 a.m. means walking or biking in from the Sunset Beach lot rather than driving to the pullouts by the stairs. There is no day-use parking fee; the posted fee applies only to the boat-launch lot. About 3.8 mi west of Commercial Avenue in Anacortes, roughly 75 mi from Seattle and 43 mi from Bellingham.
+* **Parking.** A handful of single-car pullouts along the road shoulder near the stairs, free, first come first served, and easily full on a weekend.
+* **Access.** The park is open 6 a.m. to 10 p.m. year round. Loop Road itself is one-way, about 2.2 miles end to end, open to pedestrians and bicycles from 6 a.m. but closed to vehicles until 10 a.m., so a slack that falls before then is only reachable once the road opens to cars. There is no day-use parking fee; the posted fee applies only to the boat-launch lot. About 3.8 mi west of Commercial Avenue in Anacortes, roughly 75 mi from Seattle and 43 mi from Bellingham.
 * **Facilities.** Restrooms and showers, picnic shelters, a playground and the boat launch sit near Sunset Beach, a walk or short drive from the stairs; nothing is right at Green Point itself. Camping is available in the park.
 
 ## Navigation and landmarks

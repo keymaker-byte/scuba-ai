@@ -5,7 +5,9 @@ One of the west coast's most popular shore dives, about 7 km north of Kralendijk
 | | |
 |---|---|
 | **Location** | Northwest coast, Bonaire, about 7 km north of Kralendijk |
-| **Coordinates** | 12.19995, -68.308633 (dive area, about 1 m); entry at 12.20015, -68.30857, the steel ladder where the road meets the sea, just past Andrea I and II and STINAPA headquarters |
+| **Coordinates** | 12.19995, -68.308633 (dive area, about 1 m) |
+| **Parking coordinates** | 12.200248, -68.308552, just past Andrea I and II and STINAPA headquarters |
+| **Entry point coordinates** | 12.200149, -68.308632, the steel ladder where the road meets the sea |
 | **Type** | Shore |
 | **Depth range** | 6 to 25 m |
 

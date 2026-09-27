@@ -5,7 +5,9 @@ Also known as North Belnem, a site directly across from Flamingo International A
 | | |
 |---|---|
 | **Location** | West coast, Bonaire, opposite Flamingo International Airport, between Windsock and Bachelor's Beach |
-| **Coordinates** | 12.133236, -68.282685 (about 4 m); entry at 12.132712, -68.282390 |
+| **Coordinates** | 12.133236, -68.282685 (about 4 m) |
+| **Parking coordinates** | 12.132565, -68.282272, at the beach, with benches and shade trees |
+| **Entry point coordinates** | 12.132775, -68.282443 |
 | **Type** | Shore |
 | **Depth range** | 6 to 30 m |
 
