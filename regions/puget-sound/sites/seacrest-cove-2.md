@@ -5,7 +5,9 @@ Shore dive at Seacrest Park on the West Seattle waterfront, also known as Alki C
 | | |
 |---|---|
 | **Location** | West Seattle, WA. Southwest shore of Elliott Bay on Harbor Avenue SW, at Seacrest Park |
-| **Coordinates** | Dive site 47.58932, -122.37826 (seabed about 24 m below MLLW); entry at 47.588669, -122.379838, about 140 m southwest, the beach beside the Marination Ma Kai café |
+| **Coordinates** | Dive site 47.58932, -122.37826 (seabed about 24 m below MLLW), about 140 m northeast of the entry |
+| **Parking coordinates** | 47.588514, -122.380105, curbside along Harbor Avenue SW |
+| **Entry point coordinates** | 47.588696, -122.379871, the beach beside the Marination Ma Kai café |
 | **Type** | Shore |
 | **Depth range** | From the beach down past 40 m; the slope continues beyond the recreational limit |
 | **Skill level** | All divers; the easily reached deep water also makes it a standing technical training site |

@@ -5,7 +5,9 @@ Pinnacle Rock is a shore dive on the Strait of Juan de Fuca between Sekiu and Ne
 | | |
 |---|---|
 | **Location** | Clallam County, WA. South shore of the Strait of Juan de Fuca, between Sekiu and Neah Bay |
-| **Coordinates** | Dive site 48.32717, -124.46778 (seabed about 8.5 m below MLLW), the kelp covered rock and sand ground off the pinnacle; entry at 48.323794, -124.469359, the dirt turnout beach access on Highway 112 |
+| **Coordinates** | Dive site 48.32717, -124.46778 (seabed about 8.5 m below MLLW), the kelp covered rock and sand ground off the pinnacle |
+| **Parking coordinates** | 48.323537, -124.469084, the dirt turnout on Highway 112 |
+| **Entry point coordinates** | 48.323751, -124.469411, the rocky, cobble beach below the turnout |
 | **Type** | Shore |
 | **Depth range** | About 0 to 11 m below MLLW: cobble and boulder in the immediate shallows, giving way to the gently sloping, kelp covered bottom that reaches about 11 m at the base of the bed |
 | **Skill level** | Advanced for open water away from slack and for any exchange period dive; the sheltered channels between the rocks near slack suit less experienced divers in calm conditions |

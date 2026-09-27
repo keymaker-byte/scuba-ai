@@ -5,7 +5,9 @@ A site about 1.4 km north of Salt Pier with no mooring buoy, so navigation here 
 | | |
 |---|---|
 | **Location** | South coast, Bonaire, about 1.4 km north of Salt Pier |
-| **Coordinates** | 12.0906, -68.2846 (dive area, about 6 m); entry at 12.090379, -68.283200, the sharp-rock roadside shore |
+| **Coordinates** | 12.0906, -68.2846 (dive area, about 6 m) |
+| **Parking coordinates** | 12.090379, -68.283200, roadside at the site |
+| **Entry point coordinates** | 12.090358, -68.283457, the sharp-rock shore |
 | **Type** | Shore |
 | **Depth range** | 9 to 30 m |
 

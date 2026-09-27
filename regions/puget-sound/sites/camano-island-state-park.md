@@ -5,7 +5,9 @@ Camano Island State Park sits at the southwest tip of Camano Island, facing Sara
 | | |
 |---|---|
 | **Location** | Camano Island, WA. Southwest tip of the island, on Saratoga Passage, Island County line near Camano Head |
-| **Coordinates** | Dive area 48.1183, -122.4910 (seabed about 28.8 m below MLLW). Entry at the Lowell Point beach, about 48.1214, -122.4910, 300 m north |
+| **Coordinates** | Dive area 48.1183, -122.4910 (seabed about 28.8 m below MLLW) |
+| **Parking coordinates** | 48.121571, -122.491212, the Lowell Point day-use lot |
+| **Entry point coordinates** | 48.121080, -122.490984, the Lowell Point beach |
 | **Type** | Shore |
 | **Depth range** | 0 m at the beach to over 30 m below MLLW, reached south toward Camano Head |
 

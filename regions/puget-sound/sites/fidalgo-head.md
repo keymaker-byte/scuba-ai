@@ -5,7 +5,9 @@ Shore dive across the shallow bay at Washington Park, on the west end of Fidalgo
 | | |
 |---|---|
 | **Location** | Anacortes, WA. Fidalgo Head, the rocky south shoreline of Washington Park's bay, at the west end of Fidalgo Island, at the west mouth of Burrows Pass where it opens into Rosario Strait |
-| **Coordinates** | Dive site 48.49216, -122.70335 (seabed about 11.7 m below MLLW), on the outer third of the headland where the rock gives way to sand; entry at 48.497696, -122.701209, the concrete stairs at the sharp bend in Washington Park's Loop Road, at the north side of the bay |
+| **Coordinates** | Dive site 48.49216, -122.70335 (seabed about 11.7 m below MLLW), on the outer third of the headland where the rock gives way to sand |
+| **Parking coordinates** | 48.497994, -122.700806, the roadside pullouts near the stairs |
+| **Entry point coordinates** | 48.497048, -122.700551, the concrete stairs at the sharp bend in Washington Park's Loop Road |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 12 m below MLLW along the base of the outer rock, shelving onto sand beyond it |
 | **Skill level** | Advanced |
@@ -13,8 +15,8 @@ Shore dive across the shallow bay at Washington Park, on the west end of Fidalgo
 ## Getting there
 
 * **Entry.** Concrete stairs at the sharp bend in Loop Road lead down onto flat basalt rock at the edge of West Beach. Enter over the rock, then swim south across the bay toward the distant rocky shoreline.
-* **Parking.** A handful of single-car pullouts along the road shoulder near the stairs, free, first come first served, and easily full on a weekend. The larger day-use lot sits back near the boat launch by Sunset Beach, before Loop Road begins; from there it is most of a mile around the one-way loop to the stairs.
-* **Access.** The park is open 6 a.m. to 10 p.m. year round. Loop Road itself is one-way, about 2.2 miles end to end, open to pedestrians and bicycles from 6 a.m. but closed to vehicles until 10 a.m. A slack that falls before 10 a.m. means walking or biking in from the Sunset Beach lot rather than driving to the pullouts by the stairs. There is no day-use parking fee; the posted fee applies only to the boat-launch lot. About 3.8 mi west of Commercial Avenue in Anacortes, roughly 75 mi from Seattle and 43 mi from Bellingham.
+* **Parking.** A handful of single-car pullouts along the road shoulder near the stairs, free, first come first served, and easily full on a weekend.
+* **Access.** The park is open 6 a.m. to 10 p.m. year round. Loop Road itself is one-way, about 2.2 miles end to end, open to pedestrians and bicycles from 6 a.m. but closed to vehicles until 10 a.m., so a slack that falls before then is only reachable once the road opens to cars. There is no day-use parking fee; the posted fee applies only to the boat-launch lot. About 3.8 mi west of Commercial Avenue in Anacortes, roughly 75 mi from Seattle and 43 mi from Bellingham.
 * **Facilities.** Restrooms and showers, picnic shelters, a playground and the boat launch sit near Sunset Beach, a walk or short drive from the stairs; nothing is on Fidalgo Head itself.
 
 ## Navigation and landmarks

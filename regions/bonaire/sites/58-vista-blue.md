@@ -5,7 +5,9 @@ A steep reef about 6 km south of Kralendijk known for its dense soft coral cover
 | | |
 |---|---|
 | **Location** | South coast, Bonaire, about 6 km south of Kralendijk |
-| **Coordinates** | 12.035434, -68.263761 (reef edge, about 5 m); entry at 12.036246, -68.262836 |
+| **Coordinates** | 12.035434, -68.263761 (reef edge, about 5 m) |
+| **Parking coordinates** | 12.036246, -68.262836 |
+| **Entry point coordinates** | 12.036078, -68.263088 |
 | **Type** | Shore |
 | **Depth range** | 9 to 30 m |
 | **Skill level** | Advanced, given the current |

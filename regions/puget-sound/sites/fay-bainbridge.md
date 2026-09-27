@@ -5,7 +5,9 @@ Sand and eelgrass shore dive at the northeast tip of Bainbridge Island, facing o
 | | |
 |---|---|
 | **Location** | Bainbridge Island, WA. Northeast corner of the island, Puget Sound main basin |
-| **Coordinates** | Dive site 47.70333, -122.50332 (seabed about 21.9 m below MLLW); entry at 47.702275, -122.507386, the beach at the south end of the day-use area, about 330 m southwest of the dive site |
+| **Coordinates** | Dive site 47.70333, -122.50332 (seabed about 21.9 m below MLLW); about 250 m southwest of the entry |
+| **Parking coordinates** | 47.702303, -122.507252, the day-use lot |
+| **Entry point coordinates** | 47.702470, -122.506418, the beach at the south end of the day-use area |
 | **Type** | Shore |
 | **Depth range** | 0 to about 22 m below MLLW on the usual dived slope; the same sand keeps dropping well past 55 m beyond that, off the back of the area normally worked |
 | **Skill level** | Intermediate; current sensitive despite the gentle sand terrain |

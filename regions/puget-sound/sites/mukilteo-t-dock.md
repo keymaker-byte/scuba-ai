@@ -5,7 +5,9 @@ Shore dive on the Mukilteo waterfront, on the south shore of Possession Sound at
 | | |
 |---|---|
 | **Location** | Mukilteo, WA. South shore of Possession Sound, at its mouth |
-| **Coordinates** | Dive site 47.95029, -122.30297 (seabed about 20 m below MLLW); entry at 47.94944, -122.302566, about 100 m south, the beach stairs beside the Silver Cloud Inn |
+| **Coordinates** | Dive site 47.95029, -122.30297 (seabed about 20 m below MLLW), about 100 m north of the entry |
+| **Parking coordinates** | 47.949328, -122.302664, the lot beside the Silver Cloud Inn |
+| **Entry point coordinates** | 47.949416, -122.302541, the beach stairs beside the Silver Cloud Inn |
 | **Ferry terminal** | 47.9503, -122.2964, about 470 m east of the entry on a bearing of 080°. Opened December 2020 |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 32 m |

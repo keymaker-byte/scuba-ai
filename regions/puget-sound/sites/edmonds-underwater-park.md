@@ -5,7 +5,9 @@ Edmonds Underwater Park is a shore dive on the Puget Sound waterfront at Edmonds
 | | |
 |---|---|
 | **Location** | Edmonds, WA. East shore of the main basin of Puget Sound, immediately north of the Edmonds to Kingston ferry terminal |
-| **Coordinates** | Dive site 47.81574, -122.38457 (seabed about 7 m below MLLW); entry at 47.813209, -122.382411, about 324 m southeast, Brackett's Landing North, at the jetty. Either side of the jetty works for entry; this coordinate is the sheltered south side, facing the cove |
+| **Coordinates** | Dive site 47.81574, -122.38457 (seabed about 7 m below MLLW) |
+| **Parking coordinates** | 47.813236, -122.382132, the Brackett's Landing park lot |
+| **Entry point coordinates** | 47.813587, -122.382224, Brackett's Landing North at the jetty. Either side of the jetty works for entry; this coordinate is the sheltered south side, facing the cove |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 12 m below MLLW, reaching about 13 m at the south end near the ferry |
 | **Skill level** | Intermediate |

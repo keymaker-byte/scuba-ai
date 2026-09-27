@@ -5,7 +5,9 @@ Dutch for square point, and the first of a run of double reef sites heading sout
 | | |
 |---|---|
 | **Location** | Southwest coast, Bonaire |
-| **Coordinates** | 12.1076, -68.291983 (dive area, about 5 m); entry at 12.109446, -68.292212, the flat sandy beach |
+| **Coordinates** | 12.1076, -68.291983 (dive area, about 5 m) |
+| **Parking coordinates** | 12.109645, -68.291885, roadside at the site |
+| **Entry point coordinates** | 12.109288, -68.292303, the flat sandy beach |
 | **Type** | Shore |
 | **Depth range** | 8 to 30 m |
 

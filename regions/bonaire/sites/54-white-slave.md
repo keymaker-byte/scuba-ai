@@ -5,7 +5,9 @@ Named for the white pinnacle and the white painted slave huts standing on shore 
 | | |
 |---|---|
 | **Location** | South coast, Bonaire, opposite the white slave huts |
-| **Coordinates** | 12.055412, -68.2805 (dive area, about 5 m); entry at 12.057693, -68.280759, the yellow stone on the roadside opposite the slave huts |
+| **Coordinates** | 12.055412, -68.2805 (dive area, about 5 m) |
+| **Parking coordinates** | 12.057693, -68.280759, the yellow stone on the roadside opposite the slave huts |
+| **Entry point coordinates** | 12.057247, -68.280888 |
 | **Type** | Shore |
 | **Depth range** | 6 to 30 m |
 | **Skill level** | Advanced, given the swim and depth |

@@ -5,7 +5,9 @@ Shore dive on the main basin of Puget Sound at Shoreline, just north of Seattle,
 | | |
 |---|---|
 | **Location** | Shoreline, WA. East shore of the main basin of Puget Sound, about 8 km north of downtown Seattle |
-| **Coordinates** | Dive site 47.76266, -122.38776 (seabed about 12.3 m below MLLW); entry at 47.763445, -122.385919, about 160 m east-northeast, the beach in front of the restrooms and picnic shelter |
+| **Coordinates** | Dive site 47.76266, -122.38776 (seabed about 12.3 m below MLLW), about 160 m southwest of the entry |
+| **Parking coordinates** | 47.764689, -122.383811, the lot at the bottom of the hill |
+| **Entry point coordinates** | 47.763413, -122.385973, the beach in front of the restrooms and picnic shelter |
 | **Type** | Shore |
 | **Depth range** | Roughly 2 to 8 m below MLLW on the inshore shelf, dropping over an edge to about 15 m below MLLW at the outer debris and anchor field |
 | **Skill level** | All divers on the shallow shelf; the outer debris field is current sensitive and better suited to divers comfortable navigating on compass headings |

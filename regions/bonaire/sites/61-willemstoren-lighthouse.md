@@ -5,7 +5,9 @@ Bonaire's southern tip, named for the historic lighthouse onshore, and one of th
 | | |
 |---|---|
 | **Location** | Southern tip, Bonaire, at Willemstoren Lighthouse |
-| **Coordinates** | 12.026916, -68.236553 (dive area, about 5 to 25 m across the site); entry at 12.028130, -68.237355, right at the shore by the lighthouse parking, over the rock shelf that extends well offshore |
+| **Coordinates** | 12.026916, -68.236553 (dive area, about 5 to 25 m across the site) |
+| **Parking coordinates** | 12.028287, -68.237489, the lighthouse parking |
+| **Entry point coordinates** | 12.027999, -68.237291, over the rock shelf that extends well offshore |
 | **Type** | Shore |
 | **Depth range** | 6 to 25 m |
 | **Skill level** | Advanced, conditions permitting |

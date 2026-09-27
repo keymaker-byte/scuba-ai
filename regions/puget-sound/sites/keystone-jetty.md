@@ -5,7 +5,9 @@ Shore dive along the boulder jetty that shelters the Coupeville to Port Townsend
 | | |
 |---|---|
 | **Location** | Fort Casey State Park, Whidbey Island, WA. Admiralty Bay, west side of Admiralty Inlet, beside the Coupeville to Port Townsend ferry terminal, five miles south of Coupeville |
-| **Coordinates** | Dive site 48.15683, -122.67062 (seabed about 12 m below MLLW), off the jetty; entry at 48.157634, -122.671033, about 95 m north-northwest, the underwater park beach on the east side |
+| **Coordinates** | Dive site 48.15683, -122.67062 (seabed about 12 m below MLLW), off the jetty, about 95 m south-southeast of the entry |
+| **Parking coordinates** | 48.157895, -122.670765, the Keystone State Park lot |
+| **Entry point coordinates** | 48.157600, -122.671052, the underwater park beach on the east side |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 19 m below MLLW; the end of the jetty is the deepest point |
 | **Skill level** | Intermediate |

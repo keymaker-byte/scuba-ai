@@ -5,7 +5,9 @@ Shore dive on the north side of Three Tree Point, a wooded residential point tha
 | | |
 |---|---|
 | **Location** | Burien, WA. North side of Three Tree Point, East Passage, Puget Sound |
-| **Coordinates** | Dive site 47.45336, -122.38006 (seabed about 32 m below MLLW); entry at 47.452230, -122.379188, about 140 m south-southeast, the north-side beach access at the end of SW 170th Street |
+| **Coordinates** | Dive site 47.45336, -122.38006 (seabed about 32 m below MLLW), about 140 m north-northwest of the entry |
+| **Parking coordinates** | 47.451762, -122.378860, the small unmarked paved area at the head of the path |
+| **Entry point coordinates** | 47.452233, -122.379252, the north-side beach access at the end of SW 170th Street |
 | **Type** | Shore |
 | **Depth range** | Reef roughly 5 to 27 m below MLLW; the sand slope continues past 40 m |
 | **Skill level** | Intermediate; the shallow reef suits all divers, but the slope drops fast |

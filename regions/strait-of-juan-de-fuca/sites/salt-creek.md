@@ -5,7 +5,9 @@ Shore dive off Tongue Point, inside the Tongue Point Marine Life Sanctuary at Sa
 | | |
 |---|---|
 | **Location** | Port Angeles, WA. South shore of the Strait of Juan de Fuca, at Tongue Point, Salt Creek Recreation Area |
-| **Coordinates** | Dive site 48.1695, -123.7060 (seabed about 18.5 m below MLLW), the outer boulder ground beyond the reef; entry at 48.166506, -123.704582, the stairs near campsite 67 that lead out onto Tongue Point itself |
+| **Coordinates** | Dive site 48.1695, -123.7060 (seabed about 18.5 m below MLLW), the outer boulder ground beyond the reef |
+| **Parking coordinates** | 48.166488, -123.704596, the day use area near campsite 67 |
+| **Entry point coordinates** | 48.166688, -123.704333, the stairs that lead out onto Tongue Point itself |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 18.5 m below MLLW |
 | **Skill level** | Advanced |

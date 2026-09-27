@@ -5,7 +5,9 @@ One of the most interesting of the double reef dives, about 12 km south of Krale
 | | |
 |---|---|
 | **Location** | West coast, Bonaire, about 12 km south of Kralendijk, opposite the Trans World Radio station |
-| **Coordinates** | 12.10275, -68.288267 (dive area, about 5 m); entry at 12.10338, -68.28722, opposite the Trans World Radio station |
+| **Coordinates** | 12.10275, -68.288267 (dive area, about 5 m) |
+| **Parking coordinates** | 12.10338, -68.28722, opposite the Trans World Radio station |
+| **Entry point coordinates** | 12.103335, -68.287277 |
 | **Type** | Shore |
 | **Depth range** | 6 to 30 m |
 
