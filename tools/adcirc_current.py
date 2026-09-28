@@ -9,34 +9,39 @@ asymmetry of real rapids, so treat it as the big picture, not the last word.
 
 Two use cases, two paths:
 
-  extract SLUG --near LAT LON --tz ZONE [--water-depth M]
+  extract OUT_PATH --near LAT LON --tz ZONE
                                   pull the harmonic constituents at a site from the database
-                                  (writes SLUG.json beside the site's SLUG.md in
-                                  regions/<region>/sites/). Needed once when writing a new
-                                  site file. --tz is the site's own IANA timezone (e.g.
+                                  and write them to OUT_PATH (the extract that belongs beside
+                                  the site's own <slug>.md, e.g.
+                                  regions/<region>/sites/<slug>.json). Needed once when writing
+                                  a new site file. --tz is the site's own IANA timezone (e.g.
                                   America/Los_Angeles, America/New_York); it is stored in the
                                   extract so every later prediction runs in the site's own
-                                  local time, not a workspace-wide guess. Pass --water-depth
-                                  (m below MLLW, from ncei_depth.py) to enable depth scaling.
-                                  Downloads the ~700 MB database on first use if tools/db/ is
-                                  empty.
-  predict SLUG [--date D] [--depth M] [--tz ZONE]   slack / max flood / max ebb
-  window  SLUG [--date D] [--depth M] [--tz ZONE]   diveable windows under a speed threshold
-  at      SLUG --time "..." [--depth M] [--tz ZONE] instantaneous current vector
+                                  local time, not a workspace-wide guess. Downloads the ~700 MB
+                                  database on first use if tools/db/ is empty.
+  predict (--json JSON | --file PATH) [--date D] [--position P] [--tz ZONE]
+                                                slack / max flood / max ebb
+  window  (--json JSON | --file PATH) [--date D] [--position P] [--tz ZONE]
+                                                diveable windows under a speed threshold
+  at      (--json JSON | --file PATH) --time "..." [--position P] [--tz ZONE]
+                                                instantaneous current vector
 
-Prediction reads only the tiny per-site extract; it never touches the big database.
+predict/window/at take the extract to run against as either --json (its full content, inline)
+or --file (a path to read it from); exactly one is given. --file suits a local script reading
+an extract off disk; --json suits a wrapper (e.g. a web API) that already has the content in
+hand and would rather not write a temp file. E.g. `... predict --date 2026-07-12 --file
+site.json` or `... predict --date 2026-07-12 --json '{"lat": ..., "enpac15_constituents": [...]}'`.
 
 The model current is depth-AVERAGED (the column mean, which runs slower than the near-surface
-flow). Pass --depth to scale it toward your dive depth through a boundary-layer profile:
-slower near the seabed, faster up high. Slack times do not move, only speeds. It is
-approximate and ignores stratification, so where a proven NOAA station exists, trust the
-station's depth bin. Times are local to the site: predict/window/at read the timezone stored
-in the site's own extract, so a Puget Sound site and an East Coast site each run in their own
-zone automatically. --tz on those commands only overrides that stored value; it never needs to
-be set day to day.
+flow). Pass --position (bottom, mid, or surface) to scale it toward where in the water column
+you'll actually be, through a boundary-layer profile: slower near the seabed, faster up high.
+Slack times do not move, only speeds. It is approximate and ignores stratification, so where a
+proven NOAA station exists, trust the station's depth bin. Times are local to the site:
+predict/window/at read the timezone stored in the extract, so a Puget Sound site and an East
+Coast site each run in their own zone automatically. --tz on those commands only overrides
+that stored value; it never needs to be set day to day.
 """
 import argparse
-import glob
 import gzip
 import json
 import math
@@ -59,11 +64,6 @@ VEL_GZ = os.path.join(DB, "wc2015-v1a_1200tau1dt1VDatum_fort.54.gz")
 DB_TAR_URL = "https://www.dropbox.com/s/yeswh43qhw982ut/ENPAC15_tidaldatabase.tar?dl=1"
 TAR_MESH = "ENPAC15_tidaldatabase/wc2015_v1a_chk.grd.gz"
 TAR_VEL = "ENPAC15_tidaldatabase/wc2015-v1a_1200tau1dt1VDatum_fort.54.gz"
-
-# The ENPAC mesh is too coarse to resolve nearshore bathymetry (its elements can span the
-# beach to the deep basin), so the --depth scaling should not rely on it. Pass the real
-# seabed depth with --water-depth (get it from tools/ncei_depth.py, which owns bathymetry);
-# the coarse mesh depth is only a fallback when none is given.
 
 UTC = timezone.utc
 
@@ -92,8 +92,8 @@ def site_tz(doc, override):
     entirely plausible, so a site with no stored zone must fail, not default."""
     name = override or doc.get("tz")
     if not name:
-        sys.exit(f"'{doc.get('slug')}' has no stored timezone.\n"
-                 f"  Re-run extract --force --tz <zone> to fix, or pass --tz on this command.")
+        sys.exit("This extract has no stored timezone.\n"
+                 "  Re-extract with --tz <zone>, or pass --tz on this command.")
     return resolve_tz(name)
 
 # ADCIRC run wc2015_v1a: fort.15 REFTIME 0.0, run id "410day_start_11162004". The nodal
@@ -283,25 +283,23 @@ def _need_db():
 
 
 def read_mesh():
-    """Return (lon, lat, dep, elements). lon/lat/dep indexed by node number (1-based, index 0
-    unused); dep is still-water depth below the model datum (m). elements are (n1, n2, n3)."""
+    """Return (lon, lat, elements). lon/lat indexed by node number (1-based, index 0 unused).
+    elements are (n1, n2, n3)."""
     with gzip.open(MESH_GZ, "rt") as fh:
         fh.readline()  # title
         ne, np_ = (int(x) for x in fh.readline().split())
         lon = [0.0] * (np_ + 1)
         lat = [0.0] * (np_ + 1)
-        dep = [0.0] * (np_ + 1)
         for _ in range(np_):
             parts = fh.readline().split()
             i = int(parts[0])
             lon[i] = float(parts[1])
             lat[i] = float(parts[2])
-            dep[i] = float(parts[3])
         elems = []
         for _ in range(ne):
             parts = fh.readline().split()
             elems.append((int(parts[2]), int(parts[3]), int(parts[4])))
-    return lon, lat, dep, elems
+    return lon, lat, elems
 
 
 def locate(lon, lat, elems, qlon, qlat):
@@ -393,69 +391,24 @@ def interp_polar(amp1, ph1, amp2, ph2, amp3, ph3, w):
 # Commands
 # --------------------------------------------------------------------------------------
 
-def sites_dirs():
-    """Every regions/<region>/sites/ folder in the workspace."""
-    return sorted(glob.glob(os.path.join(WORKSPACE, "regions", "*", "sites")))
-
-
-def extract_path(slug, region=None):
-    """Where SLUG.json lives: beside the site's SLUG.md in regions/<region>/sites/. If the
-    .md does not exist yet (a brand-new site), fall back to the named region, or the sole
-    region if there is only one."""
-    for d in sites_dirs():
-        if os.path.exists(os.path.join(d, slug + ".md")):
-            return os.path.join(d, slug + ".json")
-    dirs = sites_dirs()
-    if region:
-        d = os.path.join(WORKSPACE, "regions", region, "sites")
-        if d not in dirs:
-            sys.exit(f"No such region sites folder: {d}")
-        return os.path.join(d, slug + ".json")
-    if len(dirs) == 1:
-        return os.path.join(dirs[0], slug + ".json")
-    sys.exit(f"Multiple regions found; pass --region. Options: "
-             f"{[os.path.basename(os.path.dirname(d)) for d in dirs]}")
-
-
-def find_extract(slug):
-    """Locate an existing SLUG.json under any region's sites/ folder."""
-    for d in sites_dirs():
-        p = os.path.join(d, slug + ".json")
-        if os.path.exists(p):
-            return p
-    return None
-
-
 def cmd_extract(a):
-    slug = a.slug
-    path = extract_path(slug, a.region)
+    path = a.path
     if os.path.exists(path) and not a.force:
         sys.exit(f"Extract already exists: {path}\n  pass --force to overwrite.")
     _need_db()
     qlat, qlon = a.near
     print(f"Reading mesh ({os.path.basename(MESH_GZ)})...", flush=True)
-    lon, lat, dep, elems = read_mesh()
+    lon, lat, elems = read_mesh()
     print(f"  {len(elems)} elements, locating {qlat:.5f}, {qlon:.5f}...", flush=True)
     nodes, w, inside, dist_km = locate(lon, lat, elems, qlon, qlat)
-    water_depth = sum(w[i] * dep[nodes[i]] for i in range(3))
     if not inside:
-        print(f"  point is outside the wet mesh; snapped to nearest edge {dist_km:.2f} km away.")
-        if dist_km > 2.0:
-            print("  That is far: the site is likely unresolved. Trust a NOAA station instead.")
-        else:
-            print("  Close to the boundary (a shore entry usually is); usable with caution.")
-    else:
-        print(f"  in element with nodes {nodes}, weights "
-              f"{w[0]:.3f}/{w[1]:.3f}/{w[2]:.3f}", flush=True)
-    if a.water_depth is not None:
-        water_depth_m = a.water_depth
-        depth_src = "provided (m below MLLW)"
-        print(f"  water depth {water_depth_m:.1f} m (provided)", flush=True)
-    else:
-        water_depth_m = round(water_depth, 1)
-        depth_src = "ADCIRC mesh (coarse; pass --water-depth from ncei_depth for a real depth)"
-        print(f"  no --water-depth given; using coarse mesh depth {water_depth_m:.1f} m "
-              f"(scaling will be rough)", flush=True)
+        sys.exit(f"Point is outside the wet mesh, {dist_km:.2f} km past the boundary.\n"
+                 f"  Walk the coordinate onto the covered side (toward the dive area) and "
+                 f"re-run extract; a boundary-snapped point reads as near-still water, not "
+                 f"the site's real current, so this tool refuses it rather than predicting "
+                 f"off it. Trust a NOAA station instead if the site never lands inside the mesh.")
+    print(f"  in element with nodes {nodes}, weights "
+          f"{w[0]:.3f}/{w[1]:.3f}/{w[2]:.3f}", flush=True)
     header = read_vel_header()
     print("Streaming fort.54 for the 3 nodes (one pass, may take a minute)...", flush=True)
     vals = read_vel_nodes(nodes)
@@ -469,38 +422,40 @@ def cmd_extract(a):
             "u_amp": u_amp, "u_phase": u_ph, "v_amp": v_amp, "v_phase": v_ph,
         })
     tz = resolve_tz(a.tz)  # validate before writing
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+    if os.path.dirname(path):
+        os.makedirs(os.path.dirname(path), exist_ok=True)
     doc = {
-        "slug": slug, "lat": qlat, "lon": qlon, "tz": a.tz,
-        "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
-        "extracted_utc": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "water_depth_m": water_depth_m,
-        "water_depth_source": depth_src,
-        "mesh": {"inside": inside, "boundary_dist_km": round(dist_km, 3)},
-        "constituents": cons,
+        "lat": qlat, "lon": qlon, "tz": a.tz,
+        "enpac15_constituents": cons,
     }
     with open(path, "w") as fh:
         json.dump(doc, fh, indent=2)
     axis, _ = principal_axis(doc, tz)
     print(f"\nWrote {path}")
     print(f"  {len(cons)} constituents. Principal current axis {axis:.0f}°/{(axis + 180) % 360:.0f}° T.")
-    print(f"  Water depth {water_depth_m:.0f} m (enables --depth scaling in predict/window).")
     print("  Validate against the nearest NOAA station before trusting timing (see selftest).")
 
 
-def load_extract(slug):
-    path = find_extract(slug)
-    if not path:
-        sys.exit(f"No extract for '{slug}'.\n"
-                 f"  Create it first:  python3 {os.path.basename(__file__)} "
-                 f"extract {slug} --near LAT LON")
-    with open(path) as fh:
-        return json.load(fh)
+def load_doc(a):
+    """The extract JSON to predict against: --json holds it inline, --file names a path to
+    read it from. argparse enforces that exactly one of the two is given."""
+    if a.json is not None:
+        try:
+            return json.loads(a.json)
+        except json.JSONDecodeError as e:
+            sys.exit(f"Could not parse --json: {e}")
+    try:
+        with open(a.file) as fh:
+            return json.load(fh)
+    except OSError as e:
+        sys.exit(f"Could not read --file {a.file}: {e}")
+    except json.JSONDecodeError as e:
+        sys.exit(f"Could not parse JSON in {a.file}: {e}")
 
 
 def series(doc, day, tz):
     """(local_datetime, u_east, v_north) every 6 minutes across the local day, plus a margin."""
-    cons, C = doc["constituents"], calibrate(doc["constituents"])
+    cons, C = doc["enpac15_constituents"], calibrate(doc["enpac15_constituents"])
     start = datetime(day.year, day.month, day.day, tzinfo=tz)
     out = []
     for i in range(-20, 240 + 20):  # -2h .. +26h at 6-min steps
@@ -534,32 +489,32 @@ def _signed(samp, bearing):
     return [(t, u * ax_e + v * ax_n, math.hypot(u, v)) for t, u, v in samp]
 
 
-def depth_factor(doc, dive_depth):
-    """Multiplier from the column-mean speed to the speed at `dive_depth` (m below surface),
-    via a 1/7-power tidal boundary layer. The mean sits at ~0.4 of the depth up from the bed;
-    below that the water runs slower, above it faster. Returns (factor, note). A None dive
-    depth (or a site with no stored water depth) leaves the column mean unscaled."""
-    if dive_depth is None:
+# Fraction of the water column's height, measured up from the bed, that each named position
+# represents, and the label used when describing it. 0.05 rather than 0.0 for "bottom": the
+# profile is a boundary layer, not defined at the bed itself, real flow there tends toward
+# zero in a way this power law does not model.
+POSITION_FRACS = {"bottom": (0.05, "the bottom of the water column"), "mid": (0.5, "mid-water"),
+                  "surface": (1.0, "the surface")}
+
+
+def position_factor(position):
+    """Multiplier from the column-mean speed to the speed at a position in the water column,
+    via a 1/7-power tidal boundary layer: the water runs slower near the bed, faster near the
+    surface. `position` is one of 'bottom', 'mid', 'surface', or None for the column mean.
+    Returns (factor, note)."""
+    if position is None:
         return 1.0, "depth-averaged (whole column); near-surface runs faster"
-    h = doc.get("water_depth_m")
-    if not h or h <= 0:
-        return 1.0, "no water depth stored for this site; showing the column mean"
-    if dive_depth >= h:
-        return 1.0, (f"dive depth {dive_depth:.0f} m is at/below the modelled seabed "
-                     f"(~{h:.0f} m here); cannot scale, showing the column mean. The extract "
-                     f"point is probably too close to shore, re-extract nearer the dive area")
-    z = h - dive_depth                      # height above the bed
-    frac = min(max(z / h, 0.05), 1.0)       # clamp: the profile is invalid right at the bed
+    frac, label = POSITION_FRACS[position]
     factor = (8.0 / 7.0) * frac ** (1.0 / 7.0)
-    return factor, (f"scaled to {dive_depth:.0f} m in ~{h:.0f} m of water (x{factor:.2f} of the "
-                    f"column mean, 1/7-power profile; approximate, ignores stratification)")
+    return factor, (f"scaled to {label} (x{factor:.2f} of the column mean, 1/7-power profile; "
+                    f"approximate, ignores stratification)")
 
 
 def reconstructors(doc, bearing):
     """(signed_fn, mag_fn): callables from a local datetime to the along-axis signed speed and
     to the total speed magnitude (both un-scaled by depth), evaluating the full reconstruction
     at any instant. These let slack and window boundaries be root-found off the 6-minute grid."""
-    cons, C = doc["constituents"], calibrate(doc["constituents"])
+    cons, C = doc["enpac15_constituents"], calibrate(doc["enpac15_constituents"])
     ax_e, ax_n = math.sin(bearing * DEG), math.cos(bearing * DEG)
 
     def uv(t_local):
@@ -642,21 +597,17 @@ def slacks_and_peaks(sig, signed_fn=None):
 
 
 def cmd_predict(a):
-    doc = load_extract(a.slug)
+    doc = load_doc(a)
     tz = site_tz(doc, a.tz)
-    factor, note = depth_factor(doc, a.depth)
+    factor, note = position_factor(a.position)
     bearing, samp = principal_axis(doc, tz, a.date)
     sig = _signed(samp, bearing)
     signed_fn, _ = reconstructors(doc, bearing)
     axis_a, axis_b = bearing % 360, (bearing + 180) % 360
-    print(f"{a.slug}  {a.date}  ENPAC15 tidal current")
+    print(f"{doc['lat']:.4f}, {doc['lon']:.4f}  {a.date}  ENPAC15 tidal current")
     print(f"  principal axis {axis_a:.0f}° T / {axis_b:.0f}° T "
           f"(which is flood is site-specific; confirm against the tide or a NOAA station)")
     print(f"  {note}")
-    if not doc["mesh"]["inside"]:
-        km = doc["mesh"].get("boundary_dist_km", "?")
-        print(f"  NOTE: site is {km} km outside the wet mesh (snapped to the boundary); "
-              f"indicative only.")
     print()
     for kind, tt, s in slacks_and_peaks(sig, signed_fn):
         if tt.date() != a.date:
@@ -670,14 +621,14 @@ def cmd_predict(a):
 
 
 def cmd_window(a):
-    doc = load_extract(a.slug)
+    doc = load_doc(a)
     tz = site_tz(doc, a.tz)
-    factor, note = depth_factor(doc, a.depth)
+    factor, note = position_factor(a.position)
     bearing, samp = principal_axis(doc, tz, a.date)
     sig = _signed(samp, bearing)
     _, mag_fn = reconstructors(doc, bearing)
     lim = a.max_speed
-    print(f"{a.slug}  {a.date}  ENPAC15 tidal current")
+    print(f"{doc['lat']:.4f}, {doc['lon']:.4f}  {a.date}  ENPAC15 tidal current")
     print(f"  windows with speed <= {lim:.2f} m/s (principal axis {bearing:.0f}° T)")
     print(f"  {note}\n")
     # runs of below-threshold samples on the full grid, then root-find each edge (where the
@@ -715,41 +666,19 @@ def cmd_window(a):
 
 
 def cmd_at(a):
-    doc = load_extract(a.slug)
+    doc = load_doc(a)
     tz = site_tz(doc, a.tz)
-    factor, note = depth_factor(doc, a.depth)
+    factor, note = position_factor(a.position)
     t_local = datetime.strptime(a.time, "%Y-%m-%d %H:%M").replace(tzinfo=tz)
-    cons, C = doc["constituents"], calibrate(doc["constituents"])
+    cons, C = doc["enpac15_constituents"], calibrate(doc["enpac15_constituents"])
     t_utc = t_local.astimezone(UTC)
     u = reconstruct(cons, C, t_utc, "u") * factor
     v = reconstruct(cons, C, t_utc, "v") * factor
     spd = math.hypot(u, v)
     toward = math.degrees(math.atan2(u, v)) % 360
-    print(f"{a.slug}  {t_local:%Y-%m-%d %H:%M %Z}")
+    print(f"{doc['lat']:.4f}, {doc['lon']:.4f}  {t_local:%Y-%m-%d %H:%M %Z}")
     print(f"  {note}")
     print(f"  speed {spd:.2f} m/s   toward {toward:.0f}° T   (east {u:+.2f}, north {v:+.2f})")
-
-
-def cmd_list(a):
-    found = []
-    for d in sites_dirs():
-        for p in sorted(glob.glob(os.path.join(d, "*.json"))):
-            try:
-                with open(p) as fh:
-                    doc = json.load(fh)
-                if "constituents" in doc and "mesh" in doc:
-                    found.append((os.path.relpath(p, WORKSPACE), doc))
-            except (ValueError, KeyError):
-                continue
-    if not found:
-        print("No extracts yet.")
-        return
-    print("ENPAC15 extracts:\n")
-    for rel, doc in found:
-        m = doc["mesh"]
-        flag = "" if m["inside"] else f"  (edge {m.get('boundary_dist_km', '?')} km out)"
-        print(f"  {doc['slug']:<24} {doc['lat']:.4f}, {doc['lon']:.4f}{flag}")
-        print(f"    {rel}")
 
 
 def cmd_selftest(a):
@@ -790,25 +719,28 @@ def main():
     sub = p.add_subparsers(dest="cmd", required=True)
 
     s = sub.add_parser("extract", help="pull constituents at a site from the database")
-    s.add_argument("slug")
+    s.add_argument("path", help="full path to write the extract JSON to")
     s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True)
-    s.add_argument("--water-depth", type=float, metavar="M",
-                   help="seabed depth below MLLW (from ncei_depth.py); enables --depth scaling")
     s.add_argument("--tz", required=True,
                    help="IANA timezone of the dive site (e.g. America/Los_Angeles, "
                         "America/New_York); stored in the extract and used by predict/window/at")
     s.add_argument("--force", action="store_true", help="overwrite an existing extract")
-    s.add_argument("--region", help="region folder for a brand-new site (default: the only one)")
     s.set_defaults(fn=cmd_extract)
 
-    depth_help = "m below surface; scale the column mean to your dive depth (default: no scaling)"
+    position_help = ("where in the water column: bottom, mid, or surface (default: the "
+                      "column mean, unscaled)")
     tz_help = ("override the site's stored timezone (IANA name); normally unneeded, the "
                "extract already knows which zone the site is in")
 
+    def doc_source(sp):
+        g = sp.add_mutually_exclusive_group(required=True)
+        g.add_argument("--json", metavar="JSON", help="the extract's full JSON content, inline")
+        g.add_argument("--file", metavar="PATH", help="path to the extract JSON file")
+
     def dated(sp):
-        sp.add_argument("slug")
+        doc_source(sp)
         sp.add_argument("--date", type=date.fromisoformat, default=date.today())
-        sp.add_argument("--depth", type=float, help=depth_help)
+        sp.add_argument("--position", choices=sorted(POSITION_FRACS), help=position_help)
         sp.add_argument("--tz", default=None, help=tz_help)
 
     s = sub.add_parser("predict", help="slack / max flood / max ebb")
@@ -822,14 +754,11 @@ def main():
     s.set_defaults(fn=cmd_window)
 
     s = sub.add_parser("at", help="instantaneous current vector")
-    s.add_argument("slug")
+    doc_source(s)
     s.add_argument("--time", required=True, metavar="YYYY-MM-DD HH:MM")
-    s.add_argument("--depth", type=float, help=depth_help)
+    s.add_argument("--position", choices=sorted(POSITION_FRACS), help=position_help)
     s.add_argument("--tz", default=None, help=tz_help)
     s.set_defaults(fn=cmd_at)
-
-    s = sub.add_parser("list", help="list extracted sites")
-    s.set_defaults(fn=cmd_list)
 
     s = sub.add_parser("selftest", help="validate astronomy against the ADCIRC header")
     s.set_defaults(fn=cmd_selftest)

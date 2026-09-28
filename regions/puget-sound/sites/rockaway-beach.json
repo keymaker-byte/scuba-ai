@@ -1,17 +1,8 @@
 {
-  "slug": "rockaway-beach",
   "lat": 47.5992,
   "lon": -122.49606,
   "tz": "America/Los_Angeles",
-  "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
-  "extracted_utc": "2026-08-29T18:02:10Z",
-  "water_depth_m": 17.5,
-  "water_depth_source": "provided (m below MLLW)",
-  "mesh": {
-    "inside": true,
-    "boundary_dist_km": 0.0
-  },
-  "constituents": [
+  "enpac15_constituents": [
     {
       "name": "M(2)",
       "f_ref": 0.965,
