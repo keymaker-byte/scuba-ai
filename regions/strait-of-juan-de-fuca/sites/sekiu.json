@@ -1,17 +1,8 @@
 {
-  "slug": "sekiu",
   "lat": 48.26852,
   "lon": -124.29716,
   "tz": "America/Los_Angeles",
-  "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
-  "extracted_utc": "2026-08-09T03:48:37Z",
-  "water_depth_m": 13.5,
-  "water_depth_source": "provided (m below MLLW)",
-  "mesh": {
-    "inside": true,
-    "boundary_dist_km": 0.0
-  },
-  "constituents": [
+  "enpac15_constituents": [
     {
       "name": "M(2)",
       "f_ref": 0.965,

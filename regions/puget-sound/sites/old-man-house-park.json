@@ -1,17 +1,8 @@
 {
-  "slug": "old-man-house-park",
   "lat": 47.7241,
   "lon": -122.554,
   "tz": "America/Los_Angeles",
-  "source": "ENPAC15 (wc2015_v1a), depth-averaged tidal current",
-  "extracted_utc": "2026-09-12T03:59:23Z",
-  "water_depth_m": 9.0,
-  "water_depth_source": "provided (m below MLLW)",
-  "mesh": {
-    "inside": true,
-    "boundary_dist_km": 0.0
-  },
-  "constituents": [
+  "enpac15_constituents": [
     {
       "name": "M(2)",
       "f_ref": 0.965,
