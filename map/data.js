@@ -2113,6 +2113,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "warren-avenue-bridge",
+      "name": "Warren Avenue Bridge",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/warren-avenue-bridge.md",
+      "site": {
+        "lat": 47.578782,
+        "lon": -122.632393
+      },
+      "entry": {
+        "lat": 47.578183,
+        "lon": -122.632519
+      },
+      "parking": {
+        "lat": 47.577686,
+        "lon": -122.631650
+      }
+    },
+    {
       "slug": "ediz-hook",
       "name": "Ediz Hook (Inner Harbor)",
       "region": "strait-of-juan-de-fuca",
