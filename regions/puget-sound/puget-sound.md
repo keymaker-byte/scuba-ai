@@ -109,6 +109,7 @@ Ordered by what actually kills a dive plan in the Sound:
 | [Suquamish Dock](sites/suquamish-dock.md) | Long public dock and boat ramp on the Suquamish waterfront in Port Madison proper, sheltered from Agate Passage's current and close to slack all the time; a shallow, low key dive over sand scattered with old bottles and glass. |
 | [Three Tree Point (North)](sites/three-tree-point-north.md) | Artificial junk reef on a sand and cobble slope that continues past 40 m, so depth control is the standing concern; mild current, dives well day or night. |
 | [Union Wharf](sites/union-wharf.md) | Port Townsend waterfront dive for period glass and crockery among wharf and pier wreckage rather than a reef; sparse life and unpredictable, if usually weak, current. |
+| [Warren Avenue Bridge](sites/warren-avenue-bridge.md) | Bridge pylon dive in Port Washington Narrows, Bremerton, thick with plumose anemones, feather duster worms and barnacles; fast, sharply reversing current confines it to a tight slack window. |
 
 ## Dive shops and air fills
 
