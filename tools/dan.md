@@ -11,8 +11,6 @@ The authority on what actually goes wrong, and why: dive medicine, accident data
   - **[Incident Insights](https://dan.org/safety-prevention/diver-safety/case-summaries/).** Short curated case summaries, the everyday failures rather than only the fatal ones.
   - **Health & medicine reference and smart guides.** The medical answers, sourced.
   - **Alert Diver.** The magazine, back issues free.
-- **Read it against our config, not in general.** The parts of this workspace it bears on are in `diver-profile.json`; an incident report is useful here when it says something about one of those.
 - **Weight accordingly.** Authoritative on medicine and honest about the data, but there is no denominator. Incidents are self-reported with no exposure count behind them, so it yields mechanisms, never rates. Take "here is how this went wrong" and leave "this is how likely it is."
-- **Not a planning source.** It never knows the slack, the wind, or the viz, so it changes nothing on a go/no-go. It belongs in gear decisions, procedures, and debriefs, not in `plan_log.csv`.
+- **Not a planning source.** It never knows the slack, the wind, or the viz, so it changes nothing on a go/no-go. It belongs in gear decisions, procedures, and debriefs.
 - **Freely fetchable.** `robots.txt` is open, no AI-crawler carve-outs, sitemap published.
-- **Diver's own DAN membership details.** Member number, coverage and renewal deadline are in `diver-profile.json`, not here.

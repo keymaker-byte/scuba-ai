@@ -1,6 +1,6 @@
 # scuba-ai
 
-Scuba AI is a collection of steering files, tools and dive site descriptions for scuba diving recreational planning within no-decompression limits. Point an LLM (e.g. Claude Code) at this workspace and it can plan dives, write up new dive sites, and answer questions using live NOAA current and tide predictions, tidal current models, bathymetry, wind forecasts and your own dive log, instead of guessing.
+Scuba AI is a Claude Code workspace for scuba diving recreational planning within no-decompression limits: steering files that hold the facts for each region and site, skills that drive the research and writing, and tools that pull live data instead of guessing. Point Claude Code at it and it can plan a dive, write up a new region or site, and log what actually happened, using live current and tide predictions, tidal current models, bathymetry, wind forecasts and your own dive log along the way.
 
 **[Dive Atlas](https://keymaker-byte.github.io/scuba-ai/)** — a live map of every dive site in this repo (no planning fuctionality directly in this map yet)
 
@@ -18,12 +18,9 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 - `CLAUDE.md` — the steering file tying it all together: units, conventions (local time, depth datum), and workspace-wide rules.
 - `regions/` — one steering file plus a `sites/` folder per diving region; each site is a guidebook style description paired with a machine read current extract.
 - `tools/` — one self-contained markdown doc per source or tool (what it's for, its caveats, its CLI if it has one), paired with a `.py` script for the sources that have one.
-- `site_template.md` — the canonical structure every dive site file follows.
-- `region_template.md` — the canonical structure every region steering file follows.
+- `.claude/skills/` — Claude Code skills, self-contained workflows for a specific task, each triggered automatically when the request matches.
 - `map.html` — a map of every dive site, colored by shore or boat access, with entry point pins for shore dives. Reads from `map/data.js`, which every site file has an entry in.
-
-
-`diver-profile.json`, `tool-config.json` and `plan_log.csv` hold personal data (identity, gear, dive history) and are gitignored. A `_template` version of each is included as a starting point for setting up your own.
+- `tool-config.json` - holds personal data (tool parameters) and is gitignored. `tool-config_template.json` is included as a starting point for setting up your own.
 
 ## Regions currently covered
 
@@ -53,6 +50,14 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 | [The Perfect Dive](tools/theperfectdive.md) | theperfectdive.com (archived) | A defunct structured PNW dive site catalog (type, difficulty, entry, attractions) plus marine-life galleries, read from its 2022 Wayback snapshot. | none, read via Wayback Machine |
 
 Tools with a script read parameters from their own subsection of `tool-config.json` (a missing key falls back to a built-in default) and print metric units in local time. NWS also reads a subsection of `tool-config.json` (the contact email for its required User-Agent) despite having no script. DAN, NW Dive Club and The Perfect Dive have no script or config section; they're read directly by page or feed.
+
+## Skills
+
+| Skill | Does |
+|---|---|
+| [create-dive-region](.claude/skills/create-dive-region/SKILL.md) | Writes a new region steering file: identifies the region's extent, runs the deep research pass (geography, conditions, which tools apply, the depth datum if any, how planning works there, dive shops, emergency chambers), and handles the regions table and map data bookkeeping. |
+| [create-dive-site](.claude/skills/create-dive-site/SKILL.md) | Writes a new dive site file: gathers the required inputs (coordinates, boat or shore access, parking and entry points, the governing region), loads that region's conventions, verifies the coordinate against bathymetry and current model coverage, runs the research pass, and handles the sites table and map data bookkeeping. |
+| [create-dive-plan](.claude/skills/create-dive-plan/SKILL.md) | Plans a dive at a known site and date: pulls current, tide and wind at both entry and exit, orders the route so the return never fights the current, applies the NDL and EAN32 conventions, logs the predicted profile before the dive, and fills in what actually happened afterward. |
 
 ## Platform
 
