@@ -2132,6 +2132,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "port-washington-narrows",
+      "name": "Port Washington Narrows",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/port-washington-narrows.md",
+      "site": {
+        "lat": 47.570105,
+        "lon": -122.618693
+      },
+      "entry": {
+        "lat": 47.570424,
+        "lon": -122.617609
+      },
+      "parking": {
+        "lat": 47.570440,
+        "lon": -122.616692
+      }
+    },
+    {
       "slug": "ediz-hook",
       "name": "Ediz Hook (Inner Harbor)",
       "region": "strait-of-juan-de-fuca",
