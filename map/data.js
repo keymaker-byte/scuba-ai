@@ -1885,6 +1885,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "point-white-dock",
+      "name": "Point White Dock (Crystal Springs Pier)",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/point-white-dock.md",
+      "site": {
+        "lat": 47.599368,
+        "lon": -122.577609
+      },
+      "entry": {
+        "lat": 47.599824,
+        "lon": -122.576689
+      },
+      "parking": {
+        "lat": 47.599953,
+        "lon": -122.576298
+      }
+    },
+    {
       "slug": "point-whitney",
       "name": "Point Whitney",
       "region": "puget-sound",
