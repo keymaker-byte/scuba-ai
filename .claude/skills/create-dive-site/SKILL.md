@@ -1,11 +1,11 @@
 ---
 name: create-dive-site
-description: This skill should be used when the user asks to create a new dive site file, write up a dive site, add a site to a region, document a new site, or substantially rewrite an existing site file in this scuba diving workspace. Covers gathering the required inputs (coordinates, boat or shore access, parking and entry points, the governing region), loading that region's own conventions, verifying the coordinate against bathymetry and current-model coverage, running the three mandatory research passes (the region's tools, the region's web sources, and a broad web deep dive), and the bookkeeping a new site needs (the site file itself, the region's "Sites currently covered" table, and map/data.js).
+description: This skill should be used when the user asks to create a new dive site file, write up a dive site, add a site to a region, document a new site, or substantially rewrite an existing site file in this scuba diving workspace. Covers gathering the required inputs (coordinates, boat or shore access, parking and entry points, the governing region), loading that region's own conventions, verifying the coordinate against bathymetry and current-model coverage, running the three mandatory research passes (the region's tools, the region's web sources, and a broad web deep dive), the bookkeeping a new site needs (the site file itself, the region's "Sites currently covered" table, and map/data.js), and a final independent audit of the site file's and region row's prose by a fresh agent.
 ---
 
 # Create a dive site file
 
-Produce one `regions/<region>/sites/<slug>.md` file, matching the template at the bottom of this skill, plus the bookkeeping entries that make the new site discoverable (region table, map data). This is a research and verification task before it is a writing task: most of the work is pinning down numbers against live sources.
+Produce one `regions/<region>/sites/<slug>.md` file, matching the template at the bottom of this skill, plus the bookkeeping entries that make the new site discoverable (region table, map data), then have a fresh agent audit the prose. This is a research and verification task before it is a writing task: most of the work is pinning down numbers against live sources.
 
 ## 1. Required inputs — stop and ask if any are missing
 
@@ -81,6 +81,17 @@ A new site isn't done until it's discoverable from both places that index it. A 
 ```
 
 `site` is the dive site's own coordinate, the same one in the file's Coordinates row, never the parking or the entry point. `type` is `"shore"` or `"boat"`, lowercased from the file's Type row. `parking` and `entry` come from the file's own Parking coordinates and Entry point coordinates rows; both are shore-only, `null` for a boat-only site. The spatial current model extract, `regions/<region>/sites/<slug>.json`, if the region has spatial current model coverage and step 3 didn't rule it out for this coordinate. Keep both the region table and `map/data.js` current whenever a site file is added or a site's coordinates, name, type, parking, or entry point change.
+
+## 7. Independent audit, once every file is written
+
+The last step is an audit of the prose by a fresh agent, which reads the files exactly as written. Launch one with the Agent tool as a new `general-purpose` agent. The audit covers the site file and the site's row in the region's steering file. Give the agent those two paths plus `CLAUDE.md` and this skill file, and tell it to read them in full and report each finding with its file, line, the rule it breaks, the text as written, and a proposed fix. It checks:
+
+- **Workspace conventions.** Every rule in `CLAUDE.md`'s Writing style, Units, Time and Depth sections, read from `CLAUDE.md` at audit time and applied line by line to the site file and the region row.
+- **Template and steps 5 and 6.** The site file against this skill's template and step 5, and the region row against step 6's rules for its description, all read from this file at audit time.
+- **Consistency within the prose.** A fact stated more than once (a depth, a distance, a bearing, how strong the current is) says the same thing everywhere it appears in the site file, from the intro through the bullets, and the region row agrees with the site file.
+- **Claims to check.** Any sentence that reads as a single anecdote stated as a fact, or a fact that looks carried over from a neighbouring site, listed for the writer to check.
+
+Then work the findings yourself. Fix style, template and consistency findings directly. Hold each claim flagged for checking against the research from step 4: keep it if a source supports it, restate it conservatively if a source partly supports it, and remove it if no source supports it. Report the audit in chat as a table of findings, each with what was changed or why it was left as it is. The site is finished once every finding is resolved.
 
 ## Template
 
