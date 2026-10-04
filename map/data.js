@@ -2132,6 +2132,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "tramp-harbor-dock",
+      "name": "Tramp Harbor Dock",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/tramp-harbor-dock.md",
+      "site": {
+        "lat": 47.41365,
+        "lon": -122.436302
+      },
+      "entry": {
+        "lat": 47.413135,
+        "lon": -122.437651
+      },
+      "parking": {
+        "lat": 47.413148,
+        "lon": -122.437767
+      }
+    },
+    {
       "slug": "union-wharf",
       "name": "Union Wharf",
       "region": "puget-sound",
