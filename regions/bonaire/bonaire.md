@@ -34,6 +34,7 @@ The following tools should be used in this region:
 - dan.md
 - scubaboard.md
 - diversatlas.md
+- diveatlas.md
 
 ## Conventions
 
