@@ -14,9 +14,9 @@ Shore dive off the Fox Island Fishing Pier at Toy Point, the eastern tip of Fox 
 
 ## Getting there
 
-* **Entry.** From the lot, walk down the steps on the right-hand side of the restrooms to a narrow, sloping trail that runs beside a fence, about 135 paces, down to a coarse cobble beach at the south side of the park. The paved path leads only to the pier and has no beach access. Stay on the park side of the fence and swim straight out and down from the end of the trail; no surface swim is needed.
-* **Parking.** The park's paved lot at the end of Ozette Drive (1453 Ozette Drive), with room for about two dozen cars. The park district posts no day-use parking fee. When the lot is full, do not park along the road or block driveways; illegally parked vehicles are towed.
-* **Access.** The park is run by PenMet Parks and is open 7 a.m. to dusk; be out of the water and the car out of the lot before the gate closes. The beach to the south of the fence is private: stay off it, and on surfacing, swim back to the public beach. The trail is steep, and the climb back to the car in full gear is a real effort.
+* **Entry.** From the lot, walk down the steps on the right-hand side of the restrooms to a narrow, sloping trail that runs beside a fence, about 135 paces, down to a coarse cobble beach at the south side of the park. The paved path leads only to the pier and has no beach access. Stay on the park side of the fence and swim straight out and down from the end of the trail; no surface swim is needed. On a low tide the top of the shallow ledge lies barely a metre down close to shore, so wade out carefully: its edge drops straight off.
+* **Parking.** The park's paved lot at the end of Ozette Drive (1453 Ozette Drive), with room for about two dozen cars. A parking fee may be charged; check the posting at the lot. When the lot is full, do not park along the road or block driveways; illegally parked vehicles are towed.
+* **Access.** The park is run by PenMet Parks and is open 7 a.m. to dusk; the vehicle gate is locked at dusk, and a car left inside is locked in, so be out of the water and the car out of the lot before then. The beach to the south of the fence is private: stay off it, and on surfacing, swim back to the public beach. The steps and trail are steep and very slippery when wet, worst in autumn with leaves down, and the climb back to the car in full gear is a real effort.
 * **Facilities.** Restrooms with changing rooms beside the lot, picnic areas, and the accessible concrete fishing pier.
 
 ## Navigation and landmarks
@@ -41,7 +41,7 @@ Shore dive off the Fox Island Fishing Pier at Toy Point, the eastern tip of Fox 
 
 * **Flood.** Runs parallel to shore, setting south past the beach toward Toy Point and the pier side of the point, then around Toy Point toward Gibson Point. It is the stronger of the two, commonly 1.3 to 1.6 m/s at the station.
 * **Ebb.** Also parallel to shore, rounding Toy Point and setting north along the wall toward Fox Point. It runs weaker than the flood. The water along the wall begins setting north well ahead of the station's slack before ebb, so a dive timed to the station alone meets a building northward current instead of a turn.
-* **Diveable window.** Either slack on a small exchange, best a slack between two weak maximums; on a big exchange the window can close almost as it opens. Before ebb, drop about an hour ahead of the station's slack and swim south first, so the return north rides the ebb as it builds; before flood, swim north first, so the return south rides the flood. The current along the walls does not pour down them, so a diver caught by it can climb the ledges and drift back toward the entry. Watch for the turn and be ready to end the dive early: once the water runs there is nowhere to shelter but the beach.
+* **Diveable window.** Either slack on a small exchange, best a slack between two weak maximums; on a big exchange the window can close almost as it opens. Before ebb, drop about an hour ahead of the station's slack and swim south first, so the return north rides the ebb as it builds; before flood, swim north first, so the return south rides the flood. The current along the walls does not pour down them, so a diver caught by it can climb the ledges and drift back toward the entry. Watch for the turn and be ready to end the dive early: once the water runs there is nowhere to shelter but the beach. Whirlpools and swirling water off the beach and beside the pier mean the current is still running; wait on the beach until the surface settles.
 
 ## Depth and tide
 
@@ -63,11 +63,11 @@ South Sound tides are large, and the tide swings the depth here by up to about 6
 
 ## Hazards
 
-* **Current.** Strong on both tides, turning early, and with no shelter on the wall once it runs. Dive a small exchange, start ahead of the station's slack, and turn the dive when it picks up.
+* **Current.** Strong on both tides, turning early, and with little shelter on the wall once it runs; staying tight against the rock takes the edge off it. The point is fully exposed to the flow out of the Narrows, and a diver who leaves the wall can be carried off the point toward Gibson Point and the open Sound. Dive a small exchange, start ahead of the station's slack, and turn the dive when it picks up.
 * **Boat traffic.** Small boats fish close to shore off the point, and the south end of the Narrows carries steady traffic. Listen for engines, ascend along the wall all the way up, and surface close to the beach.
 * **The pier.** Anglers fish from the pier year round, and lines, hooks and lures foul the bottom around it. Dive in front of the beach and keep clear of the pier.
 * **Bull kelp.** Entanglement over the ledges in summer. Carry a cutting tool.
-* **Depth below the ledges.** The slope continues past 30 m below the deeper ledge, and a diver following the ravines down can pass it quickly. Watch the computer.
+* **Depth below the ledges.** The slope continues past 30 m below the deeper ledge, and a diver following the ravines down can pass it quickly. Off the walls the current can set down the slope, drawing a diver deeper; it eases back at the base of the lower ledges. Watch the computer.
 * **Private beach.** The shore south of the fence is private; a diver who drifts south during the dive has to swim back to the public beach.
 * **The climb out.** The trail and steps back to the lot are steep. Take them slowly after a hard swim, since heavy exertion after a dive raises the risk of decompression sickness.
 
@@ -89,8 +89,8 @@ South Sound tides are large, and the tide swings the depth here by up to about 6
 
 ## Marine life
 
-* **On the walls.** Giant Pacific octopus in the dens of the ledges, red Irish lords, brown Irish lords, cabezon, lingcod (guarding eggs in late winter), copper and other rockfish, painted, kelp and whitespotted greenlings, buffalo, grunt, scalyhead, sailfin and roughback sculpins, gunnels including longfin gunnels, and warbonnets. The soft sandstone carries fewer and smaller attached animals than a hard rock wall, since the current tears off anything that grows large, but it holds sponges, including bristly yellow clump sponge, tube worms, chitons, stubby rose anemones and giant barnacles, with large shrimp tucked into the crevices.
-* **Invertebrates throughout.** Sunflower, rose, slime, leather, mottled and blood stars, decorator crabs, kelp crabs, heart crabs, rock crabs, Dungeness crabs, butterfly crabs and hermit crabs, and Nanaimo dorids among the nudibranchs.
+* **On the walls.** Giant Pacific octopus in the dens of the ledges, occasional wolf eels, red Irish lords, brown Irish lords, cabezon, lingcod (guarding eggs in late winter), copper and other rockfish, painted, kelp and whitespotted greenlings, buffalo, grunt, scalyhead, sailfin and roughback sculpins, gunnels including longfin gunnels, warbonnets including decorated warbonnets, and spiny lumpsuckers in late winter and spring. The soft sandstone carries fewer and smaller attached animals than a hard rock wall, since the current tears off anything that grows large, but it holds sponges, including bristly yellow clump sponge, tube worms, chitons including gumboot chitons, red sea cucumbers, stubby rose anemones and giant barnacles, with large dock shrimp tucked into the crevices. In summer the kelp over the ledges hides many of the dens, and the octopus are easiest to find from autumn through spring.
+* **Invertebrates throughout.** Sunflower, rose, slime, leather, mottled and blood stars, decorator crabs, kelp crabs, heart crabs, rock crabs, Dungeness crabs, butterfly crabs and hermit crabs. Nudibranchs include Nanaimo dorids, white-lined and other dironas, opalescent and orange-spotted nudibranchs, and red dendronotids.
 * **On the sand and cobble.** Flounder, sea pens, geoduck clams and moon snails, with perch over the ledges and a thick growth of understory kelp in summer.
 * **In the water column.** Egg yolk jellies and sea gooseberries, sea angels on occasion, and dogfish passing along the wall.
 * **Passing through.** Sea lions and harbor seals.
