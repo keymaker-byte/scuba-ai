@@ -1904,6 +1904,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "octopus-hole",
+      "name": "Octopus Hole",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/octopus-hole.md",
+      "site": {
+        "lat": 47.445874,
+        "lon": -123.113249
+      },
+      "parking": {
+        "lat": 47.446563,
+        "lon": -123.114322
+      },
+      "entry": {
+        "lat": 47.446565,
+        "lon": -123.113949
+      }
+    },
+    {
       "slug": "old-man-house-park",
       "name": "Old Man House Park",
       "region": "puget-sound",
