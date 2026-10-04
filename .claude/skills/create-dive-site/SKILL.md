@@ -1,6 +1,6 @@
 ---
 name: create-dive-site
-description: This skill should be used when the user asks to create a new dive site file, write up a dive site, add a site to a region, document a new site, or substantially rewrite an existing site file in this scuba diving workspace. Covers gathering the required inputs (coordinates, boat or shore access, parking and entry points, the governing region), loading that region's own conventions, verifying the coordinate against bathymetry and current-model coverage, running the mandatory research pass, and the bookkeeping a new site needs (the site file itself, the region's "Sites currently covered" table, and map/data.js).
+description: This skill should be used when the user asks to create a new dive site file, write up a dive site, add a site to a region, document a new site, or substantially rewrite an existing site file in this scuba diving workspace. Covers gathering the required inputs (coordinates, boat or shore access, parking and entry points, the governing region), loading that region's own conventions, verifying the coordinate against bathymetry and current-model coverage, running the three mandatory research passes (the region's tools, the region's web sources, and a broad web deep dive), and the bookkeeping a new site needs (the site file itself, the region's "Sites currently covered" table, and map/data.js).
 ---
 
 # Create a dive site file
@@ -19,11 +19,45 @@ Read `regions/<region>/<region>.md` in full before touching the site file. It fi
 
 A coordinate handed over (or found) is a first reference, not a final one. Check its seabed depth before writing anything. A point mid-channel or off the drop is not the dive. If it's too deep, or off the divable slope, walk it toward shore and re-check, comparing candidate depths against the source description (a guidebook, community reports, the site's own terrain narrative) until the coordinate's depth matches what is actually described as being dived. It also has to sit inside the coverage of the region's spatial current model, where it has one: extracting a prediction refuses a coordinate outside the model's domain, and a coordinate walked too close to shore can fall outside that coverage. If no point anywhere near the dive area lands inside the model's domain, don't force it: skip the spatial extraction for this site and pick the governing current and tide stations directly, the same as a region with no spatial current model at all.
 
-## 4. Research pass — mandatory, don't shortcut
+## 4. Research: three passes, all mandatory, in order
 
-Draw on every tool the region's own file lists (current and tide stations, bathymetry, wind, visibility reports, the dive log, forum feeds, the community site databases) and read every web source it lists, the way its entry says to. Take behaviour from community sources, never numbers: their depths sit at an unrecorded tide and their slack times carry no station. Beyond that, always run a comprehensive web search for the site by name. Sources outside the fixed list (a dive shop's own site page, a forum thread, a recent trip report, an incident writeup) turn up facts none of the standing sources carry alone: an access change, a renamed park, a hazard. If that search turns up a page that looks relevant but won't load, an archived copy that's broken, or a fetch that's blocked, stop rather than writing the file around the gap. Tell the user what turned up and what wouldn't come through, and ask them to paste the content in, or confirm it's out of reach for them too, before continuing. Never present the file as complete over a gap like this.
+Passes 4.1, 4.2 and 4.3 are three separate passes. Complete each one before starting the next. Take behaviour from community sources, never numbers: their depths sit at an unrecorded tide and their slack times carry no station. 
 
-Initial dive guides are a standing source for a new site, spanning both current behaviour and entries, hazards, marine life, and access. Their figures are dated, so re-derive every current and depth figure against a live source before it enters the file, and verify access, parking, fees and closures against a recent report. Referenced stations can be legacy: a stated correction is against a current station that may no longer publish predictions, and an offset is only meaningful against the station it was derived from. Do not apply an offset to a modern station; that is how a plan ends up saying slack at max ebb. Per site, pick the governing modern station and establish a fresh offset to it.
+Important! Every pass feeds the same rule: if a source it depends on fails, stop and report it.
+
+### 4.1 Research pass 1: the region's tools
+
+Run every tool in the region file's own "Tools" list against this site. A tool that genuinely doesn't apply to a site file (a wind forecast needs a dive date) is named in chat as skipped and why, never silently dropped.
+
+- **Current.** List the live stations near the site and their published bins, pick the bin nearest the working depth, and compare candidate stations against the spatial current model extract, where the region has one, over a span of weeks, never a single day. Report the comparison as what it is: an un-offset model against an un-offset station. A model match is not a confirmation of the offset, and the two can legitimately disagree, since a depth-averaged model can miss a near-shore turn the water along a wall actually makes.
+- **Legacy offsets.** Referenced stations can be legacy: a stated correction is against a station that may no longer publish predictions, and an offset is only meaningful against the station it was derived from. Do not apply an offset to a modern station; that is how a plan ends up saying slack at max ebb. Per site, pick the governing modern station and establish a fresh offset to it from timed observations: the dive log's own dives at this site, and community reports that give a time and a direction. Compute the station's prediction for each observed day, and state in chat which observations the offset rests on and which slack (before flood, before ebb) each one supports.
+- **Tide.** Pick the tide station in the same body of water, on the same side of any sill as the site, and verify its name and position.
+- **Dive log.** Search the log for the site under its name and its likely variants. Every logged dive is calibration: its times anchor the offset, its maximum depths normalize to the datum and check the bathymetry, its temperatures and notes go into the file's own sections.
+- **Community databases, visibility reports, forum feeds.** A tool that returns nothing for this site is checked once against a site it is known to carry before the empty result is accepted as "no record".
+
+The pass is finished when every listed tool has either produced its figure or been reported as skipped or failed.
+
+### 4.2 Research pass 2: the region's web sources
+
+Read every entry in the region file's own "Web Sources" list, the way that entry says to. Reading a source means searching inside it for this site (the forum's site listings, the catalog's site list) and reading every page that turns up in full, not checking that an archived snapshot exists. Confirm an archived snapshot holds the whole page or thread before relying on it. A source that has nothing on the site is reported as having nothing, after its own index or search was actually read.
+
+Initial dive guides the user supplies are a standing source for this pass, spanning both current behaviour and entries, hazards, marine life, and access. Their figures are dated, so re-derive every current and depth figure against a live source before it enters the file, and verify access, parking, fees and closures against a recent report.
+
+The pass is finished when every listed source has been searched for the site and every hit read.
+
+### 4.3 Research pass 3: the web deep dive
+
+A broad, deep search of the open web, run after the first two passes and as its own step. Sources outside the fixed lists (a dive shop's own site page, a forum thread, a recent trip report, an incident writeup, a park district notice) turn up facts none of the standing sources carry alone: an access change, a renamed park, a new fee, a gate, a closure, a hazard, a behaviour of the current no table predicts.
+
+- **Search wide.** Run many distinct queries in the thorough search mode, in parallel, covering at least: the site by name and every variant of it (former names, the park, the point, the pier, the street); trip reports and forum threads across the dive forums and community sites; access (the managing agency's own page, hours, fees, gates, closures, construction on the roads and bridges that reach it, towing); incidents (accidents, rescues, sheriff and coast guard reports, an agency's own blotter); and marine life (photo galleries, critter reports). Keep searching until new queries stop turning up new pages.
+- **Read deep.** Open every relevant result and read it in full; a search snippet is a pointer, never a source. When a fetch fails, try the page directly, then an archived copy.
+- **Keep a ledger.** Track every page found, whether it was read, and what it contributed or why it was set aside. Present the ledger in chat when the pass ends.
+- **Stop on a gap.** If a page that looks relevant won't load, has only a broken archived copy, or is blocked, stop rather than writing the file around it. Tell the user what turned up and what wouldn't come through, and ask them to paste the content in, or confirm it's out of reach for them too, before continuing. Never present the file as complete over a gap like this.
+- **Surface conflicts.** When two sources disagree on a fact that goes in the file (a fee one official page lists and another doesn't, two different closing hours), name both to the user and ask before choosing; if neither can be settled, state it conservatively.
+- **Test a new behaviour against what is already established.** Before proposing a current behaviour or hazard drawn from a report, check whether the file already explains it (an early turn is the offset, not a second behaviour). A single anecdote that nothing else corroborates is a question for the user, not a fact for the file.
+- **On an existing site file, propose, don't overwrite.** When the pass runs against a site file that already exists, present each addition or change in chat, with its sources, and wait for the user to choose which go in.
+
+The pass is finished when the searches have stopped producing new pages, every relevant page is read or reported to the user as unreadable, and the ledger has been shown.
 
 ## 5. Write the file
 
