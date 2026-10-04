@@ -1733,6 +1733,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "harper-fishing-pier",
+      "name": "Harper Fishing Pier (Barbara G)",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/harper-fishing-pier.md",
+      "site": {
+        "lat": 47.522573,
+        "lon": -122.517997
+      },
+      "entry": {
+        "lat": 47.522023,
+        "lon": -122.519617
+      },
+      "parking": {
+        "lat": 47.522111,
+        "lon": -122.519716
+      }
+    },
+    {
       "slug": "illahee-state-park",
       "name": "Illahee State Park",
       "region": "puget-sound",
