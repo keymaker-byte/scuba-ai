@@ -13,19 +13,11 @@ Seabed depth at a coordinate. EMODnet Bathymetry is the European Marine Observat
 
 ## `tools/emodnet_depth.py`
 
+Standard library only.
+
 ```sh
 python3 tools/emodnet_depth.py <lat> <lon>            # EMODnet's survey-backed grid, GEBCO on no coverage
 python3 tools/emodnet_depth.py <lat> <lon> --gebco    # skip straight to the global GEBCO grid
 ```
 
-Sample output, a point with a real survey behind it:
-
-```
-12.140000, -68.280000
-  seabed 92.1 m below LAT (chart datum)  [EMODnet, ~115 m grid]
-  range 82.3 to 108.1 m within this grid cell (stdev 3.7 m)
-  source: survey MB64PE430, 25213 soundings in this cell
-  https://cdi-bathymetry.seadatanet.org/report/edmo/630/MB64PE430
-```
-
-The `range` line is the spread of individual soundings inside that one grid cell, not measurement noise; a wide spread means real relief within the cell (a slope or a step), not an unreliable reading. A high `elementarySurfaces` count backs the average with real data; a low one, or a `source` line reading "interpolated, no cataloged survey," is telling you the grid filled a gap rather than measured it, worth a second, closer-in query before trusting it for a shore-entry coordinate.
+Each answer prints the depth with its datum and grid, the spread of soundings inside the grid cell, and the source: a survey id with its sounding count and metadata link, or a note that the cell is interpolated with no cataloged survey. The spread is real relief within the cell (a slope or a step), not measurement noise. A low sounding count or an interpolated cell filled a gap rather than measured it; query a point closer in before trusting it for a shore-entry coordinate.

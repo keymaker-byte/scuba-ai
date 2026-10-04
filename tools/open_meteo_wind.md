@@ -13,23 +13,13 @@ A wind source that works at any coordinate worldwide. Free, JSON over HTTPS, no 
 
 ## `tools/open_meteo_wind.py`
 
+Standard library only.
+
 ```sh
-# Hourly wind for one local calendar day, both models side by side
-python3 tools/open_meteo_wind.py forecast --near <lat> <lon> --date 2026-07-12 --tz <IANA_ZONE>
-
-# Wind at one local moment (entry or exit time), interpolated between the bracketing hours
-python3 tools/open_meteo_wind.py at --near <lat> <lon> --time "2026-07-12 09:30" --tz <IANA_ZONE>
+python3 tools/open_meteo_wind.py forecast --near <lat> <lon> --date 2026-07-12 --tz <IANA_ZONE>     # hourly wind for one local day
+python3 tools/open_meteo_wind.py at --near <lat> <lon> --time "2026-07-12 09:30" --tz <IANA_ZONE>   # wind at the entry or exit time
 ```
 
-Sample output, `at`:
+Both print the grid point actually used and its distance from the coordinate asked for, then each model's speed, direction and gust side by side, flagged where they disagree. `at` interpolates between the bracketing hours. Direction is degrees true, the direction the wind comes from.
 
-```
-  requested   <lat>, <lon>
-  grid point  <lat>, <lon>  (N.N km away, elevation NN m)
-  models      ecmwf_ifs (primary), gfs_seamless (cross-check)
-
-  ecmwf_ifs        (primary)        6.7 m/s  ESE (116°)  gust 13.2 m/s
-  gfs_seamless     (cross-check)    8.5 m/s  ESE (107°)  gust 10.4 m/s
-```
-
-Direction is degrees true, the direction the wind comes FROM, same convention as a current axis elsewhere in this workspace. `--models` overrides the default pair with any comma-separated Open-Meteo model ids (`ecmwf_ifs025` is the coarser but guaranteed-available 0.25° ECMWF tier, `icon_seamless` is DWD's ICON, `best_match` lets Open-Meteo pick); the first id given is always treated as primary. Defaults live in `tool-config.json` as `open_meteo_wind.primary_model` and `open_meteo_wind.cross_check_model`.
+`--models` overrides the pair with any comma-separated Open-Meteo model ids, the first one primary (`ecmwf_ifs025` is the coarser but guaranteed-available ECMWF tier, `icon_seamless` is DWD's ICON, `best_match` lets Open-Meteo pick). The defaults are `open_meteo_wind.primary_model` and `open_meteo_wind.cross_check_model` in `tool-config.json`.

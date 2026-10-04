@@ -1,27 +1,9 @@
 #!/usr/bin/env python3
-"""Seabed depth at a coordinate from EMODnet Bathymetry, with a global GEBCO fallback.
-Metric (metres).
+"""Seabed depth at a coordinate from EMODnet Bathymetry, with a GEBCO fallback.
 
-  emodnet_depth.py LAT LON            depth below LAT (chart datum), EMODnet's survey-backed grid
-  emodnet_depth.py LAT LON --gebco    skip straight to the coarser global GEBCO grid
+  emodnet_depth.py LAT LON            depth below LAT, EMODnet's survey-backed grid, GEBCO on no coverage
+  emodnet_depth.py LAT LON --gebco    skip straight to the global GEBCO grid
 
-EMODnet Bathymetry blends real multibeam and hydrographic survey soundings (SeaDataNet CDI
-catalogued) into a 1/16 arc-minute grid, about 115 m at low latitudes: coarse next to a reef
-terrace or a channel, but backed by an actual surveyed sounding where one exists, which the
-response's own `reference` and `elementarySurfaces` fields disclose, so you can tell a real
-survey cell from an interpolated gap-filled one. Coverage runs beyond continental Europe
-wherever a contributing survey happens to reach, but it is not a global product; a point with
-no survey behind it returns empty, and this tool then falls back to GEBCO_2024, the IHO/IOC's
-global bathymetric grid at 15 arc-second (~450 m) resolution, served through OpenTopoData.
-GEBCO covers everywhere but resolves nothing finer than that grid, and can misread a point near
-a narrow shelf, a reef edge, or a coastline as land, or as a different depth than the water
-actually dived. Neither of these is a substitute for a real chart or an in-water check.
-
-Vertical datum: EMODnet reports depth below LAT (Lowest Astronomical Tide, the IHO chart
-datum used on nautical charts); GEBCO's grid is referenced close to mean sea level. Neither is
-MLLW, and the two are not each other; do not mix a figure from here with a region's own fixed
-datum without converting first, and never mix an EMODnet figure with a GEBCO one as if they
-were on the same reference. Positive means the point is on land.
 """
 import argparse
 import json

@@ -1,39 +1,10 @@
 #!/usr/bin/env python3
-"""Seabed depth at a coordinate from the NOAA NCEI coastal DEM. Metric (metres).
+"""Seabed depth at a coordinate from the NOAA NCEI coastal DEM.
 
-  ncei_depth.py LAT LON                     depth in the DEM tile's own datum (usually NAVD88)
-  ncei_depth.py LAT LON --mllw              also convert to depth below MLLW via NOAA VDatum
+  ncei_depth.py LAT LON                     depth below NAVD88 (~mean sea level)
+  ncei_depth.py LAT LON --mllw              also below MLLW, via NOAA VDatum
   ncei_depth.py LAT LON --mllw --region R   pick the VDatum region explicitly
 
-For writing a site file: a fast, ~3 m resolution seabed depth at the dive-site coordinate,
-finer than a nautical chart's scattered soundings between wide contours, and a check that the
-point is underwater at a divable depth at all. The DEM returns NAVD88 (~mean sea level here);
-site files quote depth below MLLW, so --mllw runs the datum conversion. A separate NOAA
-service from the currents API. Positive elevation means the point is on land.
-
-VDatum's transform is tiled by geographic region, and it will not infer one from the
-coordinate; the wrong region (or its own "contiguous" default, off the coast) fails with an
-opaque "Uncaught error" rather than a useful message. Pick --region for wherever the
-coordinate actually is. Valid values, per NOAA's API docs (vdatum.noaa.gov/docs/services.html):
-
-  contiguous            Contiguous United States (Atlantic/Gulf coasts; VDatum's own default)
-  westcoast             US West Coast (Washington, Oregon, California)
-  ak                    Alaska
-  seak                  Southeast Alaska (tidal)
-  hi                    Hawaii
-  prvi                  Puerto Rico and US Virgin Islands
-  gcnmi                 Guam and the Commonwealth of the Northern Mariana Islands
-  as                    American Samoa
-  chesapeak_delaware    Chesapeake and Delaware Bay
-  wgom                  West Gulf of Mexico
-  sgi / spi / sli       Saint George Island / Saint Paul Island / Saint Lawrence Island
-
-Some regions additionally require a specific target horizontal frame for a tidal target datum
-(e.g. westcoast wants IGS14); VDatum states the required frame in its error message when this
-applies, and this tool retries once with whatever frame it names, so that quirk is transparent
-to the caller.
-
-Default region: `ncei_depth.default_region` in tool-config.json, or VDatum's own default if unset.
 """
 import argparse
 import json
@@ -168,9 +139,9 @@ def main():
     p.add_argument("lon", type=float)
     p.add_argument("--mllw", action="store_true", help="also convert to depth below MLLW (VDatum)")
     p.add_argument("--region", default=None,
-                   help="VDatum region tile for the coordinate (see module docstring for the "
-                        "list); defaults to ncei_depth.default_region in tool-config.json, or VDatum's "
-                        "own default if that's unset too")
+                   help="VDatum region: contiguous (Atlantic/Gulf, VDatum's own default), westcoast, "
+                        "ak, seak, hi, prvi, gcnmi, as, chesapeak_delaware, wgom, sgi, spi, sli; "
+                        "defaults to ncei_depth.default_region in tool-config.json")
     a = p.parse_args()
     region = a.region or _cfg("default_region")
 

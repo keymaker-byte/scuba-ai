@@ -12,10 +12,13 @@ Recent viz reports, the one thing prediction can't give you.
 
 ## `tools/pnwdiving_viz.py`
 
-Reads exactly the public summary table, once, cached (`pnwdiving_viz.cache_hours` in `tool-config.json`, default 6), converted to metres. The feed is live and updates continuously.
+Standard library only.
 
 ```sh
-python3 tools/pnwdiving_viz.py --max-age 3      # only fresh reports
-python3 tools/pnwdiving_viz.py --site skyline   # one site
-python3 tools/pnwdiving_viz.py --raw            # feet, as the reporter wrote it
+python3 tools/pnwdiving_viz.py                   # every recent report, freshest first
+python3 tools/pnwdiving_viz.py --site skyline    # one site
+python3 tools/pnwdiving_viz.py --max-age 3       # only reports from the last 3 days
+python3 tools/pnwdiving_viz.py --raw             # feet, as the reporter wrote it
 ```
+
+Reads exactly the public summary table, converted to metres. The page is cached for `pnwdiving_viz.cache_hours` in `tool-config.json` (default 6); `--refresh` bypasses the cache. Reports are dated in `pnwdiving_viz.default_tz`, overridden with `--tz`.

@@ -1,32 +1,11 @@
 #!/usr/bin/env python3
-"""Recent threads from a ScubaBoard forum, via that forum's own RSS feed.
+"""Recent threads from a ScubaBoard forum, via its RSS feed.
 
-  scubaboard.py list                                catalogue of covered forums
+  scubaboard.py list                                 every region and topic covered
   scubaboard.py retrieve pacific_northwest           recent threads, newest first
-  scubaboard.py retrieve technical_diving --limit 5  cap how many are printed
-  scubaboard.py search cave_diving "sump,line"       only threads matching all keywords
+  scubaboard.py retrieve technical_diving --limit 5  cap how many print
+  scubaboard.py search cave_diving "sump,line"       only threads matching every keyword
 
-ScubaBoard runs on XenForo, which publishes a live RSS feed for every forum at
-/community/forums/<slug>.<id>/index.rss; each feed is a rolling window of that forum's
-most recent ~20 threads (title, author, link, publish time, opening-post excerpt), no
-older history and no reply bodies. Covers two kinds of forum:
-
-  region  a place: a country, a coastline, a dive destination (e.g. Pacific Northwest,
-          Bonaire, Cozumel). Use this for local diving signal: a closed gate, a bloom
-          that just rolled in, a fee change, whether anyone got in this weekend, the
-          kind of thing no prediction tool carries.
-  topic   a subject, independent of place: training level, a technical discipline, a
-          gear category, safety, classifieds. Use this for gear research or general
-          chatter that isn't tied to a coastline.
-
-Neither list is the whole site: ScubaBoard runs several hundred forums, and manufacturer
-fan forums, dive clubs, and yearly "invasion" trip forums are left out as noise. `list`
-prints what's actually covered. To add a forum, find its page on scubaboard.com and read
-the slug and id out of its URL; the feed path is always .../index.rss from there, and a
-forum's id is stable even if ScubaBoard later renames its slug.
-
-Community content: unmoderated, anecdotal, and only as current as the last ~20 threads in
-that forum. Good for "what's being talked about right now," not a citable fact.
 """
 import argparse
 import html

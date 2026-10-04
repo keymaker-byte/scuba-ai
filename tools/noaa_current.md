@@ -13,27 +13,15 @@ The slack time and direction, on the day, for the reference station that governs
 
 ## `tools/noaa_current.py`
 
+Standard library only.
+
 ```sh
-# Re-base a site: which live stations are near it?
-python3 tools/noaa_current.py stations --near <lat> <lon>
-
-# Which bins publish, and at what depth?
-python3 tools/noaa_current.py bins STATION_ID
-
-# Slack / max flood / max ebb, at the dive-depth bin
-python3 tools/noaa_current.py predict STATION_ID --bin 1 --date 2026-07-12
-
-# The number that actually matters: how long the window stays diveable
-python3 tools/noaa_current.py window STATION_ID --bin 1 --date 2026-07-12 --max-speed 0.25
+python3 tools/noaa_current.py stations --near <lat> <lon>                      # 1. live stations near the site
+python3 tools/noaa_current.py bins STATION_ID                                  # 2. published bins and their depths
+python3 tools/noaa_current.py window STATION_ID --bin 1 --date 2026-07-12      # 3. diveable windows on the day
+python3 tools/noaa_current.py predict STATION_ID --bin 1 --date 2026-07-12     #    slack, max flood, max ebb
 ```
 
-`window` is the planning command. Rather than a single slack instant it reports every span where the current stays under a threshold (default 0.25 m/s), with its duration and peak, so a 72-minute window and a 20-minute one stop looking alike. Sample output, bin 1, 12 Jul:
+`window` is the planning command. It reports every span where the current stays under `--max-speed`, with its duration and peak, so a 72-minute window and a 20-minute one stop looking alike. The threshold defaults to `noaa_current.max_speed_ms` in `tool-config.json` (0.25 m/s, roughly 0.5 kn), a placeholder for what's comfortable in a drysuit, worth setting from experience.
 
-```
-  01:06 - 02:12    72 min   peak 0.23 m/s
-  06:54 - 07:36    48 min   peak 0.21 m/s
-  17:30 - 18:18    54 min   peak 0.24 m/s
-  21:54 - 23:36   108 min   peak 0.24 m/s
-```
-
-The threshold is a placeholder, not a considered limit: 0.25 m/s is roughly 0.5 kn, a guess at what's comfortable in a drysuit, worth setting from experience. The default lives in `tool-config.json` as `max_speed_ms`.
+`--bin` defaults to the station's near-surface bin; always pass the one nearest the working depth.

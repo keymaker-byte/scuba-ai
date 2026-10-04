@@ -11,12 +11,12 @@ What any dive log is for: user-specific experience, a site's depth range, gas co
 
 ## `tools/subsurface_log.py`
 
-Streams the logbook, in metric and local time, without modifying it.
+Standard library only.
 
 ```sh
 python3 tools/subsurface_log.py list [--site S] [--since D] [--limit N]   # recent dives, one line each
-python3 tools/subsurface_log.py show SELECTOR                             # aggregates, ratings, marks, notes
-python3 tools/subsurface_log.py profile SELECTOR [--csv]                  # depth, temperature, pressure per sample
+python3 tools/subsurface_log.py show SELECTOR                             # one dive: aggregates, ratings, marks, notes
+python3 tools/subsurface_log.py profile SELECTOR [--csv]                  # one dive: the per-sample series
 ```
 
-`SELECTOR` is a dive number, or a substring of the date, site name, site region (location, state, country, ocean) or tags; `list --site` matches name and region too. `show` gives the aggregates plus the computed SAC, OTU and CNS, the condition ratings (visibility, current, wavesize, surge, chill), the buddy and divemaster, the site's region, gas changes on multi-cylinder dives, any in-dive marks, and the notes; `profile` is the per-sample series, each sample stamped with its clock time.
+`SELECTOR` is a dive number, or a substring of the date, site name, site region (location, state, country, ocean) or tags; `list --site` matches name and region too. `show` gives the aggregates plus the computed SAC, OTU and CNS, the condition ratings, the buddy and divemaster, the site's region, gas changes on multi-cylinder dives, any in-dive marks, and the notes. `profile` stamps each sample with its clock time.

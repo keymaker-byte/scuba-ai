@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
-"""NOAA current predictions, for any station in its network. Metric (m/s, metres).
+"""NOAA CO-OPS current predictions: slack, max flood/ebb, and diveable windows.
 
-  stations --near LAT LON        find live current-prediction stations near a dive site
-  bins STATION                   which bins actually publish predictions, and at what depth
-  predict STATION [--date D]     slack / max flood / max ebb
-  window  STATION [--date D]     diveable slack windows under a speed threshold
+  noaa_current.py stations --near LAT LON                    live current stations near a site
+  noaa_current.py bins STATION                               published bins and their depths
+  noaa_current.py predict STATION --bin B [--date D]         slack / max flood / max ebb
+  noaa_current.py window STATION --bin B [--date D]          diveable windows under a speed threshold
 
-Currents are only published for a few bins per station, and the default bin is usually
-near-surface. Water at your depth can turn at a different time. Pass --bin explicitly,
-choosing the published bin nearest YOUR working depth — not the deepest one, which may be
-water you will never dive.
 """
 import argparse
 import json
@@ -165,6 +161,9 @@ def cmd_window(a):
         t1 = datetime.strptime(r[-1]["Time"], "%Y-%m-%d %H:%M")
         mins = int((t1 - t0).total_seconds() // 60) + 6
         peak = max(abs(speed(c)) for c in r)
+        if mins >= 1440:
+            print(f"  all day          peak {peak:.2f} m/s")
+            continue
         flag = "  <-- tight" if mins < 40 else ""
         print(f"  {t0:%H:%M} - {t1:%H:%M}   {mins:>3} min   peak {peak:.2f} m/s{flag}")
     print("\n  Times are AT THE STATION. Apply the site offset, and pad it until observed.")

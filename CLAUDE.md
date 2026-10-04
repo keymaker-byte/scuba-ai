@@ -4,7 +4,7 @@ This workspace is for scuba diving planning.
 
 ## Region Files
 
-A region file is a single `<slug>.md` steering file under `regions/<slug>/`, covering one bounded body of water: its geography, typical conditions, which tools apply, its depth datum (if any) and the planning order specific to its hydrography, plus the `sites/` folder holding every site written under it. It has a row in the README's own "Regions currently covered" table and an entry in `map/data.js`'s top-level `regions` object, keyed by the region's folder slug; `map.html` reads a site's region name and steering-file link from there rather than deriving either from the slug. Keep both current whenever a region is added or its display name or file path changes.
+A region file is a single `<slug>.md` steering file under `regions/<slug>/`, covering one bounded body of water: its geography, typical conditions, which tools apply, which web sources apply, its depth datum (if any) and the planning order specific to its hydrography, plus the `sites/` folder holding every site written under it. It has a row in the README's own "Regions currently covered" table and an entry in `map/data.js`'s top-level `regions` object, keyed by the region's folder slug; `map.html` reads a site's region name and steering-file link from there rather than deriving either from the slug. Keep both current whenever a region is added or its display name or file path changes.
 
 Creating a new region file is handled by the `create-dive-region` skill: it holds the canonical template, the required research pass, and the README table / map data bookkeeping. Invoke it rather than freehanding a region file.
 
@@ -42,16 +42,13 @@ Planning a new dive, and logging one afterward, is handled by the `create-dive-p
 - @tools/open_meteo_wind.md
 - @tools/pnwdiving_viz.md
 - @tools/subsurface_log.md
-- @tools/dan.md
 - @tools/scubaboard.md
-- @tools/nwdiveclub.md
-- @tools/theperfectdive.md
 - @tools/diversatlas.md
 - @tools/diveatlas.md
 
 `tool-config.json` holds personal data and is gitignored, so a fresh clone of this workspace won't have it. If it's missing at session start, don't proceed, tell the user it's missing and ask them to copy `tool-config_template.json` to the real filename and fill it in, then continue once it exists.
 
-Use these tools when writing a new region file, a new dive site file, planning a dive, or answering questions for the user. Each tool lives in `tools/`, one self-contained markdown file per tool (`tools/<name>.md`), paired with a `tools/<name>.py` script when the tool has one. Each tool reads its own parameters from its own subsection of `tool-config.json`. All of them load into context at session start, below; a region's steering file lists only the subset that region actually uses, so working a site narrows down to the right already-loaded tools rather than loading anything new.
+Use these tools when writing a new region file, a new dive site file, planning a dive, or answering questions for the user. Each tool lives in `tools/`, one self-contained markdown file per tool (`tools/<name>.md`), paired with its `tools/<name>.py` script. Each tool reads its own parameters from its own subsection of `tool-config.json`. All of them load into context at session start, below; a region's steering file lists only the subset that region actually uses, so working a site narrows down to the right already-loaded tools rather than loading anything new.
 
 If a tool errors out, an API is unreachable, or a site is down, stop and report it to the user rather than working around it. Never substitute a cached value, a plausible estimate, a different station, or a different bin to paper over the gap, and never present a plan or a site file as complete when a source it depends on failed. Say plainly what failed and what it was supposed to provide, and wait for the user before continuing. This matters because a plan built on partial data looks exactly like one built on complete data. A missing current window or a silently skipped tide check does not announce itself in the output, and by the time it matters it is a diver in the water holding a plan that was never actually checked.
 

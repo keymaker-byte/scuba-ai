@@ -5,7 +5,7 @@
 A nonprofit, user-contributed database of dive sites worldwide, with coordinates, a site type, a description and whatever fields contributors have filled in.
 
 - **Use it for.** Additional information when writing a new site file.
-- **Configuration.** `database_url` and `api_key` in the `diversatlas` section of `tool-config.json`. Both are required, there are no defaults, and the tool stops if either is missing. A `401` means the key is no longer valid; stop and report it.
+- **Configuration.** `api_key` in the `diversatlas` section of `tool-config.json`. It is required, there is no default, and the tool stops if it is missing. A `401` means the key is no longer valid; stop and report it.
 - **Undocumented, and can change.** The table and column names are the site's internal schema. A query that starts failing or returning empty means the schema moved; stop and report it rather than guessing at a replacement.
 - **Same rule as any community source.** Behaviour, not numbers. A record's depths and times are unnormalized contributor figures. A pin is a cross-check, never a replacement for a coordinate verified the workspace's own way.
 

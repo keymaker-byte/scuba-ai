@@ -13,37 +13,17 @@ The predicted tide across the entry window: how deep the site is that day. This 
 
 ## `tools/noaa_tide.py`
 
+Standard library only.
+
 ```sh
-# Which tide stations are near the site? (VERIFY the name; IDs are not self-describing)
-python3 tools/noaa_tide.py stations --near <lat> <lon>
-
-# High/low water for the day, and the day's range
-python3 tools/noaa_tide.py predict STATION_ID --date 2026-07-12
-
-# Tide height at a moment
-python3 tools/noaa_tide.py at STATION_ID --time "2026-07-12 09:18"
-
-# SITE FILE "Typical range" row: exact median/max/min daily range and year span, one call
-python3 tools/noaa_tide.py range STATION_ID --year 2026
-
-# LOGGING: observed depth -> depth below MLLW datum. The number that carries between dives.
-python3 tools/noaa_tide.py normalize STATION_ID --time "2026-07-12 09:21" --depth 14.5
-
-# PLANNING: a known datum depth -> how deep it actually reads, through the day
-python3 tools/noaa_tide.py project STATION_ID --datum-depth 15.4 --date 2026-07-12
+python3 tools/noaa_tide.py stations --near <lat> <lon>                                  # find a station, then verify its name
+python3 tools/noaa_tide.py predict STATION_ID --date 2026-07-12                         # high/low water and the day's range
+python3 tools/noaa_tide.py at STATION_ID --time "2026-07-12 09:18"                      # tide height at a moment
+python3 tools/noaa_tide.py range STATION_ID --year 2026                                 # site file: the "Typical range" row
+python3 tools/noaa_tide.py project STATION_ID --datum-depth 15.4 --date 2026-07-12      # planning: datum depth to depth below surface, all day
+python3 tools/noaa_tide.py normalize STATION_ID --time "2026-07-12 09:21" --depth 14.5  # logging: observed depth to depth below MLLW
 ```
 
-`normalize` is the logging command, `project` is the planning command, and they are inverses:
+`project` and `normalize` are inverses. Depth below MLLW is the observed depth minus the tide height; depth below the surface is the datum depth plus the tide height. Tide heights are signed, so a dive on a minus tide reads shallower than the datum depth.
 
-```
-$ noaa_tide.py normalize STATION_ID --time "2026-07-12 09:21" --depth 14.5
-  observed depth        14.5 m
-  tide height          -0.94 m
-  depth below MLLW      15.4 m   <-- log this
-
-$ noaa_tide.py project STATION_ID --datum-depth 15.4 --date 2026-07-12
-  09:37  LOW   tide -0.95 m   ->  reads  14.4 m below surface
-  17:44  HIGH  tide +3.36 m   ->  reads  18.8 m below surface
-```
-
-On subordinate stations it interpolates harmonically between the high/low extremes (the smooth form of the rule of twelfths), good to a few centimetres, far inside the precision a dive computer's depth deserves, so `at` and `normalize` work anywhere.
+On a subordinate station the tool interpolates harmonically between the high/low extremes (the smooth form of the rule of twelfths), good to a few centimetres, so `at`, `normalize` and `project` work anywhere.

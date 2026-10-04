@@ -1,23 +1,10 @@
 #!/usr/bin/env python3
-"""Read the Subsurface dive log (native .xml/.ssrf). Read-only. Metric, local time.
+"""The Subsurface dive log, read-only.
 
-  list [--site S] [--since D] [--limit N]   recent dives, one line each
-  show SELECTOR                              full detail for one dive: aggregates, notes, marks
-  profile SELECTOR [--csv]                   the per-sample time series (depth, temp, pressure)
+  subsurface_log.py list [--site S] [--since D] [--limit N]   recent dives, one line each
+  subsurface_log.py show SELECTOR                             one dive: aggregates, ratings, marks, notes
+  subsurface_log.py profile SELECTOR [--csv]                  one dive: the per-sample series
 
-SELECTOR picks a dive: a bare integer matches the dive number; otherwise it is a substring
-matched against the date, site name, site region (location, state, country, ocean) or trip
-tags. `list --site` matches name and region too. An ambiguous selector lists the candidates.
-
-This never writes the file. Subsurface owns it; point Subsurface at it, not this tool. Set
-SUBSURFACE_XML to override the path (defaults to the app's saved logbook).
-
-Subsurface labels every value with its unit inline (depth='23.1 m', water='13.0 C',
-pressure0='219.67 bar', size='10.0 l', weight='13.2 kg'), so this tool reads the suffix and
-presents metric whatever the app's display units are set to. It also carries fields MacDive's
-own export drops on the way to Subsurface: a computed SAC per dive, and (once backfilled)
-visibility and current as 1-5 ratings and the diver's in-dive bookmarks. Times are local; a
-sample's time is minutes:seconds into the dive, so its clock time is the dive start plus that.
 """
 import argparse
 import csv
@@ -322,7 +309,7 @@ def cmd_profile(args):
 
 
 def main():
-    p = argparse.ArgumentParser(description="Read the Subsurface dive log (read-only).")
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
     pl = sub.add_parser("list", help="recent dives, one line each")
     pl.add_argument("--site")
