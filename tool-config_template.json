@@ -1,5 +1,5 @@
 {
-  "note": "Per-tool parameters: one subsection per tool in tools/, named after the script. A tool reads only its own subsection, and a missing key falls back to the tool's built-in default. Paths: ~ expands to home, relative paths resolve against the workspace root. The nws section covers the documented curl fetch, which has no script.",
+  "note": "Per-tool parameters: one subsection per tool in tools/, named after the script. A tool reads only its own subsection, and a missing key falls back to the tool's built-in default. Paths: ~ expands to home, relative paths resolve against the workspace root.",
 
   "subsurface_log": {
     "file": "~/Library/Application Support/Subsurface/<your-log>.xml"
@@ -27,7 +27,7 @@
     "default_tz": "America/Los_Angeles"
   },
 
-  "nws": {
+  "nws_forecast": {
     "user_agent_email": "<your-email>@example.com"
   },
 
@@ -39,7 +39,6 @@
   "scubaboard": {},
 
   "diversatlas": {
-    "database_url": "<required>",
     "api_key": "<required>"
   },
 

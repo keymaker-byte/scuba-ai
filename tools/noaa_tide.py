@@ -1,22 +1,13 @@
 #!/usr/bin/env python3
-"""NOAA tide predictions, for any station in its network. Metric (metres), MLLW, local time.
+"""NOAA CO-OPS tide predictions, in metres against MLLW.
 
-  stations --near LAT LON            find live tide-prediction stations near a dive site
-  predict STATION [--date D]         high/low water for the day
-  at STATION --time "YYYY-MM-DD HH:MM"   tide height at a moment
-  normalize STATION --time T --depth D   observed depth  ->  depth below MLLW datum
-  project STATION --datum-depth X [--date D]   datum depth -> depth below surface, all day
-  range STATION [--year Y]           exact median/max/min daily range and span, whole year in one call
+  noaa_tide.py stations --near LAT LON                       tide stations near a site
+  noaa_tide.py predict STATION [--date D]                    high/low water for the day
+  noaa_tide.py at STATION --time "D HH:MM"                   tide height at a moment
+  noaa_tide.py range STATION [--year Y]                      median/max/min daily range and year span
+  noaa_tide.py project STATION --datum-depth X [--date D]    datum depth to depth below surface, all day
+  noaa_tide.py normalize STATION --time T --depth D          observed depth to depth below MLLW
 
-Why this exists: depth is not a fixed property of a site. The seabed sits at a
-fixed depth below the MLLW *datum*; the surface moves 3-4 m over it. A depth read off the
-computer is only comparable to another dive's depth once the tide is taken out of it.
-
-  depth below MLLW datum  =  observed depth  -  tide height
-  depth below surface     =  datum depth     +  tide height
-
-Tide heights are signed: negative on a minus tide, so a low-water dive reads *shallower* than
-the datum depth. Times are local (lst_ldt) at the station, as everything in this workspace is.
 """
 import argparse
 import json
@@ -125,27 +116,43 @@ def cmd_stations(a):
     print("smoothly. But a station across a constriction can lag; prefer one on the same shore.")
 
 
+def day_extremes(hilo, day):
+    """The day's highs and lows. A day holding only one kind (a single extreme, or two of the
+    same kind either side of midnight) also takes the extreme just before and just after it, so
+    its range always spans a low to a high."""
+    idx = [i for i, p in enumerate(hilo) if p["t"][:10] == day]
+    if not idx:
+        return []
+    if len({hilo[i]["type"] for i in idx}) < 2:
+        idx = [i for i in (idx[0] - 1, *idx, idx[-1] + 1) if 0 <= i < len(hilo)]
+    return [hilo[i] for i in idx]
+
+
 def cmd_predict(a):
-    hilo = predictions(a.station, a.date, "hilo")
+    hilo = predictions(a.station, a.date - timedelta(days=1), "hilo", end=a.date + timedelta(days=1))
+    day = a.date.isoformat()
+    pts = day_extremes(hilo, day)
     print(f"{a.station}  {a.date}  high/low water, m above MLLW, local time\n")
-    for p in hilo:
+    for p in pts:
         kind = "HIGH" if p["type"] == "H" else "LOW "
-        print(f"  {p['t'][11:]}  {kind}  {float(p['v']):+.2f} m")
-    lo = min(float(p["v"]) for p in hilo)
-    hi = max(float(p["v"]) for p in hilo)
+        when = p["t"][11:] if p["t"][:10] == day else p["t"]
+        print(f"  {when}  {kind}  {float(p['v']):+.2f} m")
+    lo = min(float(p["v"]) for p in pts)
+    hi = max(float(p["v"]) for p in pts)
     print(f"\n  range {hi - lo:.2f} m — a fixed seabed feature reads {hi - lo:.2f} m deeper at the high than the low.")
 
 
 def cmd_range(a):
     year_start = date(a.year, 1, 1)
     year_end = date(a.year, 12, 31)
-    hilo = predictions(a.station, year_start, "hilo", end=year_end)
-
-    by_day = {}
-    for p in hilo:
-        by_day.setdefault(p["t"][:10], []).append(float(p["v"]))
-
-    daily = sorted(((d, max(vs) - min(vs)) for d, vs in by_day.items()), key=lambda x: x[1])
+    hilo = predictions(a.station, year_start - timedelta(days=1), "hilo", end=year_end + timedelta(days=1))
+    days = sorted({p["t"][:10] for p in hilo if p["t"][:4] == str(a.year)})
+    daily = []
+    for d in days:
+        vs = [float(p["v"]) for p in day_extremes(hilo, d)]
+        daily.append((d, max(vs) - min(vs)))
+    daily.sort(key=lambda x: x[1])
+    hilo = [p for p in hilo if p["t"][:4] == str(a.year)]
     n = len(daily)
     median = daily[n // 2][1] if n % 2 else (daily[n // 2 - 1][1] + daily[n // 2][1]) / 2
     lo_day, hi_day = daily[0], daily[-1]

@@ -15,7 +15,7 @@ Do not guess which body of water this is. If the user names a region loosely (a 
 
 This is the bulk of the work. The template below only has blanks; filling them with anything less than researched, cross-checked facts is how a region file goes stale on day one, and every site written under it inherits that gap. Cover, at minimum, the following, and run a comprehensive web search beyond the standing tool list for all of it: a region's own tourism board, a park or marine sanctuary authority, a local dive shop's site, and a regional dive forum each carry facts none of the fixed sources do.
 
-The region's geography: dimensions, how it connects to neighbouring water, and any sub areas, basins or reaches worth naming and placing. Typical water temperature through the year, at depth and at the surface if they diverge sharply, and what drives visibility here, with a sense of when it tends to run best or worst. The region's overall character in a sentence or two: what kind of diving this is and what actually dominates conditions, tide, wind, open ocean swell, or something else, since that answer drives most of what follows. Which tools in `tools/` actually apply here. The order of factors that actually decide whether a dive goes well here, reasoned through for this region's own hydrography, an open ocean-facing coast plans differently from a narrow sill-bound inlet, rather than copied from another region's ordering. Local dive shops and air fills where they're actually known and verifiable; leave the section for later rather than fabricating one if nothing concrete turned up. The local emergency number and every operating hyperbaric recompression chamber that could plausibly serve this region, nearest first, with how it's reached (through a hospital's own emergency room, a direct line, or both) and its distance or driving time from the region's own sites, especially a remote reach of it, noting any chamber that's restricted (military or otherwise not publicly accessible) rather than omitting it outright.
+The region's geography: dimensions, how it connects to neighbouring water, and any sub areas, basins or reaches worth naming and placing. Typical water temperature through the year, at depth and at the surface if they diverge sharply, and what drives visibility here, with a sense of when it tends to run best or worst. The region's overall character in a sentence or two: what kind of diving this is and what actually dominates conditions, tide, wind, open ocean swell, or something else, since that answer drives most of what follows. Which tools in `tools/` actually apply here, and which websites (a regional forum, a site catalog, an archived guide, a park authority) belong in its Web Sources, with how each is read when it needs more than a plain fetch. The order of factors that actually decide whether a dive goes well here, reasoned through for this region's own hydrography, an open ocean-facing coast plans differently from a narrow sill-bound inlet, rather than copied from another region's ordering. Local dive shops and air fills where they're actually known and verifiable; leave the section for later rather than fabricating one if nothing concrete turned up. The local emergency number and every operating hyperbaric recompression chamber that could plausibly serve this region, nearest first, with how it's reached (through a hospital's own emergency room, a direct line, or both) and its distance or driving time from the region's own sites, especially a remote reach of it, noting any chamber that's restricted (military or otherwise not publicly accessible) rather than omitting it outright.
 
 If a search turns up a page that looks relevant but won't load, an archived copy that's broken, or a fetch that's blocked, stop rather than writing the file around the gap. Tell the user what turned up and what wouldn't come through, and ask them to paste the content in, or confirm it's out of reach for them too, before continuing. Never present the file as complete over a gap like this, especially the emergency section: a wrong or missing chamber is not a cosmetic gap.
 
@@ -68,6 +68,14 @@ The following tools should be used in this region:
 - tool_name.md
 
 List only the tools this region actually uses.
+
+## Web Sources
+
+The following web sources should be used in this region:
+
+- **[Source name](url).** One or two sentences, stating what it is and holds, and how to read it (a pinned archive snapshot, a Wayback Machine lookup).
+
+List only the websites this region actually uses.
 
 ## Conventions
 

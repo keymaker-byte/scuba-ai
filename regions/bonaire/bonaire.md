@@ -31,10 +31,15 @@ The following tools should be used in this region:
 - open_meteo_wind.md
 - emodnet_depth.md
 - subsurface_log.md
-- dan.md
 - scubaboard.md
 - diversatlas.md
 - diveatlas.md
+
+## Web Sources
+
+The following web sources should be used in this region:
+
+- **[DAN (Divers Alert Network)](https://dan.org).** Dive medicine, accident data and case narratives (the Annual Diving Report, Incident Insights), the standing source for gear, procedure and debrief questions. Emergency line +1-919-684-9111, 24/7, collect calls accepted worldwide.
 
 ## Conventions
 

@@ -1,28 +1,9 @@
 #!/usr/bin/env python3
-"""Open-Meteo wind forecast: ECMWF IFS HRES, the highest-verified-accuracy global model
-available with no key, plus a GFS run pulled in the same call as an independent cross-check.
-Works at any coordinate worldwide. Metric (m/s, degrees true, the direction wind comes FROM).
+"""Wind forecast from Open-Meteo: ECMWF IFS, with GFS as a cross-check.
 
-  forecast --near LAT LON --date D --tz TZ           hourly wind for one local calendar day
-  at       --near LAT LON --time "D HH:MM" --tz TZ   wind at one local moment, interpolated
+  open_meteo_wind.py forecast --near LAT LON --date D --tz ZONE         hourly wind for one local day
+  open_meteo_wind.py at --near LAT LON --time "D HH:MM" --tz ZONE       wind at one local moment
 
-Wind is a numerical forecast, not an astronomical prediction: it is only meaningful about two
-weeks out, and the API itself refuses a date outside roughly the current day +/- its own
-model window, unlike a tide or current prediction that can run years ahead. --tz is required,
-an IANA zone name, never a fixed offset; the API localizes every timestamp itself once told
-which zone, so nothing here can be a UTC value read as local.
-
-The coordinate you ask for is not the coordinate the model actually reports: both models are
-resampled to a grid, and the response is the nearest grid point on it, not your point. Every
-command prints that grid point and its distance from what you asked for; a few km is normal
-for ecmwf_ifs's 9 km grid, more for the coarser gfs_seamless. Read that distance before
-trusting a number for a site near a coastline or a sharp local terrain feature, the grid point
-can be sitting over different terrain than the actual dive site.
-
-ECMWF's IFS HRES model verifies as the most accurate global NWP model for wind at these lead
-times; GFS is shown alongside it as a second, independent model, not because it is expected to
-win, but because two models that agree are worth more than one, and a flagged disagreement
-(speed or direction) is worth a second look before calling a plan on it.
 """
 import argparse
 import json

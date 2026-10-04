@@ -15,6 +15,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+DATABASE_URL = "https://loefamhnvuxtegojrcgr.supabase.co"
 LIST_COLUMNS = "site_id,slug,name,latitude,longitude,site_type,country,region_state"
 
 
@@ -28,11 +29,10 @@ def _cfg(key, default):
 
 
 def _query(table, params):
-    base, key = _cfg("database_url", None), _cfg("api_key", None)
-    missing = [n for n, v in (("database_url", base), ("api_key", key)) if not v or v.startswith("<")]
-    if missing:
-        sys.exit(f"diversatlas.{' and diversatlas.'.join(missing)} not set in tool-config.json")
-    url = f"{base.rstrip('/')}/rest/v1/{table}?{urllib.parse.urlencode(params)}"
+    key = _cfg("api_key", None)
+    if not key or key.startswith("<"):
+        sys.exit("diversatlas.api_key not set in tool-config.json")
+    url = f"{DATABASE_URL}/rest/v1/{table}?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(url, headers={"apikey": key, "Authorization": f"Bearer {key}"})
     try:
         with urllib.request.urlopen(req, timeout=30) as r:

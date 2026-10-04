@@ -46,12 +46,17 @@ The following tools should be used in this region:
 - nws_forecast.md
 - pnwdiving_viz.md
 - subsurface_log.md
-- dan.md
 - scubaboard.md
-- nwdiveclub.md
-- theperfectdive.md
 - diversatlas.md
 - diveatlas.md
+
+## Web Sources
+
+The following web sources should be used in this region:
+
+- **[DAN (Divers Alert Network)](https://dan.org).** Dive medicine, accident data and case narratives (the Annual Diving Report, Incident Insights), the standing source for gear, procedure and debrief questions. Emergency line +1-919-684-9111, 24/7, collect calls accepted worldwide.
+- **[NW Dive Club](https://nwdiveclub.com/viewforum.php?f=6).** Community write-ups of how a site is dived: the entry, what's worth seeing, what to expect. Read it through the Wayback Machine (`https://archive.org/wayback/available?url=<page>`, then `curl --compressed` the snapshot), and confirm the snapshot holds the full thread.
+- **[The Perfect Dive](https://web.archive.org/web/20220413053905/http://theperfectdive.com/DEF-SiteList.asp).** A defunct catalog of Pacific Northwest sites, frozen around 2022: dive type, difficulty, entry and attractions per site, including several lesser-known sites. Read this pinned snapshot with `curl --compressed`, and verify access, fees and closures against a recent source.
 
 ## Conventions
 

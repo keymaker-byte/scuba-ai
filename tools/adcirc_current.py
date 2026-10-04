@@ -1,45 +1,12 @@
 #!/usr/bin/env python3
-"""Spatial tidal current prediction from the ENPAC15 ADCIRC tidal database. Metric (m/s).
+"""Spatial tidal currents from the ENPAC15 ADCIRC tidal database.
 
-A supplement to noaa_current.py, not a replacement. NOAA current stations are harmonic
-analyses of real measurements at one point and are the better number wherever a station
-exists. ENPAC15 is a smooth, depth-averaged regional model: its value is the water BETWEEN
-stations and at sites with no nearby station. It under-represents the sharp flood/ebb
-asymmetry of real rapids, so treat it as the big picture, not the last word.
+  adcirc_current.py extract OUT.json --near LAT LON --tz ZONE         write a site's extract, once
+  adcirc_current.py predict --file F [--date D] [--position P]        slacks and peaks
+  adcirc_current.py window --file F [--date D] [--position P]         diveable windows under a speed threshold
+  adcirc_current.py at --file F --time "D HH:MM" [--position P]       current at a moment
+  adcirc_current.py selftest                                          verify the astronomy
 
-Two use cases, two paths:
-
-  extract OUT_PATH --near LAT LON --tz ZONE
-                                  pull the harmonic constituents at a site from the database
-                                  and write them to OUT_PATH (the extract that belongs beside
-                                  the site's own <slug>.md, e.g.
-                                  regions/<region>/sites/<slug>.json). Needed once when writing
-                                  a new site file. --tz is the site's own IANA timezone (e.g.
-                                  America/Los_Angeles, America/New_York); it is stored in the
-                                  extract so every later prediction runs in the site's own
-                                  local time, not a workspace-wide guess. Downloads the ~700 MB
-                                  database on first use if tools/db/ is empty.
-  predict (--json JSON | --file PATH) [--date D] [--position P] [--tz ZONE]
-                                                slack / max flood / max ebb
-  window  (--json JSON | --file PATH) [--date D] [--position P] [--tz ZONE]
-                                                diveable windows under a speed threshold
-  at      (--json JSON | --file PATH) --time "..." [--position P] [--tz ZONE]
-                                                instantaneous current vector
-
-predict/window/at take the extract to run against as either --json (its full content, inline)
-or --file (a path to read it from); exactly one is given. --file suits a local script reading
-an extract off disk; --json suits a wrapper (e.g. a web API) that already has the content in
-hand and would rather not write a temp file. E.g. `... predict --date 2026-07-12 --file
-site.json` or `... predict --date 2026-07-12 --json '{"lat": ..., "enpac15_constituents": [...]}'`.
-
-The model current is depth-AVERAGED (the column mean, which runs slower than the near-surface
-flow). Pass --position (bottom, mid, or surface) to scale it toward where in the water column
-you'll actually be, through a boundary-layer profile: slower near the seabed, faster up high.
-Slack times do not move, only speeds. It is approximate and ignores stratification, so where a
-proven NOAA station exists, trust the station's depth bin. Times are local to the site:
-predict/window/at read the timezone stored in the extract, so a Puget Sound site and an East
-Coast site each run in their own zone automatically. --tz on those commands only overrides
-that stored value; it never needs to be set day to day.
 """
 import argparse
 import gzip
@@ -660,6 +627,9 @@ def cmd_window(a):
         return
     for t0, t1, peak in shown:
         mins = round((t1 - t0).total_seconds() / 60)
+        if mins >= 1440:
+            print(f"  all day          peak {peak:.2f} m/s")
+            continue
         flag = "  <-- tight" if mins < 40 else ""
         print(f"  {t0:%H:%M} - {t1:%H:%M}   {mins:>3} min   peak {peak:.2f} m/s{flag}")
     print("\n  Pad it, and confirm against a NOAA station and observation.")

@@ -1,17 +1,11 @@
 #!/usr/bin/env python3
-"""Recent visibility reports from pnwdiving.com. Metric (m).
+"""Recent visibility reports from the pnwdiving.com home page summary table.
 
-Reads ONLY the "Recent Dive Reports" summary table that pnwdiving server-renders on its
-home page — an allowed, sitemapped path. The full report bodies live under /*/reports,
-which their robots.txt disallows; we do not touch that, and this tool must never be
-pointed at it. Read full reports in a browser like a human.
+  pnwdiving_viz.py                   every recent report, freshest first
+  pnwdiving_viz.py --site skyline    one site
+  pnwdiving_viz.py --max-age 3       only reports from the last N days
+  pnwdiving_viz.py --refresh         bypass the cache
 
-Reports are posted in feet; we convert to metres.
-
-  viz                          recent reports, freshest first
-  viz --site skyline           filter by site
-  viz --max-age 4              only reports from the last N days
-  viz --refresh                bypass the local cache
 """
 import argparse
 import html as H
