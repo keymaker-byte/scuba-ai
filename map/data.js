@@ -2132,6 +2132,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "sunnyside-beach-park",
+      "name": "Sunnyside Beach Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/sunnyside-beach-park.md",
+      "site": {
+        "lat": 47.178155,
+        "lon": -122.591559
+      },
+      "parking": {
+        "lat": 47.177167,
+        "lon": -122.589993
+      },
+      "entry": {
+        "lat": 47.17794,
+        "lon": -122.590275
+      }
+    },
+    {
       "slug": "sunrise-beach-park",
       "name": "Sunrise Beach Park",
       "region": "puget-sound",
