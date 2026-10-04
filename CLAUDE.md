@@ -46,6 +46,7 @@ Planning a new dive, and logging one afterward, is handled by the `create-dive-p
 - @tools/scubaboard.md
 - @tools/nwdiveclub.md
 - @tools/theperfectdive.md
+- @tools/diversatlas.md
 
 `tool-config.json` holds personal data and is gitignored, so a fresh clone of this workspace won't have it. If it's missing at session start, don't proceed, tell the user it's missing and ask them to copy `tool-config_template.json` to the real filename and fill it in, then continue once it exists.
 
