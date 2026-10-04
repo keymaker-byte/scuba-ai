@@ -23,7 +23,7 @@
   "emodnet_depth": {},
 
   "pnwdiving_viz": {
-    "cache_hours": 6,
+    "cache_hours": 1,
     "default_tz": "America/Los_Angeles"
   },
 
@@ -36,5 +36,10 @@
     "cross_check_model": "gfs_seamless"
   },
 
-  "scubaboard": {}
+  "scubaboard": {},
+
+  "diversatlas": {
+    "database_url": "<required>",
+    "api_key": "<required>"
+  }
 }

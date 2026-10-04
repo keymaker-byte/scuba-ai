@@ -49,6 +49,7 @@ The following tools should be used in this region:
 - scubaboard.md
 - nwdiveclub.md
 - theperfectdive.md
+- diversatlas.md
 
 ## Conventions
 

@@ -33,6 +33,7 @@ The following tools should be used in this region:
 - subsurface_log.md
 - dan.md
 - scubaboard.md
+- diversatlas.md
 
 ## Conventions
 
