@@ -1733,6 +1733,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "fox-island-east-wall",
+      "name": "Fox Island East Wall",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/fox-island-east-wall.md",
+      "site": {
+        "lat": 47.22813,
+        "lon": -122.589701
+      },
+      "parking": {
+        "lat": 47.228377,
+        "lon": -122.591763
+      },
+      "entry": {
+        "lat": 47.228206,
+        "lon": -122.590572
+      }
+    },
+    {
       "slug": "green-point",
       "name": "Green Point",
       "region": "puget-sound",
