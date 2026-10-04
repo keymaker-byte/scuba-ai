@@ -38,4 +38,4 @@ Ordered by what actually decides whether a lake dive goes well:
 
 | Site | Description |
 |---|---|
-| [Lake Crescent East Beach](sites/lake-crescent-east-beach.md) | Deep, exceptionally clear glacial lake in Olympic National Park where clarity itself is the hazard, letting a diver run past their planned depth before it feels deep. |
+| [Lake Crescent East Beach](sites/lake-crescent-east-beach.md) | South shore near the east end of Lake Crescent in Olympic National Park, a deep, exceptionally clear glacial lake where a narrow shelf breaks into a steep slope past a house-sized boulder garden, a sunken wooden barge and a submerged forest, home to the lake's endemic trout. |

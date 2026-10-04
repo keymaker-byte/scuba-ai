@@ -31,7 +31,7 @@ Follow the template at the bottom of this skill for structure (section order, th
 
 ## 6. Bookkeeping, once the file exists
 
-A new site isn't done until it's discoverable from both places that index it. A row in the region's own steering file, under its "Sites currently covered" table: the site name linking to `sites/<slug>.md`, plus a brief one-line description. An entry in `map/data.js`, the index `map.html` draws its pins from. Add one object to the top-level `sites` array:
+A new site isn't done until it's discoverable from both places that index it. A row in the region's own steering file, under its "Sites currently covered" table: the site name linking to `sites/<slug>.md`, plus a one-sentence description that characterises the site the way a guidebook index would: where it is, what the terrain and structure are, its navigation landmarks, its notable life, and anything unique to it. Leave out hazards, current, slack timing, skill level, access status and anything else that belongs to planning; the site file carries those. An entry in `map/data.js`, the index `map.html` draws its pins from. Add one object to the top-level `sites` array:
 
 ```json
 {

@@ -61,102 +61,102 @@ Ordered by what actually decides whether a Bonaire dive goes well:
 
 Site numbering runs 1 to 63 plus a lettered set A to Z at Klein Bonaire, 90 sites in total. STINAPA counts 88 of these as marked sites along the West Coast and Klein Bonaire; White Hole and Cai sit on the East Coast instead, recommended only for advanced divers with an experienced guide.
 
-The Washington Slagbaai chain, Boka Bartol through Nukove, has been closed to diving since 1 May 2023 over an SCTLD outbreak, with every other dive site in the park open; each affected site file carries the same note. Karpata and La Dania's Leap, just south of this chain, have reopened. Carel's Vision, between the closed chain and Karpata, is a separate, permanent case: it sits inside the King Willem-Alexander Reserve (see Conventions) and stays closed regardless of how the SCTLD situation develops. Reconfirm status with STINAPA before planning a dive near any of these boundaries.
+The Washington Slagbaai chain, Boka Bartol through Nukove, has been closed to diving since 1 May 2023 over an SCTLD outbreak, with every other dive site in the park open; each affected site file carries the same note. Karpata and La Dania's Leap, just south of this chain, have reopened. Carel's Vision, between the closed chain and Karpata, is a separate, permanent case: it sits inside the King Willem-Alexander Reserve (see Conventions) and stays closed regardless of how the SCTLD situation develops. On Klein Bonaire, Munk's Haven has been closed for an extended period and C.H. Annex is closed per STINAPA's own map. Reconfirm status with STINAPA before planning a dive near any of these boundaries.
 
 SCTLD precaution applies uniformly across the park rather than by site: disinfect before, between and after every dive, at every site (see Conventions).
 
 | Site | Description |
 |---|---|
-| [1. Boka Bartol](sites/01-boka-bartol.md) | Bonaire's northernmost site, a remote bay with a coral shelf, currently closed. |
-| [2. Playa Benge](sites/02-playa-benge.md) | Remote pristine reef behind a difficult finger-coral and loose-rock entry, currently closed. |
-| [3. Playa Funchi](sites/03-playa-funchi.md) | A protected cove opening onto a fast drop-off, currently closed. |
-| [4. Bise Morto](sites/04-bise-morto.md) | Elkhorn-thick shallows over a fast drop-off, known for deep water pelagics, currently closed. |
-| [5. Wayaka](sites/05-wayaka.md) | A little dived boat site inside the park, currently closed. |
-| [6. Boka Slagbaai N](sites/06-boka-slagbaai-n.md) | The north route at the park's historic bay, with 1980s film-prop cannons, currently closed. |
-| [6a. Boka Slagbaai S](sites/06a-boka-slagbaai-s.md) | The south route at the same bay, with genuine 18th century cannons and ship's ballast, currently closed. |
-| [7. Nukove](sites/07-nukove.md) | A sandy cove past the BOPEC oil terminal with pristine elkhorn coral, currently closed. |
-| [8. Carel's Vision](sites/08-carels-vision.md) | A remote Punta Wekua site, permanently closed inside a no-dive reserve. |
-| [9. Karpata](sites/09-karpata.md) | A popular reopened shore dive with a historic anchor and dense elkhorn coral. |
-| [10. La Dania's Leap](sites/10-la-danias-leap.md) | A vertical wall drift dive from a cliff ledge, finishing at Karpata. |
-| [11. Rappel](sites/11-rappel.md) | A popular boat dive off a cliff plateau, also known as Bruce's Rappel. |
-| [12. Bloodlet](sites/12-bloodlet.md) | A dense reef boat dive with a reputation for stronger current. |
-| [13. Tolo](sites/13-tolo.md) | A coral beach reef just north of 1000 Steps, good for any level. |
-| [14. Country Garden](sites/14-country-garden.md) | Three fallen cliff pillars, also called Mushroom City. |
-| [15. Bon Bini na Kas](sites/15-bon-bini-na-kas.md) | An easy boat dive with a cave complex under an overhanging cliff. |
-| [16. 1000 Steps](sites/16-1000-steps.md) | A shore dive beside the Radio Nederland towers, famous for its climb out. |
-| [17. Weber's Joy](sites/17-webers-joy.md) | An easy double reef dive, also known as Witch's Hut. |
-| [18. Jeff Davis Memorial](sites/18-jeff-davis-memorial.md) | An isolated site with coral chutes and cleaning stations. |
-| [19. Kalli's Reef](sites/19-kallis-reef.md) | A popular boat-only reef between Jeff Davis and Oil Slick Leap. |
-| [20. Oil Slick Leap](sites/20-oil-slick-leap.md) | A ladder shore entry known for large barracuda schools. |
-| [21. Barkadera](sites/21-barkadera.md) | A boat dive opposite STINAPA's own headquarters. |
-| [22. Andrea II](sites/22-andrea-ii.md) | A beginner reef north of the desalination plant, reliable for seahorses. |
-| [23. Andrea I](sites/23-andrea-i.md) | Andrea II's twin, just as beginner-friendly. |
-| [24. Petries Pillar](sites/24-petries-pillar.md) | A beginner shore dive named by Captain Don as a wedding gift. |
-| [25. Small Wall](sites/25-small-wall.md) | A vertical wall to a small cave, in front of the Black Durgon Inn. |
-| [26. Cliff](sites/26-cliff.md) | A wall dive with Captain Don's underwater memorial. |
-| [27. La Machaca](sites/27-la-machaca.md) | A shallow wreck dive at Captain Don's Habitat. |
-| [28. Reef Scientifico](sites/28-reef-scientifico.md) | A coral garden south of La Machaca, strong at night. |
-| [29. Buddy's Reef](sites/29-buddys-reef.md) | Buddy Dive Resort's easy house reef. |
-| [30. Bari's Reef](sites/30-baris-reef.md) | Sand Dollar's house reef, the Caribbean's top site for fish diversity. |
-| [31. Front Porch](sites/31-front-porch.md) | An easy dive to a tugboat wreck full of cardinalfish. |
-| [32. Something Special](sites/32-something-special.md) | A marina-mouth site known for unusual fish sightings. |
-| [33. Town Pier](sites/33-town-pier.md) | A famous macro pier dive needing harbourmaster permission. |
-| [34. Calabas Reef](sites/34-calabas-reef.md) | Divi Flamingo's protected house reef. |
-| [35. 18th Palm](sites/35-18th-palm.md) | Plaza Resort's double reef with a sandy beach entry. |
-| [36. Windsock](sites/36-windsock.md) | An easy sandy beach dive good for novices and picnics. |
-| [37. Corporal Meiss](sites/37-corporal-meiss.md) | A picnic beach site opposite the airport, named for a fallen soldier. |
-| [38. Bachelor's Beach](sites/38-bachelors-beach.md) | An easy Belnem beach dive good for novices and night diving. |
-| [39. Chez Hines](sites/39-chez-hines.md) | South Belnem's turtle-rich site, with a deep second reef. |
-| [40. Lighthouse Point](sites/40-lighthouse-point.md) | An advanced south coast drift site with strong, building current. |
-| [41. Punt Vierkant](sites/41-punt-vierkant.md) | The start of the double reef system, easy sandy entry. |
-| [42. The Lake](sites/42-the-lake.md) | The double reef's second site, named for its sandy lake. |
-| [43. Hilma Hooker](sites/43-hilma-hooker.md) | Bonaire's most famous wreck, a former drug-running freighter sunk in 1984. |
-| [44. Angel City](sites/44-angel-city.md) | A double reef site next to the Hilma Hooker, named for its angelfish. |
-| [45. Alice in Wonderland](sites/45-alice-in-wonderland.md) | A double reef dive with a deep sandy divide between reefs. |
-| [46. Aquarius](sites/46-aquarius.md) | An easy double reef dive near Salt Pier. |
-| [47. Larry's Lair](sites/47-larrys-lair.md) | A double reef with no mooring buoy, navigated by compass. |
-| [48. Jeannie's Glory](sites/48-jeannies-glory.md) | A sandy plateau site with a boulder and ledge entry. |
-| [49. Salt Pier](sites/49-salt-pier.md) | An active industrial pier, diveable only when no ship is moored. |
-| [50. Salt City](sites/50-salt-city.md) | A double reef site with a stingray sandbar. |
-| [51. Invisibles](sites/51-invisibles.md) | The southernmost double reef site, with a fine garden eel colony. |
-| [52. Tori's Reef](sites/52-toris-reef.md) | A salt-outflow site, #2 in the Caribbean for fish diversity. |
-| [53. Pink Beach](sites/53-pink-beach.md) | A famous pink sand beach dive with stronger current. |
-| [54. White Slave](sites/54-white-slave.md) | A long-swim site by the white slave huts memorial. |
-| [55. Margate Bay](sites/55-margate-bay.md) | A mangrove-hidden entry with fields of staghorn coral. |
-| [56. Red Beryl](sites/56-red-beryl.md) | A three-zone shore dive next to the island's kitesurfing beach. |
-| [57. Atlantis](sites/57-atlantis.md) | The official kite site, best dived on a windless day. |
-| [58. Vista Blue](sites/58-vista-blue.md) | A steep, soft coral reef with changeable current. |
-| [59. Sweet Dreams](sites/59-sweet-dreams.md) | A turtle nesting beach site that challenges strong swimmers. |
-| [60. Red Slave](sites/60-red-slave.md) | The southernmost leeward site, known for baitfish hunts. |
-| [61. Willemstoren Lighthouse](sites/61-willemstoren-lighthouse.md) | The island's southern tip, current-driven and advanced only. |
-| [62. White Hole](sites/62-white-hole.md) | A sand-filled reef crack off Lac Bay, boat access only. |
-| [63. Cai](sites/63-cai.md) | A guided, current-swept dive at the mouth of Lac Bay. |
-| [A. No Name Beach](sites/a-no-name-beach.md) | Klein Bonaire's only walk-in beach entry, gentle and beginner-friendly. |
-| [B. Ebo's Reef](sites/b-ebos-reef.md) | Giant elephant ear sponges past a deep water mooring swim. |
-| [C. Jerry's Reef](sites/c-jerrys-reef.md) | A sponge garden near Ebo's Reef, reliable for eagle rays. |
-| [D. Just a Nice Dive](sites/d-just-a-nice-dive.md) | A relaxed macro and night dive on Klein's east side. |
-| [E. Nearest Point](sites/e-nearest-point.md) | The closest point to Bonaire, with the Caribbean's healthiest coral. |
-| [G. Bonaventure](sites/g-bonaventure.md) | A terraced reef with star coral pagodas and seahorses. |
-| [F. Keepsake](sites/f-keepsake.md) | A lightly documented boat dive; confirm it's in rotation. |
-| [H. Monte's Divi](sites/h-montes-divi.md) | Named for the upright divi divi tree onshore, good for seahorses. |
-| [I. Rock Pile](sites/i-rock-pile.md) | A staghorn coral colony with restoration trees. |
-| [J. Joanne's Sunchi](sites/j-joannes-sunchi.md) | A sandy plateau dropping into coral fields, with sand tilefish. |
-| [K. Capt. Don's Reef](sites/k-capt-dons-reef.md) | A must-dive with a plaque honoring Bonaire's reef pioneer. |
-| [L. South Bay](sites/l-south-bay.md) | A protected, mild-current site with jack and boga schools. |
-| [M. Hands Off](sites/m-hands-off.md) | A protected, fragile-coral site with tongue and groove terrain. |
-| [N. Forest](sites/n-forest.md) | A black coral forest with a cave sheltering a resident loggerhead. |
-| [O. South West Corner](sites/o-south-west-corner.md) | Klein's exposed southwest tip, open to bigger fish. |
-| [P. Munk's Haven](sites/p-munks-haven.md) | Reported closed; confirm status before planning a dive. |
-| [Q. Twixt](sites/q-twixt.md) | A lightly documented, reportedly challenging dive. |
-| [R. Sharon's Serenity](sites/r-sharons-serenity.md) | A near-shore site strong for hawksbills and basket stars. |
-| [S. Vallerie's Hill](sites/s-valeries-hill.md) | An any-level dive with sponges and black coral. |
-| [T. Mi Dushi](sites/t-mi-dushi.md) | A double reef checkout dive, currently strong for seahorses. |
-| [U. C.H. Annex (Yellow M.)](sites/u-ch-annex.md) | Closed per STINAPA's own map; confirm before diving. |
-| [V. Carl's Hill](sites/v-carls-hill.md) | A sheer wall dive on Klein's northwest tip. |
-| [W. Ebo's Special](sites/w-ebos-special.md) | A shallow sand plateau dive with fish-filled caves. |
-| [X. Leonora's Reef](sites/x-leonoras-reef.md) | Huge hollow coral heads over 75 years old. |
-| [Y. Knife](sites/y-knife.md) | Knife-like coral sheltering morays, strong for parrotfish. |
-| [Z. Sampler](sites/z-sampler.md) | Klein's northernmost, most photographed site. |
+| [1. Boka Bartol](sites/01-boka-bartol.md) | Bonaire's northernmost site, a remote bay in Washington Slagbaai National Park with unusual coral formations on the terrace, stingrays and garden eels on the sand, and deep water pelagics off the drop-off. |
+| [2. Playa Benge](sites/02-playa-benge.md) | Remote park beach and turtle nesting site, crossing a finger coral shelf to some of the most pristine reef on the island, with larger fish and reports of mantas and hammerheads offshore. |
+| [3. Playa Funchi](sites/03-playa-funchi.md) | Protected park cove with sand tilefish and peacock flounder in its sandy patches, opening onto a fast drop-off where horse-eye jacks school. |
+| [4. Bise Morto](sites/04-bise-morto.md) | Park site with elkhorn and staghorn shallows over a fast drop-off, one of the better spots for whale sharks, mantas and humpbacks off the reef edge. |
+| [5. Wayaka](sites/05-wayaka.md) | Little dived park site with no established route, where larger animals turn up more often than at busier sites. |
+| [6. Boka Slagbaai N](sites/06-boka-slagbaai-n.md) | North route from the yellow building at the park's historic bay, unusual coral formations over sand with stingrays and garden eels, and cannons left as props from a 1980s film shoot. |
+| [6a. Boka Slagbaai S](sites/06a-boka-slagbaai-s.md) | South route from the yellow building at Boka Slagbaai, with two genuine 18th century cannons at 3 m grown over with coral and sponge among scattered anchors, chain and ballast stones. |
+| [7. Nukove](sites/07-nukove.md) | Sandy cove just before the BOPEC oil terminal, elkhorn stands inside the cove and a reef beyond with schools of algae eaters and large midnight parrotfish. |
+| [8. Carel's Vision](sites/08-carels-vision.md) | Remote site at Punta Wekua between Nukove and Karpata, inside the King Willem-Alexander Reserve and otherwise undocumented. |
+| [9. Karpata](sites/09-karpata.md) | Shore site at the end of the coastal road's one-way section, with a historic anchor embedded in the coral at 11 m and what were once Bonaire's finest elkhorn stands; the exit for the La Dania's Leap drift. |
+| [10. La Dania's Leap](sites/10-la-danias-leap.md) | Vertical wall entered from a cliff ledge just north of Karpata and drifted one way south past barracuda schools, angelfish and juvenile sunshine fish to Karpata's exit. |
+| [11. Rappel](sites/11-rappel.md) | Boat dive off a cliff plateau south of Karpata, also known as Bruce's Rappel, its shallows dense with large sea fans and gorgonians in varied shapes and colours. |
+| [12. Bloodlet](sites/12-bloodlet.md) | Dense reef south of Karpata home to resident blue tang schools among yellow and green tube sponges, with pelagics and turtles often sighted. |
+| [13. Tolo](sites/13-tolo.md) | Coral beach marked by a yellow stone just north of 1000 Steps, with friendly French angelfish, tarpon, snapper and turtles on the reef and the odd whale shark. |
+| [14. Country Garden](sites/14-country-garden.md) | Three pillars fallen from the cliff to about 9 m, the source of its Mushroom City nickname, each face dense with hard coral, gorgonians and sponges sheltering schoolmasters, grunts and goatfish. |
+| [15. Bon Bini na Kas](sites/15-bon-bini-na-kas.md) | Cave complex under an overhanging cliff north of 1000 Steps, with sea fans and blue tang on the reef top and lavender stovepipe sponges across the shelf. |
+| [16. 1000 Steps](sites/16-1000-steps.md) | Shore dive beside the Radio Nederland towers, reached down a long stairway in the cliff, with star coral pagodas under the mooring where sergeant majors guard their eggs in the hollow cores. |
+| [17. Weber's Joy](sites/17-webers-joy.md) | Double reef south of 1000 Steps, also called Witch's Hut, with a large lavender stovepipe sponge beside the mooring and rich macro life: Pederson cleaner shrimp, corkscrew anemones, arrow crabs and octopus. |
+| [18. Jeff Davis Memorial](sites/18-jeff-davis-memorial.md) | Isolated site off Queens Highway where coral chutes channel down to the sand, with dense gorgonians, cleaning stations, turtles and seahorses. |
+| [19. Kalli's Reef](sites/19-kallis-reef.md) | Boat-only reef between Jeff Davis Memorial and Oil Slick Leap, extensive coral formations from 9 to 18 m where seahorses and turtles are regular. |
+| [20. Oil Slick Leap](sites/20-oil-slick-leap.md) | Ladder entry down the cliff north of Kralendijk to a wall where schools of 20 to 50 barracuda, used to divers, hold at 10 to 15 m. |
+| [21. Barkadera](sites/21-barkadera.md) | Boat dive directly opposite STINAPA headquarters, its elkhorn shallows hosting schools of blue tang. |
+| [22. Andrea II](sites/22-andrea-ii.md) | Reef about 0.8 km north of the desalination plant, reliable for seahorses in the soft corals between 8 and 20 m and home to all three of Bonaire's metre-long parrotfish. |
+| [23. Andrea I](sites/23-andrea-i.md) | Twin reef beside Andrea II with the same character: seahorses in the soft corals and blue, midnight and rainbow parrotfish in the shallows. |
+| [24. Petries Pillar](sites/24-petries-pillar.md) | Boat site between Andrea I and Small Wall on an unusually wide shallow ledge, named by Captain Don as a wedding gift, with soft corals, anemones and parrotfish. |
+| [25. Small Wall](sites/25-small-wall.md) | Vertical wall in front of the Black Durgon Inn from 6 m down to a small cave at its base, home to a sleeping nurse shark or resident green moray, with tarpon and eagle rays over the sand. |
+| [26. Cliff](sites/26-cliff.md) | Wall in front of the Hamlet Oasis Villas north of Kralendijk, dense with whip coral and holding Captain Don's stone memorial with its plaque and dive flag. |
+| [27. La Machaca](sites/27-la-machaca.md) | House reef at Captain Don's Habitat built around a 14 m locally built boat wreck at 15 m, home to a confident green moray, with tarpon following divers at night. |
+| [28. Reef Scientifico](sites/28-reef-scientifico.md) | Coral garden just south of La Machaca with traces of the algae research grid it is named for, at its best at night with free swimming morays and sleeping parrotfish. |
+| [29. Buddy's Reef](sites/29-buddys-reef.md) | Buddy Dive Resort's house reef, a shallow shelf with black crinoids on the coral heads dropping off at 8 m, and a resident tarpon that hunts in night divers' lights. |
+| [30. Bari's Reef](sites/30-baris-reef.md) | Sand Dollar's house reef, combining reef ball structures and a small shipwreck, with over 300 surveyed species, the most of any Caribbean site, and coral spawning in August. |
+| [31. Front Porch](sites/31-front-porch.md) | Old Sunset Beach Resort site marked by a steel pipe off Eden Beach, with a tugboat wreck in the deep zone full of big tooth cardinalfish, rare elsewhere on the island, and garden eels around it. |
+| [32. Something Special](sites/32-something-special.md) | Marina entrance site on J.E. Irausquin Boulevard with more unusual fish sightings than anywhere on the island, seahorses on the coral, rays on the sand and garden eels around 17 m. |
+| [33. Town Pier](sites/33-town-pier.md) | Steel pilings of Kralendijk's town pier under decades of sponge growth, in greater variety than anywhere on Bonaire, a famous macro site with species rarely seen elsewhere. |
+| [34. Calabas Reef](sites/34-calabas-reef.md) | Divi Flamingo's house reef on Abraham Boulevard, coral gardens sloping to deeper walls, with turtles, grouper, the occasional seahorse and fish used to divers. |
+| [35. 18th Palm](sites/35-18th-palm.md) | Plaza Resort's house reef, the first site heading south where the reef splits into a double reef, with stingrays and eagle rays on the sand and curious tarpon and grouper. |
+| [36. Windsock](sites/36-windsock.md) | Sandy, shaded beach at Grand Windsock Resort, with rays and turtles in the sandy shallows and a good spot for a picnic. |
+| [37. Corporal Meiss](sites/37-corporal-meiss.md) | Picnic beach opposite the airport, named for a fallen soldier, a sandy plateau out to a wall from 15 m with blue tang schools, hunting barracuda and turtles. |
+| [38. Bachelor's Beach](sites/38-bachelors-beach.md) | Belnem beach below a low limestone cliff with a stairway cut into it, a parrotfish, angelfish and trumpetfish reef with a good chance of a turtle, popular at night. |
+| [39. Chez Hines](sites/39-chez-hines.md) | South Belnem shallow plateau with good coral cover, where turtles are seen more than almost anywhere on the island, with nurse sharks and a deep second reef at about 37 m. |
+| [40. Lighthouse Point](sites/40-lighthouse-point.md) | South coast sand flats under massive swirling schools of baitfish drawn by the nutrient-rich current, with rays on the flats. |
+| [41. Punt Vierkant](sites/41-punt-vierkant.md) | Start of the southern double reef system, a sand channel between inner and outer walls, with schooling fish and turtles. |
+| [42. The Lake](sites/42-the-lake.md) | Double reef named for its sand lake between the reefs at 20 to 24 m, with large coral bommies near the channel sheltering snapper and grunts and gorgonians bordering the shallows. |
+| [43. Hilma Hooker](sites/43-hilma-hooker.md) | Bonaire's most famous wreck, a former drug-running freighter sunk in 1984, lying from 18 m to her mast at 30 m under four decades of coral, beside Angel City. |
+| [44. Angel City](sites/44-angel-city.md) | Double reef opposite the Trans World Radio station beside the Hilma Hooker, named for its French and queen angelfish, with garden eels, rays and small sharks along the 15 m wide sand channel. |
+| [45. Alice in Wonderland](sites/45-alice-in-wonderland.md) | Double reef near the Cargill sign, divided by sand at 24 to 30 m, with turtles, barracuda and rays. |
+| [46. Aquarius](sites/46-aquarius.md) | Double reef 1.7 km north of Salt Pier with a sandy floor between the reefs and grouper, eagle rays and turtles along the second reef's edge. |
+| [47. Larry's Lair](sites/47-larrys-lair.md) | Double reef 1.4 km north of Salt Pier with no mooring buoy to mark it, holding stingrays, turtles, squid and puffers. |
+| [48. Jeannie's Glory](sites/48-jeannies-glory.md) | Sandy plateau between two flanking reefs 400 m north of Salt Pier, entered over boulders and a ledge, with soft corals and rays hiding in the sand. |
+| [49. Salt Pier](sites/49-salt-pier.md) | Pilings of the Cargill salt works pier, fully encrusted in sponge and coral, with large schools of fish in the shade beneath it. |
+| [50. Salt City](sites/50-salt-city.md) | Double reef just south of Salt Pier, with resident stingrays on the sandbar between the reefs and eagle rays, large morays and a cleaning station at the second reef. |
+| [51. Invisibles](sites/51-invisibles.md) | Southernmost double reef site, with one of Bonaire's best garden eel colonies around the mooring at 6 m and a second reef broken into coral islands circled by eagle rays. |
+| [52. Tori's Reef](sites/52-toris-reef.md) | Reef opposite the Cargill salt works outflow, reached through a channel under the highway past fire coral hiding rare fish and eels, ranked second in the Caribbean for fish diversity. |
+| [53. Pink Beach](sites/53-pink-beach.md) | One of the island's best known beaches, its pink sand shallows home to southern stingrays and bonefish early and late in the day. |
+| [54. White Slave](sites/54-white-slave.md) | Site opposite the white slave huts and obelisk memorial, a sandbar with eagle rays and stingrays before a long swim to a reef with turtles on nearly every dive. |
+| [55. Margate Bay](sites/55-margate-bay.md) | Entry hidden behind mangroves off the coast road, with staghorn shallows and a drop-off where black margate and snapper sleep in the gorgonians. |
+| [56. Red Beryl](sites/56-red-beryl.md) | Three-zone site beside the kitesurfing beach, a sandy plateau, cleaning stations in the middle zone and a wall from 20 m, with barracuda, rays, turtles and morays. |
+| [57. Atlantis](sites/57-atlantis.md) | The official kite beach site, with no mooring line, a reef giving onto a steep slope where larger fish appear. |
+| [58. Vista Blue](sites/58-vista-blue.md) | Steep reef about 6 km south of Kralendijk carpeted along its whole length in dense soft coral. |
+| [59. Sweet Dreams](sites/59-sweet-dreams.md) | Turtle nesting beach on the south coast, gorgonian shallows over sugar sand with large sponges and coral heads, stingrays, barracuda and turtles. |
+| [60. Red Slave](sites/60-red-slave.md) | Southernmost leeward site beside the orange slave huts, where predators hunt offshore schools of bigeye scad alongside horse-eye jacks. |
+| [61. Willemstoren Lighthouse](sites/61-willemstoren-lighthouse.md) | Bonaire's southern tip below the Willemstoren Lighthouse, with schooling fish, barracuda and tarpon drawn by plankton and lobsters under the coral. |
+| [62. White Hole](sites/62-white-hole.md) | Sand-filled crack about a football field long in the shallow reef plateau off Lac Bay, with huge tarpon schools and turtles in the hole. |
+| [63. Cai](sites/63-cai.md) | Channel at the mouth of Lac Bay where the mangrove waters meet the open sea, with tarpon schools, turtles, and Bonaire's densest field of giant anemones, some over a metre across. |
+| [A. No Name Beach](sites/a-no-name-beach.md) | Klein Bonaire's best known beach and only walk-in entry, with yellow headed jawfish and sailfin blennies in the rubble shallows and turtles on the reef. |
+| [B. Ebo's Reef](sites/b-ebos-reef.md) | North side reef of giant orange elephant ear sponges, often crinoid-topped, and huge lavender stovepipe colonies, reached from a deep water mooring. |
+| [C. Jerry's Reef](sites/c-jerrys-reef.md) | Sponge garden of tube and vase sponges near Ebo's Reef, reliable for turtles, stingrays and spotted eagle rays, with fern-like black coral. |
+| [D. Just a Nice Dive](sites/d-just-a-nice-dive.md) | Relaxed east side reef with schooling fish over yellow pencil coral on the reef top and juvenile fish for macro, good at night. |
+| [E. Nearest Point](sites/e-nearest-point.md) | Klein Bonaire's closest point to Bonaire, a gentle slope to huge mountain coral heads at the drop-off with black coral and tube sponges deeper, among the Caribbean's healthiest coral. |
+| [G. Bonaventure](sites/g-bonaventure.md) | Terraced south side reef with pyramid shaped star coral pagodas and seahorses in the gorgonians, where angelfish and black durgon accompany divers. |
+| [F. Keepsake](sites/f-keepsake.md) | Lightly documented twin reef with sponge gardens and stingrays. |
+| [H. Monte's Divi](sites/h-montes-divi.md) | South side site named for the upright divi divi tree opposite the mooring, with staghorn and finger sponge shallows, seahorses, stingrays and turtles. |
+| [I. Rock Pile](sites/i-rock-pile.md) | West side staghorn colony opposite the rock pile on the beach, with PVC restoration trees, schooling grunts and snapper, and a green moray in the boulder corals. |
+| [J. Joanne's Sunchi](sites/j-joannes-sunchi.md) | Sandy plateau with sand tilefish nesting in rubble under the boat, dropping at 5 m into fields of plate, cobble and leaf coral. |
+| [K. Capt. Don's Reef](sites/k-capt-dons-reef.md) | South coast site with a 1987 plaque at the mooring honouring Don Stewart, Bonaire's reef pioneer, above a drop-off of hard and soft coral. |
+| [L. South Bay](sites/l-south-bay.md) | Protected south side reef where bar and horse-eye jacks feed on schools of boga just off the reef, with groupers. |
+| [M. Hands Off](sites/m-hands-off.md) | Protected west side site of tongue and groove hills and valleys, with fragile, especially healthy coral and cleaning stations. |
+| [N. Forest](sites/n-forest.md) | Southwest peninsula drop-off of increasingly dense black coral forest, with an overhang at 27 m and a cave at 23 m sheltering a green moray, a resident loggerhead or a nurse shark. |
+| [O. South West Corner](sites/o-south-west-corner.md) | Klein Bonaire's southwest tip, open to deeper water, with black durgon, yellowtail snapper, green turtles, barracuda and tarpon. |
+| [P. Munk's Haven](sites/p-munks-haven.md) | Klein Bonaire site, not separately documented, sharing the character of the west side reefs. |
+| [Q. Twixt](sites/q-twixt.md) | Lightly documented west side site of two reefs separated by sand, with Caribbean reef sharks and barracuda. |
+| [R. Sharon's Serenity](sites/r-sharons-serenity.md) | Southwest corner reef with soft corals and large groupers, hawksbills at the cleaning stations most afternoons, and basket stars unfurling at night. |
+| [S. Vallerie's Hill](sites/s-valeries-hill.md) | Reef of numerous sponges and plentiful black coral, with scrawled filefish and parrotfish. |
+| [T. Mi Dushi](sites/t-mi-dushi.md) | Southwest side double reef with staghorn and yellow pencil coral shallows, jawfish and sailfin blennies, and seahorses around 15 m where the lagoon meets the sand channel. |
+| [U. C.H. Annex (Yellow M.)](sites/u-ch-annex.md) | Klein Bonaire site, undocumented. |
+| [V. Carl's Hill](sites/v-carls-hill.md) | Sheer wall on Klein Bonaire's northwest tip with the seldom seen featherbush hydroid, blue tang schools, and hawksbills and seahorses on the shallower sections. |
+| [W. Ebo's Special](sites/w-ebos-special.md) | North side site on a narrow sand plateau with caves swarming with fish and lobster, and the helix anchor mooring that set the pattern for later replacement moorings. |
+| [X. Leonora's Reef](sites/x-leonoras-reef.md) | North coast reef of huge hollow plate and star coral heads over 75 years old around 16 m, with tunnels through the largest. |
+| [Y. Knife](sites/y-knife.md) | North side reef of knife-like coral formations sheltering green morays, with rainbow and midnight parrotfish grazing the shallows. |
+| [Z. Sampler](sites/z-sampler.md) | Klein Bonaire's northernmost and most photographed site, rocky overhangs sheltering morays, octopus and frogfish, with friendly angelfish. |
 
 ## Dive shops and air fills
 
