@@ -49,6 +49,7 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 | [NW Dive Club](tools/nwdiveclub.md) | nwdiveclub.com | Community site write-ups (entry, what's worth seeing, hazards) and site recommendations, read via the Wayback Machine since the live site blocks direct fetches. | none, read via Wayback Machine |
 | [The Perfect Dive](tools/theperfectdive.md) | theperfectdive.com (archived) | A defunct structured PNW dive site catalog (type, difficulty, entry, attractions) plus marine-life galleries, read from its 2022 Wayback snapshot. | none, read via Wayback Machine |
 | [Divers Atlas](tools/diversatlas.md) | diversatlas.org | Community dive site records worldwide (pin, depth, visibility, entry and parking notes, points of interest, safety notes), found by coordinate. | `diversatlas.py` |
+| [Dive Atlas](tools/diveatlas.md) | diveatlas.org | Community dive site wiki: pin, depth range, skill level and a guidebook-style write-up (access, hazards, life, facilities), found by coordinate. | `diveatlas.py` |
 
 Tools with a script read parameters from their own subsection of `tool-config.json` (a missing key falls back to a built-in default) and print metric units in local time. NWS also reads a subsection of `tool-config.json` (the contact email for its required User-Agent) despite having no script. DAN, NW Dive Club and The Perfect Dive have no script or config section; they're read directly by page or feed.
 

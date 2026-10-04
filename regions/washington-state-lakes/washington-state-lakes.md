@@ -21,6 +21,7 @@ The following tools should be used in this region:
 - nwdiveclub.md
 - theperfectdive.md
 - diversatlas.md
+- diveatlas.md
 
 ## Conventions
 
