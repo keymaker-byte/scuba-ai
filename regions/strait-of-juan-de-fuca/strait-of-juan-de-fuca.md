@@ -77,13 +77,13 @@ Ordered by what actually kills a dive plan in the strait:
 
 | Site | Description |
 |---|---|
-| [Ediz Hook (Inner Harbor)](sites/ediz-hook.md) | Easy, current free harbor side shelf off the Port Angeles spit that drops into an open slope of sunken log debris past recreational depths. |
-| [Freshwater Bay (County Park)](sites/freshwater-bay.md) | Long surface crossing of a shallow bay to Bachelor Rock's sheltered inside wall; the swim itself, plus boat traffic and open water surge past the reef, is the hazard. |
-| [North Beach](sites/north-beach.md) | Bull kelp bed along a sandy, clay bottom at the mouth of Admiralty Inlet, with current weak inside the kelp but building fast past its outer edge. |
-| [One Mile Beach](sites/one-mile-beach.md) | Sandy, gravel slope near Sekiu to a rock and kelp ledge, exposed to open water with a direct line to the Pacific once past the kelp's shelter. |
-| [Pinnacle Rock](sites/pinnacle-rock.md) | Remote sand and cobblestone slope between Sekiu and Neah Bay, marked by an intertidal rock pinnacle, exposed to strong current and surge with nothing to break either. |
-| [Salt Creek (Tongue Point)](sites/salt-creek.md) | Advanced dive inside a marine sanctuary on a basalt reef of shelves and boulders under thick kelp; waves and surge at the rocky entry, not current, are the headline hazard. |
-| [Sekiu Jetty](sites/sekiu.md) | Kelp wrapped rock field on sand and eelgrass by the Sekiu marina, densely covered in invertebrates; surge, current and thick kelp are the hazards in open water. |
+| [Ediz Hook (Inner Harbor)](sites/ediz-hook.md) | Inner harbor shore of the Port Angeles spit, a colorful shallow shelf of sand and scattered rock with lingcod, crabs, nudibranchs and lost golf balls, giving way past 18 m to a slope of stacked, decaying logs where octopus den. |
+| [Freshwater Bay (County Park)](sites/freshwater-bay.md) | County park west of Port Angeles, a long crossing over sand and eelgrass along the kelp-covered lee of Observatory Point Reef to Bachelor Rock, whose crevices hold octopus, wolf eels and Puget Sound king crab and whose outer wall drops to about 18 m. |
+| [North Beach](sites/north-beach.md) | Bull kelp bed along the Port Townsend shore between McCurdy Point and Point Wilson at the mouth of Admiralty Inlet, offshore rocks scattered through the sand and kelp, with sand lance schools and harbor seals and river otters in the kelp. |
+| [One Mile Beach](sites/one-mile-beach.md) | Driftwood-backed beach a mile west of the Sekiu boat launch, kelp-wrapped rock formations on a gentle sandy slope cut by channels and small tunnels, with wolf eels and octopus in the ledge holes and clouds of mysid shrimp in the kelp. |
+| [Pinnacle Rock](sites/pinnacle-rock.md) | Cobble beach between Sekiu and Neah Bay named for a tall, tree-topped rock pinnacle in the intertidal, kelp-wrapped rocks over sand and cobble with channels wide enough to work, black rockfish in the canopy and grey whales occasionally in the cove. |
+| [Salt Creek (Tongue Point)](sites/salt-creek.md) | Tongue Point marine sanctuary west of Port Angeles, a basalt reef of shelves, channels and boulders under thick summer kelp, carpeted in urchins, sponges, hydrocoral and fish eating anemones, with a rare rock greenling in the surf grass shallows. |
+| [Sekiu Jetty](sites/sekiu.md) | Rock field beside the Sekiu jetty on Clallam Bay, leaning formations forming alleys under kelp, nearly every surface crowded with invertebrates and octopus middens at den entrances, with starry flounder and northern abalone on the sand and eelgrass beyond. |
 
 ## Dive shops and air fills
 
