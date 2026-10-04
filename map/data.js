@@ -1600,6 +1600,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "ed-munro-seahurst-park",
+      "name": "Ed Munro Seahurst Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/ed-munro-seahurst-park.md",
+      "site": {
+        "lat": 47.479262,
+        "lon": -122.366517
+      },
+      "entry": {
+        "lat": 47.478341,
+        "lon": -122.363888
+      },
+      "parking": {
+        "lat": 47.477705,
+        "lon": -122.362877
+      }
+    },
+    {
       "slug": "edmonds-marina-beach",
       "name": "Edmonds Marina Beach (Oil Dock)",
       "region": "puget-sound",
