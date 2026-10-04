@@ -2113,6 +2113,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "sunrise-beach-park",
+      "name": "Sunrise Beach Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/sunrise-beach-park.md",
+      "site": {
+        "lat": 47.347656,
+        "lon": -122.5556
+      },
+      "parking": {
+        "lat": 47.349611,
+        "lon": -122.557409
+      },
+      "entry": {
+        "lat": 47.349331,
+        "lon": -122.55602
+      }
+    },
+    {
       "slug": "suquamish-dock",
       "name": "Suquamish Dock",
       "region": "puget-sound",
