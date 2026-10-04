@@ -2434,6 +2434,25 @@ window.MAP_DATA = {
         "lat": 48.08561,
         "lon": -123.743013
       }
+    },
+    {
+      "slug": "titlow-beach",
+      "name": "Titlow Beach",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/titlow-beach.md",
+      "site": {
+        "lat": 47.247453,
+        "lon": -122.554523
+      },
+      "parking": {
+        "lat": 47.246689,
+        "lon": -122.552587
+      },
+      "entry": {
+        "lat": 47.247069,
+        "lon": -122.553515
+      }
     }
   ]
 };
