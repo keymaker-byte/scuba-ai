@@ -22,18 +22,34 @@
 
   "emodnet_depth": {},
 
+  "shore_exposure": {
+    "user_agent_email": "<your-email>@example.com",
+    "max_fetch_km": 30,
+    "shore_span_m": 250
+  },
+
   "pnwdiving_viz": {
     "cache_hours": 1,
     "default_tz": "America/Los_Angeles"
   },
 
   "nws_forecast": {
-    "user_agent_email": "<your-email>@example.com"
+    "user_agent_email": "<your-email>@example.com",
+    "go_below_ms": 5,
+    "nogo_above_ms": 8,
+    "short_fetch_shift_ms": 3,
+    "gust_margin_ms": 3,
+    "offshore_marginal_ms": 8
   },
 
   "open_meteo_wind": {
     "primary_model": "ecmwf_ifs",
-    "cross_check_model": "gfs_seamless"
+    "cross_check_model": "gfs_seamless",
+    "go_below_ms": 5,
+    "nogo_above_ms": 8,
+    "short_fetch_shift_ms": 3,
+    "gust_margin_ms": 3,
+    "offshore_marginal_ms": 8
   },
 
   "scubaboard": {},

@@ -13,11 +13,17 @@ Do not guess either of these. Which site. It has to be a site file that already 
 
 ## 2. Build the plan
 
-Follow the region's own "How planning works here" ordering: it fixes what actually decides a dive going well in that region, most important first, reasoned through for that region's hydrography, so this skill defers to it rather than imposing one planning order on every region. Pull the governing current and tide tool for the region (the site's own governing station, bin and offset) to find slack and the diveable window across the candidate date, and the region's wind tool for the entry's own coordinates.
+Follow the region's own "Planning conventions" ordering: it fixes what actually decides a dive going well in that region, most important first, reasoned through for that region's hydrography, so this skill defers to it rather than imposing one planning order on every region. Pull the site's current as its Current section's type sets it (for a tidal site, its governing station, bin and offset, for slack and the diveable window across the candidate date), the tide where the region has one, and the region's wind tool at the entry's own coordinates.
 
 Never plan the return against the current. Order the excursion so the leg back to the entry point runs with the current or through slack, never against it. Where the governing current sets a known direction after slack, work the far leg first, upstream of the entry, and turn for home before the current builds against a return swim; a plan that has the diver kicking home into a developing current is a planning failure, not a detail to note afterward.
 
 Check conditions at both ends of the dive. Pull current, wind, and weather for the entry time and again for the exit time, not just once for the window as a whole. Current can build across the dive, wind can rise or shift, and fog or weather can move in while the diver is underwater; a plan that only checks conditions at entry misses exactly the change that would have changed the plan.
+
+Check the plan against the wind call and the swell limits below, and against the region's own "Planning conventions": every other factor limit the region sets, plus any local rules binding every dive there. A reading in the no go band ends the plan at that site and time; a marginal one goes in the plan with the condition its band attaches.
+
+The wind call comes from the region's wind tool, the same mechanism in every region. Run it with the site's own sectors from its Wind section, as the wind tool's documentation shows: the Bad bullet's sectors as `--bad`, and the Short fetch and Mixed bullets' sectors as `--short`. The tool prints go, marginal or no go for each reading, from the limits in its own section of `tool-config.json`; that call is the plan's wind verdict. Marginal means dive only with a short surface swim, and confirm the entry and the exit from the shore before kitting up. Where the two models of a cross-checked forecast give different calls, the plan carries the more severe one. Read the forecast direction against the site's Wind against current bullet too: where it falls in the opposing wind the site names while the current is running, outside slack, the plan says so beside the call, since the two together build a steeper sea than either alone.
+
+Swell is its own check, read from the source the region names, since no tool reports it at the entry: breaking waves at the entry under 0.5 m are go, 0.5 to 1 m marginal, and over 1 m no go.
 
 Respect `CLAUDE.md`'s Diving conventions for every plan: inside the no-decompression limit for the depth and gas on the day, never a decompression dive, a safety stop before surfacing whatever the profile, and EAN32 unless the user specifies a different mix.
 
@@ -27,7 +33,7 @@ If a tool errors out, an API is unreachable, or a source is down, stop and repor
 
 `tools/db/plan_log.csv` is CSV, UTF-8 with a BOM (`utf-8-sig`); keep writing it that way, the BOM is what makes Excel read the accents, arrows and degree signs (`°`, `−`, `→`, `≈`) correctly on a double-click; if a session regenerates the file, write it with `encoding="utf-8-sig"`. If the file already exists, append to it as is, using its existing header row. If it doesn't exist yet, create it first (including the `tools/db/` folder if that's also missing) with exactly the header row given at the bottom of this skill, then append to that.
 
-One row per record, two rows per plan, predicted and observed, sharing the same `plan_id` and distinguished by `record_type`. What goes in each of the 40 columns is given in the reference table at the bottom of this skill; read it before filling in a column rather than guessing from its name, and note which columns it marks predicted-only, model or forecast output with nothing aboard to re-measure them by (no anemometer, no thermometer, no station readout at depth), left blank on the observed row. Fill the predicted fields completely, including the things that are unsure, and put the uncertainty in the matching `*_note` column rather than the typed one.
+One row per record, two rows per plan, predicted and observed, sharing the same `plan_id` and distinguished by `record_type`. What goes in each of the 41 columns is given in the reference table at the bottom of this skill; read it before filling in a column rather than guessing from its name, and note which columns it marks predicted-only, model or forecast output with nothing aboard to re-measure them by (no anemometer, no thermometer, no station readout at depth), left blank on the observed row. Fill the predicted fields completely, including the things that are unsure, and put the uncertainty in the matching `*_note` column rather than the typed one.
 
 ## 4. After the dive, log what happened
 
@@ -40,7 +46,7 @@ The three observations that matter most, because they're what the offsets are bu
 The canonical header row for `tools/db/plan_log.csv`, used verbatim to create the file when it doesn't exist yet:
 
 ```csv
-plan_id,date,site,record_type,entry_time,exit_time,runtime_min,dive_plan,slack_time,slack_note,current_at_entry,spatial_entry_speed_ms,spatial_entry_dir_deg,spatial_exit_speed_ms,spatial_exit_dir_deg,set_direction,set_strength,reversal_at_slack,max_flood,max_ebb,diveable_window,ebb_exchange_size,viz_depth_min_m,viz_depth_max_m,viz_shallows_min_m,viz_shallows_max_m,viz_note,wind_speed_ms,wind_dir,sea_state,air_temp_min_c,air_temp_max_c,surface_note,water_temp_min_c,water_temp_max_c,water_temp_note,max_depth_read_m,max_depth_normalized_m,depth_note,tide_across_dive
+plan_id,date,site,record_type,entry_time,exit_time,runtime_min,dive_plan,slack_time,slack_note,current_at_entry,spatial_entry_speed_ms,spatial_entry_dir_deg,spatial_exit_speed_ms,spatial_exit_dir_deg,set_direction,set_strength,reversal_at_slack,max_flood,max_ebb,diveable_window,ebb_exchange_size,viz_depth_min_m,viz_depth_max_m,viz_shallows_min_m,viz_shallows_max_m,viz_note,wind_speed_ms,wind_dir,wind_call,sea_state,air_temp_min_c,air_temp_max_c,surface_note,water_temp_min_c,water_temp_max_c,water_temp_note,max_depth_read_m,max_depth_normalized_m,depth_note,tide_across_dive
 ```
 
 What each column holds:
@@ -76,6 +82,7 @@ What each column holds:
 | `viz_note` | Prose. Predicted: source and recency of the report used. Observed: description of what was actually seen. |
 | `wind_speed_ms` | PREDICTED ONLY, blank on observed. m/s, from the region's wind forecast. |
 | `wind_dir` | PREDICTED ONLY, blank on observed. Forecast wind direction. |
+| `wind_call` | PREDICTED ONLY, blank on observed. The wind tool's call at the entry and the exit time with its sector kind, the more severe where the two models differ, e.g. `go (fine) / marginal (short)`. |
 | `sea_state` | Predicted: forecast chop or swell. Observed: what was actually seen. |
 | `air_temp_min_c` | PREDICTED ONLY, blank on observed. Celsius, forecast low. |
 | `air_temp_max_c` | PREDICTED ONLY, blank on observed. Celsius, forecast high. |

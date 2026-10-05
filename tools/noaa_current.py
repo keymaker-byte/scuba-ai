@@ -116,7 +116,7 @@ def cmd_bins(a):
     print("  bins with published predictions:")
     for b in sorted(pub):
         print(f"    bin {b:<3} depth {depths.get(b, '?')} m")
-    print("\n  Pick the bin nearest YOUR working depth — not automatically the deepest.")
+    print("\n  The site's Recommended bin is the one nearest the dive area's seabed depth.")
     print("  A station in a deep channel publishes bins you will never dive, and deeper")
     print("  water turns later: at PUG1609 the 82.9 m bin slacks ~40 min after the 18.9 m one.")
 
@@ -185,7 +185,7 @@ def main():
     def dated(sp):
         sp.add_argument("station")
         sp.add_argument("--date", type=date.fromisoformat, default=date.today())
-        sp.add_argument("--bin", type=int, help="default is near-surface; pass the bin nearest your working depth")
+        sp.add_argument("--bin", type=int, help="default is near-surface; pass the site file's Recommended bin")
 
     s = sub.add_parser("predict", help="slack / max flood / max ebb")
     dated(s)
