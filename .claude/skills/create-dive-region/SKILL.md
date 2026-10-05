@@ -1,27 +1,37 @@
 ---
 name: create-dive-region
-description: This skill should be used when the user asks to create a new region steering file, write up a diving region, add a region folder to the workspace, or document a new diving region. Covers identifying the region's extent, the mandatory deep research pass (geography, conditions, which tools apply, whether a fixed depth datum applies and its conversion arithmetic, how planning works there, dive shops, and emergency chambers), following the canonical region template, and the bookkeeping a new region needs (the README's "Regions currently covered" table and map/data.js).
+description: This skill should be used when the user asks to create a new region steering file, write up a diving region, add a region folder to the workspace, or document a new diving region. Covers identifying the region's extent, the mandatory deep research pass, following the canonical region template, and the bookkeeping a new region needs.
 ---
 
 # Create a region file
 
-Produce one `regions/<slug>/<slug>.md` file, matching the template at the bottom of this skill, plus a `sites/` subfolder that stays empty until the first site file is written into it, and the bookkeeping entries that make the region discoverable (README table, map data). This skill is almost entirely a research task and getting that research right is what makes every site written into this region afterward trustworthy.
+Produce one `regions/<slug>/<slug>.md` file, matching the template at the bottom of this skill, plus a `sites/` subfolder that stays empty until the first site file is written into it, and the bookkeeping entries that make the region discoverable. This skill is almost entirely a research task and getting that research right is what makes every site written into this region afterward trustworthy.
 
 ## 1. Required input — stop and ask if it's missing
 
-Do not guess which body of water this is. If the user names a region loosely (a coastline, a vague area, a country with many diveable coasts) without enough to identify a specific, boundable body of water, stop and ask which one before researching anything. A region folder has to cover something nameable and bounded, not an open-ended area that could mean several different things.
+Do not guess which body of water this is. If the user names a region loosely without enough to identify a specific, boundable body of water, stop and ask which one before researching anything. A region folder has to cover something nameable and bounded.
 
 ## 2. Research pass — mandatory, deep, and done before drafting
 
-This is the bulk of the work. The template below only has blanks; filling them with anything less than researched, cross-checked facts is how a region file goes stale on day one, and every site written under it inherits that gap. Cover, at minimum, the following, and run a comprehensive web search beyond the standing tool list for all of it: a region's own tourism board, a park or marine sanctuary authority, a local dive shop's site, and a regional dive forum each carry facts none of the fixed sources do.
+This is the bulk of the work. Run a comprehensive web search, including region's own tourism board, parks or marine sanctuary authority, local dive shops, and regional dive forums.
 
-The region's geography: dimensions, how it connects to neighbouring water, and any sub areas, basins or reaches worth naming and placing. Typical water temperature through the year, at depth and at the surface if they diverge sharply, and what drives visibility here, with a sense of when it tends to run best or worst. The region's overall character in a sentence or two: what kind of diving this is and what actually dominates conditions, tide, wind, open ocean swell, or something else, since that answer drives most of what follows. Which tools in `tools/` actually apply here, and which websites (a regional forum, a site catalog, an archived guide, a park authority) belong in its Web Sources, with how each is read when it needs more than a plain fetch. The order of factors that actually decide whether a dive goes well here, reasoned through for this region's own hydrography, an open ocean-facing coast plans differently from a narrow sill-bound inlet, rather than copied from another region's ordering. Local dive shops and air fills where they're actually known and verifiable; leave the section for later rather than fabricating one if nothing concrete turned up. The local emergency number and every operating hyperbaric recompression chamber that could plausibly serve this region, nearest first, with how it's reached (through a hospital's own emergency room, a direct line, or both) and its distance or driving time from the region's own sites, especially a remote reach of it, noting any chamber that's restricted (military or otherwise not publicly accessible) rather than omitting it outright.
+Research should find at minimun:
+
+- The region's geography: dimensions, how it connects to neighbouring water, and any sub areas, basins or reaches worth naming and placing.
+- Typical water temperature through the year, at depth and at the surface if they diverge sharply, and what drives visibility here, with a sense of when it tends to run best or worst.
+- The region's overall character. What kind of diving this is and what actually dominates conditions, tide, wind, open ocean swell, or something else. 
+- What actually decides a dive here, for this region's own hydrography. For each factor that can end a dive, the value it ends it at, with enough research behind it to set its go, marginal and no go limits.
+- The wind climate where the region is compact enough to have one, what blows, when, and which entries it blows offshore at, and where swell comes from. 
+- The region's current type (tidal, wind driven, or none), the stations and model behind a tidal current, the local sources. 
+- Which tools in `tools/` actually apply here, and which websites (a regional forum, a site catalog, an archived guide, a park authority) belong in its Web Sources. 
+- Local dive shops and air fills.
+- The local emergency number and every operating hyperbaric recompression chamber that could plausibly serve this region.
 
 If a search turns up a page that looks relevant but won't load, an archived copy that's broken, or a fetch that's blocked, stop rather than writing the file around the gap. Tell the user what turned up and what wouldn't come through, and ask them to paste the content in, or confirm it's out of reach for them too, before continuing. Never present the file as complete over a gap like this, especially the emergency section: a wrong or missing chamber is not a cosmetic gap.
 
 ## 3. Write the file
 
-Follow the template at the bottom of this skill for structure and section order. Omit a section the template marks optional (Boundaries, a named subarea, the depth-by-tide table, Dive shops and air fills) only when the region genuinely has nothing for it, never as a shortcut past the research above. Leave the "Sites currently covered" table with its header row only; the `create-dive-site` skill adds a row there the first time a site is written into this region. Follow the workspace's Writing style, Units, Time and Depth conventions in `CLAUDE.md` for everything that goes in the file.
+Follow the template at the bottom of this skill for structure and section order. Omit a section the template marks optional only when the region genuinely has nothing for it. Leave the "Sites currently covered" table with its header row only; the `create-dive-site` skill adds a row there the first time a site is written into this region.
 
 ## 4. Bookkeeping, once the file exists
 
@@ -53,7 +63,7 @@ Optional. Include only if this folder's coverage needs explaining: where it star
 
 ### A named subarea or topic
 
-Optional, one section per subarea or region-wide topic that needs its own explanation beyond what Conditions and How planning works here can hold: a subarea that behaves differently enough from the rest of the region, or a region-wide topic significant enough to warrant its own space. Name the section after the subarea or topic itself, not "Subarea," and add as many of these as the region genuinely needs.
+Optional, one section per subarea or region-wide topic that needs its own explanation beyond what Conditions and Planning conventions can hold: a subarea that behaves differently enough from the rest of the region, or a region-wide topic significant enough to warrant its own space. Name the section after the subarea or topic itself, not "Subarea," and add as many of these as the region genuinely needs.
 
 ## Conditions
 
@@ -77,18 +87,25 @@ The following web sources should be used in this region:
 
 List only the websites this region actually uses.
 
-## Conventions
+## Site file conventions
 
-The local region conventions beyond the workspace default, and which fixed datum, if any, depth is normalized to here and why (the workspace has no default datum to fall back on). Where a datum applies, include the arithmetic for converting an observed depth to it and back, the same way the tide tool's own worked example does.
+Open with "These conventions apply to every site file written in this region." Then what every site file in this region carries beyond the site template (a tide station, a companion current extract), and which fixed datum, if any, depth is normalized to here and why (the workspace has no default datum to fall back on). Where a datum applies, include the arithmetic for converting an observed depth to it and back, the same way the tide tool's own worked example does, and how a site's tidal range figures are derived.
 
+The region's current type (tidal, wind driven, or none) and the method that produces each figure the site skill's Current section requires for that type: the tool, station or source behind it, how a station and its bin are chosen, how an offset is established, how a model cross-check is reconciled, and the current threshold the diveable window is measured against.
 
-## How planning works here
+## Planning conventions
 
-Ordered by what actually decides whether a dive goes well in this region, most important first. This ordering is specific to the region's own hydrography, an open, ocean-facing coast plans differently from a narrow, sill-bound inlet, and should be reasoned through for this region.
+Open with "These conventions apply to every dive planned in this region." Then the factors that decide whether a dive goes well in this region, most important first, each with the limits a plan is checked against on the day. This ordering is specific to the region's own hydrography, an open, ocean-facing coast plans differently from a narrow, sill-bound inlet, and should be reasoned through for this region.
 
-1. **Factor** (primary). Why it matters most here, and the concrete step to check it: a tool, a station, a forecast.
+1. **Factor** (primary). Why it matters most here, and the concrete step to check it: the tool, station, forecast or observation that reads it, read at both the entry and the exit time, and what any limit applies to (the working depth bin, the entry itself, the turn depth). A factor that can end a dive carries its limits beneath it:
+   - **Go.** Under a stated value, and what the water is like there.
+   - **Marginal.** The band between, and what it takes to dive it.
+   - **No go.** Over a stated value, and why.
+   - **Adjustment.** Optional, one bullet per adjustment the region needs: a sheltered or exposed class of site, a season that moves the value.
 2. **Factor** (secondary).
-3. **Factor** (informational).
+3. **Factor** (informational). Sets expectations and gear.
+
+Optional, local rules that bind every dive here, after the list: permits and fees, marine park conduct and gear rules, areas closed to diving, required gear hygiene.
 
 ## Sites currently covered
 

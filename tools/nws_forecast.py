@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """NWS point forecast: wind, gusts, waves, air temperature and rain at a US coordinate.
 
-  nws_forecast.py forecast --near LAT LON --date D          hourly conditions for one local day
-  nws_forecast.py at --near LAT LON --time "D HH:MM"        conditions at one local moment
+  nws_forecast.py at --near LAT LON --time "D HH:MM" --bad S --short S     planning: the call at the entry or exit time
+  nws_forecast.py forecast --near LAT LON --date D --bad S --short S       planning: the call for every hour of the day
+  nws_forecast.py forecast --near LAT LON --date D                         conditions alone, no call
+
+  S is a sector from the site's Wind section, compass points clockwise (SW-WNW).
 
 """
 import argparse
@@ -30,6 +33,58 @@ def _cfg(key, default):
             return json.load(f).get("nws_forecast", {}).get(key, default)
     except (OSError, ValueError):
         return default
+
+
+# ---------------------------------------------------------------- the go / no go call
+# The limits live in this tool's section of tool-config.json. The site's own Wind section names
+# its Bad and short fetch sectors; every other direction counts as Fine, checked against the
+# offshore limit alone.
+
+LIMITS = {
+    "go_below_ms": _cfg("go_below_ms", 5.0),
+    "nogo_above_ms": _cfg("nogo_above_ms", 8.0),
+    "short_fetch_shift_ms": _cfg("short_fetch_shift_ms", 3.0),
+    "gust_margin_ms": _cfg("gust_margin_ms", 3.0),
+    "offshore_marginal_ms": _cfg("offshore_marginal_ms", 8.0),
+}
+BANDS = ["go", "marginal", "no go"]
+
+
+def sectors(specs):
+    """'SW-WNW' (clockwise from the first point to the second) or 'N' -> the set of compass indices."""
+    out = set()
+    for spec in specs or []:
+        for part in spec.upper().split(","):
+            ends = part.strip().split("-")
+            if len(ends) > 2 or any(e not in COMPASS for e in ends):
+                sys.exit(f"bad sector '{part.strip()}': use compass points, e.g. SW-WNW or N")
+            i, j = COMPASS.index(ends[0]), COMPASS.index(ends[-1])
+            out.add(i)
+            while i != j:
+                i = (i + 1) % 16
+                out.add(i)
+    return out
+
+
+def call(speed, gust, deg, bad, short):
+    """(sector kind, band) for one reading, or None where a value is missing."""
+    if speed is None or deg is None:
+        return None
+    i = round((deg % 360) / 22.5) % 16
+    kind = "short" if i in short else "bad" if i in bad else "fine"
+    if kind == "fine":
+        # Offshore, the risk is surface drift: the sustained speed alone sets the call, and gusts don't count.
+        return kind, BANDS[1 if speed > LIMITS["offshore_marginal_ms"] else 0]
+    shift = LIMITS["short_fetch_shift_ms"] if kind == "short" else 0.0
+    go, nogo = LIMITS["go_below_ms"] + shift, LIMITS["nogo_above_ms"] + shift
+    band = 0 if speed < go else 1 if speed <= nogo else 2
+    if gust is not None and gust > speed + LIMITS["gust_margin_ms"]:
+        band = min(band + 1, 2)  # gusts onto the entry steepen the chop
+    return kind, BANDS[band]
+
+
+def call_text(c):
+    return "" if c is None else f"{c[1]} ({c[0]})"
 
 
 def get(url, what="NWS"):
@@ -116,6 +171,7 @@ def conditions(doc, t):
         "air": f"{air:4.1f} °C" if air is not None else "   - °C",
         "rain": f"{pop:3.0f}%" if pop is not None else "  -%",
         "sky": value_at(doc["sky"], t) or "",
+        "raw": (spd * KMH if spd is not None else None, dr, gu * KMH if gu is not None else None),
     }
 
 
@@ -126,20 +182,29 @@ def check_covered(doc, t0, t1):
         sys.exit(f"outside the NWS forecast window (it covers {span}, local)")
 
 
+def _reorder(raw):
+    """(speed, direction, gust) -> the (speed, gust, direction) order call() takes."""
+    return raw[0], raw[2], raw[1]
+
+
 def cmd_forecast(a):
     lat, lon = a.near
     doc = fetch(lat, lon)
     day = datetime.strptime(a.date, "%Y-%m-%d").replace(tzinfo=doc["tz"])
     check_covered(doc, day, day + timedelta(days=1))
     print_header(doc, lat, lon)
-    print(f"  {'time':5}  {'wind':8}  {'from':10}  {'gust':8}  {'wave':5}  {'air':7}  {'rain':4}  sky")
+    bad, short = sectors(a.bad), sectors(a.short)
+    judged = bool(bad or short)
+    head = f"  {'time':5}  {'wind':8}  {'from':10}  {'gust':8}  {'wave':5}  {'air':7}  {'rain':4}  "
+    print(head + (f"{'call':20}  " if judged else "") + "sky")
     for h in range(24):
         t = day + timedelta(hours=h)
         if not doc["first"] <= t < doc["last"]:
             continue
         c = conditions(doc, t)
+        verdict = f"{call_text(call(*_reorder(c['raw']), bad, short)):20}  " if judged else ""
         print(f"  {t:%H:%M}  {c['wind']}  {c['dir']}  {c['gust']}  {c['wave']}  {c['air']}  "
-              f"{c['rain']}  {c['sky']}")
+              f"{c['rain']}  {verdict}{c['sky']}")
 
 
 def cmd_at(a):
@@ -153,6 +218,16 @@ def cmd_at(a):
     print(f"  wind   {c['wind'].strip()}  from {' '.join(c['dir'].split())}  gust {c['gust'].strip()}")
     print(f"  waves  {c['wave'].strip()}")
     print(f"  air    {c['air'].strip()}  rain {c['rain'].strip()}  {c['sky']}")
+    bad, short = sectors(a.bad), sectors(a.short)
+    if bad or short:
+        print(f"  call   {call_text(call(*_reorder(c['raw']), bad, short)) or 'no reading'}")
+
+
+def _call_args(s):
+    s.add_argument("--bad", action="append", metavar="SECTOR",
+                   help="the site's Bad sector(s), compass points clockwise, e.g. SW-WNW")
+    s.add_argument("--short", action="append", metavar="SECTOR",
+                   help="the site's short fetch and Mixed sector(s); their bands move up by short_fetch_shift_ms")
 
 
 def main():
@@ -162,14 +237,17 @@ def main():
     s = sub.add_parser("forecast", help="hourly conditions for one local calendar day")
     s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True)
     s.add_argument("--date", required=True, metavar="YYYY-MM-DD")
+    _call_args(s)
     s.set_defaults(fn=cmd_forecast)
 
     s = sub.add_parser("at", help="conditions at one local moment")
     s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True)
     s.add_argument("--time", required=True, metavar="YYYY-MM-DD HH:MM")
+    _call_args(s)
     s.set_defaults(fn=cmd_at)
 
     a = p.parse_args()
+    sectors(a.bad), sectors(a.short)  # reject a malformed sector before any request
     a.fn(a)
 
 

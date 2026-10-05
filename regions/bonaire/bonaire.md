@@ -30,6 +30,7 @@ The following tools should be used in this region:
 
 - open_meteo_wind.md
 - emodnet_depth.md
+- shore_exposure.md
 - subsurface_log.md
 - scubaboard.md
 - diversatlas.md
@@ -41,9 +42,30 @@ The following web sources should be used in this region:
 
 - **[DAN (Divers Alert Network)](https://dan.org).** Dive medicine, accident data and case narratives (the Annual Diving Report, Incident Insights), the standing source for gear, procedure and debrief questions. Emergency line +1-919-684-9111, 24/7, collect calls accepted worldwide.
 
-## Conventions
+## Site file conventions
 
-Depth is a plain observed figure. Bonaire's tidal range runs about 30 cm, and current here is wind driven rather than tidal, so there is no fixed datum to normalize against and no slack window to plan around the way a tidal region requires.
+These conventions apply to every site file written in this region.
+
+Depth is a plain observed figure: Bonaire's tidal range runs about 30 cm, too small to normalize against.
+
+Current here is wind driven. Each figure in a site's Current section comes from local sources, by this method:
+
+- **Usual set and typical speed.** From the site descriptions in the region's web sources and community databases, and from the dive log's own dives at the site, taken as behaviour and cross-checked between sources.
+- **Drivers.** The winds or seasons those same sources tie to a stronger or reversed set.
+- **A set no source describes** is written as not established.
+
+## Planning conventions
+
+These conventions apply to every dive planned in this region.
+
+Ordered by what actually decides whether a Bonaire dive goes well:
+
+1. **Coast and wind exposure** (primary). The west coast around town sits in the lee of the island itself and is calm on all but the roughest days; the north (inside and above Washington Slagbaai) and the far southern tip face open water and the prevailing trade winds directly, and can run real current and swell that call for real experience, not just a stronger kick. The wind tool here is `open_meteo_wind.py`; confirm its call from the shore, the current sock or the surface chop before entering.
+   - **Trade winds.** The east to southeast trades blow offshore along the west coast and the lee sides of Klein Bonaire, and leave those entries flat at their usual strength. Strong trades drive a stronger current at the exposed north and south sites.
+   - **Swell.** Northern swell in winter, and swell from passing tropical systems in the hurricane season (June to November), can put surf on the west coast under a light breeze. Swell is judged at the entry rocks before kitting up.
+2. **Marine park compliance** (secondary). No gloves, no touching, buoyancy clear of the reef, entry at a marked rock or a maintained mooring, current e-tag in hand. This is a legal requirement here, not just good practice, and citations are enforced. The park rules are set out below.
+3. **Gas and NDL discipline** (secondary). Warm water and an easy, comfortable reef slope make it easy to run long; plan a turn on gas or NDL reserve the same as anywhere else and don't let comfort extend the profile past it.
+4. **Viz** (informational). Reliably good on the west coast; won't stop a dive, but check a recent report before a north or south site where wind can stir the shallows.
 
 Every diver in the water needs a current STINAPA Nature Fee e-tag (Bonaire National Marine Park and Washington Slagbaai National Park), paid online and carried on the day, not bought as a physical tag at a dive shop. A mandatory orientation dive is required on arrival, usually arranged through the first dive shop used. Marine park rules ban gloves and knee pads (a medical exception can be requested from STINAPA at info@stinapa.org), ban touching, moving, collecting or feeding marine life, ban disposable chemical light sticks and pointer sticks, and ban anchoring anywhere in the park, requiring boats to use one of the roughly 100 public moorings STINAPA maintains instead; a shore entry is made at one of the numbered, yellow-painted rocks marking each site. A surface marker buoy is recommended, especially in shallow water. Sunscreen must be reef safe, free of oxybenzone and octinoxate.
 
@@ -55,22 +77,13 @@ Disinfect all gear before the first dive of a trip, between every dive, and agai
 - **Sensitive gear.** Soak 5 minutes in a 7% Lysol solution, then rinse in fresh water.
 - **Extra sensitive gear.** Rinse in soap, then fresh water.
 
-## How planning works here
-
-Ordered by what actually decides whether a Bonaire dive goes well:
-
-1. **Coast and wind exposure** (primary). The west coast around town sits in the lee of the island itself and is calm on all but the roughest days; the north (inside and above Washington Slagbaai) and the far southern tip face open water and the prevailing trade winds directly, and can run real current and swell that call for real experience, not just a stronger kick. Pull the forecast from `open_meteo_wind.md` for both the entry and exit time before planning a dive, and confirm from the shore, current sock, or surface chop before entering.
-2. **Marine park compliance** (secondary). No gloves, no touching, buoyancy clear of the reef, entry at a marked rock or a maintained mooring, current e-tag in hand. This is a legal requirement here, not just good practice, and citations are enforced.
-3. **Gas and NDL discipline** (secondary). Warm water and an easy, comfortable reef slope make it easy to run long; plan a turn on gas or NDL reserve the same as anywhere else and don't let comfort extend the profile past it.
-4. **Viz** (informational). Reliably good on the west coast; won't stop a dive, but check a recent report before a north or south site where wind can stir the shallows.
-
 ## Sites currently covered
 
 Site numbering runs 1 to 63 plus a lettered set A to Z at Klein Bonaire, 90 sites in total. STINAPA counts 88 of these as marked sites along the West Coast and Klein Bonaire; White Hole and Cai sit on the East Coast instead, recommended only for advanced divers with an experienced guide.
 
-The Washington Slagbaai chain, Boka Bartol through Nukove, has been closed to diving since 1 May 2023 over an SCTLD outbreak, with every other dive site in the park open; each affected site file carries the same note. Karpata and La Dania's Leap, just south of this chain, have reopened. Carel's Vision, between the closed chain and Karpata, is a separate, permanent case: it sits inside the King Willem-Alexander Reserve (see Conventions) and stays closed regardless of how the SCTLD situation develops. On Klein Bonaire, Munk's Haven has been closed for an extended period and C.H. Annex is closed per STINAPA's own map. Reconfirm status with STINAPA before planning a dive near any of these boundaries.
+The Washington Slagbaai chain, Boka Bartol through Nukove, has been closed to diving since 1 May 2023 over an SCTLD outbreak, with every other dive site in the park open; each affected site file carries the same note. Karpata and La Dania's Leap, just south of this chain, have reopened. Carel's Vision, between the closed chain and Karpata, is a separate, permanent case: it sits inside the King Willem-Alexander Reserve and stays closed regardless of how the SCTLD situation develops. On Klein Bonaire, Munk's Haven has been closed for an extended period and C.H. Annex is closed per STINAPA's own map. Reconfirm status with STINAPA before planning a dive near any of these boundaries.
 
-SCTLD precaution applies uniformly across the park rather than by site: disinfect before, between and after every dive, at every site (see Conventions).
+SCTLD precaution applies uniformly across the park rather than by site: disinfect before, between and after every dive, at every site.
 
 | Site | Description |
 |---|---|
