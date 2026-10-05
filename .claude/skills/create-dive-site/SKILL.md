@@ -182,22 +182,6 @@ Optional sentence on what dominates the current here. Tidal and wind driven only
 * **Drivers.** Wind driven only: the winds or seasons that strengthen or reverse the set.
 * **Topic.** Any further local behaviour, each led by a bold topic.
 
-## Depth and tide
-
-Short note on how much the tide swings the depth here.
-
-| | |
-|---|---|
-| **Tide station** | Tide station name and ID, and distance |
-| **Series** | High and low water only, or full series |
-| **Typical range** | Median and maximum daily range, and the year's span |
-
-Optional table of features by depth below MLLW, and how they read at a low and a high.
-
-## Hazards
-
-* **Topic.** Each hazard led by a bold topic.
-
 ## Wind
 
 | | |
@@ -213,6 +197,18 @@ Optional prose after the table: the shoreline's shape where the bearing alone do
 * **Fine.** Offshore sectors, onshore sectors under 1 km of fetch, and cross-shore sectors under 5 km, and what blocks them, from the tool output or the site file's own description of the shore.
 * **Wind against current.** The wind opposing each exchange, with the exchange named, or that the current is too weak to stack against wind.
 
+## Depth and tide
+
+Short note on how much the tide swings the depth here.
+
+| | |
+|---|---|
+| **Tide station** | Tide station name and ID, and distance |
+| **Series** | High and low water only, or full series |
+| **Typical range** | Median and maximum daily range, and the year's span |
+
+Optional table of features by depth below MLLW, and how they read at a low and a high.
+
 ## Visibility
 
 * **Topic.** What drives visibility here and when it is best or worst. Overall description not based on single day anecdotes.
@@ -225,4 +221,9 @@ Optional prose after the table: the shoreline's shape where the bearing alone do
 ## Marine life
 
 * **Topic.** What is seen, grouped by zone or type.
+
+## Hazards
+
+* **Topic.** Each hazard led by a bold topic.
+
 ```
