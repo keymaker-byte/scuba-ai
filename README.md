@@ -44,7 +44,6 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 | [Open-Meteo wind](tools/open_meteo_wind.md) | Open-Meteo (ECMWF IFS + GFS) | Hourly wind speed, direction and gusts at any coordinate worldwide, for regions outside NWS coverage; ECMWF as the primary model, GFS as an independent cross-check. | `open_meteo_wind.py` |
 | [PNW Diving](tools/pnwdiving_viz.md) | pnwdiving.com | Recent visibility reports by site, from the public summary table, cached locally. | `pnwdiving_viz.py` |
 | [Subsurface dive log](tools/subsurface_log.md) | Subsurface logbook | Read-only access to a Subsurface dive log: list dives, show a dive's aggregates and notes, or pull its full depth/temperature/pressure profile. | `subsurface_log.py` |
-| [ScubaBoard forum feeds](tools/scubaboard.md) | ScubaBoard | Recent threads by region or by topic, via each forum's own RSS feed. | `scubaboard.py` |
 | [Divers Atlas](tools/diversatlas.md) | diversatlas.org | Community dive site records worldwide (pin, depth, visibility, entry and parking notes, points of interest, safety notes), found by coordinate. | `diversatlas.py` |
 | [Dive Atlas](tools/diveatlas.md) | diveatlas.org | Community dive site wiki: pin, depth range, skill level and a guidebook-style write-up (access, hazards, life, facilities), found by coordinate. | `diveatlas.py` |
 

@@ -4,19 +4,25 @@ This workspace is for scuba diving planning.
 
 ## Region Files
 
-A region file is a single `<slug>.md` steering file under `regions/<slug>/`, covering one bounded body of water: its geography, typical conditions, which tools apply, which web sources apply, its dive sites conventions, its planning conventions, plus the `sites/` folder holding every site written under it. It has a row in the README's own "Regions currently covered" table and an entry in `map/data.js`'s top-level `regions` object, keyed by the region's folder slug; `map.html` reads a site's region name and steering-file link from there rather than deriving either from the slug. Keep both current whenever a region is added or its display name or file path changes.
+A region is three steering files under `regions/<slug>/`, covering one bounded body of water over which one set of conventions holds, plus the `sites/` folder holding every site written under it:
 
-Creating a new region file is handled by the `create-dive-region` skill: it holds the canonical template. Invoke it rather than freehanding a region file.
+- **`<slug>.md`.** The region file: geography, typical conditions, sites currently covered, dive shops and emergency.
+- **`<slug>-site-conventions.md`.** The research, depth, current and wind conventions every site file in the region follows, with the tools and sources each one uses.
+- **`<slug>-planning-conventions.md`.** The conditions every dive planned in the region is checked against, with the tool for each, and the local rules that bind it.
 
-Important! Always read the corresponding `<region>.md` steering file whenever working on or referencing a region.
+The region has a row in the README's own "Regions currently covered" table and an entry in `map/data.js`'s top-level `regions` object, keyed by the region's folder slug; `map.html` reads a site's region name and steering-file link from there rather than deriving either from the slug. Keep both current whenever a region is added or its display name or file path changes.
+
+Creating a new region is handled by the `create-dive-region` skill: it holds the canonical template for all three files. Invoke it rather than freehanding them.
+
+Important! Always read all three of the region's steering files, `<region>.md`, `<region>-site-conventions.md` and `<region>-planning-conventions.md`, whenever working on or referencing a region.
 
 ## Site Files
 
-A site file is a single guidebook style `<slug>.md` under its region's `sites/` folder: coordinates, depth range, currents, entry, hazards, wind exposure, temperatures, and marine life, paired with a `<slug>.json` where the region has spatial current model coverage. It also has a row in its region's steering file, under that file's "Sites currently covered" table, and an entry in `map/data.js`, the index `map.html` draws its pins from. Keep both current whenever a site is added or its coordinates, name, type, parking, or entry point change.
+A site file is a single guidebook style `<slug>.md` under its region's `sites/` folder: coordinates, depth range, currents, entry, hazards, wind exposure, temperatures, and marine life, paired with a `<slug>.json` where the region has spatial current model coverage. It also has a row in its region file, under that file's "Sites currently covered" table, and an entry in `map/data.js`, the index `map.html` draws its pins from. Keep both current whenever a site is added or its coordinates, name, type, parking, or entry point change.
 
 Creating a new site file, or substantially rewriting an existing one, is handled by the `create-dive-site` skill: it holds the canonical template. Invoke it rather than freehanding a site file.
 
-Important! Always read the corresponding `<region>.md` steering file and the `<site>.md` steering file whenever working on or referencing a diving site.
+Important! Always read all three of the region's steering files and the `<site>.md` file whenever working on or referencing a diving site.
 
 ## Map Files
 
@@ -43,13 +49,12 @@ Planning a new dive, and logging one afterward, is handled by the `create-dive-p
 - @tools/open_meteo_wind.md
 - @tools/pnwdiving_viz.md
 - @tools/subsurface_log.md
-- @tools/scubaboard.md
 - @tools/diversatlas.md
 - @tools/diveatlas.md
 
 `tool-config.json` holds personal data and is gitignored, so a fresh clone of this workspace won't have it. If it's missing at session start, don't proceed, tell the user it's missing and ask them to copy `tool-config_template.json` to the real filename and fill it in, then continue once it exists.
 
-Use these tools when writing a new region file, a new dive site file, planning a dive, or answering questions for the user. Each tool lives in `tools/`, one self-contained markdown file per tool (`tools/<name>.md`), paired with its `tools/<name>.py` script. Each tool reads its own parameters from its own subsection of `tool-config.json`. A region's steering file lists  the subset that region actually uses, so working a site narrows down to the right already-loaded tools rather than loading anything new.
+Use these tools when writing a new region file, a new dive site file, planning a dive, or answering questions for the user. Each tool lives in `tools/`, one self-contained markdown file per tool (`tools/<name>.md`), paired with its `tools/<name>.py` script. Each tool reads its own parameters from its own subsection of `tool-config.json`. A region's two conventions files name the subset that region actually uses, so working a site narrows down to the right already-loaded tools rather than loading anything new.
 
 If a tool errors out, an API is unreachable, or a site is down, stop and report it to the user rather than working around it. Never substitute a cached value, a plausible estimate, a different station, or a different bin to paper over the gap, and never present a plan or a site file as complete when a source it depends on failed. Say plainly what failed and what it was supposed to provide, and wait for the user before continuing. This matters because a plan built on partial data looks exactly like one built on complete data. A missing current window or a silently skipped tide check does not announce itself in the output, and by the time it matters it is a diver in the water holding a plan that was never actually checked.
 
@@ -64,7 +69,7 @@ If a tool errors out, an API is unreachable, or a site is down, stop and report 
 
 ## Depth convention: normalize to a fixed datum
 
-- **Depth is not a property of a site.** Where the water has a tide, the seabed is fixed but the surface is not, so an un-normalized depth is not comparable to any other dive at any other tide. Every depth worth keeping in a tidal region is normalized to a fixed datum, and never mixed with another. Which datum applies, and the arithmetic for it, is specific to whichever source produces that region's tide and current predictions, not a workspace-wide constant. That convention lives in the region's own steering file.
+- **Depth is not a property of a site.** Where the water has a tide, the seabed is fixed but the surface is not, so an un-normalized depth is not comparable to any other dive at any other tide. Every depth worth keeping in a tidal region is normalized to a fixed datum, and never mixed with another. Which datum applies, and the arithmetic for it, is specific to whichever source produces that region's tide and current predictions, not a workspace-wide constant. That convention lives in the region's own site conventions file.
 - **Not every region has a tide to normalize against at all.** A region may have no datum, in which case a plain observed depth is simply true.
 
 ## Diving conventions: NDL and EAN32

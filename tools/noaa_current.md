@@ -24,4 +24,4 @@ python3 tools/noaa_current.py window STATION_ID --bin B --date 2026-07-12      #
 
 `window` is the planning command. It reports every span where the current stays under `--max-speed`, with its duration and peak, so a 72-minute window and a 20-minute one stop looking alike. The threshold defaults to `noaa_current.max_speed_ms` in `tool-config.json` (0.25 m/s), a placeholder for what's comfortable in a drysuit, worth setting from experience.
 
-`--bin` defaults to the station's near-surface bin; always pass the site file's Recommended bin. A site file's peak speeds and typical window come from `predict` and `window` run across one spring to neap cycle, about 15 consecutive days.
+`--bin` defaults to the station's near-surface bin; always pass the site file's Recommended bin. A site file's peak speeds and typical window come from `predict` and `window` run across 30 consecutive days, which takes in both spring tides of the lunar month, the larger perigean one included.

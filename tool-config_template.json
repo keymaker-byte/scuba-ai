@@ -52,8 +52,6 @@
     "offshore_marginal_ms": 8
   },
 
-  "scubaboard": {},
-
   "diversatlas": {
     "api_key": "<required>"
   },
