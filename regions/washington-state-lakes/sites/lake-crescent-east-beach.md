@@ -1,11 +1,11 @@
 # Lake Crescent East Beach
 
-A deep, glacially carved lake in Olympic National Park on the Olympic Peninsula, 12 miles long and over 190 m deep at its deepest, filled with water so clear and so low in nutrients that it runs a brilliant, almost tropical blue. There is no current worth mentioning and no tide, so a dive here is a straightforward freshwater shore dive. The headline hazard is exactly that clarity: it lets sunlight reach deep, so a diver used to reading depth off the dimming light can run well past their planned depth before it feels deep at all, and the shore drops fast into water far beyond sport diving limits.
+A deep, glacially carved lake in Olympic National Park on the Olympic Peninsula, about 19 km long and over 190 m deep at its deepest, filled with water so clear and so low in nutrients that it runs a brilliant, almost tropical blue. There is no current worth mentioning and no tide, so a dive here is a straightforward freshwater shore dive. The headline hazard is exactly that clarity: it lets sunlight reach deep, so a diver used to reading depth off the dimming light can run well past their planned depth before it feels deep at all, and the shore drops fast into water far beyond sport diving limits.
 
 | | |
 |---|---|
 | **Location** | Olympic National Park, Clallam County, WA. South shore of Lake Crescent, near the eastern end |
-| **Coordinates** | Dive site 48.085275, -123.744945 (East Beach dive area, a short swim out from the beach). No fixed seabed here: the slope keeps dropping well past sport diving limits, so there is no single depth to quote for the point |
+| **Coordinates** | 48.085275, -123.744945 (East Beach dive area, a short swim out from the beach, on a slope that keeps dropping well past sport diving limits, so no single seabed depth applies) |
 | **Parking coordinates** | 48.085610, -123.743013, the small unpaved lot at East Beach |
 | **Entry point coordinates** | 48.085592, -123.743128, the East Beach shoreline |
 | **Type** | Shore |
@@ -17,7 +17,7 @@ A deep, glacially carved lake in Olympic National Park on the Olympic Peninsula,
 * **Entry.** From US 101 westbound out of Port Angeles, East Beach Road turns off just before the park boundary; a short dirt spur drops down the bluff to the beach and a small parking area. Walk from the beach along the rock garden to the left of the entry, or use the dock to the right, and enter directly into deep water with no surface swim needed.
 * **Parking.** A small unpaved lot at East Beach, room for roughly 15 to 20 cars. It gets dusty; a mat to stage gear on helps.
 * **Access.** Inside Olympic National Park, so a park entrance fee or pass applies. East Beach is designated a swimming area through the summer season, and diving and snorkeling inside that roped swim area is restricted while it is in effect, permitted again from October through May; entering and exiting the water outside the marked swim area is unaffected year round.
-* **Facilities.** Picnic tables, fire rings and a vault toilet at the beach. Air fills are in Port Angeles, Joyce and Sekiu.
+* **Facilities.** Picnic tables, fire rings and a vault toilet at the beach.
 
 ## Navigation and landmarks
 
@@ -28,27 +28,27 @@ A deep, glacially carved lake in Olympic National Park on the Olympic Peninsula,
 
 ## Current
 
-There is no tidal current here and nothing worth planning a window around. What little water movement exists is wind driven surface drift, not enough to affect a dive at depth.
-
-## Hazards
-
-* **Depth misjudgment.** The lake's own defining hazard. Water this clear lets light reach depths where a Puget Sound diver would expect near dark, and it is easy to descend well past a planned depth without the visual cues that would normally flag it. Watch the computer, not the light.
-* **No gradual bottom.** The slope off the main entries runs straight from the shallows into water beyond sport diving limits, with no shelf to arrest an inattentive descent.
-* **Silt.** The bottom near the barge and rock structures is fine and easily stirred; a careless fin kick can drop visibility to nothing in the immediate area.
-* **Snags.** Old fishing line, and reportedly abandoned dive guidelines, have been found tangled in the rock and wreck structure. Carry a cutting tool.
-* **Cold at depth.** Even in summer the water below the thermocline runs close to freezing; hypothermia risk builds faster than the clear water and calm surface suggest.
-* **Boat traffic.** Motorboats are permitted on Lake Crescent. Surface with a marker buoy or dive flag deployed, and listen for engines before ascending.
-* **Remoteness.** The nearest chamber and definitive care are a long transport from this shore; a bent or badly hurt diver here is farther from help than the same incident in Puget Sound.
+| | |
+|---|---|
+| **Current type** | None: the water holds still at depth, and wind drives only a surface drift |
 
 ## Wind
 
-* **Orientation.** East Beach sits at the eastern end of a lake that runs roughly east to west for about 12 miles, so a westerly has the whole length of the lake to build fetch and chop by the time it reaches this shore.
-* **Bad.** Sustained wind out of the west kicks up real chop at the east end and makes the entry and exit less comfortable, though it does not carry the go, no go weight it does on open tidal water.
-* **Fine.** Wind from the east or light conditions generally; the beach itself is a straightforward entry in anything short of a stiff blow.
+| | |
+|---|---|
+| **Entry shore facing** | west, 271° |
+| **Dive area shore facing** | west, 271° |
+
+East Beach sits at the eastern end of a lake that runs roughly east to west for about 19 km and bends along its length, so a westerly follows a longer run down the lake than the straight-line fetch below shows.
+
+* **Short fetch.** Southwest through west-northwest (SW-WNW), onshore over 1.2 to 3.7 km of straight-line fetch. A sustained westerly kicks up chop at the east end that makes the entry and exit less comfortable, without the go, no go weight it carries on open tidal water, and the entry stays diveable even in a strong westerly. Check the entry on the day under any west wind.
+* **Fine.** Northwest clockwise through south-southwest: offshore from northeast through south-southeast, and under 1 km of fetch from every other direction. The beach itself is a straightforward entry in anything short of a stiff blow.
+* **Wind against current.** The water holds still, so wind alone sets the surface.
 
 ## Visibility
 
-Routinely excellent, commonly in the range of 9 to 20 m and reported well beyond that on the best days, among the clearest fresh water in the region. The lake's low nutrient level keeps algae from ever building up enough to cloud it the way a Puget Sound bloom does, so viz here is far more consistent through the season than anywhere tidal in this workspace.
+* **Clarity.** Routinely excellent, commonly 9 to 20 m and reported well beyond that on the best days, among the clearest fresh water in the region.
+* **Through the season.** The lake's low nutrient level keeps algae from building up enough to cloud it the way a plankton bloom clouds salt water, so viz holds far more consistent through the season than on tidal water.
 
 ## Temperature
 
@@ -59,3 +59,13 @@ Routinely excellent, commonly in the range of 9 to 20 m and reported well beyond
 
 * **Fish.** Sparse compared to salt water; the lake's low nutrient load supports little in the way of fish or vegetation. Rainbow and cutthroat trout, including the lake's own endemic strains, are the main sighting, along with occasional crayfish.
 * **The submerged forest.** Standing dead trees and fallen limbs from old landslides lie along parts of the slope, bare and smooth, more a geological attraction than a living reef, but worth navigating by.
+
+## Hazards
+
+* **Depth misjudgment.** The lake's own defining hazard. Water this clear lets light reach depths where a diver used to salt water would expect near dark, and it is easy to descend well past a planned depth without the visual cues that would normally flag it. Watch the computer, not the light.
+* **No gradual bottom.** The slope off the main entries runs straight from the shallows into water beyond sport diving limits, with no shelf to arrest an inattentive descent.
+* **Silt.** The bottom near the barge and rock structures is fine and easily stirred; a careless fin kick can drop visibility to nothing in the immediate area.
+* **Snags.** Old fishing line, and reportedly abandoned dive guidelines, have been found tangled in the rock and wreck structure. Carry a cutting tool.
+* **Cold at depth.** Even in summer the water below the thermocline runs close to freezing; hypothermia risk builds faster than the clear water and calm surface suggest.
+* **Boat traffic.** Motorboats are permitted on Lake Crescent. Surface with a marker buoy or dive flag deployed, and listen for engines before ascending.
+* **Remoteness.** The nearest chamber and definitive care are a long transport from this shore; a bent or badly hurt diver here is farther from help than at a site near a city.
