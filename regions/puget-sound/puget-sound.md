@@ -35,62 +35,6 @@ A fjord, not a sound: a narrow trench separating the Kitsap Peninsula from the O
 - **Visibility.** Swings hard with plankton blooms, worst in spring and summer. Recent reports beat any prediction.
 - **Character.** Cold water, mostly shore entries, and tidal exchange drives almost everything. Assume current and a slack window are part of every plan unless told otherwise.
 
-## Tools
-
-The following tools should be used in this region:
-
-- noaa_current.md
-- noaa_tide.md
-- adcirc_current.md
-- ncei_depth.md
-- shore_exposure.md
-- nws_forecast.md
-- pnwdiving_viz.md
-- subsurface_log.md
-- scubaboard.md
-- diversatlas.md
-- diveatlas.md
-
-## Web Sources
-
-The following web sources should be used in this region:
-
-- **[DAN (Divers Alert Network)](https://dan.org).** Dive medicine, accident data and case narratives (the Annual Diving Report, Incident Insights), the standing source for gear, procedure and debrief questions. Emergency line +1-919-684-9111, 24/7, collect calls accepted worldwide.
-- **[NW Dive Club](https://nwdiveclub.com/viewforum.php?f=6).** Community write-ups of how a site is dived: the entry, what's worth seeing, what to expect. Read it through the Wayback Machine (`https://archive.org/wayback/available?url=<page>`, then `curl --compressed` the snapshot), and confirm the snapshot holds the full thread.
-- **[The Perfect Dive](https://web.archive.org/web/20220413053905/http://theperfectdive.com/DEF-SiteList.asp).** A defunct catalog of Pacific Northwest sites, frozen around 2022: dive type, difficulty, entry and attractions per site, including several lesser-known sites. Read this pinned snapshot with `curl --compressed`, and verify access, fees and closures against a recent source.
-
-## Site file conventions
-
-These conventions apply to every site file written in this region.
-
-Every site file carries a tide station in the same body of water, and a companion `<slug>.json`, an ENPAC15 current extract produced by `tools/adcirc_current.py`.
-
-Depth here is normalized to MLLW, mean lower low water, the datum NOAA's charts and its tide and current predictions use for this coast. The seabed is fixed, the surface is not, so a raw depth reading is only true at the tide it was taken; every depth worth keeping is converted to depth below MLLW and never mixed with another datum. Tide height is signed, negative on a minus tide, so subtracting a negative tide height makes the datum depth the deeper number:
-
-```
-depth below MLLW datum  =  observed depth (computer)  -  tide height at that moment
-depth below surface     =  datum depth                +  predicted tide height
-```
-
-Get a site's median daily tidal range, its largest daily range, and its high/low span across the year by running `noaa_tide.py range STATION --year Y`, which pulls every high and low for the year in one call and reports exactly those three figures.
-
-Current here is tidal:
-
-- **Governing station.** The live NOAA current station (`noaa_current.py stations --near`) whose slack timing and set direction best match the site's own ENPAC15 extract over a span of weeks. It is a PUG-prefixed survey station: a PCT-prefixed station (Predicted Current Tables) publishes no depth bins, so pick the nearest PUG-prefixed one instead.
-- **Bin.** The published bin (`noaa_current.py bins`) nearest the dive area's seabed depth.
-- **Time offset.** An offset is meaningful only against the station it was derived from, so a legacy correction stated against a retired station is re-derived for the governing station, never carried over. Establish it from timed observations, the station-to-ADCIRC reconciliation, or a source that names the governing station. Compute the station's prediction for each observed day, and state in chat which observations the offset rests on and which slack each one supports. Where none of these gives one, the row is written as not established.
-- **Axes and peak speeds.** The governing station's own, at that bin, read from `noaa_current.py predict`. Where the station and the ENPAC15 extract disagree on axis, not just timing, the table carries the station's axis, since that is what the station publishes, and the site's real local behaviour, from the ADCIRC extract or a shore-parallel set the station's open-water position wouldn't show, goes in the prose underneath.
-
-## Planning conventions
-
-These conventions apply to every dive planned in this region.
-
-Ordered by what actually kills a dive plan in the Sound:
-
-1. **Current** (primary). Nearly everything is a slack-tide dive; the window, not the site, is the plan. Get the slack from a NOAA current station, not a tide station, then apply the site's known offset and correction to that station. Always cross-check that station prediction's slack time and set direction against the site's own ENPAC15 extract (`tools/adcirc_current.py predict` / `window`) before calling a window, even where the station is a well proven one, and reconcile the two rather than trusting the station alone: the Sound is four basins separated by sills that locally accelerate and redirect the flow, so a station some distance away does not always represent the site's own water.
-2. **Wind** (secondary). Wind decides whether the entry is diveable at all: chop on the entry, surf on the beach, a surface swim into a fetch. The wind tool here is `nws_forecast.py`.
-3. **Viz** (informational). Won't stop the dive, but sets expectations and gear (torch, reel).
-
 ## Sites currently covered
 
 | Site | Description |
@@ -175,6 +119,6 @@ Tank fill spots near this folder's sites, by area.
 
 ## Emergency
 
-Local emergency number: 911. Call EMS first; call DAN once the diver is stabilized and transport is underway.
-
+- **Local emergency.** 911. Call EMS first, then DAN once the diver is stabilized and transport is underway.
+- **[DAN (Divers Alert Network)](https://dan.org).** +1-919-684-9111, 24/7, collect calls accepted worldwide. Its Annual Diving Report and Incident Insights are the standing source for dive medicine, gear, procedure and debrief questions.
 - **Virginia Mason Franciscan Health, Center for Hyperbaric Medicine, Seattle.** 1100 9th Ave, Seattle, WA 98101. (206) 583-6543. The only multiplace recompression chamber in Western Washington, UHMS accredited with distinction, with board certified hyperbaric physicians on staff. The region's chamber; no other public-access facility is known to operate in the Puget Sound area.

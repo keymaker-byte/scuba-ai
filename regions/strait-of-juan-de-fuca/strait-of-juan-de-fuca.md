@@ -34,65 +34,6 @@ A formal Traffic Separation Scheme and Vessel Traffic Service cover the length o
 - **Visibility.** Ranges widely, roughly 1.5 to 15 m, and swings hard with plankton blooms. Direct oceanic exchange tends to help it, water moving through rather than sitting behind a sill, but a bloom can still shut a site down for weeks. Best conditions tend to run late summer into fall. Recent reports beat any prediction.
 - **Character.** Cold, oceanic and tidal, with real ocean swell and sustained wind layered on top of the tidal current. The western reach is remote: fewer facilities, longer drives, and a long response time to a chamber or hospital if something goes wrong. Neah Bay is about four and a half to five hours from Seattle by road.
 
-## Tools
-
-The following tools should be used in this region:
-
-- noaa_current.md
-- noaa_tide.md
-- adcirc_current.md
-- ncei_depth.md
-- shore_exposure.md
-- nws_forecast.md
-- pnwdiving_viz.md
-- subsurface_log.md
-- scubaboard.md
-- diversatlas.md
-- diveatlas.md
-
-## Web Sources
-
-The following web sources should be used in this region:
-
-- **[DAN (Divers Alert Network)](https://dan.org).** Dive medicine, accident data and case narratives (the Annual Diving Report, Incident Insights), the standing source for gear, procedure and debrief questions. Emergency line +1-919-684-9111, 24/7, collect calls accepted worldwide.
-- **[NW Dive Club](https://nwdiveclub.com/viewforum.php?f=6).** Community write-ups of how a site is dived: the entry, what's worth seeing, what to expect. Read it through the Wayback Machine (`https://archive.org/wayback/available?url=<page>`, then `curl --compressed` the snapshot), and confirm the snapshot holds the full thread.
-- **[The Perfect Dive](https://web.archive.org/web/20220413053905/http://theperfectdive.com/DEF-SiteList.asp).** A defunct catalog of Pacific Northwest sites, frozen around 2022: dive type, difficulty, entry and attractions per site, including several lesser-known sites. Read this pinned snapshot with `curl --compressed`, and verify access, fees and closures against a recent source.
-
-## Site file conventions
-
-These conventions apply to every site file written in this region.
-
-Every site file carries a tide station in the same body of water, and a companion `<slug>.json`, an ENPAC15 current extract produced by `tools/adcirc_current.py`. Its current station comes from the current method below.
-
-Depth here is normalized to MLLW, mean lower low water, the datum NOAA's charts and its tide and current predictions use for this coast. The seabed is fixed, the surface is not, so a raw depth reading is only true at the tide it was taken; every depth worth keeping is converted to depth below MLLW and never mixed with another datum. Tide height is signed, negative on a minus tide, so subtracting a negative tide height makes the datum depth the deeper number:
-
-```
-depth below MLLW datum  =  observed depth (computer)  -  tide height at that moment
-depth below surface     =  datum depth                +  predicted tide height
-```
-
-Get a site's median daily tidal range, its largest daily range, and its high/low span across the year by running `noaa_tide.py range STATION --year Y`, which pulls every high and low for the year in one call and reports exactly those three figures.
-
-Current here is tidal:
-
-- **Governing station.** The live NOAA current station (`noaa_current.py stations --near`) whose slack timing and set direction best match the site's own ENPAC15 extract over a span of weeks. It is a PUG-prefixed survey station: a PCT-prefixed station (Predicted Current Tables) publishes no depth bins, so pick the nearest PUG-prefixed one instead.
-- **Bin.** The published bin (`noaa_current.py bins`) nearest the dive area's seabed depth.
-- **Time offset.** An offset is meaningful only against the station it was derived from, so a legacy correction stated against a retired station is re-derived for the governing station, never carried over. Establish it from timed observations, the station-to-ADCIRC reconciliation, or a source that names the governing station. Compute the station's prediction for each observed day, and state in chat which observations the offset rests on and which slack each one supports. Where none of these gives one, the row is written as not established.
-- **Axes and peak speeds.** The governing station's own, at that bin, read from `noaa_current.py predict`. Where the station and the ENPAC15 extract disagree on axis, not just timing, the table carries the station's axis, since that is what the station publishes, and the site's real local behaviour, from the ADCIRC extract or a shore-parallel set the station's open-water position wouldn't show, goes in the prose underneath.
-
-## Planning conventions
-
-These conventions apply to every dive planned in this region.
-
-This is open, oceanic water, not a sheltered inland waterway. The strait connects directly to the Pacific with nothing to break wind, swell or fog along most of its length.
-
-Ordered by what actually kills a dive plan in the strait:
-
-1. **Wind and swell** (primary). The strait is the only inland Washington waterway with a direct, unbroken fetch to the open Pacific, over 100 km along its own axis. Strong westerlies accelerate down that fetch, routinely reaching gale force with higher gusts, and genuine Pacific swell can run the length of the strait to break on shore at its eastern end, producing the largest wave heights recorded on any inland Washington water. Fog is also common, especially toward Cape Flattery, and is itself a go, no go factor for any boat site. The wind tool here is `nws_forecast.py`; summer westerlies build through the afternoon, so the exit time is usually the reading that decides.
-   - **Swell.** Pacific swell runs the length of the strait under a light breeze, and a forecast that reads calm at Sekiu can still find real swell at Salt Creek off ocean weather two or three days old. A point forecast along this shore reads a land-side grid cell, with its wave height at 0 m whatever the sea; swell is judged from the NWS coastal waters forecast for the strait, recent local reports and the beach itself.
-2. **Current** (secondary). Nearly every shore site here is a slack-tide dive: take the slack from the site's governing station with its offset applied, and treat the window, not the site, as the plan. Current in the open channel runs strong, up to 1 to 1.5 m/s, though many shore sites sit in the lee of a point or bluff and see much less. Cross-check the day's slack and set direction against the site's ENPAC15 extract at the bottom of the water column (`tools/adcirc_current.py predict --position bottom`) before calling a window, and reconcile the two: the strait carries a real two-layer estuarine circulation, fresher water flowing out toward the Pacific near the surface and saltier water flowing in underneath, so the set at working depth can run opposite to the surface. Live current stations thin out west of Port Angeles, 20 to 30 km from Sekiu or Neah Bay, so the cross-check carries more weight the further west the site sits.
-3. **Viz** (informational). Won't stop the dive, but sets expectations and gear (torch, reel).
-
 ## Sites currently covered
 
 | Site | Description |
@@ -117,7 +58,7 @@ Tank fill spots for this folder's sites.
 
 ## Emergency
 
-Local emergency number: 911. Call EMS first; call DAN once the diver is stabilized and transport is underway.
-
+- **Local emergency.** 911. Call EMS first, then DAN once the diver is stabilized and transport is underway.
+- **[DAN (Divers Alert Network)](https://dan.org).** +1-919-684-9111, 24/7, collect calls accepted worldwide. Its Annual Diving Report and Incident Insights are the standing source for dive medicine, gear, procedure and debrief questions.
 - **Virginia Mason Franciscan Health, Center for Hyperbaric Medicine, Seattle.** 1100 9th Ave, Seattle, WA 98101. (206) 583-6543. The only multiplace recompression chamber in Western Washington and the referral chamber for this region too; no closer chamber operates anywhere on the strait. About 2 to 2.5 hours from Port Angeles via the Kingston-Edmonds ferry, and about 4.5 to 5 hours by road from Neah Bay, the region's most remote dive town. Weigh that distance into the go, no go call on any dive out toward the western reach, where the section above already flags the risk as genuinely higher.
 
