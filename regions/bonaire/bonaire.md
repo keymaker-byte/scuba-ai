@@ -24,59 +24,6 @@ This folder covers Bonaire and Klein Bonaire only.
 - **Character.** Warm, calm, wall-and-slope diving off a near-continuous fringing reef, almost entirely shore accessible along the west coast at marked yellow-painted rocks, with Klein Bonaire and a handful of remote points reached by boat. Current here is wind driven, not tidal, so the same site can sit still for days and then run hard when the trade winds pick up or shift. A wetsuit or dive skin is the standard exposure protocol.
 - **Reef decline.** SCTLD, arriving in 2023, and back to back bleaching events in 2023 and 2024 have driven a sharp, measured decline: average live coral cover across STINAPA's monitored sites dropped from 24.3% in 2019 to 9.1% in 2025, while turf algae rose from 31.9% to 46.8% and macroalgae from 11.6% to 17.9%. Disease-susceptible species, boulder brain coral, flower coral, maze coral, great star coral and the smaller brain corals, have been hit hardest and are now rare to absent at monitored sites. Elkhorn and staghorn coral, both far more visible to a diver than the encrusting species the reef now leans on, took heavy losses too: on Bonaire's leeward coast, about 19% of elkhorn colonies died outright and another 55% show partial mortality, while staghorn fared a little better, about 55% partial mortality and close to none outright dead. Site files that describe elkhorn or staghorn stands note this where the loss applies to that site.
 
-## Tools
-
-The following tools should be used in this region:
-
-- open_meteo_wind.md
-- emodnet_depth.md
-- shore_exposure.md
-- subsurface_log.md
-- scubaboard.md
-- diversatlas.md
-- diveatlas.md
-
-## Web Sources
-
-The following web sources should be used in this region:
-
-- **[DAN (Divers Alert Network)](https://dan.org).** Dive medicine, accident data and case narratives (the Annual Diving Report, Incident Insights), the standing source for gear, procedure and debrief questions. Emergency line +1-919-684-9111, 24/7, collect calls accepted worldwide.
-
-## Site file conventions
-
-These conventions apply to every site file written in this region.
-
-Depth is a plain observed figure: Bonaire's tidal range runs about 30 cm, too small to normalize against.
-
-Current here is wind driven. Each figure in a site's Current section comes from local sources, by this method:
-
-- **Usual set and typical speed.** From the site descriptions in the region's web sources and community databases, and from the dive log's own dives at the site, taken as behaviour and cross-checked between sources.
-- **Drivers.** The winds or seasons those same sources tie to a stronger or reversed set.
-- **A set no source describes** is written as not established.
-
-## Planning conventions
-
-These conventions apply to every dive planned in this region.
-
-Ordered by what actually decides whether a Bonaire dive goes well:
-
-1. **Coast and wind exposure** (primary). The west coast around town sits in the lee of the island itself and is calm on all but the roughest days; the north (inside and above Washington Slagbaai) and the far southern tip face open water and the prevailing trade winds directly, and can run real current and swell that call for real experience, not just a stronger kick. The wind tool here is `open_meteo_wind.py`; confirm its call from the shore, the current sock or the surface chop before entering.
-   - **Trade winds.** The east to southeast trades blow offshore along the west coast and the lee sides of Klein Bonaire, and leave those entries flat at their usual strength. Strong trades drive a stronger current at the exposed north and south sites.
-   - **Swell.** Northern swell in winter, and swell from passing tropical systems in the hurricane season (June to November), can put surf on the west coast under a light breeze. Swell is judged at the entry rocks before kitting up.
-2. **Marine park compliance** (secondary). No gloves, no touching, buoyancy clear of the reef, entry at a marked rock or a maintained mooring, current e-tag in hand. This is a legal requirement here, not just good practice, and citations are enforced. The park rules are set out below.
-3. **Gas and NDL discipline** (secondary). Warm water and an easy, comfortable reef slope make it easy to run long; plan a turn on gas or NDL reserve the same as anywhere else and don't let comfort extend the profile past it.
-4. **Viz** (informational). Reliably good on the west coast; won't stop a dive, but check a recent report before a north or south site where wind can stir the shallows.
-
-Every diver in the water needs a current STINAPA Nature Fee e-tag (Bonaire National Marine Park and Washington Slagbaai National Park), paid online and carried on the day, not bought as a physical tag at a dive shop. A mandatory orientation dive is required on arrival, usually arranged through the first dive shop used. Marine park rules ban gloves and knee pads (a medical exception can be requested from STINAPA at info@stinapa.org), ban touching, moving, collecting or feeding marine life, ban disposable chemical light sticks and pointer sticks, and ban anchoring anywhere in the park, requiring boats to use one of the roughly 100 public moorings STINAPA maintains instead; a shore entry is made at one of the numbered, yellow-painted rocks marking each site. A surface marker buoy is recommended, especially in shallow water. Sunscreen must be reef safe, free of oxybenzone and octinoxate.
-
-Diving is banned outright, independent of the SCTLD closures below, in two marine reserves: the King Willem-Alexander Reserve, the stretch of coast between BOPEC and Karpata (covering Carel's Vision, site 8), and the Queen Máxima Reserve, the Boka and Saliña Slagbaai lagoon inland of the Wayaka and Boka Slagbaai dive sites, which does not overlap any numbered dive site.
-
-Disinfect all gear before the first dive of a trip, between every dive, and again after the last one, a standing STINAPA measure against spreading Stony Coral Tissue Loss Disease (SCTLD) between reefs, then let it dry completely before packing it away:
-
-- **Non-sensitive gear.** Soak 5 minutes in a 10% bleach solution, then rinse in fresh water.
-- **Sensitive gear.** Soak 5 minutes in a 7% Lysol solution, then rinse in fresh water.
-- **Extra sensitive gear.** Rinse in soap, then fresh water.
-
 ## Sites currently covered
 
 Site numbering runs 1 to 63 plus a lettered set A to Z at Klein Bonaire, 90 sites in total. STINAPA counts 88 of these as marked sites along the West Coast and Klein Bonaire; White Hole and Cai sit on the East Coast instead, recommended only for advanced divers with an experienced guide.
@@ -196,6 +143,6 @@ Air and nitrox fills concentrate in and around Kralendijk, serving the whole wes
 
 ## Emergency
 
-Local emergency number: 911, covering ambulance, police and fire with multilingual (Dutch, English, Spanish, Papiamentu) operators; 114 also reaches ambulance dispatch directly. Call EMS first; call DAN once the diver is stabilized and transport is underway.
-
+- **Local emergency.** 911, covering ambulance, police and fire with multilingual (Dutch, English, Spanish, Papiamentu) operators; 114 also reaches ambulance dispatch directly. Call EMS first, then DAN once the diver is stabilized and transport is underway.
+- **[DAN (Divers Alert Network)](https://dan.org).** +1-919-684-9111, 24/7, collect calls accepted worldwide. Its Annual Diving Report and Incident Insights are the standing source for dive medicine, gear, procedure and debrief questions.
 - **Recompression Chamber Bonaire, Kralendijk.** Adjacent to Hospital San Francisco, Kaya Soeur Bartola 2. Admission is through the hospital's emergency room; the chamber's own line, +599 717 8187, is staffed only during an active treatment, not as a round the clock front desk. o2bonaire.com. The island's only chamber, and it depends on a single on-call dive physician; it has closed for months at a time when that position sat vacant, most recently in early 2025.
