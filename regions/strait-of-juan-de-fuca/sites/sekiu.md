@@ -5,7 +5,7 @@ Sekiu Jetty is a shore dive in the town of Sekiu, on the western reach of the St
 | | |
 |---|---|
 | **Location** | Sekiu, Clallam County, WA. South shore of the Strait of Juan de Fuca, at Clallam Bay |
-| **Coordinates** | Dive site 48.26852, -124.29716 (seabed about 13.5 m below MLLW), the rocky, kelp covered ground northwest of the jetty |
+| **Coordinates** | 48.26852, -124.29716 (seabed about 13.5 m below MLLW), the rocky, kelp covered ground northwest of the jetty |
 | **Parking coordinates** | 48.266619, -124.299257, the Sekiu boat launch |
 | **Entry point coordinates** | 48.266559, -124.298775, the beach below the parking area |
 | **Type** | Shore |
@@ -30,15 +30,43 @@ Sekiu Jetty is a shore dive in the town of Sekiu, on the western reach of the St
 
 | | |
 |---|---|
-| **Governing station** | NOAA Pillar Point current station (PUG1641), about 19.5 km east-northeast, out in the open strait |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Pillar Point current station (PUG1641), about 19.5 km east, out in the open strait |
 | **Recommended bin** | bin 75, at 12.4 m |
-| **Time offset** | About 35 minutes before the station for slack before flood, about 85 minutes after the station for slack before ebb |
-| **Flood axis** | east-southeast, 115° |
-| **Ebb axis** | west-northwest, 290° |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | east-southeast, 115° |
+| **Station ebb axis** | west-northwest, 290° |
+| **Site flood set** | east-southeast, 108° |
+| **Site ebb set** | west-northwest, 288° |
 
-* **Flood.** Sets east-southeast at the station, running into Clallam Bay; peak flood at the open-water station runs roughly 0.3 to 0.6 m/s. Inshore among the kelp and rock, the flow is broken up and generally weak.
-* **Ebb.** Sets west-northwest at the station, out toward the open strait; peak ebb at the station runs roughly 0.3 to 0.6 m/s. Slack before ebb at the site falls well later than the raw station time, by well over an hour.
-* **Diveable window.** The kelp bed and rock formations shelter most of the dive from the tidal flow; current close among them is generally a non-factor. It builds quickly once out past the kelp's outer edge, so stay inside it once away from slack.
+* **Flood.** Sets east-southeast at the station, running into Clallam Bay, with daily peaks of 0.19 to 0.82 m/s at the open-water station over 30 days. Inshore among the kelp and rock, the flow is broken up and generally weak.
+* **Ebb.** Sets west-northwest at the station, out toward the open strait, with daily peaks of 0.35 to 0.84 m/s at the station over the same 30 days. Slack before ebb at the site falls well later than the raw station time, by well over an hour.
+* **Diveable window.** A typical window under 0.25 m/s at the station runs about 110 to 240 minutes. The kelp bed and rock formations shelter most of the dive from the tidal flow; current close among them is generally a non-factor. It builds quickly once out past the kelp's outer edge, so stay inside it once away from slack.
+
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Pillar Point, 48°16′ N, 124°04′ W, about 17.1 km east |
+| **Legacy reference** | Strait of Juan de Fuca Entrance (PCT1341) |
+| **Slack before flood** | 35 minutes before the reference |
+| **Slack before ebb** | 1 hour 27 minutes after the reference |
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | east-northeast, 65° |
+| **Dive area shore facing** | northeast, 39° |
+
+The entry faces into Clallam Bay, with the open strait beyond it.
+
+* **Bad.** North clockwise through east (N-E), onshore over 22 km to more than 30 km of open strait.
+* **Short fetch.** East-southeast (ESE), onshore over 3.2 km across Clallam Bay, putting chop on the entry.
+* **Mixed.** Northwest through north-northwest (NW-NNW), cross-shore over more than 30 km up the open strait, with a long, unbroken fetch to the Pacific, running a swell past the entry.
+* **Fine.** Southeast clockwise through west-northwest: cross-shore over 1.6 km or less from the southeast and south-southeast, and offshore from south through west-northwest, off the land.
+* **Wind against current.** West-northwest through northwest (WNW-NW) against the ebb, which sets toward the open strait, over 4.1 km to more than 30 km, is the combination to avoid. East-northeast through southeast (ENE-SE) against the flood, over 1.6 km to more than 30 km.
 
 ## Depth and tide
 
@@ -54,20 +82,6 @@ The strait's tide swings up to about 3.5 m here, so depths are given below the M
 |---|---|---|---|
 | Rocky area edge | 10.7 m | 9.7 m | 13.7 m |
 | Sandy, shell covered bottom | 20.7 m | 19.7 m | 23.7 m |
-
-## Hazards
-
-* **Current and surge.** Open, current-swept water with a direct line to the Pacific. Both build quickly once outside the kelp and rock's inshore shelter. Time the dive to slack and stay inside the sheltered ground.
-* **Kelp entanglement.** A thick kelp forest, especially summer into fall. Carry a cutting tool and work through it with a buddy.
-* **Fishing line and fishermen.** Anglers regularly work the outer edge of the kelp bed from shore and boat. Fly a dive flag near the perimeter and carry shears.
-* **Navigation.** The rock formations lean together into narrow, maze like alleys under heavy kelp. It is easy to get turned around or drift shallow while working around them.
-
-## Wind
-
-* **Orientation.** The entry faces north into Clallam Bay and the open strait beyond it.
-* **Bad.** North through northwest, straight up the open strait with a long, unbroken fetch to the Pacific.
-* **Fine.** South through southeast, off the land.
-* **Wind against current.** A northwesterly blowing against the ebb, which sets toward the open strait, is the combination to avoid.
 
 ## Visibility
 
@@ -88,3 +102,10 @@ The strait's tide swings up to about 3.5 m here, so depths are given below the M
 * **Cephalopods and nudibranchs.** Giant Pacific octopuses den in the rock, their middens of shellfish remains marking the entrance. Nudibranchs are common across the reef.
 * **In the water column.** Dense clouds of amphipods and mysid shrimp, schools of herring and sand lance, and drifting comb jellies and red eye jellyfish move through the kelp.
 * **Beyond the rocks.** Eelgrass beds host their own community; starry flounder and northern abalone turn up on the sandy ground, and harbor seals work the site.
+
+## Hazards
+
+* **Current and surge.** Open, current-swept water with a direct line to the Pacific. Both build quickly once outside the kelp and rock's inshore shelter. Time the dive to slack and stay inside the sheltered ground.
+* **Kelp entanglement.** A thick kelp forest, especially summer into fall. Carry a cutting tool and work through it with a buddy.
+* **Fishing line and fishermen.** Anglers regularly work the outer edge of the kelp bed from shore and boat. Fly a dive flag near the perimeter and carry shears.
+* **Navigation.** The rock formations lean together into narrow, maze like alleys under heavy kelp. It is easy to get turned around or drift shallow while working around them.

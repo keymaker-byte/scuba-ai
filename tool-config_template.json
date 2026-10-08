@@ -11,6 +11,16 @@
 
   "noaa_tide": {},
 
+  "noaa_legacy_current": {
+    "max_speed_ms": 0.25,
+    "default_tz": "America/Los_Angeles"
+  },
+
+  "chs_current": {
+    "max_speed_ms": 0.25,
+    "default_tz": "America/Vancouver"
+  },
+
   "adcirc_current": {
     "max_speed_ms": 0.25
   },

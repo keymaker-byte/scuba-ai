@@ -5,7 +5,7 @@ Freshwater Bay opens north onto the Strait of Juan de Fuca between Angeles Point
 | | |
 |---|---|
 | **Location** | Port Angeles, WA. South shore of the Strait of Juan de Fuca, Freshwater Bay County Park |
-| **Coordinates** | Dive site 48.15111, -123.63571 (seabed about 17.6 m below MLLW), the base of the outer, strait facing wall of Bachelor Rock, about 0.7 km from the entry across the bay |
+| **Coordinates** | 48.15111, -123.63571 (seabed about 17.6 m below MLLW), the base of the outer, strait facing wall of Bachelor Rock, about 0.7 km from the entry across the bay |
 | **Parking coordinates** | 48.146296, -123.641655, the free day-use lot |
 | **Entry point coordinates** | 48.146525, -123.641596, the county park boat ramp |
 | **Type** | Shore |
@@ -32,16 +32,44 @@ Freshwater Bay opens north onto the Strait of Juan de Fuca between Angeles Point
 
 | | |
 |---|---|
+| **Current type** | Tidal |
 | **Governing station** | NOAA Angeles Point current station (PUG1639), about 8.6 km east-northeast, same shore |
 | **Recommended bin** | bin 1, at 18.6 m |
-| **Time offset** | None |
-| **Flood axis** | southeast, 143° |
-| **Ebb axis** | northwest, 323° |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | east-northeast, 69° |
+| **Station ebb axis** | northwest, 304° |
+| **Site flood set** | southeast, 143° |
+| **Site ebb set** | northwest, 323° |
 
-* **Flood.** Sets southeast, back into the bay past Bachelor Rock, roughly toward the boat ramp.
-* **Ebb.** Sets northwest, out of the bay toward the open strait past Bachelor Rock, close to the open channel station's own ebb axis (304°).
+* **Flood.** Sets southeast, back into the bay past Bachelor Rock, roughly toward the boat ramp, with daily peaks of 0.66 to 1.42 m/s at the station over 30 days.
+* **Ebb.** Sets northwest, out of the bay toward the open strait past Bachelor Rock, close to the station's own ebb axis, with daily peaks of 0.30 to 1.58 m/s at the station over the same 30 days.
 * **Inside the bay.** The crossing and the reef's inside face stay weak through most of the cycle. The tide is actually felt on the outer wall, beyond the reef.
-* **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs 40 to 130 minutes depending on the day's exchange, with peak flood and ebb each capable of exceeding 1 m/s on a big one. The rock itself can turn up to about 40 minutes earlier or later than the station, so pad the window accordingly.
+* **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs about 50 to 120 minutes, stretching past 4 hours on a weak neap turn. The rock itself can turn up to about 40 minutes earlier or later than the station, so pad the window accordingly.
+
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Angeles Point, 2.3 miles north of, 48°12′ N, 123°33′ W, about 8.4 km northeast |
+| **Legacy reference** | Juan de Fuca - East (07100), at Race Rocks |
+| **Slack before flood** | 1 hour 22 minutes after the reference |
+| **Slack before ebb** | 32 minutes before the reference |
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | northeast, 54° |
+| **Dive area shore facing** | east, 92° |
+
+The bay opens roughly north onto the strait, between Angeles Point to the east and Observatory Point to the west. The inner crossing is sheltered by the bay's own curve; the outer wall at Bachelor Rock faces the open strait.
+
+* **Bad.** North through east (N-E), onshore over 19 km to more than 30 km of open strait, straight down the strait's own axis or across it, building surf on the outer wall and on the crossing.
+* **Short fetch.** East-southeast (ESE), onshore over 4.2 km, putting chop on the crossing.
+* **Mixed.** Northwest through north-northwest (NW-NNW), cross-shore over 26 km to more than 30 km, which runs a swell past the rock and the entry.
+* **Fine.** Southeast clockwise through west-northwest: cross-shore over 2 km or less from the southeast and south-southeast, and offshore from south through west-northwest, off the land and behind Observatory Point. West is the region's prevailing summer wind, and Bachelor Rock sits right at the edge of the bay, so a westerly can put waves on the rock's west side; the dive works the east side, but check the rock under any west wind.
+* **Wind against current.** Northwest through north (NW-N) against the ebb, over 19 km to more than 30 km, builds the worst chop right where the swim is most exposed, off the outer wall. East-southeast through south (ESE-S) against the flood, over 1.0 to 4.2 km.
 
 ## Depth and tide
 
@@ -60,25 +88,9 @@ The strait's tide swings over 3 m here at springs, so depths are given below the
 | Reef edge | 11.5 m | 10.5 m | 13.9 m |
 | Bachelor Rock's outer wall | 17.6 m | 16.6 m | 20 m |
 
-## Hazards
-
-* **The swim.** 30 to 40 minutes each way, mostly on the surface over a shallow crossing, with no shortcut back once committed. Do not attempt it beyond your swimming fitness, or in surf or a building ebb that would make the return exhausting.
-* **Boat traffic.** The crossing shares the water with the same ramp's small boat and kayak launches (17 ft and under). Stay to the side of the boat lane, stay visible on the surface while in shallow water, and carry a marker or dive flag.
-* **Surf against the rock.** Bachelor Rock's outer wall is directly exposed to the strait; a breaking wave can dash a diver against it. Do not work close to the wall with any swell running.
-* **Current beyond the reef.** Mild inside the bay and along the reef's inside face, building once past the reef around the rock's outer wall.
-* **Kelp.** Thick bull kelp mats around the reef and the rock.
-* **Private property.** The bay's west shore beyond the park is private land, marked no trespassing.
-
-## Wind
-
-* **Orientation.** The bay opens roughly north onto the strait, between Angeles Point to the east and Observatory Point to the west. The inner crossing is comparatively sheltered by the bay's own curve; the outer wall at Bachelor Rock is fully exposed to the open strait.
-* **Bad.** West through north, straight down the strait's own axis or across it, the region's prevailing summer wind direction.
-* **Fine.** South and southeast, off the land.
-* **Wind against current.** A west wind against the ebb, which also sets northwest, builds the worst chop right where the swim is most exposed, off the outer wall.
-
 ## Visibility
 
-* The extensive sand and eelgrass crossing can cloud with any surf or surge; the reef and the rock itself, away from the bottom, should clear faster.
+* **Crossing and rock.** The extensive sand and eelgrass crossing can cloud with any surf or surge; the reef and the rock itself, away from the bottom, should clear faster.
 
 ## Temperature
 
@@ -91,3 +103,12 @@ The strait's tide swings over 3 m here at springs, so depths are given below the
 * **The reef, inside face.** A carpet of small anemones, with bull kelp anchored to submerged rock.
 * **The outer wall.** White plumose anemones, red and purple sea urchins, gumboot chitons, orange sea cucumbers, kelp crabs, Stimpson's sun stars, blood stars, ratfish, sand lances, and perch.
 * **Bachelor Rock.** Urchins, sponges, chitons, and other colorful invertebrates cover the rock, with schools of rockfish moving through the surrounding kelp. Giant Pacific octopus, wolf eels, gunnels, warbonnets, and crabs, including the Puget Sound king crab, den in the rock's crevices.
+
+## Hazards
+
+* **The swim.** 30 to 40 minutes each way, mostly on the surface over a shallow crossing, with no shortcut back once committed. Do not attempt it beyond your swimming fitness, or in surf or a building ebb that would make the return exhausting.
+* **Boat traffic.** The crossing shares the water with the same ramp's small boat and kayak launches (about 5 m and under). Stay to the side of the boat lane, stay visible on the surface while in shallow water, and carry a marker or dive flag.
+* **Surf against the rock.** Bachelor Rock's outer wall is directly exposed to the strait; a breaking wave can dash a diver against it. Do not work close to the wall with any swell running.
+* **Current beyond the reef.** Mild inside the bay and along the reef's inside face, building once past the reef around the rock's outer wall.
+* **Kelp.** Thick bull kelp mats around the reef and the rock.
+* **Private property.** The bay's west shore beyond the park is private land, marked no trespassing.

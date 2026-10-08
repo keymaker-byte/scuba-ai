@@ -173,7 +173,8 @@ Optional sentence on what dominates the current. Tidal and wind driven only.
 | **Current type** | Tidal, Wind driven, or None |
 | **Governing station** | Tidal: name, ID, and distance |
 | **Recommended bin** | Tidal: number and depth |
-| **Time offset** | Tidal: minutes and which slack, or "Not established; slack should be confirmed in the water" |
+| **Observed offset, slack before flood** | Tidal: minutes before or after the station, by the region's observed offset rule, or "Not established; slack should be confirmed in the water" |
+| **Observed offset, slack before ebb** | Tidal: the same, for slack before ebb |
 | **Station flood axis** | Tidal: compass and degrees |
 | **Station ebb axis** | Tidal: compass and degrees |
 | **Site flood set** | Tidal: the region's typical set at the dive area, compass and degrees, or "As the station" |
@@ -186,6 +187,15 @@ Optional sentence on what dominates the current. Tidal and wind driven only.
 * **Diveable window.** Tidal: which slack, its typical length under the region's threshold, and what narrows it.
 * **Drivers.** Wind driven: the winds or seasons that strengthen or reverse the set.
 * **Topic.** Further local behaviour, each led by a bold topic.
+
+Optional, tidal only: "Legacy correction, carried as published and separate from the reconciled figures above:"
+
+| | |
+|---|---|
+| **Legacy station** | Name, position, and distance and direction from the site, or "None; the reference is used directly" |
+| **Legacy reference** | The reference station the correction was published against: name and ID |
+| **Slack before flood** | Minutes before or after the reference, as published |
+| **Slack before ebb** | Minutes before or after the reference, as published |
 
 ## Wind
 

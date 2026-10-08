@@ -5,7 +5,7 @@ Shore dive off Tongue Point, inside the Tongue Point Marine Life Sanctuary at Sa
 | | |
 |---|---|
 | **Location** | Port Angeles, WA. South shore of the Strait of Juan de Fuca, at Tongue Point, Salt Creek Recreation Area |
-| **Coordinates** | Dive site 48.1695, -123.7060 (seabed about 18.5 m below MLLW), the outer boulder ground beyond the reef |
+| **Coordinates** | 48.1695, -123.7060 (seabed about 18.5 m below MLLW), the outer boulder ground beyond the reef |
 | **Parking coordinates** | 48.166488, -123.704596, the day use area near campsite 67 |
 | **Entry point coordinates** | 48.166688, -123.704333, the stairs that lead out onto Tongue Point itself |
 | **Type** | Shore |
@@ -31,15 +31,44 @@ Shore dive off Tongue Point, inside the Tongue Point Marine Life Sanctuary at Sa
 
 | | |
 |---|---|
-| **Governing station** | NOAA Angeles Point current station (PUG1639), about 13.3 km east-northeast, same shore |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Angeles Point current station (PUG1639), about 13.3 km east, same shore |
 | **Recommended bin** | bin 1, at 18.6 m |
-| **Time offset** | None |
-| **Flood axis** | east-northeast, 069° |
-| **Ebb axis** | northwest, 304° |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | east-northeast, 69° |
+| **Station ebb axis** | northwest, 304° |
+| **Site flood set** | east-northeast, 75° |
+| **Site ebb set** | west-southwest, 255° |
 
+* **Flood.** Sets east-northeast along the shore, with daily peaks of 0.66 to 1.42 m/s at the station over 30 days.
+* **Ebb.** Sets west-southwest along the shore, toward the open strait, with daily peaks of 0.30 to 1.58 m/s at the station over the same 30 days.
 * **Inside the reef.** Kelp and rock break up most of the tidal flow, and current close to shore, above about 13.7 m, stays weak through most of the cycle.
 * **Beyond the reef.** Past the reef edge and out over the outer boulders, current builds quickly away from slack. Re-enter the reef and work back into shallower water if caught out in it.
-* **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs 60 to 80 minutes; peak flood and ebb both routinely exceed 1 m/s. Pad the window, especially for any time spent on the outer boulders.
+* **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs about 50 to 120 minutes, stretching past 4 hours on a weak neap turn. Pad the window, especially for any time spent on the outer boulders.
+
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Angeles Point, 2.3 miles north of, 48°12′ N, 123°33′ W, about 12.1 km east-northeast |
+| **Legacy reference** | Juan de Fuca - East (07100), at Race Rocks |
+| **Slack before flood** | 1 hour 22 minutes after the reference |
+| **Slack before ebb** | 32 minutes before the reference |
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | north, 2° |
+| **Dive area shore facing** | north, 2° |
+
+The shore east of Tongue Point faces the open strait; west of the point, the entry opens northwest into Crescent Bay.
+
+* **Bad.** Northwest clockwise through east-northeast (NW-ENE), onshore over 18.8 km to more than 30 km, straight across the strait or along it.
+* **Mixed.** East (E), cross-shore over more than 30 km, and west through west-northwest (W-WNW), cross-shore over 21.6 km to more than 30 km down the strait's open axis from the Pacific, each running a swell along the shore past the entry.
+* **Fine.** East-southeast clockwise through west-southwest: offshore from southeast through west-southwest, off the land, and cross-shore over 1.7 km from the east-southeast.
+* **Wind against current.** Southwest through west-northwest (SW-WNW) against the ebb, which sets toward the open strait, over 1.7 km to more than 30 km, is the combination to avoid. Northeast through east-southeast (NE-ESE) against the flood, over 1.7 km to more than 30 km.
 
 ## Depth and tide
 
@@ -56,24 +85,10 @@ The strait's tide swings up to about 3 m here, so depths are given below the MLL
 | Reef edge | 13.7 m | 12.7 m | 16.1 m |
 | Outer boulders | 18.5 m | 17.5 m | 20.9 m |
 
-## Hazards
-
-* **Waves and surge.** The direct hazard here, ahead of current. Breaking waves against the rocky shore make entry and exit dangerous; surge can toss a diver against the rock or sweep them across the bottom. Check conditions from shore before entering, and choose the exit before the dive, not during it.
-* **Current beyond the reef.** Stiff currents build fast on the outer boulders once away from slack. The reef itself blocks most of it, so staying shoreward of the reef edge is the recovery if caught out.
-* **Kelp entanglement.** Thick bull kelp from summer into fall. Carry a cutting tool and work through it with a buddy.
-* **Open water.** Direct exposure to the Pacific along the strait's axis; wind and swell can turn a calm morning rough with little warning.
-
-## Wind
-
-* **Orientation.** The shore east of Tongue Point faces the open strait, roughly north; west of the point, the entry opens northwest into Crescent Bay.
-* **Bad.** North through west, either straight across the strait or down its open axis from the Pacific.
-* **Fine.** South and southeast, off the land.
-* **Wind against current.** A westerly blowing against the ebb, which sets toward the open strait, is the combination to avoid.
-
 ## Visibility
 
 * **Kelp season.** Thick summer and fall kelp cuts light and complicates navigation even when the water itself is clear.
-* **Best conditions.** Tend to run late summer into fall, per the strait generally, though a bloom can shut a site down for weeks regardless of season.
+* **Best conditions.** Tend to run late summer into fall, though a bloom can shut a site down for weeks regardless of season.
 
 ## Temperature
 
@@ -88,3 +103,10 @@ The strait's tide swings up to about 3 m here, so depths are given below the MLL
 * **Fish.** Black, copper and quillback rockfish, kelp greenling, lingcod, red Irish lords and other sculpins, and ratfish over the deeper, softer ground.
 * **Cephalopods and nudibranchs.** Giant Pacific octopuses den in the rock structure. Nudibranchs are common across the reef.
 * **In the water column.** Dense schools of small fish, amphipods and mysid shrimp move through the kelp, especially thick during the summer and fall growing season.
+
+## Hazards
+
+* **Waves and surge.** The direct hazard here, ahead of current. Breaking waves against the rocky shore make entry and exit dangerous; surge can toss a diver against the rock or sweep them across the bottom. Check conditions from shore before entering, and choose the exit before the dive, not during it.
+* **Current beyond the reef.** Stiff currents build fast on the outer boulders once away from slack. The reef itself blocks most of it, so staying shoreward of the reef edge is the recovery if caught out.
+* **Kelp entanglement.** Thick bull kelp from summer into fall. Carry a cutting tool and work through it with a buddy.
+* **Open water.** Direct exposure to the Pacific along the strait's axis; wind and swell can turn a calm morning rough with little warning.

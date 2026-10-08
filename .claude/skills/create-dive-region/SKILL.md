@@ -127,7 +127,7 @@ Read in full for every site file.
 
 - **Current type.** Tidal, wind driven, or none, with the reason for none.
 - **Tool** or **Tools.** Each tool behind a current figure, with what it gives: a companion extract the site file carries, the station, bin, axes, peak speeds and windows, timed observations. Omit for a current type whose figures come from research alone.
-- **Figure.** One bullet per figure the site skill's Current section requires for this type, naming how it is produced: how the station and its bin are chosen, how the offset is established, how a model cross-check is reconciled, the current threshold the window is measured against, and the wording for a figure no source gives.
+- **Figure.** One bullet per figure the site skill's Current section requires for this type, naming how it is produced: how the station and its bin are chosen, how an observed offset is established from timed slacks in the dive log, how the model and any legacy correction are carried, the current threshold the window is measured against, and the wording for a figure no source gives.
 - **Topic.** Optional, one bullet per reach that behaves differently from the rest of the region.
 
 ## Wind
@@ -156,7 +156,7 @@ The factors that decide whether a dive goes well in this region, most important 
 
 Alongside the conditions, every plan carries:
 
-- **Topic.** One bullet per tool a plan uses outside the numbered factors, with what it gives: depth below the surface across the dive, the site's past dives, the observed row once logged.
+- **Topic.** One bullet per tool a plan uses outside the numbered factors, with what it gives: depth below the surface across the dive, the site's past dives.
 
 Optional, local rules that bind every dive here, after the list: permits and fees, marine park conduct and gear rules, areas closed to diving, required gear hygiene.
 ```
