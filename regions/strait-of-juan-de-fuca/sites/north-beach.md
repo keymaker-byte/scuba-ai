@@ -5,7 +5,7 @@ North Beach County Park sits on the Quimper Peninsula between McCurdy Point and 
 | | |
 |---|---|
 | **Location** | Port Townsend, Jefferson County, WA. South shore of the Strait of Juan de Fuca at the mouth of Admiralty Inlet, at North Beach County Park, between McCurdy Point and Point Wilson |
-| **Coordinates** | Dive site 48.14529, -122.78255 (seabed about 8.2 m below MLLW), the outer edge of the bull kelp bed, about 315 m due north of the entry |
+| **Coordinates** | 48.14529, -122.78255 (seabed about 8.2 m below MLLW), the outer edge of the bull kelp bed, about 315 m due north of the entry |
 | **Parking coordinates** | 48.142315, -122.782393, the free gravel lot |
 | **Entry point coordinates** | 48.142469, -122.782162, the park's boat launch off Kuhn Street |
 | **Type** | Shore |
@@ -30,15 +30,42 @@ North Beach County Park sits on the Quimper Peninsula between McCurdy Point and 
 
 | | |
 |---|---|
+| **Current type** | Tidal |
 | **Governing station** | NOAA Point Wilson current station (PUG1623), about 2.8 km east, off the tip of the point |
-| **Recommended bin** | bin 45, at 5.2 m |
-| **Time offset** | About 55 minutes before the station for slack before flood, about 30 minutes before the station for slack before ebb |
-| **Flood axis** | east, 083° |
-| **Ebb axis** | west, 263° |
+| **Recommended bin** | bin 45, at 5.1 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | east-southeast, 120° |
+| **Station ebb axis** | northwest, 321° |
+| **Site flood set** | east, 83° |
+| **Site ebb set** | west, 263° |
 
-* **Flood.** Sets east along the beach toward Point Wilson. Weak inside the kelp, it builds quickly past the outer edge; at the open-water station it commonly exceeds 1 m/s. A diver carried past Point Wilson on the flood drifts into Admiralty Inlet, a stronger and different current regime.
-* **Ebb.** Sets west along the beach, away from Point Wilson, mirroring the flood; weak inshore, building fast beyond the kelp, with station peaks that regularly exceed the flood's.
-* **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs 40 to 60 minutes, a little longer around the ebb to flood turn. Diving through a building exchange is only a same-entry dive inside the kelp's shelter, where the current stays weak in both directions: work along the inside edge one way as the exchange builds, then turn and work back through that same sheltered water rather than out in the open flow past the outer edge, which is the limit of the dive even when riding an exchange.
+* **Flood.** Sets east along the beach toward Point Wilson. Weak inside the kelp, it builds quickly past the outer edge, with daily peaks of 0.56 to 1.54 m/s at the open-water station over 30 days. A diver carried past Point Wilson on the flood drifts into Admiralty Inlet, a stronger and different current regime.
+* **Ebb.** Sets west along the beach, away from Point Wilson, mirroring the flood; weak inshore, building fast beyond the kelp, with daily peaks of 0.41 to 2.04 m/s at the station over the same 30 days, regularly exceeding the flood's.
+* **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs about 35 to 65 minutes, a little longer around the ebb to flood turn. Diving through a building exchange is only a same-entry dive inside the kelp's shelter, where the current stays weak in both directions: work along the inside edge one way as the exchange builds, then turn and work back through that same sheltered water rather than out in the open flow past the outer edge, which is the limit of the dive even when riding an exchange.
+
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Point Wilson, 1.1 miles northwest of, 48°10′ N, 122°46′ W, about 2.7 km north-northeast |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 1 hour 53 minutes before the reference |
+| **Slack before ebb** | 8 minutes before the reference |
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | north, 356° |
+| **Dive area shore facing** | north, 354° |
+
+The beach faces north into the mouth of Admiralty Inlet, open to the Strait of Juan de Fuca.
+
+* **Bad.** West-northwest through northeast (WNW-NE), onshore over 7.5 km to more than 30 km, either a long fetch up the open strait or across the mouth of the inlet.
+* **Mixed.** East-northeast through east (ENE-E), cross-shore over 7.8 to 13.1 km, and west (W), cross-shore over 24.3 km up the strait, each running a swell along the beach past the entry.
+* **Fine.** East-southeast clockwise through west-southwest: offshore from east-southeast through southwest, off the land, and cross-shore over 2.3 km from the west-southwest. The beach can be calm even when nearby Point Hudson, which faces the opposite way, is blown out.
+* **Wind against current.** West-southwest through west-northwest (WSW-WNW) against the ebb, which sets west along the beach, over 2.3 km to more than 30 km, is the combination to avoid. Northeast through east (NE-E) against the flood, over 7.5 to 13.1 km.
 
 ## Depth and tide
 
@@ -55,21 +82,6 @@ The strait's tide swings up to about 3.4 m here, so depths are given below the M
 | Inner kelp edge | 6.1 m | 4.9 m | 9.1 m |
 | Outer kelp edge | 8.2 m | 7 m | 11.2 m |
 
-## Hazards
-
-* **Current beyond the kelp.** Builds quickly once clear of the bed's outer edge, with strong open water current running close by off Point Wilson. Stay inside the kelp's shelter once away from slack.
-* **Drift into Admiralty Inlet.** The flood sets east along the beach toward Point Wilson. A diver who loses track of position risks being carried past the point into the inlet's own, stronger current.
-* **Surf and wind exposure.** An open, north facing beach with a direct line up the strait. Wind and swell frequently make the entry too rough to use; check conditions from shore before committing.
-* **Kelp entanglement.** A thick, seasonal bull kelp canopy, heaviest by midsummer. Carry a cutting tool and work through it slowly with a buddy.
-* **Boat traffic.** Entry and exit share the park's boat launch with boaters launching and retrieving trailered boats.
-
-## Wind
-
-* **Orientation.** The beach faces north into the mouth of Admiralty Inlet, open to the Strait of Juan de Fuca.
-* **Bad.** West through north, either a long fetch up the open strait or across the mouth of the inlet.
-* **Fine.** South through east, off the land. The beach can be calm even when nearby Point Hudson, which faces the opposite way, is blown out.
-* **Wind against current.** A westerly or northwesterly blowing against the ebb, which sets west along the beach, is the combination to avoid.
-
 ## Visibility
 
 * **Season.** Follows the strait generally: best late summer into fall, worse through a bloom at any time of year.
@@ -85,3 +97,11 @@ The strait's tide swings up to about 3.4 m here, so depths are given below the M
 * **Fish.** Kelp greenling, flounder, perch, ratfish and skates work the sand and kelp; dense schools of sand lance move through the water column.
 * **Invertebrates.** Sea urchins, sea stars and sea anemones are common on the rocks and sand; moon snails work the bottom, and nudibranchs and shrimp turn up through the kelp.
 * **Marine mammals and birds.** Harbor seals and river otters are regularly seen in the kelp, along with a variety of shorebirds working the beach.
+
+## Hazards
+
+* **Current beyond the kelp.** Builds quickly once clear of the bed's outer edge, with strong open water current running close by off Point Wilson. Stay inside the kelp's shelter once away from slack.
+* **Drift into Admiralty Inlet.** The flood sets east along the beach toward Point Wilson. A diver who loses track of position risks being carried past the point into the inlet's own, stronger current.
+* **Surf and wind exposure.** An open, north facing beach with a direct line up the strait. Wind and swell frequently make the entry too rough to use; check conditions from shore before committing.
+* **Kelp entanglement.** A thick, seasonal bull kelp canopy, heaviest by midsummer. Carry a cutting tool and work through it slowly with a buddy.
+* **Boat traffic.** Entry and exit share the park's boat launch with boaters launching and retrieving trailered boats.

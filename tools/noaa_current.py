@@ -84,8 +84,10 @@ def cmd_stations(a):
     near = sorted(uniq.values(), key=lambda s: s["_nm"])[: a.n]
     print(f"Live current-prediction stations near {lat:.4f}, {lon:.4f}:\n")
     for s in near:
-        print(f"  {s['id']:<10} {s['_nm'] * 1.852:5.1f} km  {s['name']}")
-    print("\nNearest is not automatically the governing station — pick the one whose water is")
+        print(f"  {s['id']:<10} {s.get('type') or '?'}  {s['_nm'] * 1.852:5.1f} km  {s['name']}")
+    print("\nType: H harmonic (its own constants, usually with depth bins), S subordinate (corrections")
+    print("to a reference station), W weak and variable (no predictions).")
+    print("Nearest is not automatically the governing station — pick the one whose water is")
     print("hydraulically connected to the site, then verify the offset in the water.")
 
 

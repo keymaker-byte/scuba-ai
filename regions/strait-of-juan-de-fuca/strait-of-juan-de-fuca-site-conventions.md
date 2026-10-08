@@ -5,7 +5,7 @@ These conventions apply to every site file written in this region.
 ## Region Specific Research
 
 - **Tools.**
-  - `subsurface_log.md`, searched under the site's name and its likely variants: each dive's depths, times, profile, temperatures and notes.
+  - `subsurface_log.md`, the site's dives, matched by name and logged position; a dive matching only one is checked, and confirmed with the user when unclear. Their depths, times, temperatures, visibility, current felt and notes feed every section.
   - `diversatlas.md` and `diveatlas.md`, each found by the dive area coordinate: a second pin, entry, parking, landmarks, access, life and hazards.
 - **Sources.**
   - [NW Dive Club](https://nwdiveclub.com/viewforum.php?f=6), community write-ups of how a site is dived: the entry, what's worth seeing, what to expect. Read it through the Wayback Machine (`https://archive.org/wayback/available?url=<page>`, then `curl --compressed` the snapshot), and confirm the snapshot holds the full thread.
@@ -32,14 +32,15 @@ These conventions apply to every site file written in this region.
 - **Tools.**
   - `adcirc_current.md`, the site's ENPAC15 extract, carried as a companion `<slug>.json`, and its predictions of slack times and set direction.
   - `noaa_current.md`, the governing station, its recommended bin, axes, peak speeds and diveable windows.
-  - `subsurface_log.md`, timed observations for the offset, each dive's profile placing the turn and the ascent on the clock.
-- **Governing station.** The live NOAA current station whose slack times and set direction best match the extract's predictions, compared day by day over a span of weeks. It is a PUG-prefixed survey station; a PCT-prefixed station (Predicted Current Tables) publishes no depth bins, so the nearest PUG-prefixed one takes its place.
+  - `subsurface_log.md`, the set and strength actually felt at the site, and the timed slacks behind the observed offset.
+- **Governing station.** The nearest live NOAA current station in the same reach as the site: no sill, narrows or pass, sheltering spit or harbor, or basin boundary lies between them. A harmonic station (type H) that publishes depth bins comes first; a subordinate station (type S) serves only where no harmonic station qualifies, its Recommended bin row reading "Single series"; a weak-and-variable station (type W) never governs. Where no station qualifies, the row names the nearest station with predictions and states that none governs. The extract never decides the choice; it stands beside the station at planning time as an independent estimate.
 - **Recommended bin.** The station's published bin nearest the dive area's seabed depth.
-- **Time offset.** Derived for the governing station alone, so a legacy correction stated against a retired station is re-derived. It comes from timed observations against the station's prediction for that day, from the station's slack times reconciled against the extract's, or from a source that names the governing station. State in chat which observations the offset rests on and which slack each one supports. Where none of these gives one, the row is written as not established.
-- **Span.** Peak speeds, the diveable window and the site sets come from 30 consecutive days, starting on the day the figures are computed, with the extract read at the bottom of the water column. Thirty days takes in both spring tides of the lunar month, the larger perigean one included.
+- **Span.** 30 consecutive days of predictions, starting on the day the figures are computed: the governing station's at the recommended bin for the peak speeds and the diveable window, and the extract's at the bottom of the water column for the site sets. Thirty days takes in both spring tides of the lunar month, the larger perigean one included.
 - **Axes and peak speeds.** The governing station's own, at the recommended bin: its axes in the Station flood axis and Station ebb axis rows, and the range of its daily peak flood and ebb over the span.
 - **Site sets.** The median of the extract's daily principal axis at the dive area over the span, in the Site flood set and Site ebb set rows; of its two directions, the one nearer the station's flood is the flood. The prose underneath carries any shore-parallel set the extract misses. A site with no extract reads "As the station" in both rows.
 - **Diveable window.** The station's windows under the current threshold, at the recommended bin, over the span.
+- **Observed offset.** Timed slacks from the site's logged dives only, each a computer bookmark or a "slack HH:MM" note, measured against the station's nearest predicted slack that day. A slack's offset is established at 4 observations on 4 days, springs and neaps both, all within 10 minutes of their median, which its row states as a fact; otherwise not established. Neither the extract nor a legacy correction feeds it.
+- **Legacy correction.** A correction published in an older current table goes in its own table at the end of the Current section, recorded as published: the legacy station by name and position with its distance and direction from the site, the reference station it was published against, by name and ID, and the minutes for each slack. It never feeds the Observed offset rows.
 - **Western reach.** Live stations thin out west of Port Angeles, 20 to 30 km from Sekiu or Neah Bay, and a coordinate off Tatoosh Island sits close to the edge of the ENPAC15 mesh; the site's prose states its timing as a starting point to verify on the day.
 
 ## Wind

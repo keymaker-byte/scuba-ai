@@ -32,15 +32,17 @@ Populating `map/data.js` is handled by the `create-dive-region` and `create-dive
 
 ## Planning a dive
 
-A dive plan is an entry-to-exit profile for a known site and date, checked against current, tide and wind at both ends of the dive, logged beside what was actually observed once the dive happens.
+A dive plan is an entry-to-exit profile for a known site and date, checked against current, tide and wind at both ends of the dive, presented in chat as a table and a summary to share with dive buddies.
 
-Planning a new dive, and logging one afterward, is handled by the `create-dive-plan` skill: it holds the planning workflow and the post-dive observed-row discipline. Invoke it rather than freehanding a plan.
+Planning a new dive is handled by the `create-dive-plan` skill: it holds the planning workflow and how a plan is presented. Invoke it rather than freehanding a plan.
 
 ## Tools
 
 - @tool-config.json
 - @tools/noaa_current.md
 - @tools/noaa_tide.md
+- @tools/noaa_legacy_current.md
+- @tools/chs_current.md
 - @tools/adcirc_current.md
 - @tools/ncei_depth.md
 - @tools/emodnet_depth.md

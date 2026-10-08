@@ -5,7 +5,7 @@ These conventions apply to every site file written in this region.
 ## Region Specific Research
 
 - **Tools.**
-  - `subsurface_log.md`, searched under the site's name and its likely variants: each dive's depths, times, profile, temperatures and notes.
+  - `subsurface_log.md`, the site's dives, matched by name and logged position; a dive matching only one is checked, and confirmed with the user when unclear. Their depths, times, temperatures, visibility, current felt and notes feed every section.
   - `diversatlas.md` and `diveatlas.md`, each found by the dive area coordinate: a second pin, entry, parking, landmarks, access, life and hazards.
 - **Sources.**
   - [NW Dive Club](https://nwdiveclub.com/viewforum.php?f=6), community write-ups of how a site is dived: the entry, what's worth seeing, what to expect. Read it through the Wayback Machine (`https://archive.org/wayback/available?url=<page>`, then `curl --compressed` the snapshot), and confirm the snapshot holds the full thread.
