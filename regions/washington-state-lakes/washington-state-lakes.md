@@ -6,7 +6,7 @@ Freshwater lakes in Washington State deep and clear enough to be worth diving.
 
 ## Conditions
 
-- **Water temperature.** Runs cold at depth year round. In summer a lake stratifies, a warmer surface layer over a sharp thermocline, below which the water can sit close to freezing even at the height of summer; after fall turnover it mixes and reads close to isothermal top to bottom. Drysuit protocol applies year round.
+- **Water temperature.** Runs cold at depth year round. In summer a lake stratifies, a warmer surface layer over a sharp thermocline, below which the water runs far colder than the surface even at the height of summer; after fall turnover it mixes and reads close to isothermal top to bottom. Drysuit protocol applies year round.
 - **Visibility.** Often excellent, low nutrient, glacially fed water running clear well past what a diver reads as deep by eye alone; that same clarity is what makes depth easy to misjudge.
 - **Character.** Cold, clear, deep water with no current and no tide to plan around; depth discipline is what actually governs the dive here.
 
