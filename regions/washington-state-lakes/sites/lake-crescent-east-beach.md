@@ -52,12 +52,12 @@ East Beach sits at the eastern end of a lake that runs roughly east to west for 
 
 ## Temperature
 
-* **At depth.** In summer, a thermocline typically sets in around 15 m; below it the water runs cold, down toward the upper single digits Celsius. After fall turnover the lake mixes and reads a more uniform 14 to 16 C top to bottom. Drysuit protocol applies year round regardless of season.
-* **Surface layer.** Warms into the upper teens Celsius by mid to late summer, cooling back into the mid teens by fall.
+* **At depth.** In summer, a thermocline typically sets in around 15 m; below it the water cools quickly, to about 11 °C by 30 m. After fall turnover the lake mixes and reads a more uniform 14 to 16 °C top to bottom. Drysuit protocol applies year round regardless of season.
+* **Surface layer.** Warms to about 20 °C by mid to late summer, cooling back into the mid teens by fall.
 
 ## Marine life
 
-* **Fish.** Sparse compared to salt water; the lake's low nutrient load supports little in the way of fish or vegetation. Rainbow and cutthroat trout, including the lake's own endemic strains, are the main sighting, along with occasional crayfish.
+* **Fish.** Sparse compared to salt water; the lake's low nutrient load supports little in the way of fish or vegetation. Rainbow and cutthroat trout, including the lake's own endemic strains, are the main sighting, along with occasional crayfish and freshwater mussels.
 * **The submerged forest.** Standing dead trees and fallen limbs from old landslides lie along parts of the slope, bare and smooth, more a geological attraction than a living reef, but worth navigating by.
 
 ## Hazards
@@ -66,6 +66,6 @@ East Beach sits at the eastern end of a lake that runs roughly east to west for 
 * **No gradual bottom.** The slope off the main entries runs straight from the shallows into water beyond sport diving limits, with no shelf to arrest an inattentive descent.
 * **Silt.** The bottom near the barge and rock structures is fine and easily stirred; a careless fin kick can drop visibility to nothing in the immediate area.
 * **Snags.** Old fishing line, and reportedly abandoned dive guidelines, have been found tangled in the rock and wreck structure. Carry a cutting tool.
-* **Cold at depth.** Even in summer the water below the thermocline runs close to freezing; hypothermia risk builds faster than the clear water and calm surface suggest.
+* **Cold at depth.** Even in summer the water below the thermocline drops to about 11 °C by 30 m, cold enough that hypothermia builds faster than the clear water and calm surface suggest.
 * **Boat traffic.** Motorboats are permitted on Lake Crescent. Surface with a marker buoy or dive flag deployed, and listen for engines before ascending.
 * **Remoteness.** The nearest chamber and definitive care are a long transport from this shore; a bent or badly hurt diver here is farther from help than at a site near a city.
