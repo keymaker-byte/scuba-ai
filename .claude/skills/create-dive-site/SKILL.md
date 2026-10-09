@@ -90,7 +90,7 @@ The thresholds come from fetch-limited wind wave growth (JONSWAP): at the wind t
 - **Sectors.** Adjacent directions in the same class form one sector, named clockwise end to end.
 - **Calm only.** A site research shows dives only in calm whatever the direction (an exposed windward coast, a kite beach) classes every direction Bad, with the reason.
 - **Local knowledge.** Research can move a direction up a class (Fine to Short fetch or Bad, Short fetch to Bad), never down, with the reason and a source: funnelling along a narrows or valley lake, swell wrapping a point. A wind note the existing file carries from observation stays in its bullet even where the class doesn't move.
-- **Wind against current.** Take the set directions from the Current section (the site flood and ebb sets, or the usual set). An opposing wind blows from where the water flows toward, within 45° either side; name each one with 1 km or more of fetch and the set it opposes. A peak current under the region's threshold is too weak to stack against wind. Current type none: the water holds still, so wind alone sets the surface. A Current section with no set direction is a gap: stop and report it.
+- **Wind against current.** Take the set directions from the Current section (the site flood and ebb sets, or the usual set). An opposing wind blows from where the water flows toward, within 45° either side; name each one with 1 km or more of fetch and the set it opposes. A peak current under the region's threshold is too weak to stack against wind. Current type none: the water holds still, so wind alone sets the surface. Current type wind driven: leave the bullet out, since the wind sets the current itself. A tidal Current section with no set direction is a gap: stop and report it.
 
 ## 8. Write the file
 
@@ -214,7 +214,7 @@ Optional prose on the shoreline's shape where the bearing alone doesn't carry it
 * **Short fetch.** Each Short fetch sector, its fetch range, and why it spoils the entry.
 * **Mixed.** Each Mixed sector, its fetch range, and the swell it runs past the entry.
 * **Fine.** The Fine directions and what blocks them (a bluff, a headland, a breakwater).
-* **Wind against current.** Each opposing wind and the set it opposes, or that the current is too weak to stack, or that the water holds still.
+* **Wind against current.** Tidal or none only: each opposing wind and the set it opposes, or that the current is too weak to stack, or that the water holds still.
 
 ## Depth and tide
 
