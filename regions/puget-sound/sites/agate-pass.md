@@ -69,11 +69,11 @@ The pass runs roughly north to south between wooded, steep shores, about 270 m w
 
 ## Depth and tide
 
-The tide swings up to about 5 m here, so depths are given below the MLLW chart datum.
+The tide swings up to about 5.1 m in a day here, so depths are given below the MLLW chart datum.
 
 | | |
 |---|---|
-| **Tide station** | NOAA Port Madison (9445753), about 3.2 km east-southeast, on Port Madison at the north end of the pass |
+| **Tide station** | NOAA Port Madison (9445753), about 3.2 km east-southeast, on Bainbridge Island's north shore in Port Madison, past the north end of the pass |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m |
 

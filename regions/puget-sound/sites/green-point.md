@@ -74,7 +74,7 @@ The site swings roughly 2.5 m between an average high and low water, more around
 | Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |
 |---|---|---|---|
 | Entry rocks | 2.6 m | 1.4 m | 5.4 m |
-| Green Point drop-off | 15.6 m | 14.3 m | 18.4 m |
+| Green Point drop-off | 15.6 m | 14.4 m | 18.4 m |
 
 ## Visibility
 

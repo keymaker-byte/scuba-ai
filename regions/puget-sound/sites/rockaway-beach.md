@@ -71,9 +71,9 @@ The site sits on the open main basin, and tide swings the depth here by several 
 
 | Feature | Below MLLW | At a -1.30 m low | At a +4.00 m high |
 |---|---|---|---|
-| Shallow ledges | 8 to 11 m | 6.7 to 9.7 m | 12 to 15 m |
-| Main reef, working depth | 15 to 18 m | 13.7 to 16.7 m | 19 to 22 m |
-| Outer edge of the rock rib | about 26 m | about 24.7 m | about 30 m |
+| Shallow ledges | 8 to 11 m | 6.7 to 9.7 m | 12.0 to 15.0 m |
+| Main reef, working depth | 15 to 18 m | 13.7 to 16.7 m | 19.0 to 22.0 m |
+| Outer edge of the rock rib | about 26 m | about 24.7 m | about 30.0 m |
 
 ## Visibility
 

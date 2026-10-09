@@ -76,9 +76,9 @@ Hood Canal's tide swings more here than in the main basin of the Sound, and at P
 | Feature | Below MLLW | At a -1.39 m low | At a +4.00 m high |
 |---|---|---|---|
 | Pipe start, at the fence gap | about 4.6 m | about 3.2 m | about 8.6 m |
-| Concrete dividers alongside the pipe | 9 to 10 m | 7.6 to 8.6 m | 13 to 14 m |
-| Pipe end and its deep supports | 26 to 30 m | 24.6 to 28.6 m | 30 to 34 m |
-| Sea whip field beyond | from about 30 m | from about 28.6 m | from about 34 m |
+| Concrete dividers alongside the pipe | 9 to 10 m | 7.6 to 8.6 m | 13.0 to 14.0 m |
+| Pipe end and its deep supports | 26 to 30 m | 24.6 to 28.6 m | 30.0 to 34.0 m |
+| Sea whip field beyond | from about 30 m | from about 28.6 m | from about 34.0 m |
 
 ## Visibility
 

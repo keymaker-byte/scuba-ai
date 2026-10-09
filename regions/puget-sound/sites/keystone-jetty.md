@@ -79,8 +79,8 @@ Admiralty Inlet swings roughly 2.7 m between high and low water here on a typica
 
 | Feature | Below MLLW | At a -1.25 m low | At a +3.04 m high |
 |---|---|---|---|
-| Octopus den, shallows | 8.1 m | 6.8 m | 11.1 m |
-| Sand at the end of the jetty | about 19 m | about 17.8 m | about 22 m |
+| Octopus den, shallows | 8.1 m | 6.9 m | 11.1 m |
+| Sand at the end of the jetty | about 19 m | about 17.8 m | about 22.0 m |
 
 The wharf pilings east of the jetty stand over sand at roughly 6 to 11 m below datum.
 

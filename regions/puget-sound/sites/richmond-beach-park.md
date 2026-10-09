@@ -77,9 +77,9 @@ The shelf is shallow enough that the tide is a large fraction of the working dep
 | Cobble to sand transition | 0.6 m | dries | 4.4 m |
 | Shallow bench | 2.4 m | 1.1 m | 6.2 m |
 | Debris field begins | 3.0 m | 1.7 m | 6.8 m |
-| Debris field ends, top of the drop | 7.6 to 8.2 m | 6.3 to 6.9 m | 11.4 to 12 m |
+| Debris field ends, top of the drop | 7.6 to 8.2 m | 6.3 to 6.9 m | 11.4 to 12.0 m |
 | Cinderblock and rope trail, anchor chain | 10.7 m | 9.4 m | 14.5 m |
-| Concrete anchor blocks, chain, propeller | 14.3 to 15.2 m | 13 to 13.9 m | 18.1 to 19 m |
+| Concrete anchor blocks, chain, propeller | 14.3 to 15.2 m | 13.0 to 13.9 m | 18.1 to 19.0 m |
 
 ## Visibility
 

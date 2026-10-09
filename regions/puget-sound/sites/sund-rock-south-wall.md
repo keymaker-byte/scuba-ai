@@ -43,7 +43,7 @@ Sund Rock South Wall is dived independently of the tide. The current in the chan
 
 * **Flood.** Sets southwest, filling the canal toward the Great Bend, and peaks around 0.25 m/s mid-channel.
 * **Ebb.** Sets northeast, draining toward the entrance, and runs through the bay toward Sund Rock at its northeast point. Similar strength to the flood.
-* **Slack.** This reach of the canal behaves as a standing wave, so slack falls close to high and low water rather than midway between them. Slack at the site runs within about 45 minutes of the tide extremes at Ayock Point, usually ahead of them, which makes the tide table a usable guide to it here. This is a local exception, and it does not hold elsewhere in the Sound.
+* **Slack.** This reach of the canal behaves as a standing wave, so slack falls close to high and low water rather than midway between them. Slack at the site falls close to high and low water at Union, which makes the tide table a usable guide to it here; the exact offset is not established and is confirmed in the water. This is a local exception, and it does not hold elsewhere in the Sound.
 * **Diveable window.** All day. What little current there is rarely matters at this contained, shallower depth range.
 
 ## Wind
@@ -63,17 +63,17 @@ The bay opens east and northeast onto Hood Canal, backed by the steep ground of 
 
 ## Depth and tide
 
-Hood Canal swings up to about 5 m here, and the tide is the single biggest control on how the site reads. A high tide adds several metres to every feature and floods the shallow bench, which is why the site is usually dived on a tide of 3 m or more. Those high daytime tides fall in winter, which is also when the visibility is best.
+Hood Canal swings up to about 5.6 m in a day here, and the tide is the single biggest control on how the site reads. A high tide adds several metres to every feature and floods the shallow bench, which is why the site is usually dived on a tide of 3 m or more. Those high daytime tides fall in winter, which is also when the visibility is best.
 
 | | |
 |---|---|
-| **Tide station** | NOAA Ayock Point (9445388), about 9.7 km north-northeast, up the canal on the same side of the Great Bend |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.39 m, up to 5.12 m on the year's biggest exchange; 2026 span -1.40 m to +3.92 m |
+| **Tide station** | NOAA Union (9445478), about 8.6 km south, down the canal at the Great Bend |
+| **Series** | Full series |
+| **Typical range** | Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m |
 
-| Feature | Below MLLW | At a -1.40 m low | At a +3.92 m high |
+| Feature | Below MLLW | At a -1.40 m low | At a +4.32 m high |
 |---|---|---|---|
-| Boulder formations | 6 to 15 m | 4.6 to 13.6 m | 9.9 to 18.9 m |
+| Boulder formations | 6 to 15 m | 4.6 to 13.6 m | 10.3 to 19.3 m |
 
 ## Visibility
 

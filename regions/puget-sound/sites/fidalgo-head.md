@@ -73,7 +73,7 @@ The site swings roughly 2.5 m between an average high and low water, more around
 
 | Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |
 |---|---|---|---|
-| Outer rock into sand | 11.7 m | 10.4 m | 14.5 m |
+| Outer rock into sand | 11.7 m | 10.5 m | 14.5 m |
 
 ## Visibility
 

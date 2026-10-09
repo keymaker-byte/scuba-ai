@@ -70,7 +70,7 @@ Possession Sound swings up to about 5 m between high and low water here, so dept
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m |
 
-The geodome top, at about 15.4 m below datum, reads a metre or so shallower at a low near -1 m, and several metres deeper at a high near +3.5 m.
+The geodome top, at about 15.4 m below datum, reads about 14.1 m below the surface at the year's lowest low of -1.30 m, and about 19.3 m at its highest high of +3.85 m.
 
 ## Visibility
 
