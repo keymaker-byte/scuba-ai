@@ -38,10 +38,14 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Sheltered inside Kralendijk's harbour.
-* **Bad.** Conditions here are governed more by harbour traffic than by wind.
-* **Fine.** The prevailing east to southeast trade winds have little effect inside the harbour.
-* **Wind against current.** Not a significant factor at this sheltered site.
+| | |
+|---|---|
+| **Entry shore facing** | west, 261° |
+| **Dive area shore facing** | west-southwest, 256° |
+
+* **Bad.** Southwest through west-southwest (SW-WSW), onshore over more than 30 km of open water through the gap south of Klein Bonaire, and northwest (NW), onshore over 10.6 km. Any wind from these quarters raises swell under the pier.
+* **Short fetch.** South-southwest (SSW), onshore over 3.7 km, and west through west-northwest (W-WNW), onshore over 1.7 to 1.8 km from Klein Bonaire, each enough to build a chop at the entry.
+* **Fine.** North-northwest clockwise through south: offshore from north-northeast through southeast, off the land, and cross-shore over 340 m to 1.8 km from the north-northwest, north, south-southeast and south. Harbour traffic, more than the wind, sets the surface on most days.
 
 ## Visibility
 

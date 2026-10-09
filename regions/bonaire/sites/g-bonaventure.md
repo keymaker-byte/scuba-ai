@@ -34,10 +34,14 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Wind
 
-* **Orientation.** Faces the south side of Klein Bonaire.
-* **Bad.** A strong wind from the exposed quadrant raises chop.
-* **Fine.** Calmer conditions, or wind blocked by the bulk of the islet.
-* **Wind against current.** Worth checking before entry, as at any boat-only Klein Bonaire site.
+| | |
+|---|---|
+| **Dive area shore facing** | south, 176° |
+
+* **Bad.** South through southwest (S-SW), onshore over more than 30 km of open water. Any wind from this quarter raises swell at the mooring.
+* **Short fetch.** East-southeast through south-southeast (ESE-SSE), onshore over 2.8 to 3.2 km across the channel from Bonaire, enough to build a chop at the mooring.
+* **Mixed.** West-southwest through west (WSW-W), cross-shore over more than 30 km, running a swell along the reef.
+* **Fine.** West-northwest clockwise through east: offshore from west-northwest through northeast, off the islet, and cross-shore over 330 m to 3.1 km from the east-northeast and east.
 
 ## Visibility
 

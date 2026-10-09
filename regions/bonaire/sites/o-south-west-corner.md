@@ -34,10 +34,15 @@ None specifically beyond the general reef and current awareness that applies alo
 
 ## Wind
 
-* **Orientation.** Faces the southwest tip of Klein Bonaire, one of the more exposed points on the islet.
-* **Bad.** A strong wind from the open water quadrant raises chop and current here more than at sheltered sites.
-* **Fine.** Calmer conditions, or wind blocked by the bulk of the islet.
-* **Wind against current.** Worth checking carefully given this site's greater exposure to open water.
+| | |
+|---|---|
+| **Dive area shore facing** | west-northwest, 304° |
+
+The site sits at the southwest tip of Klein Bonaire, open water on every side but the islet itself.
+
+* **Bad.** West-southwest through north (WSW-N), onshore over 7 km to more than 30 km of open water. Any wind from this quarter raises chop and current at the mooring.
+* **Mixed.** South-southwest through southwest (SSW-SW), cross-shore over more than 30 km, running a swell along the reef.
+* **Fine.** North-northeast clockwise through south: offshore from east-northeast through south, off the islet, and cross-shore over 120 to 190 m from the north-northeast and northeast.
 
 ## Visibility
 

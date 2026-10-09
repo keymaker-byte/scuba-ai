@@ -37,10 +37,14 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces south, at the exposed southern tip of the island.
-* **Bad.** Any wind with south or west in it adds to an already current-driven site.
-* **Fine.** The prevailing east trade winds are more favourable here than further up the sheltered west coast.
-* **Wind against current.** Given this site's typically strong current, any wind that opposes it is the combination to avoid.
+| | |
+|---|---|
+| **Entry shore facing** | southwest, 234° |
+| **Dive area shore facing** | west-southwest, 238° |
+
+* **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open water. Any wind with south or west in it adds swell to a site already driven by strong current.
+* **Mixed.** Southeast through south-southeast (SE-SSE), cross-shore over more than 30 km past the southern tip, running a swell along the shore past the entry.
+* **Fine.** Northwest clockwise through east-southeast: offshore from north through east-southeast, off the land, and cross-shore over 410 m to 1.2 km from the northwest and north-northwest. The east trades blow off the land here and leave the entry flat.
 
 ## Visibility
 

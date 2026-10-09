@@ -33,7 +33,13 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-Not applicable while the site remains closed.
+| | |
+|---|---|
+| **Dive area shore facing** | northwest, 304° |
+
+* **Bad.** West-southwest through north (WSW-N), onshore over 5.2 km to more than 30 km of open water. Any wind from this quarter raises chop at the mooring.
+* **Mixed.** Southwest (SW), cross-shore over more than 30 km, running a swell along the reef.
+* **Fine.** North-northeast clockwise through south-southwest: offshore from east-northeast through south, off the islet, and cross-shore over 1.1 to 4.3 km from the north-northeast, northeast and south-southwest.
 
 ## Visibility
 

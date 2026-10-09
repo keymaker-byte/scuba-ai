@@ -35,10 +35,13 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Wind
 
-* **Orientation.** Faces southwest, sheltered from the dominant easterly trade winds.
-* **Bad.** A wind with west in it is the one direction that works against this site's usual shelter.
-* **Fine.** The prevailing easterly trades, blocked by the bulk of Klein Bonaire itself.
-* **Wind against current.** Best dived in the morning regardless, when winds are at their minimum across the whole south side of Klein Bonaire.
+| | |
+|---|---|
+| **Dive area shore facing** | east-southeast, 113° |
+
+* **Short fetch.** East-northeast through south (ENE-S), onshore over 1.4 to 4 km across the channel from Bonaire, enough to build a chop at the mooring. The prevailing trades blow from this quarter; the site is best dived in the morning, when the wind is at its lightest.
+* **Mixed.** South-southwest (SSW), cross-shore over more than 30 km, running a swell along the reef.
+* **Fine.** Southwest clockwise through northeast: offshore from west-southwest through north, off the islet, and cross-shore over 50 m to 1.6 km from the southwest, north-northeast and northeast.
 
 ## Visibility
 

@@ -38,10 +38,14 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces south.
-* **Bad.** Any wind strong enough for kitesurfing nearby adds surface hazard.
-* **Fine.** Calm or light wind conditions.
-* **Wind against current.** Given how readily this site's current shifts, any wind change is worth reassessing conditions for.
+| | |
+|---|---|
+| **Entry shore facing** | southwest, 236° |
+| **Dive area shore facing** | southwest, 235° |
+
+* **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open water. Any wind from this quarter raises swell at the entry.
+* **Mixed.** Southeast through south-southeast (SE-SSE), and northwest (NW), cross-shore over more than 30 km, each running a swell along the shore past the entry.
+* **Fine.** North-northwest clockwise through east-southeast: offshore from north through east-southeast, off the land, and cross-shore over 1.5 km from the north-northwest. The prevailing east trades blow off the land here and leave the entry flat, but a wind strong enough for kitesurfing brings kite traffic from the neighbouring kite beach onto the surface.
 
 ## Visibility
 

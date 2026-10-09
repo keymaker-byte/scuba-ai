@@ -36,10 +36,13 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces the northwest tip of Klein Bonaire, an exposed point.
-* **Bad.** A strong wind from the open water quadrant raises chop and current along the wall.
-* **Fine.** Calmer conditions, or wind blocked by the bulk of the islet.
-* **Wind against current.** Worth checking carefully given this exposed point's tendency for strong current.
+| | |
+|---|---|
+| **Dive area shore facing** | west-southwest, 251° |
+
+* **Bad.** Southwest through northwest (SW-NW), onshore over 8.9 km to more than 30 km of open water. Any wind from this quarter raises chop and current along the wall.
+* **Mixed.** North-northwest through north (NNW-N), cross-shore over 5.2 to 6.5 km, running a swell along the wall.
+* **Fine.** North-northeast clockwise through south-southwest: offshore from north-northeast through southeast, off the islet, cross-shore over 160 to 260 m from the south-southeast and south, and onshore over 990 m from the south-southwest.
 
 ## Visibility
 

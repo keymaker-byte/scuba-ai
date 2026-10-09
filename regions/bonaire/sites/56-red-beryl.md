@@ -38,10 +38,14 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces south.
-* **Bad.** Wind is also what brings the kitesurfers out; treat a windy day as a reason for extra caution even where the swell itself is manageable.
-* **Fine.** Calm or light wind conditions, when kite traffic is minimal.
-* **Wind against current.** A building southerly against any current here is the combination to avoid.
+| | |
+|---|---|
+| **Entry shore facing** | southwest, 235° |
+| **Dive area shore facing** | southwest, 233° |
+
+* **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open water. Any wind from this quarter raises swell at the entry.
+* **Mixed.** South-southeast (SSE), cross-shore over more than 30 km, running a swell along the shore past the entry.
+* **Fine.** Northwest clockwise through southeast: offshore from north through east-southeast, off the land, and cross-shore over 270 m to 1.4 km from the northwest, north-northwest and southeast. The prevailing east trades blow off the land here and leave the entry flat, but a wind strong enough for kitesurfing brings kite traffic from the neighbouring kite beach onto the surface; surface with extra caution on a windy day.
 
 ## Visibility
 
