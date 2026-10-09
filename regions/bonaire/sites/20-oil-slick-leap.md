@@ -37,10 +37,17 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces northwest.
-* **Bad.** Any wind with north or west in it raises swell.
-* **Fine.** The prevailing east to southeast trade winds blow offshore to cross-shore.
-* **Wind against current.** A building northerly against any current here is the combination to avoid.
+| | |
+|---|---|
+| **Entry shore facing** | south-southwest, 207° |
+| **Dive area shore facing** | south-southwest, 208° |
+
+The dive area lies 22 m south of the entry ladder.
+
+* **Bad.** South-southeast (SSE), onshore over 7.9 km down the coast, and south-southwest through west (SSW-W), onshore over 5.3 km to more than 30 km of open sea. Any wind from these quarters raises swell at the ladder.
+* **Short fetch.** South (S), onshore over 3.5 km from Klein Bonaire, enough to build a chop at the ladder.
+* **Mixed.** West-northwest (WNW), cross-shore over 5.9 km, running a swell along the shore past the ladder.
+* **Fine.** Northwest clockwise through southeast: offshore from north-northwest through east, off the land, and cross-shore over 140 m to 1.8 km from the northwest, east-southeast and southeast.
 
 ## Visibility
 

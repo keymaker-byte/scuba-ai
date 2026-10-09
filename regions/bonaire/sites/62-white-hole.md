@@ -36,10 +36,13 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces the open Atlantic side of the island, opposite the sheltered leeward coast.
-* **Bad.** Any meaningful wind or swell rules the site out entirely, not just makes it harder.
-* **Fine.** Calm, settled conditions are a precondition for diving here at all.
-* **Wind against current.** Not the relevant framing here; wind alone decides whether the site is diveable.
+| | |
+|---|---|
+| **Dive area shore facing** | east, 99° |
+
+The site sits on the windward coast, open to more than 30 km of ocean from east-northeast through south-southeast, straight into the prevailing trades.
+
+* **Bad.** All directions (N-NNW), calm only. The surrounding water is shallow and the site is reached only on a calm day; any meaningful wind or swell rules it out entirely.
 
 ## Visibility
 

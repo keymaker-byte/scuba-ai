@@ -35,10 +35,15 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces northwest.
-* **Bad.** Any wind with north or west in it raises swell and worsens the boat's rocking at the mooring.
-* **Fine.** The prevailing east to southeast trade winds blow offshore to cross-shore.
-* **Wind against current.** A building northerly against any current on the wall is the combination to avoid.
+| | |
+|---|---|
+| **Dive area shore facing** | south-southwest, 206° |
+
+The dive area lies hard against the foot of the cliff.
+
+* **Bad.** South-southeast through west (SSE-W), onshore over 6.3 km to more than 30 km, along the coast from the south-southeast or across open sea from the south and west. Any wind from this quarter raises swell against the cliff and worsens the boat's rocking at the mooring.
+* **Mixed.** Southeast (SE), cross-shore over 10.1 km down the coast, running a swell along the cliff.
+* **Fine.** West-northwest clockwise through east-southeast: offshore from north-northwest through east, off the cliff, and cross-shore from the west-northwest, northwest and east-southeast, over 140 m at most.
 
 ## Visibility
 

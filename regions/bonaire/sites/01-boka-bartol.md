@@ -40,10 +40,16 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces northwest, at the exposed northern tip of the leeward coast.
-* **Bad.** Any wind with north or west in it raises swell here faster than at sites further down the sheltered west coast.
-* **Fine.** The prevailing east to southeast trade winds blow offshore to cross-shore.
-* **Wind against current.** A building northerly against the site's already strong current is the combination to avoid.
+| | |
+|---|---|
+| **Entry shore facing** | northwest, 320° |
+| **Dive area shore facing** | northwest, 308° |
+
+The bay opens northwest onto open sea at the exposed northern tip of the leeward coast, and the swim out runs 132 m north-northwest from the entry to the reef terrace.
+
+* **Bad.** West through north-northeast (W-NNE), onshore over more than 30 km of open sea, straight into the mouth of the bay. Any wind from this quarter builds swell quickly on the rock and rubble entry.
+* **Mixed.** West-southwest (WSW), cross-shore over more than 30 km, running a swell along the shore past the entry.
+* **Fine.** Northeast clockwise through southwest: offshore from east through south-southwest, off the land, and cross-shore over 180 to 780 m from the northeast, east-northeast and southwest. The prevailing east to southeast trades blow off the land here and leave the bay flat, though at strength they drive a stronger current off the terrace.
 
 ## Visibility
 

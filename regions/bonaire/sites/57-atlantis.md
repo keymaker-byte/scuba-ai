@@ -40,10 +40,14 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces southwest, exposed to the trade winds that make it a kite site.
-* **Bad.** Any wind strong enough for kitesurfing is a reason to dive elsewhere.
-* **Fine.** Calm, windless conditions.
-* **Wind against current.** With no mooring line to hold position, a mismatch between wind and current here is harder to manage than at a moored site.
+| | |
+|---|---|
+| **Entry shore facing** | west-southwest, 245° |
+| **Dive area shore facing** | west-southwest, 245° |
+
+The shore lies open to more than 30 km of water from south-southeast through northwest, and offshore from north through east-southeast.
+
+* **Bad.** All directions (N-NNW), calm only. This is the island's official kitesurfing beach: any wind strong enough for kiting fills the surface with kite lines and stirs up the water, so the site is dived only on a windless day.
 
 ## Visibility
 

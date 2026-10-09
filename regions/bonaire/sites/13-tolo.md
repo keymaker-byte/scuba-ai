@@ -37,10 +37,16 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Wind
 
-* **Orientation.** Faces northwest.
-* **Bad.** Any wind with north or west in it raises swell.
-* **Fine.** The prevailing east to southeast trade winds blow offshore to cross-shore.
-* **Wind against current.** A building northerly against any current here is the combination to avoid.
+| | |
+|---|---|
+| **Entry shore facing** | south, 189° |
+| **Dive area shore facing** | south, 181° |
+
+The coast here runs west to east, and the swim out runs 185 m west-southwest from the entry to the dive area.
+
+* **Bad.** Southeast through west-southwest (SE-WSW), onshore over 5.9 km to more than 30 km, along the coast from the southeast or across open sea from the south and southwest. Any wind from this quarter raises swell at the entry.
+* **Mixed.** West (W), cross-shore over more than 30 km, running a swell along the shore past the entry.
+* **Fine.** West-northwest clockwise through east-southeast: offshore from northwest through east-northeast, off the land, and cross-shore over 410 m to 3.1 km from the west-northwest, east and east-southeast.
 
 ## Visibility
 

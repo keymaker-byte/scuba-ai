@@ -38,10 +38,17 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces the open Atlantic side of the island.
-* **Bad.** Wind against the channel's outgoing current worsens an already demanding site.
-* **Fine.** Calmer conditions ease the channel crossing but the current remains a factor regardless.
-* **Wind against current.** The channel's own current is strong enough that this combination should be treated as a reason to skip the dive rather than just plan around it.
+| | |
+|---|---|
+| **Entry shore facing** | south, 175° |
+| **Dive area shore facing** | south, 174° |
+
+The site sits on the windward coast at the mouth of Lac Bay, and the swim out runs 94 m south-southeast through the channel to the dive area.
+
+* **Bad.** East-southeast through south (ESE-S), onshore over more than 30 km of open ocean, the quarter the prevailing trades blow from. A wind from here blows straight against the channel's seaward outflow and worsens an already demanding site; treat that combination as a reason to skip the dive.
+* **Short fetch.** South-southwest through southwest (SSW-SW), onshore over 2 to 2.9 km along the coast, enough to build a chop at the channel mouth.
+* **Mixed.** East (E), cross-shore over more than 30 km, running a swell across the channel mouth.
+* **Fine.** West-southwest clockwise through east-northeast: offshore from west-northwest through northeast, off the land, and cross-shore over 360 m to 2.5 km from the west-southwest, west and east-northeast. Calmer conditions ease the channel, though the current remains a factor regardless.
 
 ## Visibility
 

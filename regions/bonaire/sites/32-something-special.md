@@ -37,10 +37,15 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Wind
 
-* **Orientation.** Faces west, sheltered by sitting inside Kralendijk's harbour area.
-* **Bad.** Any wind with north or west in it raises swell.
-* **Fine.** The prevailing east to southeast trade winds blow offshore to cross-shore.
-* **Wind against current.** A building northerly against any current here is the combination to avoid.
+| | |
+|---|---|
+| **Entry shore facing** | south-southwest, 210° |
+| **Dive area shore facing** | south-southwest, 193° |
+
+* **Bad.** South-southwest through southwest (SSW-SW), onshore over more than 30 km of open water through the gap south of Klein Bonaire. Any wind from this quarter raises swell at the entry.
+* **Short fetch.** South-southeast through south (SSE-S), onshore over 2.4 to 3.4 km across the bay off town, and west (W), onshore over 1.1 km from Klein Bonaire, each enough to build a chop at the entry.
+* **Mixed.** West-northwest through northwest (WNW-NW), cross-shore over 8.5 km to more than 30 km, running a swell along the shore past the entry.
+* **Fine.** North-northwest clockwise through southeast, and west-southwest: offshore from north-northwest through east, off the land, cross-shore over 340 to 810 m from the east-southeast and southeast, and onshore over 990 m from the west-southwest.
 
 ## Visibility
 

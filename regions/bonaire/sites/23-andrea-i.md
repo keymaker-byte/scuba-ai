@@ -38,10 +38,16 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Wind
 
-* **Orientation.** Faces west.
-* **Bad.** Any wind with north or west in it raises swell.
-* **Fine.** The prevailing east to southeast trade winds blow offshore to cross-shore.
-* **Wind against current.** A building northerly against any current here is the combination to avoid.
+| | |
+|---|---|
+| **Entry shore facing** | west-southwest, 257° |
+| **Dive area shore facing** | west-southwest, 254° |
+
+The swim out runs 129 m northwest from the entry, angling along the shore to the dive area.
+
+* **Bad.** West-southwest through west-northwest (WSW-WNW), onshore over 9.1 km to more than 30 km of open water. Any wind from this quarter raises swell at the entry.
+* **Short fetch.** South-southwest through southwest (SSW-SW), onshore over 2.5 to 3.9 km from Klein Bonaire, and northwest (NW), onshore over 1.7 km from the coast to the north, each enough to build a chop at the entry.
+* **Fine.** North-northwest clockwise through south: offshore from north-northeast through southeast, off the land, and cross-shore over 190 m to 2.7 km from the north-northwest, north, south-southeast and south.
 
 ## Visibility
 

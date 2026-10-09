@@ -36,10 +36,13 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces northwest.
-* **Bad.** Any wind with north or west in it raises swell.
-* **Fine.** The prevailing east to southeast trade winds blow offshore to cross-shore.
-* **Wind against current.** A building northerly against this site's already challenging current is the combination to avoid.
+| | |
+|---|---|
+| **Dive area shore facing** | south-southwest, 207° |
+
+* **Bad.** South-southeast through west (SSE-W), onshore over 6 km to more than 30 km, along the coast from the south-southeast or across open sea from the south and west. Any wind from this quarter raises swell at the boat and on the rock shore.
+* **Mixed.** Southeast (SE), cross-shore over 9.8 km down the coast, running a swell along the shore.
+* **Fine.** West-northwest clockwise through east-southeast: offshore from north-northwest through east, off the land, and cross-shore over 390 m to 3.6 km from the west-northwest, northwest and east-southeast.
 
 ## Visibility
 

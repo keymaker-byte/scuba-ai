@@ -38,10 +38,14 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces south.
-* **Bad.** Any wind with south or west in it raises surf that can make this site unmanageable.
-* **Fine.** Calm, light wind conditions.
-* **Wind against current.** Given how quickly conditions here can overwhelm a swimmer, treat any wind-against-current combination as a reason to choose a different site.
+| | |
+|---|---|
+| **Entry shore facing** | southwest, 220° |
+| **Dive area shore facing** | southwest, 221° |
+
+* **Bad.** South-southeast through west (SSE-W), onshore over more than 30 km of open water. Any wind with south or west in it raises surf that can make this site unmanageable.
+* **Mixed.** Southeast (SE), and west-northwest through northwest (WNW-NW), cross-shore over more than 30 km, each running a swell along the shore past the entry.
+* **Fine.** North-northwest clockwise through east-southeast: offshore from north-northwest through east, off the land, and cross-shore over 910 m from the east-southeast. The east trades blow off the land here and leave the entry flat.
 
 ## Visibility
 

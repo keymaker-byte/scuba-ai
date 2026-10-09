@@ -38,10 +38,13 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces northwest, sheltered somewhat by sitting just south of the exposed Washington Slagbaai stretch.
-* **Bad.** Any wind with north or west in it raises swell along this exposed wall.
-* **Fine.** The prevailing east to southeast trade winds blow offshore to cross-shore.
-* **Wind against current.** A building northerly against the wall's drift current is the combination to avoid.
+| | |
+|---|---|
+| **Dive area shore facing** | south, 190° |
+
+* **Bad.** Southeast through west-southwest (SE-WSW), onshore over 7 km to more than 30 km, along the coast from the southeast or across open sea from the south and southwest. Any wind from this quarter raises swell along this exposed wall and at the boat.
+* **Mixed.** West (W), cross-shore over more than 30 km, running a swell along the wall.
+* **Fine.** West-northwest clockwise through east-southeast: offshore from northwest through east-northeast, off the land, and cross-shore over 610 m to 4.6 km from the west-northwest, east and east-southeast.
 
 ## Visibility
 

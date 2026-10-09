@@ -38,10 +38,14 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Wind
 
-* **Orientation.** Faces south, at the exposed southern tip of the island.
-* **Bad.** Strong wind of any direction is reason to skip this site; don't dive here when winds are up.
-* **Fine.** Calm, settled conditions.
-* **Wind against current.** Given the current's own unpredictability, treat any wind as compounding the risk rather than a separate factor to check off.
+| | |
+|---|---|
+| **Entry shore facing** | south-southeast, 151° |
+| **Dive area shore facing** | south-southeast, 151° |
+
+The shore lies open to more than 30 km of water from northeast clockwise through west-southwest, the prevailing east to southeast trades blowing straight onshore, and offshore only from west through north-northeast.
+
+* **Bad.** All directions (N-NNW), calm only. Wind of any strength at this exposed southern tip roughens the shore entry and compounds a current that already builds and shifts without warning, so the site is dived only on a calm, settled day.
 
 ## Visibility
 

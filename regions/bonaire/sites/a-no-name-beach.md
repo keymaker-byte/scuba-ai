@@ -35,10 +35,14 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Wind
 
-* **Orientation.** Faces east, toward Bonaire, on Klein Bonaire's more sheltered side.
-* **Bad.** A strong easterly raises chop on this side of the islet.
-* **Fine.** Light wind or wind with west in it leaves this side calm.
-* **Wind against current.** Not usually a significant factor given how sheltered and current-free this site normally is.
+| | |
+|---|---|
+| **Dive area shore facing** | north, 6° |
+
+* **Bad.** Northwest through north-northwest (NW-NNW), onshore over 5.1 to 8.1 km of open water. Any wind from this quarter raises swell on the beach landing.
+* **Short fetch.** North through east-northeast (N-ENE), onshore over 1.7 to 3.3 km across the channel from Bonaire, enough to build a chop on this side of the islet; a strong east-northeasterly trade does exactly that.
+* **Mixed.** West through west-northwest (W-WNW), cross-shore over more than 30 km, running a swell along the beach.
+* **Fine.** East clockwise through west-southwest: offshore from southeast through west-southwest, off the islet, and cross-shore over 180 m to 1.9 km from the east and east-southeast.
 
 ## Visibility
 
