@@ -64,7 +64,7 @@ The beach faces north into the mouth of Admiralty Inlet, open to the Strait of J
 
 * **Bad.** West-northwest through northeast (WNW-NE), onshore over 7.5 km to more than 30 km, either a long fetch up the open strait or across the mouth of the inlet.
 * **Mixed.** East-northeast through east (ENE-E), cross-shore over 7.8 to 13.1 km, and west (W), cross-shore over 24.3 km up the strait, each running a swell along the beach past the entry.
-* **Fine.** East-southeast clockwise through west-southwest: offshore from east-southeast through southwest, off the land, and cross-shore over 2.3 km from the west-southwest. The beach can be calm even when nearby Point Hudson, which faces the opposite way, is blown out.
+* **Fine.** East-southeast clockwise through west-southwest: offshore from east-southeast through southwest, off the land, and cross-shore over 2.3 km from the west-southwest. A southerly blows off the land here and leaves the beach calm while south-facing shores nearby are blown out.
 * **Wind against current.** West-southwest through west-northwest (WSW-WNW) against the ebb, which sets west along the beach, over 2.3 km to more than 30 km, is the combination to avoid. Northeast through east (NE-E) against the flood, over 7.5 to 13.1 km.
 
 ## Depth and tide

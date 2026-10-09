@@ -63,7 +63,7 @@ Legacy correction, carried as published and separate from the reconciled figures
 | **Entry shore facing** | north, 2° |
 | **Dive area shore facing** | north, 2° |
 
-The shore east of Tongue Point faces the open strait; west of the point, the entry opens northwest into Crescent Bay.
+Tongue Point faces north into the open strait, with Crescent Bay opening to the west of the point.
 
 * **Bad.** Northwest clockwise through east-northeast (NW-ENE), onshore over 18.8 km to more than 30 km, straight across the strait or along it.
 * **Mixed.** East (E), cross-shore over more than 30 km, and west through west-northwest (W-WNW), cross-shore over 21.6 km to more than 30 km down the strait's open axis from the Pacific, each running a swell along the shore past the entry.
