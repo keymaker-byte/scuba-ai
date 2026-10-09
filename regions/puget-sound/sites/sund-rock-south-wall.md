@@ -5,7 +5,7 @@ Sund Rock South Wall is a boulder-strewn rock wall on the west shore of Hood Can
 | | |
 |---|---|
 | **Location** | Hoodsport, Washington. Hood Canal, west shore, between Hoodsport and Lilliwaup |
-| **Coordinates** | Dive site 47.434256, -123.119590 (seabed about 14.9 m below MLLW), the boulder formations at the wall, about 60 m from the entry on a bearing of 149° |
+| **Coordinates** | 47.434256, -123.119590 (seabed about 14.9 m below MLLW), the boulder formations at the wall, about 60 m from the entry on a bearing of 149° |
 | **Parking coordinates** | 47.435316, -123.120486, the gated ramp |
 | **Entry point coordinates** | 47.434743, -123.120024, a footpath down to a small, almost hidden beach right at the wall |
 | **Type** | Shore |
@@ -31,47 +31,49 @@ Sund Rock South Wall is dived independently of the tide. The current in the chan
 
 | | |
 |---|---|
-| **Governing station** | None near enough to govern. The nearest current station publishing predictions is Hazel Point (PUG1601), about 40 km northeast toward the canal entrance |
+| **Current type** | Tidal |
+| **Governing station** | None governs. The nearest station with predictions is Hazel Point (PUG1601), about 40 km northeast toward the canal entrance |
 | **Recommended bin** | Not applicable |
-| **Time offset** | None |
-| **Flood axis** | southwest, 221°, up-canal past Hoodsport toward the Great Bend |
-| **Ebb axis** | northeast, 041°, down-canal past Lilliwaup toward the entrance |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | Not applicable |
+| **Station ebb axis** | Not applicable |
+| **Site flood set** | southwest, 221°, up-canal past Hoodsport toward the Great Bend |
+| **Site ebb set** | northeast, 041°, down-canal past Lilliwaup toward the entrance |
 
 * **Flood.** Sets southwest, filling the canal toward the Great Bend, and peaks around 0.25 m/s mid-channel.
 * **Ebb.** Sets northeast, draining toward the entrance, and runs through the bay toward Sund Rock at its northeast point. Similar strength to the flood.
-* **Slack.** This reach of the canal behaves as a standing wave, so slack falls close to high and low water rather than midway between them. Slack at the site runs within about half an hour of the tide extremes at Union, which makes the tide table a usable guide to it here. This is a local exception, and it does not hold elsewhere in the Sound.
+* **Slack.** This reach of the canal behaves as a standing wave, so slack falls close to high and low water rather than midway between them. Slack at the site runs within about 45 minutes of the tide extremes at Ayock Point, usually ahead of them, which makes the tide table a usable guide to it here. This is a local exception, and it does not hold elsewhere in the Sound.
 * **Diveable window.** All day. What little current there is rarely matters at this contained, shallower depth range.
-
-## Depth and tide
-
-Hood Canal swings hard here, more than the main basin of the Sound, and the tide is the single biggest control on how the site reads. A high tide adds several metres to every feature and floods the shallow bench, which is why the site is usually dived on a tide of 3 m or more. Those high daytime tides fall in winter, which is also when the visibility is best.
-
-| | |
-|---|---|
-| **Tide station** | Union, Hood Canal (9445478), 47.3583, -123.0980, about 8.6 km southeast |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m |
-
-| Feature | Below MLLW | At a -1.40 m low | At a +4.32 m high |
-|---|---|---|---|
-| Boulder formations | 6 to 15 m | 4.6 to 13.6 m | 10.3 to 19.3 m |
-
-## Hazards
-
-* **Boat traffic.** Small boats work this stretch of the canal all year. Listen throughout the dive, ascend up the wall or in the shallows rather than in open water, and look up the whole way. Fly a marker buoy.
-* **Silt.** The bottom below the wall is fine silt over mud and shale, and a fin kick will erase the visibility for everyone behind you. Establish neutral buoyancy at each new depth and stay off the bottom.
-* **Closing time.** The gate shuts at 17:00 sharp, which caps the second dive and the surface interval. Plan the day backward from it.
-* **Private property.** The tidelands above the extreme low water line are private and posted.
-* **Marine preserve.** No taking of marine life of any kind.
-* **Cold.** Water at depth stays cold year round regardless of how warm the surface is in summer.
 
 ## Wind
 
-* **Orientation.** The bay opens east and northeast onto Hood Canal, backed by the steep ground of the Olympic foothills. The canal is only about 2 km wide here, so cross-canal fetch is short, but it runs a long way northeast to southwest.
-* **Bad.** Northeast through east to southeast. Northeast is the worst of them, both onshore into the bay and carrying the full down-canal fetch. East and southeast are onshore across the canal, and though the fetch is short they blow straight into the entry.
-* **Fine.** West through northwest, offshore and blocked by the high ground behind the site.
-* **Mixed.** Southwest runs up the canal with a long fetch but roughly parallel to the shore, so it builds a swell that passes the entry rather than driving into it.
-* **Wind against current.** Rarely an issue here, since the current is too weak to stack against a wind. Note only that the canal axis and the worst wind directions coincide, both running northeast to southwest, so an along-canal blow and the ebb or flood will be aligned rather than opposed. Wind alone is what decides the surface, so read the beach forecast rather than the marine one.
+| | |
+|---|---|
+| **Entry shore facing** | east-northeast, 70° |
+| **Dive area shore facing** | north-northeast, 30° |
+
+The bay opens east and northeast onto Hood Canal, backed by the steep ground of the Olympic foothills. The canal is only about 2 km wide here, so cross-canal fetch is short, but it runs a long way northeast to southwest.
+
+* **Bad.** Northeast (NE), onshore over 9.0 km, both onshore into the bay and carrying the full down-canal fetch.
+* **Short fetch.** North-northeast (NNE), onshore over 3.4 km, and east-northeast through southeast (ENE-SE), onshore over 2.0 to 3.1 km across the canal; though the fetch is short, they blow straight into the entry.
+* **Mixed.** South (S), cross-shore over 10.5 km up the canal, roughly parallel to the shore, so it builds a swell that passes the entry rather than driving into it.
+* **Fine.** South-southwest clockwise through north (SSW-N), offshore and blocked by the high ground behind the site or under 600 m of fetch; and south-southeast (SSE), cross-shore over 3.0 km.
+* **Wind against current.** North-northeast through east-northeast (NNE-ENE) blows against the ebb, but the current is too weak to stack against a wind. Wind alone is what decides the surface, so read the beach forecast rather than the marine one.
+
+## Depth and tide
+
+Hood Canal swings up to about 5 m here, and the tide is the single biggest control on how the site reads. A high tide adds several metres to every feature and floods the shallow bench, which is why the site is usually dived on a tide of 3 m or more. Those high daytime tides fall in winter, which is also when the visibility is best.
+
+| | |
+|---|---|
+| **Tide station** | NOAA Ayock Point (9445388), about 9.7 km north-northeast, up the canal on the same side of the Great Bend |
+| **Series** | High and low water only |
+| **Typical range** | Median daily 3.39 m, up to 5.12 m on the year's biggest exchange; 2026 span -1.40 m to +3.92 m |
+
+| Feature | Below MLLW | At a -1.40 m low | At a +3.92 m high |
+|---|---|---|---|
+| Boulder formations | 6 to 15 m | 4.6 to 13.6 m | 9.9 to 18.9 m |
 
 ## Visibility
 
@@ -93,3 +95,12 @@ Hood Canal swings hard here, more than the main basin of the Sound, and the tide
 * **Fish.** Pile perch, striped seaperch and shiner perch, grunt and fringed sculpins, crescent gunnels, ratfish and dogfish.
 * **Sea stars and drifters.** Sunflower and velcro stars on the rock. Moon jellies, cross jellies and lion's mane drift through open water, and shrimp are everywhere on the bottom.
 * **Mammals.** Harbour seals visit the site.
+
+## Hazards
+
+* **Boat traffic.** Small boats work this stretch of the canal all year. Listen throughout the dive, ascend up the wall or in the shallows rather than in open water, and look up the whole way. Fly a marker buoy.
+* **Silt.** The bottom below the wall is fine silt over mud and shale, and a fin kick will erase the visibility for everyone behind you. Establish neutral buoyancy at each new depth and stay off the bottom.
+* **Closing time.** The gate shuts at 17:00 sharp, which caps the second dive and the surface interval. Plan the day backward from it.
+* **Private property.** The tidelands above the extreme low water line are private and posted.
+* **Marine preserve.** No taking of marine life of any kind.
+* **Cold.** Water at depth stays cold year round regardless of how warm the surface is in summer.

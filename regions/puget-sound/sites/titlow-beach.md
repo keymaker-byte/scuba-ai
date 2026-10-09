@@ -5,7 +5,7 @@ Shore dive at Titlow Park in Tacoma, on the east shore of the Tacoma Narrows sou
 | | |
 |---|---|
 | **Location** | Tacoma, WA. Titlow Park, east shore of the Tacoma Narrows, South Puget Sound |
-| **Coordinates** | Dive site 47.247453, -122.554523 (seabed about 5.1 m below MLLW, among the ferry slip pilings), about 87 m from the entry on a bearing of 299° |
+| **Coordinates** | 47.247453, -122.554523 (seabed about 5.1 m below MLLW, among the ferry slip pilings), about 87 m from the entry on a bearing of 299° |
 | **Parking coordinates** | 47.246689, -122.552587, the small lot at the foot of 6th Avenue beside the railroad tracks |
 | **Entry point coordinates** | 47.247069, -122.553515, the beach at the foot of the ramp beside the deck |
 | **Type** | Shore |
@@ -34,16 +34,34 @@ Shore dive at Titlow Park in Tacoma, on the east shore of the Tacoma Narrows sou
 
 | | |
 |---|---|
-| **Governing station** | NOAA The Narrows, South end (midstream) (PUG1528), about 1.6 km north-northwest |
-| **Recommended bin** | bin 17, at 7.9 m |
-| **Time offset** | Not established; slack should be confirmed in the water |
-| **Flood axis** | southwest, about 220° |
-| **Ebb axis** | north-northeast, about 26° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA The Narrows, South end (midstream) (PUG1528), about 1.6 km north |
+| **Recommended bin** | bin 17, at 8.0 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | southwest, 220° |
+| **Station ebb axis** | north-northeast, 026° |
+| **Site flood set** | north, 011°, in the back eddy inside the pilings |
+| **Site ebb set** | south, 191°, inside the pilings |
 
-* **Flood.** In the main channel offshore of the pilings, the flood runs south out of the Narrows toward Day Island and the South Sound, commonly 1.5 to 2.3 m/s at the station. Inside the pilings, between the slip and the beach, a back eddy turns it around, and the water sets north along the shore.
-* **Ebb.** Offshore, the ebb runs north toward the Narrows Bridge, slightly weaker than the flood. Inshore of the pilings the water sets south.
+* **Flood.** In the main channel offshore of the pilings, the flood runs south out of the Narrows toward Day Island and the South Sound, with daily peaks of 1.60 to 3.16 m/s at the station over 30 days. Inside the pilings, between the slip and the beach, a back eddy turns it around, and the water sets north along the shore.
+* **Ebb.** Offshore, the ebb runs north toward the Narrows Bridge, slightly weaker than the flood, with daily peaks of 1.01 to 2.62 m/s at the station over the same 30 days. Inshore of the pilings the water sets south.
 * **The water among the pilings.** The slip and the beach sit in sheltered water that runs far slower than the channel, so the inshore water can feel calm while the channel just past the outer pilings is already moving. The eddy along the shore is rarely fully still.
-* **Diveable window.** Either slack, on a small exchange. Summer days often bring two slacks close together with only a small exchange between them, long enough for two dives. Time the dive so the slack falls about midway through it, and plan the route so the end of the dive rides the shoreline eddy north toward the pilings and the entry: on a flood, visit the shelves first and come back north along the shore. Leave the eddy at the pilings and swim in to the ramp; past them it carries on north along the beach toward the lagoon culvert. Past the outer pilings, a flood carries a diver south toward Day Island and an ebb north toward the bridge, so turn back to the slip as soon as the water starts to move.
+* **Diveable window.** Either slack, on a small exchange. A typical window under 0.25 m/s at the station runs about 25 to 40 minutes. Summer days often bring two slacks close together with only a small exchange between them, long enough for two dives. Time the dive so the slack falls about midway through it, and plan the route so the end of the dive rides the shoreline eddy north toward the pilings and the entry: on a flood, visit the shelves first and come back north along the shore. Leave the eddy at the pilings and swim in to the ramp; past them it carries on north along the beach toward the lagoon culvert. Past the outer pilings, a flood carries a diver south toward Day Island and an ebb north toward the bridge, so turn back to the slip as soon as the water starts to move.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | west-northwest, 301° |
+| **Dive area shore facing** | west-northwest, 303° |
+
+The beach faces west across the Narrows toward the Gig Harbor peninsula, about 1.5 km away.
+
+* **Bad.** South through southwest (S-SW), which come up from the South Sound past Day Island and Fox Island and push chop onto the beach, and north (N), the strong northerlies funnelled down the Narrows.
+* **Short fetch.** West-southwest through north-northwest (WSW-NNW), onshore over 2.0 to 3.9 km across the Narrows.
+* **Fine.** North-northeast clockwise through south-southeast (NNE-SSE), offshore off the bluff behind the park, or cross-shore over 310 m or less.
+* **Wind against current.** South through west-southwest (S-WSW) blows against the south setting flood in the channel, and north (N) against the north setting ebb, stacking a steep, confused chop. Under the bridge it can break.
 
 ## Depth and tide
 
@@ -53,31 +71,15 @@ The South Sound's tides are large, and the tide swings the depth here by up to a
 |---|---|
 | **Tide station** | NOAA Tacoma Narrows Bridge (9446486), about 2.7 km north on the same shore of the Narrows |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 3.78 m, up to 5.52 m on the year's biggest exchange; 2026 span −1.34 m to +4.40 m |
+| **Typical range** | Median daily 3.78 m, up to 5.52 m on the year's biggest exchange; 2026 span -1.34 m to +4.40 m |
 
-| Feature | Below MLLW | At a −1.34 m low | At a +4.40 m high |
+| Feature | Below MLLW | At a -1.34 m low | At a +4.40 m high |
 |---|---|---|---|
 | Pilings, south end of the slip | 4.3 m | 3.0 m | 8.7 m |
 | Dive site coordinate, among the pilings | 5.1 m | 3.8 m | 9.5 m |
 | Pilings, north end of the slip | 5.2 m | 3.9 m | 9.6 m |
 | Barge remains | 6.4 m | 5.1 m | 10.8 m |
 | Southern shelves | 6 to 12 m | 4.7 to 10.7 m | 10.4 to 16.4 m |
-
-## Hazards
-
-* **Current.** The main Narrows flow runs strongly just past the outer pilings, and the eddy inshore runs opposite to it. A diver who strays outside the slip off slack can be carried south toward Day Island or north toward the bridge. Stay inside the pilings when the water is moving, and turn the dive early.
-* **Lagoon culvert.** A concrete culvert about 1.2 m across and 30 m long runs under the tracks from the beach to Titlow Lagoon, its mouth on the shore at 47.248846, -122.552018, about 230 m north-northeast of the entry on a bearing of 30°. The mouth sits about 1 m above MLLW, under water through most of the tide. On a rising tide the Sound pours through it into the lagoon, and the intake draws the water into a whirlpool strong enough to pull a floating adult through the pipe; the inflow keeps running into the last of the rise, close to high water. The north-setting shoreline eddy on the flood carries a diver toward it. Never follow the shore north past the pilings, and come back to the ramp from the pilings rather than along the beach.
-* **Boat traffic.** Small boats from the nearby marina pass close to shore. Display a dive flag, listen for engines, and surface among the pilings or close to the beach.
-* **Railroad tracks.** An active main line crosses between the parking and the beach.
-* **Bull kelp.** Entanglement in the shallows in summer. Carry a cutting tool.
-* **Lion's mane jellies.** Common in autumn. Check each other for tentacles before taking off masks and gloves.
-
-## Wind
-
-* **Orientation.** The beach faces west across the Narrows toward the Gig Harbor peninsula, about 1.5 km away.
-* **Bad.** Southerlies and southwesterlies, which come up from the South Sound past Day Island and Fox Island and push chop onto the beach, and strong northerlies funnelled down the Narrows.
-* **Fine.** East, offshore off the bluff behind the park.
-* **Wind against current.** A southerly against the south-setting flood, or a northerly against the north-setting ebb, stacks a steep, confused chop in the channel. Under the bridge it can break.
 
 ## Visibility
 
@@ -95,3 +97,12 @@ The South Sound's tides are large, and the tide swings the depth here by up to a
 * **On the sand and cobble.** Red rock crabs, decorator crabs, kelp crabs, Dungeness crabs, hermit crabs and shrimp, flounder, sea pens, sea cucumbers and ratfish. Old bottles lie scattered over the bottom, and small red octopus live in them; check a bottle for a resident before moving it.
 * **Sea stars.** Leather, mottled, sunflower and giant sea stars.
 * **Seasonal and passing.** Pacific spiny lumpsuckers in late winter and spring, schools of small baitfish in summer, and harbor seals.
+
+## Hazards
+
+* **Current.** The main Narrows flow runs strongly just past the outer pilings, and the eddy inshore runs opposite to it. A diver who strays outside the slip off slack can be carried south toward Day Island or north toward the bridge. Stay inside the pilings when the water is moving, and turn the dive early.
+* **Lagoon culvert.** A concrete culvert about 1.2 m across and 30 m long runs under the tracks from the beach to Titlow Lagoon, its mouth on the shore at 47.248846, -122.552018, about 230 m north-northeast of the entry on a bearing of 30°. The mouth sits about 1 m above MLLW, under water through most of the tide. On a rising tide the Sound pours through it into the lagoon, and the intake draws the water into a whirlpool strong enough to pull a floating adult through the pipe; the inflow keeps running into the last of the rise, close to high water. The north-setting shoreline eddy on the flood carries a diver toward it. Never follow the shore north past the pilings, and come back to the ramp from the pilings rather than along the beach.
+* **Boat traffic.** Small boats from the nearby marina pass close to shore. Display a dive flag, listen for engines, and surface among the pilings or close to the beach.
+* **Railroad tracks.** An active main line crosses between the parking and the beach.
+* **Bull kelp.** Entanglement in the shallows in summer. Carry a cutting tool.
+* **Lion's mane jellies.** Common in autumn. Check each other for tentacles before taking off masks and gloves.

@@ -5,7 +5,7 @@ Rosario Beach is a pebble and sand beach in Deception Pass State Park, at the so
 | | |
 |---|---|
 | **Location** | Deception Pass State Park, Fidalgo Island, WA. Rosario Bay, on Rosario Strait, just north of Deception Pass |
-| **Coordinates** | Dive site 48.41745, -122.66680 (seabed about 10 m below MLLW), about 230 m west of the entry |
+| **Coordinates** | 48.41745, -122.66680 (seabed about 10 m below MLLW), about 230 m west of the entry |
 | **Parking coordinates** | 48.418300, -122.662734, the Rosario Beach picnic area |
 | **Entry point coordinates** | 48.417563, -122.663700, the south end of Rosario Beach |
 | **Type** | Shore |
@@ -34,15 +34,33 @@ Dive at slack, and on a low exchange. The strait runs fast, and the offshore leg
 
 | | |
 |---|---|
-| **Governing station** | NOAA Rosario Strait current station (PUG1702), about 2.2 km northwest, mid-strait |
-| **Recommended bin** | bin 16, at 14.3 m. NOAA also publishes deeper bins at 23.3 m and 35.3 m |
-| **Time offset** | About +40 min before the ebb, +1 h 10 min before the flood |
-| **Flood axis** | north-northwest, 357° at the station, bending northwest along Rosario Head inshore |
-| **Ebb axis** | south, 190° at the station, bending southeast along Rosario Head inshore |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Point Colville, 3.0 nm east of (Lawson Reef, 1 nm NW of) (PUG1727), about 5.4 km west across Rosario Strait |
+| **Recommended bin** | bin 30, at 10.3 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | north-northeast, 21° |
+| **Station ebb axis** | south, 186° |
+| **Site flood set** | north-northwest, 343°, bending northwest along Rosario Head |
+| **Site ebb set** | south-southeast, 163°, bending southeast along Rosario Head |
 
-* **Flood.** Sets northwest past Rosario Head, Urchin Rocks and Northwest Island. Inshore, a segment rounds Urchin Rocks and curls counterclockwise through the bay, across the beach shallows, then out along the northwest cliffs.
-* **Ebb.** Sets southeast past Northwest Island, Urchin Rocks and the outer face of Rosario Head. Inshore, a segment runs along the northwest shore toward the beach, turns clockwise past the beach, flows out past Urchin Rocks (it can fluctuate here) and across the face of the head, and part of it rounds the south tip of Rosario Head into Sharpe Cove. The strait itself runs hard, peaking well over 2 m/s at the station; the bay around Urchin Rocks is comparatively sheltered.
-* **Diveable window.** For Urchin Rocks, begin about 30 minutes before the flood so the outbound swim is on the dying ebb and the return is with the building flood curling into the bay. For Rosario Head into Sharpe Cove, dive on an ebb and swim with the current around the head, keeping the wall in sight to avoid being carried past its end. For Northwest Island, swim out in the last 30 minutes of the flood and return on the ebb along the north shore. Plan every version so the return leg is with the current.
+* **Flood.** Sets northwest past Rosario Head, Urchin Rocks and Northwest Island. Inshore, a segment rounds Urchin Rocks and curls counterclockwise through the bay, across the beach shallows, then out along the northwest cliffs. Daily peaks run 0.24 to 0.87 m/s at the station over 30 days.
+* **Ebb.** Sets southeast past Northwest Island, Urchin Rocks and the outer face of Rosario Head. Inshore, a segment runs along the northwest shore toward the beach, turns clockwise past the beach, flows out past Urchin Rocks (it can fluctuate here) and across the face of the head, and part of it rounds the south tip of Rosario Head into Sharpe Cove. The strait itself runs hard, with daily ebb peaks of 0.15 to 1.67 m/s at the station over the same 30 days; the bay around Urchin Rocks is comparatively sheltered.
+* **Diveable window.** A typical window under 0.25 m/s at the station runs about 65 to 155 minutes. For Urchin Rocks, begin about 30 minutes before the flood so the outbound swim is on the dying ebb and the return is with the building flood curling into the bay. For Rosario Head into Sharpe Cove, dive on an ebb and swim with the current around the head, keeping the wall in sight to avoid being carried past its end. For Northwest Island, swim out in the last 30 minutes of the flood and return on the ebb along the north shore. Plan every version so the return leg is with the current.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | west-northwest, 292° |
+| **Dive area shore facing** | northwest, 310° |
+
+The bay opens west to northwest onto Rosario Strait, sheltered by Rosario Head to the south and the rock cliffs to the north.
+
+* **Bad.** Southwest through west-northwest (SW-WNW), onshore over 12.2 km to more than 30 km, straight into the bay off the strait, building chop on the entry and a head sea on the surface swim.
+* **Mixed.** South through south-southwest (S-SSW), cross-shore over 5.4 km to more than 30 km down the strait.
+* **Fine.** Northwest clockwise through south-southeast (NW-SSE): offshore from northeast through south-southeast, blocked by the high ground behind the beach, and onshore or cross-shore under 1 km from northwest through north-northeast.
+* **Wind against current.** South-southeast through south-southwest (SSE-SSW), over 1.9 km to more than 30 km, stacked against the ebb raises the worst surface chop; no wind with 1 km of fetch opposes the flood here. Cross-check the wind against the ebb and flood before committing to the Northwest Island crossing.
 
 ## Depth and tide
 
@@ -50,25 +68,9 @@ Rosario Bay swings roughly 2 to 4 m between high and low water, so depths are gi
 
 | | |
 |---|---|
-| **Tide station** | NOAA Deception Pass State Park, Bowman Bay tide station (9448614), about 1.2 km north |
-| **Series** | High and low water only |
+| **Tide station** | NOAA Deception Pass State Park, Bowman Bay, Fidalgo Island (9448614), about 1.1 km east-southeast |
+| **Series** | Full series |
 | **Typical range** | Median daily 2.38 m, up to 3.80 m on the year's biggest exchange; 2026 span -1.20 m to +2.77 m |
-
-## Hazards
-
-* **Strong currents.** The site sits on Rosario Strait, which runs fast and changes direction. The offshore legs, around Rosario Head and out to Northwest Island, can put you in intense current that sweeps you past the head or off the island. Slack and a low exchange only.
-* **Low visibility.** The water is usually silty, worst on the ebb and worst in spring. It reduces the margin on the longer swims, where navigation already depends on holding a reference.
-* **Kelp.** Bull kelp covers the rocky bottom, and a thick barrier of it rings Northwest Island. Carry a knife.
-* **Long swims.** Northwest Island is farther than it looks, over flat, featureless sand, and the surface leg is exposed to the full bay current and any chop. It is better done as a boat or kayak dive.
-* **Boat traffic.** Small boats work the bay and the strait. Fly a marker buoy.
-* **Sea lions.** Occasionally present around Northwest Island.
-
-## Wind
-
-* **Orientation.** The bay opens west to northwest onto Rosario Strait, sheltered by Rosario Head to the south and the rock cliffs to the north.
-* **Bad.** West through southwest, straight into the bay off the strait, building chop on the entry and a head sea on the surface swim.
-* **Fine.** East through north are offshore, blocked by the high ground behind the beach.
-* **Wind against current.** A westerly stacked against the strait flow raises the worst surface chop. Cross-check the wind against the ebb and flood axis before committing to the Northwest Island crossing.
 
 ## Visibility
 
@@ -87,3 +89,12 @@ Rosario Bay swings roughly 2 to 4 m between high and low water, so depths are gi
 * **Crabs and shrimp.** Hermit, decorator and umbrella crabs, and thousands of spider crabs. Millions of transparent shrimp skitter over the bottom, so thick the ground looks like a field of grasshoppers.
 * **Fish and cephalopods.** Kelp greenlings, grunt sculpins, rockfish and perch, lingcod, and red Irish lords tame enough to tolerate a touch. Octopus, and juvenile wolf eels in the rock.
 * **Northwest Island.** Beds of swimming scallops, huge urchins, schools of rockfish and perch, greenling and lingcod, and sponges and other invertebrates on the walls, the outer, west-facing walls the richest of it.
+
+## Hazards
+
+* **Strong currents.** The site sits on Rosario Strait, which runs fast and changes direction. The offshore legs, around Rosario Head and out to Northwest Island, can put you in intense current that sweeps you past the head or off the island. Slack and a low exchange only.
+* **Low visibility.** The water is usually silty, worst on the ebb and worst in spring. It reduces the margin on the longer swims, where navigation already depends on holding a reference.
+* **Kelp.** Bull kelp covers the rocky bottom, and a thick barrier of it rings Northwest Island. Carry a knife.
+* **Long swims.** Northwest Island is farther than it looks, over flat, featureless sand, and the surface leg is exposed to the full bay current and any chop. It is better done as a boat or kayak dive.
+* **Boat traffic.** Small boats work the bay and the strait. Fly a marker buoy.
+* **Sea lions.** Occasionally present around Northwest Island.

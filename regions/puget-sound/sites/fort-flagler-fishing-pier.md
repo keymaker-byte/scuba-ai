@@ -5,7 +5,7 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 | | |
 |---|---|
 | **Location** | Nordland, WA. East shore of Marrowstone Island, Fort Flagler Historical State Park, on Admiralty Inlet |
-| **Coordinates** | Dive area 48.09127, -122.68855 (seabed about 15 m below MLLW), roughly 300 m east of the entry |
+| **Coordinates** | 48.09127, -122.68855 (seabed about 15 m below MLLW), roughly 300 m east of the entry |
 | **Parking coordinates** | 48.091336, -122.693132, the gravel lot at the end of Flagler Road |
 | **Entry point coordinates** | 48.091333, -122.692536, the beach on the north side of the old pier site |
 | **Type** | Shore |
@@ -30,15 +30,33 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 
 | | |
 |---|---|
-| **Governing station** | Marrowstone Point (PUG1619), 2.1 km northeast |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Marrowstone Point, 0.8 mi. NE of (PUG1619), about 2.1 km northeast |
 | **Recommended bin** | bin 46, at 9.0 m |
-| **Time offset** | About 60 minutes early on the ebb to flood turn; the ebb to slack turn is less consistent and worth treating with more caution |
-| **Flood axis** | Southeast, 129° |
-| **Ebb axis** | North northwest, 349° |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | southeast, 129° |
+| **Station ebb axis** | north-northwest, 349° |
+| **Site flood set** | south, 172° |
+| **Site ebb set** | north, 352° |
 
-* **Flood.** Sets southeast in the main channel, but a reverse eddy runs along the shoreline south of Marrowstone Point: right at the pier, both flood and ebb push north northwest, past the site toward the point.
-* **Ebb.** Sets north northwest, both in the channel and along the shore, the same direction as the nearshore flood push. Visibility tends to be better on the ebb to flood slack than the flood to ebb.
-* **Diveable window.** Exposed directly to Admiralty Inlet, so current builds fast off slack and the window is unforgiving of a late entry. Pick a small exchange day and check the water visually before committing to the swim out.
+* **Flood.** Sets southeast in the main channel, but a reverse eddy runs along the shoreline south of Marrowstone Point: right at the pier, both flood and ebb push north-northwest, past the site toward the point. Daily peaks run 1.42 to 2.35 m/s at the station over 30 days.
+* **Ebb.** Sets north-northwest, both in the channel and along the shore, the same direction as the nearshore flood push, with daily peaks of 0.92 to 2.33 m/s at the station over the same 30 days. Visibility tends to be better on the ebb to flood slack than the flood to ebb.
+* **Diveable window.** A typical window under 0.25 m/s at the station runs about 30 to 55 minutes. Exposed directly to Admiralty Inlet, so current builds fast off slack and the window is unforgiving of a late entry. Pick a small exchange day and check the water visually before committing to the swim out.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | east, 95° |
+| **Dive area shore facing** | east, 94° |
+
+The beach faces east across Admiralty Inlet toward Whidbey Island.
+
+* **Bad.** Northeast through south-southeast (NE-SSE), onshore over 6.2 to 20.6 km, with open fetch running the length of the inlet in both directions.
+* **Mixed.** North-northeast (NNE), cross-shore over 8.7 km.
+* **Fine.** South clockwise through north (S-N): offshore from southwest through north-northwest over Marrowstone Island, and cross-shore under 1.4 km from south, south-southwest and north.
+* **Wind against current.** North through north-northeast (N-NNE), over 1.0 to 8.7 km, against the north-setting ebb and the nearshore push on both exchanges, builds steep chop right at the entry; avoid it. Southeast through south (SE-S), over 1.4 to 20.6 km, opposes the flood in the channel.
 
 ## Depth and tide
 
@@ -46,24 +64,11 @@ Admiralty Inlet's tide swings a few metres a day here, and because the outer ree
 
 | | |
 |---|---|
-| **Tide station** | Marrowstone Point (9444972), at the site |
+| **Tide station** | NOAA Marrowstone Point (9444972), about 0.1 km, at the site |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 2.77 m, up to 4.22 m on the year's biggest exchange; 2026 span -1.25 m to +3.16 m |
 
-The 15 m reef point reads about 14.7 m below the surface near a low around 0 m, and about 17.5 m below the surface near a high around +2.8 m.
-
-## Hazards
-
-* **Current.** The primary hazard. Exposed to the main entrance channel for the whole Sound, it runs hard off slack and has caught divers by surprise; the rope along the rubble reef and the cylinders themselves give something to hold onto if it does.
-* **Fishing line.** Line and hooks collect on the pilings and the reef. Carry a knife.
-* **Disorientation.** The sand flats north of the pier line are flat and nearly featureless; easy to lose the reef and the way back without a compass.
-
-## Wind
-
-* **Orientation.** The beach faces east across Admiralty Inlet toward Whidbey Island.
-* **Bad.** Northeast through southeast, with open fetch running the length of the inlet in both directions.
-* **Fine.** Southwest through northwest, offshore over Marrowstone Island.
-* **Wind against current.** A northerly wind against the north northwest running ebb (and against the nearshore push on the flood) builds steep chop right at the entry; avoid it.
+The 15 m reef point reads about 13.8 m below the surface at the year's lowest low of -1.25 m, and about 18.2 m at its highest high of +3.16 m.
 
 ## Visibility
 
@@ -79,3 +84,9 @@ The 15 m reef point reads about 14.7 m below the surface near a low around 0 m, 
 * **Fish.** Quillback rockfish, kelp greenling, painted greenling, red Irish lord, lingcod, wolf eels, buffalo sculpin, flounder and gunnels around the rubble and pilings.
 * **Invertebrates.** Giant acorn barnacles, plumose and Christmas anemones, rock scallops, swimming scallops, hermit, spider and Dungeness crabs, leafy finger sponges and hard yellow sponges, plume worms and cemented tube worms.
 * **Sandy bottom.** Sea pens and orange and white sea cucumbers in the open sand around the reef, with moon snail egg cases and moon jellies drifting through.
+
+## Hazards
+
+* **Current.** The primary hazard. Exposed to the main entrance channel for the whole Sound, it runs hard off slack and has caught divers by surprise; the rope along the rubble reef and the cylinders themselves give something to hold onto if it does.
+* **Fishing line.** Line and hooks collect on the pilings and the reef. Carry a knife.
+* **Disorientation.** The sand flats north of the pier line are flat and nearly featureless; easy to lose the reef and the way back without a compass.

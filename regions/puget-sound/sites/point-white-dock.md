@@ -5,7 +5,7 @@ Shore dive off a historic Mosquito Fleet steamer dock on the southwest shore of 
 | | |
 |---|---|
 | **Location** | Bainbridge Island, WA. Southwest shore at Point White, on Port Orchard at the west end of Rich Passage |
-| **Coordinates** | Dive site 47.599368, -122.577609 (seabed about 3.2 m below MLLW), the end of the dock |
+| **Coordinates** | 47.599368, -122.577609 (seabed about 3.2 m below MLLW), the end of the dock |
 | **Parking coordinates** | 47.599953, -122.576298, roadside at the pier on Crystal Springs Drive NE |
 | **Entry point coordinates** | 47.599824, -122.576689, the beach beside the base of the dock |
 | **Type** | Shore |
@@ -30,15 +30,33 @@ Shore dive off a historic Mosquito Fleet steamer dock on the southwest shore of 
 
 | | |
 |---|---|
+| **Current type** | Tidal |
 | **Governing station** | NOAA Rich Passage, West end (PUG1514), about 1.6 km southeast |
-| **Recommended bin** | bin 5, at 9.5 m |
-| **Time offset** | Subtract 30 minutes from the station's slack, then confirm by looking at the water before entering |
-| **Flood axis** | southwest, 238° |
-| **Ebb axis** | northeast, 55° |
+| **Recommended bin** | bin 8, at 3.5 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | west-southwest, 239° |
+| **Station ebb axis** | northeast, 55° |
+| **Site flood set** | north-northwest, 344° |
+| **Site ebb set** | south-southeast, 164° |
 
-* **Flood.** At the dock the flood sets north, about 345°, along the shore up Port Orchard, while the station out in Rich Passage reports it heading southwest into Sinclair Inlet. Peak speeds at the station run 1.2 to 1.8 m/s; along the dock the current is far weaker but still enough to make holding a position over the shallow sand hard work.
-* **Ebb.** Sets south, about 165°, along the shore back toward Rich Passage.
-* **Diveable window.** Either slack. The point sits where Rich Passage, Port Orchard and Sinclair Inlet meet, and slack here runs anywhere from about 20 to 40 minutes ahead of the station, so treat the offset as a starting point. Arrive early, watch the water along the pilings, and be ready to wait or call the dive. With a slight current running, start west of the pilings and work up-current first.
+* **Flood.** At the dock the flood sets north, about 345°, along the shore up Port Orchard, while the station out in Rich Passage reports it heading southwest into Sinclair Inlet. Daily peaks at the station run 1.06 to 1.83 m/s over 30 days; along the dock the current is far weaker but still enough to make holding a position over the shallow sand hard work.
+* **Ebb.** Sets south, about 165°, along the shore back toward Rich Passage, with daily peaks of 0.55 to 2.08 m/s at the station over the same 30 days.
+* **Diveable window.** Either slack. A typical window under 0.25 m/s at the station runs about 30 to 70 minutes. The point sits where Rich Passage, Port Orchard and Sinclair Inlet meet. Arrive early, watch the water along the pilings, and be ready to wait or call the dive. With a slight current running, start west of the pilings and work up-current first.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | west-southwest, 251° |
+| **Dive area shore facing** | west-southwest, 251° |
+
+The beach faces west-southwest across Port Orchard toward Bremerton, with Port Orchard running north and Rich Passage opening to the south and east.
+
+* **Bad.** South-southwest (SSW), onshore over 6.3 km.
+* **Short fetch.** Southwest through northwest (SW-NW), onshore over 1.2 to 2.0 km of open water.
+* **Fine.** North-northwest clockwise through south (NNW-S): offshore from north-northeast through southeast, blocked by the island behind the beach, and cross-shore under 3.1 km along Port Orchard from north-northwest, north, south-southeast and south.
+* **Wind against current.** Northwest through north (NW-N), over 1.9 to 3.1 km, opposing the flood's northward set along the shore, or south-southeast through south-southwest (SSE-SSW), over 1.8 to 6.3 km, against the ebb's southward set, is the roughest combination.
 
 ## Depth and tide
 
@@ -46,7 +64,7 @@ The dock sits in very shallow water, so the tide changes the dive under it more 
 
 | | |
 |---|---|
-| **Tide station** | NOAA Clam Bay, Rich Passage (9445938), about 3.9 km |
+| **Tide station** | NOAA Clam Bay, Rich Passage (9445938), about 3.9 km southeast |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.45 m, up to 5.11 m on the year's biggest exchange; 2026 span -1.31 m to +4.00 m |
 
@@ -55,20 +73,6 @@ The dock sits in very shallow water, so the tide changes the dive under it more 
 | Dock end | 3.2 m | 1.9 m | 7.2 m |
 | Slope, about 30 m past the dock end | 9 m | 7.7 m | 13 m |
 | Slope, about 80 m past the dock end | 17 m | 15.7 m | 21 m |
-
-## Hazards
-
-* **Current.** Real, and timing it off a prediction alone is unreliable here. Look at the water before kitting up and abort if the pilings show a set.
-* **Shallow depth.** Much of the dive is in 2 to 9 m. Weight to stay down in the shallows, where the life is, and watch buoyancy on the ascent from so little depth.
-* **Depth creep.** The slope past the dock end drops steeply and keeps going past 30 m; it is easy to follow it deeper than planned.
-* **Boat and fishing traffic.** The pier is a fishing and crabbing spot, so expect lines and crab pots around the pilings, and small boats rounding Point White. Carry a cutting tool and fly a marker buoy.
-
-## Wind
-
-* **Orientation.** The beach faces west-southwest across Port Orchard toward Bremerton, with Port Orchard running north and Rich Passage opening to the south and east.
-* **Bad.** North and south winds blow along Port Orchard's length and build chop over the longest fetch; west and southwest winds blow straight onshore across a few kilometres of open water.
-* **Fine.** East and northeast, offshore and blocked by the island behind the beach.
-* **Wind against current.** A south wind opposing the flood's northward set along the shore, or a north wind against the ebb's southward set, is the roughest combination.
 
 ## Visibility
 
@@ -87,3 +91,10 @@ The dock sits in very shallow water, so the tide changes the dive under it more 
 * **Fish.** Blue striped seaperch, tube-snouts and gunnels among the pilings.
 * **Nudibranchs.** Brown-striped nudibranchs on the sea pens, and the pink scoop-shovel nudibranch.
 * **Algae and drifters.** Sea lettuce and iridescent blue ribbon kelp, and moon jellies in the water column.
+
+## Hazards
+
+* **Current.** Real, and timing it off a prediction alone is unreliable here. Look at the water before kitting up and abort if the pilings show a set.
+* **Shallow depth.** Much of the dive is in 2 to 9 m. Weight to stay down in the shallows, where the life is, and watch buoyancy on the ascent from so little depth.
+* **Depth creep.** The slope past the dock end drops steeply and keeps going past 30 m; it is easy to follow it deeper than planned.
+* **Boat and fishing traffic.** The pier is a fishing and crabbing spot, so expect lines and crab pots around the pilings, and small boats rounding Point White. Carry a cutting tool and fly a marker buoy.

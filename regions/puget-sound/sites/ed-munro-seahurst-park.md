@@ -32,16 +32,35 @@ Shore dive off the long sand and cobble beach of Ed Munro Seahurst Park in Burie
 
 | | |
 |---|---|
+| **Current type** | Tidal |
 | **Governing station** | NOAA Dolphin Point, 1.3 miles East of (PUG1520), about 5.0 km west-northwest in the main channel off Fauntleroy |
 | **Recommended bin** | bin 35, at 14.5 m, matching the working depth. The other published bin, at 42 m, sits well below the site |
-| **Time offset** | Not established; slack should be confirmed in the water |
-| **Flood axis** | South, 186° |
-| **Ebb axis** | North-northwest, 343° |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | south, 186° |
+| **Station ebb axis** | north-northwest, 343° |
+| **Site flood set** | south-southwest, 195° |
+| **Site ebb set** | north-northeast, 15° |
 
 * **Local flow.** The water here is weak and runs along the shore, north-northeast and south-southwest (about 18° and 198°). Out in the channel the station's currents reach a few tenths of a metre per second; along this beach the flow stays a fraction of that on most days.
-* **Flood.** Sets south-southwest along the shore.
-* **Ebb.** Out in the channel the ebb sets north, but close in front of the entry an eddy keeps the near-shore water setting south on the ebb as well, so expect a southward set on either exchange.
-* **Diveable window.** Current is minimal for most of the day, picking up to moderate only on the larger exchanges. Slack along the beach turns later than at the station, typically by 40 minutes to over an hour, and on weak exchanges the turn is so gentle its timing is ill defined. On a big exchange, plan the dive around the station's slack and expect a southward drift; finishing south of the entry is an easy walk back along the beach.
+* **Flood.** Sets south-southwest along the shore, with daily peaks of 0.19 to 0.42 m/s at the station over 30 days.
+* **Ebb.** Out in the channel the ebb sets north, but close in front of the entry an eddy keeps the near-shore water setting south on the ebb as well, so expect a southward set on either exchange. Daily peaks run 0.12 to 0.25 m/s at the station over the same 30 days.
+* **Diveable window.** Current is minimal for most of the day, picking up to moderate only on the larger exchanges. Slack along the beach turns later than at the station, typically by 40 minutes to over an hour, and on weak exchanges the turn is so gentle its timing is ill defined. On a big exchange, plan the dive around the station's slack and expect a southward drift; finishing south of the entry is an easy walk back along the beach. Current at the station stays under 0.25 m/s for about 1 to 18 hours at a time.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | west-northwest, 298° |
+| **Dive area shore facing** | west-northwest, 299° |
+
+The beach faces west-northwest across the main basin toward Vashon Island.
+
+* **Bad.** West-southwest through northwest (WSW-NW), onshore over 5.9 to 15.0 km down the main basin, put chop on the entry.
+* **Short fetch.** North-northwest through north (NNW-N), onshore over 1.3 to 2.2 km.
+* **Mixed.** South-southwest through southwest (SSW-SW), cross-shore over 7.5 to 9.5 km, running along the shore up East Passage and roughening the beach.
+* **Fine.** North-northeast clockwise through south (NNE-S): offshore from east-northeast through south, blowing off the wooded bluff behind the beach, and cross-shore under 1 km from north-northeast and northeast.
+* **Wind against current.** The water close in sets south on both exchanges, so south-southwest through southwest (SSW-SW), over 7.5 to 9.5 km, opposes it and steepens the chop over the entry; that is the combination to avoid. North-northwest through north (NNW-N), over 1.3 to 2.2 km, opposes the ebb out in the channel.
 
 ## Depth and tide
 
@@ -49,7 +68,7 @@ The tide swings 3 to 5 m here, a large share of the barge's depth, so depths are
 
 | | |
 |---|---|
-| **Tide station** | NOAA Point Vashon, Vashon Island (9446025), about 8.1 km west across the Sound |
+| **Tide station** | NOAA Point Vashon, Vashon Island (9446025), about 8.1 km west-northwest across the Sound |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.49 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.32 m to +4.04 m |
 
@@ -59,21 +78,6 @@ The tide swings 3 to 5 m here, a large share of the barge's depth, so depths are
 | Barge search contour | 11 m | 9.7 m | 15.0 m |
 | Barge, deep end | 12 m | 10.7 m | 16.0 m |
 | Deep sand slope | 24 m | 22.7 m | 28.0 m |
-
-## Hazards
-
-* **Current on large exchanges.** Usually minimal, but moderate during the bigger exchanges, and near the entry it sets south on both the flood and the ebb.
-* **Navigation.** The bottom is open sand with little relief, and the barge is low and easy to pass. Carry a compass and use the depth contour.
-* **Boat traffic.** Small boats pass along the beach. Fly a marker buoy and listen before surfacing.
-* **Beach.** Slick cobble and wet sand on a long, flat beach, with a line of drift logs to climb through at the top; footing is poor carrying gear on a low tide.
-* **Silt.** The soft bottom stirs easily; careful finning keeps the water clear around the barge.
-
-## Wind
-
-* **Orientation.** The beach faces west-northwest across the main basin toward Vashon Island.
-* **Bad.** West through northwest blow onshore, with fetch down the main basin from the northwest, and put chop on the entry. Southerlies run along the shore with fetch up East Passage and roughen the beach as well.
-* **Fine.** East and northeast are offshore, blowing off the wooded bluff behind the beach.
-* **Wind against current.** The water close in sets south on both exchanges, so a south wind opposing it steepens the chop over the entry. That is the combination to avoid.
 
 ## Visibility
 
@@ -92,3 +96,11 @@ The tide swings 3 to 5 m here, a large share of the barge's depth, so depths are
 * **On the sand.** Flounder and C-O sole lie hidden on the bottom, moon snails plough the sand, and hermit crabs, burrowing sea cucumbers, sea anemones and sea stars dot the slope.
 * **Around the barge and eelgrass.** Perch gather over the barge remains and the eelgrass bed, and stubby squid turn up on the sand.
 * **Overhead.** Harbor seals, sea lions and harbor porpoises pass along the beach.
+
+## Hazards
+
+* **Current on large exchanges.** Usually minimal, but moderate during the bigger exchanges, and near the entry it sets south on both the flood and the ebb.
+* **Navigation.** The bottom is open sand with little relief, and the barge is low and easy to pass. Carry a compass and use the depth contour.
+* **Boat traffic.** Small boats pass along the beach. Fly a marker buoy and listen before surfacing.
+* **Beach.** Slick cobble and wet sand on a long, flat beach, with a line of drift logs to climb through at the top; footing is poor carrying gear on a low tide.
+* **Silt.** The soft bottom stirs easily; careful finning keeps the water clear around the barge.

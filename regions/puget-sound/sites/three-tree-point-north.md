@@ -5,7 +5,7 @@ Shore dive on the north side of Three Tree Point, a wooded residential point tha
 | | |
 |---|---|
 | **Location** | Burien, WA. North side of Three Tree Point, East Passage, Puget Sound |
-| **Coordinates** | Dive site 47.45336, -122.38006 (seabed about 32 m below MLLW), about 140 m north-northwest of the entry |
+| **Coordinates** | 47.45336, -122.38006 (seabed about 32 m below MLLW), about 140 m north-northwest of the entry |
 | **Parking coordinates** | 47.451762, -122.378860, the small unmarked paved area at the head of the path |
 | **Entry point coordinates** | 47.452233, -122.379252, the north-side beach access at the end of SW 170th Street |
 | **Type** | Shore |
@@ -32,15 +32,35 @@ The reef is spread across a broad area and is easy to miss piecemeal, so most di
 
 | | |
 |---|---|
-| **Governing station** | NOAA Dolphin Point, 1.3 miles East of (PUG1520), about 6.3 km northwest, mid East Passage |
-| **Recommended bin** | bin 35, at 14.5 m, matching the reef depth. The other published bin, at 42 m, sits below the site |
-| **Time offset** | Not firmly established; the station sits well up the channel, so treat its slack as approximate and give it margin |
-| **Flood axis** | south, 186° |
-| **Ebb axis** | north-northwest, 343° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Dolphin Point, 1.3 miles East of (PUG1520), about 6.3 km north-northwest, mid East Passage |
+| **Recommended bin** | bin 28, at 42.5 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | south, 184° |
+| **Station ebb axis** | north-northwest, 343° |
+| **Site flood set** | south, 176°, wrapping southwest toward the point along the shore |
+| **Site ebb set** | north, 356° |
 
-* **Flood.** In the channel the flood sets south down East Passage; along the north side of the point it wraps clockwise and runs southwest toward the point, parallel to shore. The flood is the stronger of the two exchanges here.
-* **Ebb.** The channel ebb sets north-northwest, and back-eddies form off the point. Because the ebb is the gentler exchange, the slack before the ebb and the ebb itself are the calmer times to dive.
+* **Flood.** In the channel the flood sets south down East Passage; along the north side of the point it wraps clockwise and runs southwest toward the point, parallel to shore. The flood is the stronger of the two exchanges here, with daily peaks of 0.14 to 0.44 m/s at the station over 30 days.
+* **Ebb.** The channel ebb sets north-northwest, and back-eddies form off the point. Because the ebb is the gentler exchange, the slack before the ebb and the ebb itself are the calmer times to dive. Daily peaks run 0.10 to 0.23 m/s at the station over the same 30 days.
 * **Where the current sits.** It is usually mild and often unnoticeable at depth, and stronger in the shallows. Staying toward the northeast, junkyard end keeps you out of most of it, and the water builds as you work southwest toward the point. The junkyard is sheltered on an ebb, while the straight-out ground toward the point is best on slack or a mild ebb. Strong current is rare and comes with large tidal exchanges; on a big exchange, enter down-current and drift back to the entry.
+* **Diveable window.** Current at the station stays under 0.25 m/s for about 1 to 19 hours at a time.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | north-northwest, 337° |
+| **Dive area shore facing** | north-northwest, 328° |
+
+The beach faces north to northwest across East Passage.
+
+* **Bad.** West-northwest through north (WNW-N), onshore over 5.1 to 21.6 km up the passage, which puts chop on the entry.
+* **Short fetch.** West (W), onshore over 4.8 km, and north-northeast (NNE), onshore over 3.7 km.
+* **Mixed.** Southwest (SW), cross-shore over 6.2 km.
+* **Fine.** Northeast clockwise through south-southwest (NE-SSW), offshore off the point and the land behind the beach, or cross-shore over 1.3 km or less; and west-southwest (WSW), cross-shore over 4.9 km.
+* **Wind against current.** Northwest through north-northeast (NW-NNE) blows against the north setting ebb and steepens the surface chop. That is the combination to avoid.
 
 ## Depth and tide
 
@@ -48,7 +68,7 @@ East Passage swings 3 to 5 m between high and low water here, a large fraction o
 
 | | |
 |---|---|
-| **Tide station** | NOAA Des Moines, East Passage (9446248), about 7.0 km south on the same shore |
+| **Tide station** | NOAA Des Moines, East Passage (9446248), about 7.1 km south-southeast on the same shore |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m |
 
@@ -60,21 +80,6 @@ East Passage swings 3 to 5 m between high and low water here, a large fraction o
 | Deeper tire cluster | 18 m | 16.7 m | 22.1 m |
 | Fiberform boat | 21 m | 19.7 m | 25.1 m |
 | Base of reef, silt line | 27 m | 25.7 m | 31.1 m |
-
-## Hazards
-
-* **Steep slope.** The bottom falls away quickly and continues past 40 m, and it is easy to drift deep without noticing while following the reef. Watch depth and gas.
-* **Entanglement.** The reef is man-made junk: tires, pipe, boats, line and appliances all snag. Carry a knife.
-* **Current in the shallows.** Usually mild, but it runs stronger in the shallows than at depth and picks up toward the point and on large tidal exchanges.
-* **Boat traffic.** Salmon fishing boats work the point in summer and small boats pass close. Fly a marker buoy and listen before ascending.
-* **Access and neighbours.** Private property on both sides of the access, dawn-to-dusk hours with a posted fine, and a quiet residential street. Keep noise down, especially on night dives.
-
-## Wind
-
-* **Orientation.** The beach faces north to northwest across East Passage.
-* **Bad.** North through northwest, onshore with fetch up the passage, which puts chop on the entry.
-* **Fine.** South, southeast and southwest are offshore, blowing off the point and the land behind the beach.
-* **Wind against current.** The ebb sets north-northwest, so a north wind opposing it steepens the surface chop. That is the combination to avoid.
 
 ## Visibility
 
@@ -95,3 +100,11 @@ East Passage swings 3 to 5 m between high and low water here, a large fraction o
 * **Sea stars.** A diverse cast: blood, vermilion, pink, rose, morning sun, Stimpson's sun and sunflower stars work the reef and sand.
 * **Sculpins and small fish.** Grunt, sailfin, great, Pacific staghorn and roughback sculpins, gunnels and snake pricklebacks along the cobble and sand. Stubby and opalescent squid appear in winter, and Pacific spiny lumpsuckers turn up in the kelp in late fall and winter.
 * **Seasonal visitors.** Big skate and longnose skate move over the deeper sand below about 25 m, and six-gill sharks are a rare summer sighting, reported between roughly 10 and 35 m from June to October.
+
+## Hazards
+
+* **Steep slope.** The bottom falls away quickly and continues past 40 m, and it is easy to drift deep without noticing while following the reef. Watch depth and gas.
+* **Entanglement.** The reef is man-made junk: tires, pipe, boats, line and appliances all snag. Carry a knife.
+* **Current in the shallows.** Usually mild, but it runs stronger in the shallows than at depth and picks up toward the point and on large tidal exchanges.
+* **Boat traffic.** Salmon fishing boats work the point in summer and small boats pass close. Fly a marker buoy and listen before ascending.
+* **Access and neighbours.** Private property on both sides of the access, dawn-to-dusk hours with a posted fine, and a quiet residential street. Keep noise down, especially on night dives.

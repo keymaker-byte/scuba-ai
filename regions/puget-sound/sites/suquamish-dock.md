@@ -5,7 +5,7 @@ Suquamish Dock is a long public dock and boat ramp on the Suquamish waterfront, 
 | | |
 |---|---|
 | **Location** | Suquamish, WA. Port Madison, Kitsap Peninsula, on the Port Madison Indian Reservation |
-| **Coordinates** | Dive site 47.7291, -122.5490 (seabed 5.3 m below MLLW, off the end of the dock) |
+| **Coordinates** | 47.7291, -122.5490 (seabed 5.3 m below MLLW, off the end of the dock) |
 | **Parking coordinates** | 47.729221, -122.551809, across the road on Suquamish Way NE |
 | **Entry point coordinates** | 47.729010, -122.551825, the Suquamish boat ramp, next to the dock |
 | **Type** | Shore |
@@ -30,32 +30,55 @@ Negligible at every stage of the tide. This stretch of Port Madison sits off to 
 
 | | |
 |---|---|
-| **Governing station** | None near enough to govern. The nearest predicted stations, PCT1636 and PUG1501, both describe the Agate Passage channel itself, not this sheltered stretch of harbor |
+| **Current type** | Tidal |
+| **Governing station** | None governs. The nearest station with predictions is Agate Passage, south end (PUG1501), about 2.4 km southwest through Agate Passage |
 | **Recommended bin** | Not applicable |
-| **Time offset** | None |
-| **Flood axis** | Roughly north to south, weak enough that the axis matters little |
-| **Ebb axis** | Roughly south to north, likewise weak |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | Not applicable |
+| **Station ebb axis** | Not applicable |
+| **Site flood set** | south-southwest, 197°, weak enough that the set matters little |
+| **Site ebb set** | north-northeast, 017°, likewise weak |
 
 * **Diveable window.** All day. Current is not a planning factor here.
 
-## Depth and tide
+## Wind
 
 | | |
 |---|---|
-| **Tide station** | NOAA Port Madison (9445753), about 3.4 km |
+| **Entry shore facing** | east-southeast, 120° |
+| **Dive area shore facing** | east-southeast, 115° |
+
+* **Bad.** East through east-southeast (E-ESE), onshore over 11.8 to 13.2 km down the length of Port Madison.
+* **Short fetch.** East-northeast (ENE), and southeast through south-southeast (SE-SSE), onshore over 2.7 to 4.5 km.
+* **Fine.** South clockwise through northeast (S-NE), offshore off the waterfront, cross-shore over 2.8 km or less, or onshore under 1 km.
+* **Wind against current.** The water is too weak to stack against a wind; wind alone sets the surface.
+
+## Depth and tide
+
+The tide swings up to about 5 m here, nearly the whole depth at the dock: the 5.3 m bottom off the dock end reads about 4.0 m at the year's lowest low and about 9.3 m at its highest high.
+
+| | |
+|---|---|
+| **Tide station** | NOAA Port Madison (9445753), about 3.2 km southeast |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m |
+
+## Visibility
+
+* **Not current flushed.** Sheltered from the passage's flow, so this stretch of harbor is not scoured clear the way a fast tidal channel is. Expect the same broader seasonal swings as the rest of Puget Sound, worst through spring and summer plankton blooms, rather than the current driven clarity pattern of a genuinely current-swept site.
+
+## Temperature
+
+* **At depth.** Roughly 7 to 11 °C year round, in line with the wider central Sound. Standard drysuit protocol.
+* **Surface layer.** Warms into the low teens late in summer.
+
+## Marine life
+
+* **Pilings.** Kelp grows thick on the dock's metal pilings, the main marine growth documented here.
 
 ## Hazards
 
 * **Boat traffic.** A working dock and boat ramp, with launch traffic to watch for on the surface.
 * **Glass and metal debris.** The old bottles and dock hardware on the bottom are part of the draw, but broken glass and rusted metal are both real cut hazards.
 * **Access is informal.** Diving here rests on the Tribe continuing to permit it rather than on any formal designation; a low profile keeps it that way.
-
-## Visibility
-
-* **Not current flushed.** Sheltered from the passage's flow, so this stretch of harbor is not scoured clear the way a fast tidal channel is. Expect the same broader seasonal swings as the rest of Puget Sound, worst through spring and summer plankton blooms, rather than the current driven clarity pattern of a genuinely current-swept site.
-
-## Marine life
-
-* **Pilings.** Kelp grows thick on the dock's metal pilings, the main marine growth documented here.

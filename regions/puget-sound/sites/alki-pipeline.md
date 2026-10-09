@@ -5,7 +5,7 @@ Shore dive on the southwest side of Alki Point in West Seattle, off Constellatio
 | | |
 |---|---|
 | **Location** | West Seattle, WA. Southwest side of Alki Point, facing the main basin of Puget Sound |
-| **Coordinates** | Dive site 47.569906, -122.416610 (seabed 11.9 m below MLLW, at the end of the pipe); Alki Point lies about 0.7 km northwest |
+| **Coordinates** | 47.569906, -122.416610 (seabed 11.9 m below MLLW, at the end of the pipe); Alki Point lies about 0.7 km northwest |
 | **Parking coordinates** | 47.572746, -122.414088, on the street along Beach Drive SW |
 | **Entry point coordinates** | 47.572449, -122.413841, the beach in front of the pump station |
 | **Type** | Shore |
@@ -37,15 +37,34 @@ Currents here are light to moderate, and the site dives easily inside the point,
 
 | | |
 |---|---|
+| **Current type** | Tidal |
 | **Governing station** | NOAA Alki Point, West of (PUG1516), about 1.1 km northwest |
 | **Recommended bin** | bin 17, at 11.5 m, which matches the working depth. The deeper published bins (31 m, 59 m) sit in the channel, below anything dived here |
-| **Time offset** | Not firmly established; the station sits off the point and the point speeds the flow nearby, so treat its slack as approximate and give it margin |
-| **Flood axis** | south-southwest, 215° |
-| **Ebb axis** | north, 4° |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | south-southwest, 215° |
+| **Station ebb axis** | north, 4° |
+| **Site flood set** | south-southeast, 153° |
+| **Site ebb set** | north-northwest, 333° |
 
-* **Flood.** Sets south-southwest, down-sound past the point and into the main basin. Along the reef it runs southwest, in the direction the pipe leads.
-* **Ebb.** Sets north, back around Alki Point toward Elliott Bay.
-* **Diveable window.** Plan the slack before the ebb and splash about 45 minutes before it. The inshore ground over the pipe and sand carries little current on a small exchange; the livelier water is out and off the point.
+* **Flood.** Sets south-southwest, down-sound past the point and into the main basin. Along the reef it runs southwest, in the direction the pipe leads. Daily peaks run 0.13 to 0.49 m/s at the station over 30 days.
+* **Ebb.** Sets north, back around Alki Point toward Elliott Bay, with daily peaks of 0.25 to 0.46 m/s at the station over the same 30 days.
+* **Diveable window.** Plan the slack before the ebb and splash about 45 minutes before it. The inshore ground over the pipe and sand carries little current on a small exchange; the livelier water is out and off the point. Current at the station stays under 0.25 m/s for about 2 to 8 hours at a time.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | southwest, 218° |
+| **Dive area shore facing** | southwest, 222° |
+
+The beach faces southwest into the open main basin.
+
+* **Bad.** South through west (S-W), onshore over 7.8 to 18.8 km of open fetch down the Sound, which builds surf on the entry. A strong southerly is the classic dive-killer here.
+* **Short fetch.** South-southeast (SSE), onshore over 4.0 km, putting chop on the entry.
+* **Mixed.** West-northwest through northwest (WNW-NW), cross-shore over 7.8 to 8.0 km, running a swell along the beach.
+* **Fine.** North-northwest clockwise through southeast (NNW-SE): offshore from north-northwest through east, blowing off the West Seattle land behind the beach, and cross-shore under 1.1 km from east-southeast and southeast.
+* **Wind against current.** Southeast through south (SE-S) against the flood, over 1.1 to 18.8 km, steepens the chop on the entry; west-northwest through northwest (WNW-NW) against the ebb, over 7.8 to 8.0 km. When a south wind is up, the Elliott Bay shore around the point, sheltered from it, is the standard fallback.
 
 ## Depth and tide
 
@@ -53,8 +72,8 @@ The site is shallow the whole way, sloping gradually from the shallows at the re
 
 | | |
 |---|---|
-| **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 6.8 km northeast |
-| **Series** | High and low water only |
+| **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 6.8 km east-northeast |
+| **Series** | Full series |
 | **Typical range** | Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m |
 
 | Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
@@ -63,23 +82,6 @@ The site is shallow the whole way, sloping gradually from the shallows at the re
 | True end of pipe | 12 m | 10.7 m | 16 m |
 
 A higher tide also makes the entry and the surface swim out easier, covering the cobble and shortening the walk to water.
-
-## Hazards
-
-* **Surf and exposure.** The beach faces southwest into open Puget Sound with a long fetch. A strong south wind blows up surf on the entry and can make getting in and out difficult.
-* **Shallow profile.** The site is shallow throughout, so weight and buoyancy want care, and the surge from any swell reaches the whole dive.
-* **Combined sewer overflow.** A wastewater pump station stands at the entry, and heavy rain can drive sewer overflows in the area. Dive after dry spells, not during or just after heavy rain.
-* **Lion's mane jellies.** Common in the fall. If you have seen them, check your hood, mask and gloves for stinging tentacles before removing them.
-* **Kelp.** Bull kelp historically formed a fringing canopy over this shoreline but has largely disappeared from it, in line with the wider Puget Sound decline, so expect little to no surface canopy. Broad-leaf kelp and encrusting growth remain on the pipe. Carry a knife regardless.
-* **Boat traffic.** Small-boat traffic can be heavy in this shallow, popular water through the summer. Fly a marker buoy, and listen for engines before any final ascent.
-* **Harbor seals.** Resident along this shore. Keep at least 90 m away; do not approach.
-
-## Wind
-
-* **Orientation.** The beach faces southwest into the open main basin.
-* **Bad.** South through west, onshore with open fetch down the Sound, which builds surf on the entry. A strong southerly is the classic dive-killer here.
-* **Fine.** North, northeast and east are offshore, blowing off the West Seattle land behind the beach.
-* **Wind against current.** A southerly opposing the southwest-setting flood steepens the chop on the entry. When a south wind is up, Seacrest Park, around the point in Elliott Bay and sheltered from it, is the standard fallback.
 
 ## Visibility
 
@@ -99,3 +101,13 @@ A higher tide also makes the entry and the surface swim out easier, covering the
 * **On the sand.** Orange sea pens stand in fields off the pipe, with moon snails, flounders and tube-dwelling anemones scattered across the bottom around them. The flats away from the pipe carry eelgrass in places, and at night spiny dogfish and skates move over the open sand alongside the flounders.
 * **Octopus.** The pipe once held caves and holes that sheltered a large octopus, though the caves are silting in. Giant Pacific octopus range throughout this shore.
 * **Harbor seals.** Seen regularly along the point. Keep your distance, at least 90 m.
+
+## Hazards
+
+* **Surf and exposure.** The beach faces southwest into open Puget Sound with a long fetch. A strong south wind blows up surf on the entry and can make getting in and out difficult.
+* **Shallow profile.** The site is shallow throughout, so weight and buoyancy want care, and the surge from any swell reaches the whole dive.
+* **Combined sewer overflow.** A wastewater pump station stands at the entry, and heavy rain can drive sewer overflows in the area. Dive after dry spells, not during or just after heavy rain.
+* **Lion's mane jellies.** Common in the fall. If you have seen them, check your hood, mask and gloves for stinging tentacles before removing them.
+* **Kelp.** Bull kelp historically formed a fringing canopy over this shoreline but has largely disappeared from it, in line with the wider Puget Sound decline, so expect little to no surface canopy. Broad-leaf kelp and encrusting growth remain on the pipe. Carry a knife regardless.
+* **Boat traffic.** Small-boat traffic can be heavy in this shallow, popular water through the summer. Fly a marker buoy, and listen for engines before any final ascent.
+* **Harbor seals.** Resident along this shore. Keep at least 90 m away; do not approach.

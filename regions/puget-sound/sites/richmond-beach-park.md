@@ -5,7 +5,7 @@ Shore dive on the main basin of Puget Sound at Shoreline, just north of Seattle,
 | | |
 |---|---|
 | **Location** | Shoreline, WA. East shore of the main basin of Puget Sound, about 8 km north of downtown Seattle |
-| **Coordinates** | Dive site 47.76266, -122.38776 (seabed about 12.3 m below MLLW), about 160 m southwest of the entry |
+| **Coordinates** | 47.76266, -122.38776 (seabed about 12.3 m below MLLW), about 160 m southwest of the entry |
 | **Parking coordinates** | 47.764689, -122.383811, the lot at the bottom of the hill |
 | **Entry point coordinates** | 47.763413, -122.385973, the beach in front of the restrooms and picnic shelter |
 | **Type** | Shore |
@@ -32,20 +32,39 @@ Shore dive on the main basin of Puget Sound at Shoreline, just north of Seattle,
 
 | | |
 |---|---|
+| **Current type** | Tidal |
 | **Governing station** | NOAA President Point, 1.5 miles East of (PUG1511), about 3.3 km west, mid-channel |
-| **Recommended bin** | bin 38, at 21.6 m, the shallowest published; no bin near the site's own working depth exists |
-| **Time offset** | Not established; the station sits well out into the channel, so treat its slack as approximate and give it margin |
-| **Flood axis** | south, about 177° |
-| **Ebb axis** | north, about 3° |
+| **Recommended bin** | bin 38, at 21.8 m, the shallowest published |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | south, 177° |
+| **Station ebb axis** | north, 3° |
+| **Site flood set** | southeast, 140° |
+| **Site ebb set** | northwest, 320° |
 
-* **Flood.** Sets south down the main basin channel, running roughly parallel to this stretch of shore.
-* **Ebb.** Sets north up the channel, the reverse of the flood, also roughly shore parallel.
+* **Flood.** Sets south down the main basin channel, running roughly parallel to this stretch of shore, with daily peaks of 0.06 to 0.14 m/s at the station over 30 days.
+* **Ebb.** Sets north up the channel, the reverse of the flood, also roughly shore parallel, with daily peaks of 0.19 to 0.47 m/s at the station over the same 30 days.
 * **Current increases with depth.** Both the station and a spatial current model show this stretch of the main basin as generally weak. In the water it runs usually mild near shore but noticeably stronger below about 9 m, over the drop and across the outer debris field, and can run substantial on a larger exchange. Treat the model and station numbers as a floor, not a ceiling, and default to slack, especially for the outer, deeper part of the dive.
-* **Diveable window.** Plan tight to the station slack, save the outer debris field for the calmest part of the tide, and be ready to shorten the excursion if current builds sooner than expected.
+* **Diveable window.** Current at the station stays under 0.25 m/s for about 1.5 to 16 hours at a time. Plan tight to the station slack, save the outer debris field for the calmest part of the tide, and be ready to shorten the excursion if current builds sooner than expected.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | southwest, 215° |
+| **Dive area shore facing** | southwest, 221° |
+
+The beach faces generally west-southwest across the main basin, open enough for a sightline to the Olympics on a clear day.
+
+* **Bad.** South through west (S-W), onshore over 6.2 to 20.9 km, brings fetch straight up the main basin and chops the entry.
+* **Short fetch.** South-southeast (SSE), onshore over 1.2 km.
+* **Mixed.** West-northwest through northwest (WNW-NW), cross-shore over 9.6 to 12.6 km.
+* **Fine.** North-northwest clockwise through southeast (NNW-SE): offshore from north-northwest through east, off the bluff behind the park, and cross-shore under 1 km from east-southeast and southeast.
+* **Wind against current.** West-northwest through northwest (WNW-NW), over 9.6 to 12.6 km, opposes the ebb and south-southeast through south (SSE-S), over 1.2 to 6.6 km, the flood; it is the fetch itself, more than a wind-against-current standoff, that spoils this entry.
 
 ## Depth and tide
 
-The shelf is shallow enough that tide is a large fraction of the working depth, and the debris field's outer edge only clears the water enough to be comfortably worked within a couple of hours of slack water on some tides.
+The shelf is shallow enough that the tide is a large fraction of the working depth: Edmonds swings up to about 4.9 m between high and low water, the cobble edge dries on a big minus tide, and the shallow bench then sits under about 1 m of water.
 
 | | |
 |---|---|
@@ -61,21 +80,6 @@ The shelf is shallow enough that tide is a large fraction of the working depth, 
 | Debris field ends, top of the drop | 7.6 to 8.2 m | 6.3 to 6.9 m | 11.4 to 12 m |
 | Cinderblock and rope trail, anchor chain | 10.7 m | 9.4 m | 14.5 m |
 | Concrete anchor blocks, chain, propeller | 14.3 to 15.2 m | 13 to 13.9 m | 18.1 to 19 m |
-
-## Hazards
-
-* **The railroad crossing, not the dive.** The single biggest risk at this site has nothing to do with the water. Cross only on the pedestrian bridge, keep gear and children off the tracks at all times, and never take a shortcut at grade; trains on this line are fast and quiet enough to close distance without warning.
-* **Current at depth.** Generally mild inshore, but builds below about 9 m and across the outer debris field, more than the station or model predictions suggest. Plan the deep, outer part of the dive for slack.
-* **Entanglement.** The debris field includes rope, cable, chain and cinderblock, along with assorted metal wreckage. Carry a cutting tool.
-* **Disorientation.** Most of the shelf is plain sand between debris patches, easy to swim across without crossing anything for want of a bearing. Run the dive on compass headings rather than by eye.
-* **The hill.** A steep walk down from the parking lot to the beach, and the same walk back up in gear afterward. The path takes a wheeled cart; budget a rest before the climb.
-
-## Wind
-
-* **Orientation.** The beach faces generally west across the main basin, open enough for a sightline to the Olympics on a clear day.
-* **Bad.** West through southwest brings fetch straight up the main basin and chops the entry.
-* **Fine.** East is offshore, off the bluff behind the park.
-* **Wind against current.** The current here runs roughly north-south, parallel to the shore, so a west wind does not oppose either phase directly; it is the fetch itself, not a wind-against-current standoff, that spoils this entry.
 
 ## Visibility
 
@@ -94,3 +98,11 @@ The shelf is shallow enough that tide is a large fraction of the working depth, 
 * **Crustaceans.** Dungeness and red rock crabs, hermit crabs, and shrimp among the debris and along the sand.
 * **On the wreckage.** The scattered ship breaking debris, cinderblock, chain and concrete anchor blocks, concentrates life the way it does at other artificial sites in the region and is the main reason to work the deeper part of the dive.
 * **From the surface.** Harbor seals and harbor porpoises are seen off the beach regularly, and gray whales and orcas pass through the main basin here on occasion, generally a shore sighting rather than something encountered on the dive itself.
+
+## Hazards
+
+* **The railroad crossing, not the dive.** The single biggest risk at this site has nothing to do with the water. Cross only on the pedestrian bridge, keep gear and children off the tracks at all times, and never take a shortcut at grade; trains on this line are fast and quiet enough to close distance without warning.
+* **Current at depth.** Generally mild inshore, but builds below about 9 m and across the outer debris field, more than the station or model predictions suggest. Plan the deep, outer part of the dive for slack.
+* **Entanglement.** The debris field includes rope, cable, chain and cinderblock, along with assorted metal wreckage. Carry a cutting tool.
+* **Disorientation.** Most of the shelf is plain sand between debris patches, easy to swim across without crossing anything for want of a bearing. Run the dive on compass headings rather than by eye.
+* **The hill.** A steep walk down from the parking lot to the beach, and the same walk back up in gear afterward. The path takes a wheeled cart; budget a rest before the climb.

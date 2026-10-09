@@ -5,7 +5,7 @@ Shore dive at Marina Beach Park in Edmonds, at the southwest end of the Port of 
 | | |
 |---|---|
 | **Location** | Edmonds, WA. West-facing shore of the main basin of Puget Sound, at Marina Beach Park, at the southwest end of the Port of Edmonds marina |
-| **Coordinates** | Dive site 47.80441, -122.39792 (seabed about 13 m below MLLW, right where the sand flat gives way to a steep drop-off; the old dock's remnants lie beyond and below it, in 18 to 20 m or more) |
+| **Coordinates** | 47.80441, -122.39792 (seabed about 13 m below MLLW, right where the sand flat gives way to a steep drop-off; the old dock's remnants lie beyond and below it, in 18 to 20 m or more) |
 | **Parking coordinates** | 47.804724, -122.394138, the Marina Beach Park lots off Admiral Way |
 | **Entry point coordinates** | 47.804706, -122.394792, the beach at Marina Beach Park |
 | **Type** | Shore |
@@ -30,23 +30,41 @@ Shore dive at Marina Beach Park in Edmonds, at the southwest end of the Port of 
 
 | | |
 |---|---|
+| **Current type** | Tidal |
 | **Governing station** | NOAA Edmonds, 2.5 mi. West of (PUG1503), about 3.5 km offshore |
-| **Recommended bin** | bin 34, at 20.5 m, the shallowest published; still noticeably deeper than the sand flat, so treat its scaling as rough |
-| **Time offset** | Not established; the station sits well offshore in open water while the site is close inshore, so pad the window rather than trust its edges |
-| **Flood axis** | south-southeast, about 161 to 185° |
-| **Ebb axis** | north to north-northeast, about 358 to 5° |
+| **Recommended bin** | bin 34, at 20.5 m, the shallowest published |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | south-southeast, 161° |
+| **Station ebb axis** | north, 358° |
+| **Site flood set** | south, 185° |
+| **Site ebb set** | north, 5° |
 
-* **Flood.** Sets south-southeast, into the main basin. Generally the weaker of the two exchanges.
-* **Ebb.** Sets north-northeast, back toward the Possession Sound split and Admiralty Inlet. Usually the stronger exchange, and the one to plan around.
-* **Diveable window.** Current at the station stays weak for long stretches on an ordinary day, so timing is often forgiving, but the offset to the site itself is unverified. Plan to the slack itself rather than the window's printed edges, and pad it.
+* **Flood.** Sets south-southeast, into the main basin. Generally the weaker of the two exchanges, with daily peaks of 0.06 to 0.18 m/s at the station over 30 days.
+* **Ebb.** Sets north-northeast, back toward the Possession Sound split and Admiralty Inlet. Usually the stronger exchange, and the one to plan around, with daily peaks of 0.12 to 0.52 m/s at the station over the same 30 days.
+* **Diveable window.** Current at the station stays weak for long stretches on an ordinary day, so timing is often forgiving. Current at the station stays under 0.25 m/s for about 1 to 19 hours at a time. Plan to the slack itself rather than the window's printed edges, and pad it.
 
-## Depth and tide
-
-The site is shallow enough that the tide matters through the shoal but the deep structure past the drop-off stays diveable across most of the range.
+## Wind
 
 | | |
 |---|---|
-| **Tide station** | NOAA Edmonds (9447427), about 1.5 km away, same shore |
+| **Entry shore facing** | west, 266° |
+| **Dive area shore facing** | west-southwest, 247° |
+
+The beach faces roughly west, across the main basin toward the south end of Whidbey Island and Kingston.
+
+* **Bad.** South-southwest through northwest (SSW-NW), onshore over 6.5 to 20.0 km across the main basin, builds chop on the long surface swim.
+* **Mixed.** North-northwest through north (NNW-N), over 13.1 to 21.7 km, and south (S), over 11.6 km, cross-shore, running a swell along the beach.
+* **Fine.** North-northeast clockwise through south-southeast (NNE-SSE): offshore from north-northeast through southeast, off the land side, and cross-shore over 1.2 km from south-southeast, leave the entry sheltered.
+* **Wind against current.** North-northwest through north-northeast (NNW-NNE), over 13.1 to 28.1 km, opposing the ebb's northward set is the roughest combination for the surface swim back in. South-southeast through southwest (SSE-SW), over 1.2 to 20.0 km, opposes the flood.
+
+## Depth and tide
+
+Edmonds swings up to about 4.9 m between high and low water, a large share of the sand flat's depth, so depths are given against the MLLW chart datum. The old dock remnants past the drop-off stay diveable across the whole range.
+
+| | |
+|---|---|
+| **Tide station** | NOAA Edmonds (9447427), about 1.5 km northeast on the same shore |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m |
 
@@ -54,22 +72,6 @@ The site is shallow enough that the tide matters through the shoal but the deep 
 |---|---|---|---|
 | Drop-off edge | 13 m | 11.7 m | 16.8 m |
 | Old dock remnants | about 19 m | about 17.7 m | about 22.8 m |
-
-## Hazards
-
-* **The long swim.** Roughly 230 m of open sand each way before the interesting ground even begins, more again to work the remnants past the drop-off. Watch gas and turn with distance as well as pressure in mind.
-* **Current.** Runs harder on the ebb than the flood at the governing station; a current that seems trivial at the shallow entry can be more work at the drop-off.
-* **Depth creep.** The remnants sit past 18 m with the slope continuing beyond, and nothing at the drop-off itself marks a clear stopping point. Watch the computer, not the terrain.
-* **Boat traffic.** Recreational and fishing boats work in and out of the adjacent Port of Edmonds marina. Fly a marker buoy on the surface swim.
-* **Snags.** Old creosote piling stumps, scattered rubble and derelict line lie around the remnants at the drop-off. Carry a cutting tool.
-* **Visibility swings.** Visibility ranges from a clear several metres to a silty metre or two in the shallows, even on a day the deeper water reads well. Don't plan the swim assuming the better figure.
-
-## Wind
-
-* **Orientation.** The beach faces roughly west, across the main basin toward the south end of Whidbey Island and Kingston.
-* **Bad.** West through northwest, with open fetch across the main basin, builds chop on the long surface swim.
-* **Fine.** East through southeast, off the land side, leave the entry sheltered.
-* **Wind against current.** A westerly opposing the ebb's northward set is the roughest combination for the surface swim back in.
 
 ## Visibility
 
@@ -89,3 +91,12 @@ The site is shallow enough that the tide matters through the shoal but the deep 
 * **Nudibranchs.** A strong point of the site: leopard, frosted and Monterey dorids, some unusually large.
 * **On the sand.** Flounder lying buried in the substrate, moon snails and hermit crabs across the flat.
 * **At the remnants.** The rubble and piling stumps at the drop-off still carry plumose anemones, tube worms and other encrusting life, sparser than in the working pier's day but enough to reward the swim out. Seaweed cover in the shallows near the entry.
+
+## Hazards
+
+* **The long swim.** Roughly 230 m of open sand each way before the interesting ground even begins, more again to work the remnants past the drop-off. Watch gas and turn with distance as well as pressure in mind.
+* **Current.** Runs harder on the ebb than the flood at the governing station; a current that seems trivial at the shallow entry can be more work at the drop-off.
+* **Depth creep.** The remnants sit past 18 m with the slope continuing beyond, and nothing at the drop-off itself marks a clear stopping point. Watch the computer, not the terrain.
+* **Boat traffic.** Recreational and fishing boats work in and out of the adjacent Port of Edmonds marina. Fly a marker buoy on the surface swim.
+* **Snags.** Old creosote piling stumps, scattered rubble and derelict line lie around the remnants at the drop-off. Carry a cutting tool.
+* **Visibility swings.** Visibility ranges from a clear several metres to a silty metre or two in the shallows, even on a day the deeper water reads well. Don't plan the swim assuming the better figure.

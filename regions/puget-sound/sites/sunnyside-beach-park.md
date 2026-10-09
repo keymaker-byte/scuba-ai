@@ -5,7 +5,7 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 | | |
 |---|---|
 | **Location** | Steilacoom, WA. Sunnyside Beach Park, Chambers Creek Road, South Puget Sound |
-| **Coordinates** | Dive site 47.178155, -122.591559 (seabed about 7.4 m below MLLW, at the foot of the slope where the shore-parallel guide line runs), about 100 m from the entry on a bearing of 284° |
+| **Coordinates** | 47.178155, -122.591559 (seabed about 7.4 m below MLLW, at the foot of the slope where the shore-parallel guide line runs), about 100 m from the entry on a bearing of 284° |
 | **Parking coordinates** | 47.177167, -122.589993, the park's pay lot on the west side of Chambers Creek Road, beside the railroad tracks |
 | **Entry point coordinates** | 47.177940, -122.590275, the beach in front of the Wind Pavilion and shower at the south end of the park |
 | **Type** | Shore |
@@ -35,16 +35,33 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 
 | | |
 |---|---|
-| **Governing station** | NOAA The Narrows, South end (midstream) (PUG1528), about 9.6 km north-northeast |
-| **Recommended bin** | bin 17, at 8.0 m |
-| **Time offset** | Not established; slack should be confirmed in the water |
-| **Flood axis** | southwest, about 220° |
-| **Ebb axis** | north-northeast, about 26° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Steilacoom, 0.8 miles North of (PUG1532), about 1.2 km west-northwest |
+| **Recommended bin** | bin 16, at 13.9 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | southwest, 215° |
+| **Station ebb axis** | northeast, 051° |
+| **Site flood set** | northeast, 056°, along the beach |
+| **Site ebb set** | southwest, 236°, along the beach |
 
 * **The site's own water.** The beach sits out of the main stream between the Narrows and Nisqually Reach, and the water over the slope and the pipeline moves slowly. Along this shore it sets parallel to the beach, northeast and southwest. On most tides it is close to still, and on a large exchange it builds to a mild, noticeable current around the station's maximum.
-* **Ebb.** Inshore, the ebb runs opposite to the channel: while the main stream sets north toward the Narrows, the water along the beach sets south. At depth on an ebb it can also set gently offshore.
-* **Flood.** Early in the flood the inshore water keeps setting south, then it turns and runs north along the beach for the rest of the flood. The inshore current can switch direction more than once during a dive.
-* **Diveable window.** Most tides. On a big exchange, dive close to the station's slack for the stillest water and the best visibility; the bottom silts up as the flood builds toward its maximum.
+* **Ebb.** Inshore, the ebb runs opposite to the channel: while the main stream sets north toward the Narrows, the water along the beach sets south. At depth on an ebb it can also set gently offshore. Daily peaks run 0.11 to 0.28 m/s at the station over 30 days.
+* **Flood.** Early in the flood the inshore water keeps setting south, then it turns and runs north along the beach for the rest of the flood. The inshore current can switch direction more than once during a dive. Daily peaks run 0.09 to 0.24 m/s at the station over the same 30 days.
+* **Diveable window.** Most tides. Current at the station stays under 0.25 m/s for about 1.5 to 21 hours at a time. On a big exchange, dive close to the station's slack for the stillest water and the best visibility; the bottom silts up as the flood builds toward its maximum.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | west-northwest, 300° |
+| **Dive area shore facing** | west-northwest, 300° |
+
+The beach faces west-northwest across the South Sound toward Fox Island and Ketron Island. Chop stirs up the shallow flat and cuts the visibility at the entry.
+
+* **Bad.** Southwest through north (SW-N), onshore over 5.2 to 17.3 km from west through north, the strong northerlies coming down out of the Narrows. Southwesterlies come up Nisqually Reach over a long fetch and push chop onto the beach.
+* **Fine.** North-northeast clockwise through south-southwest (NNE-SSW), offshore off the bluff behind the park, or cross-shore over 1.6 km or less.
+* **Wind against current.** West-southwest through west (WSW-W) blows against the ebb, and north-northeast (NNE) against the flood. The inshore current is weak and raises no chop of its own; the concern is offshore in the main stream.
 
 ## Depth and tide
 
@@ -52,32 +69,17 @@ South Sound tides are large, and the tide swings the depth here by up to about 6
 
 | | |
 |---|---|
-| **Tide station** | NOAA Steilacoom, Cormorant Passage (9446714), about 1.0 km southwest |
+| **Tide station** | NOAA Steilacoom, Cormorant Passage (9446714), about 1.0 km west-southwest |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span −1.38 m to +4.76 m |
+| **Typical range** | Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m |
 
-| Feature | Below MLLW | At a −1.38 m low | At a +4.76 m high |
+| Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |
 |---|---|---|---|
 | Top of the slope | 2 m | 0.6 m | 6.8 m |
 | Foot of the slope, shore-parallel line, dive site coordinate | 7.4 m | 6.0 m | 12.2 m |
 | Junction box, Santa boat | 10.5 m | 9.1 m | 15.3 m |
 | Collapsed northern boat, bow | 11.5 m | 10.1 m | 16.3 m |
 | Pipeline, deep end of the usual dive | 28 m | 26.6 m | 32.8 m |
-
-## Hazards
-
-* **Depth along the pipeline.** The pipeline keeps deepening steadily past 28 m below MLLW, and at high water it passes 30 m on the gauge. A diver following it out on an easy gradient can run deep without noticing. Set the turn depth before the dive and watch the computer.
-* **Boat traffic.** Small boats run close to shore in summer, and the Steilacoom ferry dock is nearby. Fly a dive flag, listen for engines, and come back along the bottom.
-* **Railroad tracks.** An active rail line runs between the parking lot and the beach. Cross carefully with gear. The path down can be slippery in freezing weather.
-* **Silt.** The fine sediment on the flat and around the boats clouds easily, worst at low tide and in wind chop. Keep off the bottom near the wrecks.
-* **Jellies.** Large egg yolk jellies with long tentacles drift through in summer. Check each other for tentacles before taking off masks and gloves.
-
-## Wind
-
-* **Orientation.** The beach faces west-northwest across the South Sound toward Fox Island and Ketron Island.
-* **Bad.** Southwesterlies, which come up Nisqually Reach over a long fetch and push chop onto the beach, and strong northerlies down out of the Narrows. Chop stirs up the shallow flat and cuts the visibility at the entry.
-* **Fine.** East and southeast, offshore off the bluff behind the park.
-* **Wind against current.** A concern offshore in the main stream, where a southerly against the flood or a northerly against the ebb roughens the surface. The inshore current is weak and raises no chop of its own.
 
 ## Visibility
 
@@ -96,3 +98,11 @@ South Sound tides are large, and the tide swings the depth here by up to about 6
 * **In the eelgrass.** The shallows are the site's macro highlight: Pacific spiny lumpsuckers, including tiny juveniles on the red and brown algae from late winter into spring, juvenile snailfish, Moss Landing aeolids, spotted aglajas, winged sea slugs and their egg masses, hooded nudibranchs, bay pipefish and crescent gunnels. The bed has thinned in recent years.
 * **Nudibranchs throughout.** Striped (Armina), Tritonia festiva, diamondback, frosted, white-lined and golden dironas, barnacle-eating dorids and opalescent nudibranchs.
 * **In the water column.** Moon, egg yolk, red sausage and water jellies, comb jellies, and opalescent squid mating in summer.
+
+## Hazards
+
+* **Depth along the pipeline.** The pipeline keeps deepening steadily past 28 m below MLLW, and at high water it passes 30 m on the gauge. A diver following it out on an easy gradient can run deep without noticing. Set the turn depth before the dive and watch the computer.
+* **Boat traffic.** Small boats run close to shore in summer, and the Steilacoom ferry dock is nearby. Fly a dive flag, listen for engines, and come back along the bottom.
+* **Railroad tracks.** An active rail line runs between the parking lot and the beach. Cross carefully with gear. The path down can be slippery in freezing weather.
+* **Silt.** The fine sediment on the flat and around the boats clouds easily, worst at low tide and in wind chop. Keep off the bottom near the wrecks.
+* **Jellies.** Large egg yolk jellies with long tentacles drift through in summer. Check each other for tentacles before taking off masks and gloves.

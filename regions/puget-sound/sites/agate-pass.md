@@ -5,7 +5,7 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 | | |
 |---|---|
 | **Location** | Bainbridge Island and Suquamish, WA. Agate Passage, between Puget Sound's main basin and Port Madison |
-| **Coordinates** | Dive site 47.7124, -122.5661 (seabed 9.2 m below MLLW, at the bridge pylons) |
+| **Coordinates** | 47.7124, -122.5661 (seabed 9.2 m below MLLW, at the bridge pylons) |
 | **Parking coordinates** | 47.711761, -122.563847, under the power line near Reitan Road |
 | **Entry point coordinates** | 47.711983, -122.563831, under the bridge |
 | **Type** | Shore |
@@ -31,38 +31,51 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 
 | | |
 |---|---|
+| **Current type** | Tidal |
 | **Governing station** | NOAA Agate Passage, south end (PUG1501), essentially at the site, about 0.2 km away |
-| **Recommended bin** | bin 1, at 7.6 m |
-| **Time offset** | None. The station sits inside the pass itself, and its slack times agree with the site's own ENPAC15 extract to within about 20 minutes |
-| **Flood axis** | SSW, about 200 to 218° |
-| **Ebb axis** | NNE, about 21 to 38° |
+| **Recommended bin** | bin 1, at 7.65 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | south-southwest, 200° |
+| **Station ebb axis** | north-northeast, 21° |
+| **Site flood set** | southwest, 218° |
+| **Site ebb set** | northeast, 38° |
 
-* **Flood.** Sets south, back into the pass toward the bridge and the main basin.
-* **Ebb.** Sets north, out of the pass toward Suquamish and Port Madison. This is the drift direction, from the bridge to Old Man House Park. The current is markedly stronger at the bridge than at the Suquamish end, roughly twice the speed, so the same tide that is comfortable at the north end can be running hard at the south end.
-* **Diveable window.** Slack at the bridge is brief, typically under an hour and narrower still on a big exchange; the pass is comfortable to work for a look-and-see dive only within that window, and is a drift the rest of the cycle. Plan around a modest exchange, under about 2 m, for the easiest current; a large spring exchange can push the bridge current well past 1 m/s.
+* **Flood.** Sets south, back into the pass toward the bridge and the main basin, with daily peaks of 0.90 to 1.63 m/s at the station over 30 days.
+* **Ebb.** Sets north, out of the pass toward Suquamish and Port Madison. This is the drift direction, from the bridge to Old Man House Park. The current is markedly stronger at the bridge than at the Suquamish end, roughly twice the speed, so the same tide that is comfortable at the north end can be running hard at the south end. Daily peaks run 0.51 to 1.29 m/s at the station over the same 30 days.
+* **Diveable window.** Slack at the bridge is brief, about 35 to 65 minutes at the station and narrower still on a big exchange; the pass is comfortable to work for a look-and-see dive only within that window, and is a drift the rest of the cycle. Plan around a modest exchange, under about 2 m, for the easiest current; a large spring exchange can push the bridge current well past 1 m/s.
 
-## Depth and tide
+Legacy correction, carried as published and separate from the reconciled figures above:
 
 | | |
 |---|---|
-| **Tide station** | NOAA Port Madison (9445753), about 3.2 km north |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m |
-
-## Hazards
-
-* **Strong current.** Away from slack the pass runs as a drift, fast enough that stopping to look at anything is difficult, and requires active buddy contact to avoid being separated.
-* **Overhead boat traffic.** The pass is a working boating channel between Puget Sound and Port Madison, and traffic can be heavy, worst in summer. Dive properly weighted, ready to hold depth rather than surface into a boat.
-* **Barnacles and snag hazards.** Drifting close to the pylons or the rocky shore risks a suit snag on barnacles; carry a sharp knife.
-* **Missing the take-out.** A diver who overshoots Old Man House Park on the drift is carried on into Port Madison's open water.
-* **Fishing line and nets.** Around the bridge structure and pilings.
+| **Legacy station** | Agate Passage, north end, 47°43.32′ N, 122°33.30′ W, about 1.4 km northeast |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 1 hour 28 minutes before the reference |
+| **Slack before ebb** | 18 minutes before the reference |
 
 ## Wind
 
-* **Orientation.** The pass runs roughly north to south between wooded, steep shores, about 270 m wide.
-* **Bad.** Wind blowing along the length of the channel, from the north or the south, gets a straight fetch over the full 1.6 km run and is the one direction that can raise chop.
-* **Fine.** Wind across the channel, from the east or west, has almost no fetch given the width, and the high wooded banks block much of it regardless.
-* **Wind against current.** A north wind opposing the ebb is the combination to avoid, especially near the Suquamish end where the drift surfaces.
+| | |
+|---|---|
+| **Entry shore facing** | west-northwest, 300° |
+| **Dive area shore facing** | southeast, 131° |
+
+The pass runs roughly north to south between wooded, steep shores, about 270 m wide.
+
+* **Mixed.** Northeast (NE), over 5.2 km, and south-southwest (SSW), over 8.0 km, cross-shore at the entry along the channel's own axis. Wind blowing along the length of the channel is the one direction that can raise chop.
+* **Fine.** East-northeast through south (ENE-S), offshore; and southwest clockwise through north-northeast (SW-NNE), under 2 km of fetch across and along the narrow channel. The high wooded banks block much of it regardless.
+* **Wind against current.** A northeast wind (NE) against the ebb, over 5.2 km, is the combination to avoid, especially near the Suquamish end where the drift surfaces. South through southwest (S-SW) against the flood, over 1.7 to 8.0 km.
+
+## Depth and tide
+
+The tide swings up to about 5 m here, so depths are given below the MLLW chart datum.
+
+| | |
+|---|---|
+| **Tide station** | NOAA Port Madison (9445753), about 3.2 km east-southeast, on Port Madison at the north end of the pass |
+| **Series** | High and low water only |
+| **Typical range** | Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m |
 
 ## Visibility
 
@@ -78,3 +91,11 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 * **Bottom.** Primarily sandy cobblestone, with patches of clay, shoals of shell fragments, sandy stretches and a few large rocks. Sea stars are scattered across it. Eelgrass grows in the shallows at both ends of the channel.
 * **Small fish and invertebrates.** Grunt sculpins, chitons, limpets and red Irish lords are frequently seen.
 * **Bridge piers.** Lingcod, cabezon, perch and rockfish congregate in the lee of the pylons, sheltered from the current.
+
+## Hazards
+
+* **Strong current.** Away from slack the pass runs as a drift, fast enough that stopping to look at anything is difficult, and requires active buddy contact to avoid being separated.
+* **Overhead boat traffic.** The pass is a working boating channel between Puget Sound and Port Madison, and traffic can be heavy, worst in summer. Dive properly weighted, ready to hold depth rather than surface into a boat.
+* **Barnacles and snag hazards.** Drifting close to the pylons or the rocky shore risks a suit snag on barnacles; carry a sharp knife.
+* **Missing the take-out.** A diver who overshoots Old Man House Park on the drift is carried on into Port Madison's open water.
+* **Fishing line and nets.** Around the bridge structure and pilings.

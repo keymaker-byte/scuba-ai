@@ -5,7 +5,7 @@ Shore dive off the Fox Island Fishing Pier at Toy Point, the eastern tip of Fox 
 | | |
 |---|---|
 | **Location** | Fox Island, WA. Fox Island Fishing Pier, Toy Point, south end of the Tacoma Narrows, South Puget Sound |
-| **Coordinates** | Dive site 47.228130, -122.589701 (seabed about 16.4 m below MLLW, on the face below the shallow southern ledge, directly off the end of the beach trail), about 66 m from the entry on a bearing of 97° |
+| **Coordinates** | 47.228130, -122.589701 (seabed about 16.4 m below MLLW, on the face below the shallow southern ledge, directly off the end of the beach trail), about 66 m from the entry on a bearing of 97° |
 | **Parking coordinates** | 47.228377, -122.591763, the park's paved lot beside the restrooms |
 | **Entry point coordinates** | 47.228206, -122.590572, the cobble beach at the foot of the trail, on the park side of the fence |
 | **Type** | Shore |
@@ -33,15 +33,34 @@ Shore dive off the Fox Island Fishing Pier at Toy Point, the eastern tip of Fox 
 
 | | |
 |---|---|
+| **Current type** | Tidal |
 | **Governing station** | NOAA Gibson Point, 0.8 miles East of (PUG1531), about 1 km south |
-| **Recommended bin** | bin 13, at 24.5 m; bin 18 at 9.5 m slacks up to about 30 minutes apart from it, earlier or later |
-| **Time offset** | Slack before ebb about −0:50; slack before flood about −0:25 |
-| **Flood axis** | south-southwest, about 204° |
-| **Ebb axis** | northeast, about 34° |
+| **Recommended bin** | bin 18, at 9.5 m; bin 13 at 24.5 m slacks up to about 30 minutes apart from it, earlier or later |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | south-southwest, 204° |
+| **Station ebb axis** | northeast, 42° |
+| **Site flood set** | south-southwest, 207° |
+| **Site ebb set** | north-northeast, 27° |
 
-* **Flood.** Runs parallel to shore, setting south past the beach toward Toy Point and the pier side of the point, then around Toy Point toward Gibson Point. It is the stronger of the two, commonly 1.3 to 1.6 m/s at the station.
-* **Ebb.** Also parallel to shore, rounding Toy Point and setting north along the wall toward Fox Point. It runs weaker than the flood. The water along the wall begins setting north well ahead of the station's slack before ebb, so a dive timed to the station alone meets a building northward current instead of a turn.
-* **Diveable window.** Either slack on a small exchange, best a slack between two weak maximums; on a big exchange the window can close almost as it opens. Before ebb, drop about an hour ahead of the station's slack and swim south first, so the return north rides the ebb as it builds; before flood, swim north first, so the return south rides the flood. The current along the walls does not pour down them, so a diver caught by it can climb the ledges and drift back toward the entry. Watch for the turn and be ready to end the dive early: once the water runs there is nowhere to shelter but the beach. Whirlpools and swirling water off the beach and beside the pier mean the current is still running; wait on the beach until the surface settles.
+* **Flood.** Runs parallel to shore, setting south past the beach toward Toy Point and the pier side of the point, then around Toy Point toward Gibson Point. It is the stronger of the two, with daily peaks of 1.11 to 1.84 m/s at the station over 30 days.
+* **Ebb.** Also parallel to shore, rounding Toy Point and setting north along the wall toward Fox Point. It runs weaker than the flood, with daily peaks of 0.64 to 1.34 m/s at the station over the same 30 days. The water along the wall begins setting north well ahead of the station's slack before ebb, so a dive timed to the station alone meets a building northward current instead of a turn.
+* **Diveable window.** A typical window under 0.25 m/s at the station runs about 40 to 70 minutes. Either slack on a small exchange, best a slack between two weak maximums; on a big exchange the window can close almost as it opens. Before ebb, drop about an hour ahead of the station's slack and swim south first, so the return north rides the ebb as it builds; before flood, swim north first, so the return south rides the flood. The current along the walls does not pour down them, so a diver caught by it can climb the ledges and drift back toward the entry. Watch for the turn and be ready to end the dive early: once the water runs there is nowhere to shelter but the beach. Whirlpools and swirling water off the beach and beside the pier mean the current is still running; wait on the beach until the surface settles.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | east-southeast, 116° |
+| **Dive area shore facing** | east-southeast, 113° |
+
+The beach faces east-southeast across the south end of the Narrows toward Day Island, about 2 km away.
+
+* **Bad.** South (S), onshore over 5.5 km, running up from Nisqually Reach and the Steilacoom shore and pushing chop onto the beach; and north (N), where strong northerlies funnel down the Narrows.
+* **Short fetch.** East-northeast through south-southeast (ENE-SSE), onshore over 1.7 to 2.1 km across to Day Island.
+* **Mixed.** South-southwest (SSW), cross-shore over 7.8 km.
+* **Fine.** Southwest clockwise through north-northwest (SW-NNW), offshore off the island behind the park, and north-northeast through northeast (NNE-NE), cross-shore under 4.2 km.
+* **Wind against current.** South through southwest (S-SW), over 1.2 to 7.8 km, against the south-setting flood, or north-northeast through east-northeast (NNE-ENE), over 2.1 to 4.2 km, against the north-setting ebb, stacks a steep chop along the shore. Both make the end of the dive at the surface rough when it is already late in the window.
 
 ## Depth and tide
 
@@ -51,32 +70,15 @@ South Sound tides are large, and the tide swings the depth here by up to about 6
 |---|---|
 | **Tide station** | NOAA Steilacoom, Cormorant Passage (9446714), about 6.2 km south, south of the Narrows sill in the same basin |
 | **Series** | High and low water only |
-| **Typical range** | Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span −1.38 m to +4.76 m |
+| **Typical range** | Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m |
 
-| Feature | Below MLLW | At a −1.38 m low | At a +4.76 m high |
+| Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |
 |---|---|---|---|
 | Top of the shallow southern ledge | 2 m | 0.6 m | 6.8 m |
 | Base of the northern ledge | 7 m | 5.6 m | 11.8 m |
 | Base of the shallow southern ledge | 9 to 12 m | 7.6 to 10.6 m | 13.8 to 16.8 m |
 | Dive site coordinate | 16.4 m | 15.0 m | 21.2 m |
 | Base of the deeper southern ledge, southern ridges | 21 m | 19.6 m | 25.8 m |
-
-## Hazards
-
-* **Current.** Strong on both tides, turning early, and with little shelter on the wall once it runs; staying tight against the rock takes the edge off it. The point is fully exposed to the flow out of the Narrows, and a diver who leaves the wall can be carried off the point toward Gibson Point and the open Sound. Dive a small exchange, start ahead of the station's slack, and turn the dive when it picks up.
-* **Boat traffic.** Small boats fish close to shore off the point, and the south end of the Narrows carries steady traffic. Listen for engines, ascend along the wall all the way up, and surface close to the beach.
-* **The pier.** Anglers fish from the pier year round, and lines, hooks and lures foul the bottom around it. Dive in front of the beach and keep clear of the pier.
-* **Bull kelp.** Entanglement over the ledges in summer. Carry a cutting tool.
-* **Depth below the ledges.** The slope continues past 30 m below the deeper ledge, and a diver following the ravines down can pass it quickly. Off the walls the current can set down the slope, drawing a diver deeper; it eases back at the base of the lower ledges. Watch the computer.
-* **Private beach.** The shore south of the fence is private; a diver who drifts south during the dive has to swim back to the public beach.
-* **The climb out.** The trail and steps back to the lot are steep. Take them slowly after a hard swim, since heavy exertion after a dive raises the risk of decompression sickness.
-
-## Wind
-
-* **Orientation.** The beach faces east-southeast across the south end of the Narrows toward Day Island, about 2 km away.
-* **Bad.** Southerlies, which run up from Nisqually Reach and the Steilacoom shore with fetch behind them and push chop onto the beach, and strong northerlies funnelled down the Narrows.
-* **Fine.** West, offshore off the island behind the park.
-* **Wind against current.** A southerly against the north-setting ebb, or a northerly against the south-setting flood, stacks a steep chop along the shore. Both make the end of the dive at the surface rough when it is already late in the window.
 
 ## Visibility
 
@@ -94,3 +96,13 @@ South Sound tides are large, and the tide swings the depth here by up to about 6
 * **On the sand and cobble.** Flounder, sea pens, geoduck clams and moon snails, with perch over the ledges and a thick growth of understory kelp in summer.
 * **In the water column.** Egg yolk jellies and sea gooseberries, sea angels on occasion, and dogfish passing along the wall.
 * **Passing through.** Sea lions and harbor seals.
+
+## Hazards
+
+* **Current.** Strong on both tides, turning early, and with little shelter on the wall once it runs; staying tight against the rock takes the edge off it. The point is fully exposed to the flow out of the Narrows, and a diver who leaves the wall can be carried off the point toward Gibson Point and the open Sound. Dive a small exchange, start ahead of the station's slack, and turn the dive when it picks up.
+* **Boat traffic.** Small boats fish close to shore off the point, and the south end of the Narrows carries steady traffic. Listen for engines, ascend along the wall all the way up, and surface close to the beach.
+* **The pier.** Anglers fish from the pier year round, and lines, hooks and lures foul the bottom around it. Dive in front of the beach and keep clear of the pier.
+* **Bull kelp.** Entanglement over the ledges in summer. Carry a cutting tool.
+* **Depth below the ledges.** The slope continues past 30 m below the deeper ledge, and a diver following the ravines down can pass it quickly. Off the walls the current can set down the slope, drawing a diver deeper; it eases back at the base of the lower ledges. Watch the computer.
+* **Private beach.** The shore south of the fence is private; a diver who drifts south during the dive has to swim back to the public beach.
+* **The climb out.** The trail and steps back to the lot are steep. Take them slowly after a hard swim, since heavy exertion after a dive raises the risk of decompression sickness.

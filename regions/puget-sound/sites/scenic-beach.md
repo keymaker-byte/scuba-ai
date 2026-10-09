@@ -5,7 +5,7 @@ Scenic Beach State Park is a gently sloping sand and cobble beach on the east sh
 | | |
 |---|---|
 | **Location** | Seabeck, Washington. Hood Canal, east shore, just south of Misery Point |
-| **Coordinates** | Dive site 47.65104, -122.85048 (seabed 18.2 m below MLLW), about 290 m northwest of the entry |
+| **Coordinates** | 47.65104, -122.85048 (seabed 18.2 m below MLLW), about 290 m northwest of the entry |
 | **Parking coordinates** | 47.649207, -122.845768, the day-use lot |
 | **Entry point coordinates** | 47.650009, -122.846938, the concrete stairs at the middle of the park beach |
 | **Type** | Shore |
@@ -28,20 +28,39 @@ Scenic Beach State Park is a gently sloping sand and cobble beach on the east sh
 
 ## Current
 
-The current here is weak at every stage of the tide, running parallel to the beach along the canal axis, and the site can be dived at any time. There is no governing current station; the nearest one publishing predictions is Hazel Point (PUG1601), 7.9 km northeast toward the canal entrance, in mid-channel water that does not represent this beach.
+The current here is weak at every stage of the tide, running parallel to the beach along the canal axis, and the site can be dived at any time.
 
 | | |
 |---|---|
-| **Governing station** | None. Predict from the site's ENPAC15 extract, with the Seabeck tide table as a cross-check |
+| **Current type** | Tidal |
+| **Governing station** | None governs. The nearest station with predictions is Hazel Point (PUG1601), about 7.9 km northeast toward the canal entrance |
 | **Recommended bin** | Not applicable |
-| **Time offset** | None |
-| **Flood axis** | Southwest, 233°, up-canal past Seabeck toward the Great Bend |
-| **Ebb axis** | Northeast, 53°, down-canal toward the entrance |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | Not applicable |
+| **Station ebb axis** | Not applicable |
+| **Site flood set** | southwest, 232°, up-canal past Seabeck toward the Great Bend |
+| **Site ebb set** | northeast, 52°, down-canal toward the entrance |
 
 * **Flood.** Sets southwest along the beach, filling the canal, peaking around 0.1 m/s depth-averaged.
 * **Ebb.** Sets northeast along the beach toward Misery Point, similar strength.
 * **Slack.** Falls roughly an hour to ninety minutes before the tide extremes at Seabeck, but with peaks this weak the slack time is academic. At most a mild drift is felt on the longer legs.
-* **Diveable window.** All day, any tide stage. Plan around tide height for the entry and boat traffic on the surface rather than around current.
+* **Diveable window.** All day, any tide stage. Slack timing comes from the site's own ENPAC15 extract, with the Seabeck tide table as a cross-check. Plan around tide height for the entry and boat traffic on the surface rather than around current.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | north-northwest, 336° |
+| **Dive area shore facing** | north-northwest, 336° |
+
+The beach faces north-northwest across Hood Canal toward the Toandos Peninsula and the mouth of Dabob Bay. The canal is 3 to 4 km wide here, so cross-canal fetch is short, but the canal axis runs a long way northeast to southwest.
+
+* **Bad.** Northwest through north (NW-N), onshore over 5.1 to 11.1 km. A northerly funnels down the canal from the entrance with the longest fetch and lands onshore here; northwest comes across from Dabob Bay straight onto the beach.
+* **Short fetch.** North-northeast (NNE), onshore over 4.5 km, and west through west-northwest (W-WNW), onshore over 3.9 to 4.7 km.
+* **Mixed.** Northeast through east-northeast (NE-ENE), over 5.4 to 8.3 km, and west-southwest (WSW), over 10.8 km, cross-shore, running up and down the canal roughly parallel to the shore and building a swell that passes the beach rather than driving into it.
+* **Fine.** East through southwest (E-SW): offshore from east through south-southwest, off the Kitsap high ground behind the park, leaving the beach in the lee, and cross-shore over 3.0 km from the southwest.
+* **Wind against current.** Not a factor; the current is too weak to stack against any wind. The surface state is set by wind alone, so read the point forecast for the beach, not the marine forecast for the canal.
 
 ## Depth and tide
 
@@ -49,7 +68,7 @@ Hood Canal swings harder than the main basin, and on this gentle slope the tide 
 
 | | |
 |---|---|
-| **Tide station** | Seabeck, Seabeck Bay (9445303), 47.6417, -122.828, about 2 km southeast |
+| **Tide station** | NOAA Seabeck, Seabeck Bay (9445303), about 2.0 km east-southeast |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m |
 
@@ -58,22 +77,6 @@ Hood Canal swings harder than the main basin, and on this gentle slope the tide 
 | Eelgrass edge | about 1.5 m | about 0.1 m, wading depth | about 5.5 m |
 | Sea whip beds | 18 to 20 m | 16.6 to 18.6 m | 22 to 24 m |
 | Sand slope beyond | past 20 m | past 18.6 m | past 24 m |
-
-## Hazards
-
-* **Boat traffic.** A busy launch sits at Misery Point, 1.5 km north-northeast of the stairs, and small boats and crab boats work this stretch all year. Fly a dive flag, listen for engines through the dive, and ascend up the slope rather than in open water.
-* **Shrimp season.** On Hood Canal spot shrimp opener days, a handful of days in May and June, the water off Seabeck fills with hundreds of boats and shrimp-pot buoys and the launch queues from dawn. Do not dive the site on an opener.
-* **Silt.** The deep sand is fine and silty, and careless fins erase the visibility for the rest of the dive. Stay trimmed and off the bottom around the sea whips.
-* **Depth creep.** The slope continues smoothly past 20 m with nothing to mark progress; the depth gauge, not the terrain, is what turns the dive.
-* **Minus tides.** A long exposed flat at extreme low water makes for a tiring entry and exit in a drysuit; favour mid-tide or better for comfort.
-
-## Wind
-
-* **Orientation.** The beach faces northwest across Hood Canal toward the Toandos Peninsula and the mouth of Dabob Bay. The canal is 3 to 4 km wide here, so cross-canal fetch is short, but the canal axis runs a long way northeast to southwest.
-* **Bad.** North through northwest. A northerly funnels down the canal from the entrance with the longest fetch and lands onshore here; northwest comes across from Dabob Bay straight onto the beach.
-* **Fine.** South through east, offshore off the Kitsap high ground behind the park, leaving the beach in the lee.
-* **Mixed.** Southwest runs up-canal roughly parallel to the shore, building a swell that passes the beach rather than driving into it.
-* **Wind against current.** Not a factor; the current is too weak to stack against any wind. The surface state is set by wind alone, so read the point forecast for the beach, not the marine forecast for the canal.
 
 ## Visibility
 
@@ -96,3 +99,11 @@ Hood Canal swings harder than the main basin, and on this gentle slope the tide 
 * **Sea stars.** Sunflower stars and gray brittle stars on the deeper sand, with other stars through the range.
 * **Fish.** Flounder and other flatfish on the sand, blackeye gobies near their holes.
 * **Water column and shallows.** Comb jellies drifting through, sea squirts and white and orange plumose anemones on what scattered hard bottom there is, and eelgrass beds sheltering small fish. At high tide the flooded cobble holds small crabs and sculpins for sharp eyes.
+
+## Hazards
+
+* **Boat traffic.** A busy launch sits at Misery Point, 1.5 km north-northeast of the stairs, and small boats and crab boats work this stretch all year. Fly a dive flag, listen for engines through the dive, and ascend up the slope rather than in open water.
+* **Shrimp season.** On Hood Canal spot shrimp opener days, a handful of days in May and June, the water off Seabeck fills with hundreds of boats and shrimp-pot buoys and the launch queues from dawn. Do not dive the site on an opener.
+* **Silt.** The deep sand is fine and silty, and careless fins erase the visibility for the rest of the dive. Stay trimmed and off the bottom around the sea whips.
+* **Depth creep.** The slope continues smoothly past 20 m with nothing to mark progress; the depth gauge, not the terrain, is what turns the dive.
+* **Minus tides.** A long exposed flat at extreme low water makes for a tiring entry and exit in a drysuit; favour mid-tide or better for comfort.

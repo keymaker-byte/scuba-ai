@@ -33,15 +33,32 @@ Port Washington Narrows is the tidal cut through Bremerton joining Dyes Inlet to
 
 | | |
 |---|---|
-| **Governing station** | NOAA Port Washington Narrows, Warren Ave. Bridge (PUG1510), on the drift path, about 1.4 km from the entry |
-| **Recommended bin** | bin 1, about 6.3 m |
-| **Time offset** | None. Slack at the Manette Bridge falls within about 10 minutes of slack at the station |
-| **Flood axis** | WNW, about 279° |
-| **Ebb axis** | ESE, about 102° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Port Washington Narrows, Warren Ave. Bridge (PUG1510), on the drift path, about 1.4 km northwest of the entry |
+| **Recommended bin** | bin 1, at 6.25 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | west-northwest, 279° |
+| **Station ebb axis** | east-southeast, 102° |
+| **Site flood set** | north-northwest, 333° |
+| **Site ebb set** | south-southeast, 153° |
 
-* **Flood.** Sets up the narrows from Sinclair Inlet toward Dyes Inlet, north northwest (about 333°) beneath the Manette Bridge and swinging west northwest by the Warren Avenue Bridge. This is the drift direction. Peak flood at the station commonly reaches 1.1 to 1.25 m/s; at the Manette end it runs about 80 percent of that.
-* **Ebb.** Sets down the narrows from Dyes Inlet toward Sinclair Inlet, out past the Manette Bridge into open water. Peak ebb at the station can exceed 1.4 m/s. Never drift the ebb: the only take-out is at the Manette Bridge itself, easily missed, with Sinclair Inlet beyond it.
+* **Flood.** Sets up the narrows from Sinclair Inlet toward Dyes Inlet, north-northwest (about 333°) beneath the Manette Bridge and swinging west-northwest by the Warren Avenue Bridge. This is the drift direction. Daily peak flood at the station runs 1.05 to 1.76 m/s over 30 days; at the Manette end it runs about 80 percent of that.
+* **Ebb.** Sets down the narrows from Dyes Inlet toward Sinclair Inlet, out past the Manette Bridge into open water. Daily peak ebb at the station runs 0.52 to 1.48 m/s over the same 30 days. Never drift the ebb: the only take-out is at the Manette Bridge itself, easily missed, with Sinclair Inlet beyond it.
 * **Diveable window.** The flood, not a slack. Entering at the turn makes for a long dive, since the first hour of the flood carries a diver well under a kilometre. Entering roughly an hour after the slack before flood, as the current builds, brings the full 2.6 km drift to about an hour to an hour and a quarter on an average exchange; a weak flood takes longer and a strong one less. Check the flood's peak speed for the day and size the entry time and gas to it.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | west-southwest, 240° |
+| **Dive area shore facing** | west-southwest, 237° |
+
+A narrow inland cut through residential Bremerton, with land close on both sides. The entry beach faces west-southwest across the narrows and the exit beach faces southwest.
+
+* **Short fetch.** South through south-southwest (S-SSW), onshore over 2.5 to 3.3 km up Sinclair Inlet, the one direction with any fetch to the Manette entry.
+* **Fine.** Southwest clockwise through south-southeast (SW-SSE); the surrounding shore leaves little open water for wind to build across.
+* **Wind against current.** A northwesterly (NW), over 1.8 km, runs against the flood and can raise a short chop in the channel, worth noting for a surface swim to the take-out but rarely enough to cancel the dive. Southeast through south (SE-S), over 2.1 to 2.6 km, opposes the ebb.
 
 ## Depth and tide
 
@@ -49,25 +66,9 @@ The drift runs through shallow water relative to the tidal range, so the tide ch
 
 | | |
 |---|---|
-| **Tide station** | NOAA Bremerton, Sinclair Inlet, Port Orchard (9445958), about 1.0 km away |
-| **Series** | High and low water only |
+| **Tide station** | NOAA Bremerton, Sinclair Inlet, Port Orchard (9445958), about 1.0 km south-southwest |
+| **Series** | Full series |
 | **Typical range** | Median daily 3.47 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.29 m to +4.08 m |
-
-## Hazards
-
-* **Strong current.** The narrows runs as a fast drift through most of the flood, with no stopping to look at anything and real effort needed to stay with a buddy.
-* **Boulders.** Large rocks appear suddenly out of the drift; keep enough height off the bottom to steer around them.
-* **Missing the exit.** A diver who stays mid-channel past the Warren Avenue Bridge is carried on toward Dyes Inlet. Start for the north shore early.
-* **Ebb drift.** Drifting the ebb leads to a missed take-out at the Manette Bridge and a ride out into Sinclair Inlet. Dive the flood only.
-* **Small boat traffic.** The narrows is the only water route between Sinclair Inlet and Dyes Inlet and carries steady small boat traffic directly overhead. Stay at least 3 m deep for the whole drift and surface only at the take-out, ideally beside the shore.
-* **Shallow exit.** The take-out sits on a tideflat; on a low tide expect a long, slow wade in full gear.
-
-## Wind
-
-* **Orientation.** A narrow inland cut through residential Bremerton, with land close on both sides. The entry beach faces west across the narrows and the exit beach faces southwest.
-* **Bad.** A strong southerly up Sinclair Inlet is the one direction with any fetch to the Manette entry. Little else reaches the narrows.
-* **Fine.** Effectively every other direction; the surrounding shore leaves little open water for wind to build across.
-* **Wind against current.** A northerly runs against the flood and can raise a short chop in the channel, worth noting for a surface swim to the take-out but rarely enough to cancel the dive.
 
 ## Visibility
 
@@ -82,3 +83,12 @@ The drift runs through shallow water relative to the tidal range, so the tide ch
 * **Sea stars.** Five-rayed pink stars and multi-rayed sunflower stars dig into the cobble after clams, with smaller, slower red and white mottled stars, reddish-brown leather stars and orange-red blood stars scattered across the bottom.
 * **Bottom.** Piddock clams, whelks, hermit crabs, kelp crabs, orange sea cucumbers, beaded sea anemones and white plumose anemones, with giant acorn barnacles on the rocks.
 * **Fish and octopus.** Flounder and C-O sole on the cobble, and octopus among the larger boulders.
+
+## Hazards
+
+* **Strong current.** The narrows runs as a fast drift through most of the flood, with no stopping to look at anything and real effort needed to stay with a buddy.
+* **Boulders.** Large rocks appear suddenly out of the drift; keep enough height off the bottom to steer around them.
+* **Missing the exit.** A diver who stays mid-channel past the Warren Avenue Bridge is carried on toward Dyes Inlet. Start for the north shore early.
+* **Ebb drift.** Drifting the ebb leads to a missed take-out at the Manette Bridge and a ride out into Sinclair Inlet. Dive the flood only.
+* **Small boat traffic.** The narrows is the only water route between Sinclair Inlet and Dyes Inlet and carries steady small boat traffic directly overhead. Stay at least 3 m deep for the whole drift and surface only at the take-out, ideally beside the shore.
+* **Shallow exit.** The take-out sits on a tideflat; on a low tide expect a long, slow wade in full gear.
