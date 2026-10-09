@@ -62,18 +62,18 @@ The inside shore looks into Port Angeles Harbor, sheltered from the open strait 
 
 ## Depth and tide
 
-The harbor's tide swings over 3 m at springs, so depths are given below the MLLW chart datum. The shallow entry flat can dry at a low spring tide.
+The harbor's tide swings up to about 3.4 m in a day, so depths are given below the MLLW chart datum. The shallow entry flat can dry at a low spring tide.
 
 | | |
 |---|---|
-| **Tide station** | NOAA Ediz Hook, Port Angeles tide station (9444122), about 1.3 km away |
+| **Tide station** | NOAA Ediz Hook, Port Angeles tide station (9444122), about 1.3 km east, on the hook itself |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 2.13 m, up to 3.39 m on the year's biggest exchange; 2026 span -1.10 m to +2.47 m |
 
 | Feature | Below MLLW | At a -1.10 m low | At a +2.47 m high |
 |---|---|---|---|
 | Shoreline at the entry | 0.1 m | dries | 2.6 m |
-| Reef edge | 18.5 m | 17.4 m | 21 m |
+| Reef edge | 18.5 m | 17.4 m | 21.0 m |
 
 ## Visibility
 

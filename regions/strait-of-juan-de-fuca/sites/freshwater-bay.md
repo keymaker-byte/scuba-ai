@@ -73,7 +73,7 @@ The bay opens roughly north onto the strait, between Angeles Point to the east a
 
 ## Depth and tide
 
-The strait's tide swings over 3 m here at springs, so depths are given below the MLLW chart datum. The boat ramp itself dries at low water.
+The strait's tide swings up to about 3.3 m in a day here, so depths are given below the MLLW chart datum. The boat ramp itself dries at low water.
 
 | | |
 |---|---|
@@ -86,7 +86,7 @@ The strait's tide swings over 3 m here at springs, so depths are given below the
 | Crossing, deepest point | 5.4 m | 4.4 m | 7.8 m |
 | Reef top, bay side | 4.5 m | 3.5 m | 6.9 m |
 | Reef edge | 11.5 m | 10.5 m | 13.9 m |
-| Bachelor Rock's outer wall | 17.6 m | 16.6 m | 20 m |
+| Bachelor Rock's outer wall | 17.6 m | 16.6 m | 20.0 m |
 
 ## Visibility
 
