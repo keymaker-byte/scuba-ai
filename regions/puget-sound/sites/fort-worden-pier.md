@@ -5,7 +5,7 @@ A shore dive at the Port Townsend Marine Science Center pier, inside Fort Worden
 | | |
 |---|---|
 | **Location** | Port Townsend, WA. Fort Worden State Park, on Admiralty Inlet at the entrance to Port Townsend Bay |
-| **Coordinates** | Dive area 48.1356, -122.7590 (seabed about 10.7 m below MLLW), the outer sand beyond the reef, about 207 m from the entry on a bearing of 111° |
+| **Coordinates** | 48.1356, -122.7590 (seabed about 10.7 m below MLLW), the outer sand beyond the reef, about 207 m from the entry on a bearing of 111° |
 | **Parking coordinates** | 48.136147, -122.762059, the Marine Science Center lot |
 | **Entry point coordinates** | 48.136278, -122.761603, the beach by the pier and the tire reef it sits over (seabed 6 to 7 m below MLLW at the pier's end) |
 | **Type** | Shore |
@@ -30,16 +30,33 @@ A shore dive at the Port Townsend Marine Science Center pier, inside Fort Worden
 
 | | |
 |---|---|
-| **Governing station** | Point Wilson (PUG1623), about 2 km northeast |
-| **Recommended bin** | bin 45, at 5.2 m |
-| **Time offset** | About 60 minutes early on both turns |
-| **Flood axis** | South southwest, 204° |
-| **Ebb axis** | North northeast, 24° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Point Wilson, 0.6 mi. NE of (PUG1623), about 1.9 km north-northeast |
+| **Recommended bin** | bin 45, at 5.1 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | east-southeast, 120° |
+| **Station ebb axis** | northwest, 321° |
+| **Site flood set** | south-southwest, 205° |
+| **Site ebb set** | north-northeast, 25° |
 
-* **Flood.** Sets south southwest, parallel to the shore, running from Point Wilson down past the pier.
-* **Ebb.** Sets north northeast, back out toward Point Wilson and the Strait.
+* **Flood.** Sets south-southwest, parallel to the shore, running from Point Wilson down past the pier. Daily peaks run 0.56 to 1.54 m/s at the station over 30 days.
+* **Ebb.** Sets north-northeast, back out toward Point Wilson and the Strait, with daily peaks of 0.41 to 2.04 m/s at the station over the same 30 days.
 * **Nearshore push.** Right along the beach, a current sets south toward the pier on both the flood and the ebb, not just the flood; it is weak but persistent, and divers drifting with it can use the pier itself for shelter.
-* **Diveable window.** Current stays weak most of the day, rarely above 0.3 to 0.4 m/s even off slack, and the window around each slack runs well over two hours on an average exchange. It narrows and strengthens on a large exchange, and that is when timing the dive to slack matters.
+* **Diveable window.** Current stays weak most of the day, rarely above 0.3 to 0.4 m/s even off slack, and the window around each slack runs well over two hours on an average exchange. It narrows and strengthens on a large exchange, and that is when timing the dive to slack matters. A typical window under 0.25 m/s at the station runs about 35 to 65 minutes.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | east-southeast, 104° |
+| **Dive area shore facing** | east-southeast, 102° |
+
+The beach faces east-southeast across the entrance to Port Townsend Bay and Admiralty Inlet.
+
+* **Bad.** Northeast through south-southeast (NE-SSE), onshore over 5.5 to 12.3 km across Admiralty Inlet.
+* **Fine.** South clockwise through north-northeast (S-NNE): offshore from southwest through north-northwest over the park and the peninsula, and cross-shore under 1 km from south, south-southwest, north and north-northeast.
+* **Wind against current.** North-northeast through northeast (NNE-NE), over 0.85 to 7.1 km, against the ebb stacks chop right on the exposed part of the entry. South through southwest (S-SW), over 0.3 to 1.0 km, opposes the flood.
 
 ## Depth and tide
 
@@ -47,26 +64,11 @@ Admiralty Inlet's tide swings a few metres a day here, enough to move the pier's
 
 | | |
 |---|---|
-| **Tide station** | Port Townsend (9444900), 2.7 km south |
-| **Series** | High and low water only |
+| **Tide station** | NOAA Port Townsend (9444900), about 2.7 km south |
+| **Series** | Full series |
 | **Typical range** | Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m |
 
-The pier end and reef, at about 6.5 m below MLLW datum, read about 5.8 m below the surface near a low around −0.6 m, and about 9.2 m near a high around +2.7 m. The outer sand at the dive coordinate, about 10.7 m below datum, reads about 10.0 m near the same low and about 13.4 m near the same high.
-
-## Hazards
-
-* **Current.** Weak most days but the reason to dive near slack, especially on a large exchange; watch for the persistent southward push along the shore even away from the main tidal cycle.
-* **Small boats.** The boat launch sits immediately north of the pier, and the site is close enough to shore to see occasional traffic. Listen for engines, and stay down until a boat passes overhead.
-* **Fishing line.** Collects on the pilings, especially near the surface and the pier deck. Carry a knife.
-* **Shallow depth.** Much of the dive sits in only 6 to 7 m of water; weight to stay down comfortably rather than bobbing near the surface among the pilings.
-* **Old creosote pilings.** The pier structure is decades old and due for eventual replacement; the timber pilings are treated with creosote, which leaches into the water as it warms.
-
-## Wind
-
-* **Orientation.** The beach faces northwest, out across the mouth of Admiralty Inlet toward Point Wilson and the Strait of Juan de Fuca.
-* **Bad.** North through west, with open fetch up the inlet and in off the Strait.
-* **Fine.** South through east, offshore over the park and the peninsula.
-* **Wind against current.** A north or northwest wind blowing against the ebb, which sets north northeast out toward the Strait, stacks chop right on the exposed part of the entry.
+The pier end and reef, at about 6.5 m below MLLW datum, read about 5.9 m below the surface near a low around -0.6 m, and about 9.2 m near a high around +2.7 m. The outer sand at the dive coordinate, about 10.7 m below datum, reads about 10.1 m near the same low and about 13.4 m near the same high.
 
 ## Visibility
 
@@ -85,3 +87,11 @@ The pier end and reef, at about 6.5 m below MLLW datum, read about 5.8 m below t
 * **Dogfish.** Pacific spiny dogfish lie on the sand at the edge of the pier's shade and cruise past divers in small numbers.
 * **Invertebrates.** Sea lemons and other nudibranchs, decorated warbonnets, decorator crabs, hermit crabs, dahlia anemones, giant acorn barnacles, yellow sponges, basket stars, sunflower and other sea stars, orange and white sea cucumbers, gumboot chitons, and shrimp.
 * **Open water.** Schools of shiner perch and tube snouts move through the pilings, and harbor seals are seen around the site.
+
+## Hazards
+
+* **Current.** Weak most days but the reason to dive near slack, especially on a large exchange; watch for the persistent southward push along the shore even away from the main tidal cycle.
+* **Small boats.** The boat launch sits immediately north of the pier, and the site is close enough to shore to see occasional traffic. Listen for engines, and stay down until a boat passes overhead.
+* **Fishing line.** Collects on the pilings, especially near the surface and the pier deck. Carry a knife.
+* **Shallow depth.** Much of the dive sits in only 6 to 7 m of water; weight to stay down comfortably rather than bobbing near the surface among the pilings.
+* **Old creosote pilings.** The pier structure is decades old and due for eventual replacement; the timber pilings are treated with creosote, which leaches into the water as it warms.

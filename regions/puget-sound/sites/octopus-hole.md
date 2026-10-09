@@ -34,55 +34,55 @@ Octopus Hole is dived independently of the tide. The water here moves at around 
 
 | | |
 |---|---|
-| **Governing station** | None near enough to govern. The nearest current station publishing predictions is Hazel Point (PUG1601), at the canal entrance |
+| **Current type** | Tidal |
+| **Governing station** | None governs. The nearest station with predictions is Hazel Point (PUG1601), about 38 km northeast at the canal entrance |
 | **Recommended bin** | Not applicable |
-| **Time offset** | Not established; slack should be confirmed in the water |
-| **Flood axis** | southwest, 222°, up-canal toward Hoodsport and the Great Bend |
-| **Ebb axis** | northeast, 042°, down-canal toward Lilliwaup and the entrance |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | Not applicable |
+| **Station ebb axis** | Not applicable |
+| **Site flood set** | southwest, 223°, up-canal toward Hoodsport and the Great Bend |
+| **Site ebb set** | northeast, 43°, down-canal toward Lilliwaup and the entrance |
 
 * **Flood.** Sets southwest along the shore, filling the canal toward the Great Bend, and peaks around 0.1 m/s.
 * **Ebb.** Sets northeast, draining toward the entrance, at similar strength.
 * **Along the wall.** On a large exchange a mild set can run south along the wall, toward its far end, on the ebb as well as on the flood. Read the water at the north end and start the dive into whatever set it finds.
-* **Slack.** This reach of the canal behaves as a standing wave, so slack falls near high and low water. Here it runs about an hour ahead of the high and low at Union.
+* **Slack.** This reach of the canal behaves as a standing wave, so slack falls near high and low water. Here it runs about an hour and a quarter ahead of the high and low at Ayock Point.
 * **Diveable window.** All day, on any exchange.
-
-## Depth and tide
-
-Hood Canal has a large tide here, and it is the biggest control on how the site reads. A high tide adds up to 4 m to every feature, putting the top of the shallow wall at 9 to 11 m and the deep wall near 25 m; a minus tide brings the ledge up to 4 to 5 m. Plan the depth of a deep-wall dive against the tide on the day, since its no-decompression limit on EAN32 shortens quickly as the water rises.
-
-| | |
-|---|---|
-| **Tide station** | Union, Hood Canal (9445478), 47.3583, -123.0980, about 9.8 km south-southeast |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m |
-
-| Feature | Below MLLW | At a -1.40 m low | At a +4.32 m high |
-|---|---|---|---|
-| Top of the shallow wall | 5 to 7 m | 3.6 to 5.6 m | 9.3 to 11.3 m |
-| Buoy anchor | 9 to 12 m | 7.6 to 10.6 m | 13.3 to 16.3 m |
-| Base of the shallow wall | 15 m | 13.6 m | 19.3 m |
-| Site coordinate | 16.8 m | 15.4 m | 21.1 m |
-| Top of the deep wall | 21 m | 19.6 m | 25.3 m |
-| Sea whips below the deep wall | 25 m | 23.6 m | 29.3 m |
-
-## Hazards
-
-* **Highway parking.** The cars park on the shoulder of Highway 101, and divers gear up and cross beside fast traffic, sometimes across both lanes from the far shoulder. Take extreme care getting in and out of the car and crossing the road. There is nothing to protect a parked car, so leave no valuables in sight.
-* **The bank.** The guard rail, the rock steps and the wet rocks at the water's edge are awkward with a full set of gear, worst on the climb back up at the end of the dive.
-* **Silt.** The bottom is fine silt, and with no current to clear it a fin kick hangs in the water for a long time. Stay neutral and off the bottom, and keep a buddy close in the cloud.
-* **Boat traffic.** Small boats run close to this shore. Fly a dive flag, listen on ascent, and come up beside the wall or in the shallows.
-* **Depth creep.** The bottom past the shallow wall keeps dropping to the deep wall and beyond into the deep canal. Watch the computer on a bearing out from shore and turn on the no-decompression limit.
-* **Lion's mane jellies.** Common in the autumn. Check each other for tentacles before taking off masks and gloves.
-* **Low oxygen.** Dissolved oxygen falls in the canal in late summer and autumn. Animals can be found out of their dens or breathing hard, and a wall can look bare below a certain depth.
-* **Conservation area.** No taking, feeding or harassing of any marine life.
 
 ## Wind
 
-* **Orientation.** The beach faces east-southeast across Hood Canal, here about 2 km wide, backed by the steep slope of the Olympic foothills and the highway.
-* **Bad.** Northeast through east to southeast. Northeast blows down the long reach of the canal with a long fetch and quickly builds chop on the entry; east and southeast are onshore across the canal, short fetch but straight onto the beach. Surface chop can build during a dive, so watch it for the exit.
-* **Fine.** West through northwest, offshore and blocked by the high ground behind the site.
-* **Mixed.** South and southwest run up the canal roughly parallel to the shore, building a swell that runs past the entry along the shore.
+| | |
+|---|---|
+| **Entry shore facing** | east-southeast, 110° |
+| **Dive area shore facing** | east-southeast, 109° |
+
+The beach faces east-southeast across Hood Canal, here about 2 km wide, backed by the steep slope of the Olympic foothills and the highway.
+
+* **Bad.** Northeast (NE), onshore over 8.7 km, blows down the long reach of the canal and quickly builds chop on the entry. Surface chop can build during a dive, so watch it for the exit.
+* **Short fetch.** East-northeast through south-southeast (ENE-SSE), onshore over 2.2 to 3.7 km across the canal, short fetch but straight onto the beach.
+* **Mixed.** South (S), over 5.5 km, runs up the canal roughly parallel to the shore, building a swell that runs past the entry along the shore.
+* **Fine.** South-southwest clockwise through north-northeast (SSW-NNE): offshore from southwest through north-northwest, blocked by the high ground behind the site, and cross-shore under 2.0 km from south-southwest, north and north-northeast.
 * **Wind against current.** Rarely an issue, since the current is too weak to stack against a wind. Wind alone decides the surface, so read the forecast for the beach.
+
+## Depth and tide
+
+Hood Canal has a large tide here, and it is the biggest control on how the site reads. A high tide adds up to about 3.9 m to every feature, putting the top of the shallow wall at 9 to 11 m and the deep wall near 25 m; a minus tide brings the top of the shallow wall up to about 4 to 6 m. Plan the depth of a deep-wall dive against the tide on the day, since its no-decompression limit on EAN32 shortens quickly as the water rises.
+
+| | |
+|---|---|
+| **Tide station** | NOAA Ayock Point (9445388), about 8.3 km north-northeast, up the canal on the same side of the Great Bend |
+| **Series** | High and low water only |
+| **Typical range** | Median daily 3.39 m, up to 5.12 m on the year's biggest exchange; 2026 span -1.40 m to +3.92 m |
+
+| Feature | Below MLLW | At a -1.40 m low | At a +3.92 m high |
+|---|---|---|---|
+| Top of the shallow wall | 5 to 7 m | 3.6 to 5.6 m | 8.9 to 10.9 m |
+| Buoy anchor | 9 to 12 m | 7.6 to 10.6 m | 12.9 to 15.9 m |
+| Base of the shallow wall | 15 m | 13.6 m | 18.9 m |
+| Site coordinate | 16.8 m | 15.4 m | 20.7 m |
+| Top of the deep wall | 21 m | 19.6 m | 24.9 m |
+| Sea whips below the deep wall | 25 m | 23.6 m | 28.9 m |
 
 ## Visibility
 
@@ -107,3 +107,14 @@ Hood Canal has a large tide here, and it is the biggest control on how the site 
 * **Sea stars.** Sunflower stars recovering in numbers, with leather, mottled, blood, long ray, fish-eating and velcro stars.
 * **Deep wall.** Sea whips on the cobble around and below the deep wall.
 * **Above water.** Bigg's killer whales occasionally pass along the canal.
+
+## Hazards
+
+* **Highway parking.** The cars park on the shoulder of Highway 101, and divers gear up and cross beside fast traffic, sometimes across both lanes from the far shoulder. Take extreme care getting in and out of the car and crossing the road. There is nothing to protect a parked car, so leave no valuables in sight.
+* **The bank.** The guard rail, the rock steps and the wet rocks at the water's edge are awkward with a full set of gear, worst on the climb back up at the end of the dive.
+* **Silt.** The bottom is fine silt, and with no current to clear it a fin kick hangs in the water for a long time. Stay neutral and off the bottom, and keep a buddy close in the cloud.
+* **Boat traffic.** Small boats run close to this shore. Fly a dive flag, listen on ascent, and come up beside the wall or in the shallows.
+* **Depth creep.** The bottom past the shallow wall keeps dropping to the deep wall and beyond into the deep canal. Watch the computer on a bearing out from shore and turn on the no-decompression limit.
+* **Lion's mane jellies.** Common in the autumn. Check each other for tentacles before taking off masks and gloves.
+* **Low oxygen.** Dissolved oxygen falls in the canal in late summer and autumn. Animals can be found out of their dens or breathing hard, and a wall can look bare below a certain depth.
+* **Conservation area.** No taking, feeding or harassing of any marine life.

@@ -29,15 +29,31 @@ Warren Avenue Bridge crosses Port Washington Narrows in Bremerton, the tidal cut
 
 | | |
 |---|---|
-| **Governing station** | NOAA Port Washington Narrows, Warren Ave. Bridge (PUG1510), essentially at the site, about 0.2 km away |
-| **Recommended bin** | bin 1, about 6.4 m |
-| **Time offset** | None. The station sits at the bridge itself |
-| **Flood axis** | WNW, about 279° |
-| **Ebb axis** | ESE, about 102° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Port Washington Narrows, Warren Ave. Bridge (PUG1510), about 0.2 km northeast at the bridge |
+| **Recommended bin** | bin 1, at 6.3 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | west, 279° |
+| **Station ebb axis** | east-southeast, 102° |
+| **Site flood set** | west-northwest, 288°, up the narrows toward Dyes Inlet |
+| **Site ebb set** | east-southeast, 108°, down the narrows toward Sinclair Inlet |
 
-* **Flood.** Sets WNW, running up the narrows toward Dyes Inlet.
-* **Ebb.** Sets ESE, running down the narrows toward Sinclair Inlet and out to Puget Sound through Rich Passage.
-* **Diveable window.** The current becomes noticeable again within five to ten minutes of slack, so the window closes fast on either side of it. Its width varies a great deal by exchange, from under thirty minutes on a tight one to well over an hour and a half on a wide one. Begin the dive thirty to forty minutes ahead of the predicted slack, and start the swim back to shore as soon as the current turns.
+* **Flood.** Sets west-northwest, running up the narrows toward Dyes Inlet, with daily peaks of 1.05 to 1.76 m/s at the station over 30 days.
+* **Ebb.** Sets east-southeast, running down the narrows toward Sinclair Inlet and out to Puget Sound through Rich Passage, with daily peaks of 0.52 to 1.48 m/s at the station over the same 30 days.
+* **Diveable window.** The current becomes noticeable again within five to ten minutes of slack, so the window closes fast on either side of it. Its width varies a great deal by exchange, from under thirty minutes on a tight one to well over an hour and a half on a wide one; a typical window under 0.25 m/s at the station runs about 35 to 85 minutes. Begin the dive thirty to forty minutes ahead of the predicted slack, and start the swim back to shore as soon as the current turns.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | north-northeast, 17° |
+| **Dive area shore facing** | north-northeast, 17° |
+
+A narrow inland cut through residential Bremerton, with land close on both sides.
+
+* **Fine.** All directions (N-NNW). The surrounding shore leaves little open water for wind to build a fetch across, no more than 1.5 km from any direction.
+* **Wind against current.** West-northwest (WNW) blows against the flood, over too short a fetch to matter; the current, not wind, sets the go or no go call.
 
 ## Depth and tide
 
@@ -45,21 +61,9 @@ The dive area sits in shallow water relative to the tidal range here, so the swi
 
 | | |
 |---|---|
-| **Tide station** | NOAA Bremerton, Sinclair Inlet, Port Orchard (9445958), about 2.0 km away |
-| **Series** | High and low water only |
+| **Tide station** | NOAA Bremerton, Sinclair Inlet, Port Orchard (9445958), about 2.0 km south-southeast |
+| **Series** | Full series |
 | **Typical range** | Median daily 3.47 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.29 m to +4.08 m |
-
-## Hazards
-
-* **Strong, fast reversing current.** The defining hazard. Current direction changes rapidly after slack, and a diver who lingers past the turn is caught working against it on the swim back.
-* **Boat traffic.** The narrows carries continuous small boat traffic between Dyes Inlet and Sinclair Inlet, directly overhead of the dive.
-
-## Wind
-
-* **Orientation.** A narrow inland cut through residential Bremerton, with land close on both sides.
-* **Bad.** None significant; the surrounding shore leaves little open water for wind to build a fetch across, from any direction.
-* **Fine.** Effectively every direction, for the same reason.
-* **Wind against current.** Not a factor here; the current, not wind, sets the go or no go call.
 
 ## Visibility
 
@@ -76,3 +80,8 @@ The dive area sits in shallow water relative to the tidal range here, so the swi
 * **Clay bottom.** Patches of hard clay are riddled with piddock clam burrows, the clams' necks often visible extending above the rim. Small sculpins and gunnels shelter in the empty holes.
 * **Fish.** Red Irish lords, pile perch and other perch, flounder, sailfin sculpins and kelp greenlings, with schools of small perch clouding the water around the outer pylons.
 * **Bottom and sea stars.** Sandy cobble near shore, grading to a mix of cobble and clay offshore. Morning sun stars, Stimpson's sun stars, sunflower sea stars, pink sea stars and blood stars are scattered across it, along with snails, nudibranchs and crabs. Shallow water holds colonies of small aggregating anemones.
+
+## Hazards
+
+* **Strong, fast reversing current.** The defining hazard. Current direction changes rapidly after slack, and a diver who lingers past the turn is caught working against it on the swim back.
+* **Boat traffic.** The narrows carries continuous small boat traffic between Dyes Inlet and Sinclair Inlet, directly overhead of the dive.

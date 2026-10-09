@@ -5,7 +5,7 @@ Kayak Point County Park sits on the east shore of Port Susan, a bay of Puget Sou
 | | |
 |---|---|
 | **Location** | Stanwood, WA. East shore of Port Susan, Snohomish County |
-| **Coordinates** | Dive area 48.1360, -122.3695 (seabed about 28 m below MLLW), about 120 m from the entry on a bearing of 265° |
+| **Coordinates** | 48.1360, -122.3695 (seabed about 28 m below MLLW), about 120 m from the entry on a bearing of 265° |
 | **Parking coordinates** | 48.136423, -122.366173, the day-use lot |
 | **Entry point coordinates** | 48.136101, -122.367890, off the beach |
 | **Type** | Shore |
@@ -29,19 +29,37 @@ Kayak Point County Park sits on the east shore of Port Susan, a bay of Puget Sou
 
 | | |
 |---|---|
-| **Governing station** | Camano Head-Sandy Point passage (PUG1618), about 9.9 km south southwest, the nearest station with published flood/ebb data |
-| **Recommended bin** | bin 35, at 23.7 m |
-| **Time offset** | Not established. The site sits in the open bay, well away from the passage the station describes, and current at the dive point runs weak through the whole tidal cycle |
-| **Flood axis** | Northwest, 304° |
-| **Ebb axis** | Southeast, 117° |
+| **Current type** | Tidal |
+| **Governing station** | None governs. The nearest station with predictions is Camano Head-Sandy Point, passage (PUG1618), about 9.9 km south |
+| **Recommended bin** | Not applicable |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | Not applicable |
+| **Station ebb axis** | Not applicable |
+| **Site flood set** | north-northeast, 14° |
+| **Site ebb set** | south-southwest, 194° |
 
-* **Flood.** Sets northwest, weak.
-* **Ebb.** Sets southeast, weak.
-* **Diveable window.** Current at the dive point stays weak all day, well under 0.05 m/s in the depth averaged prediction, so the site does not depend on a tight slack window the way a passage or a point does. Plan around slack at the governing station as the conservative default, but a late entry is not the problem here that it would be at a true current site.
+* **Flood.** Sets north-northeast up Port Susan, weak.
+* **Ebb.** Sets south-southwest down Port Susan, weak.
+* **Diveable window.** Current at the dive point stays weak all day, well under 0.05 m/s in the depth averaged prediction, so the site does not depend on a tight slack window the way a passage or a point does. Slack timing comes from the site's own ENPAC15 extract; a late entry is not the problem here that it would be at a true current site.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | northwest, 318° |
+| **Dive area shore facing** | northwest, 320° |
+
+The beach faces west to northwest across Port Susan, toward Camano Island.
+
+* **Bad.** West through north-northwest (W-NNW), onshore over 5.7 to 12.1 km, with open fetch across the bay to Camano Island and up Port Susan.
+* **Short fetch.** North through north-northeast (N-NNE), onshore over 1.0 to 3.1 km.
+* **Fine.** Northeast clockwise through west-southwest (NE-WSW): offshore from east through south-southwest over the mainland, which keeps the beach flat, and cross-shore under 4.4 km from northeast, east-northeast, southwest and west-southwest.
+* **Wind against current.** Current here is weak enough that wind is the dominant surface hazard on its own; there is no strong current axis for it to run against.
 
 ## Depth and tide
 
-Port Susan swings several metres between high and low water, and because the offshore slope is so steep here, that tide swing moves the working depth more than it would on a gentler bottom.
+Port Susan swings up to about 5 m between high and low water, so depths are given against the MLLW chart datum.
 
 | | |
 |---|---|
@@ -49,20 +67,7 @@ Port Susan swings several metres between high and low water, and because the off
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.39 m, up to 5.02 m on the year's biggest exchange; 2026 span -1.30 m to +3.92 m |
 
-The 28 m dive point reads a couple of metres shallower than that near a low around -1 m, and several metres deeper near a high around +3.5 to +4 m.
-
-## Hazards
-
-* **Fishing line and hooks.** Around the pier and the beach generally; carry a knife.
-* **Boat traffic.** The boat ramp launches immediately north of the pier. Fly a marker buoy, and listen for motor noise before ascending.
-* **Construction.** The south day-use area is closed for construction through fall 2026, limiting parking and beach access on that side.
-
-## Wind
-
-* **Orientation.** The beach faces roughly west across Port Susan, toward Camano Island.
-* **Bad.** West through southwest, with open fetch across the bay to Camano Island and down toward Possession Sound.
-* **Fine.** East through northeast, offshore over the mainland, keeps the beach flat.
-* **Wind against current.** Current here is weak enough that wind is the dominant surface hazard on its own; there is no strong current axis for it to run against.
+The 28 m dive point reads about 26.7 m below the surface at the year's lowest low of -1.30 m, and about 31.9 m at its highest high of +3.92 m.
 
 ## Visibility
 
@@ -79,3 +84,9 @@ The 28 m dive point reads a couple of metres shallower than that near a low arou
 * **Bottom dwellers.** Flounder, C-O sole, hermit crabs, moon snails and mottled sea stars over the sand and mud, along with Dungeness crab and scattered eelgrass patches.
 * **Invertebrates.** Orange plumose anemones and nudibranchs turn up on what little hard structure exists.
 * **Surface and seasonal.** Gray whales pass offshore in late spring and early summer, and bald eagles and seabirds work the shoreline and pier.
+
+## Hazards
+
+* **Fishing line and hooks.** Around the pier and the beach generally; carry a knife.
+* **Boat traffic.** The boat ramp launches immediately north of the pier. Fly a marker buoy, and listen for motor noise before ascending.
+* **Construction.** The south day-use area is closed for construction through fall 2026, limiting parking and beach access on that side.

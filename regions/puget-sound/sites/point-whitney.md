@@ -5,7 +5,7 @@ Point Whitney is a shore dive on Hood Canal at the Washington Department of Fish
 | | |
 |---|---|
 | **Location** | Brinnon, Washington. Hood Canal, at Whitney Point, the point separating Dabob Bay from the main canal |
-| **Coordinates** | Dive site 47.76398, -122.85172 (seabed 16.8 m below MLLW), along the discharge pipe off the shellfish lab |
+| **Coordinates** | 47.76398, -122.85172 (seabed 16.8 m below MLLW), along the discharge pipe off the shellfish lab |
 | **Parking coordinates** | 47.761990, -122.852503, the gravel lot at the lab |
 | **Entry point coordinates** | 47.762059, -122.852490, through a gap in the perimeter fence on the lab's beach |
 | **Type** | Shore |
@@ -34,16 +34,34 @@ Current here is negligible at every stage of the tide, at the surface and depth-
 
 | | |
 |---|---|
-| **Governing station** | None close enough to govern. The nearest stations publishing predictions are Hazel Point (PUG1601), about 10.5 km southeast, and South Point (PUG1602), about 14.6 km northeast, both across open water not representative of this corner of the canal. Predict from the site's own ENPAC15 extract, cross-checked against the Whitney Point tide table |
+| **Current type** | Tidal |
+| **Governing station** | None governs. The nearest station with predictions is Hazel Point (PUG1601), about 10.5 km southeast |
 | **Recommended bin** | Not applicable |
-| **Time offset** | None |
-| **Flood axis** | NNW, 343°, into Dabob Bay |
-| **Ebb axis** | SSE, 163°, out of the bay toward the main canal |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | Not applicable |
+| **Station ebb axis** | Not applicable |
+| **Site flood set** | north-northwest, 333°, into Dabob Bay |
+| **Site ebb set** | south-southeast, 153°, out of the bay toward the main canal |
 
-* **Flood.** Sets NNW into Dabob Bay, negligible in strength.
-* **Ebb.** Sets SSE out of the bay toward the main canal, similarly negligible.
-* **Slack.** This corner of the canal behaves like the rest of Hood Canal, as a standing wave, so slack falls close to high and low water rather than midway between them. With the whole day already under about 0.25 knots, the distinction rarely matters here.
-* **Diveable window.** All day, any tide stage. Current is not the limiting factor at this site; access, visibility and boat traffic are.
+* **Flood.** Sets north-northwest into Dabob Bay, negligible in strength.
+* **Ebb.** Sets south-southeast out of the bay toward the main canal, similarly negligible.
+* **Slack.** This corner of the canal behaves like the rest of Hood Canal, as a standing wave, so slack falls close to high and low water rather than midway between them. With the whole day already under about 0.13 m/s, the distinction rarely matters here.
+* **Diveable window.** All day, any tide stage. Slack timing comes from the site's own ENPAC15 extract, cross-checked against the Whitney Point tide table. Current is not the limiting factor at this site; access, visibility and boat traffic are.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | north, 357° |
+| **Dive area shore facing** | north, 357° |
+
+The beach faces north, out across the mouth of Dabob Bay into Hood Canal.
+
+* **Bad.** Northeast (NE), onshore over 6.7 km, the open fetch up the canal and across the bay mouth.
+* **Short fetch.** Northwest through north-northeast (NW-NNE), onshore over 1.4 to 3.4 km.
+* **Fine.** East-northeast clockwise through west-northwest (ENE-WNW): offshore from east-southeast through southwest, blocked by the high ground inland toward Brinnon, and under 4.8 km of fetch from every other direction.
+* **Wind against current.** Not a factor here; the current is too weak to stack against any wind. Read the beach forecast rather than the marine one.
 
 ## Depth and tide
 
@@ -51,7 +69,7 @@ Hood Canal's tide swings more here than in the main basin of the Sound, and at P
 
 | | |
 |---|---|
-| **Tide station** | Whitney Point (9445246), 47.7617, -122.8500, about 0.3 km |
+| **Tide station** | NOAA Whitney Point, Dabob Bay (9445246), about 0.3 km south-southeast |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m |
 
@@ -61,20 +79,6 @@ Hood Canal's tide swings more here than in the main basin of the Sound, and at P
 | Concrete dividers alongside the pipe | 9 to 10 m | 7.6 to 8.6 m | 13 to 14 m |
 | Pipe end and its deep supports | 26 to 30 m | 24.6 to 28.6 m | 30 to 34 m |
 | Sea whip field beyond | from about 30 m | from about 28.6 m | from about 34 m |
-
-## Hazards
-
-* **Depth creep beyond the pipe.** Past the pipe's end the bottom keeps dropping into the sea whip field, 30 m and deeper, well past recreational no-decompression limits; the dives out there are routinely run on closed-circuit rebreathers with staged decompression. Treat the pipe's end as the turn point on open-circuit air or nitrox, not a waypoint to a further destination.
-* **Boat traffic.** A working boat ramp sits right at the site, busy with fishing and crabbing traffic year round, and one of the main put-ins for the Hood Canal (Marine Area 12) spot shrimp fishery on its handful of open days each spring. Fly a dive flag and expect boats overhead near the ramp.
-* **Losing the pipe in a muck layer.** A band of algae, sediment or bloom settles over the pipe in the shallows on some days, thick enough to make it hard to follow by feel alone; losing contact with it means surfacing to relocate by the buoy marking its end rather than searching blind. Carry a light and keep a hand on the pipe through any hazy stretch.
-* **Cold.** Water at depth stays cold year round regardless of how warm the shallows get in summer.
-
-## Wind
-
-* **Orientation.** The beach faces north, out across the mouth of Dabob Bay into Hood Canal.
-* **Bad.** North through northeast, the open fetch up the canal and across the bay mouth.
-* **Fine.** South, offshore and blocked by the high ground inland toward Brinnon.
-* **Wind against current.** Not a factor here; the current is too weak to stack against any wind. Read the beach forecast rather than the marine one.
 
 ## Visibility
 
@@ -98,3 +102,10 @@ Hood Canal's tide swings more here than in the main basin of the Sound, and at P
 * **Crabs and shrimp.** Red rock, Dungeness, kelp and decorator crabs, hermit crabs on the sand, and spot shrimp.
 * **Jellies.** Fried egg jellies, lion's mane, tailed jellies and comb jellies drift through, with several smaller unidentified species seasonally abundant.
 * **Sea whip field.** Beyond the pipe's end, a dense stand of sea whips on the slope, among the healthiest and most extensive at any shore-accessible site in the region, though at a depth beyond recreational reach.
+
+## Hazards
+
+* **Depth creep beyond the pipe.** Past the pipe's end the bottom keeps dropping into the sea whip field, 30 m and deeper, well past recreational no-decompression limits; the dives out there are routinely run on closed-circuit rebreathers with staged decompression. Treat the pipe's end as the turn point on open-circuit air or nitrox, not a waypoint to a further destination.
+* **Boat traffic.** A working boat ramp sits right at the site, busy with fishing and crabbing traffic year round, and one of the main put-ins for the Hood Canal (Marine Area 12) spot shrimp fishery on its handful of open days each spring. Fly a dive flag and expect boats overhead near the ramp.
+* **Losing the pipe in a muck layer.** A band of algae, sediment or bloom settles over the pipe in the shallows on some days, thick enough to make it hard to follow by feel alone; losing contact with it means surfacing to relocate by the buoy marking its end rather than searching blind. Carry a light and keep a hand on the pipe through any hazy stretch.
+* **Cold.** Water at depth stays cold year round regardless of how warm the shallows get in summer.

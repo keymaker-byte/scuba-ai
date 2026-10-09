@@ -5,7 +5,7 @@ Illahee State Park sits on the Kitsap Peninsula's east shore in Bremerton, on th
 | | |
 |---|---|
 | **Location** | Bremerton, Washington. East shore of the Kitsap Peninsula, on the Port Orchard reach across from Bainbridge Island |
-| **Coordinates** | Dive site 47.600492, -122.593673 (seabed 13.6 m below MLLW), about 170 m out past the pier and its pilings |
+| **Coordinates** | 47.600492, -122.593673 (seabed 13.6 m below MLLW), about 170 m out past the pier and its pilings |
 | **Parking coordinates** | 47.599929, -122.596200, the boat launch and pier day use area lot |
 | **Entry point coordinates** | 47.599640, -122.595569, the stairs beside the fishing pier |
 | **Type** | Shore |
@@ -31,16 +31,33 @@ Current here is negligible at every stage of the tide, at the surface and depth-
 
 | | |
 |---|---|
-| **Governing station** | None close enough to govern. The nearest stations publishing predictions are Rich Passage, West end (PUG1514), about 2.6 km, and Port Washington Narrows, Warren Ave. Bridge (PUG1510), about 3.6 km; both sit in constricted channels running at more than 1 m/s at peak, an order of magnitude faster than this open reach, and are not representative. Predict from the site's own ENPAC15 extract, cross-checked against the Brownsville tide table |
+| **Current type** | Tidal |
+| **Governing station** | None governs. The nearest station with predictions is Rich Passage, West end (PUG1514), about 2.6 km east-southeast, in the pass |
 | **Recommended bin** | Not applicable |
-| **Time offset** | None |
-| **Flood axis** | NNW, 349° |
-| **Ebb axis** | SSE, 169° |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | Not applicable |
+| **Station ebb axis** | Not applicable |
+| **Site flood set** | north, 350° |
+| **Site ebb set** | south, 170° |
 
 * **Flood.** Sets NNW, up the Port Orchard reach toward Agate Passage and Brownsville, negligible in strength and staying under about 0.15 m/s at any stage of the tide.
 * **Ebb.** Sets SSE, down the reach toward Rich Passage and the main basin, similarly weak.
 * **Shallows.** The water above the pilings can push harder on an incoming tide, enough to work against right at the dock, even with the rest of the site sitting under 0.15 m/s. Treat the top few metres near the pier with more caution than the open current axis alone would suggest.
-* **Diveable window.** All day, any tide stage. Current is not the limiting factor at this site; boat traffic and visibility are.
+* **Diveable window.** All day, any tide stage. Slack timing comes from the site's own ENPAC15 extract, cross-checked against the Brownsville tide table. Current is not the limiting factor at this site; boat traffic and visibility are.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | northeast, 53° |
+| **Dive area shore facing** | northeast, 53° |
+
+The site faces northeast, across the Port Orchard reach toward Bainbridge Island.
+
+* **Short fetch.** North through east-southeast (N-ESE), onshore over 1.3 to 3.1 km, the open fetch down the reach from Agate Passage and across the water to Bainbridge Island.
+* **Fine.** Southeast clockwise through north-northwest (SE-NNW): offshore from south through west-northwest, blocked by the Kitsap Peninsula landmass behind the site, and cross-shore under 3.1 km from southeast, south-southeast, northwest and north-northwest.
+* **Wind against current.** Not a real factor here; the current stays too weak at every stage of the tide to stack meaningfully against any wind.
 
 ## Depth and tide
 
@@ -48,7 +65,7 @@ Tide swings the depth here by a few metres across a normal day.
 
 | | |
 |---|---|
-| **Tide station** | Brownsville, Port Orchard (9445832), about 5.9 km, same shore |
+| **Tide station** | NOAA Brownsville, Port Orchard (9445832), about 5.9 km north-northwest on the same shore |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.56 m, up to 5.26 m on the year's biggest exchange; 2026 span -1.35 m to +4.12 m |
 
@@ -56,18 +73,6 @@ Tide swings the depth here by a few metres across a normal day.
 |---|---|---|---|
 | Pilings, inner pier | 1.8 m | 0.5 m | 5.9 m |
 | Outer slope, working depth | 13.6 m | 12.3 m | 17.7 m |
-
-## Hazards
-
-* **Boats and fishing line.** An active boat launch and small boat moorage dock share the site with the diver, and the pier draws steady fishing traffic; monofilament line and lures collect on the bottom near the pilings. Stay clear of the underside of any moored boat, and listen for engine noise before ascending, surfacing between the pilings rather than in open water while boats are active.
-* **Depth creep.** The sand slope keeps dropping well past the site's usual working depth. Watch depth on any push beyond the pilings.
-
-## Wind
-
-* **Orientation.** The site faces roughly northeast, across the Port Orchard reach toward Bainbridge Island.
-* **Bad.** North through east, the open fetch down the reach from Agate Passage and across the water to Bainbridge Island.
-* **Fine.** South through west, blocked by the Kitsap Peninsula landmass behind the site.
-* **Wind against current.** Not a real factor here; the current stays too weak at every stage of the tide to stack meaningfully against any wind.
 
 ## Visibility
 
@@ -84,3 +89,8 @@ Tide swings the depth here by a few metres across a normal day.
 * **Pilings and dock.** Colorful sea anemones, tube worms, sea squirts, pile perch and striped seaperch, hermit crabs and kelp crabs, and an abundance of nudibranchs on the structure itself.
 * **Sand slope.** Flounder, blood stars, leather stars, Stimpson's sun stars, sunflower stars, sea cucumbers, Dungeness crab, moon snails, and geoduck.
 * **Open water.** Jellyfish drift through over the sand.
+
+## Hazards
+
+* **Boats and fishing line.** An active boat launch and small boat moorage dock share the site with the diver, and the pier draws steady fishing traffic; monofilament line and lures collect on the bottom near the pilings. Stay clear of the underside of any moored boat, and listen for engine noise before ascending, surfacing between the pilings rather than in open water while boats are active.
+* **Depth creep.** The sand slope keeps dropping well past the site's usual working depth. Watch depth on any push beyond the pilings.

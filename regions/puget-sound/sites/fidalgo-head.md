@@ -5,7 +5,7 @@ Shore dive across the shallow bay at Washington Park, on the west end of Fidalgo
 | | |
 |---|---|
 | **Location** | Anacortes, WA. Fidalgo Head, the rocky south shoreline of Washington Park's bay, at the west end of Fidalgo Island, at the west mouth of Burrows Pass where it opens into Rosario Strait |
-| **Coordinates** | Dive site 48.49216, -122.70335 (seabed about 11.7 m below MLLW), on the outer third of the headland where the rock gives way to sand |
+| **Coordinates** | 48.49216, -122.70335 (seabed about 11.7 m below MLLW), on the outer third of the headland where the rock gives way to sand |
 | **Parking coordinates** | 48.497994, -122.700806, the roadside pullouts near the stairs |
 | **Entry point coordinates** | 48.497048, -122.700551, the concrete stairs at the sharp bend in Washington Park's Loop Road |
 | **Type** | Shore |
@@ -32,15 +32,34 @@ Fidalgo Head sits where the flow through Burrows Pass meets the open water off t
 
 | | |
 |---|---|
-| **Governing station** | NOAA Burrows Pass (PUG1738), about 1.3 km southeast at the mouth of the pass, the nearest live current-prediction station |
-| **Recommended bin** | bin 23, 8.6 m |
-| **Time offset** | Not firmly established; the station sits at the mouth of the pass while the dive itself is on the headland just outside it, at a bifurcation where the flow splits. Treat the slack as approximate and confirm in the water |
-| **Flood axis** | west-northwest, 283° at the station, curling northwest along the Fidalgo Head shoreline as it rounds the point |
-| **Ebb axis** | east, 89° at the station, curling southeast along the shoreline as it divides at the head |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Burrows Pass (PUG1738), about 1.3 km east-southeast at the mouth of the pass; the dive is on the headland just outside it, at a bifurcation where the flow splits |
+| **Recommended bin** | bin 23, at 8.6 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | west-northwest, 283° |
+| **Station ebb axis** | east, 89° |
+| **Site flood set** | northwest, 322°, curling along the Fidalgo Head shoreline as it rounds the point |
+| **Site ebb set** | southeast, 142°, curling along the shoreline as it divides at the head |
 
-* **Flood.** Runs westward through Burrows Pass into Rosario Strait, then turns and moves inshore along Fidalgo Head, rounding the head heading northwest and setting into the bay toward West Beach.
-* **Ebb.** Sets south past Green Point, bends into the bay, and collides with the rocky shoreline of Fidalgo Head. The flow then divides: the stronger part continues south, flowing out along the outer third of the headland; the weaker part turns north and flows back toward West Beach.
-* **Diveable window.** Enter 20 to 30 minutes before slack, preferably ahead of a flood, so the crossing runs against only a minimal current and the return leg runs entirely with the building flood. Returning on an ebb instead, the swim back along the shoreline can run against the current at first; about a third of the way in from the headland there is a quiet current-divide zone, and past it the remaining swim runs with an inbound current.
+* **Flood.** Runs westward through Burrows Pass into Rosario Strait, then turns and moves inshore along Fidalgo Head, rounding the head heading northwest and setting into the bay toward West Beach. Daily peaks run 1.31 to 1.69 m/s at the station over 30 days.
+* **Ebb.** Sets south past Green Point, bends into the bay, and collides with the rocky shoreline of Fidalgo Head. The flow then divides: the stronger part continues south, flowing out along the outer third of the headland; the weaker part turns north and flows back toward West Beach. Daily peaks run 0.47 to 1.48 m/s at the station over the same 30 days.
+* **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 90 minutes. Enter 20 to 30 minutes before slack, preferably ahead of a flood, so the crossing runs against only a minimal current and the return leg runs entirely with the building flood. Returning on an ebb instead, the swim back along the shoreline can run against the current at first; about a third of the way in from the headland there is a quiet current-divide zone, and past it the remaining swim runs with an inbound current.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | south, 183° |
+| **Dive area shore facing** | west-northwest, 294° |
+
+The entry is on the sheltered bay; Fidalgo Head sits on the north side of Burrows Pass's west mouth, facing west and southwest into open Rosario Strait, more exposed than the bay behind it.
+
+* **Bad.** Southwest through west-southwest (SW-WSW), onshore over 9.3 to 12.1 km, a direct fetch off Rosario Strait.
+* **Short fetch.** Southeast (SE) and south-southwest (SSW), onshore over about 1 km.
+* **Mixed.** West through west-northwest (W-WNW), cross-shore over 5.3 to 7.6 km off Rosario Strait.
+* **Fine.** Northwest clockwise through east-southeast (NW-ESE), offshore, the north blocked by the park's own high ground, and east up the narrow throat of Burrows Pass with little room to build a fetch even when it blows; and south-southeast through south (SSE-S), onshore under 1 km across the bay.
+* **Wind against current.** West-northwest through north (WNW-N), over 5.3 to 16.9 km, blows against the flood, the same current the return leg is usually timed to ride home; wind and current opposition stack right on the exposed crossing. Southeast (SE), over about 1 km, opposes the ebb.
 
 ## Depth and tide
 
@@ -55,22 +74,6 @@ The site swings roughly 2.5 m between an average high and low water, more around
 | Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |
 |---|---|---|---|
 | Outer rock into sand | 11.7 m | 10.4 m | 14.5 m |
-
-## Hazards
-
-* **Strong, current-sensitive water.** The current at Fidalgo Head follows the full flood/ebb cycle described above, and the crossing puts a diver well away from the entry when it turns.
-* **Long swim.** About 15 minutes each way at slack, longer off timing. Budget gas and NDL for the full return crossing, not just the time on the headland.
-* **Low visibility.** Worst crossing the muddy bay; better, though not guaranteed, along the rock.
-* **Kelp.** The rocky shoreline carries kelp; carry a knife.
-* **Small boat traffic.** Small boats cross the bay near the boat launch.
-* **No alternate exit.** The dive must return to the entry beach.
-
-## Wind
-
-* **Orientation.** Fidalgo Head sits on the north side of Burrows Pass's west mouth, facing west and southwest into open Rosario Strait, more exposed than the sheltered bay behind it.
-* **Bad.** Southwest through west, a direct fetch off Rosario Strait.
-* **Fine.** North, blocked by the park's own high ground. East, up the narrow throat of Burrows Pass, has little room to build a fetch even when it blows.
-* **Wind against current.** Southwest through west, the site's worst fetch direction, blows against the flood at the pass mouth, the same current the return leg is usually timed to ride home; wind and current opposition stack right on the exposed crossing.
 
 ## Visibility
 
@@ -90,3 +93,12 @@ The site swings roughly 2.5 m between an average high and low water, more around
 * **Encrusting life.** Sea squirts, small white sea cucumbers and gumboot chitons cover the rock, with multi-rayed sunflower stars and both red and green sea urchins grazing among them.
 * **Fish.** Great sculpins, flounder and kelp greenlings.
 * **Other.** Snails and nudibranchs are well represented along the shoreline.
+
+## Hazards
+
+* **Strong, current-sensitive water.** The current at Fidalgo Head follows the full flood/ebb cycle described above, and the crossing puts a diver well away from the entry when it turns.
+* **Long swim.** About 15 minutes each way at slack, longer off timing. Budget gas and NDL for the full return crossing, not just the time on the headland.
+* **Low visibility.** Worst crossing the muddy bay; better, though not guaranteed, along the rock.
+* **Kelp.** The rocky shoreline carries kelp; carry a knife.
+* **Small boat traffic.** Small boats cross the bay near the boat launch.
+* **No alternate exit.** The dive must return to the entry beach.

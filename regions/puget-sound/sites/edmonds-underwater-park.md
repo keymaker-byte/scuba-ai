@@ -5,7 +5,7 @@ Edmonds Underwater Park is a shore dive on the Puget Sound waterfront at Edmonds
 | | |
 |---|---|
 | **Location** | Edmonds, WA. East shore of the main basin of Puget Sound, immediately north of the Edmonds to Kingston ferry terminal |
-| **Coordinates** | Dive site 47.81574, -122.38457 (seabed about 7 m below MLLW) |
+| **Coordinates** | 47.81574, -122.38457 (seabed about 7 m below MLLW) |
 | **Parking coordinates** | 47.813236, -122.382132, the Brackett's Landing park lot |
 | **Entry point coordinates** | 47.813587, -122.382224, Brackett's Landing North at the jetty. Either side of the jetty works for entry; this coordinate is the sheltered south side, facing the cove |
 | **Type** | Shore |
@@ -27,79 +27,6 @@ The site is a set of sunken structures on an otherwise featureless sandy bottom,
 * **Guide rope.** The dive is run along a submerged grid of ropes held down by pipes, rocks and yellow road cones, some 4 km of trail in total: named trails running shore to open water, DeLion Way through Casper's Way west to east, crossed by trails running shore-parallel, Rocky Road through Boundary Way near shore to offshore. From the jetty entry, submerge and swim out a short distance to pick up Jetty Way. Off the rope, navigation over the sand is by compass alone.
 * **The dry dock.** The sunken DeLion Dry Dock lies west of DeLion Way, along the ferry boundary, its two ends spanning the offshore stretch from about Boundary Way down to Telegraph Way. Its two parallel side walls stand about 10 m off the deck, sit about 24 m apart and run about 99 m long, oriented parallel to the ferry slip. A low concrete keel ledge runs down the middle, once a keel support for ships and now a halfway mark for a diver crossing between the walls.
 * **Other structures.** Several scuttled vessels and smaller enhancements lie north of DeLion Way, among them a former tug passed on the way out, all placed away from the ferry slip. The posted map shows their layout and any recent additions.
-
-## Current
-
-Current is a secondary factor here and the site is genuinely mild for the Sound, but it does run, driven by wind and by the ferry's propeller wash as much as by the tide. The real concern is not a fierce channel but being set sideways toward the ferry lane without noticing.
-
-| | |
-|---|---|
-| **Governing station** | NOAA Possession Sound Entrance (PUG1605), about 9.5 km north, mid-channel |
-| **Recommended bin** | bin 40, at 18 m, the shallowest published; the station sits in deep water off the site |
-| **Time offset** | Not firmly established; the station's slack runs anywhere from close to the park's own turn to a little over an hour behind it, so treat it as approximate and pad the window. The park sits where the main flow of Puget Sound splits, part north into Possession Sound and part continuing south through the main basin |
-| **Flood axis, at the station** | northeast, 31° |
-| **Ebb axis, at the station** | southwest, 204° |
-| **Flood axis, at the park** | northeast, about 40° |
-| **Ebb axis, at the park** | southwest, about 220° (towards the ferry) |
-
-* **Flood.** Sets northeast, both at the station and at the park, off the ferry slip rather than onto it. Modest, generally well under 0.5 m/s on ordinary exchanges.
-* **Ebb.** Sets southwest, both at the station and at the park, with the component that carries toward the ferry slip; this is the phase to watch for the ferry hazard. Usually under about 0.6 m/s, reaching around 1 m/s on a large spring exchange.
-* **Local current.** The flow in the park is lighter than at the station and is also shaped by wind and by the ferry's propeller wash at the adjacent slip, so it can run when the tide is nominally slack and set across your path rather than along the axis above. About 0.5 m/s is comfortable; twice that is workable but no fun. A small exchange, under roughly 1.2 m, leaves almost no current.
-* **Diveable window.** The window is wide because the current is weak. High slack is preferred, for an easier entry across a covered beach and cleaner, less silt-laden water. A big exchange or a very low tide is what raises the risk of being carried toward the ferry, so those are the days to be conservative. Surface current-indicator buoys with tails at the site show the set direction.
-
-## Depth and tide
-
-The park is shallow and the bottom is gentle, so the tide is a large fraction of the depth and also decides how far the beach is exposed. Edmonds swings up to about 4.9 m between high and low water, so depths are given against the MLLW chart datum. A low tide reads shallower than the datum figure and lengthens the walk across the exposed beach; a high tide reads deeper and covers the beach for an easier entry.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Edmonds tide station (9447427), at the site |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m |
-
-| Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |
-|---|---|---|---|
-| Deepest ground, south near ferry | about 13 m | about 11.7 m | about 16.8 m |
-
-The deepest ground lies at the south end toward the ferry, inside the off-limits zone, so most diving stays between about 8 and 12 m below datum.
-
-## Hazards
-
-* **Ferry lane.** The Edmonds to Kingston ferry slip is immediately south of the park and ferries run constantly. Stay inside park boundaries, north of the ferry terminal, and never enter the ferry lane. Being set sideways toward the slip without noticing, or surfacing short of shore on a long swim, is the recognised way divers end up near the ferry, and a diver forced up mid-site has needed a ferry-assisted rescue. This risk is greatest on the ebb, when the park's own current sets southwest toward the slip; the flood sets northeast, away from it. For the same reason, enter and exit at the jetty rather than at the pilings further south toward the pier; descending there puts a diver in the water already close to the slip.
-* **Disorientation.** Most of the site is featureless sand, and the trails lead well out from shore. It is easy to lose the way back, or to follow a trail farther out than intended and then face a long swim home in poor visibility. Stay on the rope, carry and use a compass, and turn the dive with air and distance in hand.
-* **Long swim.** The structures are a long way out, and on a low tide there is a long walk across the exposed beach as well. Watch your gas, avoid a long surface swim, and keep some sights back for a second dive. Many divers plan one longer dive here rather than two.
-* **Kelp.** Bull kelp grows on the structures in summer and can entangle. Carry a knife.
-* **Jellyfish.** Lion's mane jellies drift through in season. If you have seen them, check for tentacles before removing your mask and gloves.
-* **Low visibility.** Visibility is often poor, which compounds the ferry and navigation hazards.
-
-## Wind
-
-* **Orientation.** The beach faces roughly west to northwest, onto the open main basin of Puget Sound.
-* **Bad.** North through northwest, with open fetch across the basin, builds chop and surge on the entry and swell over the shallow structures. A strong onshore wind is felt as surge close to shore even when the deeper water is calmer. A rock breakwater just north of the entry gives the beach some shelter from a north wind, but not from northwest.
-* **Fine.** East and southeast are offshore and leave the entry sheltered.
-* **Wind against current.** The ebb sets southwest, so a southwest wind opposing it steepens the chop, but the greater problem here is that any wind adds its own surface drift toward the ferry lane and stirs silt in the shallows, worsening an already marginal viz.
-
-## Visibility
-
-* **Generally poor.** Visibility here is modest at best and often poor, commonly a few metres and sometimes under a metre, occasionally opening to around 4 to 5 m and, on a rare clear day, further. It is one of the site's real limitations, and the reason the trail system and a compass matter.
-* **Best in winter and on calm weekdays.** Plankton is lowest in winter, and with fewer divers stirring the fine silt the water is clearest then. A second good window comes on calm weekdays in late summer, around August into September, when the water is also warmest.
-* **Worst spring through fall.** Plankton blooms from spring into fall cut it back, and it is further degraded by divers stirring the silt and by current, surge and ferry wash lifting the bottom.
-* **High slack is clearest.** Diving on the high slack, before the crowds and before the bottom is stirred, gives the least silt-laden water and the easiest entry.
-
-## Temperature
-
-* **At depth.** Roughly 9 to 14 °C through the year, coldest in late winter around 9 to 10 °C and warmest in late summer and fall around 13 to 14 °C. Standard drysuit protocol.
-* **Surface layer.** In summer the surface warms well above the dive, up to about 18 °C over 13 to 14 °C at depth. Dress for the depth and expect to be warm on the walk in.
-
-## Marine life
-
-* **Character.** The reason the park exists. Sanctuary protection since 1970 and decades of structure on an otherwise bare sandy bottom have concentrated an exceptional density and variety of life, and the animals are used to divers. The scuttled vessels are draped in white plumose anemones and tube worms, and the site is a mecca for underwater photographers.
-* **Fish.** Lingcod and cabezon on the structure, the cabezon often large and numerous and the lingcod guarding egg masses in late winter and spring. Copper and other rockfish, painted and kelp greenlings, red Irish lords, scalyhead and other sculpins, flounder over the sand, ratfish, dogfish, pipefish, tube-snouts and the occasional decorated warbonnet.
-* **Cephalopods and wolf eels.** Giant Pacific octopus and wolf eels both live in the structure and are among the draws, seen in the open as well as denned.
-* **Anemones and encrusting life.** White plumose anemones cover the vessels, with purple and other tube worms, scallops, sea stars, hydromedusae and giant plumose anemones on the vessels' ribs.
-* **Nudibranchs.** A rich site for them, in keeping with the Salish Sea's diversity: clown, frosted, shag-rug, leopard dorid, Monterey sea lemon and Heath's dorid among those seen.
-* **Crustaceans.** Dungeness, red rock, northern kelp and hermit crabs, and shrimp, on the structure and across the sand.
-* **On the sand and in the shallows.** Between the structures and shore, eelgrass and kelp hold moon snails, flounder and other soft-bottom life, while striped seaperch school around the pilings.
 
 ## Site map
 
@@ -182,3 +109,85 @@ Important! north is to the right.
 | s | Matt's Place |
 
 The `#` column is the Edmonds to Kingston ferry lane, immediately west of the DeLion Dry Dock, off limits and never to be entered.
+
+## Current
+
+Current is a secondary factor here and the site is genuinely mild for the Sound, but it does run, driven by wind and by the ferry's propeller wash as much as by the tide. The real concern is not a fierce channel but being set sideways toward the ferry lane without noticing.
+
+| | |
+|---|---|
+| **Current type** | Tidal |
+| **Governing station** | NOAA Possession Sound Entrance (PUG1605), about 9.5 km north, mid-channel; the park sits where the main flow of Puget Sound splits, part north into Possession Sound and part continuing south through the main basin |
+| **Recommended bin** | bin 40, at 18 m, the shallowest published; the station sits in deep water off the site |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | northeast, 31° |
+| **Station ebb axis** | south-southwest, 204° |
+| **Site flood set** | northeast, 41° |
+| **Site ebb set** | southwest, 221°, towards the ferry |
+
+* **Flood.** Sets northeast, both at the station and at the park, off the ferry slip rather than onto it. Modest, generally well under 0.5 m/s on ordinary exchanges. Daily peaks run 0.13 to 0.37 m/s at the station over 30 days.
+* **Ebb.** Sets southwest, both at the station and at the park, with the component that carries toward the ferry slip; this is the phase to watch for the ferry hazard. Usually under about 0.6 m/s, reaching around 1 m/s on a large spring exchange. Daily peaks run 0.10 to 0.32 m/s at the station over the same 30 days.
+* **Local current.** The flow in the park is lighter than at the station and is also shaped by wind and by the ferry's propeller wash at the adjacent slip, so it can run when the tide is nominally slack and set across your path rather than along the axis above. About 0.5 m/s is comfortable; twice that is workable but no fun. A small exchange, under roughly 1.2 m, leaves almost no current.
+* **Diveable window.** The window is wide because the current is weak. The station's slack runs anywhere from close to the park's own turn to a little over an hour behind it. Current at the station stays under 0.25 m/s for about 1.5 to 13 hours at a time. High slack is preferred, for an easier entry across a covered beach and cleaner, less silt-laden water. A big exchange or a very low tide is what raises the risk of being carried toward the ferry, so those are the days to be conservative. Surface current-indicator buoys with tails at the site show the set direction.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | northwest, 321° |
+| **Dive area shore facing** | northwest, 321° |
+
+The beach faces roughly west to northwest, onto the open main basin of Puget Sound.
+
+* **Bad.** West clockwise through north-northeast (W-NNE), onshore over 7.3 to 20.9 km, with open fetch across the basin, builds chop and surge on the entry and swell over the shallow structures. A strong onshore wind is felt as surge close to shore even when the deeper water is calmer. A rock breakwater just north of the entry gives the beach some shelter from a north wind, but not from northwest.
+* **Mixed.** Southwest through west-southwest (SW-WSW), cross-shore over 8.8 to 9.1 km.
+* **Fine.** Northeast clockwise through south-southwest (NE-SSW): offshore from east through south-southwest, and cross-shore under 1.6 km from northeast and east-northeast, leave the entry sheltered.
+* **Wind against current.** Southwest through west-southwest (SW-WSW), over 8.8 to 9.1 km, against the ebb steepens the chop; north through northeast (N-NE), over 1.6 to 14.5 km, against the flood. The greater problem here is that any wind adds its own surface drift toward the ferry lane and stirs silt in the shallows, worsening an already marginal viz.
+
+## Depth and tide
+
+The park is shallow and the bottom is gentle, so the tide is a large fraction of the depth and also decides how far the beach is exposed. Edmonds swings up to about 4.9 m between high and low water, so depths are given against the MLLW chart datum. A low tide reads shallower than the datum figure and lengthens the walk across the exposed beach; a high tide reads deeper and covers the beach for an easier entry.
+
+| | |
+|---|---|
+| **Tide station** | NOAA Edmonds (9447427), about 0.3 km south-southeast, at the site |
+| **Series** | High and low water only |
+| **Typical range** | Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m |
+
+| Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |
+|---|---|---|---|
+| Deepest ground, south near ferry | about 13 m | about 11.7 m | about 16.8 m |
+
+The deepest ground lies at the south end toward the ferry, inside the off-limits zone, so most diving stays between about 8 and 12 m below datum.
+
+## Visibility
+
+* **Generally poor.** Visibility here is modest at best and often poor, commonly a few metres and sometimes under a metre, occasionally opening to around 4 to 5 m and, on a rare clear day, further. It is one of the site's real limitations, and the reason the trail system and a compass matter.
+* **Best in winter and on calm weekdays.** Plankton is lowest in winter, and with fewer divers stirring the fine silt the water is clearest then. A second good window comes on calm weekdays in late summer, around August into September, when the water is also warmest.
+* **Worst spring through fall.** Plankton blooms from spring into fall cut it back, and it is further degraded by divers stirring the silt and by current, surge and ferry wash lifting the bottom.
+* **High slack is clearest.** Diving on the high slack, before the crowds and before the bottom is stirred, gives the least silt-laden water and the easiest entry.
+
+## Temperature
+
+* **At depth.** Roughly 9 to 14 °C through the year, coldest in late winter around 9 to 10 °C and warmest in late summer and fall around 13 to 14 °C. Standard drysuit protocol.
+* **Surface layer.** In summer the surface warms well above the dive, up to about 18 °C over 13 to 14 °C at depth. Dress for the depth and expect to be warm on the walk in.
+
+## Marine life
+
+* **Character.** The reason the park exists. Sanctuary protection since 1970 and decades of structure on an otherwise bare sandy bottom have concentrated an exceptional density and variety of life, and the animals are used to divers. The scuttled vessels are draped in white plumose anemones and tube worms, and the site is a mecca for underwater photographers.
+* **Fish.** Lingcod and cabezon on the structure, the cabezon often large and numerous and the lingcod guarding egg masses in late winter and spring. Copper and other rockfish, painted and kelp greenlings, red Irish lords, scalyhead and other sculpins, flounder over the sand, ratfish, dogfish, pipefish, tube-snouts and the occasional decorated warbonnet.
+* **Cephalopods and wolf eels.** Giant Pacific octopus and wolf eels both live in the structure and are among the draws, seen in the open as well as denned.
+* **Anemones and encrusting life.** White plumose anemones cover the vessels, with purple and other tube worms, scallops, sea stars, hydromedusae and giant plumose anemones on the vessels' ribs.
+* **Nudibranchs.** A rich site for them, in keeping with the Salish Sea's diversity: clown, frosted, shag-rug, leopard dorid, Monterey sea lemon and Heath's dorid among those seen.
+* **Crustaceans.** Dungeness, red rock, northern kelp and hermit crabs, and shrimp, on the structure and across the sand.
+* **On the sand and in the shallows.** Between the structures and shore, eelgrass and kelp hold moon snails, flounder and other soft-bottom life, while striped seaperch school around the pilings.
+
+## Hazards
+
+* **Ferry lane.** The Edmonds to Kingston ferry slip is immediately south of the park and ferries run constantly. Stay inside park boundaries, north of the ferry terminal, and never enter the ferry lane. Being set sideways toward the slip without noticing, or surfacing short of shore on a long swim, is the recognised way divers end up near the ferry, and a diver forced up mid-site has needed a ferry-assisted rescue. This risk is greatest on the ebb, when the park's own current sets southwest toward the slip; the flood sets northeast, away from it. For the same reason, enter and exit at the jetty rather than at the pilings further south toward the pier; descending there puts a diver in the water already close to the slip.
+* **Disorientation.** Most of the site is featureless sand, and the trails lead well out from shore. It is easy to lose the way back, or to follow a trail farther out than intended and then face a long swim home in poor visibility. Stay on the rope, carry and use a compass, and turn the dive with air and distance in hand.
+* **Long swim.** The structures are a long way out, and on a low tide there is a long walk across the exposed beach as well. Watch your gas, avoid a long surface swim, and keep some sights back for a second dive. Many divers plan one longer dive here rather than two.
+* **Kelp.** Bull kelp grows on the structures in summer and can entangle. Carry a knife.
+* **Jellyfish.** Lion's mane jellies drift through in season. If you have seen them, check for tentacles before removing your mask and gloves.
+* **Low visibility.** Visibility is often poor, which compounds the ferry and navigation hazards.

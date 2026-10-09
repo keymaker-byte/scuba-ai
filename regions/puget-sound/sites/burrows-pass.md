@@ -5,7 +5,7 @@ Shore dive on the north side of Burrows Pass, between Fidalgo Head and Burrows I
 | | |
 |---|---|
 | **Location** | Anacortes, WA. Burrows Pass, at its west end where it opens into Rosario Strait |
-| **Coordinates** | Dive site 48.49042, -122.69148 (seabed about 20 m below MLLW), mid pass |
+| **Coordinates** | 48.49042, -122.69148 (seabed about 20 m below MLLW), mid pass |
 | **Parking coordinates** | 48.492507, -122.687545, on the street by Skyline Marina |
 | **Entry point coordinates** | 48.492318, -122.687631, the beach at the end of Cabana Way |
 | **Type** | Shore |
@@ -44,16 +44,34 @@ Diveable on the slack before the ebb only. Do not dive on a flood exchange or at
 
 | | |
 |---|---|
-| **Governing station** | NOAA Burrows Pass current station (PUG1738), at the site |
-| **Recommended bin** | bin 23, at 8.5 m. NOAA's default bin is shallower, at 4.6 m |
-| **Time offset** | None; the station sits at the site |
-| **Flood axis** | west-northwest, 283° |
-| **Ebb axis** | east, 89° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Burrows Pass current station (PUG1738), about 0.4 km away, at the site |
+| **Recommended bin** | bin 1, at 30.6 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | west, 275° |
+| **Station ebb axis** | east, 95° |
+| **Site flood set** | west-northwest, 286° |
+| **Site ebb set** | east-southeast, 106° |
 
-* **Flood.** Sets southwest past the entry and out of the pass, around Fidalgo Head and into Rosario Strait. Strong, peaking around 1.8 to 2.1 m/s.
-* **Ebb.** Sets northeast, back into the pass toward the entry and exit. Gentler, peaking around 0.9 to 1.3 m/s.
+* **Flood.** Sets southwest past the entry and out of the pass, around Fidalgo Head and into Rosario Strait. Strong, with daily peaks of 1.12 to 1.48 m/s at the station over 30 days.
+* **Ebb.** Sets northeast, back into the pass toward the entry and exit. Gentler, with daily peaks of 0.36 to 1.20 m/s at the station over the same 30 days.
+* **Diveable window.** The slack before the ebb only. A typical window under 0.25 m/s at the station runs about 40 to 95 minutes; the layered reversal and the exchange size decide whether it serves.
 * **Layered reversal.** The ebb begins at the surface and works downward. Early in a low-volume ebb, water above about 13.7 m can already run northeast toward the exit while water below still runs southwest, outbound, on the tail of the flood. The transition band sits roughly 12 to 18 m below the surface. Ascend to about 12 m or shallower to catch the homeward ebb.
 * **Exchange size.** A small ebb may never reverse the deep flow, and the back eddy that carries you home may not form; too large an exchange is also unwelcome. A moderate ebb is the target. On a failed reversal the flow can sweep west onto the rocks and cliffs at the point.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | south-southwest, 192° |
+| **Dive area shore facing** | south-southeast, 156° |
+
+The entry beach is on the north shore of the pass, facing south-southwest toward Burrows Island.
+
+* **Bad.** West-southwest (WSW), onshore over 10.1 km, straight up the axis of the pass from its Rosario Strait opening.
+* **Fine.** West clockwise through southwest (W-SW): offshore from northwest through east-northeast, and under 2.1 km of fetch from every other direction.
+* **Wind against current.** East-southeast (ESE), over 2.1 km, against the homeward ebb on the leg spent at the surface, and west-southwest (WSW), over 10.1 km, against the flood. The ebb pairing is the one to avoid.
 
 ## Depth and tide
 
@@ -61,7 +79,7 @@ The pass swings roughly 2 to 4 m between high and low water, so depths are given
 
 | | |
 |---|---|
-| **Tide station** | NOAA Burrows Bay (Allan Island) tide station (9448683), about 3.3 km south |
+| **Tide station** | NOAA Burrows Bay (Allan Island) (9448683), about 3.4 km south |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 2.49 m, up to 3.79 m on the year's biggest exchange; 2026 span -1.07 m to +2.89 m |
 
@@ -71,22 +89,6 @@ The pass swings roughly 2 to 4 m between high and low water, so depths are given
 | Southwest end of that ledge | 17.4 m | 16.3 m | 20.3 m |
 | Outer rock structure | 22.3 m | 21.2 m | 25.2 m |
 | Outer structure, deepest | 23.5 m | 22.4 m | 26.4 m |
-
-The current-layer boundary near 13.7 m is measured from the surface, not from datum, so it is not normalized to MLLW.
-
-## Hazards
-
-* **Swift current.** A flood, or an ebb that fails to reverse, sets west out of the pass onto the rocks and cliffs at the point, then into Rosario Strait.
-* **Back eddies.** Form on several sides of the site, running counter to the main flow.
-* **Kelp.** Entanglement risk; the outbound leg runs under the canopy.
-* **Boat traffic.** A working channel with the marina adjacent.
-
-## Wind
-
-* **Orientation.** The entry beach is on the north shore of the pass, facing south-southwest toward Burrows Island.
-* **Bad.** Southwest through west, straight up the axis of the pass from its Rosario Strait opening.
-* **Fine.** North, northeast and east are offshore.
-* **Wind against current.** The homeward ebb runs east, so a westerly opposes it on the leg spent at the surface. That is the combination to avoid.
 
 ## Visibility
 
@@ -106,3 +108,10 @@ The current-layer boundary near 13.7 m is measured from the surface, not from da
 * **Crabs.** Decorator, kelp, helmet, hermit, umbrella and sharp-nosed crabs live on and around the structure, and the Puget Sound king crab, a large, armoured red-and-orange animal of the San Juans and Rosario Strait, is a prized find here.
 * **Fish and cephalopods.** Octopus, wolf eels (juveniles are seen shallow, above about 11 m), rockfish, perch, red Irish lords, kelp greenlings, grunt and buffalo sculpins, sand lances, plainfin midshipmen in the sand, and tube-snouts beneath the kelp canopy.
 * **In the shallows.** An eelgrass meadow and wide-blade kelp lie between the entry and the kelp beds, nursery habitat that contrasts with the invertebrate-covered rock below.
+
+## Hazards
+
+* **Swift current.** A flood, or an ebb that fails to reverse, sets west out of the pass onto the rocks and cliffs at the point, then into Rosario Strait.
+* **Back eddies.** Form on several sides of the site, running counter to the main flow.
+* **Kelp.** Entanglement risk; the outbound leg runs under the canopy.
+* **Boat traffic.** A working channel with the marina adjacent.

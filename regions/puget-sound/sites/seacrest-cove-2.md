@@ -5,7 +5,7 @@ Shore dive at Seacrest Park on the West Seattle waterfront, also known as Alki C
 | | |
 |---|---|
 | **Location** | West Seattle, WA. Southwest shore of Elliott Bay on Harbor Avenue SW, at Seacrest Park |
-| **Coordinates** | Dive site 47.58932, -122.37826 (seabed about 24 m below MLLW), about 140 m northeast of the entry |
+| **Coordinates** | 47.58932, -122.37826 (seabed about 24 m below MLLW), about 140 m northeast of the entry |
 | **Parking coordinates** | 47.588514, -122.380105, curbside along Harbor Avenue SW |
 | **Entry point coordinates** | 47.588696, -122.379871, the beach beside the Marination Ma Kai café |
 | **Type** | Shore |
@@ -34,45 +34,48 @@ Current is not a planning factor here. The cove sits deep inside Elliott Bay, aw
 
 | | |
 |---|---|
-| **Governing station** | NOAA Harbor Island West (PUG1507), about 1.5 km east at the mouth of the West Waterway |
-| **Recommended bin** | bin 9, at 6.6 m (the deepest published) |
-| **Time offset** | None established; the current is too weak for one to matter |
-| **Flood axis** | south, 177° |
-| **Ebb axis** | north, 356° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Harbor Island West (PUG1507), about 1.5 km east-southeast at the mouth of the West Waterway |
+| **Recommended bin** | bin 9, at 6.6 m, the deepest published |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | south, 177° |
+| **Station ebb axis** | north, 356° |
+| **Site flood set** | south-southwest, 203° |
+| **Site ebb set** | north-northeast, 23° |
 
-* **Strength.** Weak throughout. Station peaks stay near or under 0.2 m/s even on large exchanges, and the depth-averaged flow at the cove itself runs weaker still, so whole days pass inside a 0.25 m/s window.
+* **Strength.** Weak throughout. Station peaks stay near or under 0.2 m/s even on large exchanges, and the depth-averaged flow at the cove itself runs weaker still, so whole days pass inside a 0.25 m/s window. Daily peaks at the station run 0.09 to 0.22 m/s on the flood and 0.07 to 0.15 m/s on the ebb over 30 days.
 * **Set.** What little stream there is runs along the shore on a roughly north-northeast to south-southwest axis, the flood side setting toward the Duwamish waterways.
 * **Diveable window.** Any tide. Ship wakes and wind chop move more water at the entry than the tide does.
 
-## Depth and tide
-
-Elliott Bay swings 3 to 4 m between high and low water, so depths are given against the MLLW chart datum: a feature reads shallower at a low and deeper at a high.
+## Wind
 
 | | |
 |---|---|
-| **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 3.3 km northeast across the bay |
-| **Series** | High and low water only |
+| **Entry shore facing** | east-northeast, 57° |
+| **Dive area shore facing** | northeast, 52° |
+
+The beach faces northeast across Elliott Bay. With almost no tidal stream, the roughest the entry gets is a north wind stacked on the wakes of harbor traffic; time the walk out between them.
+
+* **Short fetch.** North through east-southeast (N-ESE), onshore over 1.7 to 4.8 km across the bay onto the entry, which builds chop on the beach; a northerly has the longest fetch, in through the bay mouth.
+* **Mixed.** North-northwest (NNW), cross-shore over 5.5 km down the Sound.
+* **Fine.** Southeast clockwise through northwest (SE-NW): offshore from south through west-northwest, blocked by the West Seattle hill behind the park, and cross-shore under 1 km from southeast, south-southeast and northwest. The cove is often calm when the beach around the point is blown out, which makes it the standing bad-weather alternative.
+* **Wind against current.** Not a factor; the current is too weak to stack against any wind.
+
+## Depth and tide
+
+Elliott Bay swings 3 to 5 m between high and low water, so depths are given against the MLLW chart datum: a feature reads shallower at a low and deeper at a high.
+
+| | |
+|---|---|
+| **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 3.3 km east-northeast across the bay |
+| **Series** | Full series |
 | **Typical range** | Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m |
 
 | Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
 |---|---|---|---|
 | Honey Bear remains | 8 m | 6.7 m | 12 m |
 | Mid-slope at the site coordinate | 24 m | 22.7 m | 28 m |
-
-## Hazards
-
-* **Water taxi.** The passenger ferry runs year-round from the dock at the northwest end of the cove, with frequent daytime sailings. A 45 m exclusion zone surrounds the dock; stay inside the buoyed dive area, and never surface in open water near the lane. Ascend up a buoy or anchor line, or stay close to the bottom all the way to shore.
-* **Fishing pier.** A no-dive zone marked by yellow buoys extends around the public fishing pier at the southeast end of the cove. Keep clear of it, and of the fishing line that drapes the pier and nearby pilings. Carry a knife.
-* **Boat traffic.** Small boats, jet skis and kayakers work this shoreline, heaviest in summer. Listen before any ascent and fly a dive flag; signs on site require one.
-* **The slope.** The bottom keeps dropping past 40 m with nothing to arrest a drift downward, and the depth arrives quickly for a training beach. Watch the gauge, especially at night or in poor visibility.
-* **Silt.** The bottom is fine and stirs easily; a careless fin near the wreck or the structure fogs the water for everyone behind you.
-
-## Wind
-
-* **Orientation.** The beach faces northeast across Elliott Bay.
-* **Bad.** North through east, with fetch across the bay onto the entry, which builds chop on the beach; a northerly has the longest fetch, down the Sound and in through the bay mouth.
-* **Fine.** South through southeast are offshore, blocked by the West Seattle hill behind the park. The cove is often calm when Alki Beach around the point is blown out, which makes it the standing bad-weather alternative.
-* **Wakes.** With almost no tidal stream, the roughest the entry gets is a north wind stacked on the wakes of harbor traffic; time the walk out between them.
 
 ## Visibility
 
@@ -92,3 +95,11 @@ Elliott Bay swings 3 to 4 m between high and low water, so depths are given agai
 * **Fish.** Rockfish, lingcod, cabezon, kelp and painted greenlings and a broad sculpin fauna around the structure; ratfish cruise the deeper silt at night; wolf eels hold dens in the heavier structure.
 * **Invertebrates.** Giant plumose anemones sheath the pilings and I-beams, with nudibranchs, sea stars, sea cucumbers, shrimp and red rock, Dungeness and kelp crabs across the structure and slope.
 * **Seals.** Harbor seals haul out on the nearby floats and regularly join dives, most boldly at night.
+
+## Hazards
+
+* **Water taxi.** The passenger ferry runs year-round from the dock at the northwest end of the cove, with frequent daytime sailings. A 45 m exclusion zone surrounds the dock; stay inside the buoyed dive area, and never surface in open water near the lane. Ascend up a buoy or anchor line, or stay close to the bottom all the way to shore.
+* **Fishing pier.** A no-dive zone marked by yellow buoys extends around the public fishing pier at the southeast end of the cove. Keep clear of it, and of the fishing line that drapes the pier and nearby pilings. Carry a knife.
+* **Boat traffic.** Small boats, jet skis and kayakers work this shoreline, heaviest in summer. Listen before any ascent and fly a dive flag; signs on site require one.
+* **The slope.** The bottom keeps dropping past 40 m with nothing to arrest a drift downward, and the depth arrives quickly for a training beach. Watch the gauge, especially at night or in poor visibility.
+* **Silt.** The bottom is fine and stirs easily; a careless fin near the wreck or the structure fogs the water for everyone behind you.

@@ -5,7 +5,7 @@ Shore dive at Saltwater State Park in Des Moines, on the mainland shore of East 
 | | |
 |---|---|
 | **Location** | Des Moines, WA. Saltwater State Park, East Passage, Puget Sound |
-| **Coordinates** | Dive site 47.372870, -122.328268 (seabed about 12.4 m below MLLW, on the middle of the reef fingers), about 300 m from the entry on a bearing of 279° |
+| **Coordinates** | 47.372870, -122.328268 (seabed about 12.4 m below MLLW, on the middle of the reef fingers), about 300 m from the entry on a bearing of 279° |
 | **Parking coordinates** | 47.372665, -122.323955, the lower parking lot |
 | **Entry point coordinates** | 47.372431, -122.324328, the beach below the concrete stairs at the north end of the park beach, near where McSorley Creek drains into the Sound |
 | **Type** | Shore |
@@ -31,15 +31,34 @@ Shore dive at Saltwater State Park in Des Moines, on the mainland shore of East 
 
 | | |
 |---|---|
-| **Governing station** | NOAA Dolphin Point, 1.3 miles East of (PUG1520), about 16 km north, mid East Passage |
-| **Recommended bin** | bin 35, at 14.6 m, closest to the reef's working depth |
-| **Time offset** | Not established. The station sits well up the passage and this beach has no current station of its own, so treat any station derived slack as approximate |
-| **Flood axis** | south-southeast, about 175° |
-| **Ebb axis** | north-northwest, about 342° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Browns Point, 1.6 miles North of (PUG1521), about 10.7 km west-southwest in East Passage |
+| **Recommended bin** | bin 34, at 8.5 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | southwest, 234° |
+| **Station ebb axis** | northeast, 42° |
+| **Site flood set** | south-southeast, 164° |
+| **Site ebb set** | north-northwest, 344° |
 
-* **Flood.** Sets south-southeast, parallel to the beach.
-* **Ebb.** Sets north-northwest, also parallel to the beach.
-* **Diveable window.** Current here is generally light, and local divers describe it as weak and variable rather than a clean, predictable exchange; it is not well represented by the standard south Sound approach of correcting off the Tacoma Narrows. Rather than chase a precise slack at a distant station, the established local practice is to plan around high water on a small exchange day: enter roughly 45 minutes to an hour before high water and exit about 30 minutes after. Avoid large exchanges, and avoid a strong ebb altogether if a southwest wind is blowing. Low water shortens the remaining swim once you reach the water, but only after a long, exposed walk across the drained tide flat to get there, and the walking is the worse trade.
+* **Flood.** Sets south-southeast, parallel to the beach. Daily peaks run 0.23 to 0.48 m/s at the station over 30 days.
+* **Ebb.** Sets north-northwest, also parallel to the beach. Daily peaks run 0.05 to 0.18 m/s at the station over the same 30 days.
+* **Diveable window.** Current here is generally light, and local divers describe it as weak and variable rather than a clean, predictable exchange; it is not well represented by the standard south Sound approach of correcting off the Tacoma Narrows. Rather than chase a precise slack at a distant station, the established local practice is to plan around high water on a small exchange day: enter roughly 45 minutes to an hour before high water and exit about 30 minutes after. Current at the station stays under 0.25 m/s for about 2 to 11 hours at a time. Avoid large exchanges, and avoid a strong ebb altogether if a southwest wind is blowing. Low water shortens the remaining swim once you reach the water, but only after a long, exposed walk across the drained tide flat to get there, and the walking is the worse trade.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | west, 262° |
+| **Dive area shore facing** | west, 264° |
+
+The beach faces west across East Passage toward Vashon Island.
+
+* **Bad.** Southwest through west (SW-W), onshore over 6.9 to 16.6 km, and northwest (NW), onshore over 11.9 km, putting fetch and chop on the swim; southwest also drives a stronger and rougher ebb.
+* **Short fetch.** South-southwest (SSW), onshore over 4.0 km, and west-northwest (WNW), onshore over 3.9 km.
+* **Mixed.** North-northwest (NNW), cross-shore over 9.2 km.
+* **Fine.** North clockwise through south (N-S): offshore from north-northeast through southeast, off the wooded bluff behind the park, and cross-shore under 3.0 km from north, south-southeast and south.
+* **Wind against current.** A southwest wind on the north-northwest ebb is the combination to avoid; it is the one this site's own divers warn about most. Northwest through north (NW-N), over 2.6 to 11.9 km, opposes the ebb, and south through south-southwest (S-SSW), over 3.0 to 4.0 km, the flood.
 
 ## Depth and tide
 
@@ -47,7 +66,7 @@ East Passage swings up to about 5 m between high and low water here, and combine
 
 | | |
 |---|---|
-| **Tide station** | NOAA Des Moines, East Passage (9446248), about 3.3 km north on the same shore |
+| **Tide station** | NOAA Des Moines, East Passage (9446248), about 3.0 km north on the same shore |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m |
 
@@ -56,23 +75,6 @@ East Passage swings up to about 5 m between high and low water here, and combine
 | Reef fingers begin | 7.6 m | 6.3 m | 11.7 m |
 | Mid reef, buoy line | 12.4 m | 11.1 m | 16.5 m |
 | Base of reef, edge of drop off | 20.4 m | 19.1 m | 24.5 m |
-
-## Hazards
-
-* **Long, tide dependent approach.** Up to about 270 m of surface swim each way at high tide. At low tide the swim itself shortens, but only because the flat has drained, so it is replaced by a long, hard walk over exposed sand and cobble before the water is even reached. Rock soled boots help.
-* **Drop off past the reef.** The bottom falls away sharply beyond the outer end of the fingers, into water well past sport diving depths. It is easy to follow the structure deeper than intended.
-* **Entanglement.** The guide line system, the reef pilings, and the old tire debris scattered beyond the marked route all snag. Carry a cutting tool.
-* **Current with a southwest wind.** A southwest wind builds a stronger, rougher ebb, setting north-northwest against the wind. Avoid diving on an ebb under these conditions.
-* **Creek outflow.** The entry sits at the mouth of McSorley Creek; runoff after heavy rain can cloud the shallows and add a local current near the outflow.
-* **No collection.** The reef and its surroundings are a marine protected area. No fishing or harvesting.
-* **Boat traffic.** Fly a marker buoy on the surface swim and while ascending.
-
-## Wind
-
-* **Orientation.** The beach faces roughly west to southwest across East Passage toward Vashon Island.
-* **Bad.** Southwest, which puts fetch and chop on the swim and, as above, drives a stronger and rougher ebb.
-* **Fine.** East to northeast, off the wooded bluff behind the park.
-* **Wind against current.** A southwest wind reinforcing the north-northwest ebb is the combination to avoid; it is the one this site's own divers warn about most.
 
 ## Visibility
 
@@ -87,3 +89,13 @@ East Passage swings up to about 5 m between high and low water here, and combine
 
 * **On the reef.** Wolf eels denning in the boulders and pilings, lingcod of real size, copper, quillback, black and vermilion rockfish, giant Pacific octopus, kelp and painted greenling, gunnels, warbonnets, plumose anemones in white and orange, nudibranchs, sea stars, urchins and scallops. Ratfish cruise the sand around the structure.
 * **On the sand and in the eelgrass.** Moon snails, sea pens, geoduck, perch, flounder and sole including speckled sanddabs, hermit and kelp crabs, sea cucumbers, and hairy and stalked sea squirts on any hard surface they can find.
+
+## Hazards
+
+* **Long, tide dependent approach.** Up to about 270 m of surface swim each way at high tide. At low tide the swim itself shortens, but only because the flat has drained, so it is replaced by a long, hard walk over exposed sand and cobble before the water is even reached. Rock soled boots help.
+* **Drop off past the reef.** The bottom falls away sharply beyond the outer end of the fingers, into water well past sport diving depths. It is easy to follow the structure deeper than intended.
+* **Entanglement.** The guide line system, the reef pilings, and the old tire debris scattered beyond the marked route all snag. Carry a cutting tool.
+* **Current with a southwest wind.** A southwest wind builds a stronger, rougher ebb, setting north-northwest against the wind. Avoid diving on an ebb under these conditions.
+* **Creek outflow.** The entry sits at the mouth of McSorley Creek; runoff after heavy rain can cloud the shallows and add a local current near the outflow.
+* **No collection.** The reef and its surroundings are a marine protected area. No fishing or harvesting.
+* **Boat traffic.** Fly a marker buoy on the surface swim and while ascending.

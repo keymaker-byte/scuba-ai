@@ -5,7 +5,7 @@ Shore dive off the Port of Bremerton's public fishing pier at Harper, on Yukon H
 | | |
 |---|---|
 | **Location** | Harper, Port Orchard, WA. Southwest corner of Yukon Harbor, central Puget Sound, opposite Blake Island |
-| **Coordinates** | Dive site 47.522573, -122.517997 (seabed about 4.3 m below MLLW), the float at the end of the pier |
+| **Coordinates** | 47.522573, -122.517997 (seabed about 4.3 m below MLLW), the float at the end of the pier |
 | **Parking coordinates** | 47.522111, -122.519716, the small lot beside the head of the pier on SE Southworth Drive |
 | **Entry point coordinates** | 47.522023, -122.519617, the beach beside the base of the pier, below the seawall |
 | **Type** | Shore |
@@ -31,15 +31,33 @@ Shore dive off the Port of Bremerton's public fishing pier at Harper, on Yukon H
 
 | | |
 |---|---|
+| **Current type** | Tidal |
 | **Governing station** | NOAA Blake Island, S of (PUG1517), about 2.3 km east |
 | **Recommended bin** | bin 21, at 13.3 m |
-| **Time offset** | Not established; slack should be confirmed in the water |
-| **Flood axis** | southwest, 244° |
-| **Ebb axis** | north, 350° |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | west-southwest, 244° |
+| **Station ebb axis** | north, 350° |
+| **Site flood set** | southeast, 127° |
+| **Site ebb set** | northwest, 307° |
 
-* **Flood.** At the pier the flood sets weakly southeast along the shore of Yukon Harbor, about 125°, while the station out in the channel sets southwest.
-* **Ebb.** Sets weakly northwest along the shore, about 305°. A noticeable northward set along the bottom turns up occasionally on a big ebb; it is manageable by staying low and pulling along the bottom.
-* **Diveable window.** The site is not a slack dive. While the station reads under 0.36 m/s there is no current at the pier, and up to about 0.51 m/s there is only a light current that still dives comfortably. The station's ebb dominates and its floods are often barely measurable, so on most days that covers most of the day. Check the station's peak for the day and save the dive for another day only when it runs well past 0.51 m/s.
+* **Flood.** At the pier the flood sets weakly southeast along the shore of Yukon Harbor, about 125°, while the station out in the channel sets west-southwest, with daily peaks of 0.07 to 0.33 m/s there over 30 days.
+* **Ebb.** Sets weakly northwest along the shore, about 305°. A noticeable northward set along the bottom turns up occasionally on a big ebb; it is manageable by staying low and pulling along the bottom. Daily peaks run 0.47 to 0.99 m/s at the station over the same 30 days.
+* **Diveable window.** The site is not a slack dive. While the station reads under 0.36 m/s there is no current at the pier, and up to about 0.51 m/s there is only a light current that still dives comfortably. The station's ebb dominates and its floods are often barely measurable, so on most days that covers most of the day. Check the station's peak for the day and save the dive for another day only when it runs well past 0.51 m/s. Current at the station stays under 0.25 m/s for about 1.5 to 6 hours at a time.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | east-northeast, 59° |
+| **Dive area shore facing** | east-northeast, 59° |
+
+The beach faces east-northeast across Yukon Harbor toward Blake Island, with the harbor opening northeast onto the main channel.
+
+* **Bad.** North (N), onshore over 5.7 km, and east (E), onshore over 9.3 km, blow straight in across the harbor and the open channel past Blake Island, building chop on the float entry and the rocky exit.
+* **Short fetch.** North-northeast through east-northeast (NNE-ENE), onshore over 2.0 to 2.5 km, and east-southeast (ESE), onshore over 3.5 km.
+* **Fine.** Southeast clockwise through north-northwest (SE-NNW): offshore from south through west-northwest, Puget Sound's usual storm direction, blowing off the land behind the beach and leaving the harbor calm, and cross-shore under 4.5 km from southeast, south-southeast, northwest and north-northwest.
+* **Wind against current.** The current here is too weak for the combination to matter much; northwest through north-northwest (NW-NNW), over 2.5 to 4.5 km, against a strong ebb is the only one worth noting.
 
 ## Depth and tide
 
@@ -56,21 +74,6 @@ The site is shallow enough that the tide changes its character: at a big low the
 | Pier end float | 4.3 m | 3.0 m | 8.3 m |
 | Barbara G and small wreck | 7 m | 5.7 m | 11.0 m |
 | Bottle field | 12 m | 10.7 m | 16.0 m |
-
-## Hazards
-
-* **Fishing line and gear.** The pier is fished and crabbed hard. Monofilament, hooks, squid jigs, snagged crab pots and their lines litter the bottom around the pier and along the line to the wreck, and anglers cast from the pier overhead. Carry a cutting tool and keep clear of the water directly under active lines.
-* **Fragile wreck.** The Barbara G's wooden hull is rotting and partly collapsed. Stay outside it and off it.
-* **Guide lines.** The lines between the pier and the wrecks are partly buried and overgrown, and lie across the bottom where they catch fins and gear.
-* **Boat traffic.** Small boats and crabbers work Yukon Harbor off the pier. Fly a dive flag and ascend near the pier or the line.
-* **Entry and exit.** The seawall and rocks at the pier base are steep, uneven and slippery, and the climb out is the hardest part of the dive.
-
-## Wind
-
-* **Orientation.** The beach faces east-northeast across Yukon Harbor toward Blake Island, with the harbor opening northeast onto the main channel.
-* **Bad.** North through east winds blow straight in across the harbor and the open channel past Blake Island, building chop on the float entry and the rocky exit.
-* **Fine.** South and west winds, Puget Sound's usual storm direction, blow offshore from the land behind the beach and leave the harbor calm.
-* **Wind against current.** The current here is too weak for the combination to matter much; a northwest wind against a strong ebb is the only one worth noting.
 
 ## Visibility
 
@@ -90,3 +93,11 @@ The site is shallow enough that the tide changes its character: at a big low the
 * **Nudibranchs.** Hooded nudibranchs (Melibe), shaggy mouse, frosted, British Columbia aeolids, three-lined aeolids, opalescent and thick-horned nudibranchs (Hermissenda), white-lined dirona, sea lemons, Nanaimo dorids, Heath's and Monterey dorids, and northern leopard dorids.
 * **Bottom.** Red rock, Dungeness, helmet and northern kelp crabs, hermit crabs, moon snails, and white-spotted greenling and gunnels in the debris. Spiny dogfish and harbor seals pass through.
 * **Water column.** Moon jellies, lion's mane jellies, and small red sausage and aggregating jellies carrying hitchhiking shrimp.
+
+## Hazards
+
+* **Fishing line and gear.** The pier is fished and crabbed hard. Monofilament, hooks, squid jigs, snagged crab pots and their lines litter the bottom around the pier and along the line to the wreck, and anglers cast from the pier overhead. Carry a cutting tool and keep clear of the water directly under active lines.
+* **Fragile wreck.** The Barbara G's wooden hull is rotting and partly collapsed. Stay outside it and off it.
+* **Guide lines.** The lines between the pier and the wrecks are partly buried and overgrown, and lie across the bottom where they catch fins and gear.
+* **Boat traffic.** Small boats and crabbers work Yukon Harbor off the pier. Fly a dive flag and ascend near the pier or the line.
+* **Entry and exit.** The seawall and rocks at the pier base are steep, uneven and slippery, and the climb out is the hardest part of the dive.

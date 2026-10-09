@@ -5,7 +5,7 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 | | |
 |---|---|
 | **Location** | Port Townsend, WA. Port Townsend Bay, on the downtown waterfront |
-| **Coordinates** | 48.11189, -122.75435 (11.6 m below MLLW), off the abandoned ferry pier and its four pylons, northeast of the current wharf |
+| **Coordinates** | 48.11189, -122.75435 (seabed 11.6 m below MLLW), off the abandoned ferry pier and its four pylons, northeast of the current wharf |
 | **Parking coordinates** | 48.114982, -122.755759, on the street along Water Street and Adams Street |
 | **Entry point coordinates** | 48.114344, -122.755067, the beach at the foot of Adams Street |
 | **Type** | Shore |
@@ -30,16 +30,33 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 
 | | |
 |---|---|
-| **Governing station** | Point Wilson (PUG1623), about 4.3 km northeast |
-| **Recommended bin** | bin 45, at 5.2 m |
-| **Time offset** | The site's own slack and its mid flood reversal run roughly 60 to 90 minutes ahead of the station |
-| **Flood axis** | Southwest, 230° |
-| **Ebb axis** | Northeast, 50° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Point Wilson, 0.6 mi. NE of (PUG1623), about 4.3 km north |
+| **Recommended bin** | bin 33, at 17.1 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | southeast, 124° |
+| **Station ebb axis** | northwest, 322° |
+| **Site flood set** | southwest, 231°, early in the flood, then northeast, 051° for the rest of it |
+| **Site ebb set** | northeast, 051°, along the shore past the wharf |
 
-* **Weak and variable.** NOAA's own current station closest to the site, 0.6 km off the beach, carries no numeric prediction at all and is flagged weak and variable rather than a clean flood and ebb. The timing above comes from the nearest station that does publish, corrected by the site's own current field.
-* **Flood.** Sets southwest early in the flood, past the ferry pier toward the wharf, then swings back to run northeast partway through the flood cycle, well before the tide itself turns.
-* **Ebb.** Also sets northeast, past the wharf toward the ferry pier, the same direction as the reversed flood. There is no clean slack between the two: the northeast current simply eases through the turn and rebuilds as the ebb develops.
-* **Diveable window.** Current stays weak here through most of the day, comfortably under 0.25 m/s, so the window is forgiving on strength. What it is not forgiving of is direction: it can swing from southwest to northeast, or ease and rebuild through a false slack, with little warning.
+* **Weak and variable.** NOAA's own current station closest to the site, 0.6 km off the beach, carries no numeric prediction at all and is flagged weak and variable rather than a clean flood and ebb.
+* **Flood.** Sets southwest early in the flood, past the ferry pier toward the wharf, then swings back to run northeast partway through the flood cycle, well before the tide itself turns. Daily peaks run 0.87 to 1.93 m/s at the station over 30 days.
+* **Ebb.** Also sets northeast, past the wharf toward the ferry pier, the same direction as the reversed flood. There is no clean slack between the two: the northeast current simply eases through the turn and rebuilds as the ebb develops. Daily peaks run 0.32 to 1.88 m/s at the station over the same 30 days.
+* **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 60 minutes, while the current here stays weak through most of the day, comfortably under 0.25 m/s, so the window is forgiving on strength. What it is not forgiving of is direction: it can swing from southwest to northeast, or ease and rebuild through a false slack, with little warning.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | south-southeast, 153° |
+| **Dive area shore facing** | south-southeast, 151° |
+
+The beach faces south-southeast, out across Port Townsend Bay.
+
+* **Bad.** Northeast through south-southwest (NE-SSW), with several kilometres of open fetch across the bay toward Indian Island and Marrowstone Island, 2.9 to 11.6 km.
+* **Fine.** Southwest clockwise through north-northeast (SW-NNE), off the town bluff, or cross-shore over 4.5 km or less.
+* **Wind against current.** The current here runs along the shore rather than on or off it, so chop is driven mainly by fetch. Northeast through east (NE-E) blows against the northeast running current and can build a short, steep chop over the wharf pilings, worth checking before a long surface swim out to the pylons; south-southwest through west-southwest (SSW-WSW) blows against the early flood's southwest set.
 
 ## Depth and tide
 
@@ -47,29 +64,14 @@ The tide swings the site's depth by up to about 4 m on the year's biggest exchan
 
 | | |
 |---|---|
-| **Tide station** | Port Townsend (9444900), 0.4 km from the site |
-| **Series** | High and low water only |
+| **Tide station** | NOAA Port Townsend (9444900), about 0.4 km west |
+| **Series** | Full series |
 | **Typical range** | Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m |
 
 | Feature | Below MLLW | At a -1.22 m low | At a +3.04 m high |
 |---|---|---|---|
 | Off the current Union Wharf | 5.8 m | 4.6 m | 8.8 m |
 | Off the ferry pier pylons | 11.6 m | 10.4 m | 14.6 m |
-
-## Hazards
-
-* **Current direction.** Rarely strong, but it reverses through the tide in a way that does not track a simple flood and ebb; plan the swim leg by leg rather than assuming one direction holds for the whole dive.
-* **Small boats and moorage.** Union Wharf is an active dock with moorage floats and both commercial and recreational traffic overhead. Stay low and fly a marker buoy.
-* **Fishing line and hooks.** The wharf is a public fishing pier, popular for squid jigging after dark, and line and hooks collect on the pilings and pylons. Carry a knife.
-* **Broken glass and debris.** Much of what divers come here to find is a hazard as well as an attraction, century old glass, ceramics and metal in the silt. Handle it with gloves and mind buoyancy near it.
-* **Silt.** Below about 5 to 6 m the bottom turns to fine, easily stirred mud; a careless fin kick can drop visibility to zero for the rest of the dive.
-
-## Wind
-
-* **Orientation.** The beach faces east southeast, out across Port Townsend Bay.
-* **Bad.** Northeast through south, with several kilometres of open fetch across the bay toward Indian Island and Marrowstone Island.
-* **Fine.** Southwest through northwest, off the town bluff.
-* **Wind against current.** The current here runs along the shore rather than on or off it, so chop is driven mainly by fetch rather than by opposing the flow directly. A stiff easterly against the northeast running current can still build a short, steep chop over the wharf pilings, worth checking before a long surface swim out to the pylons.
 
 ## Visibility
 
@@ -86,3 +88,11 @@ The tide swings the site's depth by up to about 4 m on the year's biggest exchan
 * **Invertebrates.** Plumose and Christmas anemones, California and orange sea cucumbers, sunflower, leather, purple, pink, blood and false ochre sea stars, nudibranchs, sea squirts, purple compound tunicates, tritons, sharp nosed and decorator crabs, and giant acorn barnacles.
 * **Fish.** Blackeye gobies, sea perch and spiny dogfish.
 * **Sparse overall.** Animal life here is thinner than at most Puget Sound shore dives, partly a result of the 1998 rebuild of the wharf itself.
+
+## Hazards
+
+* **Current direction.** Rarely strong, but it reverses through the tide in a way that does not track a simple flood and ebb; plan the swim leg by leg rather than assuming one direction holds for the whole dive.
+* **Small boats and moorage.** Union Wharf is an active dock with moorage floats and both commercial and recreational traffic overhead. Stay low and fly a marker buoy.
+* **Fishing line and hooks.** The wharf is a public fishing pier, popular for squid jigging after dark, and line and hooks collect on the pilings and pylons. Carry a knife.
+* **Broken glass and debris.** Much of what divers come here to find is a hazard as well as an attraction, century old glass, ceramics and metal in the silt. Handle it with gloves and mind buoyancy near it.
+* **Silt.** Below about 5 to 6 m the bottom turns to fine, easily stirred mud; a careless fin kick can drop visibility to zero for the rest of the dive.

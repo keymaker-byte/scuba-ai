@@ -5,7 +5,7 @@ Illahee Town Dock is a Port of Illahee community pier and boat ramp on the Kitsa
 | | |
 |---|---|
 | **Location** | Bremerton, Washington (Illahee). East shore of the Kitsap Peninsula, on the Port Orchard reach across from Bainbridge Island, at the foot of Ocean View Boulevard NE off Illahee Road NE |
-| **Coordinates** | Dive site 47.612796, -122.593710 (seabed 14.0 m below MLLW), about 180 m out past the dock and the tire reef |
+| **Coordinates** | 47.612796, -122.593710 (seabed 14.0 m below MLLW), about 180 m out past the dock and the tire reef |
 | **Parking coordinates** | 47.612655, -122.596508, the public lot at the dock |
 | **Entry point coordinates** | 47.612635, -122.596063, the boat ramp at the Port of Illahee dock |
 | **Type** | Shore |
@@ -31,15 +31,32 @@ Current here is negligible at every stage of the tide, at the surface and depth-
 
 | | |
 |---|---|
-| **Governing station** | None close enough to govern. The nearest stations publishing predictions are Rich Passage, West end (PUG1514), about 3.5 km, and Port Washington Narrows, Warren Ave. Bridge (PUG1510), about 4.6 km; both sit in constricted channels running at more than 1 m/s at peak, an order of magnitude faster than this open reach, and are not representative. Predict from the site's own ENPAC15 extract, cross-checked against the Brownsville tide table |
+| **Current type** | Tidal |
+| **Governing station** | None governs. The nearest station with predictions is Rich Passage, West end (PUG1514), about 3.5 km southeast, in the pass |
 | **Recommended bin** | Not applicable |
-| **Time offset** | None |
-| **Flood axis** | N, 003° |
-| **Ebb axis** | S, 183° |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | Not applicable |
+| **Station ebb axis** | Not applicable |
+| **Site flood set** | north, 4° |
+| **Site ebb set** | south, 184° |
 
 * **Flood.** Sets north, up the Port Orchard reach, negligible in strength and staying under about 0.15 m/s at any stage of the tide.
 * **Ebb.** Sets south, down the reach toward Rich Passage and the main basin, similarly weak.
-* **Diveable window.** All day, any tide stage. Current is not the limiting factor at this site; boat traffic, visibility and the reef's own rope lines are.
+* **Diveable window.** All day, any tide stage. Slack timing comes from the site's own ENPAC15 extract, cross-checked against the Brownsville tide table. Current is not the limiting factor at this site; boat traffic, visibility and the reef's own rope lines are.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | east, 86° |
+| **Dive area shore facing** | east, 86° |
+
+The site faces east, across the Port Orchard reach toward Bainbridge Island.
+
+* **Short fetch.** North-northeast through southeast (NNE-SE), onshore over 1.5 to 2.9 km, the open fetch across the reach to Bainbridge Island.
+* **Fine.** South-southeast clockwise through north (SSE-N): offshore from south-southwest through northwest, blocked by the Kitsap Peninsula landmass behind the site, and cross-shore under 4.1 km from south-southeast, south, north-northwest and north.
+* **Wind against current.** Not a real factor here; the current stays too weak at every stage of the tide to stack meaningfully against any wind.
 
 ## Depth and tide
 
@@ -47,7 +64,7 @@ Tide swings the depth here by a few metres across a normal day.
 
 | | |
 |---|---|
-| **Tide station** | Brownsville, Port Orchard (9445832), about 4.6 km, same shore |
+| **Tide station** | NOAA Brownsville, Port Orchard (9445832), about 4.6 km north-northwest on the same shore |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.56 m, up to 5.26 m on the year's biggest exchange; 2026 span -1.35 m to +4.12 m |
 
@@ -55,20 +72,6 @@ Tide swings the depth here by a few metres across a normal day.
 |---|---|---|---|
 | Tire reef | 7.7 m | 6.4 m | 11.8 m |
 | Outer slope, working depth | 14.0 m | 12.7 m | 18.1 m |
-
-## Hazards
-
-* **Boats and fishing line.** An active community dock with a boat ramp, recreational floats and a fishing pier overhead; monofilament line and lures collect on the bottom near the pilings. Stay clear of the boat launch lane and any moored boat, and listen for engine noise before ascending.
-* **Rope lines on the reef.** The tire clumps are strung together along the bottom by rope, an entanglement risk in low visibility. Carry a cutting tool and keep clear contact with a buddy while working the reef.
-* **The tires themselves.** A December 2023 survey found at least 138 distinct tire clumps here, 12 to 20 tires each, still largely in place. The material leaches 6PPD-quinone, formaldehyde and other petroleum-based compounds, and the site is a named target of a state tire-pile removal program expected to continue through the 2025 to 2029 bienniums, so the reef's extent and layout can change from one season to the next.
-* **Depth creep.** The sand keeps dropping past the site's usual working depth, at a gentle grade. Watch depth on any push beyond the reef.
-
-## Wind
-
-* **Orientation.** The site faces roughly east, across the Port Orchard reach toward Bainbridge Island.
-* **Bad.** Northeast through southeast, the open fetch across the reach to Bainbridge Island.
-* **Fine.** Southwest through northwest, blocked by the Kitsap Peninsula landmass behind the site.
-* **Wind against current.** Not a real factor here; the current stays too weak at every stage of the tide to stack meaningfully against any wind.
 
 ## Visibility
 
@@ -83,3 +86,10 @@ Tide swings the depth here by a few metres across a normal day.
 
 * **Tire reef.** Sparse compared to a natural reef; mainly anemones and algae on the tires themselves, with rockfish, lingcod and sculpin turning up around the structure. The connecting ropes carry more growth than the tires do, including tube worms.
 * **Dock and pilings.** Fry and other small fish shelter under the floats and pilings.
+
+## Hazards
+
+* **Boats and fishing line.** An active community dock with a boat ramp, recreational floats and a fishing pier overhead; monofilament line and lures collect on the bottom near the pilings. Stay clear of the boat launch lane and any moored boat, and listen for engine noise before ascending.
+* **Rope lines on the reef.** The tire clumps are strung together along the bottom by rope, an entanglement risk in low visibility. Carry a cutting tool and keep clear contact with a buddy while working the reef.
+* **The tires themselves.** A December 2023 survey found at least 138 distinct tire clumps here, 12 to 20 tires each, still largely in place. The material leaches 6PPD-quinone, formaldehyde and other petroleum-based compounds, and the site is a named target of a state tire-pile removal program expected to continue through the 2025 to 2029 bienniums, so the reef's extent and layout can change from one season to the next.
+* **Depth creep.** The sand keeps dropping past the site's usual working depth, at a gentle grade. Watch depth on any push beyond the reef.

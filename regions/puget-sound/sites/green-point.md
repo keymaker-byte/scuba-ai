@@ -5,7 +5,7 @@ Shore dive on the low, rocky point at the northwest corner of Washington Park, a
 | | |
 |---|---|
 | **Location** | Anacortes, WA. Green Point, the northwest corner of Washington Park, at the west end of Fidalgo Island, opening onto Burrows Bay and Rosario Strait |
-| **Coordinates** | Dive site 48.49995, -122.70132 (seabed about 15.6 m below MLLW), the outer point |
+| **Coordinates** | 48.49995, -122.70132 (seabed about 15.6 m below MLLW), the outer point |
 | **Parking coordinates** | 48.497994, -122.700806, the roadside pullouts near the stairs |
 | **Entry point coordinates** | 48.497675, -122.701240, the concrete stairs at the sharp bend in Washington Park's Loop Road |
 | **Type** | Shore |
@@ -32,15 +32,34 @@ The point is current sensitive: missing the window by even a little brings on cu
 
 | | |
 |---|---|
-| **Governing station** | NOAA Green Point (PCT2026), 0.6 km northwest of the point. A subordinate prediction tied to Belle Rock Light, east of (PUG1729) bin 21 |
-| **Recommended bin** | About 7 m (PUG1729 bin 21, the reference bin this prediction is built from; the station itself publishes no bin depth of its own) |
-| **Time offset** | None to apply; the prediction already carries NOAA's own time and amplitude correction from the reference station. The site's own ENPAC15 extract does not agree with it consistently, so treat the exact minute as approximate and confirm in the water |
-| **Flood axis** | north-northeast, 20° |
-| **Ebb axis** | south, 190° |
+| **Current type** | Tidal |
+| **Governing station** | NOAA Belle Rock Light, east of (PUG1729), about 2.2 km west |
+| **Recommended bin** | bin 15, at 19.0 m |
+| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Station flood axis** | north-northeast, 15° |
+| **Station ebb axis** | south-southwest, 211° |
+| **Site flood set** | north-northeast, 24° |
+| **Site ebb set** | south-southwest, 204° |
 
-* **Flood.** Sets north-northeast, rounding Green Point out of the bay and into the main channel toward Rosario Strait.
-* **Ebb.** Sets south past the point, then bends into the shallow bay off West Beach, curling counterclockwise across the beach shallows before flowing back out past Green Point.
-* **Diveable window.** Plan tight to slack; the point itself follows the full current cycle. The inner cove and West Beach shallows run comparatively sheltered on a small exchange, but that shelter does not extend out to the point.
+* **Flood.** Sets north-northeast, rounding Green Point out of the bay and into the main channel toward Rosario Strait, with daily peaks of 1.01 to 1.76 m/s at the station over 30 days.
+* **Ebb.** Sets south past the point, then bends into the shallow bay off West Beach, curling counterclockwise across the beach shallows before flowing back out past Green Point. Daily peaks run 0.37 to 2.25 m/s at the station over the same 30 days.
+* **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 80 minutes. Plan tight to slack; the point itself follows the full current cycle. The inner cove and West Beach shallows run comparatively sheltered on a small exchange, but that shelter does not extend out to the point.
+
+## Wind
+
+| | |
+|---|---|
+| **Entry shore facing** | north-northwest, 347° |
+| **Dive area shore facing** | north, 350° |
+
+Green Point faces open water to the north and northwest, toward Burrows Bay and Rosario Strait.
+
+* **Bad.** West-northwest through north-northwest (WNW-NNW), onshore over 6.8 to 16.3 km, and north-northeast through northeast (NNE-NE), onshore over 5.1 to 9.6 km, a direct fetch off Burrows Bay and Rosario Strait.
+* **Short fetch.** North (N), onshore over 4.8 km.
+* **Mixed.** West-southwest through west (WSW-W), cross-shore over 6.9 to 9.1 km.
+* **Fine.** East-northeast clockwise through southwest (ENE-SW): offshore from east-southeast through southwest, sheltered by the park's own peninsula, and cross-shore under 1 km from east-northeast and east.
+* **Wind against current.** North through northeast (N-NE), over 4.8 to 9.6 km, already the worst fetch direction here, blows against the flood, which sets north-northeast out of the bay; that combination raises the steepest water right where the dive rounds the point. South-southwest through west-southwest (SSW-WSW), over 9.1 km to more than 30 km, opposes the ebb.
 
 ## Depth and tide
 
@@ -48,7 +67,7 @@ The site swings roughly 2.5 m between an average high and low water, more around
 
 | | |
 |---|---|
-| **Tide station** | NOAA Ship Harbor, Fidalgo Island (9448772), about 1.9 km east |
+| **Tide station** | NOAA Ship Harbor, Fidalgo Island (9448772), about 1.9 km east-northeast |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 2.44 m, up to 3.88 m on the year's biggest exchange; 2026 span -1.25 m to +2.83 m |
 
@@ -56,21 +75,6 @@ The site swings roughly 2.5 m between an average high and low water, more around
 |---|---|---|---|
 | Entry rocks | 2.6 m | 1.4 m | 5.4 m |
 | Green Point drop-off | 15.6 m | 14.3 m | 18.4 m |
-
-## Hazards
-
-* **Strong current.** The defining hazard. Timing errors of even a few tens of minutes bring on current strong enough to force a turnaround.
-* **Silt.** The bay carries persistent river silt on its way past the point toward Burrows Pass, worst in the sheltered cove side, thinner over the rocky Green Point shoreline itself.
-* **Kelp.** Ribbon kelp along the rocky shoreline is an entanglement risk; carry a knife.
-* **Small boat traffic.** The boat launch and playground sit nearby, and small boats cross the bay.
-* **Awkward alternate exit.** The basalt jumble beyond the point is a fallback, not a plan.
-
-## Wind
-
-* **Orientation.** Green Point faces open water to the north and northwest, toward Burrows Bay and Rosario Strait.
-* **Bad.** North through northwest, a direct fetch off Burrows Bay and Rosario Strait.
-* **Fine.** South and east, sheltered by the park's own peninsula.
-* **Wind against current.** A northerly, already the worst fetch direction here, also blows against the flood, which sets north-northeast out of the bay; that combination raises the steepest water right where the dive rounds the point.
 
 ## Visibility
 
@@ -89,3 +93,11 @@ The site swings roughly 2.5 m between an average high and low water, more around
 * **Nudibranchs.** A strength of the site; several species are often found together along the rocky shoreline.
 * **Fish.** Great sculpins, flounder and kelp greenlings; kelp greenlings are the fish most likely to be seen when visibility is poor.
 * **Octopus.** Den holes turn up in the rock along the point, though the animals themselves are not always in them.
+
+## Hazards
+
+* **Strong current.** The defining hazard. Timing errors of even a few tens of minutes bring on current strong enough to force a turnaround.
+* **Silt.** The bay carries persistent river silt on its way past the point toward Burrows Pass, worst in the sheltered cove side, thinner over the rocky Green Point shoreline itself.
+* **Kelp.** Ribbon kelp along the rocky shoreline is an entanglement risk; carry a knife.
+* **Small boat traffic.** The boat launch and playground sit nearby, and small boats cross the bay.
+* **Awkward alternate exit.** The basalt jumble beyond the point is a fallback, not a plan.
