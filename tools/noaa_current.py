@@ -32,15 +32,36 @@ def _cfg(key, default):
 
 
 def get(url):
-    # NOAA returns its JSON error body with a 400 status, so read it rather than raise.
+    """Fetch NOAA JSON. NOAA returns its JSON error body with a 400 or 404 status, so read
+    it rather than raise; anything else that isn't JSON (a 403 from rate limiting, an HTML
+    error page, an empty body, a dropped connection) stops the run with what failed."""
     try:
         with urllib.request.urlopen(url, timeout=45) as r:
-            return json.load(r)
+            body = r.read()
     except urllib.error.HTTPError as e:
+        body = e.read()
         try:
-            return json.loads(e.read())
-        except Exception:
-            raise e
+            return json.loads(body)
+        except ValueError:
+            sys.exit(f"NOAA: HTTP {e.code} {e.reason}. The API refused or failed the request; "
+                     f"no data was read. Retry later.\n  {url}")
+    except (urllib.error.URLError, TimeoutError, OSError) as e:
+        sys.exit(f"NOAA: unreachable ({getattr(e, 'reason', e)}). No data was read.\n  {url}")
+    try:
+        return json.loads(body)
+    except ValueError:
+        what = "an empty response" if not body.strip() else "a response that is not JSON"
+        sys.exit(f"NOAA: {what}. No data was read. Retry later.\n  {url}")
+
+
+def station_meta(station):
+    """The station's metadata, or stop: a retired or unknown ID has none."""
+    d = get(f"{MD}/{station}.json?type=currentpredictions")
+    st = d.get("stations") or []
+    if not st:
+        sys.exit(f"NOAA: {d.get('errorMsg') or 'no live station ' + station}. A retired "
+                 "reference station is read with noaa_legacy_current.")
+    return st[0]
 
 
 def predictions(station, day, bin_=None, interval=None):
@@ -61,7 +82,14 @@ def predictions(station, day, bin_=None, interval=None):
     d = get(f"{DG}?{urllib.parse.urlencode(q)}")
     if "error" in d:
         sys.exit(f"NOAA: {d['error']['message'].strip()}")
-    return d["current_predictions"]["cp"]
+    cp = (d.get("current_predictions") or {}).get("cp")
+    where = f"{station} bin {bin_}" if bin_ else f"{station} default bin"
+    if isinstance(cp, str):
+        # A bin NOAA judged too weak to predict: an answer, but no slack or speed to plan on.
+        sys.exit(f"NOAA: {where}: {cp.strip()}. No predictions are published for it.")
+    if not cp:
+        sys.exit(f"NOAA: no predictions returned for {where} on {day}. No data was read. Retry later.")
+    return cp
 
 
 def speed(c):
@@ -70,7 +98,9 @@ def speed(c):
 
 
 def cmd_stations(a):
-    all_st = get(f"{MD}.json?type=currentpredictions")["stations"]
+    all_st = get(f"{MD}.json?type=currentpredictions").get("stations")
+    if not all_st:
+        sys.exit("NOAA: the station list came back empty. No data was read. Retry later.")
     lat, lon = a.near
     scale = math.cos(math.radians(lat))
     uniq = {}  # stations are listed once per bin; collapse to one entry per station
@@ -92,7 +122,7 @@ def cmd_stations(a):
 
 
 def cmd_bins(a):
-    meta = get(f"{MD}/{a.station}.json?type=currentpredictions")["stations"][0]
+    meta = station_meta(a.station)
     bins = get(f"{MD}/{a.station}/bins.json")
     print(f"{a.station}  {meta['name']}   {meta['lat']:.4f}, {meta['lng']:.4f}")
     print(f"  project: {meta.get('project')}  ({meta.get('project_type')})")
@@ -100,20 +130,19 @@ def cmd_bins(a):
         print(f"  deployed {meta['deployed'][:10]}  retrieved {str(meta.get('retrieved'))[:10]}")
     if not bins.get("bins"):
         sys.exit(
-            f"{a.station} publishes 0 depth bins (a harmonic/subordinate station, not a "
-            "survey station with an ADCP record). It has no bin-level current data usable "
-            "here; pick a different, PUG-prefixed survey station instead."
+            f"{a.station} publishes 0 depth bins: a subordinate station (corrections to a "
+            "reference station) or one with no instrument record behind it. It has no "
+            "working-depth bin to pick; use a type H station with published bins."
         )
     print(f"  {bins['nbr_of_bins']} bins, {bins['bin_size']} m each\n")
 
     # Only some bins publish predictions; NOAA reports which in an error message.
-    pub = []
-    try:
-        predictions(a.station, date.today(), bin_=999)
-    except SystemExit as e:
-        for tok in str(e).split(":")[-1].split(","):
-            if tok.strip().isdigit():
-                pub.append(int(tok.strip()))
+    q = {"product": "currents_predictions", "application": "NOS.COOPS.TAC.CUR",
+         "date": "today", "station": a.station, "bin": "999", "time_zone": "lst_ldt", "units": "metric", "format": "json"}
+    msg = (get(f"{DG}?{urllib.parse.urlencode(q)}").get("error") or {}).get("message", "")
+    pub = [int(t) for t in msg.split(":")[-1].replace(" ", "").split(",") if t.isdigit()]
+    if not pub:
+        sys.exit(f"NOAA: could not read which bins publish predictions ({msg.strip() or 'no answer'}).")
     depths = {b["num"]: b["depth"] for b in bins["bins"]}
     print("  bins with published predictions:")
     for b in sorted(pub):
