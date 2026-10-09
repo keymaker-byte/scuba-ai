@@ -69,18 +69,18 @@ The beach faces north into the mouth of Admiralty Inlet, open to the Strait of J
 
 ## Depth and tide
 
-The strait's tide swings up to about 3.4 m here, so depths are given below the MLLW chart datum.
+The tide swings up to about 4.1 m in a day here, so depths are given below the MLLW chart datum.
 
 | | |
 |---|---|
-| **Tide station** | NOAA Port Townsend tide station (9444900), about 4.2 km south-southeast, around Point Wilson in Port Townsend Bay |
-| **Series** | High and low water only |
+| **Tide station** | NOAA Port Townsend tide station (9444900), about 4.1 km south-southeast, around Point Wilson in Port Townsend Bay |
+| **Series** | Full series |
 | **Typical range** | Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m |
 
 | Feature | Below MLLW | At a -1.22 m low | At a +3.04 m high |
 |---|---|---|---|
 | Inner kelp edge | 6.1 m | 4.9 m | 9.1 m |
-| Outer kelp edge | 8.2 m | 7 m | 11.2 m |
+| Outer kelp edge | 8.2 m | 7.0 m | 11.2 m |
 
 ## Visibility
 

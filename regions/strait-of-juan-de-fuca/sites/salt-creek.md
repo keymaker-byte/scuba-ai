@@ -72,11 +72,11 @@ The shore east of Tongue Point faces the open strait; west of the point, the ent
 
 ## Depth and tide
 
-The strait's tide swings up to about 3 m here, so depths are given below the MLLW chart datum.
+The strait's tide swings up to about 3.3 m in a day here, so depths are given below the MLLW chart datum.
 
 | | |
 |---|---|
-| **Tide station** | NOAA Crescent Bay tide station (9443826), about 1.7 km west |
+| **Tide station** | NOAA Crescent Bay tide station (9443826), about 1.7 km west-southwest |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 2.10 m, up to 3.25 m on the year's biggest exchange; 2026 span -0.98 m to +2.44 m |
 

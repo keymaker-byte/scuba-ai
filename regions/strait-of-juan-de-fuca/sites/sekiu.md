@@ -70,12 +70,12 @@ The entry faces into Clallam Bay, with the open strait beyond it.
 
 ## Depth and tide
 
-The strait's tide swings up to about 3.5 m here, so depths are given below the MLLW chart datum.
+The strait's tide swings up to about 3.9 m in a day here, so depths are given below the MLLW chart datum.
 
 | | |
 |---|---|
-| **Tide station** | NOAA Sekiu, Clallam Bay tide station (9443361), about 0.6 km east, the same bay |
-| **Series** | High and low water only |
+| **Tide station** | NOAA Sekiu, Clallam Bay tide station (9443361), about 0.6 km south, in the same bay |
+| **Series** | Full series |
 | **Typical range** | Median daily 2.21 m, up to 3.85 m on the year's biggest exchange; 2026 span -0.98 m to +3.04 m |
 
 | Feature | Below MLLW | At a -0.98 m low | At a +3.04 m high |

@@ -70,18 +70,18 @@ The beach faces northeast into the open strait, with a long, unbroken fetch to t
 
 ## Depth and tide
 
-The strait's tide swings up to about 3.9 m here, so depths are given below the MLLW chart datum.
+The strait's tide swings up to about 3.9 m in a day here, so depths are given below the MLLW chart datum.
 
 | | |
 |---|---|
-| **Tide station** | NOAA Neah Bay tide station (9443090), about 11 km west, on the same shore |
-| **Series** | Full 6 minute predicted series |
+| **Tide station** | NOAA Neah Bay tide station (9443090), about 11 km west-northwest, on the same shore |
+| **Series** | Full series |
 | **Typical range** | Median daily 2.35 m, up to 3.94 m on the year's biggest exchange; 2026 span -0.89 m to +3.15 m |
 
 | Feature | Below MLLW | At a -0.89 m low | At a +3.15 m high |
 |---|---|---|---|
 | Inner edge of the kelp bed | 3.0 m | 2.1 m | 6.2 m |
-| Outer edge of the kelp bed | 10.7 m | 9.8 m | 13.8 m |
+| Outer edge of the kelp bed | 10.7 m | 9.8 m | 13.9 m |
 
 ## Visibility
 
