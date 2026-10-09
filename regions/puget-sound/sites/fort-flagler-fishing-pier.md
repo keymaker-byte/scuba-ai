@@ -64,7 +64,7 @@ Admiralty Inlet's tide swings a few metres a day here, and because the outer ree
 
 | | |
 |---|---|
-| **Tide station** | NOAA Marrowstone Point (9444972), about 0.1 km, at the site |
+| **Tide station** | NOAA Marrowstone Point (9444972), about 0.1 km west-northwest, at the old pier site |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 2.77 m, up to 4.22 m on the year's biggest exchange; 2026 span -1.25 m to +3.16 m |
 

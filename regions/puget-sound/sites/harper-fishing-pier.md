@@ -65,7 +65,7 @@ The site is shallow enough that the tide changes its character: at a big low the
 
 | | |
 |---|---|
-| **Tide station** | NOAA Harper, Yukon Harbor (9445993), at the pier end |
+| **Tide station** | NOAA Harper, Yukon Harbor (9445993), about 0.1 km northeast, at the pier end |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.48 m, up to 5.13 m on the year's biggest exchange; 2026 span -1.30 m to +4.04 m |
 

@@ -75,8 +75,8 @@ Hood Canal swings harder than the main basin, and on this gentle slope the tide 
 | Feature | Below MLLW | At a -1.39 m low | At a +4.00 m high |
 |---|---|---|---|
 | Eelgrass edge | about 1.5 m | about 0.1 m, wading depth | about 5.5 m |
-| Sea whip beds | 18 to 20 m | 16.6 to 18.6 m | 22 to 24 m |
-| Sand slope beyond | past 20 m | past 18.6 m | past 24 m |
+| Sea whip beds | 18 to 20 m | 16.6 to 18.6 m | 22.0 to 24.0 m |
+| Sand slope beyond | past 20 m | past 18.6 m | past 24.0 m |
 
 ## Visibility
 

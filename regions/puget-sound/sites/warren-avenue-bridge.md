@@ -57,7 +57,7 @@ A narrow inland cut through residential Bremerton, with land close on both sides
 
 ## Depth and tide
 
-The dive area sits in shallow water relative to the tidal range here, so the swing between a big low and a big high changes the working depth by close to half again: an 8 m point at MLLW can read under 7 m on a big low and over 11 m on a big high.
+The dive area sits in shallow water relative to the tidal range here, so the swing between a big low and a big high changes the working depth by more than half: the 8.3 m point between the pylons reads about 7.0 m at the year's lowest low of -1.29 m and about 12.4 m at its highest high of +4.08 m.
 
 | | |
 |---|---|

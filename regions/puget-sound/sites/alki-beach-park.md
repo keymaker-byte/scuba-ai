@@ -125,8 +125,8 @@ The bottom is an even slope from an eelgrass band in the shallows, across the to
 | Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
 |---|---|---|---|
 | Eelgrass shallows, top of slope | 6.7 m | 5.4 m | 10.7 m |
-| Guide rope and debris line | 10 to 17 m | 8.7 to 15.7 m | 14 to 21 m |
-| Base of the main slope | 24 m | 22.7 m | 28 m |
+| Guide rope and debris line | 10 to 17 m | 8.7 to 15.7 m | 14.0 to 21.0 m |
+| Base of the main slope | 24 m | 22.7 m | 28.0 m |
 
 ## Visibility
 

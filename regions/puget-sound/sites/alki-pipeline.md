@@ -78,8 +78,8 @@ The site is shallow the whole way, sloping gradually from the shallows at the re
 
 | Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
 |---|---|---|---|
-| Apparent end of pipe | 11 m | 9.7 m | 15 m |
-| True end of pipe | 12 m | 10.7 m | 16 m |
+| Apparent end of pipe | 11 m | 9.7 m | 15.0 m |
+| True end of pipe | 12 m | 10.7 m | 16.0 m |
 
 A higher tide also makes the entry and the surface swim out easier, covering the cobble and shortening the walk to water.
 

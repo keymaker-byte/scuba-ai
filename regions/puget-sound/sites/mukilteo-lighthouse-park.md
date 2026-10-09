@@ -71,8 +71,8 @@ Possession Sound swings up to about 5 m between high and low water here, so dept
 
 | Feature | Below MLLW | At a -1.30 m low | At a +3.85 m high |
 |---|---|---|---|
-| Shelf break | 6.5 m | 5.2 m | 10.3 m |
-| Upper clay bank | 12 m | 10.7 m | 15.8 m |
+| Shelf break | 6.5 m | 5.2 m | 10.4 m |
+| Upper clay bank | 12 m | 10.7 m | 15.9 m |
 | Middle clay bank | 18 m | 16.7 m | 21.9 m |
 | Lower clay bank | 22 m | 20.7 m | 25.9 m |
 

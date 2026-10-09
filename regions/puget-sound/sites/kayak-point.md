@@ -63,7 +63,7 @@ Port Susan swings up to about 5 m between high and low water, so depths are give
 
 | | |
 |---|---|
-| **Tide station** | NOAA Kayak Point (9448094), right at the site |
+| **Tide station** | NOAA Kayak Point (9448094), about 0.2 km east-northeast, at the site |
 | **Series** | High and low water only |
 | **Typical range** | Median daily 3.39 m, up to 5.02 m on the year's biggest exchange; 2026 span -1.30 m to +3.92 m |
 

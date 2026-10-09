@@ -69,7 +69,7 @@ The tide matters more here than the current: the site is shallow, so a big excha
 
 | Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
 |---|---|---|---|
-| Dock, about 40 m out from the bulkhead | 0.9 m | dry | 5.0 m |
+| Dock, about 40 m out from the bulkhead | 0.9 m | dries | 5.0 m |
 | Dock, three quarters of the way out | 6.0 m | 4.7 m | 10.1 m |
 | Dock end | 8.9 m | 7.6 m | 13.0 m |
 | Slope, about 35 m past the dock end | 12.5 m | 11.2 m | 16.6 m |

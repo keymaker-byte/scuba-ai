@@ -65,7 +65,7 @@ The beach faces west across the Narrows toward the Gig Harbor peninsula, about 1
 
 ## Depth and tide
 
-The South Sound's tides are large, and the tide swings the depth here by up to about 5.7 m, so the pilings read from barely 3 m at a big minus tide to almost 10 m at a high. A high tide makes for the better dive among the pilings.
+The South Sound's tides are large, and the tide swings the depth here by up to about 5.5 m, so the pilings read from barely 3 m at a big minus tide to almost 10 m at a high. A high tide makes for the better dive among the pilings.
 
 | | |
 |---|---|

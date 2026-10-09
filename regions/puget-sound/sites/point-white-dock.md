@@ -71,8 +71,8 @@ The dock sits in very shallow water, so the tide changes the dive under it more 
 | Feature | Below MLLW | At a -1.31 m low | At a +4.00 m high |
 |---|---|---|---|
 | Dock end | 3.2 m | 1.9 m | 7.2 m |
-| Slope, about 30 m past the dock end | 9 m | 7.7 m | 13 m |
-| Slope, about 80 m past the dock end | 17 m | 15.7 m | 21 m |
+| Slope, about 30 m past the dock end | 9 m | 7.7 m | 13.0 m |
+| Slope, about 80 m past the dock end | 17 m | 15.7 m | 21.0 m |
 
 ## Visibility
 

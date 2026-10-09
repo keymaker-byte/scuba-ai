@@ -64,11 +64,11 @@ Admiralty Inlet's tide swings a few metres a day here, enough to move the pier's
 
 | | |
 |---|---|
-| **Tide station** | NOAA Port Townsend (9444900), about 2.7 km south |
+| **Tide station** | NOAA Port Townsend (9444900), about 2.7 km south, around Point Hudson in Port Townsend Bay |
 | **Series** | Full series |
 | **Typical range** | Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m |
 
-The pier end and reef, at about 6.5 m below MLLW datum, read about 5.9 m below the surface near a low around -0.6 m, and about 9.2 m near a high around +2.7 m. The outer sand at the dive coordinate, about 10.7 m below datum, reads about 10.1 m near the same low and about 13.4 m near the same high.
+The pier end and reef, at about 6.5 m below MLLW, read about 5.3 m below the surface at the year's lowest low of -1.22 m, and about 9.5 m at its highest high of +3.04 m. The outer sand at the dive coordinate, about 10.7 m below datum, reads about 9.5 m at the same low and about 13.7 m at the same high.
 
 ## Visibility
 

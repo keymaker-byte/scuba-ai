@@ -74,8 +74,8 @@ Elliott Bay swings 3 to 5 m between high and low water, so depths are given agai
 
 | Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
 |---|---|---|---|
-| Honey Bear remains | 8 m | 6.7 m | 12 m |
-| Mid-slope at the site coordinate | 24 m | 22.7 m | 28 m |
+| Honey Bear remains | 8 m | 6.7 m | 12.0 m |
+| Mid-slope at the site coordinate | 24 m | 22.7 m | 28.0 m |
 
 ## Visibility
 
