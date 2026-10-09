@@ -164,6 +164,10 @@ Two to five sentences: what the site is, where, its character, and its headline 
 
 * **Topic.** Landmarks in order, each led by a bold topic.
 
+## Site map
+
+Optional, for a site with a mapped line or trail: a short description of how it runs and where the entry meets it, a diagram, and a table of features by distance along it with their datum depth.
+
 ## Current
 
 Optional sentence on what dominates the current. Tidal and wind driven only.
