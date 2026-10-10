@@ -14,7 +14,7 @@ These conventions apply to every site file written in this region.
 ## Depth
 
 - **Datum.** None: depth is a plain observed figure, since Bonaire's tidal range runs about 30 cm, too small to normalize against.
-- **Tool.** `emodnet_depth.md`, the seabed depth at the dive area coordinate.
+- **Tool.** `dcbd_depth.md`, the seabed depth at the dive area coordinate.
 
 ## Current
 

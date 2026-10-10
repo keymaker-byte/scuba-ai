@@ -34,7 +34,7 @@ SCTLD precaution applies uniformly across the park rather than by site: disinfec
 
 | Site | Description |
 |---|---|
-| [1. Boka Bartol](sites/01-boka-bartol.md) | Bonaire's northernmost site, a remote bay in Washington Slagbaai National Park with unusual coral formations on the terrace, stingrays and garden eels on the sand, and deep water pelagics off the drop-off. |
+| [1. Boka Bartol](sites/01-boka-bartol.md) | Bonaire's northernmost site, a remote rocky bay in Washington Slagbaai National Park with unusual coral formations on a terrace joining the shore, garden eels and stingrays on the sand, and barracuda schools, large groupers and eagle rays along the slope. |
 | [2. Playa Benge](sites/02-playa-benge.md) | Remote park beach and turtle nesting site, crossing a finger coral shelf to some of the most pristine reef on the island, with larger fish and reports of mantas and hammerheads offshore. |
 | [3. Playa Funchi](sites/03-playa-funchi.md) | Protected park cove with sand tilefish and peacock flounder in its sandy patches, opening onto a fast drop-off where horse-eye jacks school. |
 | [4. Bise Morto](sites/04-bise-morto.md) | Park site with elkhorn and staghorn shallows over a fast drop-off, one of the better spots for whale sharks, mantas and humpbacks off the reef edge. |
