@@ -20,7 +20,7 @@ Ask and wait if either is missing; never guess.
 
 ## 2. Load the site and region
 
-Read the site file, `<region>-planning-conventions.md` and `<region>.md` in full before planning anything.
+Read the site file, its `<slug>.json` companion beside it in `sites/`, `<region>-planning-conventions.md` and `<region>.md` in full before planning anything.
 
 ## 3. Build the plan
 
