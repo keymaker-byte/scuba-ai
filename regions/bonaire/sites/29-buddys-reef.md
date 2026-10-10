@@ -17,7 +17,7 @@ Buddy Dive Resort's house reef and one of the island's most accessible sites, a 
 * **Entry.** A straightforward, gradual shore entry from the resort.
 * **Parking.** At Buddy Dive Resort.
 * **Access.** Open, the resort's own house reef.
-* **Facilities.** Full resort facilities on site, including a drive-through fill station.
+* **Facilities.** Full resort facilities on site.
 
 ## Navigation and landmarks
 
@@ -25,15 +25,14 @@ Buddy Dive Resort's house reef and one of the island's most accessible sites, a 
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Logged dives here found slack to negligible current, consistent with the site's reputation as a relaxed, minimal current dive.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The shallow shelf runs to about 8 m before the drop-off; logged dives here have reached 30.3 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current here usually runs minimal.
 
 ## Wind
 
@@ -49,14 +48,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast; logged day dives here have rated it 5 out of 5 (excellent).
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October; logged dives here measured 29 C. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallows.** Black crinoids perched on coral heads.
 * **Night.** A resident tarpon greets most night divers and hunts in the light beam.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

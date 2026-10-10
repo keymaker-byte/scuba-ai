@@ -23,19 +23,18 @@ A small sandy cove reached by turning off just before the Bonaire Petroleum Corp
 
 * **BOPEC tanks.** The turn to the cove comes just before the oil terminal's storage tanks on the coast road.
 * **Sandy cove.** Entry and the shallow elkhorn stands sit inside the cove itself, with the reef proper beyond it.
+* **Depth profile.** The cove and shallow elkhorn stands sit around 4 m, with the reef working out through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Current at Nukove can run from mild to strong depending on wind, consistent with the rest of this stretch of coast.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The cove and shallow elkhorn stands sit around 4 m, with the reef working out through the recreational range to about 30 m.
-
-## Hazards
-
-* **Diving suspended.** Closed to diving under STINAPA's SCTLD order since May 2023; treat as not diveable until STINAPA lifts the closure.
-* **Variable current.** Can run from mild to strong with wind; check conditions before committing to the full reef beyond the cove.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current at Nukove runs from mild to strong with the wind.
 
 ## Wind
 
@@ -50,14 +49,18 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast, occasionally reduced by swell stirring the shallows when wind runs out of the north or west.
+* **Overall.** Typically excellent, 15 to 30 m, occasionally reduced by swell stirring the shallows when wind runs out of the north or west.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallows.** Elkhorn coral in the cove, though the 2023 and 2024 bleaching events left their mark here as everywhere on the island.
 * **Reef.** Schools of algae-eating reef fish and large midnight blue parrotfish, along with larger fish species typical of this less dived stretch of coast.
+
+## Hazards
+
+* **Diving suspended.** Closed to diving under STINAPA's SCTLD order since 1 May 2023, until STINAPA lifts the closure.
+* **Variable current.** Can run from mild to strong with wind; check conditions before committing to the full reef beyond the cove.

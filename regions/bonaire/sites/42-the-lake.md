@@ -1,6 +1,6 @@
 # 42. The Lake
 
-The second of the double reef sites, named for the lake shaped patch of sand lying between its two reef systems at 20 to 24 m. Staghorn coral and patch reef fill the shallows, thinned since the 2023 SCTLD outbreak and the bleaching events that followed but still bordered by what feels like an endless field of gorgonian corals swaying in the current, and the second reef crests around 20 m before dropping to 30 m. An easy, gradually sloping entry and a flexible depth profile make this one of the island's more versatile sites, good for a beginner or an experienced diver alike.
+A double reef site named for the lake shaped patch of sand lying between its two reef systems at 20 to 24 m. Staghorn coral and patch reef fill the shallows, thinned by the bleaching events since 2023 but still bordered by a broad field of gorgonian corals swaying in the current, and the second reef crests around 20 m before dropping to 30 m. An easy, gradually sloping entry and a flexible depth profile make this one of the island's more versatile sites, good for a beginner or an experienced diver alike.
 
 | | |
 |---|---|
@@ -23,18 +23,17 @@ The second of the double reef sites, named for the lake shaped patch of sand lyi
 * **The sand lake.** Lies between the two reef systems at 20 to 24 m, the feature the site is named for.
 * **Second reef.** Crests around 20 m and drops to 30 m.
 * **Coral bommies.** Near the sand channel around 21 m, sheltering larger snapper and grunts.
+* **Depth profile.** The shallows hold staghorn thickets and patch reef, the sand lake sits at 20 to 24 m between the two reef systems, and the outer reef runs to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The shallows hold staghorn thickets and patch reef, the sand lake sits at 20 to 24 m between the two reef systems, and the outer reef runs to 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -51,14 +50,17 @@ The swim out runs 103 m south from the entry to the dive area.
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallows.** Staghorn coral and patch reef, thinned since 2023, bordered by extensive gorgonian growth.
 * **Near the sand channel.** Large coral bommies sheltering bigger snapper and grunts.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

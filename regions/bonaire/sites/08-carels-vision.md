@@ -1,35 +1,35 @@
 # 8. Carel's Vision
 
-A remote site at Punta Wekua, just south of Nukove on the approach to Karpata, inside the King Willem-Alexander Reserve, a permanent no-dive marine reserve covering the stretch of coast between BOPEC and Karpata. Diving here is banned outright, independent of the Washington Slagbaai chain's separate SCTLD closure to the north and however that situation develops.
+A remote site at Punta Wekua, just south of Nukove on the approach to Karpata, inside the King Willem-Alexander Reserve, a permanent no-dive marine reserve covering the stretch of coast between BOPEC and Karpata. Diving here is permanently banned.
 
 | | |
 |---|---|
 | **Location** | Northwest coast, Bonaire, at Punta Wekua, south of Nukove |
 | **Coordinates** | 12.235, -68.4135 (about 6 m) |
 | **Type** | Boat |
+| **Depth range** | Not established |
 
 ## Getting there
 
-* **Entry.** By boat only, per STINAPA's own access icons for this site.
+* **Entry.** By boat only.
 * **Parking.** Not applicable.
-* **Access.** Permanently closed to diving as part of the King Willem-Alexander Reserve, a no-take marine reserve running between BOPEC and Karpata; this is separate from, and unaffected by, the SCTLD closure covering the Washington Slagbaai chain to the north.
+* **Access.** Permanently closed to diving as part of the King Willem-Alexander Reserve, a no-take marine reserve running between BOPEC and Karpata.
 * **Facilities.** None at the site.
 
 ## Navigation and landmarks
 
 * **Punta Wekua.** The point marking the site, between Nukove to the north and Karpata to the south.
+* **Depth profile.** The reef terrace sits around 6 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef terrace sits around 6 m.
-
-## Hazards
-
-* **Permanently closed.** Inside the King Willem-Alexander Reserve; diving here is not permitted at any time, regardless of SCTLD status.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -43,13 +43,16 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-Not separately documented; expect the general character of this stretch of the Washington Slagbaai chain, shared with neighbouring Nukove and Karpata.
+* **Overall.** Not established.
+
+## Hazards
+
+* **Permanently closed.** Inside the King Willem-Alexander Reserve; closed to diving at all times.

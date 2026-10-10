@@ -21,18 +21,17 @@ Sunchi means kiss in Papiamentu. The site starts on a shallow sandy plateau befo
 
 * **The drop-off.** Begins at about 5 m, where the sandy plateau gives way to the steep wall.
 * **Coral rubble piles.** Directly under the boat, nesting sites for sand tilefish.
+* **Depth profile.** The sandy plateau sits in the shallows before the drop-off at about 5 m, with the wall continuing through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The sandy plateau sits in the shallows before the drop-off at about 5 m, with the wall continuing through the recreational range to about 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -46,14 +45,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Sand plateau.** Sand tilefish nesting in the coral rubble beneath the boat.
 * **Wall.** Large fields of plate, cobble and leaf coral, and large tube sponges.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

@@ -1,12 +1,12 @@
 # 22. Andrea II
 
-A beginner-friendly reef about half a mile north of the desalination plant, one of the more reliable places on Bonaire to find a seahorse hiding among the soft corals. Anemones and soft coral cover the reef, giving both predator and prey places to hide, and the shallows hold all three of Bonaire's large parrotfish species, the blue, the midnight and the rainbow, each over a metre long and easy to tell apart by colour.
+A beginner-friendly reef about 5 km north-northwest of Kralendijk, one of the more reliable places on Bonaire to find a seahorse hiding among the soft corals. Anemones and soft coral cover the reef, giving both predator and prey places to hide, and the shallows hold all three of Bonaire's large parrotfish species, the blue, the midnight and the rainbow, each over a metre long and easy to tell apart by colour.
 
 | | |
 |---|---|
-| **Location** | West coast, Bonaire, about 0.8 km north of the desalination plant |
+| **Location** | West coast, Bonaire, about 5 km north-northwest of Kralendijk |
 | **Coordinates** | 12.1916, -68.2986 (dive area, about 8 m) |
-| **Parking coordinates** | 12.191581, -68.297662, just past the desalination plant |
+| **Parking coordinates** | 12.191581, -68.297662, roadside |
 | **Entry point coordinates** | 12.191665, -68.297882 |
 | **Type** | Shore |
 | **Depth range** | 6 to 30 m |
@@ -21,19 +21,18 @@ A beginner-friendly reef about half a mile north of the desalination plant, one 
 
 ## Navigation and landmarks
 
-* **Desalination plant.** The reference point for locating the site, about 0.8 km to the south.
+* **Depth profile.** The reef runs from about 8 m through the recreational range to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Conditions here are generally calm, part of why the site suits beginners.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs from about 8 m through the recreational range to 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Conditions here are generally calm.
 
 ## Wind
 
@@ -48,14 +47,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Seahorses hiding among soft corals, typically between about 8 and 20 m, along with anemones sheltering both predator and prey species.
 * **Shallows.** All three of Bonaire's large parrotfish, the blue, the midnight and the rainbow, each over a metre long.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

@@ -1,10 +1,10 @@
 # E. Nearest Point
 
-Also known locally as Piedra Kolet (coral rock in Papiamentu), the point on Klein Bonaire closest to the main island, with just 800 m of open water separating the two. Sitting on the southwest coast gives shelter from the dominant easterly trade winds. The water slopes gradually from about a metre at the waterline to 5 to 8 m where the main reef begins, opening onto what many consider the healthiest, most luxuriant coral in the Caribbean, a character that continues around the whole south side of Klein Bonaire. Purple sea fans and lush gorgonians flourish between coral heads on a white sandy bottom, huge mountain coral heads sit in the drop-off, and black coral and large orange and purple tube sponges appear at the lower depths.
+Also known locally as Piedra Kolet (coral rock in Papiamentu), the point on Klein Bonaire closest to the main island, with just 800 m of open water separating the two. The water slopes gradually from about a metre at the waterline to 5 to 8 m where the main reef begins, opening onto some of the healthiest, most luxuriant coral in the Caribbean, a character that continues around the whole south side of Klein Bonaire. Purple sea fans and lush gorgonians flourish between coral heads on a white sandy bottom, huge mountain coral heads sit in the drop-off, and black coral and large orange and purple tube sponges appear at the lower depths.
 
 | | |
 |---|---|
-| **Location** | Klein Bonaire, southwest coast, closest point to Bonaire |
+| **Location** | Klein Bonaire, east coast, closest point to Bonaire |
 | **Coordinates** | 12.153846, -68.293098 (deep mooring, short swim to the reef) |
 | **Type** | Boat |
 | **Depth range** | 6 to 30 m |
@@ -20,18 +20,17 @@ Also known locally as Piedra Kolet (coral rock in Papiamentu), the point on Klei
 
 * **The shallow slope.** Runs from about a metre at the waterline to the reef edge at 5 to 8 m.
 * **The drop-off.** Holds huge mountain coral heads, with black coral and large tube sponges deeper still.
+* **Depth profile.** The shallows slope from about a metre to the reef edge at 5 to 8 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. The southwest coast position shelters this site from the dominant easterly trades.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The shallows slope from about a metre to the reef edge at 5 to 8 m, with mountain coral in the drop-off and black coral and tube sponges at the lower depths.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -45,14 +44,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 40 m.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 40 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallows and drop-off.** Purple sea fans, lush gorgonians and huge mountain coral heads.
 * **Deeper.** Black coral and large orange and purple tube sponges.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

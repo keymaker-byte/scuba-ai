@@ -22,18 +22,17 @@ The southernmost of the double reef sites, just south of Salt Pier, with an easy
 
 * **The mooring.** Marks the garden eel colony in the sand around it, at about 6 m.
 * **Sand flat.** Separates the first reef from the second, which fragments into several coral islands.
+* **Depth profile.** The garden eel colony sits around 6 m, with the reef sloping through the recreational range to 30 m across both reef systems.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The garden eel colony sits around 6 m, with the reef sloping through the recreational range to 30 m across both reef systems.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -48,14 +47,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Typically 15 to 30 m, in line with the rest of the leeward coast.
+* **Overall.** Typically 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Sand around the mooring.** One of Bonaire's best garden eel colonies, at about 6 m.
 * **Second reef.** Eagle rays circle the coral peaks, especially in the morning; French, queen, gray and rock beauty angelfish are all found here.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

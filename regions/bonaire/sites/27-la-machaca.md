@@ -14,7 +14,7 @@ The house reef at Captain Don's Habitat, and a chance for a novice diver to do a
 
 ## Getting there
 
-* **Entry.** A straightforward shore entry off Captain Don's Habitat.
+* **Entry.** From Captain Don's Habitat's pier, by its ladder.
 * **Parking.** At Captain Don's Habitat.
 * **Access.** Open.
 * **Facilities.** Captain Don's Habitat resort sits onshore.
@@ -22,18 +22,17 @@ The house reef at Captain Don's Habitat, and a chance for a novice diver to do a
 ## Navigation and landmarks
 
 * **The wreck.** A 14 m, locally built boat at about 15 m, roughly 30 m from shore, the site's centrepiece.
+* **Depth profile.** The reef runs from about 7 m to the wreck at 15 m and on through the recreational range to 23 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs from about 7 m to the wreck at 15 m and on through the recreational range to 23 m.
-
-## Hazards
-
-* **The resident moray.** Large and accustomed to divers, but still worth approaching with caution given its size, particularly on a night dive.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -49,14 +48,17 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **The wreck.** A large, confident green moray eel makes its home there.
 * **Reef.** Octopus, eels and a wide range of reef fish; tarpon follow divers on a night dive.
+
+## Hazards
+
+* **The resident moray.** Large and accustomed to divers, but still worth approaching with caution given its size, particularly on a night dive.

@@ -22,18 +22,17 @@ An active industrial pier where Cargill loads salt from the adjacent salt works,
 ## Navigation and landmarks
 
 * **The pilings.** Fully encrusted with sponge and coral, the core of the dive, running the length of the pier.
+* **Depth profile.** The site stays shallow throughout, from about 4 to 15 m among the pilings.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The site stays shallow throughout, from about 4 to 15 m among the pilings.
-
-## Hazards
-
-* **Active shipping.** The pier is a working industrial structure; confirm no ship is moored or expected before diving, and never enter if a vessel is present.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -48,13 +47,16 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Typically 15 to 30 m, in line with the rest of the leeward coast, with the shade under the pier itself adding good contrast for photography.
+* **Overall.** Typically 15 to 30 m, with the shade under the pier itself adding good contrast for photography.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at these shallow depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at these shallow depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **The pilings.** Large schools of fish congregate in the shade beneath the pier, on pilings dense with sponge and coral.
+
+## Hazards
+
+* **Active shipping.** The pier is a working industrial structure; confirm no ship is moored or expected before diving, and never enter if a vessel is present.

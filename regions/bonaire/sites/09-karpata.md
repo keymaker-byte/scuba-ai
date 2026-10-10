@@ -1,6 +1,6 @@
 # 9. Karpata
 
-A popular shore dive at the end of the one-way section of the north coast road, known for excellent visibility and panoramic views that make it a favourite with wide-angle photographers. A historic ship's anchor sits embedded in the coral at 11 m as a navigation point, and the middle zone once held some of Bonaire's most impressive elkhorn coral, stretching from about 3 m up to the surface; Karpata is one of STINAPA's long-term reef monitoring sites, and the 2023 SCTLD outbreak and the bleaching events that followed it in 2023 and 2024 cut elkhorn cover here along with the rest of Bonaire's leeward coast, where about 19% of colonies died outright and another 55% show partial mortality. Karpata was closed along with the Washington Slagbaai sites to its north during the outbreak but has since been reopened by STINAPA.
+A popular shore dive at the end of the one-way section of the north coast road, known for excellent visibility and panoramic views that make it a favourite with wide-angle photographers. A historic ship's anchor sits embedded in the coral at 11 m as a navigation point, and the middle zone once held some of Bonaire's most impressive elkhorn coral, stretching from about 3 m up to the surface; Karpata is one of STINAPA's long-term reef monitoring sites, and the bleaching events of 2023 and 2024 cut elkhorn cover here along with the rest of Bonaire's leeward coast, where about 19% of colonies died outright and another 55% show partial mortality. Karpata was closed along with the Washington Slagbaai sites to its north during the outbreak but has since been reopened by STINAPA.
 
 | | |
 |---|---|
@@ -21,21 +21,20 @@ A popular shore dive at the end of the one-way section of the north coast road, 
 ## Navigation and landmarks
 
 * **Historic anchor.** Embedded in the coral at 11 m, a fixed navigation point on the reef.
-* **Elkhorn colonies.** The middle zone held Bonaire's most impressive elkhorn stands, running from about 3 m to the surface, thinned by SCTLD and bleaching since 2023.
-* **La Dania's Leap.** Karpata serves as the exit point for the drift dive that starts at La Dania's Leap, just to the north; expect divers to surface here who entered somewhere else.
+* **Elkhorn colonies.** The middle zone held Bonaire's most impressive elkhorn stands, running from about 3 m to the surface, thinned by bleaching since 2023.
+* **La Dania's Leap.** Karpata serves as the exit point for the shore drift that starts at La Dania's Leap, about 500 m to the east.
+* **Depth profile.** The reef ledge sits around 3 m, where the elkhorn grows, dropping over the wall beyond to 30 m and deeper.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Karpata commonly dives at slack to negligible current, though the connecting drift from La Dania's Leap to the north runs current-dependent.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef ledge sits around 3 m, where the elkhorn grows, dropping over the wall beyond to 30 m and deeper.
-
-## Hazards
-
-* **SCTLD decontamination.** Given the site's coral disease history, disinfect gear per STINAPA's protocol and avoid all contact with the coral.
-* **Drift traffic.** Divers arriving from La Dania's Leap surface here without having entered here; watch for other groups finishing a drift dive.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current at Karpata usually runs light; the drift from La Dania's Leap to the east depends on its set.
 
 ## Wind
 
@@ -52,15 +51,19 @@ The coast here runs west-northwest to east-southeast, and the swim out runs 274 
 
 ## Visibility
 
-Excellent and one of the site's defining features; logged dives here have run 5 out of 5 (excellent) with no separate shallow water figure needed, consistent with the wide-angle photography the site is known for.
+* **Overall.** Excellent and one of the site's defining features, suited to wide-angle photography.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October; a logged November dive measured 29 C. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallows.** Elkhorn coral from about 3 m to the surface, once dense, now thinned by disease and bleaching.
 * **Reef.** A historic anchor at 11 m, now part of the reef structure.
-* **Wall.** Larger reef fish moving through from the La Dania's Leap wall to the north.
+* **Wall.** Larger reef fish moving through from the wall to the east.
+
+## Hazards
+
+* **SCTLD decontamination.** Given the site's coral disease history, disinfect gear per STINAPA's protocol and avoid all contact with the coral.
+* **Drift traffic.** Divers finishing the drift from La Dania's Leap surface here; watch for other groups coming up.

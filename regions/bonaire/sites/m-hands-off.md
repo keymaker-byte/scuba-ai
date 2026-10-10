@@ -23,15 +23,13 @@ Originally established to gauge how much impact divers themselves have on a reef
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs through the recreational range with a drop-off reaching about 37 m.
-
-## Hazards
-
-* **Fragile, protected coral.** Buoyancy discipline matters more here than usual; the site was established specifically to limit diver contact with the reef.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -46,13 +44,16 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Cleaning stations and dense, beautiful coral formations, kept especially healthy by the site's protected status.
+
+## Hazards
+
+* **Fragile, protected coral.** Buoyancy discipline matters more here than usual; the site was established specifically to limit diver contact with the reef.

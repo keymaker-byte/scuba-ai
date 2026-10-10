@@ -13,7 +13,7 @@ The first double reef site south of Salt Pier, named for its proximity to the sa
 
 ## Getting there
 
-* **Entry.** A shore entry typical of this stretch of coast.
+* **Entry.** A shore entry off the beach.
 * **Parking.** Roadside at the site.
 * **Access.** Open.
 * **Facilities.** None at the site.
@@ -21,19 +21,18 @@ The first double reef site south of Salt Pier, named for its proximity to the sa
 ## Navigation and landmarks
 
 * **The sandbar.** Between the first and second reef, a resident stingray spot and the point to navigate carefully to find the second reef.
-* **Second reef.** Begins around 21 m and needs some navigation; not a route for a beginner.
+* **Second reef.** Begins around 21 m and needs some navigation; a route for an experienced diver.
+* **Depth profile.** The first reef sits in the shallows, with the sandbar and second reef beginning around 21 m and the site running to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The first reef sits in the shallows, with the sandbar and second reef beginning around 21 m and the site running to about 30 m.
-
-## Hazards
-
-* **Second reef navigation.** Reaching it needs real navigation skill; not recommended for a beginner working alone.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -50,15 +49,18 @@ The swim out runs 278 m south-southwest from the entry, along the shore, to the 
 
 ## Visibility
 
-Typically reaches about 20 m to the entry point, in line with the rest of the leeward coast.
+* **Overall.** Typically about 20 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Sandbar.** Resident stingrays.
 * **Transition to the second reef.** Eagle rays and large morays, along with a cleaning station.
 * **Reef.** Green turtles and barracuda.
+
+## Hazards
+
+* **Second reef navigation.** Reaching it needs real navigation skill; best left to an experienced diver.

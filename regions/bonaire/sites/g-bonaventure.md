@@ -1,6 +1,6 @@
 # G. Bonaventure
 
-A terraced reef on Klein Bonaire rated among the best of the islet's sites, with waving gorgonian fans and pyramid shaped pagodas of star coral sharing the shallows. The gorgonians usually harbour a seahorse or two, and angelfish and black durgon often accompany divers up and down the reef.
+A terraced reef on Klein Bonaire among the best of the islet's sites, with waving gorgonian fans and pyramid shaped pagodas of star coral sharing the shallows. The gorgonians usually harbour a seahorse or two, and angelfish and black durgon often accompany divers up and down the reef.
 
 | | |
 |---|---|
@@ -19,18 +19,17 @@ A terraced reef on Klein Bonaire rated among the best of the islet's sites, with
 ## Navigation and landmarks
 
 * **Star coral pagodas.** Pyramid shaped formations in the shallows, sharing habitat with gorgonians.
+* **Depth profile.** The terraced reef runs through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The terraced reef runs through the recreational range to about 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -45,14 +44,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallows.** Seahorses hiding in the gorgonians, and pyramid shaped star coral pagodas.
 * **Reef.** Angelfish and black durgon commonly accompany divers along the reef.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

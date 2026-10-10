@@ -22,18 +22,18 @@ The southernmost dive site on Bonaire's leeward coast, next to the orange painte
 ## Navigation and landmarks
 
 * **Orange slave huts.** Stand onshore next to the site, a historical memorial and the clearest landmark.
+* **Depth profile.** The reef runs from about 5 m through the recreational range to 25 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Moderate to strong current is typical here, part of why the site is for experienced divers only.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs from about 5 m through the recreational range to 25 m.
-
-## Hazards
-
-* **Current.** Moderate to strong as a rule; not a site for a first southern-tip dive.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Moderate to strong current is typical here.
 
 ## Wind
 
@@ -48,14 +48,17 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Typically 15 to 30 m, in line with the rest of the leeward coast.
+* **Overall.** Typically 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Open water.** Offshore schools of baitfish, bigeye scad (masbango in Papiamentu), often visibly hunted by larger predatory fish, along with horse-eye jacks.
 * **Reef.** Turtles regularly seen.
+
+## Hazards
+
+* **Current.** Moderate to strong as a rule; suited to divers with prior current experience.

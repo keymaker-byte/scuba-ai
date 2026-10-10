@@ -1,6 +1,6 @@
 # K. Capt. Don's Reef
 
-A must dive at any level, on Klein Bonaire's south coast, with the mooring anchored at about 9 m on the edge of a spectacular drop-off. A plaque at the mooring, placed in 1987 and dedicated to Bonaire's pioneer diver Don Stewart, thanks him for his dedication to preserving Bonaire's reefs; Stewart introduced the permanent mooring system that protects the island's fringing reefs and campaigned successfully to ban spearfishing and tropical fish collecting on Bonaire.
+A dive for every level, on Klein Bonaire's south coast, with the mooring anchored at about 9 m on the edge of a spectacular drop-off. A plaque at the mooring, placed in 1987 and dedicated to Bonaire's pioneer diver Don Stewart, thanks him for his dedication to preserving Bonaire's reefs; Stewart introduced the permanent mooring system that protects the island's fringing reefs and campaigned successfully to ban spearfishing and tropical fish collecting on Bonaire.
 
 | | |
 |---|---|
@@ -21,18 +21,17 @@ A must dive at any level, on Klein Bonaire's south coast, with the mooring ancho
 
 * **The plaque.** At the mooring, dedicated to Don Stewart, placed in 1987.
 * **The drop-off.** Begins right at the mooring.
+* **Depth profile.** The mooring sits at about 9 m on the drop-off edge, with the reef running through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The mooring sits at about 9 m on the drop-off edge, with the reef running through the recreational range to about 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -46,13 +45,16 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-Typical of Klein Bonaire's healthiest reef stretch: a wide range of hard and soft coral along the drop-off, with the reef fish and occasional turtle common to the islet's south coast sites.
+* **Reef.** A wide range of hard and soft coral along the drop-off, with reef fish and the occasional turtle.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

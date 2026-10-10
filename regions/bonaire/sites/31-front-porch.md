@@ -16,24 +16,23 @@ An easy dive at the old Sunset Beach Resort, entered from shore just north of th
 * **Entry.** Off shore just north of the old Sunset Beach Resort property next to Den Laman Apartments, or from Eden Beach.
 * **Parking.** Roadside at either entry point.
 * **Access.** Open.
-* **Facilities.** None at the site itself; Eden Beach and Den Laman Apartments sit onshore.
+* **Facilities.** Eden Beach and Den Laman Apartments sit onshore.
 
 ## Navigation and landmarks
 
-* **Steel pipe.** Stands above water in front of Eden Beach Resort, a landmark for the site.
+* **Steel pipe.** Stands above water in front of Eden Beach, a landmark for the site.
 * **The tugboat wreck.** Lies off the old pier at Sunset in the site's deep zone.
+* **Depth profile.** Sand terraces with scattered coral run through the shallows, a middle zone of hard coral and sponge follows through the recreational range, and a deep zone of sand flats and garden eels holds the tugboat wreck.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. Sand terraces with scattered coral run through the shallows, a middle zone of hard coral and sponge follows through the recreational range, and a deep zone of sand flats and garden eels holds the tugboat wreck.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -49,15 +48,18 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **The wreck.** Schools of big tooth cardinalfish, seldom seen elsewhere on the island.
 * **Reef.** Trumpetfish, trunkfish, scorpionfish, schooling horse-eye jacks, soapfish, large grouper and moray eels.
 * **Deep sand flats.** Garden eels around the wreck.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

@@ -21,18 +21,18 @@ Just off one of Bonaire's most famous beaches, its pink tinge coming from forami
 ## Navigation and landmarks
 
 * **The beach itself.** A landmark in its own right, one of the island's best known.
+* **Depth profile.** The shallow sandy bottom in front of the beach leads through the recreational range to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Current here can run stronger than the sheltered sites further up the coast; a logged dive found it slack, but treat that as one day's reading rather than the norm.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The shallow sandy bottom in front of the beach leads through the recreational range to 30 m; a logged dive reached 24.5 m.
-
-## Hazards
-
-* **Current.** Can run stronger here than at more sheltered sites; check conditions before committing to the full dive.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current here can run stronger than at the sheltered sites further up the coast.
 
 ## Wind
 
@@ -49,13 +49,16 @@ The swim out runs 247 m southwest from the entry, along the shore, to the dive a
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast; a logged dive rated it 5 out of 5 (excellent).
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October; a logged November dive measured 29 C. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Sandy shallows.** Southern stingrays and bonefish, best early morning and late afternoon.
+
+## Hazards
+
+* **Current.** Can run stronger here than at more sheltered sites; check conditions before committing to the full dive.

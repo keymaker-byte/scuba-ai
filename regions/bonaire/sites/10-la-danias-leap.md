@@ -1,61 +1,68 @@
 # 10. La Dania's Leap
 
-One of Bonaire's few true vertical walls, entered by boat at a rock ledge that gave the site its name from the era when divers leaped from it before drift diving south to Karpata. There is no exit here: the dive drifts along the wall to Karpata, where divers surface, making the two sites a linked pair rather than a there-and-back dive. La Dania's was closed along with the Washington Slagbaai sites to its north during the 2023 SCTLD outbreak but has since been reopened by STINAPA.
+One of Bonaire's few true vertical walls, entered from shore with a leap off the high rock ledge that gives the site its name. The ledge is too high to climb back up, so the dive is a one-way drift about 300 m west along the wall to the Karpata entry, where divers exit. La Dania's was closed along with the Washington Slagbaai sites to its northwest during the 2023 SCTLD outbreak but has since been reopened by STINAPA.
 
 | | |
 |---|---|
-| **Location** | Northwest coast, Bonaire, just north of Karpata |
-| **Coordinates** | 12.2175, -68.3495 (the ledge, about 1 m, dropping straight into the wall) |
-| **Type** | Boat |
-| **Depth range** | 5 to 30 m |
-| **Skill level** | Experienced diver; a guide is recommended for the entry, exit and drift |
+| **Location** | Northwest coast, Bonaire, just east of Karpata |
+| **Coordinates** | 12.21740, -68.35010 (dive area at the top of the wall, about 3 m, dropping past 130 m a short way offshore) |
+| **Parking coordinates** | 12.218641, -68.349933, roadside above the ledge |
+| **Entry point coordinates** | 12.218248, -68.349697, the rock ledge |
+| **Type** | Shore |
+| **Depth range** | 3 to 30 m |
+| **Skill level** | Experienced diver; a guide is recommended on the first visit |
 
 ## Getting there
 
-* **Entry.** From a boat, off the rock ledge; there is no shore approach.
-* **Parking.** Not applicable, boat access only.
-* **Access.** Reopened by STINAPA after a temporary SCTLD-related closure; the sites to the north (the Washington Slagbaai chain) remain closed. The dive finishes at Karpata, not back at the entry point, so plan the boat pickup accordingly.
+* **Entry.** A leap off the rock ledge, then a 100 m swim south-southwest to the top of the wall. The exit is the Karpata entry point (12.219349, -68.352014), about 280 m west-northwest of the ledge along the shore.
+* **Parking.** Roadside above the ledge, about 240 m east along the road from Karpata's parking.
+* **Access.** Reopened by STINAPA after a temporary SCTLD-related closure; the Washington Slagbaai chain to the northwest remains closed.
 * **Facilities.** None at the site.
 
 ## Navigation and landmarks
 
 * **The ledge.** The entry point and namesake of the site.
-* **The wall.** Beyond the reef plateau the real wall begins, running south toward Karpata.
-* **Drift to Karpata.** The dive ends at Karpata's exit, not at the entry ledge; this is a one-way dive by design.
+* **The wall.** Beyond the reef plateau the real wall begins, running west toward Karpata with the shore on the diver's right.
+* **Drift to Karpata.** The dive ends at Karpata's exit, about 300 m northwest of the dive area; keep the shore on the right.
+* **Depth profile.** The reef plateau sits at about 3 to 5 m before giving way to the vertical wall, which drops past 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. The dive is planned as a drift from La Dania's Leap to Karpata, so some current along the wall is expected and part of the plan rather than a hazard to avoid.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef plateau sits in the shallows before giving way to the vertical wall proper, best dived early in a dive day to fully enjoy its deeper sections.
-
-## Hazards
-
-* **Tricky entry and exit.** The ledge entry and the drift to a different exit point call for a trained guide rather than a self-led dive.
-* **No exit at the entry.** The dive finishes at Karpata; a diver or boat expecting to return to the ledge will be in the wrong place.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** The dive runs west along the wall to the Karpata exit.
 
 ## Wind
 
 | | |
 |---|---|
-| **Dive area shore facing** | south, 190° |
+| **Entry shore facing** | south-southwest, 192° |
+| **Dive area shore facing** | south-southwest, 192° |
 
-* **Bad.** Southeast through west-southwest (SE-WSW), onshore over 7 km to more than 30 km, along the coast from the southeast or across open sea from the south and southwest. Any wind from this quarter raises swell along this exposed wall and at the boat.
+* **Bad.** Southeast through west-southwest (SE-WSW), onshore over 7 km to more than 30 km, along the coast from the southeast or across open sea from the south and southwest. Any wind from this quarter raises swell along this exposed wall and against the ledge entry and the Karpata exit.
 * **Mixed.** West (W), cross-shore over more than 30 km, running a swell along the wall.
-* **Fine.** West-northwest clockwise through east-southeast: offshore from northwest through east-northeast, off the land, and cross-shore over 610 m to 4.6 km from the west-northwest, east and east-southeast.
+* **Fine.** West-northwest clockwise through east-southeast: offshore from northwest through east-northeast, off the land, and cross-shore over 700 m to 4.7 km from the west-northwest, east and east-southeast.
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Wall.** Large schools of barracuda patrol the wall, with angelfish and parrotfish grazing between coral formations; snapper and grunts rest in the current until dusk before hunting.
 * **Mid to deep wall.** Juvenile sunshine fish, yellow on top and bright blue below, on the mid to deep portions of the wall.
+
+## Hazards
+
+* **No exit at the entry.** The ledge is too high to climb back up, so the drift to Karpata is mandatory once in the water.
+* **Gas for the exit.** Keep enough gas in hand to cover the full 300 m to the Karpata exit.
+* **Tricky entry.** The high leap off the ledge; a guide is recommended on the first visit.

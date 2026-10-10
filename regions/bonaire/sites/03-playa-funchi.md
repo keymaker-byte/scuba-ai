@@ -1,14 +1,15 @@
 # 3. Playa Funchi
 
-A protected cove in Washington Slagbaai National Park, popular for both diving and snorkeling and scenic enough to be worth the drive even without gear. The cove itself makes for an easy entry despite a rocky shoreline, opening onto a reef edge that drops quickly into open water where horse-eye jacks school. Diving here is currently suspended under STINAPA's coral disease closure covering the whole park.
+A protected cove in Washington Slagbaai National Park, popular for both diving and snorkeling and scenic enough to be worth the drive even without gear. The cove itself makes for an easy entry despite a rocky shoreline, opening onto a reef edge that drops quickly into open water where horse-eye jacks school. Diving here is currently suspended under STINAPA's coral disease closure covering this stretch of the park's coast.
 
 | | |
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire |
-| **Coordinates** | 12.282367, -68.4146 (dive area, reef edge, about 6 m, dropping past 100 m within the same grid cell) |
+| **Coordinates** | 12.282367, -68.4146 (dive area, reef edge, about 6 m, dropping past 100 m a short way offshore) |
 | **Parking coordinates** | 12.282340, -68.413770, beside the park road at the cove |
 | **Entry point coordinates** | 12.282301, -68.413995, the cove beach |
 | **Type** | Shore |
+| **Depth range** | Not established |
 
 ## Getting there
 
@@ -21,20 +22,18 @@ A protected cove in Washington Slagbaai National Park, popular for both diving a
 
 * **The cove.** Entry and the shallows sit inside the protected cove itself.
 * **Reef edge.** Beyond the cove the reef drops quickly toward open water, where the jacks run.
+* **Depth profile.** The reef edge sits around 6 m before the bottom falls away fast, reaching well past 100 m within a short distance of the cove.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. The cove itself stays sheltered, but current and swell can build quickly on the open reef edge beyond it, part of why the site is only worth entering in calm conditions.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef edge sits around 6 m before the bottom falls away fast, reaching well past 100 m within a short distance of the cove.
-
-## Hazards
-
-* **Diving suspended.** Closed to diving under STINAPA's SCTLD order since May 2023; treat as not diveable until STINAPA lifts the closure.
-* **Exposed corner.** Swell and current can build quickly here even though the cove itself is protected; only enter when conditions are calm.
-* **Rocky footing.** The shoreline is rock rather than sand.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** The cove itself stays sheltered, while current and swell build quickly on the open reef edge beyond it; enter only in calm conditions.
 
 ## Wind
 
@@ -51,14 +50,19 @@ A small pocket cove open to the west, with the shore wrapping round its north, e
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast, occasionally reduced by swell stirring the shallows when wind runs out of the north or west.
+* **Overall.** Typically excellent, 15 to 30 m, occasionally reduced by swell stirring the shallows when wind runs out of the north or west.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Open water.** Horse-eye jacks school off the reef edge.
 * **Shallows.** Sand tilefish, peacock flounders and other sand dwellers work the cove's sandy patches; reef fish including blue tang, black durgon, parrotfish, French grunt, trumpetfish and French angelfish are regularly seen.
+
+## Hazards
+
+* **Diving suspended.** Closed to diving under STINAPA's SCTLD order since 1 May 2023, until STINAPA lifts the closure.
+* **Exposed corner.** Swell and current can build quickly here even though the cove itself is protected; only enter when conditions are calm.
+* **Rocky footing.** The shoreline is rock rather than sand.

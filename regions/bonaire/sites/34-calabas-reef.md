@@ -15,24 +15,24 @@ Divi Flamingo Beach Resort's house reef, one of the better protected sites on Bo
 
 * **Entry.** An easy, gradually sloping shore entry from the resort beach.
 * **Parking.** At Divi Flamingo Beach Resort.
-* **Access.** Reserved through Divi Dive Bonaire, the resort's dive centre; open access without a booking is not permitted.
+* **Access.** Reserved through Divi Dive Bonaire, the resort's dive centre, with every dive booked in advance.
 * **Facilities.** Full resort facilities on site.
 
 ## Navigation and landmarks
 
 * **The house reef slope.** Runs from the shallow entry through coral gardens to deeper walls past 30 m.
+* **Depth profile.** The reef starts shallow at about 3 m and slopes gradually past 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Conditions here are generally calm, part of why it suits a check-out or first night dive.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef starts shallow at about 3 m and slopes gradually past 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Conditions here are generally calm.
 
 ## Wind
 
@@ -47,13 +47,16 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-* **Reef.** Turtles, grouper and the occasional seahorse, along with fish accustomed to divers and often looking for a handout.
+* **Reef.** Turtles, rays, grouper and the occasional seahorse, along with fish accustomed to divers and often looking for a handout.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

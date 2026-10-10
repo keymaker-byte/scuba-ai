@@ -11,7 +11,7 @@ A popular stretch of reef between Jeff Davis Memorial and Oil Slick Leap, named 
 
 ## Getting there
 
-* **Entry.** By boat only, no shore access.
+* **Entry.** By boat only.
 * **Parking.** Not applicable for the boat entry.
 * **Access.** Open.
 * **Facilities.** None at the site.
@@ -19,18 +19,17 @@ A popular stretch of reef between Jeff Davis Memorial and Oil Slick Leap, named 
 ## Navigation and landmarks
 
 * **Extensive coral formations.** Run from about 9 to 18 m, the core of the dive.
+* **Depth profile.** Coral formations run from about 9 to 18 m, with the site working through the recreational range to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. Coral formations run from about 9 to 18 m, with the site working through the recreational range to 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -45,13 +44,16 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Seahorses and turtles are regularly spotted among the coral formations.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

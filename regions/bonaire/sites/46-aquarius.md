@@ -23,18 +23,18 @@ An easy double reef dive on the south coast, about 1.7 km north of Salt Pier, wi
 
 * **The sandy bottom.** Lies between the two reefs, a natural spot to practice skills.
 * **Second reef crest.** Around 29 m, with the reef continuing well past recreational depth beyond that; stay on the shallower profile unless planning a deliberate deep dive.
+* **Depth profile.** The first reef sits around 8 m; the second reef crests near 29 m and drops well past recreational range, to about 43 m at its outer edge.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Current here typically runs light to moderate.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The first reef sits around 8 m; the second reef crests near 29 m and drops well past recreational range, to about 43 m at its outer edge.
-
-## Hazards
-
-* **Second reef depth.** Its outer edge runs to about 43 m; keep to the shallow reef and sand unless planning specifically for the deeper profile.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current here typically runs light to moderate.
 
 ## Wind
 
@@ -49,14 +49,17 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Averages around 25 m, aided by the site's light to moderate current.
+* **Overall.** Averages around 25 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallow reef.** A wide range of hard coral species and many schooling fish.
 * **Second reef's outer edge.** Large grouper, barracuda, turtles and eagle rays.
+
+## Hazards
+
+* **Second reef depth.** Its outer edge runs to about 43 m; keep to the shallow reef and sand unless planning specifically for the deeper profile.

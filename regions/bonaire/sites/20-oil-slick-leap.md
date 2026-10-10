@@ -13,7 +13,7 @@ One of the west coast's most popular shore dives, about 7 km north of Kralendijk
 
 ## Getting there
 
-* **Entry.** A steel ladder leads down to the water from the beach; a boat entry is recommended but the ladder is a real shore option for the adventurous. Neoprene dive boots are essential, both for the beach and for grip on the ladder's slippery rungs.
+* **Entry.** A steel ladder leads down to the water from the beach; the site is also dived by boat. Neoprene dive boots are essential, both for the beach and for grip on the ladder's slippery rungs.
 * **Parking.** Roadside at the site.
 * **Access.** Open.
 * **Facilities.** None at the site.
@@ -22,18 +22,17 @@ One of the west coast's most popular shore dives, about 7 km north of Kralendijk
 
 * **The ladder.** Marks the shore entry and exit point.
 * **Barracuda holding depth.** The schools typically hold at 10 to 15 m above the reef wall.
+* **Depth profile.** The reef runs from the shallows through the recreational range to 25 m, with the barracuda holding around 10 to 15 m over the wall.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs from the shallows through the recreational range to 25 m, with the barracuda holding around 10 to 15 m over the wall.
-
-## Hazards
-
-* **The ladder.** Slippery rungs; dive boots are essential for a secure exit.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -51,14 +50,17 @@ The dive area lies 22 m south of the entry ladder.
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef wall.** Barracuda schools of 20 to more than 50 fish, accustomed to divers and often approachable for photos.
 * **Reef.** Varied coral formations throughout.
+
+## Hazards
+
+* **The ladder.** Slippery rungs; dive boots are essential for a secure exit.

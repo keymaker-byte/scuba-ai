@@ -4,9 +4,9 @@ Also known as North Belnem, a site directly across from Flamingo International A
 
 | | |
 |---|---|
-| **Location** | West coast, Bonaire, opposite Flamingo International Airport, between Windsock and Bachelor's Beach |
+| **Location** | West coast, Bonaire, opposite the west end of the Flamingo International Airport runway |
 | **Coordinates** | 12.133236, -68.282685 (about 4 m) |
-| **Parking coordinates** | 12.132565, -68.282272, at the beach, with benches and shade trees |
+| **Parking coordinates** | 12.132565, -68.282272, at the beach |
 | **Entry point coordinates** | 12.132775, -68.282443 |
 | **Type** | Shore |
 | **Depth range** | 6 to 30 m |
@@ -22,18 +22,17 @@ Also known as North Belnem, a site directly across from Flamingo International A
 
 * **The sandy plateau.** Leads from the beach out to the wall.
 * **The wall.** Begins at about 15 m.
+* **Depth profile.** The sandy plateau sits in the shallows before the wall begins at about 15 m, continuing through the recreational range to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The sandy plateau sits in the shallows before the wall begins at about 15 m, continuing through the recreational range to 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -49,14 +48,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Large schools of blue tang, with barracuda hunting over the reef.
 * **Coral.** Eels and octopus hiding among varied coral types, and turtles making their way to the surface.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

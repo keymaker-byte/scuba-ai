@@ -1,6 +1,6 @@
 # 2. Playa Benge
 
-A remote beach in Washington Slagbaai National Park fronting some of the most pristine coral on Bonaire, about 22 km northwest of Kralendijk. The shore entry crosses a steep field of finger coral and loose rock that shifts in the swell, difficult enough that a boat entry is the easier way in when the site is open. Diving here is currently suspended under STINAPA's coral disease closure covering the whole park.
+A remote beach in Washington Slagbaai National Park fronting some of the most pristine coral on Bonaire, about 22 km northwest of Kralendijk. The shore entry crosses a steep field of finger coral and loose rock that shifts in the swell, difficult enough that a boat entry is the easier way in when the site is open. Diving here is currently suspended under STINAPA's coral disease closure covering this stretch of the park's coast.
 
 | | |
 |---|---|
@@ -22,21 +22,18 @@ A remote beach in Washington Slagbaai National Park fronting some of the most pr
 ## Navigation and landmarks
 
 * **Finger coral shelf.** The entry crosses this before reaching the main reef.
-* **Beach itself.** Also a sea turtle nesting beach, worth noting on the walk in even before the dive starts.
+* **Depth profile.** The reef here runs from about 4 m in the shallows down to 30 m, with the pristine coral for which the site is known found through that whole range.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Playa Benge is rated for advanced divers on the strength of its current alone, and it can run hard enough to shape the dive plan regardless of the coral and rock underfoot at entry.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef here runs from about 4 m in the shallows down to 30 m, with the pristine coral for which the site is known found through that whole range.
-
-## Hazards
-
-* **Diving suspended.** Closed to diving under STINAPA's SCTLD order since May 2023; treat as not diveable until STINAPA lifts the closure.
-* **Difficult entry and exit.** Steep finger coral into a field of loose, swell-moved rock; a fall here is the main injury risk at this site.
-* **Strong current.** Rated for advanced divers even when open.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** The current can run hard enough to shape the dive plan.
 
 ## Wind
 
@@ -51,15 +48,20 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast, occasionally reduced by swell stirring the shallows when wind runs out of the north or west.
+* **Overall.** Typically excellent, 15 to 30 m, occasionally reduced by swell stirring the shallows when wind runs out of the north or west.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Some of the most pristine coral on Bonaire, and larger fish species than the busier sites further south.
-* **Open water.** Manta rays and hammerhead sharks have been reported off the site.
+* **Open water.** Manta rays and hammerhead sharks pass off the site on occasion.
 * **Beach.** A sea turtle nesting site.
+
+## Hazards
+
+* **Diving suspended.** Closed to diving under STINAPA's SCTLD order since 1 May 2023, until STINAPA lifts the closure.
+* **Difficult entry and exit.** Steep finger coral into a field of loose, swell-moved rock; a fall here is the main injury risk at this site.
+* **Strong current.** Rated for advanced divers even when open.

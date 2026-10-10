@@ -1,6 +1,6 @@
 # 57. Atlantis
 
-Bonaire's official kitesurfing site, also called Kite Beach, best dived on a windless day given how the trade winds that make the site good for kiting also stir up the water for diving. There is no mooring line here, so navigation is by compass and natural reference points. A moderate current typically runs south to north; advanced divers can push out over the steep slope to 40 m for a chance at larger fish, and the swim back with the current can turn into more of a drift dive than a swim.
+Bonaire's official kitesurfing site, also called Kite Beach, best dived on a windless day, since the trade winds that make the site good for kiting also stir up the water for diving. There is no mooring line here, so navigation is by compass and natural reference points. A moderate current typically runs south to north; larger fish turn up along the steep slope beyond the reef, and the swim back with the current can turn into more of a drift dive than a swim.
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@ Bonaire's official kitesurfing site, also called Kite Beach, best dived on a win
 | **Parking coordinates** | 12.044341, -68.266361 |
 | **Entry point coordinates** | 12.044189, -68.266715 |
 | **Type** | Shore |
-| **Depth range** | 9 to 30 m, advanced divers reaching 40 m on the slope |
+| **Depth range** | 9 to 30 m |
 | **Skill level** | Advanced |
 
 ## Getting there
@@ -21,22 +21,20 @@ Bonaire's official kitesurfing site, also called Kite Beach, best dived on a win
 
 ## Navigation and landmarks
 
-* **No mooring line.** Navigate by compass and natural reference points rather than a fixed line.
-* **The steep slope.** Beyond the reef, reachable by advanced divers down to about 40 m.
+* **No mooring line.** Navigate by compass and natural reference points.
+* **The steep slope.** Beyond the reef, continuing to about 40 m.
+* **Depth profile.** The reef runs through the recreational range to 30 m, with a steep slope beyond reaching 40 m for advanced divers.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. A moderate current typically runs south to north; the swim back with the current can feel like a drift dive.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | north, 0° |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs through the recreational range to 30 m, with a steep slope beyond reaching 40 m for advanced divers.
-
-## Hazards
-
-* **Kitesurfing traffic.** This is the island's official kite site; dive only when the wind and kite activity are minimal.
-* **No mooring line.** Navigation relies on compass and landmarks rather than a fixed guide.
-* **Current.** Moderate, usually south to north, with a brisk return leg.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** A moderate current typically runs south to north; the swim back with the current can feel like a drift dive.
 
 ## Wind
 
@@ -51,13 +49,18 @@ The shore lies open to more than 30 km of water from south-southeast through nor
 
 ## Visibility
 
-Typically 15 to 30 m, in line with the rest of the leeward coast, though wind and kite activity can stir the water on a breezy day.
+* **Overall.** Typically 15 to 30 m, though wind and kite activity can stir the water on a breezy day.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-* **The slope.** Larger fish and the chance of a special sighting for divers who push out to 40 m.
+* **The slope.** Larger fish and the chance of a special sighting.
+
+## Hazards
+
+* **Kitesurfing traffic.** This is the island's official kite site; dive only when the wind and kite activity are minimal.
+* **No mooring line.** Navigation relies on compass and landmarks.
+* **Current.** Moderate, usually south to north, with a brisk return leg.

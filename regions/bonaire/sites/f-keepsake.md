@@ -1,35 +1,34 @@
 # F. Keepsake
 
-A boat dive on Klein Bonaire, marked on STINAPA's own map without a published site description. Twin reefs, sponge gardens and stingrays are the site's main character, consistent with Klein Bonaire's south and east side sites nearby.
+A boat dive on Klein Bonaire. Twin reefs, sponge gardens and stingrays are the site's main character.
 
 | | |
 |---|---|
 | **Location** | Klein Bonaire |
 | **Coordinates** | 12.146389, -68.298236 (about 44 m) |
 | **Type** | Boat |
+| **Depth range** | Not established |
 
 ## Getting there
 
 * **Entry.** By boat only.
 * **Parking.** Not applicable.
-* **Access.** Reached only by a dive operator's boat; STINAPA's map carries no description for this site, so check with a dive shop that it's part of their current rotation. Klein Bonaire itself has no facilities.
+* **Access.** Reached only by a dive operator's boat; check with a dive shop that it is part of their current rotation. Klein Bonaire itself has no facilities.
 * **Facilities.** None.
 
 ## Navigation and landmarks
 
-No established route beyond the twin reef layout; follow a guide on the first visit.
+* **Twin reefs.** The site's layout; follow a guide on the first visit.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. Not separately documented beyond the general Klein Bonaire recreational range.
-
-## Hazards
-
-None specifically documented beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -44,13 +43,17 @@ None specifically documented beyond the general reef and current awareness that 
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 40 m.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 40 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Twin reef structure with sponge gardens and stingrays.
+
+## Hazards
+
+* **Reef collapse.** A 2017 landslide left an unstable collapse about 20 m southwest of the mooring, from about 12 m to past 40 m, with little live coral; keep clear of it.
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

@@ -15,26 +15,25 @@ A shore dive fronting a protected beach with no car access, since sea turtles co
 ## Getting there
 
 * **Entry.** A shore entry to a beach with no car access, protected for turtle nesting.
-* **Parking.** Some distance from the beach itself, given the no-car protection.
+* **Parking.** Roadside, a short walk to the beach.
 * **Access.** Open, but choose a different site when surf or current are running high.
 * **Facilities.** None at the site.
 
 ## Navigation and landmarks
 
 * **Sugar sand bottom.** In the deeper water, contrasting with large sponges and coral heads.
+* **Depth profile.** Gorgonians fill the shallows, with large sponges and coral heads over the sugar sand bottom through the recreational range to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. This stretch of coast can be a real challenge even for a strong swimmer when current or surf pick up; assess conditions carefully before entering.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. Gorgonians fill the shallows, with large sponges and coral heads over the sugar sand bottom through the recreational range to 30 m.
-
-## Hazards
-
-* **Current and surf.** Can overwhelm even a strong swimmer; pick a different site rather than push through rough conditions here.
-* **Turtle nesting beach.** No car access; respect the closure and any nesting activity on the beach itself.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** This stretch of coast can be a real challenge even for a strong swimmer when current or surf pick up; assess conditions carefully before entering.
 
 ## Wind
 
@@ -49,14 +48,18 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Typically 15 to 30 m, in line with the rest of the leeward coast.
+* **Overall.** Typically 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallows.** Many species of gorgonian.
 * **Reef.** Small reef fish sheltering in the hard and soft coral, with stingrays, barracuda and sea turtles regularly spotted.
+
+## Hazards
+
+* **Current and surf.** Can overwhelm even a strong swimmer; pick a different site in rough conditions.
+* **Turtle nesting beach.** No car access; respect the closure and any nesting activity on the beach itself.

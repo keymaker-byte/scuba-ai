@@ -1,6 +1,6 @@
 # 24. Petries Pillar
 
-A shore dive good for beginners, terrain much like neighbouring Andrea I and II, named by Captain Don Stewart, who named most of Bonaire's dive sites, as a wedding gift for a friend. The reef between here and Andrea I carries a wider shallow ledge than most of the island, around 5 to 6 m, before the slope continues down.
+A boat dive good for beginners, named by Captain Don Stewart, who named most of Bonaire's dive sites, as a wedding gift for a friend. The reef between here and Andrea I carries a wider shallow ledge than most of the island, around 5 to 6 m, before the slope continues down.
 
 | | |
 |---|---|
@@ -12,26 +12,25 @@ A shore dive good for beginners, terrain much like neighbouring Andrea I and II,
 
 ## Getting there
 
-* **Entry.** A straightforward shore entry typical of this stretch of coast.
-* **Parking.** Roadside at the site.
-* **Access.** Open.
+* **Entry.** By boat, at the mooring.
+* **Parking.** Not applicable for the boat entry.
+* **Access.** Boat only; there is no public shore access.
 * **Facilities.** None at the site.
 
 ## Navigation and landmarks
 
 * **Shallow ledge.** Wider than most of the island's ledges, around 5 to 6 m, running between here and Andrea I.
+* **Depth profile.** The ledge sits around 5 to 6 m before the reef continues down through the recreational range to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The ledge sits around 5 to 6 m before the reef continues down through the recreational range to 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -46,13 +45,16 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-Reef life matches neighbouring Andrea I and II: soft corals and anemones sheltering both predator and prey, with the reef's parrotfish and other typical west coast reef fish throughout.
+* **Reef.** Soft corals and anemones sheltering both predator and prey, with the reef's parrotfish and other typical west coast reef fish throughout.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

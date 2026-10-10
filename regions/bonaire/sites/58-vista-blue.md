@@ -1,10 +1,10 @@
 # 58. Vista Blue
 
-A steep reef about 6 km south of Kralendijk known for its dense soft coral cover, extending along the whole reef in a colourful, high density carpet. Current is the defining feature: it can change direction or build suddenly during a dive, so this suits an experienced diver who stays alert throughout rather than a set-and-forget profile.
+A steep reef about 13 km south of Kralendijk known for its dense soft coral cover, extending along the whole reef in a colourful, high density carpet. Current is the defining feature: it can change direction or build suddenly during a dive, so this suits an experienced diver who stays alert throughout.
 
 | | |
 |---|---|
-| **Location** | South coast, Bonaire, about 6 km south of Kralendijk |
+| **Location** | South coast, Bonaire, about 13 km south of Kralendijk |
 | **Coordinates** | 12.035434, -68.263761 (reef edge, about 5 m) |
 | **Parking coordinates** | 12.036246, -68.262836 |
 | **Entry point coordinates** | 12.036078, -68.263088 |
@@ -14,7 +14,7 @@ A steep reef about 6 km south of Kralendijk known for its dense soft coral cover
 
 ## Getting there
 
-* **Entry.** A shore entry typical of this stretch of coast.
+* **Entry.** A shore entry from the roadside.
 * **Parking.** Roadside at the site.
 * **Access.** Open; nearby kitesurfing activity means extra care surfacing on a windy day.
 * **Facilities.** None at the site.
@@ -22,19 +22,18 @@ A steep reef about 6 km south of Kralendijk known for its dense soft coral cover
 ## Navigation and landmarks
 
 * **Soft coral carpet.** Runs along the entire reef, the site's defining visual feature.
+* **Depth profile.** The reef runs through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Current here can change direction or increase in strength mid-dive without much warning; stay alert to it throughout rather than only at entry.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs through the recreational range to about 30 m.
-
-## Hazards
-
-* **Changeable current.** Can shift direction or build suddenly during a dive.
-* **Kitesurfing nearby.** Watch for kite lines on the surface on a windy day.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current here can change direction or increase in strength suddenly mid-dive; stay alert to it throughout the dive.
 
 ## Wind
 
@@ -49,13 +48,17 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Can reach up to 40 m here, among the better readings on the island.
+* **Overall.** Can reach up to 40 m here, among the better readings on the island.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-* **Reef.** Dense, high density soft coral cover along the entire site, similar to the marine life found at neighbouring Atlantis and Sweet Dreams.
+* **Reef.** Dense soft coral cover along the entire site.
+
+## Hazards
+
+* **Changeable current.** Can shift direction or build suddenly during a dive.
+* **Kitesurfing nearby.** Watch for kite lines on the surface on a windy day.
