@@ -1,11 +1,11 @@
 ---
 name: create-dive-site
-description: This skill should be used when the user asks to create a new dive site file, write up a dive site, add a site to a region, document a new site, or substantially rewrite an existing site file in this scuba diving workspace. Covers gathering the required inputs, loading that region's own conventions, verifying the coordinate against bathymetry and current-model coverage, running research passes, working out the depth, current and wind sections by the region's site conventions, the bookkeeping a new site needs, and a final independent audit of the site file's prose by a fresh agent.
+description: This skill should be used when the user asks to create a new dive site file, write up a dive site, add a site to a region, document a new site, or substantially rewrite an existing site file in this scuba diving workspace. Covers gathering the required inputs, loading that region's own conventions, verifying the coordinate against bathymetry, writing the site JSON, running research passes, working out the depth, current and wind sections by the region's site conventions, the bookkeeping a new site needs, and a final independent audit of the site file's prose by a fresh agent.
 ---
 
 # Create a dive site file
 
-Produce `regions/<region>/sites/<slug>.md` from the template at the bottom, plus its bookkeeping, then have a fresh agent audit the prose. Most of the work is pinning numbers down against live sources; the writing comes last.
+Produce `regions/<region>/sites/<slug>.md` from the template at the bottom and its `<slug>.json` beside it, plus its bookkeeping, then have a fresh agent audit the prose. Most of the work is pinning numbers down against live sources; the writing comes last.
 
 The region's site conventions file names the tools and sources for this region and how each is used. This skill holds what applies in every region: the order of the work, the rules that turn tool output into the file, and the template.
 
@@ -30,11 +30,19 @@ Read both of these region files in full before anything else.
 - **`<region>-site-conventions.md`.** Use only the tools and sources it names, the way it says to use them.
 - **`<region>.md`.** The hydrography and any subarea that behaves differently.
 
-## 3. Verify the coordinate
+## 3. Verify the coordinate and write the site JSON
 
 - **Depth.** Check the seabed depth at the coordinate with the site conventions' Depth tool. If it is too deep or off the divable slope, walk it toward shore and re-check until its depth matches what the sources describe as dived.
-- **Current model coverage.** Where the site conventions' Current section names a spatial model extract, the coordinate must sit inside the model's coverage. If no point near the dive area does, skip the extraction and work the current from the station alone, and say so in chat.
+- **Site JSON.** Once the coordinate holds, write `<slug>.json` beside where the site file will go, for every site in every region: `lat` and `lon` are the Coordinates row, `tz` is the site's IANA time zone.
 
+  ```json
+  {
+    "lat": <lat>,
+    "lon": <lon>,
+    "tz": "<IANA zone>"
+  }
+  ```
+  
 ## 4. Research
 
 Three passes, each finished before the next starts.
@@ -69,7 +77,7 @@ Produce every current figure by the site conventions' Current section.
 
 - **Type.** As the region sets it, unless a specific site water behaves differently.
 - **Local behaviour.** An eddy, a set along a wall, a turn in the shallows. Figures come from the region's method; behaviour may come from community sources.
-- **Observation outranks the model.** A behaviour the existing file or the research describes from the water (a drift that ignores the tide, a set the extract doesn't show) stays in the prose even where the station or extract disagrees. Report the disagreement in chat; never resolve it by dropping the observation.
+- **Observation outranks the model.** A behaviour the existing file or the research describes from the water (a drift that ignores the tide, a set no tool shows) stays in the prose even where a tool disagrees. Report the disagreement in chat; never resolve it by dropping the observation.
 - **Missing figure.** Written as not established, and reported in chat.
 
 ## 7. Wind
@@ -118,9 +126,9 @@ Write the figures from steps 5 to 7 and the research from step 4 into the templa
   }
   ```
 
-- **Companion files.** Any the site conventions' Current section names, beside the site file, unless step 3 ruled the extraction out.
+- **Site JSON.** The file step 3 wrote, with every attachment the site conventions name.
 
-Keep the row and the map entry current whenever the site's coordinates, name, type, parking or entry change.
+Keep the row, the map entry and the site JSON current whenever the site's coordinates, name, type, parking or entry change.
 
 ## 10. Independent audit
 

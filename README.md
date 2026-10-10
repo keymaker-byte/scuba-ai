@@ -16,7 +16,7 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 ## What's here
 
 - `CLAUDE.md` — the steering file tying it all together: units, conventions (local time, depth datum), and workspace-wide rules.
-- `regions/` — one steering file plus a `sites/` folder per diving region; each site is a guidebook style description paired with a machine read current extract.
+- `regions/` — one steering file plus a `sites/` folder per diving region; each site is a guidebook style description paired with a machine read `<slug>.json`.
 - `tools/` — one self-contained markdown doc per tool (what it's for, its caveats, its CLI), paired with its `.py` script.
 - `.claude/skills/` — Claude Code skills, self-contained workflows for a specific task, each triggered automatically when the request matches.
 - `map.html` — a map of every dive site, colored by shore or boat access, with entry point pins for shore dives. Reads from `map/data.js`, which every site file has an entry in.

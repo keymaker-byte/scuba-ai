@@ -5,7 +5,7 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 | | |
 |---|---|
 | **Location** | Steilacoom, WA. Sunnyside Beach Park, Chambers Creek Road, South Puget Sound |
-| **Coordinates** | 47.178155, -122.591559 (seabed about 7.4 m below MLLW, at the foot of the slope where the shore-parallel guide line runs), about 100 m from the entry on a bearing of 284° |
+| **Coordinates** | 47.178264, -122.592200 (seabed about 11.9 m below MLLW, on the sand bottom past the foot of the slope, at the depth of the junction box and the sunken boats), about 150 m from the entry on a bearing of 284° |
 | **Parking coordinates** | 47.177167, -122.589993, the park's pay lot on the west side of Chambers Creek Road, beside the railroad tracks |
 | **Entry point coordinates** | 47.177940, -122.590275, the beach in front of the Wind Pavilion and shower at the south end of the park |
 | **Type** | Shore |
@@ -42,8 +42,8 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 | **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
 | **Station flood axis** | southwest, 215° |
 | **Station ebb axis** | northeast, 051° |
-| **Site flood set** | northeast, 056°, along the beach |
-| **Site ebb set** | southwest, 236°, along the beach |
+| **Site flood set** | northeast, 057°, along the beach |
+| **Site ebb set** | southwest, 237°, along the beach |
 
 * **The site's own water.** The beach sits out of the main stream between the Narrows and Nisqually Reach, and the water over the slope and the pipeline moves slowly. Along this shore it sets parallel to the beach, northeast and southwest. On most tides it is close to still, and on a large exchange it builds to a mild, noticeable current around the station's maximum.
 * **Ebb.** Inshore, the ebb runs opposite to the channel: while the main stream sets north toward the Narrows, the water along the beach sets south. At depth on an ebb it can also set gently offshore. Daily peaks run 0.11 to 0.28 m/s at the station over 30 days.
@@ -54,13 +54,13 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 
 | | |
 |---|---|
-| **Entry shore facing** | west-northwest, 300° |
-| **Dive area shore facing** | west-northwest, 300° |
+| **Entry shore facing** | west-northwest, 303° |
+| **Dive area shore facing** | west-northwest, 303° |
 
 The beach faces west-northwest across the South Sound toward Fox Island and Ketron Island. Chop stirs up the shallow flat and cuts the visibility at the entry.
 
-* **Bad.** Southwest through north (SW-N), onshore over 5.2 to 17.3 km from west through north, the strong northerlies coming down out of the Narrows. Southwesterlies come up Nisqually Reach over a long fetch and push chop onto the beach.
-* **Fine.** North-northeast clockwise through south-southwest (NNE-SSW), offshore off the bluff behind the park, or cross-shore over 1.6 km or less.
+* **Bad.** Southwest through north (SW-N), onshore over 5.1 to 17.2 km from west through north, the strong northerlies coming down out of the Narrows. Southwesterlies come up Nisqually Reach over a long fetch and push chop onto the beach.
+* **Fine.** North-northeast clockwise through south-southwest (NNE-SSW), offshore off the bluff behind the park, or cross-shore over 1.9 km or less.
 * **Wind against current.** West-southwest through west (WSW-W) blows against the ebb, and north-northeast (NNE) against the flood. The inshore current is weak and raises no chop of its own; the concern is offshore in the main stream.
 
 ## Depth and tide
@@ -76,7 +76,7 @@ South Sound tides are large, and the tide swings the depth here by up to about 6
 | Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |
 |---|---|---|---|
 | Top of the slope | 2 m | 0.6 m | 6.8 m |
-| Foot of the slope, shore-parallel line, dive site coordinate | 7.4 m | 6.0 m | 12.2 m |
+| Foot of the slope, shore-parallel line | 7.4 m | 6.0 m | 12.2 m |
 | Junction box, Santa boat | 10.5 m | 9.1 m | 15.3 m |
 | Collapsed northern boat, bow | 11.5 m | 10.1 m | 16.3 m |
 | Pipeline, deep end of the usual dive | 28 m | 26.6 m | 32.8 m |
