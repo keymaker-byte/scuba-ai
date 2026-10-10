@@ -21,19 +21,18 @@ A beautiful reef off a long stretch of coral beach just north of 1000 Steps, nam
 ## Navigation and landmarks
 
 * **Yellow stone.** Marks the site from the coast road.
-* **Coral beach.** The long stretch fronting the site, distinct from a sand beach.
+* **Coral beach.** The long stretch of coral rubble beach fronting the site.
+* **Depth profile.** The reef runs from about 6 m to 27 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. A logged dive here found slack to negligible current at excellent visibility.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef is enjoyable through its whole range from the shallows to the working depth; a logged dive reached 27.4 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -50,14 +49,17 @@ The coast here runs west to east, and the swim out runs 185 m west-southwest fro
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast; a logged dive rated it 5 out of 5 (excellent).
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October; a logged November dive measured 29 C. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Friendly French angelfish, schooling fish, tarpon, parrotfish, snapper and turtles throughout the reef.
 * **Open water.** Whale sharks have been seen here on occasion.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

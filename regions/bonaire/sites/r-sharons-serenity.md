@@ -1,6 +1,6 @@
 # R. Sharon's Serenity
 
-On Klein Bonaire's southwest corner, with the mooring close enough to shore to make this a good snorkeling site as well as a moderate-current dive suited to an intermediate diver. Elkhorn and staghorn cover here has thinned since the 2023 SCTLD outbreak and the bleaching events that followed, but many varieties of soft coral remain plentiful, large groupers are common, and basket stars are enough of a specialty here to make it a popular night dive; they unfold their complex arms after dark to feed on plankton, though they can be spotted by day too. Hawksbill turtles are seen on a large majority of dives, especially in the afternoon at the site's cleaning stations.
+On Klein Bonaire's southwest corner, with the mooring close enough to shore to make this a good snorkeling site as well as a moderate-current dive suited to an intermediate diver. Elkhorn and staghorn cover here has thinned in the bleaching events since 2023, but many varieties of soft coral remain plentiful, large groupers are common, and basket stars are enough of a specialty here to make it a popular night dive; they unfold their complex arms after dark to feed on plankton, though they can be spotted by day too. Hawksbill turtles are seen on a large majority of dives, especially in the afternoon at the site's cleaning stations.
 
 | | |
 |---|---|
@@ -8,7 +8,7 @@ On Klein Bonaire's southwest corner, with the mooring close enough to shore to m
 | **Coordinates** | 12.155, -68.329 (about 5 m) |
 | **Type** | Boat |
 | **Depth range** | 6 to 30 m |
-| **Skill level** | Intermediate, given the moderate current |
+| **Skill level** | Intermediate |
 
 ## Getting there
 
@@ -20,18 +20,18 @@ On Klein Bonaire's southwest corner, with the mooring close enough to shore to m
 ## Navigation and landmarks
 
 * **Cleaning stations.** Where hawksbill turtles are especially reliable in the afternoon.
+* **Depth profile.** The reef runs from close to the mooring through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Moderate current is typical here, suited to an intermediate diver.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs from close to the mooring through the recreational range to about 30 m.
-
-## Hazards
-
-None beyond the moderate current itself, manageable for an intermediate diver.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Moderate current is typical here, suited to an intermediate diver.
 
 ## Wind
 
@@ -45,15 +45,18 @@ None beyond the moderate current itself, manageable for an intermediate diver.
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Elkhorn and staghorn, thinned since 2023, and many varieties of soft coral, with large groupers common.
 * **Cleaning stations.** Hawksbill turtles seen on most dives, especially in the afternoon.
 * **Night.** Basket stars unfurling to feed, a popular night dive subject.
+
+## Hazards
+
+* **Current.** Moderate current, manageable for an intermediate diver.

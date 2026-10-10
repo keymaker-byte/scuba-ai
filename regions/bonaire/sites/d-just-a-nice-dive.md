@@ -19,18 +19,18 @@ A relaxed site on Klein Bonaire's east side with minimal current, less dramatic 
 ## Navigation and landmarks
 
 * **The reef top.** Where the schooling fish and yellow pencil coral concentrate, the main working depth of the dive.
+* **Depth profile.** The reef runs through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Minimal current is typical, part of what makes this a relaxed dive.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs through the recreational range to about 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Minimal current is typical.
 
 ## Wind
 
@@ -45,14 +45,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 40 m.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 40 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef top.** Schooling fish and abundant yellow pencil coral, leaf and sheet corals.
 * **Elsewhere on the reef.** Solitary species such as ocean triggerfish, and many juvenile fish, good subjects for macro photography.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

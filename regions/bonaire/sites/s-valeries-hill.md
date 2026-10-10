@@ -1,4 +1,4 @@
-# S. Vallerie's Hill
+# S. Valerie's Hill
 
 A boat dive on Klein Bonaire for any level, with a mild current typical for the site, named after Captain Don's wife. Numerous sponges and plentiful black coral cover the reef, with scrawled filefish and parrotfish regularly seen.
 
@@ -19,19 +19,19 @@ A boat dive on Klein Bonaire for any level, with a mild current typical for the 
 
 ## Navigation and landmarks
 
-Not otherwise distinguished beyond its sponge and black coral cover; follow the mooring line down.
+* **Mooring line.** Follow the mooring line down to the sponge and black coral cover.
+* **Depth profile.** The reef runs through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. A mild current is usually present.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs through the recreational range to about 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** A mild current is usually present.
 
 ## Wind
 
@@ -45,13 +45,16 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Numerous sponges and plentiful black coral, with scrawled filefish and parrotfish regularly seen.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

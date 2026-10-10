@@ -1,6 +1,6 @@
 # X. Leonora's Reef
 
-A beautiful site on Klein Bonaire's north coast, with a flat bottom at the entry that then runs steeply down from about 7 to 40 m. The reef holds coral formations of huge size with hollow centres, excellent shelter for many fish and other creatures; the largest hollow coral heads are the oldest, since coral ages from the inside outward, with some estimated at over 75 years. The largest formations sit around 16 m, holding huge plate coral and star coral. A shallow plateau abounding in fish of all shapes and sizes makes this a great spot for novice divers and snorkelers too, and the tunnels through the coral are excellent subjects for underwater photography.
+A beautiful site on Klein Bonaire's north coast, with a flat bottom at the entry that then runs steeply down from about 7 to 40 m. The reef holds coral formations of huge size with hollow centres, excellent shelter for many fish and other creatures; the largest hollow coral heads are the oldest, some over 75 years old. The largest formations sit around 16 m, holding huge plate coral and star coral. A shallow plateau abounding in fish of all shapes and sizes makes this a great spot for novice divers and snorkelers too, and the tunnels through the coral are excellent subjects for underwater photography.
 
 | | |
 |---|---|
@@ -21,18 +21,17 @@ A beautiful site on Klein Bonaire's north coast, with a flat bottom at the entry
 
 * **Hollow coral heads.** The largest and oldest formations, around 16 m, holding huge plate and star coral.
 * **Coral tunnels.** Run through the largest heads, good subjects for photography and homes for reef creatures.
+* **Depth profile.** The bottom is flat at the entry, then runs steeply from about 7 to 30 m, with some routes continuing to 40 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The bottom is flat at the entry, then runs steeply from about 7 to 30 m, with some routes continuing to 40 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -46,14 +45,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallow plateau.** Abundant fish of all shapes and sizes.
 * **Reef.** Parrotfish, grouper, butterflyfish, yellowtail snapper, angelfish, honeycomb trunkfish, fireworms and damselfish.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

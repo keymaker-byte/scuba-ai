@@ -20,18 +20,18 @@ Klein Bonaire has no roads or vehicle access, so every dive site on the islet is
 ## Navigation and landmarks
 
 * **The beach.** Klein Bonaire's best known stretch of sand, and the reference point for the whole site.
+* **Depth profile.** The shallow sandy shore area gives way to reef through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Current here typically runs minimal, part of why the site suits a beginner.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The shallow sandy shore area gives way to reef through the recreational range to about 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current here typically runs minimal.
 
 ## Wind
 
@@ -46,14 +46,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly cited up to 40 m, among the best around the island.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly up to 40 m, among the best around the island.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October; a logged dive at the adjacent site measured 29 C. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Sandy shallows.** Yellow headed jawfish poking from holes in the coral rubble, and blackish sailfin blennies.
 * **Reef.** Turtles are regularly seen.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

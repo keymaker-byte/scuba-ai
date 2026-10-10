@@ -1,6 +1,6 @@
 # 15. Bon Bini na Kas
 
-A boat dive whose name means welcome home in Papiamentu, lying about 0.6 km north of 1000 Steps. A large overhanging cliff along the shore creates a cave complex, and the site is regarded as an easy, gently sloping wall reef good for a beginner despite being boat-only.
+A boat dive whose name means welcome home in Papiamentu, lying about 0.6 km north of 1000 Steps. A large overhanging cliff along the shore creates a cave complex, and the site is an easy, gently sloping wall reef suited to beginners.
 
 | | |
 |---|---|
@@ -19,18 +19,18 @@ A boat dive whose name means welcome home in Papiamentu, lying about 0.6 km nort
 ## Navigation and landmarks
 
 * **Overhanging cliff and cave complex.** Runs along the shore side of the site, the main structural feature.
+* **Depth profile.** The reef ledge sits around 3 m, with the wall sloping gently through the range to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Bon Bini na Kas typically runs a slight current over its gently sloping bottom, consistent with its reputation as an easy site.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef ledge sits around 3 m, with the wall sloping gently through the range to 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Bon Bini na Kas typically runs a slight current over its gently sloping bottom.
 
 ## Wind
 
@@ -44,15 +44,18 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallow top of the reef.** Sea fans swaying gently, with schools of blue tang and Creole wrasse common.
 * **Shelf.** Lavender stovepipe sponges in abundance and staghorn coral colonies, thinned like the rest of Bonaire's staghorn by the 2023 and 2024 bleaching events.
 * **Deeper sections.** Hard corals growing abundantly, and the cave complex under the overhanging cliff.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

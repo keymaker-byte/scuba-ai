@@ -1,10 +1,10 @@
 # 44. Angel City
 
-One of the most interesting of the double reef dives, about 12 km south of Kralendijk on EEG Boulevard opposite the Trans World Radio station, and the site next to which the Hilma Hooker was anchored before she sank in 1984. A sand channel about 15 m wide separates the two reef systems, working as a corridor for rays, triggerfish and small sharks, with garden eels dotting the sandy bottom. French and queen angelfish give the site its name.
+One of the most interesting of the double reef dives, about 5 km south of Kralendijk on EEG Boulevard opposite the Trans World Radio station, and the site next to which the Hilma Hooker was anchored before she sank in 1984. A sand channel about 15 m wide separates the two reef systems, working as a corridor for rays, triggerfish and small sharks, with garden eels dotting the sandy bottom. French and queen angelfish give the site its name.
 
 | | |
 |---|---|
-| **Location** | West coast, Bonaire, about 12 km south of Kralendijk, opposite the Trans World Radio station |
+| **Location** | West coast, Bonaire, about 5 km south of Kralendijk, opposite the Trans World Radio station |
 | **Coordinates** | 12.10275, -68.288267 (dive area, about 5 m) |
 | **Parking coordinates** | 12.10338, -68.28722, opposite the Trans World Radio station |
 | **Entry point coordinates** | 12.103335, -68.287277 |
@@ -13,7 +13,7 @@ One of the most interesting of the double reef dives, about 12 km south of Krale
 
 ## Getting there
 
-* **Entry.** A shore entry typical of the double reef stretch of coast.
+* **Entry.** A shore entry from the roadside.
 * **Parking.** Roadside at the site.
 * **Access.** Open.
 * **Facilities.** None at the site.
@@ -21,19 +21,19 @@ One of the most interesting of the double reef dives, about 12 km south of Krale
 ## Navigation and landmarks
 
 * **Sand channel.** About 15 m wide, separating the two reef systems; the double reef layout here can be disorienting, so track which reef is which on the way out.
-* **Hilma Hooker.** Sits immediately adjacent, the wreck having been anchored here before it sank in 1984.
+* **Hilma Hooker.** Sits immediately adjacent, the wreck having been anchored here before she sank in 1984.
+* **Depth profile.** The reef runs from about 5 m through the recreational range to 30 m, with the sand channel between the two reef systems as the site's central feature.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Current here usually runs mild.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs from about 5 m through the recreational range to 30 m, with the sand channel between the two reef systems as the site's central feature.
-
-## Hazards
-
-* **Navigation.** The double reef formation can be confusing for a shore diver; keep track of which reef leads back to the entry point.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current here usually runs mild.
 
 ## Wind
 
@@ -48,14 +48,17 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Typically 15 to 30 m, in line with the rest of the leeward coast.
+* **Overall.** Typically 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** French and queen angelfish, giving the site its name, along with schools of tang, parrotfish, butterflyfish and trumpetfish.
 * **Sand channel.** Garden eels retracting into their holes at the first sign of movement, plus rays, triggerfish and small sharks using the channel as a corridor.
+
+## Hazards
+
+* **Navigation.** The double reef formation can be confusing for a shore diver; keep track of which reef leads back to the entry point.

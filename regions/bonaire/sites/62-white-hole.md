@@ -20,19 +20,17 @@ A crack in the shallow reef plateau off Lac Bay on Bonaire's east coast, filled 
 ## Navigation and landmarks
 
 * **The sand-filled crack.** The site's namesake, a narrow patch about a football field long, up to about 12 m deep, set into the surrounding shallow reef plateau.
+* **Depth profile.** The surrounding reef plateau sits at about 3 to 4 m, with the sand-filled crack itself reaching about 12 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Only diveable on calm days given the shallow surrounding plateau.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The surrounding reef plateau sits at about 3 to 4 m, with the sand-filled crack itself reaching about 12 m.
-
-## Hazards
-
-* **Weather dependent.** Only accessible on calm days given how shallow the surrounding water is.
-* **East coast exposure.** Unlike the sheltered west coast, this site faces open water directly.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -46,14 +44,18 @@ The site sits on the windward coast, open to more than 30 km of ocean from east-
 
 ## Visibility
 
-Typically clear on the calm days the site requires, though not separately documented against the west coast's own figures.
+* **Overall.** Typically clear on the calm days the site requires.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at these shallow depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at these shallow depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **The hole.** Huge schools of tarpon and numerous turtles.
 * **Surrounding plateau.** Rays, and the occasional shark.
+
+## Hazards
+
+* **Weather dependent.** Only accessible on calm days given how shallow the surrounding water is.
+* **East coast exposure.** The site faces the open ocean on the windward coast.

@@ -1,6 +1,6 @@
 # 35. 18th Palm
 
-Plaza Resort's house reef, in front of the Lt. Governor's house and its yard of at least eighteen palm trees, the source of the site's name. Access is from the resort's northwest entrance over an easy sandy beach, unusual on an island where many shore entries cross sharp limestone. This is the first site heading south where the reef splits into a double reef, one branch running along the bottom around 27 m, the other across a sandy channel close to shore.
+Plaza Resort's house reef, in front of the Lt. Governor's house and its yard of at least eighteen palm trees, the source of the site's name. Access is from the resort's northwest entrance over an easy sandy beach, unusual on an island where many shore entries cross sharp limestone. Here the reef splits into a double reef, one branch running along the bottom around 27 m, the other across a sandy channel close to shore.
 
 | | |
 |---|---|
@@ -21,19 +21,17 @@ Plaza Resort's house reef, in front of the Lt. Governor's house and its yard of 
 
 ## Navigation and landmarks
 
-* **The double reef.** Splits into two branches here, one running along the bottom around 27 m, the other across a sandy channel close to shore, the first site heading south where this pattern appears.
+* **The double reef.** Splits into two branches here, one running along the bottom around 27 m, the other across a sandy channel close to shore.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The nearshore branch of the double reef runs through the sandy channel close to shore, the outer branch along the bottom around 27 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -50,14 +48,17 @@ The swim out runs 179 m southwest from the entry to the dive area.
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Sandy bottom.** Southern stingrays and spotted eagle rays are regularly seen, along with crabs kicking up sand.
 * **Reef.** Lobster, curious tarpon and grouper that often approach divers.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

@@ -1,35 +1,34 @@
 # P. Munk's Haven
 
-A Klein Bonaire boat dive with no published STINAPA description, closed for an extended period. Treat as not currently in rotation until confirmed otherwise with a local dive operator or STINAPA.
+A Klein Bonaire boat dive, closed for an extended period. Confirm its status with STINAPA or a local dive operator before planning a dive here.
 
 | | |
 |---|---|
 | **Location** | Klein Bonaire |
 | **Coordinates** | 12.151583, -68.329883 (about 15 m) |
 | **Type** | Boat |
+| **Depth range** | Not established |
 
 ## Getting there
 
 * **Entry.** By boat, when open.
 * **Parking.** Not applicable.
-* **Access.** Reported closed; confirm current status with STINAPA or a local dive operator before planning a dive here.
+* **Access.** Closed; confirm current status with STINAPA or a local dive operator before planning a dive here.
 * **Facilities.** None.
 
 ## Navigation and landmarks
 
-No established route while the site is closed.
+* **Route.** No established route while the site is closed.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. Not separately documented.
-
-## Hazards
-
-* **Closure.** Closed for an extended period; do not plan a dive here without confirming current status.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -43,13 +42,16 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more, when the site is open.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more, when the site is open.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-Not separately documented; the general character of Klein Bonaire's west side reefs applies.
+* **Overall.** Not established.
+
+## Hazards
+
+* **Closure.** Closed for an extended period; do not plan a dive here without confirming current status.

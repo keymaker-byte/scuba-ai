@@ -1,6 +1,6 @@
 # V. Carl's Hill
 
-Named after underwater photographer Carl Roessler, on the northwest tip of Klein Bonaire. The main feature is a sheer wall beginning about 18 m offshore and dropping to a sandy bottom at 21 m, one of the few dives on the island where it genuinely feels like flying along a vertical face. The wall face is covered in sponges and gorgonians, along with the seldom seen featherbush hydroid, which sits on the upper wall filter feeding on passing plankton. Hawksbill turtles cruise the wall and seahorses anchor to gorgonians in the shallower sections.
+Named after underwater photographer Carl Roessler, on the northwest tip of Klein Bonaire. The main feature is a sheer wall beginning about 18 m offshore and dropping to a sandy bottom at 21 m. The wall face is covered in sponges and gorgonians, along with the seldom seen featherbush hydroid, which sits on the upper wall filter feeding on passing plankton. Hawksbill turtles cruise the wall and seahorses anchor to gorgonians in the shallower sections.
 
 | | |
 |---|---|
@@ -8,7 +8,7 @@ Named after underwater photographer Carl Roessler, on the northwest tip of Klein
 | **Coordinates** | 12.16421, -68.323728 (about 31 m) |
 | **Type** | Boat |
 | **Depth range** | 6 to 30 m |
-| **Skill level** | Advanced, given possible strong currents |
+| **Skill level** | Advanced |
 
 ## Getting there
 
@@ -24,15 +24,14 @@ Named after underwater photographer Carl Roessler, on the northwest tip of Klein
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Can run strong at times, part of why the site suits advanced divers.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The wall begins about 18 m offshore and drops to a sandy bottom at 21 m, with the site's range extending through the recreational limit.
-
-## Hazards
-
-* **Possible strong current.** Advanced divers only, particularly along the exposed wall face.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Can run strong at times.
 
 ## Wind
 
@@ -46,14 +45,17 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Wall.** Sponges, gorgonians and the seldom seen featherbush hydroid; barracuda, bar jacks and large schools of blue tang.
 * **Shallower sections.** Hawksbill turtles cruising the wall, and seahorses anchored to gorgonians.
+
+## Hazards
+
+* **Possible strong current.** Advanced divers only, particularly along the exposed wall face.

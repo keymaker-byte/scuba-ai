@@ -1,6 +1,6 @@
 # 48. Jeannie's Glory
 
-A site about 400 m north of Salt Pier with a shallow, sandy plateau flanked by reef on either side. The shore entry crosses large boulders and a rutted reef ledge, worth finding a clear path through rather than forcing; in any real wave action, a different site is the better call. Soft coral fills the shallows and the sandy bottom gives rays somewhere to hide.
+A site about 400 m north of Salt Pier with a shallow, sandy plateau flanked by reef on either side. The shore entry crosses large boulders and a rutted reef ledge, worth picking a clear path through with care; in any real wave action, a different site is the better call. Soft coral fills the shallows and the sandy bottom gives rays somewhere to hide.
 
 | | |
 |---|---|
@@ -22,18 +22,18 @@ A site about 400 m north of Salt Pier with a shallow, sandy plateau flanked by r
 ## Navigation and landmarks
 
 * **The sandy plateau.** Flanked by reef on either side, the core structure of the dive.
+* **Depth profile.** The sandy plateau and flanking reefs run through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Typically mild to moderate.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The sandy plateau and flanking reefs run through the recreational range to about 30 m.
-
-## Hazards
-
-* **Boulder and ledge entry.** Find a clear path through rather than forcing it; avoid this entry altogether in significant wave action.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Typically mild to moderate.
 
 ## Wind
 
@@ -48,14 +48,17 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Typically 15 to 30 m, in line with the rest of the leeward coast.
+* **Overall.** Typically 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallows.** Abundant soft coral, and reef fish along both flanking reefs.
 * **Sandy bottom.** Rays hiding in the sand, with barracuda and turtles also seen.
+
+## Hazards
+
+* **Boulder and ledge entry.** Pick a clear path through with care; avoid this entry altogether in significant wave action.

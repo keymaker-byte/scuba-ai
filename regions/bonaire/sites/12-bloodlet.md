@@ -1,6 +1,6 @@
 # 12. Bloodlet
 
-A boat dive named for the shore entry that gave it its name, technically possible but tricky and sometimes painful enough to draw blood, and not recommended. The reef here is dense, with a reputation for challenging current and rich pelagic life that makes it a site for the intermediate to experienced diver looking for a bit of adrenaline.
+A boat dive named for its shore entry, possible but tricky over rock and sometimes painful enough to draw blood. The dense reef carries strong current and rich pelagic life, suited to intermediate to experienced divers.
 
 | | |
 |---|---|
@@ -12,27 +12,26 @@ A boat dive named for the shore entry that gave it its name, technically possibl
 
 ## Getting there
 
-* **Entry.** By boat; a shore entry is possible but difficult and often painful over the rock, and not recommended.
+* **Entry.** By boat; a shore entry is possible but difficult and sometimes painful over the rock, and not recommended.
 * **Parking.** Not applicable for the boat entry.
 * **Access.** Open.
 * **Facilities.** None at the site.
 
 ## Navigation and landmarks
 
-* **Dense reef structure.** The defining feature of the site, home to resident schools rather than a single standout landmark.
+* **Dense reef structure.** The defining feature of the site, home to resident schools.
+* **Depth profile.** The reef ledge sits around 3 m before dropping through the working range to 25 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Bloodlet has a reputation for current that runs more challenging than the sites immediately around it, part of why it suits an intermediate to experienced diver.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef ledge sits around 3 m before dropping through the working range to 25 m.
-
-## Hazards
-
-* **Difficult shore entry.** Possible but not recommended, tricky and sometimes painful over rock; use the boat entry instead.
-* **Challenging current.** Stronger than neighbouring sites; not a beginner's dive.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current here can run strong.
 
 ## Wind
 
@@ -46,14 +45,18 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Dense structure home to schools of algae-eating blue tangs, with yellow and green tube sponges throughout.
 * **Open water.** Rich pelagic life and sea turtles are often sighted.
+
+## Hazards
+
+* **Difficult shore entry.** Possible but not recommended, tricky and sometimes painful over rock; use the boat entry instead.
+* **Challenging current.** Can run strong; suits intermediate to experienced divers.

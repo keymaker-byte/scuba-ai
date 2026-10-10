@@ -1,6 +1,6 @@
 # I. Rock Pile
 
-Named for a cluster of rocks on the shoreline beach opposite the mooring, one of the few sites in the Bonaire system with a large colony of staghorn coral, providing daytime cover for schooling grunts and snappers; like the rest of Bonaire's leeward coast, this colony took real losses in the 2023 SCTLD outbreak and the bleaching events that followed, which is part of why reef restoration work now cultivates staghorn fragments on PVC trees here. A large green moray eel has been known to hide among the boulder corals, and the site works equally well by day or night, with stellar visibility.
+Named for a cluster of rocks on the shoreline beach opposite the mooring, one of the few sites in the Bonaire system with a large colony of staghorn coral, providing daytime cover for schooling grunts and snappers. The colony took real losses in the bleaching events since 2023, and reef restoration work now cultivates staghorn fragments on PVC trees here. Green moray eels hide among the boulder corals, and the site works equally well by day or night, with stellar visibility.
 
 | | |
 |---|---|
@@ -20,18 +20,17 @@ Named for a cluster of rocks on the shoreline beach opposite the mooring, one of
 
 * **The rock pile.** On the shoreline beach opposite the mooring, the site's namesake.
 * **Staghorn coral colony and restoration trees.** PVC frames cultivating staghorn fragments as part of ongoing reef restoration.
+* **Depth profile.** The reef begins in the shallows and tilts down through the recreational range for more experienced divers.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef begins in the shallows and tilts down through the recreational range for more experienced divers.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -44,15 +43,18 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Stellar, day or night, among Klein Bonaire's better sites for clarity.
+* **Overall.** Stellar, day or night, among Klein Bonaire's better sites for clarity.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Staghorn colony.** Thinned by disease and bleaching since 2023 but still daytime cover for schooling grunts and snappers, with restoration fragments on PVC trees helping it recover.
-* **Boulder corals.** A large green moray eel has been known to hide here.
+* **Boulder corals.** Green moray eels hide here.
 * **Reef.** Banded coral shrimp, sea crabs, sea plumes, sponges and sea turtles.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

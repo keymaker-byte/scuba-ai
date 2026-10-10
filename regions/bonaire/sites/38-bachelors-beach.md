@@ -1,11 +1,11 @@
 # 38. Bachelor's Beach
 
-A small white sand beach in Belnem, about 5 km southwest of Kralendijk, at the base of a 3 m limestone cliff. A seven step limestone stairway leads down to the water, the last step crossing a rock into the sea, and the beach sits seconds from the parking area. The easy entry, sloping bottom and shallow reef make this a favourite for night diving as well as a good place for a novice or snorkeler to build experience.
+A small white sand beach in Belnem, about 3 km south of Kralendijk, at the base of a 3 m limestone cliff. A seven step limestone stairway leads down to the water, the last step crossing a rock into the sea, and the beach sits seconds from the parking area. The easy entry, sloping bottom and shallow reef make this a favourite for night diving as well as a good place for a novice or snorkeler to build experience.
 
 | | |
 |---|---|
-| **Location** | Belnem, Bonaire, about 5 km southwest of Kralendijk |
-| **Coordinates** | 12.125899, -68.288135 (dive area, about 4 m), about 800 m south of the airport |
+| **Location** | Belnem, Bonaire, about 3 km south of Kralendijk and 800 m south of the airport |
+| **Coordinates** | 12.125899, -68.288135 (dive area, about 4 m) |
 | **Parking coordinates** | 12.125443, -68.287218 |
 | **Entry point coordinates** | 12.125500, -68.287336, the bottom of the seven step limestone stairway |
 | **Type** | Shore |
@@ -21,18 +21,17 @@ A small white sand beach in Belnem, about 5 km southwest of Kralendijk, at the b
 ## Navigation and landmarks
 
 * **Limestone cliff.** Stands about 3 m behind the beach, with the stairway cut into it.
+* **Depth profile.** The reef slopes gently from about 3 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. A logged dive here found slack to negligible current at excellent visibility.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef slopes gently from about 3 m; a logged dive reached 25.7 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -48,14 +47,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast; a logged dive rated it 5 out of 5 (excellent).
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October; a logged November dive measured 29 C. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Parrotfish, surgeonfish, angelfish and trumpetfish are typical residents.
 * **Shallows.** A good chance of a sea turtle.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

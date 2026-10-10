@@ -1,6 +1,6 @@
 # 54. White Slave
 
-Named for the white pinnacle and the white painted slave huts standing on shore opposite the mooring, a memorial to Bonaire's period of slavery, along with a white obelisk once used by trade ships as a visual reference point. A sandbar in front of the site holds large eagle rays and stingrays; a longer swim reaches the reef itself, where the sand gives way to soft coral running from about 8 to 20 m. Turtles are seen on nearly every dive.
+Named for the white pinnacle and the white painted slave huts standing on shore opposite the mooring, a memorial to Bonaire's period of slavery, along with a white obelisk once used by trade ships as a visual reference point. A sandbar in front of the site holds large eagle rays and stingrays; a longer swim reaches the reef itself, where the sand gives way to soft coral running from about 8 to 20 m. Turtles are common.
 
 | | |
 |---|---|
@@ -23,18 +23,17 @@ Named for the white pinnacle and the white painted slave huts standing on shore 
 
 * **The slave huts and white obelisk.** On shore opposite the mooring, the site's namesake and a historical memorial worth noting before the dive.
 * **The sandbar.** In front of the site, before the longer swim out to the reef.
+* **Depth profile.** The sandbar sits in the shallows, with soft coral on the reef running from about 8 to 20 m and on through the recreational range to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The sandbar sits in the shallows, with soft coral on the reef running from about 8 to 20 m and on through the recreational range to 30 m.
-
-## Hazards
-
-* **Long swim.** Reaching the reef from the sandbar takes a real swim; plan gas accordingly.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -51,14 +50,17 @@ The swim out runs 208 m south-southeast from the entry, along the shore, to the 
 
 ## Visibility
 
-Typically 15 to 30 m, in line with the rest of the leeward coast.
+* **Overall.** Typically 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Sandbar.** Large eagle rays and stingrays.
-* **Reef.** Turtles on nearly every dive, along with surgeonfish and a wide range of sponges and coral.
+* **Reef.** Turtles are common, along with surgeonfish and a wide range of sponges and coral.
+
+## Hazards
+
+* **Long swim.** Reaching the reef from the sandbar takes a real swim; plan gas accordingly.

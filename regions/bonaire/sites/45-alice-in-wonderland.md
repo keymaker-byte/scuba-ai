@@ -1,6 +1,6 @@
 # 45. Alice in Wonderland
 
-A classic double reef dive on the south coast, marked by yellow stones at the parking area just before the worn Cargill sign. The first reef starts around 7 m and declines gradually to about 22 m, where a sandy patch at 24 to 30 m divides it from the second reef, creating a valley worth exploring in its own right. It reads as an easy dive for a beginner on the first reef, while the second reef and the depth of the sandy divide still give an experienced diver something to work with.
+A classic double reef dive on the south coast, marked by yellow stones at the parking area just before the worn Cargill sign. The first reef starts around 7 m and declines gradually to about 22 m, where a sandy patch at 24 to 30 m divides it from the second reef, creating a valley worth exploring in its own right. The first reef is an easy dive for a beginner, while the second reef and the depth of the sandy divide give an experienced diver something to work with.
 
 | | |
 |---|---|
@@ -22,18 +22,17 @@ A classic double reef dive on the south coast, marked by yellow stones at the pa
 
 * **The Cargill sign.** A worn landmark near the parking area.
 * **The sandy divide.** Sits at 24 to 30 m between the first and second reef; watch the depth gauge crossing it.
+* **Depth profile.** The first reef runs from about 7 m to 22 m, with the sandy divide to the second reef at 24 to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The first reef runs from about 7 m to 22 m, with the sandy divide to the second reef at 24 to 30 m.
-
-## Hazards
-
-* **Depth gauge awareness.** Crossing from one reef to the other over the sandy divide can pull a diver deeper than intended if depth isn't watched closely.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -48,14 +47,17 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Typically 15 to 30 m, in line with the rest of the leeward coast.
+* **Overall.** Typically 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Sea turtles, barracuda and rich coral growth throughout.
 * **Sand channel.** A high chance of turtles and rays.
+
+## Hazards
+
+* **Depth gauge awareness.** Crossing from one reef to the other over the sandy divide can pull a diver deeper than intended; watch the depth gauge throughout the crossing.

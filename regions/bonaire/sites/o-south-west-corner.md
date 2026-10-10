@@ -18,19 +18,19 @@ Sitting on Klein Bonaire's exposed southwest tip immediately west of Forest, ope
 
 ## Navigation and landmarks
 
-* **Open water exposure.** The southwest tip sits open to deeper water, unlike the more sheltered sites elsewhere on the islet.
+* **Open water exposure.** The southwest tip sits open to deeper water.
+* **Depth profile.** The reef runs from about 5 m through the recreational range to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. The exposed position can bring more current and larger fish than Klein Bonaire's more sheltered sites.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs from about 5 m through the recreational range to 30 m.
-
-## Hazards
-
-None specifically beyond the general reef and current awareness that applies along this coast, though the site's open water exposure warrants more attention to conditions than a sheltered Klein Bonaire site.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** The exposed position can bring more current and larger fish than Klein Bonaire's more sheltered sites.
 
 ## Wind
 
@@ -46,13 +46,16 @@ The site sits at the southwest tip of Klein Bonaire, open water on every side bu
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Black durgon and yellowtail snapper are common, with green turtles, barracuda and tarpon typical of this exposed corner.
+
+## Hazards
+
+* **Exposure.** The open water position brings more current and swell than the island's sheltered side; check conditions before committing.

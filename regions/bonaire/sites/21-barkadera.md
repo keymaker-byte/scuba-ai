@@ -1,6 +1,6 @@
 # 21. Barkadera
 
-A boat dive directly opposite the STINAPA and Bonaire National Marine Park headquarters, one of STINAPA's long-term reef monitoring sites, with shallows that once carried heavy elkhorn coral cover and resident schools of algae-eating blue tangs; the elkhorn here took real losses in the 2023 SCTLD outbreak and the bleaching events that followed, part of a leeward-coast pattern of about 19% of colonies dead outright and 55% more with partial mortality.
+A boat dive directly opposite the STINAPA and Bonaire National Marine Park headquarters, one of STINAPA's long-term reef monitoring sites, with shallows that once carried heavy elkhorn coral cover and resident schools of algae-eating blue tangs; the elkhorn here took real losses in the bleaching events of 2023 and 2024, part of a leeward-coast pattern of about 19% of colonies dead outright and 55% more with partial mortality.
 
 | | |
 |---|---|
@@ -11,26 +11,25 @@ A boat dive directly opposite the STINAPA and Bonaire National Marine Park headq
 
 ## Getting there
 
-* **Entry.** By boat only, no shore access.
+* **Entry.** By boat only.
 * **Parking.** Not applicable for the boat entry; STINAPA's own headquarters sits directly across the road.
 * **Access.** Open.
-* **Facilities.** None at the site itself; STINAPA's offices are across the road at Barcadera 10, open Monday to Thursday 08:00 to 16:00 and Friday 08:00 to 12:00, reachable at +599 717 8444 (+599 777 8444 after hours).
+* **Facilities.** None at the site.
 
 ## Navigation and landmarks
 
 * **STINAPA headquarters.** The dive sits directly opposite it, the clearest reference point for the site.
+* **Depth profile.** The elkhorn shallows lead through the recreational range to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The elkhorn-covered shallows lead through the recreational range to 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -45,13 +44,16 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Shallows.** Elkhorn coral, thinned by disease and bleaching since 2023, hosting schools of algae-eating blue tangs.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

@@ -1,11 +1,11 @@
 # 5. Wayaka
 
-A little dived site inside Washington Slagbaai National Park, named for the local Guaiacum (lignum vitae) tree that once grew along this stretch of coast. STINAPA registers it as a boat site, though the beach is also reached over land by 4x4. Because so little diving has historically been done here, it has a reputation for turning up larger animals in the blue. Diving here is currently suspended under STINAPA's coral disease closure covering the whole park.
+A little dived site inside Washington Slagbaai National Park, named for the local Guaiacum (lignum vitae) tree that once grew along this stretch of coast. STINAPA registers it as a boat site, though the beach is also reached over land by 4x4. Little dived, it turns up larger animals in the blue. Diving here is currently suspended under STINAPA's coral disease closure covering this stretch of the park's coast.
 
 | | |
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire |
-| **Coordinates** | 12.26925, -68.414983 (reef, spanning about 5 to 30 m within the site's grid cell before the seabed falls away toward 75 m) |
+| **Coordinates** | 12.26925, -68.414983 (reef, about 5 to 30 m, the seabed falling away toward 75 m beyond) |
 | **Parking coordinates** | 12.269566, -68.413711 |
 | **Entry point coordinates** | 12.269681, -68.413877 |
 | **Type** | Shore |
@@ -21,21 +21,18 @@ A little dived site inside Washington Slagbaai National Park, named for the loca
 
 ## Navigation and landmarks
 
-* **Little charted ground.** Very little diving has historically been done here, so there is no established route the way there is at the park's more popular sites; treat any dive here as exploratory.
+* **Little charted ground.** The site is little dived, with no set route; each dive here is exploratory.
+* **Depth profile.** The reef here runs from about 5 m down through the 10 to 30 m range where most of the diving happens, with the seabed beyond falling toward 75 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. The site gets more challenging when waves are up, part of why STINAPA registers it as a boat site rather than a straightforward shore entry.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef here runs from about 5 m down through the 10 to 30 m range where most of the diving happens, with the seabed beyond falling toward 75 m.
-
-## Hazards
-
-* **Diving suspended.** Closed to diving under STINAPA's SCTLD order since May 2023; treat as not diveable until STINAPA lifts the closure.
-* **Sea state dependent.** A more challenging entry when waves are up; this is not a fallback site for a rough day.
-* **Remote and little dived.** No facilities and no well established route underwater.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -50,13 +47,18 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast, occasionally reduced by swell stirring the shallows when wind runs out of the north or west.
+* **Overall.** Typically excellent, 15 to 30 m, occasionally reduced by swell stirring the shallows when wind runs out of the north or west.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-* **Open water.** Larger animal species turn up here more often than at busier park sites, a benefit of how little the site is dived.
+* **Open water.** Larger animals turn up here in the blue.
+
+## Hazards
+
+* **Diving suspended.** Closed to diving under STINAPA's SCTLD order since 1 May 2023, until STINAPA lifts the closure.
+* **Sea state dependent.** A more challenging entry when waves are up; dive it only in calm seas.
+* **Remote and little dived.** No facilities and no well established route underwater.

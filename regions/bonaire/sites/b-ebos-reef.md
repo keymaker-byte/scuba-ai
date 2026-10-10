@@ -20,18 +20,17 @@ One of the most recognizable dive sites on Klein Bonaire, named for Ebo Domacass
 
 * **The deep mooring.** Sits at about 43 m; the swim from here to the reef and back is part of the dive.
 * **Elephant ear sponges.** Giant, orange, often crinoid-topped, scattered across the reef from about 5 to 20 m.
+* **Depth profile.** The reef itself runs through the recreational range, with the mooring in deep water at about 43 m requiring a swim to reach it.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef itself runs through the recreational range, with the mooring in deep water at about 43 m requiring a swim to reach it.
-
-## Hazards
-
-* **Open water swim.** The mooring sits well offshore in deep water; the swim to and from the reef crosses open blue water.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -45,13 +44,16 @@ Depth is a plain observed figure, Bonaire has no tidal range worth normalizing a
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 40 m.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 40 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Giant orange elephant ear sponges, often topped with black crinoids, and huge lavender stovepipe sponge colonies. Reef fish abound throughout.
+
+## Hazards
+
+* **Open water swim.** The mooring sits well offshore in deep water; the swim to and from the reef crosses open blue water.

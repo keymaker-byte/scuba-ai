@@ -10,31 +10,31 @@ One of Bonaire's better wall dives, in front of the Hamlet Oasis Villas just nor
 | **Entry point coordinates** | 12.174198, -68.290179, the sandy beach |
 | **Type** | Shore |
 | **Depth range** | 6 to 23 m |
-| **Skill level** | Experienced diver, given the current and depth on the wall |
+| **Skill level** | Experienced diver |
 
 ## Getting there
 
 * **Entry.** A shore entry is possible for guests of the Hamlet Oasis complex; Captain Don's Habitat, about 1 km south, runs a daily boat service to the site for other divers.
 * **Parking.** At the Hamlet Oasis complex for the shore entry.
-* **Access.** Open.
-* **Facilities.** The Hamlet Oasis resort sits onshore; Dive Friends operates as the local dive centre.
+* **Access.** Shore entry for Hamlet Oasis guests; boat for other divers.
+* **Facilities.** The Hamlet Oasis resort sits onshore.
 
 ## Navigation and landmarks
 
 * **Captain Don's Stone Memorial.** Underwater, marked with a plaque and a dive flag, dedicated to the divers who have gone before.
 * **The small cliff.** A partial cliff feature directly under the mooring buoy.
+* **Depth profile.** The reef plateau leads to a vertical wall running from about 9 to 22 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Current here can run more challenging than the sites immediately south of it, part of why the wall suits an experienced diver.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef plateau leads to a vertical wall running from about 9 to 22 m.
-
-## Hazards
-
-* **Current and depth on the wall.** Suits an experienced diver rather than a beginner.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current along the wall can run strong.
 
 ## Wind
 
@@ -52,13 +52,16 @@ The swim out runs 92 m south-southeast from the entry, along the shore, to the d
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Wall.** Dense whip coral cover from 9 to 22 m.
+
+## Hazards
+
+* **Current and depth on the wall.** Current can run strong along a wall dropping to about 22 m; suits an experienced diver.

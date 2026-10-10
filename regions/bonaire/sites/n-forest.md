@@ -19,19 +19,18 @@ Named for its forest of black coral, on a small southwestern peninsula of Klein 
 ## Navigation and landmarks
 
 * **The overhang.** Around 27 m, a major feature of the drop-off.
-* **The cave.** At about 23 m, occasional shelter for a green moray, a resident female loggerhead, or a nurse shark.
+* **The cave.** At about 23 m, occasional shelter for a green moray, a female loggerhead, or a nurse shark.
+* **Depth profile.** The mooring sits at about 8 m, with the drop-off, cave and overhang running through the recreational range to about 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The mooring sits at about 8 m, with the drop-off, cave and overhang running through the recreational range to about 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -46,14 +45,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m or more.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Deeper reef.** A forest of black coral, increasingly dense with depth, alongside sponges and hard coral.
-* **The cave.** A green moray, a resident female loggerhead turtle, or a nurse shark, on occasion.
+* **The cave.** A green moray, a female loggerhead turtle, or a nurse shark, on occasion.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

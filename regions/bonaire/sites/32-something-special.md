@@ -22,18 +22,17 @@ A site in the heart of Kralendijk, on J.E. Irausquin Boulevard next to the Betwe
 ## Navigation and landmarks
 
 * **The marina entrance.** The reference point for the site and the reason for its unusual fish variety.
+* **Depth profile.** The site runs from the shallows, largely coral rubble near the marina mouth, to a sandy bottom through the recreational range, with garden eels around 17 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The site runs from the shallows, largely coral rubble near the marina mouth, to a sandy bottom through the recreational range, with garden eels around 17 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -49,14 +48,17 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast, though the marina's boat traffic can stir the immediate entrance more than an open stretch of coast.
+* **Overall.** Typically excellent, 15 to 30 m; boat traffic can stir the water at the marina entrance.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-* **Overall.** More unique fish sightings than any other site on the island, drawn by the marina; trumpetfish, parrotfish, moray eels, spotted drum and seahorses clinging to coral by their tails.
+* **Overall.** An unusually wide range of fish, drawn by the marina; trumpetfish, parrotfish, moray eels, spotted drum and seahorses clinging to coral by their tails.
 * **Sandy bottom.** Rays are reliably seen, with garden eels around 17 m.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

@@ -16,25 +16,24 @@ Bonaire's southern tip, named for the historic lighthouse onshore, and one of th
 
 * **Entry.** Can be rough given the site's strong current; only attempt in calm wind and manageable conditions.
 * **Parking.** Roadside near the lighthouse.
-* **Access.** Open, but don't dive here when winds are strong.
-* **Facilities.** The historic lighthouse stands onshore, no dive facilities.
+* **Access.** Open; dived only in light wind.
+* **Facilities.** The historic lighthouse stands onshore.
 
 ## Navigation and landmarks
 
 * **The lighthouse.** Bonaire's southern landmark, visible from the site.
+* **Depth profile.** The reef runs from about 6 to 25 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Current here can come from either of two directions and may change or build during a dive, one of the strongest and least predictable current patterns on the island.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs from about 6 to 25 m.
-
-## Hazards
-
-* **Unpredictable current.** Can shift direction or build mid-dive; not a site to enter without real current experience.
-* **Rough entry.** The current can make the shore entry itself difficult; check conditions before committing.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current here can come from either of two directions and may change or build during a dive, one of the strongest and least predictable current patterns on the island.
 
 ## Wind
 
@@ -49,14 +48,18 @@ The shore lies open to more than 30 km of water from northeast clockwise through
 
 ## Visibility
 
-Somewhat limited by the plankton the current carries, though that same plankton is what draws the site's larger fish.
+* **Overall.** Somewhat limited by the plankton the current carries, though that same plankton is what draws the site's larger fish.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Open water.** Schooling fish, barracuda and tarpon, drawn by the plankton the current carries.
 * **Reef.** Lobsters hiding under the coral, and an occasional turtle.
+
+## Hazards
+
+* **Unpredictable current.** Can shift direction or build mid-dive; for divers with real current experience.
+* **Rough entry.** The current can make the shore entry itself difficult; check conditions before committing.

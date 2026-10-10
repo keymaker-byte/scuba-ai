@@ -18,19 +18,18 @@ A protected site on Klein Bonaire with mild current, beautiful coral formations 
 
 ## Navigation and landmarks
 
-* **The reef.** Runs from about 9 to 30 m, without a single standout landmark beyond its overall coral cover.
+* **The reef.** Continuous coral cover from about 9 to 30 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Current here typically runs mild, part of why the site is regarded as protected.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef runs from about 9 to 30 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Current here typically runs mild.
 
 ## Wind
 
@@ -44,13 +43,16 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m.
+* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Reef.** Groupers and schools of bar and horse-eye jacks, often seen feeding on schools of boga just off the reef.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.

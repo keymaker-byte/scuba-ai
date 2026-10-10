@@ -651,14 +651,20 @@ window.MAP_DATA = {
       "slug": "18-jeff-davis-memorial",
       "name": "18. Jeff Davis Memorial",
       "region": "bonaire",
-      "type": "boat",
+      "type": "shore",
       "file": "regions/bonaire/sites/18-jeff-davis-memorial.md",
       "site": {
-        "lat": 12.204133,
-        "lon": -68.313417
+        "lat": 12.204,
+        "lon": -68.3142
       },
-      "entry": null,
-      "parking": null
+      "entry": {
+        "lat": 12.204904,
+        "lon": -68.313986
+      },
+      "parking": {
+        "lat": 12.205161,
+        "lon": -68.313857
+      }
     },
     {
       "slug": "c-jerrys-reef",
@@ -761,14 +767,20 @@ window.MAP_DATA = {
       "slug": "10-la-danias-leap",
       "name": "10. La Dania's Leap",
       "region": "bonaire",
-      "type": "boat",
+      "type": "shore",
       "file": "regions/bonaire/sites/10-la-danias-leap.md",
       "site": {
-        "lat": 12.2175,
-        "lon": -68.3495
+        "lat": 12.2174,
+        "lon": -68.3501
       },
-      "entry": null,
-      "parking": null
+      "entry": {
+        "lat": 12.218248,
+        "lon": -68.349697
+      },
+      "parking": {
+        "lat": 12.218641,
+        "lon": -68.349933
+      }
     },
     {
       "slug": "27-la-machaca",
@@ -1109,8 +1121,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/28-reef-scientifico.md",
       "site": {
-        "lat": 12.172176,
-        "lon": -68.2898
+        "lat": 12.171131,
+        "lon": -68.289469
       },
       "entry": {
         "lat": 12.172321,
@@ -1366,7 +1378,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "s-valeries-hill",
-      "name": "S. Vallerie's Hill",
+      "name": "S. Valerie's Hill",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/s-valeries-hill.md",

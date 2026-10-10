@@ -1,17 +1,17 @@
 # 14. Country Garden
 
-A boat dive north of Tolo, also known as Mushroom City for the three large pillars, unique to Bonaire, that have broken away from the shoreline cliff and fallen to about 9 m. Each pillar carries a thick growth of hard coral, gorgonians and sponges, sheltering schoolmasters, grunts and goatfish in their lee.
+A boat dive just southeast of Tolo, also known as Mushroom City for the three large pillars, unique to Bonaire, that have broken away from the shoreline cliff and fallen to about 9 m. Each pillar carries a thick growth of hard coral, gorgonians and sponges, sheltering schoolmasters, grunts and goatfish in their lee.
 
 | | |
 |---|---|
-| **Location** | Northwest coast, Bonaire, just north of Tolo |
+| **Location** | Northwest coast, Bonaire, just southeast of Tolo |
 | **Coordinates** | 12.213389, -68.3346 (reef ledge, about 3 m, dropping beyond to deep water) |
 | **Type** | Boat |
 | **Depth range** | 6 to 25 m |
 
 ## Getting there
 
-* **Entry.** By boat; may also be reachable on a long swim from the southern end of Tolo.
+* **Entry.** By boat, or on a long swim from the southern end of Tolo.
 * **Parking.** Not applicable for the boat entry.
 * **Access.** Open.
 * **Facilities.** None at the site.
@@ -19,18 +19,17 @@ A boat dive north of Tolo, also known as Mushroom City for the three large pilla
 ## Navigation and landmarks
 
 * **The three pillars.** Fallen from the cliff to about 9 m, the site's defining feature and the source of its Mushroom City nickname.
+* **Depth profile.** The reef ledge sits around 3 m, with the pillars themselves at about 9 m and the site working through the range to 25 m.
 
 ## Current
 
-No tidal current here; Bonaire's currents are wind driven. Current here follows the same wind driven pattern as the rest of this stretch of coast.
+| | |
+|---|---|
+| **Current type** | Wind driven |
+| **Usual set** | Not established |
+| **Typical speed** | Not established |
 
-## Depth
-
-Depth is a plain observed figure, Bonaire has no tidal range worth normalizing against. The reef ledge sits around 3 m, with the pillars themselves at about 9 m and the site working through the range to 25 m.
-
-## Hazards
-
-None notable beyond the general reef and current awareness that applies along this coast.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
 
@@ -44,13 +43,16 @@ None notable beyond the general reef and current awareness that applies along th
 
 ## Visibility
 
-West coast visibility here is typically excellent, in the same 15 to 30 m range as the rest of the leeward coast.
+* **Overall.** Typically excellent, 15 to 30 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.
-* **Surface layer.** No sharp difference from depth here.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
 * **Pillars.** Dense hard coral, gorgonians and sponges cover each pillar face, sheltering schoolmasters, grunts and goatfish.
+
+## Hazards
+
+* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.
