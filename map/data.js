@@ -2169,8 +2169,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/puget-sound/sites/sunnyside-beach-park.md",
       "site": {
-        "lat": 47.178155,
-        "lon": -122.591559
+        "lat": 47.178264,
+        "lon": -122.5922
       },
       "parking": {
         "lat": 47.177167,

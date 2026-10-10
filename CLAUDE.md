@@ -18,7 +18,7 @@ Important! Always read all three of the region's steering files, `<region>.md`, 
 
 ## Site Files
 
-A site file is a single guidebook style `<slug>.md` under its region's `sites/` folder: coordinates, depth range, currents, entry, hazards, wind exposure, temperatures, and marine life, paired with a `<slug>.json` where the region has spatial current model coverage. It also has a row in its region file, under that file's "Sites currently covered" table, and an entry in `map/data.js`, the index `map.html` draws its pins from. Keep both current whenever a site is added or its coordinates, name, type, parking, or entry point change.
+A site file is a single guidebook style `<slug>.md` under its region's `sites/` folder: coordinates, depth range, currents, entry, hazards, wind exposure, temperatures, and marine life, paired with a `<slug>.json` beside it for structured data. It also has a row in its region file, under that file's "Sites currently covered" table, and an entry in `map/data.js`, the index `map.html` draws its pins from. Keep both current whenever a site is added or its coordinates, name, type, parking, or entry point change.
 
 Creating a new site file, or substantially rewriting an existing one, is handled by the `create-dive-site` skill: it holds the canonical template. Invoke it rather than freehanding a site file.
 

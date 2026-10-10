@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Spatial tidal currents from the ENPAC15 ADCIRC tidal database.
 
-  adcirc_current.py extract OUT.json --near LAT LON --tz ZONE         write a site's extract, once
+  adcirc_current.py extract --near LAT LON                           print a point's extract, once
   adcirc_current.py predict --file F [--date D] [--position P]        slacks and peaks
   adcirc_current.py window --file F [--date D] [--position P]         diveable windows under a speed threshold
   adcirc_current.py at --file F --time "D HH:MM" [--position P]       current at a moment
@@ -359,14 +359,14 @@ def interp_polar(amp1, ph1, amp2, ph2, amp3, ph3, w):
 # --------------------------------------------------------------------------------------
 
 def cmd_extract(a):
-    path = a.path
-    if os.path.exists(path) and not a.force:
-        sys.exit(f"Extract already exists: {path}\n  pass --force to overwrite.")
+    """Print the constituents at a point as {"enpac15_constituents": [...]} on stdout,
+    for the caller to attach to the site JSON; progress goes to stderr."""
     _need_db()
     qlat, qlon = a.near
-    print(f"Reading mesh ({os.path.basename(MESH_GZ)})...", flush=True)
+    log = lambda m: print(m, file=sys.stderr, flush=True)
+    log(f"Reading mesh ({os.path.basename(MESH_GZ)})...")
     lon, lat, elems = read_mesh()
-    print(f"  {len(elems)} elements, locating {qlat:.5f}, {qlon:.5f}...", flush=True)
+    log(f"  {len(elems)} elements, locating {qlat:.5f}, {qlon:.5f}...")
     nodes, w, inside, dist_km = locate(lon, lat, elems, qlon, qlat)
     if not inside:
         sys.exit(f"Point is outside the wet mesh, {dist_km:.2f} km past the boundary.\n"
@@ -374,10 +374,9 @@ def cmd_extract(a):
                  f"re-run extract; a boundary-snapped point reads as near-still water, not "
                  f"the site's real current, so this tool refuses it rather than predicting "
                  f"off it. Trust a NOAA station instead if the site never lands inside the mesh.")
-    print(f"  in element with nodes {nodes}, weights "
-          f"{w[0]:.3f}/{w[1]:.3f}/{w[2]:.3f}", flush=True)
+    log(f"  in element with nodes {nodes}, weights {w[0]:.3f}/{w[1]:.3f}/{w[2]:.3f}")
     header = read_vel_header()
-    print("Streaming fort.54 for the 3 nodes (one pass, may take a minute)...", flush=True)
+    log("Streaming fort.54 for the 3 nodes (one pass, may take a minute)...")
     vals = read_vel_nodes(nodes)
     cons = []
     for k, (name, freq, fnf, eqarg) in enumerate(header):
@@ -388,19 +387,11 @@ def cmd_extract(a):
             "name": name, "f_ref": fnf, "v0u_deg": eqarg,
             "u_amp": u_amp, "u_phase": u_ph, "v_amp": v_amp, "v_phase": v_ph,
         })
-    tz = resolve_tz(a.tz)  # validate before writing
-    if os.path.dirname(path):
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-    doc = {
-        "lat": qlat, "lon": qlon, "tz": a.tz,
-        "enpac15_constituents": cons,
-    }
-    with open(path, "w") as fh:
-        json.dump(doc, fh, indent=2)
-    axis, _ = principal_axis(doc, tz)
-    print(f"\nWrote {path}")
-    print(f"  {len(cons)} constituents. Principal current axis {axis:.0f}°/{(axis + 180) % 360:.0f}° T.")
-    print("  Validate against the nearest NOAA station before trusting timing (see selftest).")
+    doc = {"enpac15_constituents": cons}
+    axis, _ = principal_axis(doc, resolve_tz("UTC"))
+    log(f"  {len(cons)} constituents. Principal current axis {axis:.0f}°/{(axis + 180) % 360:.0f}° T.")
+    log("  Validate against the nearest NOAA station before trusting timing (see selftest).")
+    print(json.dumps(doc, indent=2))
 
 
 def load_doc(a):
@@ -408,16 +399,20 @@ def load_doc(a):
     read it from. argparse enforces that exactly one of the two is given."""
     if a.json is not None:
         try:
-            return json.loads(a.json)
+            doc, src = json.loads(a.json), "--json"
         except json.JSONDecodeError as e:
             sys.exit(f"Could not parse --json: {e}")
-    try:
-        with open(a.file) as fh:
-            return json.load(fh)
-    except OSError as e:
-        sys.exit(f"Could not read --file {a.file}: {e}")
-    except json.JSONDecodeError as e:
-        sys.exit(f"Could not parse JSON in {a.file}: {e}")
+    else:
+        try:
+            with open(a.file) as fh:
+                doc, src = json.load(fh), a.file
+        except OSError as e:
+            sys.exit(f"Could not read --file {a.file}: {e}")
+        except json.JSONDecodeError as e:
+            sys.exit(f"Could not parse JSON in {a.file}: {e}")
+    if "enpac15_constituents" not in doc:
+        sys.exit(f"No ENPAC15 extract in {src}: it holds the site's lat/lon/tz only.")
+    return doc
 
 
 def series(doc, day, tz):
@@ -688,13 +683,9 @@ def main():
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    s = sub.add_parser("extract", help="pull constituents at a site from the database")
-    s.add_argument("path", help="full path to write the extract JSON to")
-    s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True)
-    s.add_argument("--tz", required=True,
-                   help="IANA timezone of the dive site (e.g. America/Los_Angeles, "
-                        "America/New_York); stored in the extract and used by predict/window/at")
-    s.add_argument("--force", action="store_true", help="overwrite an existing extract")
+    s = sub.add_parser("extract", help="print a point's constituents as JSON, to attach to the site JSON")
+    s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True,
+                   help="the extraction point: the dive area, or a point walked into the mesh")
     s.set_defaults(fn=cmd_extract)
 
     position_help = ("where in the water column: bottom, mid, or surface (default: the "
