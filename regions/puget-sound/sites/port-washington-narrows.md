@@ -47,6 +47,18 @@ Port Washington Narrows is the tidal cut through Bremerton joining Dyes Inlet to
 * **Ebb.** Sets down the narrows from Dyes Inlet toward Sinclair Inlet, out past the Manette Bridge into open water. Daily peak ebb at the station runs 0.52 to 1.48 m/s over the same 30 days. Never drift the ebb: the only take-out is at the Manette Bridge itself, easily missed, with Sinclair Inlet beyond it.
 * **Diveable window.** The flood, not a slack. Entering at the turn makes for a long dive, since the first hour of the flood carries a diver well under a kilometre. Entering roughly an hour after the slack before flood, as the current builds, brings the full 2.6 km drift to about an hour to an hour and a quarter on an average exchange; a weak flood takes longer and a strong one less. Check the flood's peak speed for the day and size the entry time and gas to it.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Port Washington Narrows, south entrance, 47°34′ N, 122°37′ W, about 0.4 km south-southeast |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 9 minutes before the reference |
+| **Slack before ebb** | 55 minutes after the reference |
+| **Maximum flood** | 13 minutes after the reference |
+| **Maximum ebb** | 1 hour 8 minutes after the reference |
+| **Maximum speed ratio** | 0.6 of the reference on the flood, 0.7 on the ebb |
+
 ## Wind
 
 | | |

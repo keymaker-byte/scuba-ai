@@ -43,6 +43,15 @@ Warren Avenue Bridge crosses Port Washington Narrows in Bremerton, the tidal cut
 * **Ebb.** Sets east-southeast, running down the narrows toward Sinclair Inlet and out to Puget Sound through Rich Passage, with daily peaks of 0.52 to 1.48 m/s at the station over the same 30 days.
 * **Diveable window.** The current becomes noticeable again within five to ten minutes of slack, so the window closes fast on either side of it. Its width varies a great deal by exchange, from under thirty minutes on a tight one to well over an hour and a half on a wide one; a typical window under 0.25 m/s at the station runs about 35 to 85 minutes. Begin the dive thirty to forty minutes ahead of the predicted slack, and start the swim back to shore as soon as the current turns.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Beneath the Warren Avenue Bridge, a correction for the site itself, published without a station number or position |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 23 minutes before the reference |
+| **Slack before ebb** | 55 minutes after the reference |
+
 ## Wind
 
 | | |

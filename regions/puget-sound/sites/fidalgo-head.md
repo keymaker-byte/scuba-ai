@@ -46,6 +46,15 @@ Fidalgo Head sits where the flow through Burrows Pass meets the open water off t
 * **Ebb.** Sets south past Green Point, bends into the bay, and collides with the rocky shoreline of Fidalgo Head. The flow then divides: the stronger part continues south, flowing out along the outer third of the headland; the weaker part turns north and flows back toward West Beach. Daily peaks run 0.47 to 1.48 m/s at the station over the same 30 days.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 90 minutes. Enter 20 to 30 minutes before slack, preferably ahead of a flood, so the crossing runs against only a minimal current and the return leg runs entirely with the building flood. Returning on an ebb instead, the swim back along the shoreline can run against the current at first; about a third of the way in from the headland there is a quiet current-divide zone, and past it the remaining swim runs with an inbound current.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Green Point, 0.8 mile northwest of, 48°30.28′ N, 122°42.37′ W, about 1.4 km north |
+| **Legacy reference** | Rosario Strait (PCT1996) |
+| **Slack before flood** | 55 minutes before the reference |
+| **Slack before ebb** | 8 minutes before the reference |
+
 ## Wind
 
 | | |

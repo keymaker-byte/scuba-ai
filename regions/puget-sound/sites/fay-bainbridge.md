@@ -42,6 +42,15 @@ Sand and eelgrass shore dive at the northeast tip of Bainbridge Island, facing o
 * **Ebb.** The station's channel axis is north-northeast, but along the shore in front of the site the ebb sets northwest, parallel to the beach, then bends west as it rounds Point Monroe into Port Madison. Daily peaks run 0.19 to 0.71 m/s at the station over the same 30 days.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 80 to 160 minutes. Wide on a small exchange, several hours under 0.25 m/s. On a larger exchange the window narrows to a little over an hour either side of slack, with flood and ebb both running past 0.5 m/s; treat this as current sensitive on any exchange over about 3 m, not just the big ones.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Agate Passage, north end, 47°43.32′ N, 122°33.30′ W, about 4.4 km west-northwest |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 1 hour 28 minutes before the reference |
+| **Slack before ebb** | 18 minutes before the reference |
+
 ## Wind
 
 | | |

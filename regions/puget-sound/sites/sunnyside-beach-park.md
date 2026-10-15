@@ -50,6 +50,16 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 * **Flood.** Early in the flood the inshore water keeps setting south, then it turns and runs north along the beach for the rest of the flood. The inshore current can switch direction more than once during a dive. Daily peaks run 0.09 to 0.24 m/s at the station over the same 30 days.
 * **Diveable window.** Most tides. Current at the station stays under 0.25 m/s for about 1.5 to 21 hours at a time. On a big exchange, dive close to the station's slack for the stillest water and the best visibility; the bottom silts up as the flood builds toward its maximum.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Sunnyside Beach Park, a correction for the site itself, published without a station number or position |
+| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
+| **Slack before flood** | 20 minutes after the reference |
+| **Reversal of flood current** | 1 hour 38 minutes after the reference's slack before flood |
+| **Slack before ebb** | 21 minutes after the reference |
+
 ## Wind
 
 | | |

@@ -49,6 +49,15 @@ Sund Rock is dived independently of the tide. The current in the channel peaks a
 * **Slack.** This reach of the canal behaves as a standing wave, so slack falls close to high and low water rather than midway between them. Slack at the site falls close to high and low water at Union, which makes the tide table a usable guide to it here; the exact offset is not established and is confirmed in the water. This is a local exception, and it does not hold elsewhere in the Sound.
 * **Diveable window.** All day. What little current there is only matters on the long legs, so on a large exchange plan the far walls and the wreck early and let the return be the easy direction, rather than swimming back against a building ebb at the end of a dive.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Foulweather Bluff, 47°55.90′ N, 122°38.33′ W, about 65.9 km north-northeast |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | At the reference |
+| **Slack before ebb** | 15 minutes before the reference |
+
 ## Wind
 
 | | |

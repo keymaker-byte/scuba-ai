@@ -43,6 +43,15 @@ Picnic Point is a shore dive on the east shore of Possession Sound, on the mainl
 * **Ebb.** Sets south-southwest, parallel to shore. Weak, generally under about 0.25 m/s, with daily peaks of 0.10 to 0.32 m/s at the station over the same 30 days.
 * **Diveable window.** Current at this station rarely reaches the 0.25 m/s mark, so the window stays wide across most of the day, typically about 1.5 to 13 hours, and timing is forgiving compared with a true tidal channel. Still plan around the published slack, since the water is calmest and clearest then.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Edmonds, 2.7 miles WSW of, 47°48.38′ N, 122°26.67′ W, about 11.5 km southwest |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 44 minutes after the reference |
+| **Slack before ebb** | 13 minutes after the reference |
+
 ## Wind
 
 | | |

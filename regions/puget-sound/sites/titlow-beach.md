@@ -49,6 +49,15 @@ Shore dive at Titlow Park in Tacoma, on the east shore of the Tacoma Narrows sou
 * **The water among the pilings.** The slip and the beach sit in sheltered water that runs far slower than the channel, so the inshore water can feel calm while the channel just past the outer pilings is already moving. The eddy along the shore is rarely fully still.
 * **Diveable window.** Either slack, on a small exchange. A typical window under 0.25 m/s at the station runs about 25 to 40 minutes. Summer days often bring two slacks close together with only a small exchange between them, long enough for two dives. Time the dive so the slack falls about midway through it, and plan the route so the end of the dive rides the shoreline eddy north toward the pilings and the entry: on a flood, visit the shelves first and come back north along the shore. Leave the eddy at the pilings and swim in to the ramp; past them it carries on north along the beach toward the lagoon culvert. Past the outer pilings, a flood carries a diver south toward Day Island and an ebb north toward the bridge, so turn back to the slip as soon as the water starts to move.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Titlow Beach, a correction for the site itself, published without a station number or position |
+| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
+| **Slack before flood** | 5 minutes before the reference |
+| **Slack before ebb** | 33 minutes after the reference |
+
 ## Wind
 
 | | |

@@ -16,7 +16,7 @@ Shore dive on the low, rocky point at the northwest corner of Washington Park, a
 
 * **Entry.** Concrete stairs at the sharp bend in Loop Road lead down onto flat basalt rock at the edge of West Beach. Enter over the rock and swim northwest along the low shoreline, rounding the point to the north.
 * **Parking.** A handful of single-car pullouts along the road shoulder near the stairs, free, first come first served, and easily full on a weekend.
-* **Access.** The park is open 6 a.m. to 10 p.m. year round. Loop Road itself is one-way, about 2.2 miles end to end, open to pedestrians and bicycles from 6 a.m. but closed to vehicles until 10 a.m., so a slack that falls before then is only reachable once the road opens to cars. There is no day-use parking fee; the posted fee applies only to the boat-launch lot. About 3.8 mi west of Commercial Avenue in Anacortes, roughly 75 mi from Seattle and 43 mi from Bellingham.
+* **Access.** The park is open 6 a.m. to 10 p.m. year round. Loop Road itself is one-way, about 2.2 miles end to end, open to pedestrians and bicycles from 6 a.m. but closed to vehicles until 10 a.m., so a slack that falls before then is only reachable once the road opens to cars. There is no day-use parking fee; the posted fee applies only to the boat-launch lot. About 3.8 mi west of Commercial Avenue in Anacortes.
 * **Facilities.** Restrooms and showers, picnic shelters, a playground and the boat launch sit near Sunset Beach, a walk or short drive from the stairs; nothing is right at Green Point itself. Camping is available in the park.
 
 ## Navigation and landmarks
@@ -45,6 +45,15 @@ The point is current sensitive: missing the window by even a little brings on cu
 * **Flood.** Sets north-northeast, rounding Green Point out of the bay and into the main channel toward Rosario Strait, with daily peaks of 1.01 to 1.76 m/s at the station over 30 days.
 * **Ebb.** Sets south past the point, then bends into the shallow bay off West Beach, curling counterclockwise across the beach shallows before flowing back out past Green Point. Daily peaks run 0.37 to 2.25 m/s at the station over the same 30 days.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 80 minutes. Plan tight to slack; the point itself follows the full current cycle. The inner cove and West Beach shallows run comparatively sheltered on a small exchange, but that shelter does not extend out to the point.
+
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Green Point, 0.8 mile northwest of, 48°30.28′ N, 122°42.37′ W, about 0.6 km northwest |
+| **Legacy reference** | Rosario Strait (PCT1996) |
+| **Slack before flood** | 55 minutes before the reference |
+| **Slack before ebb** | 8 minutes before the reference |
 
 ## Wind
 

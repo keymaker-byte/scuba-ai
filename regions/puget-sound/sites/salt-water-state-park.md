@@ -45,6 +45,15 @@ Shore dive at Saltwater State Park in Des Moines, on the mainland shore of East 
 * **Ebb.** Sets north-northwest, also parallel to the beach. Daily peaks run 0.05 to 0.18 m/s at the station over the same 30 days.
 * **Diveable window.** Current here is generally light, and local divers describe it as weak and variable rather than a clean, predictable exchange; it is not well represented by the standard south Sound approach of correcting off the Tacoma Narrows. Rather than chase a precise slack at a distant station, the established local practice is to plan around high water on a small exchange day: enter roughly 45 minutes to an hour before high water and exit about 30 minutes after. Current at the station stays under 0.25 m/s for about 2 to 11 hours at a time. Avoid large exchanges, and avoid a strong ebb altogether if a southwest wind is blowing. Low water shortens the remaining swim once you reach the water, but only after a long, exposed walk across the drained tide flat to get there, and the walking is the worse trade.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | None; the reference is used directly |
+| **Legacy reference** | The Narrows, north end (midstream) (PCT1766), 47°18.37′ N, 122°32.98′ W, about 18.2 km west-southwest |
+| **Slack before flood** | At the reference |
+| **Slack before ebb** | At the reference |
+
 ## Wind
 
 | | |

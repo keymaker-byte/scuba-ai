@@ -47,6 +47,15 @@ Shore dive on the main basin of Puget Sound at Shoreline, just north of Seattle,
 * **Current increases with depth.** Both the station and a spatial current model show this stretch of the main basin as generally weak. In the water it runs usually mild near shore but noticeably stronger below about 9 m, over the drop and across the outer debris field, and can run substantial on a larger exchange. Treat the model and station numbers as a floor, not a ceiling, and default to slack, especially for the outer, deeper part of the dive.
 * **Diveable window.** Current at the station stays under 0.25 m/s for about 1.5 to 16 hours at a time. Plan tight to the station slack, save the outer debris field for the calmest part of the tide, and be ready to shorten the excursion if current builds sooner than expected.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Edmonds, 2.7 miles WSW of, 47°48.38′ N, 122°26.67′ W, about 6.4 km northwest |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 44 minutes after the reference |
+| **Slack before ebb** | 13 minutes after the reference |
+
 ## Wind
 
 | | |

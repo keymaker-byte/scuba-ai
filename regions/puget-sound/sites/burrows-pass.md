@@ -16,8 +16,8 @@ Shore dive on the north side of Burrows Pass, between Fidalgo Head and Burrows I
 
 * **Entry.** At the end of Cabana Way by Skyline Marina, where the public road ends at a fence marked "Private Property". The beach north of the fence is private.
 * **Parking.** On the street, or in the adjacent marina lot, which is free but limited.
-* **Access.** Open 24 hours. About 75 mi from Seattle and 43 mi from Bellingham.
-* **Facilities.** None on site. Washington Park, 0.9 mi away, has restrooms, picnic tables and barbecues.
+* **Access.** Open 24 hours.
+* **Facilities.** None on site.
 
 ## Navigation and landmarks
 
@@ -59,6 +59,15 @@ Diveable on the slack before the ebb only. Do not dive on a flood exchange or at
 * **Diveable window.** The slack before the ebb only. A typical window under 0.25 m/s at the station runs about 40 to 95 minutes; the layered reversal and the exchange size decide whether it serves.
 * **Layered reversal.** The ebb begins at the surface and works downward. Early in a low-volume ebb, water above about 13.7 m can already run northeast toward the exit while water below still runs southwest, outbound, on the tail of the flood. The transition band sits roughly 12 to 18 m below the surface. Ascend to about 12 m or shallower to catch the homeward ebb.
 * **Exchange size.** A small ebb may never reverse the deep flow, and the back eddy that carries you home may not form; too large an exchange is also unwelcome. A moderate ebb is the target. On a failed reversal the flow can sweep west onto the rocks and cliffs at the point.
+
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Between Fidalgo Head and Burrows Island, 48°29.33′ N, 122°42.20′ W, about 0.9 km west |
+| **Legacy reference** | Rosario Strait (PCT1996) |
+| **Slack before flood** | None published |
+| **Slack before ebb** | 32 minutes before the reference |
 
 ## Wind
 
