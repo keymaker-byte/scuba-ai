@@ -31,29 +31,48 @@ Follow the region's planning conventions in their own order: each factor, the to
 - **Wind.** A marginal call means a short surface swim only, with the entry and exit confirmed from shore before kitting up. A forecast direction in the site's Wind against current sectors while the current runs is noted beside the call.
 - **Swell.** Breaking waves at the entry under 0.5 m are go, 0.5 to 1 m marginal, over 1 m no go.
 - **The verdict.** A no go reading on any factor ends the plan at that site and time; a marginal one stays in the plan with the condition its band attaches.
+- **Divable Window.** Consider all factors that impact a divable window, suggest the best window to dive.
+- **Doubts and Important Decicions.** In case of doubts or where a decision is needed, stop, present the options and ask the user to choose an option.
 
 ## 4. Present the plan
 
-Two parts, in chat.
 
-**The table,** one row per item, every figure with its source:
+- **Format.** Follow the format below, present plan in chat.
+- **Time Format.** For time use 12-hour clock system.
+- **Directions Format.** For directions (current, wind) use a human readable format using the 8 Compass Points abbreviations.
 
-| Item | What it holds |
+---
+
+**1. The Data.** A general table, and tables for entry and exit data.
+
+| Item | |
 |---|---|
-| **Site and date** | Site name, region, date, and the day's exchange size |
+| **Site and date** | Site name, region, date and dive time |
+| **Site Summary** | Site summary, where to park, how to enter the water |
+| **Diveable window** | The window from factors overlap, its padding, and any estimates flagged as far apart |
 | **Verdict** | Go, marginal or no go, and the factor that decides it |
-| **Entry and exit** | Entry time, exit time, runtime |
-| **Slack estimates** | Each available estimate on its own line: station, station with observed offset, model, legacy |
-| **Diveable window** | The window from their overlap, its padding, and any estimates flagged as far apart |
-| **Current at entry and exit** | Speed and set at each end, from the station and from the model |
-| **Max flood and ebb** | The governing station's maxima bracketing the window, with times |
-| **Wind** | Speed, direction and call at entry and exit, from each model, with the sector kind |
-| **Swell and sea state** | The reading and its band |
-| **Tide** | Height at entry and exit, and the depth below the surface of the site's main features |
-| **Route** | The dive from entry to exit in order: the far leg, the turn, the return, the safety stop |
-| **Depth, gas and NDL** | Planned maximum depth, the mix, and the no-decompression limit at that depth |
+| **Time** | Time for meet, entry time, exit time, dive runtime |
+| **Current** | Prediced current slack time closer to the dive, each source and final reconciliation |
+| **Tide** | Predicted tide slack closer to the dive, size of the tide exchange comparable to the month |
+| **Weather** | Wind conditions, air temperature, sky, rain and fog |
 | **Visibility and temperature** | Recent visibility reports and the expected water temperature |
-| **Weather** | Air temperature, sky, rain and fog |
+| **Route** | The dive from entry to exit in order: the far leg, the features and their depth, the turn, the return, the safety stop |
 | **Hazards on the day** | The site's hazards that apply to this plan, and any local rule that binds it |
 
-**The buddy summary,** a few short paragraphs in plain language, ready to paste into a message: where and when to meet and enter, the verdict and why, the route and the turn, the depth and gas, the conditions to expect, and the two or three things everyone should watch for. No tool names, no station IDs, no model talk; the figures a diver needs, stated plainly.
+| Entry Factor | |
+|---|---|
+| **Time** | Entry time |
+| **Current** | Speed and set at entry, each source and final reconciliation |
+| **Tide** | Height at entry |
+| **Wind** | Speed, direction and call at entry |
+| **Swell and sea state** | The reading and its band at entry |
+
+| Exit Factor | |
+|---|---|
+| **Time** | Exit time |
+| **Current** | Speed and set at exit, each source and final reconciliation |
+| **Tide** | Height at exit |
+| **Wind** | Speed, direction and call at exit |
+| **Swell and sea state** | The reading and its band at exit |
+
+**2. The summary.** Create a dive plan summary including site description (outside, how to park, underwater scene and life), and bullet points using emojis to summarise each dive factor. Make it short and to the point, include resulting data (e.g. current speed, wind speed, deph, temperature, vizibility).
