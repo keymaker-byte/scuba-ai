@@ -44,6 +44,15 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 * **Ebb.** Sets north-northwest, both in the channel and along the shore, the same direction as the nearshore flood push, with daily peaks of 0.92 to 2.33 m/s at the station over the same 30 days. Visibility tends to be better on the ebb to flood slack than the flood to ebb.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 30 to 55 minutes. Exposed directly to Admiralty Inlet, so current builds fast off slack and the window is unforgiving of a late entry. Pick a small exchange day and check the water visually before committing to the swim out.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Marrowstone Point, 0.3 mile northeast of, 48°06′ N, 122°41′ W, about 1.0 km north-northeast |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 53 minutes before the reference |
+| **Slack before ebb** | 1 hour 13 minutes before the reference |
+
 ## Wind
 
 | | |

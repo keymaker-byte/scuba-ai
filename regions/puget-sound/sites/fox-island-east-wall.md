@@ -47,6 +47,15 @@ Shore dive off the Fox Island Fishing Pier at Toy Point, the eastern tip of Fox 
 * **Ebb.** Also parallel to shore, rounding Toy Point and setting north along the wall toward Fox Point. It runs weaker than the flood, with daily peaks of 0.64 to 1.34 m/s at the station over the same 30 days. The water along the wall begins setting north well ahead of the station's slack before ebb, so a dive timed to the station alone meets a building northward current instead of a turn.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 40 to 70 minutes. Either slack on a small exchange, best a slack between two weak maximums; on a big exchange the window can close almost as it opens. Before ebb, drop about an hour ahead of the station's slack and swim south first, so the return north rides the ebb as it builds; before flood, swim north first, so the return south rides the flood. The current along the walls does not pour down them, so a diver caught by it can climb the ledges and drift back toward the entry. Watch for the turn and be ready to end the dive early: once the water runs there is nowhere to shelter but the beach. Whirlpools and swirling water off the beach and beside the pier mean the current is still running; wait on the beach until the surface settles.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Toy Point, Fox Island, a correction for the site itself, published without a station number or position |
+| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
+| **Slack before flood** | 56 minutes before the reference |
+| **Slack before ebb** | 1 hour 5 minutes before the reference |
+
 ## Wind
 
 | | |

@@ -45,6 +45,15 @@ A shore dive at the Port Townsend Marine Science Center pier, inside Fort Worden
 * **Nearshore push.** Right along the beach, a current sets south toward the pier on both the flood and the ebb, not just the flood; it is weak but persistent, and divers drifting with it can use the pier itself for shelter.
 * **Diveable window.** Current stays weak most of the day, rarely above 0.3 to 0.4 m/s even off slack, and the window around each slack runs well over two hours on an average exchange. It narrows and strengthens on a large exchange, and that is when timing the dive to slack matters. A typical window under 0.25 m/s at the station runs about 35 to 65 minutes.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Point Wilson, 0.5 mile northeast of, 48°09′ N, 122°45′ W, about 1.7 km north-northeast |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 1 hour 8 minutes before the reference |
+| **Slack before ebb** | 47 minutes before the reference |
+
 ## Wind
 
 | | |

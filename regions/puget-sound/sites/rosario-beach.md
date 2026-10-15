@@ -48,6 +48,15 @@ Dive at slack, and on a low exchange. The strait runs fast, and the offshore leg
 * **Ebb.** Sets southeast past Northwest Island, Urchin Rocks and the outer face of Rosario Head. Inshore, a segment runs along the northwest shore toward the beach, turns clockwise past the beach, flows out past Urchin Rocks (it can fluctuate here) and across the face of the head, and part of it rounds the south tip of Rosario Head into Sharpe Cove. The strait itself runs hard, with daily ebb peaks of 0.15 to 1.67 m/s at the station over the same 30 days; the bay around Urchin Rocks is comparatively sheltered.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 65 to 155 minutes. For Urchin Rocks, begin about 30 minutes before the flood so the outbound swim is on the dying ebb and the return is with the building flood curling into the bay. For Rosario Head into Sharpe Cove, dive on an ebb and swim with the current around the head, keeping the wall in sight to avoid being carried past its end. For Northwest Island, swim out in the last 30 minutes of the flood and return on the ebb along the north shore. Plan every version so the return leg is with the current.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Deception Island, 2.7 miles west of, 48°24.75′ N, 122°44.37′ W, about 5.4 km west |
+| **Legacy reference** | Rosario Strait (PCT1996) |
+| **Slack before flood** | 1 hour 8 minutes after the reference |
+| **Slack before ebb** | 38 minutes after the reference |
+
 ## Wind
 
 | | |

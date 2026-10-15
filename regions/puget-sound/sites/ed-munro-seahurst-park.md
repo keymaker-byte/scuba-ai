@@ -47,6 +47,15 @@ Shore dive off the long sand and cobble beach of Ed Munro Seahurst Park in Burie
 * **Ebb.** Out in the channel the ebb sets north, but close in front of the entry an eddy keeps the near-shore water setting south on the ebb as well, so expect a southward set on either exchange. Daily peaks run 0.12 to 0.25 m/s at the station over the same 30 days.
 * **Diveable window.** Current is minimal for most of the day, picking up to moderate only on the larger exchanges. Slack along the beach turns later than at the station, typically by 40 minutes to over an hour, and on weak exchanges the turn is so gentle its timing is ill defined. On a big exchange, plan the dive around the station's slack and expect a southward drift; finishing south of the entry is an easy walk back along the beach. Current at the station stays under 0.25 m/s for about 1 to 18 hours at a time.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Alki Point, 0.3 mile west of, 47°34.53′ N, 122°25.68′ W, about 11.7 km north-northwest |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 36 minutes before the reference |
+| **Slack before ebb** | 13 minutes before the reference |
+
 ## Wind
 
 | | |

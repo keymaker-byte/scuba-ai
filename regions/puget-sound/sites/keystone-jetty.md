@@ -14,7 +14,7 @@ Shore dive along the boulder jetty that shelters the Coupeville to Port Townsend
 
 ## Getting there
 
-* **Entry.** Enter the water on the east side of the jetty, submerge, and work along the large boulders. The jetty is built like a pyramid, with far more rock below the waterline than above. Divers with a dive-kayak can launch from the ramp and paddle the 200 m around the jetty rather than swim it, leaving the kayak on the far beach and entering on the east side. Do not swim that gap, as the current is strong and it crosses the ferry lane.
+* **Entry.** Enter the water on the east side of the jetty, submerge, and work along the large boulders. The jetty is built like a pyramid, with far more rock below the waterline than above.
 * **Parking.** In the Keystone State Park lot. A Washington Discover Pass or a day fee is required.
 * **Access.** 08:00 to dusk. About 47 mi from Seattle, 66 mi from Bellingham.
 * **Facilities.** Restrooms with wheelchair-accessible flush toilets and hot showers, an outside cold shower for rinsing gear, picnic tables, barbecue stands, a boat launch and ample parking on site. A restaurant across the street. Camping across the harbour at Fort Casey Historical State Park.
@@ -26,7 +26,6 @@ The jetty is the spine of the dive, worked out along the boulders and back. Work
 * **The jetty.** A pyramid of large boulders running from the beach out into Admiralty Inlet, down to sand at the end. Hundreds of gaps between the rocks make hiding places, and the structure holds bull kelp and a heavy invertebrate cover. The first half suits snorkelers and divers of any level; the end of the jetty and the wharf commit you to more current and are best kept for experienced divers or done with a guide.
 * **East face.** The sheltered harbour side of the jetty is the one that is entered and dived, and where the life is thickest.
 * **Rock of Life.** A boulder along the jetty especially heavily encrusted with life, a useful landmark and a common turnaround for a conservative dive.
-* **Octopus den.** A giant Pacific octopus has denned in the shallows at around 8 m below datum.
 * **The end of the jetty.** Where the boulders run out into the current. The far end and the opposite (west) face can be explored when the current allows, but the flow is strongest here.
 * **Wharf pilings.** About 230 m east of the jetty, a group of old wharf pilings stands over sand at roughly 6 to 11 m, covered in plumose anemones and feather duster worms, a separate and more sheltered dive. It tolerates the exchanges better than the jetty and can be drifted between the pilings and the jetty on a flood or an ebb, but current still runs here, so slack is the safe default, especially on the ebb.
 
@@ -48,9 +47,18 @@ Current is the defining constraint, strong and erratic, and it does not behave s
 
 * **Flood.** Sets southeast up Admiralty Inlet at the station, with daily peaks of 1.34 to 2.30 m/s over 30 days. Locally, the early flood runs in along the jetty, then turns in the shallows and flows parallel to shore toward the wharf pilings. A large exchange striking the jetty divides in two, one arm running out along the rocks and one inshore.
 * **Ebb.** Sets north-northwest out of the inlet at the station, with daily peaks of 0.90 to 2.93 m/s over the same 30 days. Locally the flow runs southwest, past the wharf toward the jetty, then turns and flows out along the rocks at the jetty.
-* **Diveable window.** The slack before flood only, with a typical window under 0.25 m/s at the station of about 25 to 55 minutes. True slack before ebb does not happen here, the current merely slows before building again, so it is not a window. The current can run hard at the exposed end even when the shore looks calm. The flow is slower on the bottom, the boulders give hand holds and shelter, and the rule in current is to swim with it or across it, never against it.
+* **Diveable window.** The slack before flood only, with a typical window under 0.25 m/s at the station of about 25 to 55 minutes. True slack before ebb does not happen here, the current merely slows before building again, so it is not a window. The current can run hard at the exposed end even when the shore looks calm. The flow is slower on the bottom, the boulders give hand holds and shelter.
 * **When the slack fails to arrive.** A slack at the station is necessary but not sufficient. The jetty current is a local eddy off the main channel, and on some exchanges the channel passes through slack while the eddy keeps running southwest and never truly stops. The pattern to watch for is a strongly diurnal day, or a flood following the slack that is much weaker than the ebb before it: the flood is what resets the flow, and a weak one may leave the current simply running on. Before committing, read the max flood and ebb either side of the slack rather than the slack alone. Prefer a slack flanked by two moderate, roughly equal maxes; be wary when the following flood is weak or the window is short, since the site then turns fast and being a few minutes late leaves you in current. Be ready to abort if it is still running at the end of the jetty.
 * **Read the surface before committing.** The clock and the station prediction only get you close; confirm from the beach before gearing up. Floating logs and other debris drifting across the harbour show whether the water is actually moving and which way, a direct read on the eddy that the station's slack time cannot promise on its own.
+
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Admiralty Head, 0.5 mile west of, 48°09′ N, 122°42′ W, about 2.3 km west-southwest |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 31 minutes before the reference |
+| **Slack before ebb** | 1 minute after the reference |
 
 ## Wind
 

@@ -43,6 +43,15 @@ Kayak Point County Park sits on the east shore of Port Susan, a bay of Puget Sou
 * **Ebb.** Sets south-southwest down Port Susan, weak.
 * **Diveable window.** Current at the dive point stays weak all day, well under 0.05 m/s in the depth averaged prediction, so the site does not depend on a tight slack window the way a passage or a point does. Slack timing comes from the site's own ENPAC15 extract; a late entry is not the problem here that it would be at a true current site.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Edmonds, 2.7 miles WSW of, 47°48.38′ N, 122°26.67′ W, about 37.1 km south |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 44 minutes after the reference |
+| **Slack before ebb** | 13 minutes after the reference |
+
 ## Wind
 
 | | |

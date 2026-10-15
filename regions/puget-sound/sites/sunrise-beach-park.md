@@ -47,6 +47,16 @@ Shore dive at Sunrise Beach Park, north of Gig Harbor on the west shore of Colvo
 * **Ebb.** Sets north along the shore, toward the entry. Colvos Passage carries a net northward flow, so the ebb simply continues what the late flood started. Before ebb the north going current slows, then builds again on the ebb, often without ever stopping. Daily peaks run 0.23 to 0.56 m/s at the station over the same 30 days.
 * **Diveable window.** The slack before flood, on a small exchange. A typical window under 0.25 m/s at the station runs about 65 to 275 minutes. For a dive that rides the current both ways, enter while the water still sets south early in the flood, which carries a diver along the beach to the wall, and it reverses to north shortly after the station begins to flood, carrying the diver back toward the entry. The end of the ebb, just before this window, is the hardest part of the cycle to predict, with weak flow fluctuating in direction and the possibility of downcurrents; do not drop early into it. Exchanges of about 2.5 m or less at the Gig Harbor tide station give the longest windows; a big exchange can leave current running through the whole dive. On a low exchange day the slowing before ebb is also diveable, as a short lull.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Sunrise Beach, a correction for the site itself, published without a station number or position |
+| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
+| **Slack before flood** | 1 hour 30 minutes before the reference |
+| **Reversal of flood current** | 4 minutes after the reference's slack before flood |
+| **Slack before ebb** | 16 minutes before the reference |
+
 ## Wind
 
 | | |

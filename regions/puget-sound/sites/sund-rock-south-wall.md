@@ -46,6 +46,15 @@ Sund Rock South Wall is dived independently of the tide. The current in the chan
 * **Slack.** This reach of the canal behaves as a standing wave, so slack falls close to high and low water rather than midway between them. Slack at the site falls close to high and low water at Union, which makes the tide table a usable guide to it here; the exact offset is not established and is confirmed in the water. This is a local exception, and it does not hold elsewhere in the Sound.
 * **Diveable window.** All day. What little current there is rarely matters at this contained, shallower depth range.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Foulweather Bluff, 47°55.90′ N, 122°38.33′ W, about 66.1 km north-northeast |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | At the reference |
+| **Slack before ebb** | 15 minutes before the reference |
+
 ## Wind
 
 | | |

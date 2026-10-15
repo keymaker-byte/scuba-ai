@@ -47,6 +47,15 @@ The reef is spread across a broad area and is easy to miss piecemeal, so most di
 * **Where the current sits.** It is usually mild and often unnoticeable at depth, and stronger in the shallows. Staying toward the northeast, junkyard end keeps you out of most of it, and the water builds as you work southwest toward the point. The junkyard is sheltered on an ebb, while the straight-out ground toward the point is best on slack or a mild ebb. Strong current is rare and comes with large tidal exchanges; on a big exchange, enter down-current and drift back to the entry.
 * **Diveable window.** Current at the station stays under 0.25 m/s for about 1 to 19 hours at a time.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Alki Point, 0.3 mile west of, 47°34.53′ N, 122°25.68′ W, about 14.1 km north-northwest |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 36 minutes before the reference |
+| **Slack before ebb** | 13 minutes before the reference |
+
 ## Wind
 
 | | |
