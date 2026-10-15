@@ -45,6 +45,20 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 * **Ebb.** Also sets northeast, past the wharf toward the ferry pier, the same direction as the reversed flood. There is no clean slack between the two: the northeast current simply eases through the turn and rebuilds as the ebb develops. Daily peaks run 0.32 to 1.88 m/s at the station over the same 30 days.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 60 minutes, while the current here stays weak through most of the day, comfortably under 0.25 m/s, so the window is forgiving on strength. What it is not forgiving of is direction: it can swing from southwest to northeast, or ease and rebuild through a false slack, with little warning.
 
+Legacy correction, carried as published and separate from the reconciled figures above:
+
+| | |
+|---|---|
+| **Legacy station** | Point Hudson, a correction for the site itself, published without a station number or position |
+| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
+| **Slack before flood** | 2 hours 26 minutes before the reference |
+| **Reversal of flood current** | 30 minutes before the reference's slack before flood |
+| **Slack before ebb** | At the reference |
+
+* **Slack before flood.** The turn into the early flood, which sets southwest past the abandoned ferry pier toward Union Wharf.
+* **Reversal of flood current.** Partway through the flood cycle, the current reverses to run northeast, from Union Wharf toward the abandoned ferry pier. Its timing varies with the size of the exchange, so the published time is a starting point to confirm in the water.
+* **Slack before ebb.** A false slack. The ebb also sets northeast, past Union Wharf toward the abandoned ferry pier, the same direction as the reversed flood, so the northeast current slows through this time and then picks up speed again as the ebb builds.
+
 ## Wind
 
 | | |
