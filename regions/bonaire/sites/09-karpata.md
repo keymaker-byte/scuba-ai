@@ -1,69 +1,81 @@
 # 9. Karpata
 
-A popular shore dive at the end of the one-way section of the north coast road, known for excellent visibility and panoramic views that make it a favourite with wide-angle photographers. A historic ship's anchor sits embedded in the coral at 11 m as a navigation point, and the middle zone once held some of Bonaire's most impressive elkhorn coral, stretching from about 3 m up to the surface; Karpata is one of STINAPA's long-term reef monitoring sites, and the bleaching events of 2023 and 2024 cut elkhorn cover here along with the rest of Bonaire's leeward coast, where about 19% of colonies died outright and another 55% show partial mortality. Karpata was closed along with the Washington Slagbaai sites to its north during the outbreak but has since been reopened by STINAPA.
+A popular shore site on Bonaire's northwest coast at the end of the coastal road's one-way section, below the ruined Karpata plantation house and on the southern edge of the King Willem-Alexander Reserve. A concrete stairway and platform lead onto a shallow terrace of elkhorn coral and gorgonians at 4 to 7 m, which drops just offshore over a slope of steep ridges and sand chutes to 30 m and beyond. Old ship anchors lie in the coral around 11 m, and the site is the exit for the drift from La Dania's Leap. The headline hazard is the entry and exit over the platform and rocky shallows, which turns difficult in any surf.
 
 | | |
 |---|---|
-| **Location** | Northwest coast, Bonaire, at the end of the one-way section of the coastal road, just south of the closed Washington Slagbaai stretch |
-| **Coordinates** | 12.218936, -68.3545 (dive area, reef ledge, about 3 m, dropping beyond to deep water) |
-| **Parking coordinates** | 12.219548, -68.351902, the concrete platform at the end of the coastal road |
-| **Entry point coordinates** | 12.219349, -68.352014 |
+| **Location** | Northwest coast, Bonaire, below Landhuis Karpata on the coastal road, Caribbean Sea |
+| **Coordinates** | 12.218956, -68.352202 (edge of the shallow terrace, 4.9 m) |
+| **Parking coordinates** | 12.219548, -68.351902, the parking area at the top of the stairway |
+| **Entry point coordinates** | 12.219349, -68.352014, the concrete platform at the foot of the stairway |
 | **Type** | Shore |
 | **Depth range** | 3 to 30 m |
 
 ## Getting there
 
-* **Entry.** Off the coastal road at the end of its one-way section, a well established shore entry.
-* **Parking.** Roadside at the entry.
-* **Access.** Open, reopened by STINAPA after a temporary SCTLD-related closure; the sites to the north (the Washington Slagbaai chain, Boka Bartol through Nukove) remain closed. Follow the standard decontamination protocol for gear given the site's disease history, and do not touch the coral.
-* **Facilities.** None at the site.
+* **Entry.** A concrete stairway of about 20 steps leads from the parking area down to a concrete platform on a small rocky shore. Kit up on the platform, sit on its edge to put on fins, add a little air to the BCD and push off on a lull or let a wave carry you over the shallow, rocky bottom, entering to the right of the platform as you face the sea, then turning left along the reef. To exit, float in over the rocks, take hold of the platform, remove fins in the water and climb out along it. Waves break over the platform, so leave nothing on it, and wear boots with a firm sole for the coral rubble and rocks underfoot.
+* **Parking.** A free parking area at the top of the stairway, beside the road. It fills on busy days.
+* **Access.** Take the coastal road north from Kralendijk past 1000 Steps, where it becomes one way; Karpata sits at the end of the one-way section, marked by a yellow stone opposite the Karpata plantation house. Driving back the way you came runs against the one-way traffic, so the return continues north and inland through Rincon, a longer drive back to town. The King Willem-Alexander Reserve, where diving is prohibited, begins about 90 m west-northwest of the entry, so dive to the left of the platform as you face the sea, toward the east-southeast. The Nature Fee e-tag is required. STINAPA closed Karpata and La Dania's Leap from July to September 2022 after a fast-spreading coral disease was found on a pillar coral at Karpata; both reopened in September 2022 and stayed open through the 2023 closure of the coast to the north. STINAPA removed the Karpata mooring buoy for maintenance in August 2026, closing the site to boat diving until it is replaced, with shore diving unaffected; confirm the mooring and site status with STINAPA before planning a dive.
+* **Facilities.** None beyond the stairway and platform; no toilets or rinse water.
 
 ## Navigation and landmarks
 
-* **Historic anchor.** Embedded in the coral at 11 m, a fixed navigation point on the reef.
-* **Elkhorn colonies.** The middle zone held Bonaire's most impressive elkhorn stands, running from about 3 m to the surface, thinned by bleaching since 2023.
-* **La Dania's Leap.** Karpata serves as the exit point for the shore drift that starts at La Dania's Leap, about 500 m to the east.
-* **Depth profile.** The reef ledge sits around 3 m, where the elkhorn grows, dropping over the wall beyond to 30 m and deeper.
+* **Platform and terrace.** From the platform the bottom runs out over rock and coral rubble onto the shallow terrace, which shoals at 4 to 5 m off the platform, with elkhorn coral reaching almost to the surface a few metres from shore.
+* **Terrace edge.** The dive area coordinate sits on the terrace edge at 4.9 m, 48 m south-southwest, 205°, straight out from the platform. Past it the bottom drops quickly to 8 to 9 m within about 20 m.
+* **Mooring.** The mooring buoy stands at about 6 m, when in place, and makes a starting point for the dive.
+* **Anchors.** Old ship anchors lie embedded in the coral around 11 m, a short swim east-southeast of the mooring along the reef, and serve as a fixed navigation point.
+* **Ridges and sand chutes.** Below the terrace the reef runs in steep coral ridges separated by sand chutes, which cut perpendicular down the slope to 30 m and well beyond. The shallow terrace either side of the entry holds 4 to 7 m for well over 100 m along the shore.
+* **Reserve boundary.** The terrace and reef continue west-northwest of the entry, but the reserve begins about 90 m along, leaving only a short stretch open on that side.
+* **Return.** Swim back up onto the terrace and north-northeast, 25°, to the platform.
 
 ## Current
 
 | | |
 |---|---|
 | **Current type** | Wind driven |
-| **Usual set** | Not established |
+| **Usual set** | west-northwest, 295° |
 | **Typical speed** | Not established |
 
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
-* **Character.** Current at Karpata usually runs light; the drift from La Dania's Leap to the east depends on its set.
+* **Character.** Usually light, often slack, and at times moderate to strong. The usual set runs west-northwest along the coast, the direction of the shore drift that ends at this platform. On some days it reverses and runs east-southeast, 115°.
+* **Drivers.** Not established.
+* **Shelter.** Where the current runs, it is strongest along the outer reef and on the ridge crests, and weaker on the shallow terrace and in the valleys between the ridges.
+* **Plan.** Check the set at the start of the dive and swim the first half into it, so the return to the platform runs with the current. When the set runs east-southeast, the open reef lies down-current and the reserve lies up-current; keep the dive short and close to the terrace, or choose another day.
 
 ## Wind
 
 | | |
 |---|---|
-| **Entry shore facing** | south-southwest, 206° |
-| **Dive area shore facing** | south-southwest, 197° |
+| **Entry shore facing** | south-southwest, 205° |
+| **Dive area shore facing** | south-southwest, 206° |
 
-The coast here runs west-northwest to east-southeast, and the swim out runs 274 m west along it from the entry to the dive area.
+The coast here runs west-northwest to east-southeast, and the swim out runs 48 m south-southwest, 205°, straight out from the platform.
 
-* **Bad.** South-southeast through west (SSE-W), onshore over 7.6 km to more than 30 km, along the coast from the southeast or across open sea from the south and west. Any wind from this quarter raises swell at the entry.
-* **Mixed.** East-southeast through southeast (ESE-SE), cross-shore over 5.4 to 8.1 km down the coast, running a swell along the shore past the entry. Strong trades from this quarter put chop on the surface.
-* **Fine.** West-northwest clockwise through east: offshore from north-northwest through east, off the land, and cross-shore over 290 to 440 m from the west-northwest and northwest.
+* **Bad.** South-southeast through west (SSE-W), onshore over 7.4 km to more than 30 km of open sea. Wind from this quarter drives waves onto the platform and rocky shallows and makes the entry and exit hazardous.
+* **Mixed.** Southeast (SE), cross-shore over 11.7 km down the coast, running a swell along the shore past the platform. When the trades swing southeast, they put chop on the surface.
+* **Fine.** West-northwest clockwise through east-southeast: cross-shore over 140 to 510 m from the west-northwest and northwest, offshore from north-northwest through east over 50 to 100 m, off the land, and cross-shore over 4.9 km from the east-southeast. The prevailing east trades blow off the land here and leave the platform flat. Northern swell in winter and swell from passing tropical systems still put surf on the platform under a light wind; skip the dive when waves break over it.
 
 ## Visibility
 
-* **Overall.** Excellent and one of the site's defining features, suited to wide-angle photography.
+* **Overall.** 15 to 30 m, typically around 25 m, and at its best excellent, with wide views along the slope that suit wide-angle photography.
+* **Wind and swell.** Best on calm mornings, lower when wind and waves stir the shallows.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A wetsuit or dive skin is standard, with boots for the rocky entry.
 
 ## Marine life
 
-* **Shallows.** Elkhorn coral from about 3 m to the surface, once dense, now thinned by disease and bleaching.
-* **Reef.** A historic anchor at 11 m, now part of the reef structure.
-* **Wall.** Larger reef fish moving through from the wall to the east.
+* **Coral.** Elkhorn coral grows in clusters from about 3 m almost to the surface, with staghorn, brain, lettuce and plate corals, sea fans, sea rods and large gorgonians on the terrace and the ridges, and sponges down the slope. The bleaching events of 2023 and 2024 cut elkhorn cover along Bonaire's leeward coast, where about 19% of colonies died outright and another 55% show partial mortality.
+* **Reef fish.** Schools of blue tang, parrotfish, French and queen angelfish, honeycomb cowfish, filefish, porcupinefish, triggerfish, large yellowtail snapper, spotted drum juveniles and peacock flounder.
+* **Turtles.** Green and hawksbill turtles, seen most often on the east-southeast side of the site between 5 and 12 m.
+* **Larger animals.** Tarpon, barracuda, green morays and the occasional nurse shark, stingray or spotted eagle ray along the slope.
+* **Invertebrates.** Caribbean reef squid and octopus, lobsters, and flamingo tongues on the gorgonians.
 
 ## Hazards
 
-* **SCTLD decontamination.** Given the site's coral disease history, disinfect gear per STINAPA's protocol and avoid all contact with the coral.
-* **Drift traffic.** Divers finishing the drift from La Dania's Leap surface here; watch for other groups coming up.
+* **Entry and exit.** The platform and rocky shallows turn hazardous with any surf, and the exit is the harder of the two: waves can wash a diver off the platform or against the rocks. Choose another site when waves break over the platform.
+* **Depth.** The slope drops past 30 m close to shore with nothing to stop a descent; watch depth and gas on the slope and keep gas for the shallows.
+* **Reserve.** Diving in the King Willem-Alexander Reserve to the west-northwest is prohibited and enforced by STINAPA rangers; turn back before the boundary.
+* **Drift traffic.** Divers finishing the drift from La Dania's Leap come in over the terrace and exit here; watch for other groups surfacing near the platform.
+* **Car break-ins.** Break-ins happen at the isolated parking area here; leave nothing of value in the vehicle.
+* **Stony coral tissue loss disease (SCTLD).** Disinfect gear before, between and after every dive per STINAPA's protocol, and keep clear of the coral.

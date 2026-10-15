@@ -1,68 +1,76 @@
 # 3. Playa Funchi
 
-A protected cove in Washington Slagbaai National Park, popular for both diving and snorkeling and scenic enough to be worth the drive even without gear. The cove itself makes for an easy entry despite a rocky shoreline, opening onto a reef edge that drops quickly into open water where horse-eye jacks school. Diving here is currently suspended under STINAPA's coral disease closure covering this stretch of the park's coast.
+A small cove in Washington Slagbaai National Park, the old landing of the Washington plantation, where a beach of sand, gravel and pebbles between rocky shores opens west onto a broad reef terrace and a steep drop into deep water. The cove itself is straightforward to enter in calm weather and sheltered from the east trades, while beyond it the current builds and can shift quickly along the reef. Diving here is suspended under STINAPA's closure of the park to diving.
 
 | | |
 |---|---|
-| **Location** | Washington Slagbaai National Park, northwest coast, Bonaire |
-| **Coordinates** | 12.282367, -68.4146 (dive area, reef edge, about 6 m, dropping past 100 m a short way offshore) |
-| **Parking coordinates** | 12.282340, -68.413770, beside the park road at the cove |
+| **Location** | Washington Slagbaai National Park, northwest coast, Bonaire, Caribbean Sea |
+| **Coordinates** | 12.282449, -68.415336 (reef terrace west of the cove, 13 m) |
+| **Parking coordinates** | 12.282340, -68.413770, unpaved ground at beach level behind the cove |
 | **Entry point coordinates** | 12.282301, -68.413995, the cove beach |
 | **Type** | Shore |
-| **Depth range** | Not established |
+| **Depth range** | 4 to 30 m |
+| **Skill level** | Advanced |
 
 ## Getting there
 
-* **Entry.** Rocky underfoot; dive booties are worth wearing. The cove itself is protected, so the entry stays easy for diving even when the rock makes footing awkward. Only go in when the water is calm, since swell and current can pick up at this exposed corner of the park.
-* **Parking.** Beside the park road at the cove; a paved route runs through the park to this point, reachable in any rental car.
-* **Access.** Inside Washington Slagbaai National Park, open Tuesday to Sunday 08:00 to 17:00, last entry 14:30; the park can close after heavy rain. The Bonaire Nature Fee covers entry to both the marine park and Washington Slagbaai on one tag. Carry drinking water, there is nowhere at the site to buy or refill it. All diving inside the park, including this site, has been suspended since 1 May 2023 under STINAPA's Stony Coral Tissue Loss Disease closure of every site from Karpata north to Malmok; STINAPA has continued to find no SCTLD in the closed northern stretch and the closure remains in force, so confirm current status with STINAPA before planning a dive here.
-* **Facilities.** None at the site.
+* **Entry.** From the beach, over sand, coarse gravel, polished pebbles and loose blocks of old coral, with larger rock blocks in the middle of the bay that make footing awkward in any swell. Wear sturdy boots, walk in to knee depth before putting on fins, and time the entry between sets when a small surf is running. The north side of the beach gives the easier exit.
+* **Parking.** Free, on unpaved ground at beach level between the beach and the saliña behind it, reached down a steep hill, or in a larger area on top of the cliff above the cove with a walk down. Park at the beach and leave nothing in the car.
+* **Access.** Closed to diving: STINAPA closed every site north of Karpata on 1 May 2023 over Stony Coral Tissue Loss Disease (SCTLD), reopened the coast between BOPEC and the park, Nukove and Carel's Vision included, on 27 January 2024, and keeps Washington Slagbaai National Park closed to diving while the park stays open for every other activity, snorkeling included. Confirm status with STINAPA before planning a dive here. When open, the site is reached by both the short (green) and long (yellow) routes from the park entrance north of Rincon, each a one-way dirt road with a 25 km/h limit. STINAPA recommends at least 30 cm of ground clearance, and rangers at the gate may turn away a lower vehicle depending on road conditions. The park opens Tuesday to Sunday 08:00 to 17:00, closed on Mondays and holidays, with last entry at 14:30, and can close fully or in part after heavy rain. The Nature Fee e-tag covers both the marine park and Washington Slagbaai. Fill up before entering the park; the nearest fuel is in Rincon.
+* **Facilities.** Palapa-covered picnic tables on either side of the beach and shade trees along the shore.
 
 ## Navigation and landmarks
 
-* **The cove.** Entry and the shallows sit inside the protected cove itself.
-* **Reef edge.** Beyond the cove the reef drops quickly toward open water, where the jacks run.
-* **Depth profile.** The reef edge sits around 6 m before the bottom falls away fast, reaching well past 100 m within a short distance of the cove.
+* **The cove.** A small bay with rocky shores to the north and south and the beach at its head. A buoy floats in the bay off the beach, and the stone foundations of the Washington plantation's old pier lie in the bay.
+* **Shallow terrace.** Sand and patch reef at 4 to 5 m for the first 60 m west of the entry, stepping down to about 10 m some 80 m out.
+* **Reef terrace.** A broad terrace at 10 to 13 m runs north and south along the shore, deepest near the dive area 147 m west of the entry and rising to 11 m at its outer lip, and the best coral and most fish sit at 10 to 12 m.
+* **Drop-off.** About 250 m west of the entry, the terrace edge at 11 m falls away steeply, a wall from about 15 m down to 25 or 30 m, and past 50 m in open water beyond.
+* **Route.** The reef can be dived either way along the shore. Start north-northwest into the usual set, or into whatever current runs on the day, so the return to the cove runs with it, and turn back toward the beach while the cove's rocky points are still close.
 
 ## Current
 
 | | |
 |---|---|
 | **Current type** | Wind driven |
-| **Usual set** | Not established |
+| **Usual set** | south-southeast, 163°, along the shore |
 | **Typical speed** | Not established |
 
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
-* **Character.** The cove itself stays sheltered, while current and swell build quickly on the open reef edge beyond it; enter only in calm conditions.
+* **Drivers.** The east to southeast trade winds, which run strongest from late morning into the afternoon. The current can sit still for days, then run hard when the trades pick up or shift; early morning usually brings the calmest water.
+* **Character.** The cove stays sheltered, while current and swell build quickly on the open reef beyond it. The current runs from slight to strong and can change strength within a single dive, enough to carry a diver past the cove.
+* **Exits.** The shore either side of the cove is rock and cliff, hard to climb out on; a diver carried past the beach faces a long swim back or a climb.
 
 ## Wind
 
 | | |
 |---|---|
-| **Entry shore facing** | west, 266° |
-| **Dive area shore facing** | northwest, 312° |
+| **Entry shore facing** | west, 260° |
+| **Dive area shore facing** | west-southwest, 253° |
 
-A small pocket cove open to the west, with the shore wrapping round its north, east and south sides within 50 to 80 m of the dive area.
+The cove opens west onto open sea, and the swim out runs 147 m west, 276°, from the entry across the terrace to the dive area.
 
-* **Bad.** South-southwest through northwest (SSW-NW), onshore over more than 30 km of open sea, straight into the mouth of the cove. Any wind from this quarter raises swell fast at this exposed corner of the park.
-* **Mixed.** North-northwest (NNW), cross-shore over more than 30 km, running a swell across the cove mouth past the entry.
-* **Fine.** North clockwise through south: offshore from north-northeast through southeast, off the land, and cross-shore over 50 to 80 m from the north, south-southeast and south. The prevailing east to southeast trades blow off the land here and leave the cove flat.
+* **Bad.** South-southwest through northwest (SSW-NW), onshore over more than 30 km of open sea, straight into the mouth of the cove, building surf on the rocks and blocks of the entry. West and northwest winds quickly build surf on the entry.
+* **Mixed.** North-northwest through north (NNW-N), cross-shore over more than 30 km, running a swell along the shore past the entry.
+* **Fine.** North-northeast clockwise through south: offshore from north-northeast through southeast over 90 to 140 m, off the land, and cross-shore over 340 m from the south-southeast and 750 m from the south. The prevailing east to southeast trades blow off the land here and leave the cove flat, so the entry stays diveable through strong east winds, though strong trades drive the current on the reef beyond.
 
 ## Visibility
 
-* **Overall.** Typically excellent, 15 to 30 m, occasionally reduced by swell stirring the shallows when wind runs out of the north or west.
+* **Overall.** 15 to 30 m, typically around 25 m, held steady by the cove's shelter from the east trades.
+* **Swell and rain.** Swell from the north or west stirs the shallows, and rain from October to January washes sediment off the land, lowering it to about 10 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm shorty or full 3 mm wetsuit is standard.
 
 ## Marine life
 
-* **Open water.** Horse-eye jacks school off the reef edge.
-* **Shallows.** Sand tilefish, peacock flounders and other sand dwellers work the cove's sandy patches; reef fish including blue tang, black durgon, parrotfish, French grunt, trumpetfish and French angelfish are regularly seen.
+* **Shallows.** Sand tilefish, peacock flounder and other sand dwellers on the sandy patches, with blue tang schools, French grunts, French angelfish, black durgon, trumpetfish and parrotfish over patch reef of brain and lettuce coral, much of it broken and some showing SCTLD damage.
+* **Reef terrace.** Hard coral heads, sponges and gorgonians with large parrotfish, drumfish, morays, lobsters, squid and plentiful lionfish, and southern stingrays on the sand.
+* **Open water.** Horse-eye jacks school in the blue off the drop-off, with barracuda, eagle rays, turtles and the occasional nurse shark.
 
 ## Hazards
 
-* **Diving suspended.** Closed to diving under STINAPA's SCTLD order since 1 May 2023, until STINAPA lifts the closure.
-* **Exposed corner.** Swell and current can build quickly here even though the cove itself is protected; only enter when conditions are calm.
-* **Rocky footing.** The shoreline is rock rather than sand.
+* **Diving suspended.** Washington Slagbaai National Park is closed to diving under STINAPA's SCTLD measures, until STINAPA lifts the closure.
+* **Current.** Variable, from slight to strong, and shifting within a dive. Overshooting the cove leaves only rocky shore and cliff to exit on. Carry a surface marker buoy.
+* **Entry.** Loose stones, old coral and rock blocks underfoot, and a small surf on the beach in any west or north swell.
+* **Depth.** The terrace edge at 11 m drops steeply to the wall and past 50 m beyond it.
+* **Remote.** The park is outside mobile phone coverage, and a long dirt road to help; leave a dive plan and an expected return time with someone outside the park, and finish diving with time to clear the park gate by 17:00.

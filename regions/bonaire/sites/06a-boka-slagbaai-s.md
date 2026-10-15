@@ -1,30 +1,30 @@
 # 6a. Boka Slagbaai S
 
-The southern of two routes at Boka Slagbaai and the southernmost dive site inside Washington Slagbaai National Park, in a sheltered bay fronted by the park's historic colonial buildings. Slagbaai takes its name from the Dutch slachtbaai, slaughter bay, once one of the island's two main ports, where goats were slaughtered and salted before shipping to Curaçao. This route holds the site's real history: two 18th century cannons at about 3 m, preserved by the salt water and now grown over with coral and sponge, along with scattered anchors, anchor chains and ballast stones from ships that once worked the bay. Diving here is currently suspended under STINAPA's coral disease closure covering this stretch of the park's coast.
+The southern of two routes at Boka Slagbaai and the southernmost dive site inside Washington Slagbaai National Park, in a sheltered bay fronted by the four restored yellow buildings of the old Slagbaai plantation port. The name comes from the old Sla baai, from the Papiamentu salu, salt, for the salt pans behind the beach, though it is popularly read as the Dutch slachtbaai, slaughter bay, after the goats once slaughtered and salted here for Curaçao. This route holds the bay's colonial history: two colonial era cannons in 2 to 3 m along the southern side of the bay, grown over with coral and sponge, among scattered anchors, anchor chains and ballast stones, before a swim west across a coral and sand terrace to the drop-off. Diving here is suspended under STINAPA's closure of the park to diving, and, when open, the site turns rough in winter north swell.
 
 | | |
 |---|---|
-| **Location** | Washington Slagbaai National Park, northwest coast, Bonaire |
-| **Coordinates** | 12.264696, -68.414429 (dive area, reef terrace, about 5 m) |
-| **Parking coordinates** | 12.264696, -68.413442, by the historic yellow building |
-| **Entry point coordinates** | 12.264486, -68.413711, the opposite side of the beach from the north route |
+| **Location** | Washington Slagbaai National Park, northwest coast, Bonaire, Caribbean Sea |
+| **Coordinates** | 12.264764, -68.415347 (coral and sand terrace, 10.5 m) |
+| **Parking coordinates** | 12.264696, -68.413442, coral gravel beside the historic yellow buildings |
+| **Entry point coordinates** | 12.264486, -68.413711, the southern end of the beach in front of the buildings |
 | **Type** | Shore |
-| **Depth range** | 3 to 24 m |
+| **Depth range** | 2 to 24 m |
 | **Skill level** | Advanced |
 
 ## Getting there
 
-* **Entry.** The sandy beach beside the park's historic yellow building, with parking only metres from the shoreline.
-* **Parking.** At the beach, metres from the water.
-* **Access.** Inside Washington Slagbaai National Park, open Tuesday to Sunday 08:00 to 17:00, last entry 14:30; the Slagbaai area must be left by 16:00. A high clearance vehicle (about 30 cm) is recommended for the park's unpaved roads, though this stretch is more accessible than the park's remoter sites; the park can close after heavy rain. The Bonaire Nature Fee covers entry to both the marine park and Washington Slagbaai on one tag. All diving inside the park, including this site, has been suspended since 1 May 2023 under STINAPA's Stony Coral Tissue Loss Disease closure of every site from Karpata north to Malmok; STINAPA has continued to find no SCTLD in the closed northern stretch and the closure remains in force, so confirm current status with STINAPA before planning a dive here.
-* **Facilities.** The park's historic buildings stand on the beach.
+* **Entry.** Off the southern end of the sandy beach in front of the historic buildings, an easy walk-in from a sheltered bay. Coral rubble and pebbles lie at the waterline; boots help.
+* **Parking.** About eight spaces on coral gravel beside the historic buildings, metres from the water. Parking is free.
+* **Access.** Closed to diving: STINAPA closed every site north of Karpata on 1 May 2023 over Stony Coral Tissue Loss Disease (SCTLD), reopened the coast between BOPEC and the park, Nukove and Carel's Vision included, on 27 January 2024, and keeps Washington Slagbaai National Park closed to diving while the park stays open for swimming, snorkelling and every other activity. Confirm status with STINAPA before planning a dive here. When open, the site lies about 45 minutes from Kralendijk, the last stretch about 20 minutes over unpaved road from the park entrance north of Rincon on the long (yellow) route, with a 25 km/h speed limit inside the park. The park opens Tuesday to Sunday 08:00 to 17:00, closed on Mondays and holidays, with last entry at 14:30; it can close fully or in part after heavy rain. STINAPA sets the last dive at Slagbaai to start by 14:30, with divers out of the water by 16:00 to reach the park exit before it closes. STINAPA recommends a vehicle with at least 30 cm of ground clearance, and rangers at the gate decide on anything lower. The Nature Fee e-tag covers both the marine park and Washington Slagbaai; the park takes card payment only. Fill up before entering the park; the nearest fuel is in Rincon.
+* **Facilities.** The four historic plantation buildings, built in 1868 and 1869 and last restored in 2001, with shaded picnic areas, and a toilet, open intermittently.
 
 ## Navigation and landmarks
 
-* **Yellow building.** Stands behind the beach shared by both routes.
-* **Cannons at 3 m.** Two genuine 18th century cannons, grown over with coral and sponge, the south route's signature feature.
-* **Anchors and ballast.** Anchors, anchor chains and ballast stones from historic shipping are scattered through the same area.
-* **Depth profile.** The reef terrace sits around 5 m, with the cannons themselves at about 3 m and the south route working out to the mid 20s.
+* **Swim out.** From the entry the bottom runs west, 280°, over sand and rubble, shelving quickly to about 4 m a few metres out, past 7 m within 60 m and onto the terrace at about 10 m by 80 m. The dive area lies 180 m out, about 90 m north of the bay's southern shore.
+* **Cannons.** Two historic cannons lie in 2 to 3 m in the shallows along the southern side of the bay, so heavily encrusted with coral and sponge that they are hard to pick out from the reef around them. Anchors, anchor chains and ballast stones from the plantation's shipping lie scattered through the same area. A second pair of cannons sitting clear in the sand in the middle of the bay at about 5 m are props, made and placed for a Dutch television series filmed in the late 1970s.
+* **Terrace.** Large coral formations separated by sand, 10 to 13 m deep, running about 100 m further west of the dive area to the terrace edge.
+* **Drop-off.** The terrace edge, about 280 m west of the entry at 10 to 13 m, where the reef falls steeply past 40 m. A long surface swim reaches it; a mooring buoy off the bay marks the reef.
 
 ## Current
 
@@ -34,33 +34,41 @@ The southern of two routes at Boka Slagbaai and the southernmost dive site insid
 | **Usual set** | Not established |
 | **Typical speed** | Not established |
 
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
-* **Character.** The bay is sheltered, and current still builds here with the wind.
+* **Drivers.** The trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Character.** Usually light inside the bay and at times strong, and it can strengthen during a dive and run against the swim back to the beach. Turn with enough gas to swim back against it.
 
 ## Wind
 
 | | |
 |---|---|
-| **Entry shore facing** | west-northwest, 297° |
-| **Dive area shore facing** | west-northwest, 302° |
+| **Entry shore facing** | west-northwest, 293° |
+| **Dive area shore facing** | northwest, 319° |
 
-* **Bad.** West-southwest through north-northwest (WSW-NNW), onshore over more than 30 km of open sea, straight into the mouth of the bay. The bay takes the edge off a swell from this quarter, but any wind with north or west in it still builds one at the entry.
-* **Fine.** North clockwise through southwest: offshore from east-northeast through south, off the land, cross-shore over 80 to 150 m from the north-northeast, northeast, south-southwest and southwest, and onshore over 630 m from the north, across the bay. The prevailing east to southeast trades blow off the land here and leave the bay flat.
+The bay opens west-northwest onto open sea. The dive area sits about 90 m off the bay's southern shore, which turns the facing there toward northwest, and the swim out runs 180 m west, 280°, from the entry.
+
+* **Bad.** West-southwest through north-northwest (WSW-NNW), onshore over 30 km or more of open sea, straight into the mouth of the bay, building waves and chop at the entry. Winter north swell reaches the beach under a light breeze too.
+* **Fine.** North clockwise through southwest: offshore from east-northeast through south, off the land, cross-shore over 100 to 460 m from the north-northeast, northeast, south-southwest and southwest, and onshore over 800 m from the north, across the bay. The east to southeast trades at their usual strength blow off the land here and leave the bay flat.
 
 ## Visibility
 
-* **Overall.** Typically excellent, 15 to 30 m, occasionally reduced by swell stirring the shallows when wind runs out of the north or west.
+* **Overall.** 10 to 30 m, typically around 25 m, best through the dry months from January to August and in the calm of the early morning.
+* **Swell and rain.** North winds and swell stir the shallows where the cannons lie, and rain from September to December washes sediment off the land, dropping visibility to 10 to 15 m.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water stays evenly mixed through recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-* **Shallows.** Large, unusual coral formations over a sandy bottom, with southern stingrays and garden eels.
-* **Wreckage.** Coral and sponge growth has taken over the cannons and other ironwork, now part of the reef itself.
+* **Cannons and ironwork.** Coral and sponge have grown over the cannons, anchors and chain, now part of the reef itself, and green morays and octopus hide among the chain.
+* **Terrace.** Large coral formations, brain coral among them, over sand, with large parrotfish, angelfish and schools of reef fish around 10 to 12 m. The reef carries a good deal of dead coral after SCTLD and coral bleaching.
+* **Sand.** Southern stingrays and garden eels.
+* **Reef and drop-off.** Barracuda over the reef, large green morays in the crevices, and the occasional eagle ray or green turtle. Lionfish are present.
 
 ## Hazards
 
-* **Diving suspended.** Closed to diving under STINAPA's SCTLD order since 1 May 2023, until STINAPA lifts the closure.
-* **Historic wreckage.** The cannons, anchors, anchor chains and ballast stones are genuine 18th century artifacts; leave them in place.
+* **Diving suspended.** Washington Slagbaai National Park is closed to diving under STINAPA's SCTLD measures, until STINAPA lifts the closure.
+* **Historic wreckage.** The cannons, anchors, anchor chains and ballast stones are protected heritage; leave them in place and keep clear of them.
+* **Long swim and return current.** The drop-off lies about 280 m from the beach, and a current that strengthens during a dive can run against the swim back. Carry a surface marker buoy, and turn with gas to spare.
+* **Winter swell.** North swell from December to February makes the entry unsafe; choose another day when the surf is up.
+* **Remote.** No mobile phone coverage in the park, and a long unpaved drive to help; leave a dive plan and an expected return time with someone outside the park, and finish diving with time to clear the park gate by 17:00.
