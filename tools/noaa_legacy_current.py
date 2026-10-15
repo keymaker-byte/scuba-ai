@@ -31,6 +31,9 @@ TCD_URL = "https://snapshot.debian.org/file/7f9edc4c9ea71a5a8f221bbb533943dbbaf9
 # XTide's 2018-01-01 release: the first to carry NOAA station IDs, still listing the retired stations.
 SQL_URL = "https://flaterco.com/files/xtide/harmonics-dwf-20180101-SQL.tar.bz2"
 KN = 0.514444  # m/s per knot
+# Reference stations the 2018 listing had already expired, so they carry no NOAA ID there.
+# The Narrows: XTide's 2018 ChangeLog, "PCT1766 was superseded by PUG1524".
+EXPIRED = {"The Narrows, north end (midstream), Washington Current": "PCT1766"}
 
 
 def _cfg(key, default):
@@ -205,6 +208,8 @@ def _ensure():
                 f = line.split("\t")
                 if len(f) > 4 and f[2] == "NOS" and re.fullmatch(r"(?:PCT|ACT)\d+(_\d+)?", f[3]) and f[1].endswith("Current"):
                     ids.setdefault(f[1], f[3].split("_")[0])
+        for name, sid in EXPIRED.items():
+            ids.setdefault(name, sid)
         h = Harmonics(TCD)
         index = {}
         for k, r in enumerate(h.records()):
@@ -217,7 +222,14 @@ def _ensure():
 def index():
     _ensure()
     with open(IDX) as f:
-        return json.load(f)
+        idx = json.load(f)
+    if not set(EXPIRED.values()) <= set(idx):
+        # An index built before an expired station was added: rebuild it once.
+        os.remove(IDX)
+        _ensure()
+        with open(IDX) as f:
+            idx = json.load(f)
+    return idx
 
 
 def station(sid):
@@ -334,10 +346,12 @@ def cmd_window(a):
     print("\n  Times are AT THE STATION. Apply the site offset, and pad it until observed.")
 
 
-# Slack times printed in NOAA's 2013 Tidal Current Tables (local standard time, UTC-8).
+# Slack times printed in NOAA's 2013 Tidal Current Tables, Pacific Coast of North America and Asia
+# (local standard time, UTC-8): https://tidesandcurrents.noaa.gov/tidetables/2013/pcct2013book.pdf
 CHECKS = [
     ("PCT1341", "2013-02-01", ["02:36", "07:15", "15:57", "19:48"]),
     ("PCT1541", "2013-01-01", ["01:36", "08:02"]),
+    ("PCT1766", "2013-01-01", ["01:56", "08:45", "14:59", "19:45"]),  # The Narrows (north end), p. 52
 ]
 
 
