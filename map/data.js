@@ -35,8 +35,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/16-1000-steps.md",
       "site": {
-        "lat": 12.210183,
-        "lon": -68.322317
+        "lat": 12.210105,
+        "lon": -68.322628
       },
       "entry": {
         "lat": 12.210819,
@@ -238,8 +238,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/04-bise-morto.md",
       "site": {
-        "lat": 12.279766,
-        "lon": -68.414758
+        "lat": 12.279854,
+        "lon": -68.415068
       },
       "entry": {
         "lat": 12.279661,
@@ -257,7 +257,7 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/12-bloodlet.md",
       "site": {
-        "lat": 12.215249,
+        "lat": 12.2155,
         "lon": -68.3418
       },
       "entry": null,
@@ -270,8 +270,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/01-boka-bartol.md",
       "site": {
-        "lat": 12.304327,
-        "lon": -68.398804
+        "lat": 12.304343,
+        "lon": -68.399822
       },
       "entry": {
         "lat": 12.303201,
@@ -289,8 +289,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/06-boka-slagbaai-n.md",
       "site": {
-        "lat": 12.265367,
-        "lon": -68.41435
+        "lat": 12.265587,
+        "lon": -68.414826
       },
       "entry": {
         "lat": 12.264879,
@@ -308,8 +308,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/06a-boka-slagbaai-s.md",
       "site": {
-        "lat": 12.264696,
-        "lon": -68.414429
+        "lat": 12.264764,
+        "lon": -68.415347
       },
       "entry": {
         "lat": 12.264486,
@@ -327,8 +327,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/15-bon-bini-na-kas.md",
       "site": {
-        "lat": 12.2122,
-        "lon": -68.3306
+        "lat": 12.211018,
+        "lon": -68.327998
       },
       "entry": null,
       "parking": null
@@ -420,14 +420,20 @@ window.MAP_DATA = {
       "slug": "08-carels-vision",
       "name": "8. Carel's Vision",
       "region": "bonaire",
-      "type": "boat",
+      "type": "shore",
       "file": "regions/bonaire/sites/08-carels-vision.md",
       "site": {
-        "lat": 12.235,
-        "lon": -68.4135
+        "lat": 12.230752,
+        "lon": -68.412943
       },
-      "entry": null,
-      "parking": null
+      "entry": {
+        "lat": 12.231072,
+        "lon": -68.412294
+      },
+      "parking": {
+        "lat": 12.230914,
+        "lon": -68.412174
+      }
     },
     {
       "slug": "v-carls-hill",
@@ -508,7 +514,7 @@ window.MAP_DATA = {
     },
     {
       "slug": "14-country-garden",
-      "name": "14. Country Garden",
+      "name": "14. Country Garden (Mushroom City)",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/14-country-garden.md",
@@ -654,8 +660,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/18-jeff-davis-memorial.md",
       "site": {
-        "lat": 12.204,
-        "lon": -68.3142
+        "lat": 12.204265,
+        "lon": -68.314453
       },
       "entry": {
         "lat": 12.204904,
@@ -712,8 +718,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/19-kallis-reef.md",
       "site": {
-        "lat": 12.201567,
-        "lon": -68.31075
+        "lat": 12.201643,
+        "lon": -68.310955
       },
       "entry": null,
       "parking": null
@@ -725,8 +731,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/09-karpata.md",
       "site": {
-        "lat": 12.218936,
-        "lon": -68.3545
+        "lat": 12.218956,
+        "lon": -68.352202
       },
       "entry": {
         "lat": 12.219349,
@@ -770,16 +776,16 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/10-la-danias-leap.md",
       "site": {
-        "lat": 12.2174,
-        "lon": -68.3501
+        "lat": 12.217582,
+        "lon": -68.348173
       },
       "entry": {
-        "lat": 12.218248,
-        "lon": -68.349697
+        "lat": 12.218201,
+        "lon": -68.348066
       },
       "parking": {
-        "lat": 12.218641,
-        "lon": -68.349933
+        "lat": 12.218704,
+        "lon": -68.348147
       }
     },
     {
@@ -943,8 +949,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/07-nukove.md",
       "site": {
-        "lat": 12.240933,
-        "lon": -68.413333
+        "lat": 12.240618,
+        "lon": -68.413314
       },
       "entry": {
         "lat": 12.240712,
@@ -962,8 +968,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/20-oil-slick-leap.md",
       "site": {
-        "lat": 12.19995,
-        "lon": -68.308633
+        "lat": 12.199913,
+        "lon": -68.308788
       },
       "entry": {
         "lat": 12.200149,
@@ -1032,8 +1038,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/03-playa-funchi.md",
       "site": {
-        "lat": 12.282367,
-        "lon": -68.4146
+        "lat": 12.282449,
+        "lon": -68.415336
       },
       "entry": {
         "lat": 12.282301,
@@ -1070,8 +1076,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/11-rappel.md",
       "site": {
-        "lat": 12.21745,
-        "lon": -68.3438
+        "lat": 12.217162,
+        "lon": -68.344
       },
       "entry": null,
       "parking": null
@@ -1313,8 +1319,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/13-tolo.md",
       "site": {
-        "lat": 12.2145,
-        "lon": -68.339
+        "lat": 12.21441,
+        "lon": -68.33752
       },
       "entry": {
         "lat": 12.215317,
@@ -1434,8 +1440,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/17-webers-joy.md",
       "site": {
-        "lat": 12.2069,
-        "lon": -68.3178
+        "lat": 12.206184,
+        "lon": -68.316856
       },
       "entry": {
         "lat": 12.206482,
@@ -1780,6 +1786,44 @@ window.MAP_DATA = {
       "parking": {
         "lat": 48.497994,
         "lon": -122.700806
+      }
+    },
+    {
+      "slug": "hood-canal-bridge-east",
+      "name": "Hood Canal Bridge East Side",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/hood-canal-bridge-east.md",
+      "site": {
+        "lat": 47.854001,
+        "lon": -122.6135
+      },
+      "entry": {
+        "lat": 47.856147,
+        "lon": -122.608656
+      },
+      "parking": {
+        "lat": 47.856744,
+        "lon": -122.607336
+      }
+    },
+    {
+      "slug": "hood-canal-bridge-west",
+      "name": "Hood Canal Bridge West Side",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/hood-canal-bridge-west.md",
+      "site": {
+        "lat": 47.8659,
+        "lon": -122.634821
+      },
+      "entry": {
+        "lat": 47.867908,
+        "lon": -122.635022
+      },
+      "parking": {
+        "lat": 47.868277,
+        "lon": -122.634963
       }
     },
     {
@@ -2236,6 +2280,25 @@ window.MAP_DATA = {
       "parking": {
         "lat": 47.451762,
         "lon": -122.37886
+      }
+    },
+    {
+      "slug": "three-tree-point-south",
+      "name": "Three Tree Point (South)",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/three-tree-point-south.md",
+      "site": {
+        "lat": 47.449284,
+        "lon": -122.379016
+      },
+      "entry": {
+        "lat": 47.44997,
+        "lon": -122.378898
+      },
+      "parking": {
+        "lat": 47.450144,
+        "lon": -122.378865
       }
     },
     {
