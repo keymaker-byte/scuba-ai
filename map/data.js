@@ -1510,16 +1510,16 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/36-windsock.md",
       "site": {
-        "lat": 12.128741,
-        "lon": -68.286613
+        "lat": 12.132879,
+        "lon": -68.283334
       },
       "entry": {
-        "lat": 12.130446,
-        "lon": -68.284777
+        "lat": 12.13236,
+        "lon": -68.282931
       },
       "parking": {
-        "lat": 12.130388,
-        "lon": -68.284578
+        "lat": 12.132255,
+        "lon": -68.282658
       }
     },
     {
