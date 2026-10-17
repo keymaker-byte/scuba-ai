@@ -1357,8 +1357,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/33-town-pier.md",
       "site": {
-        "lat": 12.151047,
-        "lon": -68.278587
+        "lat": 12.150417,
+        "lon": -68.278458
       },
       "entry": {
         "lat": 12.150107,
