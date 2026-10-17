@@ -1,6 +1,6 @@
 ---
 name: create-dive-site
-description: This skill should be used when the user asks to create a new dive site file, write up a dive site, add a site to a region, document a new site, or substantially rewrite an existing site file in this scuba diving workspace. Covers gathering the required inputs, loading that region's own conventions, verifying the coordinate against bathymetry, writing the site JSON, running research passes, working out the depth, current and wind sections by the region's site conventions, the bookkeeping a new site needs, and a final independent audit of the site file's prose by a fresh agent.
+description: This skill should be used when the user asks to create a new dive site file, write up a dive site, add a site to a region, document a new site, or substantially rewrite an existing site file in this scuba diving workspace. Covers opening a git worktree for the work, gathering the required inputs, loading that region's own conventions, verifying the coordinate against bathymetry, writing the site JSON, running research passes, working out the depth, current and wind sections by the region's site conventions, the bookkeeping a new site needs, a final independent audit of the site file's prose by a fresh agent, and committing and merging the work into main.
 ---
 
 # Create a dive site file
@@ -14,6 +14,21 @@ The region's site conventions file names the tools and sources for this region a
 - **Stop on a failed source.** A tool error, an unreachable API, a page that won't load or has only a broken archived copy: stop, tell the user what failed and what it was meant to provide, and wait. Never write the file around the gap or present it as complete.
 - **Behaviour, never numbers, from community sources.** Their depths sit at an unrecorded tide and their slack times carry no station nor normalization.
 - **Reasoning in chat, facts in the file.** Station checks, offset reasoning, how sure a figure is, and conflicts between sources all go in chat. The file carries only the best figure produced.
+
+## 0. Open a worktree
+
+All work happens in a worktree on its own branch off `main`, opened before any file is touched. Run every command here from the root of the main checkout.
+
+- **Main is clean.** Uncommitted changes in the main checkout to any of the four files below stop the run; ask the user to commit or discard them.
+- **Create it, then link the ignored files.** Name it by region and slug, since a slug is unique only within its region; a leftover branch or folder of that name is reported, never reused or deleted. The worktree lacks the gitignored files the tools need, such as `tool-config.json` and `tools/db/`, so link each one in as git lists them, in one command:
+
+  ```sh
+  W=.claude/worktrees/<region>-<slug>; git worktree add "$W" -b site/<region>/<slug> main
+  git ls-files --others --ignored --exclude-standard --directory | grep -v '^\.claude/worktrees/' |
+    while read -r p; do p=${p%/}; mkdir -p "$W/$(dirname "$p")"; ln -s "$PWD/$p" "$W/$p"; done
+  ```
+
+- **Four files, no others.** Write only `regions/<region>/sites/<slug>.md`, `regions/<region>/sites/<slug>.json`, `map/data.js` and `regions/<region>/<region>.md`, all inside the worktree. A change anything else seems to need is reported in chat and left undone. Scratch files go outside the repository.
 
 ## 1. Required inputs
 
@@ -141,6 +156,13 @@ Launch a fresh `general-purpose` agent with the Agent tool. Give it the site fil
 - **Claims to check.** A sentence that reads as one anecdote stated as fact, or a fact that looks carried over from a neighbouring site.
 
 Then work the findings. Fix style, structure and consistency directly. Hold each flagged claim against the step 4 research: keep it if supported, restate it conservatively if partly supported, remove it if not. Report a table of findings in chat, each with what changed or why it stayed. The site is done when every finding is resolved.
+
+## 11. Commit and merge
+
+- **Commit.** In the worktree, stage the four files by path, confirm `git status` shows nothing else changed, and commit as `<region>: <site name>`, adding "rebuilt" for a rewrite.
+- **Merge.** In the main checkout, on `main`: `git merge --no-edit site/<region>/<slug>`. Never push.
+- **Conflicts.** In the region table or `map/data.js`, where each side changed a different site, keep both in the file's order and check `map/data.js` still parses. Any other conflict stops the merge: show the user both sides and wait.
+- **Clean up.** `git worktree remove .claude/worktrees/<region>-<slug>` and `git branch -d site/<region>/<slug>`, then report the merge commit.
 
 ## Template
 
