@@ -162,7 +162,7 @@ Then work the findings. Fix style, structure and consistency directly. Hold each
 - **Commit.** In the worktree, stage the four files by path, confirm `git status` shows nothing else changed, and commit as `<region>: <site name>`, adding "rebuilt" for a rewrite.
 - **Merge.** In the main checkout, on `main`: `git merge --no-edit site/<region>/<slug>`. Never push.
 - **Conflicts.** In the region table or `map/data.js`, where each side changed a different site, keep both in the file's order and check `map/data.js` still parses. Any other conflict stops the merge: show the user both sides and wait.
-- **Clean up.** `git worktree remove .claude/worktrees/<region>-<slug>` and `git branch -d site/<region>/<slug>`, then report the merge commit.
+- **Clean up.** `git worktree remove .claude/worktrees/<region>-<slug>` and `git branch -d site/<region>/<slug>`, then report the merge commit. Other worktrees and `site/` branches are expected, since many sites are worked in parallel; remove only this run's own and leave every other one untouched, without listing or reporting them.
 
 ## Template
 
