@@ -5,3 +5,4 @@ temp/
 tools/db/
 tools/__pycache__/
 tool-config.json
+.claude/worktrees/
