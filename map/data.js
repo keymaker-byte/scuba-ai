@@ -846,8 +846,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/40-lighthouse-point.md",
       "site": {
-        "lat": 12.11435,
-        "lon": -68.295417
+        "lat": 12.114434,
+        "lon": -68.29616
       },
       "entry": {
         "lat": 12.114108,
