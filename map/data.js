@@ -54,8 +54,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/35-18th-palm.md",
       "site": {
-        "lat": 12.13735,
-        "lon": -68.277617
+        "lat": 12.138517,
+        "lon": -68.277052
       },
       "entry": {
         "lat": 12.138323,
