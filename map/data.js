@@ -500,16 +500,16 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/37-corporal-meiss.md",
       "site": {
-        "lat": 12.133236,
-        "lon": -68.282685
+        "lat": 12.131925,
+        "lon": -68.284508
       },
       "entry": {
-        "lat": 12.132775,
-        "lon": -68.282443
+        "lat": 12.131406,
+        "lon": -68.283886
       },
       "parking": {
-        "lat": 12.132565,
-        "lon": -68.282272
+        "lat": 12.131264,
+        "lon": -68.283725
       }
     },
     {

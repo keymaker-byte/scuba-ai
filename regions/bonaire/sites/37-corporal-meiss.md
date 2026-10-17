@@ -1,28 +1,31 @@
 # 37. Corporal Meiss
 
-Also known as North Belnem, a site directly across from Flamingo International Airport named for Corporal Robert W. Meiss Jr., who died in Vietnam in 1967. A long, narrow beach with benches and shade trees makes it a popular spot to combine a dive with sun, swimming and a barbecue. A shallow sandy plateau leads out to a wall beginning at about 15 m.
+A narrow public beach on EEG Boulevard just south of Flamingo Airport's runway, about 2 km south of Kralendijk on Bonaire's west coast, named for Corporal Robert W. Meiss Jr., who died in Vietnam in 1967 at the age of 21. The beach is also called Donkey Beach, and the site North Belnem or Dick's Place. A short swim crosses a sand and coral terrace at 4 to 9 m to a reef that slopes gently away to sand at about 32 m, an easy dive popular with locals for a swim and a picnic. The headline hazard is the entry, a low ledge onto a rough, uneven bottom.
 
 | | |
 |---|---|
-| **Location** | West coast, Bonaire, opposite the west end of the Flamingo International Airport runway |
-| **Coordinates** | 12.133236, -68.282685 (about 4 m) |
-| **Parking coordinates** | 12.132565, -68.282272, at the beach |
-| **Entry point coordinates** | 12.132775, -68.282443 |
+| **Location** | Donkey Beach, EEG Boulevard, just south of Flamingo Airport's runway, south of Kralendijk, west coast, Bonaire, Caribbean Sea |
+| **Coordinates** | 12.131925, -68.284508 (the outer terrace, about 6 m) |
+| **Parking coordinates** | 12.131264, -68.283725, at the roadside on EEG Boulevard behind the beach |
+| **Entry point coordinates** | 12.131406, -68.283886, the beach below the yellow marker stone |
 | **Type** | Shore |
-| **Depth range** | 6 to 30 m |
+| **Depth range** | 4 to 30 m |
+| **Skill level** | Beginner |
 
 ## Getting there
 
-* **Entry.** An easy shore entry over the sandy plateau.
-* **Parking.** At the beach, with benches and shade trees.
-* **Access.** Open.
-* **Facilities.** A long beach with benches and shade, a popular picnic and barbecue spot.
+* **Entry.** Walk down from the yellow marker stone, step over the low ledge at the waterline and wade in. The bottom is rough and uneven over the first metres, so wear sturdy boots and take the first steps slowly. Swim 89 m northwest, straight out from the beach, across the terrace to the dive area. Exit at the same beach.
+* **Parking.** At the roadside on EEG Boulevard, 24 m southeast of the entry. Free. The beach is busy with locals at weekends and on holidays, so arrive early.
+* **Access.** A public beach, open at all hours. The STINAPA Nature Fee e-tag is the only fee.
+* **Facilities.** Benches, shade trees, barbecue pits and rubbish bins along the beach. A lunch food truck parks at the beach on most weekdays.
 
 ## Navigation and landmarks
 
-* **The sandy plateau.** Leads from the beach out to the wall.
-* **The wall.** Begins at about 15 m.
-* **Depth profile.** The sandy plateau sits in the shallows before the wall begins at about 15 m, continuing through the recreational range to 30 m.
+* **The beach.** A long, narrow beach with benches and trees, its yellow marker stone at the roadside above the entry. Aircraft landing at Flamingo Airport pass low overhead on their final approach.
+* **The terrace.** Sand and coral shelving from 4 m at the waterline to 5 to 9 m across the first 90 m out, with scattered coral heads, to its outer edge just beyond the dive area.
+* **The reef slope.** From the terrace edge the reef slopes gently away to sand at about 32 m. The best of the reef lies around 18 m, with room to explore in either direction along it.
+* **North and south.** The reef runs on unbroken along the coast. North, it carries on past the next beach toward the airport's jet fuel pier; south, it runs on in front of the oceanfront apartments toward Belnem. A dive can follow it either way and turn back.
+* **The return.** Come back up to about 8 m on the terrace for the swim home; the beach lies 89 m southeast of the dive area.
 
 ## Current
 
@@ -32,33 +35,42 @@ Also known as North Belnem, a site directly across from Flamingo International A
 | **Usual set** | Not established |
 | **Typical speed** | Not established |
 
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
+* **Character.** Usually slight, at times moderate along the reef, and at times setting south along the shore. Check its direction before entering and start the dive into it.
 
 ## Wind
 
 | | |
 |---|---|
-| **Entry shore facing** | northwest, 320° |
-| **Dive area shore facing** | northwest, 320° |
+| **Entry shore facing** | northwest, 313° |
+| **Dive area shore facing** | northwest, 313° |
 
-* **Bad.** West through west-northwest (W-WNW), onshore over 5 km to more than 30 km of open water. Any wind from this quarter raises swell at the entry.
-* **Short fetch.** Northwest through north-northeast (NW-NNE), onshore over 1.6 to 3.1 km across the bay off town, enough to build a chop at the entry.
-* **Mixed.** Southwest through west-southwest (SW-WSW), cross-shore over more than 30 km, running a swell along the shore past the entry.
-* **Fine.** Northeast clockwise through south-southwest: offshore from east through south-southwest, off the land, and cross-shore over 260 to 980 m from the northeast and east-northeast.
+The swim out runs 89 m northwest from the entry, straight out from the shore, to the dive area.
+
+* **Bad.** West-southwest through west-northwest (WSW-WNW), onshore over 5 to more than 30 km of open sea past the south end of Klein Bonaire. Wind from this quarter puts waves on the beach and makes the step off the ledge hard work.
+* **Short fetch.** Northwest through north (NW-N), onshore over 2.4 to 3.4 km across the channel from Klein Bonaire and the bay off Kralendijk, enough to build a chop at the entry.
+* **Mixed.** Southwest (SW), cross-shore over more than 30 km, running a swell along the shore past the entry.
+* **Fine.** North-northeast clockwise through south-southwest (NNE-SSW): offshore from east-northeast through south, off the land, and cross-shore over 1.3 to 2.1 km from the north-northeast and northeast and over 310 m from the south-southwest. The prevailing east to southeast trades blow off the land and leave the entry calm at their usual strength.
 
 ## Visibility
 
-* **Overall.** Typically excellent, 15 to 30 m.
+* **Overall.** Typically 15 to 30 m, best in the calm early morning and off the deeper slope.
+* **Wind and swell.** Surf at the beach clouds the shallow terrace for a time, while the slope stays clearer.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A dive skin, shorty or 3 mm wetsuit suits.
 
 ## Marine life
 
-* **Reef.** Large schools of blue tang, with barracuda hunting over the reef.
-* **Coral.** Eels and octopus hiding among varied coral types, and turtles making their way to the surface.
+* **Terrace.** Blennies peer from holes in the coral heads, and juvenile fish, rock beauties, porcupinefish and pufferfish work the shallows. Turtles graze on the terrace and rise through it to breathe, and stingrays at times rest on the sand.
+* **Reef slope.** Large schools of blue tang and doctorfish, parrotfish and wrasse, French angelfish, filefish and honeycomb cowfish, with barracuda hunting over the reef. Brain and leaf coral, sponges and soft corals cover the slope. Hard coral cover along the whole leeward coast has fallen sharply since 2023 from bleaching and disease.
+* **Macro.** Octopus, spotted and other morays, scorpionfish, spiny lobster, shrimp and crabs in the coral, with Caribbean reef squid in formation over the reef.
+* **Night.** Tarpon at times hunt in divers' lights, and octopus, lobster and morays forage over the reef.
 
 ## Hazards
 
-* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.
+* **The entry.** A low ledge at the waterline and a rough, uneven bottom beyond it. Wear sturdy boots, step down slowly and keep a hand free for balance.
+* **The fuel pier.** Tankers berth at the airport's jet fuel pier to the north to discharge fuel. On a long dive north, keep well clear of the pier whenever a tanker is alongside it.
+* **Depth.** The slope continues gently past 30 m to sand at about 32 m and deeper water beyond. Turn at a planned depth.
+* **Waves at the entry.** Wind from west-southwest through west-northwest (WSW-WNW) puts waves on the beach, and from northwest through north (NW-N) a chop; choose another site when any of these blows fresh.
