@@ -468,8 +468,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/39-chez-hines.md",
       "site": {
-        "lat": 12.1191,
-        "lon": -68.293217
+        "lat": 12.119018,
+        "lon": -68.293397
       },
       "entry": null,
       "parking": null
