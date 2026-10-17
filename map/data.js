@@ -187,8 +187,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/38-bachelors-beach.md",
       "site": {
-        "lat": 12.125899,
-        "lon": -68.288135
+        "lat": 12.125972,
+        "lon": -68.288264
       },
       "entry": {
         "lat": 12.1255,
