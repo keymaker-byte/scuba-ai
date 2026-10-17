@@ -391,8 +391,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/34-calabas-reef.md",
       "site": {
-        "lat": 12.14511,
-        "lon": -68.276527
+        "lat": 12.144853,
+        "lon": -68.277041
       },
       "entry": {
         "lat": 12.144905,
