@@ -1236,8 +1236,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/32-something-special.md",
       "site": {
-        "lat": 12.160958,
-        "lon": -68.284499
+        "lat": 12.160711,
+        "lon": -68.283978
       },
       "entry": {
         "lat": 12.161377,
