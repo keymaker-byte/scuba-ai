@@ -92,8 +92,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/23-andrea-i.md",
       "site": {
-        "lat": 12.189217,
-        "lon": -68.297483
+        "lat": 12.188304,
+        "lon": -68.297389
       },
       "entry": {
         "lat": 12.188403,
@@ -111,8 +111,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/22-andrea-ii.md",
       "site": {
-        "lat": 12.1916,
-        "lon": -68.2986
+        "lat": 12.19123,
+        "lon": -68.298687
       },
       "entry": {
         "lat": 12.191665,
@@ -206,16 +206,16 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/30-baris-reef.md",
       "site": {
-        "lat": 12.167345,
-        "lon": -68.287797
+        "lat": 12.167156,
+        "lon": -68.287856
       },
       "entry": {
         "lat": 12.167271,
         "lon": -68.287153
       },
       "parking": {
-        "lat": 12.167355,
-        "lon": -68.286815
+        "lat": 12.16737,
+        "lon": -68.28603
       }
     },
     {
@@ -353,8 +353,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/29-buddys-reef.md",
       "site": {
-        "lat": 12.170821,
-        "lon": -68.288666
+        "lat": 12.170465,
+        "lon": -68.288945
       },
       "entry": {
         "lat": 12.17075,
@@ -481,8 +481,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/26-cliff.md",
       "site": {
-        "lat": 12.1734,
-        "lon": -68.28995
+        "lat": 12.173936,
+        "lon": -68.290704
       },
       "entry": {
         "lat": 12.174198,
@@ -571,8 +571,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/31-front-porch.md",
       "site": {
-        "lat": 12.164287,
-        "lon": -68.287636
+        "lat": 12.164235,
+        "lon": -68.28777
       },
       "entry": {
         "lat": 12.164487,
@@ -795,8 +795,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/27-la-machaca.md",
       "site": {
-        "lat": 12.171976,
-        "lon": -68.2898
+        "lat": 12.171891,
+        "lon": -68.289758
       },
       "entry": {
         "lat": 12.172321,
@@ -1127,16 +1127,16 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/28-reef-scientifico.md",
       "site": {
-        "lat": 12.171131,
-        "lon": -68.289469
+        "lat": 12.171257,
+        "lon": -68.289455
       },
       "entry": {
-        "lat": 12.172321,
-        "lon": -68.289111
+        "lat": 12.170737,
+        "lon": -68.288344
       },
       "parking": {
-        "lat": 12.172232,
-        "lon": -68.288451
+        "lat": 12.171597,
+        "lon": -68.287797
       }
     },
     {
