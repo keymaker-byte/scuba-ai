@@ -149,8 +149,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/46-aquarius.md",
       "site": {
-        "lat": 12.098195,
-        "lon": -68.285925
+        "lat": 12.098116,
+        "lon": -68.286252
       },
       "entry": {
         "lat": 12.098373,
