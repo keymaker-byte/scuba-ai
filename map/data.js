@@ -603,8 +603,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/43-hilma-hooker.md",
       "site": {
-        "lat": 12.104117,
-        "lon": -68.28965
+        "lat": 12.103923,
+        "lon": -68.289095
       },
       "entry": {
         "lat": 12.10451,
