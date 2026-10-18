@@ -622,8 +622,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/51-invisibles.md",
       "site": {
-        "lat": 12.07754,
-        "lon": -68.28136
+        "lat": 12.077486,
+        "lon": -68.281606
       },
       "entry": {
         "lat": 12.077659,
