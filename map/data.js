@@ -641,8 +641,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/48-jeannies-glory.md",
       "site": {
-        "lat": 12.0869,
-        "lon": -68.2842
+        "lat": 12.086414,
+        "lon": -68.284283
       },
       "entry": {
         "lat": 12.086629,
