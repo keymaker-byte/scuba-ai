@@ -1,28 +1,32 @@
 # 44. Angel City
 
-One of the most interesting of the double reef dives, about 5 km south of Kralendijk on EEG Boulevard opposite the Trans World Radio station, and the site next to which the Hilma Hooker was anchored before she sank in 1984. A sand channel about 15 m wide separates the two reef systems, working as a corridor for rays, triggerfish and small sharks, with garden eels dotting the sandy bottom. French and queen angelfish give the site its name.
+A double reef shore site on EEG Boulevard about 5 km south of Kralendijk, opposite the Trans World Radio station, named for its French and queen angelfish. A short swim crosses a shallow sand and coral terrace to the inner reef, which slopes to a sand channel about 15 m wide at about 25 to 30 m, with the outer reef rising beyond it. The Hilma Hooker was anchored here before she sank in 1984, and the wreck lies in the same sand channel just to the northwest. The headline hazard is the entry, over pitted rock and loose rubble that turns rough in any surf.
 
 | | |
 |---|---|
-| **Location** | West coast, Bonaire, about 5 km south of Kralendijk, opposite the Trans World Radio station |
-| **Coordinates** | 12.10275, -68.288267 (dive area, about 5 m) |
-| **Parking coordinates** | 12.10338, -68.28722, opposite the Trans World Radio station |
-| **Entry point coordinates** | 12.103335, -68.287277 |
+| **Location** | EEG Boulevard, opposite the Trans World Radio station, about 5 km south of Kralendijk, west coast, Bonaire, Caribbean Sea |
+| **Coordinates** | 12.102643, -68.288215 (the terrace, about 9 m) |
+| **Parking coordinates** | 12.10338, -68.28722, the gravel strip beside EEG Boulevard at the yellow stone |
+| **Entry point coordinates** | 12.103335, -68.287277, the gap in the shoreline rock below the parking |
 | **Type** | Shore |
-| **Depth range** | 6 to 30 m |
+| **Depth range** | 4 to 30 m |
 
 ## Getting there
 
-* **Entry.** A shore entry from the roadside.
-* **Parking.** Roadside at the site.
-* **Access.** Open.
+* **Entry.** Cross a short stretch of flat, pitted rock and coral rubble to a small sandy gap in the shoreline, and wade in over loose stones and algae that are slippery underfoot; booties make it easier. The water is about 4 m deep a few metres out. Swim 128 m southwest, close to straight out from the shore, across the terrace to the dive area. Exit at the same gap. With any surf running, the waves knock divers off their feet on the rubble, and the exit is the hardest part of the dive.
+* **Parking.** The unpaved coral gravel strip beside EEG Boulevard, opposite the Trans World Radio station and on the right heading south, marked by a yellow stone with the site name. Free, with room for about eight to ten cars, a few metres from the entry.
+* **Access.** Open. The STINAPA Nature Fee e-tag is the only fee.
 * **Facilities.** None at the site.
 
 ## Navigation and landmarks
 
-* **Sand channel.** About 15 m wide, separating the two reef systems; the double reef layout here can be disorienting, so track which reef is which on the way out.
-* **Hilma Hooker.** Sits immediately adjacent, the wreck having been anchored here before she sank in 1984.
-* **Depth profile.** The reef runs from about 5 m through the recreational range to 30 m, with the sand channel between the two reef systems as the site's central feature.
+* **The mooring.** A yellow mooring buoy about 25 m from shore, in about 4 to 5 m, straight out from the entry. It marks the start of the coral and is the best reference for the return.
+* **The terrace.** Sand and coral heads shelving from about 4 m near the mooring to about 9 m at the dive area, 128 m from the entry, and on in low coral ridges and sand grooves at 9 to 13 m for about 75 m to the terrace edge.
+* **The inner reef.** Slopes from the terrace edge down to the sand channel.
+* **The sand channel.** About 15 m wide at about 25 to 30 m, running parallel to the shore between the two reefs. Coral bridges cross it in places, and the two reefs meet at points along it, which makes them hard to tell apart on the way back.
+* **The outer reef.** Rises beyond the channel, with large brain and star coral heads and tube sponges, then drops away seaward into deep water.
+* **The Hilma Hooker.** The wreck lies about 200 m northwest of the dive area, in the sand channel at the foot of the inner reef from about 18 to 30 m, reached by following the inner reef north.
+* **The return.** Surface between the reefs to check position if unsure, take a compass bearing of about 53° back toward the entry, and use the mooring to find the gap in the rock.
 
 ## Current
 
@@ -32,8 +36,8 @@ One of the most interesting of the double reef dives, about 5 km south of Kralen
 | **Usual set** | Not established |
 | **Typical speed** | Not established |
 
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
-* **Character.** Current here usually runs mild.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
+* **Character.** Usually mild, at times moderate along the outer reef. Check its direction before entering and start the dive into it.
 
 ## Wind
 
@@ -42,23 +46,34 @@ One of the most interesting of the double reef dives, about 5 km south of Kralen
 | **Entry shore facing** | west-southwest, 240° |
 | **Dive area shore facing** | west-southwest, 240° |
 
-* **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open water. Any wind from this quarter raises swell at the entry.
+The swim out runs 128 m southwest from the entry, 7° off the shore's facing, to the dive area.
+
+* **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves and surge straight onto the rock and rubble at the entry and makes the exit dangerous.
 * **Mixed.** Northwest (NW), cross-shore over more than 30 km, running a swell along the shore past the entry.
-* **Fine.** North-northwest clockwise through south-southeast: offshore from north through east-southeast, off the land, and cross-shore over 410 m to 1.2 km from the north-northwest, southeast and south-southeast. The prevailing east to southeast trades blow off the land here and leave the entry flat.
+* **Fine.** North-northwest clockwise through south-southeast (NNW-SSE): offshore from north through east-southeast, off the land, and cross-shore over 510 m from the north-northwest and over 410 m to 1.2 km from the southeast and south-southeast. The prevailing east to southeast trades blow off the land and leave the entry calm at their usual strength.
 
 ## Visibility
 
-* **Overall.** Typically 15 to 30 m.
+* **Overall.** Typically 15 to 30 m, around 20 m on an average day, and best on calm mornings.
+* **Wind and swell.** Surge from south through west-northwest (S-WNW), and the swell after a storm, stir the terrace and the shallows and cut visibility there, while the outer reef usually stays clear.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A dive skin, shorty or 3 mm wetsuit suits.
 
 ## Marine life
 
-* **Reef.** French and queen angelfish, giving the site its name, along with schools of tang, parrotfish, butterflyfish and trumpetfish.
-* **Sand channel.** Garden eels retracting into their holes at the first sign of movement, plus rays, triggerfish and small sharks using the channel as a corridor.
+* **Reef.** French angelfish in pairs and large queen angelfish, with gray angelfish and rock beauties. Schools of blue tang, black durgon and chromis, parrotfish including midnight and large queen parrotfish, trumpetfish, trunkfish, butterflyfish, juvenile spotted drum, and large yellowtail snapper. Turtles visit the reefs.
+* **Sand channel.** Garden eels, southern stingrays on the sand, spotted eagle rays feeding along the channel and the outer reef, and schools of tarpon and barracuda passing through.
+* **Macro.** Spotted and green morays, sharptail eels, scorpionfish, banded coral shrimp, flamingo tongues on the sea fans, and octopus.
+* **Night.** Octopus hunt across the reef, and jacks and tarpon hunt above it.
+* **Coral.** Large brain and star coral heads, tube sponges, sea fans and gorgonians, densest on the outer reef. Bleaching and disease since 2023 have cut hard coral cover sharply along the leeward coast, with the brain corals among the worst hit.
 
 ## Hazards
 
-* **Navigation.** The double reef formation can be confusing for a shore diver; keep track of which reef leads back to the entry point.
+* **Entry and exit.** Flat, pitted rock, loose rubble and slippery stones at the waterline, with sea urchins in the holes. In surf, waves knock divers down and strip fins on the way out; time the exit between sets, and choose another site when a swell is running onto the shore.
+* **Navigation.** The two reefs look alike and meet in places, and a diver who loses track comes up well away from the entry, facing a long swim or a walk along the road. Note the mooring on the way out, carry a compass, and surface to check position before the return.
+* **Depth.** The sand channel lies at about 25 to 30 m, and the outer reef drops past it into deep water. Turn at a planned depth.
+* **Current.** At times moderate along the outer reef. Plan the dive into it, and turn early when it builds.
+* **Scorpionfish.** Camouflaged on the reef and rubble; watch where hands and knees go near the bottom.
+* **Boats.** Dive boats tie up to the mooring here and to those over the wreck to the northwest. Ascend with a surface marker buoy away from the moorings.
