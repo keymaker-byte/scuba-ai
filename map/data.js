@@ -73,8 +73,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/45-alice-in-wonderland.md",
       "site": {
-        "lat": 12.099233,
-        "lon": -68.286217
+        "lat": 12.099448,
+        "lon": -68.286654
       },
       "entry": {
         "lat": 12.099763,
