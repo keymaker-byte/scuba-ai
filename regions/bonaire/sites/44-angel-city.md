@@ -1,11 +1,11 @@
 # 44. Angel City
 
-A double reef shore site on EEG Boulevard about 5 km south of Kralendijk, opposite the Trans World Radio station, named for its French and queen angelfish. A short swim crosses a sand terrace and the inner reef to a sand channel about 15 m wide, with the outer reef rising beyond it to about 9 m before dropping away into deep water. The Hilma Hooker was anchored here before she sank in 1984, and the wreck lies on the sand at the seaward foot of the outer reef just to the northwest. The headline hazard is the entry, over pitted rock and loose rubble that turns rough in any surf.
+A double reef shore site on EEG Boulevard about 5 km south of Kralendijk, opposite the Trans World Radio station, named for its French and queen angelfish. A short swim crosses a shallow sand and coral terrace to the inner reef, which slopes to a sand channel about 15 m wide at about 25 to 30 m, with the outer reef rising beyond it. The Hilma Hooker was anchored here before she sank in 1984, and the wreck lies in the same sand channel just to the northwest. The headline hazard is the entry, over pitted rock and loose rubble that turns rough in any surf.
 
 | | |
 |---|---|
 | **Location** | EEG Boulevard, opposite the Trans World Radio station, about 5 km south of Kralendijk, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.102643, -68.288215 (the inner reef edge, about 9 m) |
+| **Coordinates** | 12.102643, -68.288215 (the terrace, about 9 m) |
 | **Parking coordinates** | 12.10338, -68.28722, the gravel strip beside EEG Boulevard at the yellow stone |
 | **Entry point coordinates** | 12.103335, -68.287277, the gap in the shoreline rock below the parking |
 | **Type** | Shore |
@@ -13,7 +13,7 @@ A double reef shore site on EEG Boulevard about 5 km south of Kralendijk, opposi
 
 ## Getting there
 
-* **Entry.** Cross a short stretch of flat, pitted rock and coral rubble to a small sandy gap in the shoreline, and wade in over loose stones and algae that are slippery underfoot; booties make it easier. The water is about 4 m deep a few metres out. Swim 128 m southwest, close to straight out from the shore, across the terrace to the inner reef edge. Exit at the same gap. With any surf running, the waves knock divers off their feet on the rubble, and the exit is the hardest part of the dive.
+* **Entry.** Cross a short stretch of flat, pitted rock and coral rubble to a small sandy gap in the shoreline, and wade in over loose stones and algae that are slippery underfoot; booties make it easier. The water is about 4 m deep a few metres out. Swim 128 m southwest, close to straight out from the shore, across the terrace to the dive area. Exit at the same gap. With any surf running, the waves knock divers off their feet on the rubble, and the exit is the hardest part of the dive.
 * **Parking.** The unpaved coral gravel strip beside EEG Boulevard, opposite the Trans World Radio station and on the right heading south, marked by a yellow stone with the site name. Free, with room for about eight to ten cars, a few metres from the entry.
 * **Access.** Open. The STINAPA Nature Fee e-tag is the only fee.
 * **Facilities.** None at the site.
@@ -21,10 +21,11 @@ A double reef shore site on EEG Boulevard about 5 km south of Kralendijk, opposi
 ## Navigation and landmarks
 
 * **The mooring.** A yellow mooring buoy about 25 m from shore, in about 4 to 5 m, straight out from the entry. It marks the start of the coral and is the best reference for the return.
-* **The terrace and inner reef.** Sand and coral heads shelving from about 4 m near the mooring to about 7 m some 80 m out, with the inner reef running across it to its edge at the dive area, at about 9 m and 128 m from the entry.
-* **The sand channel.** Just beyond the inner reef edge, a sand channel about 15 m wide at about 12 to 13 m runs parallel to the shore between the two reefs. Coral bridges cross it in places, and the two reefs meet at points along it, which makes them hard to tell apart on the way back.
-* **The outer reef.** Rises beyond the channel to a crest at about 9 m, some 55 m past the inner reef edge, with large brain and star coral heads and tube sponges, then slopes seaward to about 28 m within about 100 m and on into deep water.
-* **The Hilma Hooker.** The wreck lies about 230 m northwest of the dive area, on the sand at about 30 m at the seaward foot of the outer reef, reached by following the outer reef north.
+* **The terrace.** Sand and coral heads shelving from about 4 m near the mooring to about 9 m at the dive area, 128 m from the entry, and on in low coral ridges and sand grooves at 9 to 13 m for about 75 m to the terrace edge.
+* **The inner reef.** Slopes from the terrace edge down to the sand channel.
+* **The sand channel.** About 15 m wide at about 25 to 30 m, running parallel to the shore between the two reefs. Coral bridges cross it in places, and the two reefs meet at points along it, which makes them hard to tell apart on the way back.
+* **The outer reef.** Rises beyond the channel, with large brain and star coral heads and tube sponges, then drops away seaward into deep water.
+* **The Hilma Hooker.** The wreck lies about 200 m northwest of the dive area, in the sand channel at the foot of the inner reef from about 18 to 30 m, reached by following the inner reef north.
 * **The return.** Surface between the reefs to check position if unsure, take a compass bearing of about 53° back toward the entry, and use the mooring to find the gap in the rock.
 
 ## Current
@@ -54,7 +55,7 @@ The swim out runs 128 m southwest from the entry, 7° off the shore's facing, to
 ## Visibility
 
 * **Overall.** Typically 15 to 30 m, around 20 m on an average day, and best on calm mornings.
-* **Wind and swell.** Surge from south through west-northwest (S-WNW), and the swell after a storm, stir the inner reef and the shallows and cuts visibility there, while the outer reef usually stays clear.
+* **Wind and swell.** Surge from south through west-northwest (S-WNW), and the swell after a storm, stir the terrace and the shallows and cut visibility there, while the outer reef usually stays clear.
 
 ## Temperature
 
@@ -72,7 +73,7 @@ The swim out runs 128 m southwest from the entry, 7° off the shore's facing, to
 
 * **Entry and exit.** Flat, pitted rock, loose rubble and slippery stones at the waterline, with sea urchins in the holes. In surf, waves knock divers down and strip fins on the way out; time the exit between sets, and choose another site when a swell is running onto the shore.
 * **Navigation.** The two reefs look alike and meet in places, and a diver who loses track comes up well away from the entry, facing a long swim or a walk along the road. Note the mooring on the way out, carry a compass, and surface to check position before the return.
-* **Depth.** The outer reef drops past 30 m into deep water. Turn at a planned depth.
+* **Depth.** The sand channel lies at about 25 to 30 m, and the outer reef drops past it into deep water. Turn at a planned depth.
 * **Current.** At times moderate along the outer reef. Plan the dive into it, and turn early when it builds.
 * **Scorpionfish.** Camouflaged on the reef and rubble; watch where hands and knees go near the bottom.
 * **Boats.** Dive boats tie up to the mooring here and to those over the wreck to the northwest. Ascend with a surface marker buoy away from the moorings.
