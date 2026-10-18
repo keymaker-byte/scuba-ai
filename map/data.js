@@ -1300,8 +1300,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/42-the-lake.md",
       "site": {
-        "lat": 12.106167,
-        "lon": -68.290367
+        "lat": 12.106561,
+        "lon": -68.290919
       },
       "entry": {
         "lat": 12.107075,
