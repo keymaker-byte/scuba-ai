@@ -130,8 +130,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/44-angel-city.md",
       "site": {
-        "lat": 12.10275,
-        "lon": -68.288267
+        "lat": 12.102643,
+        "lon": -68.288215
       },
       "entry": {
         "lat": 12.103335,
