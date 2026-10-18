@@ -48,7 +48,7 @@ The site sits on the windward coast, open to more than 30 km of ocean from east-
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at these shallow depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at these shallow depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 

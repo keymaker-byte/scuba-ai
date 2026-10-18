@@ -30,7 +30,7 @@ A formal Traffic Separation Scheme and Vessel Traffic Service cover the length o
 
 ## Conditions
 
-- **Water temperature.** Roughly 6 to 9 C at depth, reflecting the strait's direct connection to the ocean and periodic coastal upwelling. The surface layer warms into the low teens late in summer, less than a sheltered bay would over the same weeks. Drysuit year round.
+- **Water temperature.** Roughly 6 to 9 °C at depth, reflecting the strait's direct connection to the ocean and periodic coastal upwelling. The surface layer warms into the low teens late in summer, less than a sheltered bay would over the same weeks. Drysuit year round.
 - **Visibility.** Ranges widely, roughly 1.5 to 15 m, and swings hard with plankton blooms. Direct oceanic exchange tends to help it, water moving through rather than sitting behind a sill, but a bloom can still shut a site down for weeks. Best conditions tend to run late summer into fall. Recent reports beat any prediction.
 - **Character.** Cold, oceanic and tidal, with real ocean swell and sustained wind layered on top of the tidal current. The western reach is remote: fewer facilities, longer drives, and a long response time to a chamber or hospital if something goes wrong. Neah Bay is about four and a half to five hours from Seattle by road.
 

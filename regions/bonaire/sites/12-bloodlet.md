@@ -50,7 +50,7 @@ A boat dive on Bonaire's northwest coast below the low rock shore of the coastal
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm wetsuit or dive skin is standard.
 
 ## Marine life
 

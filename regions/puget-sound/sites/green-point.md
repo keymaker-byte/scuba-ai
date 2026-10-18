@@ -92,7 +92,7 @@ The site swings roughly 2.5 m between an average high and low water, more around
 
 ## Temperature
 
-* **At depth.** Roughly 7 to 11 C year round. Standard drysuit protocol.
+* **At depth.** Roughly 7 to 11 °C year round. Standard drysuit protocol.
 * **Surface layer.** Can warm into the low teens by late summer.
 
 ## Marine life

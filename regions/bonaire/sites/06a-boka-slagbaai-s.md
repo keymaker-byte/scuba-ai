@@ -56,7 +56,7 @@ The bay opens west-northwest onto open sea. The dive area sits about 90 m off th
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water stays evenly mixed through recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water stays evenly mixed through recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 

@@ -91,7 +91,7 @@ East Passage swings up to about 5 m between high and low water here, and combine
 
 ## Temperature
 
-* **At depth.** Roughly 7 to 11 C through the year, standard for Puget Sound. Drysuit year round.
+* **At depth.** Roughly 7 to 11 °C through the year, standard for Puget Sound. Drysuit year round.
 * **Surface layer.** Warms into the low teens late in summer.
 
 ## Marine life

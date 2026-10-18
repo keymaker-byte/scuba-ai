@@ -65,6 +65,8 @@ If a tool errors out, an API is unreachable, or a site is down, stop and report 
 
 - **Use metric.** Bar, metres, litres, celsius.
 - **Do the arithmetic in metric.** Present results in metric, and don't append imperial conversions in parentheses unless asked. Gas planning in bar and litres, depth in metres, temperature in celsius, cylinder size in litres and working pressure in bar.
+- **Space before the unit.** `6 m`, `28 °C`. No space for bearings and percentages: `230°`, `9.1%`.
+- **Ranges take the unit once.** `4 to 30 m`, `26 to 29 °C`. Different units take both: `630 m to 2.2 km`.
 
 ## Time convention: use the timezone of the dive site
 

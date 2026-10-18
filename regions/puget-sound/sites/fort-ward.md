@@ -87,7 +87,7 @@ The site sits open to Rich Passage, and tide swings the depth here by several me
 
 ## Temperature
 
-* **At depth.** Roughly 7 to 11°C through the year, in line with the wider central Sound. Standard drysuit protocol year round.
+* **At depth.** Roughly 7 to 11 °C through the year, in line with the wider central Sound. Standard drysuit protocol year round.
 * **Surface layer.** Warms into the low teens late in summer.
 
 ## Marine life

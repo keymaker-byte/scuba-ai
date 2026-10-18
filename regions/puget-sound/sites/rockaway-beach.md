@@ -82,7 +82,7 @@ The site sits on the open main basin, and tide swings the depth here by several 
 
 ## Temperature
 
-* **At depth.** Roughly 8 to 14°C through the year, in line with the wider central Sound, coldest in late winter and spring, warmest at the end of summer. Standard drysuit protocol year round.
+* **At depth.** Roughly 8 to 14 °C through the year, in line with the wider central Sound, coldest in late winter and spring, warmest at the end of summer. Standard drysuit protocol year round.
 * **Surface layer.** Warms into the low teens in summer.
 
 ## Marine life

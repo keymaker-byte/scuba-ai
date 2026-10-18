@@ -94,7 +94,7 @@ The tide swings the site's depth by up to about 4 m on the year's biggest exchan
 
 ## Temperature
 
-* **At depth.** Roughly 7 to 11 C year round, typical for the Sound. Standard drysuit protocol.
+* **At depth.** Roughly 7 to 11 °C year round, typical for the Sound. Standard drysuit protocol.
 * **Surface layer.** Warms into the low teens late in summer, cooler the rest of the year.
 
 ## Marine life

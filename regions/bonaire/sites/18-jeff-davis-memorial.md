@@ -1,6 +1,6 @@
 # 18. Jeff Davis Memorial
 
-A shore dive on Bonaire's northwest coast road north of Kralendijk, named for Jefferson C. Davis, MD, an Air Force flight surgeon and pioneer of hyperbaric medicine, to whom the island dedicated the reef in 1990. A short scramble over rock and a 1 m drop from the coral edge lead to a small sand beach, and the water opens onto a gorgonian-covered terrace that deepens from about 5 m to 10 m before large coral formations form chutes down the slope to sand. The terrace holds one of Reef Renewal Foundation Bonaire's largest staghorn restoration sites, and the slope is known for its many cleaning stations. The headline hazard is the entry, a rough step down over rock that turns difficult in any swell.
+A shore dive on Bonaire's northwest coast road north of Kralendijk, named for Jefferson C. Davis, MD, an Air Force flight surgeon and pioneer of hyperbaric medicine, to whom the island dedicated the reef in 1990. A short scramble over rock and a 1 m drop from the coral edge lead to a small sand beach, and the water opens onto a gorgonian-covered terrace that deepens from about 5 to 10 m before large coral formations form chutes down the slope to sand. The terrace holds one of Reef Renewal Foundation Bonaire's largest staghorn restoration sites, and the slope is known for its many cleaning stations. The headline hazard is the entry, a rough step down over rock that turns difficult in any swell.
 
 | | |
 |---|---|
@@ -58,7 +58,7 @@ The swim out runs 87 m southwest from the entry, 2° off the entry shore's facin
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water holds an even temperature through recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water holds an even temperature through recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 

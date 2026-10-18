@@ -86,7 +86,7 @@ The site sits open to the main basin, and tide swings the depth here by several 
 
 ## Temperature
 
-* **At depth.** Typically 7 to 11°C across the year, in line with the wider central Sound. In an unusually warm year the water column can run mixed rather than layered, up to about 14°C from the surface down through the working depth around 22 m, with no thermocline.
+* **At depth.** Typically 7 to 11 °C across the year, in line with the wider central Sound. In an unusually warm year the water column can run mixed rather than layered, up to about 14 °C from the surface down through the working depth around 22 m, with no thermocline.
 * **Surface layer.** Warms into the low teens in a normal summer, and can match the deep reading entirely in a mixed, warm year.
 
 ## Marine life

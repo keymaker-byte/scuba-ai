@@ -96,7 +96,7 @@ The South Sound's tides are large, and the tide swings the depth here by up to a
 
 ## Temperature
 
-* **At depth.** About 8 to 9 C in late winter, rising to about 12 to 13 C in late summer and autumn. Drysuit year round.
+* **At depth.** About 8 to 9 °C in late winter, rising to about 12 to 13 °C in late summer and autumn. Drysuit year round.
 * **Surface layer.** Warms further in summer, and runs colder than depth in winter.
 
 ## Marine life

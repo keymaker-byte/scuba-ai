@@ -57,7 +57,7 @@ The swim out runs 55 m northwest from the entry along the pier to the dive area,
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through these shallow depths. A dive skin, shorty or 3 mm wetsuit suits.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through these shallow depths. A dive skin, shorty or 3 mm wetsuit suits.
 
 ## Marine life
 

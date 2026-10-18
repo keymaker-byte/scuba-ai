@@ -60,7 +60,7 @@ The shore here runs west to east, and the swim out runs 101 m south, 180°, from
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A dive skin, shorty or 3 mm wetsuit suits.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A dive skin, shorty or 3 mm wetsuit suits.
 
 ## Marine life
 

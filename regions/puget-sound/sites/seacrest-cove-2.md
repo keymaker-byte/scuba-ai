@@ -85,8 +85,8 @@ Elliott Bay swings 3 to 5 m between high and low water, so depths are given agai
 
 ## Temperature
 
-* **At depth.** Roughly 8 to 13 C through the year, around 12 C at depth in summer. Standard drysuit protocol.
-* **Surface layer.** Warms into the mid teens in late summer while the slope stays near 12 C; dress for the depth.
+* **At depth.** Roughly 8 to 13 °C through the year, around 12 °C at depth in summer. Standard drysuit protocol.
+* **Surface layer.** Warms into the mid teens in late summer while the slope stays near 12 °C; dress for the depth.
 
 ## Marine life
 

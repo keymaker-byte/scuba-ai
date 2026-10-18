@@ -95,8 +95,8 @@ Hood Canal swings harder than the main basin, and on this gentle slope the tide 
 
 ## Temperature
 
-* **At depth.** About 9 to 10 C in winter, 11 C in early summer, up to about 13 C by late summer. Standard drysuit protocol year round.
-* **Surface layer.** Hood Canal warms far more than the main basin in summer, with 17 to 19 C over the shallows and a sharp thermocline on the descent.
+* **At depth.** About 9 to 10 °C in winter, 11 °C in early summer, up to about 13 °C by late summer. Standard drysuit protocol year round.
+* **Surface layer.** Hood Canal warms far more than the main basin in summer, with 17 to 19 °C over the shallows and a sharp thermocline on the descent.
 
 ## Marine life
 

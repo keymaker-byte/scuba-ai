@@ -1,6 +1,6 @@
 # 2. Playa Benge
 
-A small rubble beach between low limestone cliffs on the northwest coast of Washington Slagbaai National Park, about 22 km northwest of Kralendijk, fronting some of the most pristine coral on Bonaire and many of its larger fish. A shallow shelf of finger coral and loose rock runs out to a step that drops from about 5 m to 11 m, an uneven reef terrace beyond it, and a steep drop into deep water. The entry over loose, swell-moved rock and a moderate to strong current that often changes direction mid-dive make it a site for experienced divers, and diving here is suspended under STINAPA's closure of the park to diving.
+A small rubble beach between low limestone cliffs on the northwest coast of Washington Slagbaai National Park, about 22 km northwest of Kralendijk, fronting some of the most pristine coral on Bonaire and many of its larger fish. A shallow shelf of finger coral and loose rock runs out to a step that drops from about 5 to 11 m, an uneven reef terrace beyond it, and a steep drop into deep water. The entry over loose, swell-moved rock and a moderate to strong current that often changes direction mid-dive make it a site for experienced divers, and diving here is suspended under STINAPA's closure of the park to diving.
 
 | | |
 |---|---|
@@ -22,7 +22,7 @@ A small rubble beach between low limestone cliffs on the northwest coast of Wash
 ## Navigation and landmarks
 
 * **Shelf.** From the beach the bottom runs out almost flat at about 4 m for the first 100 m, over finger coral, rubble and scattered coral blocks.
-* **Step.** About 110 to 140 m out from the entry, west-northwest, the shelf drops steeply from about 5 m to 11 m.
+* **Step.** About 110 to 140 m out from the entry, west-northwest, the shelf drops steeply from about 5 to 11 m.
 * **Reef terrace.** Below the step, an uneven reef terrace runs a further 120 m out at 11 to 14 m, with the dive area at 14 m about 186 m from the entry, west-northwest, 294°.
 * **Drop-off.** Beyond the terrace the reef falls away steeply into deep water. Take a compass bearing back to the entry before descending, since the beach is narrow and easy to miss from the water.
 
@@ -58,7 +58,7 @@ The beach faces west-northwest onto open sea, and the swim out runs 186 m west-n
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm wetsuit suits a long dive; a dive skin or shorty is enough on a short one.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm wetsuit suits a long dive; a dive skin or shorty is enough on a short one.
 
 ## Marine life
 

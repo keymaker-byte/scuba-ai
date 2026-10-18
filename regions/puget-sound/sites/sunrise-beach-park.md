@@ -73,7 +73,7 @@ The beach faces east-southeast across Colvos Passage toward Vashon Island, about
 
 ## Depth and tide
 
-The tide swings up to about 5 m here, so the top of the wall can read anywhere from about 7 m to 13 m on the gauge.
+The tide swings up to about 5 m here, so the top of the wall can read anywhere from about 7 to 13 m on the gauge.
 
 | | |
 |---|---|
@@ -94,7 +94,7 @@ The tide swings up to about 5 m here, so the top of the wall can read anywhere f
 
 ## Temperature
 
-* **At depth.** About 8 C in late winter to about 12 C in autumn. Drysuit year round.
+* **At depth.** About 8 °C in late winter to about 12 °C in autumn. Drysuit year round.
 * **Surface layer.** The top layer runs colder than depth in winter and warms into the low teens late in summer.
 
 ## Marine life

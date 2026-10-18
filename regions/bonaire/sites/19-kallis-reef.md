@@ -51,7 +51,7 @@ A popular stretch of reef on Bonaire's northwest coast north of Kralendijk, name
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The temperature holds steady through recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The temperature holds steady through recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 

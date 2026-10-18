@@ -81,7 +81,7 @@ The dock sits in very shallow water, so the tide changes the dive under it more 
 
 ## Temperature
 
-* **At depth.** Roughly 7 to 11°C through the year, in line with the central Sound. Standard drysuit protocol year round.
+* **At depth.** Roughly 7 to 11 °C through the year, in line with the central Sound. Standard drysuit protocol year round.
 * **Surface layer.** Warms into the low teens late in summer, and the shallow water under the dock runs warmest of all.
 
 ## Marine life

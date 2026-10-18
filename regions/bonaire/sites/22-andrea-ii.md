@@ -60,7 +60,7 @@ The dive area lies 100 m west-southwest of the entry, straight out from the entr
 
 ## Temperature
 
-* **At depth.** 25 to 29 C through the year, coolest from January to March and warmest from August to October. The water is evenly mixed through recreational depths. A dive skin, shorty or 3 mm wetsuit suits.
+* **At depth.** 25 to 29 °C through the year, coolest from January to March and warmest from August to October. The water is evenly mixed through recreational depths. A dive skin, shorty or 3 mm wetsuit suits.
 
 ## Marine life
 
