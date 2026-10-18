@@ -1057,8 +1057,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/41-punt-vierkant.md",
       "site": {
-        "lat": 12.1076,
-        "lon": -68.291983
+        "lat": 12.108627,
+        "lon": -68.293081
       },
       "entry": {
         "lat": 12.109288,
