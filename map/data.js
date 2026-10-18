@@ -1178,8 +1178,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/49-salt-pier.md",
       "site": {
-        "lat": 12.08329,
-        "lon": -68.28377
+        "lat": 12.083135,
+        "lon": -68.2832
       },
       "entry": {
         "lat": 12.083413,
