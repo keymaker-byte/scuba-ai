@@ -86,7 +86,7 @@ The 15 m reef point reads about 13.8 m below the surface at the year's lowest lo
 
 ## Temperature
 
-* **At depth.** Roughly 7 to 11 C year round, typical for the Sound; recorded as low as 9 C in early autumn. Standard drysuit protocol.
+* **At depth.** Roughly 7 to 11 °C year round, typical for the Sound; recorded as low as 9 °C in early autumn. Standard drysuit protocol.
 
 ## Marine life
 

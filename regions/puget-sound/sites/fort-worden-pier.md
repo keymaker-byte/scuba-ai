@@ -86,7 +86,7 @@ The pier end and reef, at about 6.5 m below MLLW, read about 5.3 m below the sur
 
 ## Temperature
 
-* **At depth.** Roughly 7 to 11 C through the year, recorded around 11 to 12 C in late July. Standard drysuit protocol.
+* **At depth.** Roughly 7 to 11 °C through the year, recorded around 11 to 12 °C in late July. Standard drysuit protocol.
 
 ## Marine life
 

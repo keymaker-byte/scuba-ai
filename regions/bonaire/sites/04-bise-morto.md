@@ -59,7 +59,7 @@ The beach opens west onto open sea, and the swim out runs 109 m west, 281°, fro
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm shorty or full 3 mm wetsuit is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm shorty or full 3 mm wetsuit is standard.
 
 ## Marine life
 

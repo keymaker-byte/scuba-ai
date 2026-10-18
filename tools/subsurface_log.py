@@ -201,7 +201,7 @@ def cmd_list(args):
         gas = gas_label(d["cylinders"][0]) if d.get("cylinders") else ""
         print(f"{d.get('number',''):>4}  {(d.get('date','')+' '+d.get('time','')):<19}  "
               f"{site_name(d)[:26]:<26}  {(f'{md:.1f}m' if md is not None else ''):>6}  {mind:>4}  "
-              f"{(f'{wt:.0f}C' if wt is not None else ''):>5}  {vis:>3}  {gas}")
+              f"{(f'{wt:.0f} °C' if wt is not None else ''):>5}  {vis:>3}  {gas}")
 
 
 def cmd_show(args):
@@ -223,7 +223,7 @@ def cmd_show(args):
     print(f"  max depth    {md:.1f} m   avg {mn:.1f} m" if md is not None else "  max depth    (none)")
     wt, at = metric(d.get("water_temp")), metric(d.get("air_temp"))
     if wt is not None:
-        print(f"  temperature  water {wt:.1f} C" + (f", air {at:.1f} C" if at is not None else ""))
+        print(f"  temperature  water {wt:.1f} °C" + (f", air {at:.1f} °C" if at is not None else ""))
     wkg = metric(d.get("weight"))
     if wkg is not None:
         print(f"  weight       {wkg:.1f} kg")
@@ -271,7 +271,7 @@ def cmd_show(args):
         print(f"  deepest      {deep[1]:.1f} m at {deep[0] / 60:.1f} min into the dive{clock}")
         temps = [t for _, _, t, _ in s if t is not None]
         if temps:
-            print(f"  temp range   {min(temps):.0f} to {max(temps):.0f} C across {len(s)} samples")
+            print(f"  temp range   {min(temps):.0f} to {max(temps):.0f} °C across {len(s)} samples")
     if d["marks"]:
         print("  marks:")
         for secs_m, label in sorted(d["marks"], key=lambda m: m[0] or 0):

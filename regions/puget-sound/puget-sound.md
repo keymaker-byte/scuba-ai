@@ -31,7 +31,7 @@ A fjord, not a sound: a narrow trench separating the Kitsap Peninsula from the O
 
 ## Conditions
 
-- **Water temperature.** Roughly 7 to 11 C at depth all year; the surface layer only warms into the low teens late in summer. Drysuit year round; the configuration is in the diver profile.
+- **Water temperature.** Roughly 7 to 11 °C at depth all year; the surface layer only warms into the low teens late in summer. Drysuit year round; the configuration is in the diver profile.
 - **Visibility.** Swings hard with plankton blooms, worst in spring and summer. Recent reports beat any prediction.
 - **Character.** Cold water, mostly shore entries, and tidal exchange drives almost everything. Assume current and a slack window are part of every plan unless told otherwise.
 

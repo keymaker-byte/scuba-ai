@@ -97,7 +97,7 @@ South Sound tides are large, and the tide swings the depth here by up to about 6
 
 ## Temperature
 
-* **At depth.** About 8 to 9 C from winter into early spring, rising to about 13 C in midsummer. Drysuit year round.
+* **At depth.** About 8 to 9 °C from winter into early spring, rising to about 13 °C in midsummer. Drysuit year round.
 * **Surface layer.** Warmer than depth over the shallow flat from spring through summer.
 
 ## Marine life

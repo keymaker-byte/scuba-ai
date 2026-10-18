@@ -47,7 +47,7 @@ A boat dive on Klein Bonaire's west side: two reefs separated by sand, a challen
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 

@@ -53,7 +53,7 @@ The dive area lies hard under the cliff, about 40 m off the shore.
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm wetsuit or dive skin is standard.
 
 ## Marine life
 

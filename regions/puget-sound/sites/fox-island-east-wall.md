@@ -73,7 +73,7 @@ The beach faces east-southeast across the south end of the Narrows toward Day Is
 
 ## Depth and tide
 
-South Sound tides are large, and the tide swings the depth here by up to about 6 m, so the base of the deeper ledge reads anywhere from about 20 m to 26 m on the gauge.
+South Sound tides are large, and the tide swings the depth here by up to about 6 m, so the base of the deeper ledge reads anywhere from about 20 to 26 m on the gauge.
 
 | | |
 |---|---|
@@ -95,7 +95,7 @@ South Sound tides are large, and the tide swings the depth here by up to about 6
 
 ## Temperature
 
-* **At depth.** About 9 C in late winter to about 13 to 14 C in late summer and autumn. Drysuit year round.
+* **At depth.** About 9 °C in late winter to about 13 to 14 °C in late summer and autumn. Drysuit year round.
 * **Surface layer.** Warms further in summer, and runs colder than depth in winter.
 
 ## Marine life

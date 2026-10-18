@@ -51,7 +51,7 @@ An active industrial pier where Cargill loads salt from the adjacent salt works,
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at these shallow depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at these shallow depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 

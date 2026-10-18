@@ -84,7 +84,7 @@ The tide matters more here than the current: the site is shallow, so a big excha
 
 ## Temperature
 
-* **At depth.** Roughly 7 to 11°C through the year, about 8°C in late winter. Standard drysuit protocol year round.
+* **At depth.** Roughly 7 to 11 °C through the year, about 8 °C in late winter. Standard drysuit protocol year round.
 * **Surface layer.** Warms into the low teens late in summer, warmest over the shallow sand along the dock.
 
 ## Marine life

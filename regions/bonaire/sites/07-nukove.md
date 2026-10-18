@@ -58,7 +58,7 @@ The swim out runs 113 m west, 265°, from the entry straight out across the shel
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around January to March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm wetsuit suits the dive, and guards against scrapes on the entry.
+* **At depth.** 26 to 29 °C year round, coolest around January to March, warmest around August through October. The water is evenly mixed through recreational depths. A 3 mm wetsuit suits the dive, and guards against scrapes on the entry.
 
 ## Marine life
 

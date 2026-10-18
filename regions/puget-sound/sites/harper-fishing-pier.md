@@ -83,7 +83,7 @@ The site is shallow enough that the tide changes its character: at a big low the
 
 ## Temperature
 
-* **At depth.** Roughly 8°C in late winter and early spring, rising to 10 to 12°C by late summer. Standard drysuit protocol year round.
+* **At depth.** Roughly 8 °C in late winter and early spring, rising to 10 to 12 °C by late summer. Standard drysuit protocol year round.
 * **Surface layer.** The site is shallow enough that the whole dive sits close to the surface layer; there is rarely a distinct thermocline.
 
 ## Marine life

@@ -54,7 +54,7 @@ A short, near-vertical wall on Bonaire's west coast north of Kralendijk, directl
 
 ## Temperature
 
-* **At depth.** 26 to 29 C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A dive skin, shorty or 3 mm wetsuit suits.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water is evenly mixed through recreational depths. A dive skin, shorty or 3 mm wetsuit suits.
 
 ## Marine life
 
