@@ -89,7 +89,7 @@ SCTLD precaution applies uniformly across the park: disinfect before, between an
 | [52. Tori's Reef](sites/52-toris-reef.md) | Reef opposite the Cargill salt works outflow, reached through a channel under the highway past fire coral hiding rare fish and eels, ranked second in the Caribbean for fish diversity. |
 | [53. Pink Beach](sites/53-pink-beach.md) | One of the island's best known beaches, its pink sand shallows home to southern stingrays and bonefish early and late in the day. |
 | [54. White Slave](sites/54-white-slave.md) | Site opposite the white slave huts and obelisk memorial, a sandbar with eagle rays and stingrays before a long swim to a reef where turtles are common. |
-| [55. Margate Bay](sites/55-margate-bay.md) | Entry hidden behind mangroves off the coast road, with staghorn shallows and a drop-off where black margate and snapper sleep in the gorgonians. |
+| [55. Margate Bay](sites/55-margate-bay.md) | Southwest coast shore site across a small salina beside the mangroves off the coast road, where staghorn and elkhorn shallows run onto a broad reef top at about 9 to 10.5 m and a slope lush with gorgonians and sea fans, with black margate and snapper sleeping along the drop-off and turtles commonly seen. |
 | [56. Red Beryl](sites/56-red-beryl.md) | Three-zone site beside the kitesurfing beach, a sandy plateau, cleaning stations in the middle zone and a wall from 20 m, with barracuda, rays, turtles and morays. |
 | [57. Atlantis](sites/57-atlantis.md) | The official kite beach site, with no mooring line, a reef giving onto a steep slope where larger fish appear. |
 | [58. Vista Blue](sites/58-vista-blue.md) | Steep reef about 13 km south of Kralendijk carpeted along its whole length in dense soft coral. |
