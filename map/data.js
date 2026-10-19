@@ -814,8 +814,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/47-larrys-lair.md",
       "site": {
-        "lat": 12.0906,
-        "lon": -68.2846
+        "lat": 12.090217,
+        "lon": -68.28497
       },
       "entry": {
         "lat": 12.090358,
