@@ -1338,8 +1338,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/52-toris-reef.md",
       "site": {
-        "lat": 12.07115,
-        "lon": -68.281667
+        "lat": 12.070949,
+        "lon": -68.281955
       },
       "entry": {
         "lat": 12.070587,
