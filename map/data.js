@@ -865,8 +865,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/55-margate-bay.md",
       "site": {
-        "lat": 12.05135,
-        "lon": -68.2734
+        "lat": 12.050799,
+        "lon": -68.272761
       },
       "entry": {
         "lat": 12.051555,
