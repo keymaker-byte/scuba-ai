@@ -1159,8 +1159,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/50-salt-city.md",
       "site": {
-        "lat": 12.07942,
-        "lon": -68.28219
+        "lat": 12.08142,
+        "lon": -68.28313
       },
       "entry": {
         "lat": 12.081829,
