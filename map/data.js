@@ -1472,12 +1472,12 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/54-white-slave.md",
       "site": {
-        "lat": 12.055412,
-        "lon": -68.2805
+        "lat": 12.05688,
+        "lon": -68.282529
       },
       "entry": {
-        "lat": 12.057247,
-        "lon": -68.280888
+        "lat": 12.057598,
+        "lon": -68.280941
       },
       "parking": {
         "lat": 12.057693,
