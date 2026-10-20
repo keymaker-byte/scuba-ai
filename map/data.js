@@ -1491,8 +1491,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/61-willemstoren-lighthouse.md",
       "site": {
-        "lat": 12.026916,
-        "lon": -68.236553
+        "lat": 12.026996,
+        "lon": -68.236674
       },
       "entry": {
         "lat": 12.027999,
