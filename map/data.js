@@ -1459,8 +1459,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/62-white-hole.md",
       "site": {
-        "lat": 12.091167,
-        "lon": -68.229626
+        "lat": 12.094222,
+        "lon": -68.228019
       },
       "entry": null,
       "parking": null
