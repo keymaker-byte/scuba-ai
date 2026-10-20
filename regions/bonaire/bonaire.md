@@ -141,7 +141,7 @@ Air and nitrox fills concentrate in and around Kralendijk, serving the whole wes
 - **4 Wheel Diving, Kralendijk.** 22 Kaya Rotterdam. 4wheeldiving.com. Air and nitrox, daily 08:00 to 17:00.
 - **Xprodiver, Kralendijk.** Kaya Grandi 54. +599 717 3483. xprodiver.com. Air and nitrox.
 - **AB-Dive, Kralendijk.** Kaya Industria 31. +599 701 8982 (WhatsApp). ab-dive.com. Air and nitrox, daily 08:00 to 17:00.
-- **Bonaire East Coast Diving, Sorobon.** Fishermen's pier at Sorobon, at the end of the road past the Jibe City windsurf shops. bonaireeastcoastdiving.com. Guided boat dives on the windward coast,departing daily at 07:45 (two tanks) and 12:45 (one tank), booked online in advance, with air and nitrox tanks supplied on the boat for its own trips.
+- **Bonaire East Coast Diving, Sorobon.** Fishermen's pier at Sorobon, at the end of the road past the Jibe City windsurf shops. bonaireeastcoastdiving.com. Guided boat dives on the windward coast, departing daily at 07:45 (two tanks) and 12:45 (one tank), booked online in advance, with air and nitrox tanks supplied on the boat for its own trips.
 
 ## Emergency
 
