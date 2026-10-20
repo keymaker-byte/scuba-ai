@@ -1,6 +1,6 @@
 # 62. White Hole
 
-A sand-floored hole in the shallow reef plateau off Bonaire's east coast, just southeast of the mouth of Lac Bay, about 140 m long and dropping from a 4 m plateau to 14 m. Its white sand floor shows from the surface and from the air, giving the site its name. Schools of tarpon rest in the hole by day, with turtles, stingrays and spotted eagle rays around it. The site lies on the windward coast, dived by boat with an east coast operator as a guided drift, and wind, waves and surge across the shallow plateau decide on the day whether it can be dived.
+A sand-floored hole in the shallow reef plateau off Bonaire's east coast, just southeast of the mouth of Lac Bay, about 140 m long and dropping from a 4 m plateau to 14 m. Its white sand floor shows from the surface and from the air, giving the site its name. Schools of tarpon rest in the hole by day, with turtles, stingrays and spotted eagle rays around it. The site lies on the windward coast, dived by boat with Bonaire East Coast Diving as a guided drift, and wind, waves and surge across the shallow plateau decide on the day whether it can be dived.
 
 | | |
 |---|---|
@@ -12,9 +12,9 @@ A sand-floored hole in the shallow reef plateau off Bonaire's east coast, just s
 
 ## Getting there
 
-* **Entry.** A backward roll from the operator's boat, with re-entry by ladder. Boats leave from the fishermen's pier at Sorobon and cross Lac Bay out to the site in a few minutes.
+* **Entry.** A backward roll from the boat, with re-entry by ladder. Boats leave from the fishermen's pier at Sorobon and cross Lac Bay out to the site in a few minutes.
 * **Parking.** At the fishermen's pier at Sorobon, at the end of the road past the Jibe City windsurf shops.
-* **Access.** Dived only with a boat operator that specializes in the east coast, on a guided two-tank trip with the hole as one of its dives. Divers are expected to hold steady buoyancy and carry enough gas for a dive of about an hour. The approach from shore at Sorobon is a long wade and surface swim across shallow reef in breaking surf, unsafe with dive gear, so the site is reached by boat. A valid STINAPA nature fee is required.
+* **Access.** Dived with [Bonaire East Coast Diving](https://www.bonaireeastcoastdiving.com/), the boat operator that specializes in the east coast, on a guided trip from the fishermen's pier at Sorobon. The crew sets the day's sites from the weather and the group, so White Hole is dived when conditions allow. Divers bring all their own gear, weights included, with tanks supplied on the boat, and are expected to hold steady buoyancy and carry enough gas for an hour at an average depth of 14 m. The approach from shore at Sorobon is a long wade and surface swim across shallow reef in breaking surf, unsafe with dive gear, so the site is reached by boat. A valid STINAPA nature fee is required.
 * **Facilities.** None at the site.
 
 ## Navigation and landmarks
@@ -23,7 +23,7 @@ A sand-floored hole in the shallow reef plateau off Bonaire's east coast, just s
 * **The hole.** About 140 m long, running roughly north to south, and 30 to 40 m across, falling from the plateau to a white sand floor at 11 to 14 m, deepest near its middle. One side drops as a near-vertical wall and the other as a steep reef slope.
 * **The terrace edge.** About 120 to 200 m east of the hole the plateau tips over onto the outer reef slope, which drops away beyond the depths dived into the open ocean.
 * **The sea fan plateau.** South of the hole the plateau, at the same depth of about 4 m, is covered in sea fans and soft corals, the usual route out of the hole on the drift.
-* **Dive pattern.** Descend beside the hole and spend the first part of the dive in it with the tarpon, then leave over the sea fan plateau and drift south with the guide, surfacing to a boat pickup.
+* **Dive pattern.** Descend beside the hole and work through it from north to south with the tarpon, then leave over the sea fan plateau and drift south with the guide, surfacing to a boat pickup.
 
 ## Current
 
