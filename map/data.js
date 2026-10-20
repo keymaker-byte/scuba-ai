@@ -1370,6 +1370,19 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "turtle-city",
+      "name": "Turtle City",
+      "region": "bonaire",
+      "type": "boat",
+      "file": "regions/bonaire/sites/turtle-city.md",
+      "site": {
+        "lat": 12.092221,
+        "lon": -68.227574
+      },
+      "entry": null,
+      "parking": null
+    },
+    {
       "slug": "q-twixt",
       "name": "Q. Twixt",
       "region": "bonaire",
