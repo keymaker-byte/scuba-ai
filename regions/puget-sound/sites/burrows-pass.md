@@ -47,8 +47,8 @@ Diveable on the slack before the ebb only. Do not dive on a flood exchange or at
 | **Current type** | Tidal |
 | **Governing station** | NOAA Burrows Pass current station (PUG1738), about 0.4 km away, at the site |
 | **Recommended bin** | bin 1, at 30.6 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
+| **Observed offset, slack before flood** | Zero |
+| **Observed offset, slack before ebb** | Zero |
 | **Station flood axis** | west, 275° |
 | **Station ebb axis** | east, 95° |
 | **Site flood set** | west-northwest, 286° |
