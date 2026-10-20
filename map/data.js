@@ -1281,8 +1281,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/59-sweet-dreams.md",
       "site": {
-        "lat": 12.033425,
-        "lon": -68.262645
+        "lat": 12.033658,
+        "lon": -68.262284
       },
       "entry": {
         "lat": 12.034321,
