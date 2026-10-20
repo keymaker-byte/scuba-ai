@@ -372,8 +372,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/63-cai.md",
       "site": {
-        "lat": 12.10191,
-        "lon": -68.221214
+        "lat": 12.101903,
+        "lon": -68.221643
       },
       "entry": {
         "lat": 12.102627,
