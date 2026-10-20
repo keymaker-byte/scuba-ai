@@ -1108,8 +1108,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/60-red-slave.md",
       "site": {
-        "lat": 12.02555,
-        "lon": -68.2518
+        "lat": 12.025816,
+        "lon": -68.252081
       },
       "entry": {
         "lat": 12.026288,
