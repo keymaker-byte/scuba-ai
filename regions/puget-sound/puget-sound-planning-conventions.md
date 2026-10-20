@@ -9,6 +9,7 @@ Ordered by what actually kills a dive plan in the Sound:
    - **Spacial Model Tool.** `adcirc_current.md`, the day's slack and set from the site's extract, read by passing the site's `sites/<slug>.json` as `--file`. The Sound is four basins separated by sills that locally accelerate and redirect the flow, so a station some distance away does not always represent the site's own water, even a well proven one.
    - **Legacy Station Tool.** `noaa_legacy_current.md`, where the site file carries a legacy correction: the legacy reference's slack on the day, plus the correction.
    - **Current Reconciliation.** To reconciliate current slack prediction, put every source estimate side by side: the station, spacial model, and legacy station (apply offsets where established). Then follow these steps: 1) Calculate their overlapped time window. 2) If 2 or more sources match within a 30 mins range calculate a mid point. Always present all sources and the reconciliated values.
+   - **Station Weight.** No established offset: the station is a data point only, shown but left out of the overlap and mid point. Sole source: it sets the window, flagged as un-offset.
 2. **Wind** (secondary). Wind decides whether the entry is diveable at all: chop on the entry, surf on the beach, a surface swim into a fetch.
    - **Tool.** `nws_forecast.md`, the wind call at the entry and the exit time against the site's Wind section sectors.
 3. **Viz** (informational). Won't stop the dive, but sets expectations and gear (torch, reel).
