@@ -1000,8 +1000,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/53-pink-beach.md",
       "site": {
-        "lat": 12.064333,
-        "lon": -68.283267
+        "lat": 12.066149,
+        "lon": -68.283141
       },
       "entry": {
         "lat": 12.065934,
