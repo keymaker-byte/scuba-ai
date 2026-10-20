@@ -26,7 +26,7 @@ This folder covers Bonaire and Klein Bonaire only.
 
 ## Sites currently covered
 
-Site numbering runs 1 to 63 plus a lettered set A to Z at Klein Bonaire, 90 sites in total. STINAPA counts 88 of these as marked sites along the West Coast and Klein Bonaire; White Hole and Cai sit on the East Coast instead, recommended only for advanced divers with an experienced guide.
+Site numbering runs 1 to 63 plus a lettered set A to Z at Klein Bonaire, 90 sites in total. STINAPA counts 88 of these as marked sites along the West Coast and Klein Bonaire; White Hole and Cai sit on the East Coast instead, recommended only for advanced divers with an experienced guide. STINAPA removed Cai from its official dive sites in May 2018 after repeated serious incidents and reclassified White Hole as a boat dive at the same time; its dive map still lists both as advanced-only shore dives.
 
 Every site inside Washington Slagbaai National Park, Boka Bartol through Boka Slagbaai S, has been closed to diving since 1 May 2023 over an SCTLD outbreak, with the park open for every other activity; each affected site file carries the same note. The coast between BOPEC and the park, Carel's Vision and Nukove included, closed on the same date and reopened on 27 January 2024. Karpata and La Dania's Leap, to the south, stayed open through both; STINAPA had closed the pair from July to September 2022 after a fast-spreading coral disease was found at Karpata. STINAPA's current dive map omits Carel's Vision. On Klein Bonaire, Munk's Haven has been closed for an extended period and C.H. Annex is closed per STINAPA's own map. Reconfirm status with STINAPA before planning a dive near any of these boundaries.
 
