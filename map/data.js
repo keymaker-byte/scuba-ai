@@ -340,8 +340,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/g-bonaventure.md",
       "site": {
-        "lat": 12.14535,
-        "lon": -68.30445
+        "lat": 12.144931,
+        "lon": -68.304373
       },
       "entry": null,
       "parking": null
