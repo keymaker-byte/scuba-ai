@@ -923,8 +923,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/e-nearest-point.md",
       "site": {
-        "lat": 12.1568,
-        "lon": -68.29195
+        "lat": 12.148885,
+        "lon": -68.295929
       },
       "entry": null,
       "parking": null
