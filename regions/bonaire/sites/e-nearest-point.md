@@ -1,26 +1,28 @@
 # E. Nearest Point
 
-Also known locally as Piedra Kolet (coral rock in Papiamentu), the point on Klein Bonaire closest to the main island, with just 800 m of open water separating the two. The water slopes gradually from about a metre at the waterline to 5 to 8 m where the main reef begins, opening onto some of the healthiest, most luxuriant coral in the Caribbean, a character that continues around the whole south side of Klein Bonaire. Purple sea fans and lush gorgonians flourish between coral heads on a white sandy bottom, huge mountain coral heads sit in the drop-off, and black coral and large orange and purple tube sponges appear at the lower depths.
+The reef off the east point of Klein Bonaire, also called Piedra Kolet, facing Kralendijk across about 1 km of water. A sand flat at 3 to 4.5 m runs out from the point to a reef edge at 7 to 11 m, about 80 m offshore, where a steep slope of ridges and sand channels falls quickly past 40 m. Soft corals and sea rods fill the shallows, mountain star coral heads sit along the drop-off, and black coral and large tube sponges grow on the slope below. The point faces east into the trade winds, so its headline hazard is surface chop on windy afternoons, along with boat traffic crossing between Kralendijk and Klein Bonaire.
 
 | | |
 |---|---|
-| **Location** | Klein Bonaire, east coast, closest point to Bonaire |
-| **Coordinates** | 12.153846, -68.293098 (deep mooring, short swim to the reef) |
+| **Location** | East point of Klein Bonaire, facing Kralendijk, Bonaire National Marine Park, Caribbean Sea |
+| **Coordinates** | 12.1568, -68.29195 (the reef edge off the point, 9.1 m) |
 | **Type** | Boat |
-| **Depth range** | 6 to 30 m |
+| **Depth range** | 3 to 30 m |
+| **Skill level** | Beginner |
 
 ## Getting there
 
-* **Entry.** By boat, with a short swim from a deep mooring to the reef.
-* **Parking.** Not applicable.
-* **Access.** Reached only by a dive operator's boat; best dived in the morning when winds are at their minimum, especially for snorkelers. Klein Bonaire itself has no facilities.
-* **Facilities.** None.
+* **Entry.** A giant stride or backward roll from a dive operator's boat on the deep mooring off the point, then a short swim to the reef edge.
+* **Parking.** None; the site is reached by boat.
+* **Access.** Reached by a dive operator's boat, a short ride from Kralendijk. Dive it in the morning, when the trade winds are usually lightest. A valid STINAPA nature fee is required.
+* **Facilities.** A dive mooring just outside the reef edge.
 
 ## Navigation and landmarks
 
-* **The shallow slope.** Runs from about a metre at the waterline to the reef edge at 5 to 8 m.
-* **The drop-off.** Holds huge mountain coral heads, with black coral and large tube sponges deeper still.
-* **Depth profile.** The shallows slope from about a metre to the reef edge at 5 to 8 m.
+* **The sand flat.** White sand at 3 to 4.5 m runs about 80 m east from the shore of the point, with sea fans and gorgonians growing between coral heads. It makes the safety stop.
+* **The reef edge.** At 7 to 11 m, about 80 m off the shore, with mountain star coral heads along the drop-off. The mooring sits just outside it.
+* **The slope.** Steep, with ridges of coral separated by sand channels, falling past 40 m within about 100 m of the edge.
+* **Dive pattern.** Descend at the edge, work the slope at the chosen depth, and come back up across the edge to finish on the sand flat.
 
 ## Current
 
@@ -30,31 +32,36 @@ Also known locally as Piedra Kolet (coral rock in Papiamentu), the point on Klei
 | **Usual set** | Not established |
 | **Typical speed** | Not established |
 
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades pick up or shift.
+* **Character.** Usually little or none at the point, stronger when the trades pick up.
 
 ## Wind
 
 | | |
 |---|---|
-| **Dive area shore facing** | east-southeast, 113° |
+| **Dive area shore facing** | east, 87° |
 
-* **Short fetch.** East-northeast through south (ENE-S), onshore over 1.4 to 4 km across the channel from Bonaire, enough to build a chop at the mooring. The prevailing trades blow from this quarter; the site is best dived in the morning, when the wind is at its lightest.
-* **Mixed.** South-southwest (SSW), cross-shore over more than 30 km, running a swell along the reef.
-* **Fine.** Southwest clockwise through northeast: offshore from west-southwest through north, off the islet, and cross-shore over 50 m to 1.6 km from the southwest, north-northeast and northeast.
+* **Short fetch.** North-northeast through southeast (NNE-SE), onshore over 1.1 to 2.5 km across the channel from Bonaire, enough to build a chop over the mooring. The prevailing trades blow from this quarter, and are usually lightest in the morning.
+* **Mixed.** North-northwest (NNW), cross-shore over 5.6 km, running a swell past the point.
+* **Fine.** North, and south-southeast clockwise through northwest: cross-shore over 2.2 km from the north and 2.9 to 4.1 km from the south-southeast and south, and offshore from south-southwest through northwest, blowing off the islet itself.
 
 ## Visibility
 
-* **Overall.** Klein Bonaire's visibility runs excellent, commonly reaching up to 40 m.
+* **Overall.** Commonly 15 to 30 m or more. Calm mornings run clearest, and strong trades stirring the channel bring it down.
 
 ## Temperature
 
-* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water stays evenly mixed through recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-* **Shallows and drop-off.** Purple sea fans, lush gorgonians and huge mountain coral heads.
-* **Deeper.** Black coral and large orange and purple tube sponges.
+* **Sand flat.** Soft corals, sea rods, purple sea fans and gorgonians between coral heads, with schools of goatfish and the occasional ray on the sand.
+* **Drop-off and slope.** Mountain star coral heads, elephant ear sponges, and yellow, orange and purple tube sponges, with black coral deeper on the slope.
+* **Fish.** Angelfish, snappers and barracuda along the slope.
 
 ## Hazards
 
-* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.
+* **Surface chop.** The point faces straight into the trade winds; afternoon chop makes the mooring and the boat pickup rougher.
+* **Boat traffic.** Water taxis, dive boats and private boats cross between Kralendijk and Klein Bonaire all day. Surface close to the mooring line, with a surface marker buoy.
+* **The slope.** It falls past recreational depth close to the reef edge; watch depth along it.
+* **Medical help.** The nearest is in Kralendijk, a short boat ride across the channel.

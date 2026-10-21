@@ -103,7 +103,7 @@ SCTLD precaution applies uniformly across the park: disinfect before, between an
 | [B. Ebo's Reef](sites/b-ebos-reef.md) | North side reef of giant orange elephant ear sponges, often crinoid-topped, and huge lavender stovepipe colonies, reached from a deep water mooring. |
 | [C. Jerry's Reef](sites/c-jerrys-reef.md) | Sponge garden of tube and vase sponges near Ebo's Reef, reliable for turtles, stingrays and spotted eagle rays, with fern-like black coral. |
 | [D. Just a Nice Dive](sites/d-just-a-nice-dive.md) | Relaxed east side reef with schooling fish over yellow pencil coral on the reef top and juvenile fish for macro, good at night. |
-| [E. Nearest Point](sites/e-nearest-point.md) | Klein Bonaire's closest point to Bonaire, a gentle slope to huge mountain coral heads at the drop-off with black coral and tube sponges deeper, among the Caribbean's healthiest coral. |
+| [E. Nearest Point](sites/e-nearest-point.md) | Reef off Klein Bonaire's east point facing Kralendijk, where a sand flat of soft corals and sea fans gives onto a reef edge of mountain star coral heads and a steep slope of ridges and sand channels, with black coral and large tube sponges deeper. |
 | [F. Keepsake](sites/f-keepsake.md) | Lightly documented twin reef with sponge gardens and stingrays. |
 | [G. Bonaventure](sites/g-bonaventure.md) | Terraced south side reef with pyramid shaped star coral pagodas and seahorses in the gorgonians, where angelfish and black durgon accompany divers. |
 | [H. Monte's Divi](sites/h-montes-divi.md) | South side site named for the upright divi divi tree opposite the mooring, with staghorn and finger sponge shallows, seahorses, stingrays and turtles. |
