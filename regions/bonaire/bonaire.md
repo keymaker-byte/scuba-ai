@@ -102,7 +102,7 @@ SCTLD precaution applies uniformly across the park: disinfect before, between an
 | [A. No Name Beach](sites/a-no-name-beach.md) | Klein Bonaire's best known beach and only walk-in entry, with yellow headed jawfish and sailfin blennies in the rubble shallows and turtles on the reef. |
 | [B. Ebo's Reef](sites/b-ebos-reef.md) | North side reef of giant orange elephant ear sponges, often crinoid-topped, and huge lavender stovepipe colonies, reached from a deep water mooring. |
 | [C. Jerry's Reef](sites/c-jerrys-reef.md) | Sponge garden of tube and vase sponges near Ebo's Reef, reliable for turtles, stingrays and spotted eagle rays, with fern-like black coral. |
-| [D. Just a Nice Dive](sites/d-just-a-nice-dive.md) | Relaxed east side reef with schooling fish over yellow pencil coral on the reef top and juvenile fish for macro, good at night. |
+| [D. Just a Nice Dive](sites/d-just-a-nice-dive.md) | Relaxed reef at the east end of Klein Bonaire's south side, a narrow terrace ending at a lip of yellow pencil coral and schooling fish above a steep wall of large sponges, with ocean triggerfish and turtles. |
 | [E. Nearest Point](sites/e-nearest-point.md) | Klein Bonaire's closest point to Bonaire, a gentle slope to huge mountain coral heads at the drop-off with black coral and tube sponges deeper, among the Caribbean's healthiest coral. |
 | [F. Keepsake](sites/f-keepsake.md) | Lightly documented twin reef with sponge gardens and stingrays. |
 | [G. Bonaventure](sites/g-bonaventure.md) | Terraced south side reef with pyramid shaped star coral pagodas and seahorses in the gorgonians, where angelfish and black durgon accompany divers. |
