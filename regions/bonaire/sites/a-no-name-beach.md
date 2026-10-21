@@ -1,37 +1,40 @@
 # A. No Name Beach
 
-Klein Bonaire has no roads or vehicle access, so every dive site on the islet is reached by boat, either a dive operator's boat or the public water taxi from Kralendijk. This site is distinguished from the rest by what happens after that boat ride: rather than rolling straight off the boat at a mooring, divers land on the islet's wide white sand beach and walk in from shore, the gentlest entry on Klein Bonaire and one of the most popular sites on Klein. Coral heads are sparse in the shallow sandy shore area, but the sand itself is alive with yellow headed jawfish poking out of holes in the rubble and blackish sailfin blennies.
+The reef directly in front of No Name Beach, the long white sand beach on the north coast of Klein Bonaire and the landing for every water taxi to the islet. A shallow reef flat close to shore gives onto a sand and rubble shelf at 9 to 12 m, alive with yellowhead jawfish and sailfin blennies, that ends 50 to 100 m off the beach at a steep slope dropping past 40 m. Calm water and usually little current make it an easy dive from a dive operator's boat. Its headline hazard is the boat traffic of a busy beach: water taxis and private boats come and go all day overhead.
 
 | | |
 |---|---|
-| **Location** | Klein Bonaire, west side, facing Bonaire |
-| **Coordinates** | 12.168717, -68.30515 (beach entry) |
+| **Location** | No Name Beach, north coast of Klein Bonaire, Bonaire National Marine Park, Caribbean Sea |
+| **Coordinates** | 12.168717, -68.30515 (the shelf edge in front of the beach, 12.0 m) |
 | **Type** | Boat |
-| **Depth range** | 9 to 30 m |
-| **Skill level** | Beginner, minimal current |
+| **Depth range** | 4 to 30 m |
+| **Skill level** | Beginner |
 
 ## Getting there
 
-* **Entry.** A straightforward walk-in from the beach after landing, the gentlest entry on Klein Bonaire.
-* **Parking.** Not applicable; Klein Bonaire has no vehicle access. Reached by water taxi (about $25 per person round trip from Kralendijk, roughly a 10 minute crossing) or by a dive operator's boat.
-* **Access.** Open. Klein Bonaire has no facilities beyond an open shelter on this beach, an information board and the ruins of 19th century slave huts; bring your own food, water and reef-safe sunscreen.
-* **Facilities.** An open beach shelter; no toilets, food or drinking water anywhere on the island.
+* **Entry.** A giant stride or backward roll from a dive operator's boat in front of the beach, about 15 minutes from Kralendijk. Divers who come by water taxi with their own gear can also walk in from the beach.
+* **Parking.** None; the site is reached by boat.
+* **Access.** Reached by a dive operator's boat, or by water taxi to the beach from Kralendijk, which runs throughout the day, with the last boat back in the late afternoon. Klein Bonaire is open to visitors from 07:00 to 19:00. Motorboats may land only in a small designated area of the beach, and every other boat uses a mooring. A valid STINAPA nature fee is required.
+* **Facilities.** Two small thatched shelters with benches, information boards on Klein Bonaire's history and nature, waste bins and barbecue areas. No toilets, drinking water or food, and little shade.
 
 ## Navigation and landmarks
 
-* **The beach.** Klein Bonaire's best known stretch of sand, and the reference point for the whole site.
-* **Depth profile.** The shallow sandy shore area gives way to reef through the recreational range to about 30 m.
+* **The beach.** White sand along the north coast, the reference point for the whole site, with the water taxi landing in front of it.
+* **The reef flat.** A shallow reef close in front of the beach, reaching almost to the surface in places. A yellow post about 300 m east of the water taxi landing, along a rocky path past the end of the sand, marks the snorkel entry, a sandy split through the reef flat.
+* **The shelf.** Beyond the reef flat, a sand and coral rubble shelf at 9 to 12 m with sparse coral heads, where jawfish and blennies live in the rubble. The shelf runs 50 to 100 m out from the beach.
+* **The slope.** At the shelf edge the reef drops steeply, past 40 m within about 120 m of the beach, with hard corals, sponges and sea rods along it.
+* **Dive pattern.** Descend onto the shelf, drift along the slope with the current, usually to the west, and come up over the shelf for the safety stop and the boat pickup.
 
 ## Current
 
 | | |
 |---|---|
 | **Current type** | Wind driven |
-| **Usual set** | Not established |
+| **Usual set** | west, 270° |
 | **Typical speed** | Not established |
 
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
-* **Character.** Current here typically runs minimal.
+* **Drivers.** The east to southeast trade winds set the current west along the north coast. It can sit still for days, then run harder when the trades pick up or shift.
+* **Character.** Usually little or none in front of the beach, and weakest close to shore. It can run strong along the reef and at times switches direction.
 
 ## Wind
 
@@ -39,24 +42,30 @@ Klein Bonaire has no roads or vehicle access, so every dive site on the islet is
 |---|---|
 | **Dive area shore facing** | north, 6° |
 
-* **Bad.** Northwest through north-northwest (NW-NNW), onshore over 5.1 to 8.1 km of open water. Any wind from this quarter raises swell on the beach landing.
-* **Short fetch.** North through east-northeast (N-ENE), onshore over 1.7 to 3.3 km across the channel from Bonaire, enough to build a chop on this side of the islet; a strong east-northeasterly trade does exactly that.
+* **Bad.** Northwest through north-northwest (NW-NNW), onshore over 5.1 to 8.1 km of open water, building waves on the beach and over the shelf.
+* **Short fetch.** North through east-northeast (N-ENE), onshore over 1.7 to 3.3 km across the channel from Bonaire, enough to build a chop over the site.
 * **Mixed.** West through west-northwest (W-WNW), cross-shore over more than 30 km, running a swell along the beach.
-* **Fine.** East clockwise through west-southwest: offshore from southeast through west-southwest, off the islet, and cross-shore over 180 m to 1.9 km from the east and east-southeast.
+* **Fine.** East clockwise through west-southwest: offshore from southeast through west-southwest, blowing off the islet itself, and cross-shore over 180 m to 1.9 km from the east and east-southeast.
 
 ## Visibility
 
-* **Overall.** Klein Bonaire's visibility runs excellent, commonly up to 40 m, among the best around the island.
+* **Overall.** Commonly 15 to 30 m or more. Calm early mornings run clearest, and wind and swell from the north stirring the shallows bring it down.
 
 ## Temperature
 
-* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths. A wetsuit or dive skin is standard.
+* **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water stays evenly mixed through recreational depths. A wetsuit or dive skin is standard.
 
 ## Marine life
 
-* **Sandy shallows.** Yellow headed jawfish poking from holes in the coral rubble, and blackish sailfin blennies.
-* **Reef.** Turtles are regularly seen.
+* **Sand and rubble.** Yellowhead jawfish poking from holes in the coral rubble, sailfin blennies and peacock flounder.
+* **Reef.** French angelfish, parrotfish including midnight parrotfish, schools of blue tang, banded and foureye butterflyfish, trumpetfish, black durgon and scrawled filefish, with squid over the shelf.
+* **Turtles.** Green turtles are regularly seen on the reef and grazing in the shallows, most often early in the day. The beach is a turtle nesting beach, with nests marked by poles and tape in season.
+* **Coral.** Brain and lettuce coral, tube sponges and sea rods. The shallowest reef close to the beach is worn by heavy visitor numbers, with dead and broken coral and sea fans in the top 2 m.
 
 ## Hazards
 
-* **Current.** Wind driven current builds when the trades strengthen; check the surface before entering.
+* **Boat traffic.** Water taxis and private boats land at the beach and leave it throughout the day, busiest on cruise ship days. Surface close to the boat, with a surface marker buoy.
+* **Current.** It can run strong along the reef and switch direction; check it at the surface before descending.
+* **The slope.** The reef drops steeply past recreational depth close to shore; watch depth along the slope.
+* **Protected zones.** The marine park marks zones between the beach and the reef that are closed to swimmers. Keep to the boat entry or the marked snorkel entry.
+* **Remote site.** The nearest medical help is in Kralendijk, by boat.
