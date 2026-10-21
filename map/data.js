@@ -750,8 +750,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/f-keepsake.md",
       "site": {
-        "lat": 12.146389,
-        "lon": -68.298236
+        "lat": 12.147055,
+        "lon": -68.298622
       },
       "entry": null,
       "parking": null
