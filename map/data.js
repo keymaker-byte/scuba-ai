@@ -705,8 +705,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/d-just-a-nice-dive.md",
       "site": {
-        "lat": 12.148783,
-        "lon": -68.296
+        "lat": 12.148995,
+        "lon": -68.296037
       },
       "entry": null,
       "parking": null
