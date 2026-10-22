@@ -692,8 +692,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/j-joannes-sunchi.md",
       "site": {
-        "lat": 12.149833,
-        "lon": -68.314933
+        "lat": 12.14941,
+        "lon": -68.315027
       },
       "entry": null,
       "parking": null
