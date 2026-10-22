@@ -590,8 +590,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/m-hands-off.md",
       "site": {
-        "lat": 12.1502,
-        "lon": -68.323517
+        "lat": 12.149892,
+        "lon": -68.323481
       },
       "entry": null,
       "parking": null

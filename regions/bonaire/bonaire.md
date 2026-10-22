@@ -111,7 +111,7 @@ SCTLD precaution applies uniformly across the park: disinfect before, between an
 | [J. Joanne's Sunchi](sites/j-joannes-sunchi.md) | Sandy plateau with sand tilefish nesting in rubble under the boat, dropping at 5 m into fields of plate, cobble and leaf coral. |
 | [K. Capt. Don's Reef](sites/k-capt-dons-reef.md) | South coast site with a 1987 plaque at the mooring honouring Don Stewart, Bonaire's reef pioneer, above a drop-off of hard and soft coral. |
 | [L. South Bay](sites/l-south-bay.md) | Protected south side reef where bar and horse-eye jacks feed on schools of boga just off the reef, with groupers. |
-| [M. Hands Off](sites/m-hands-off.md) | Protected west side site of tongue and groove hills and valleys, with fragile, especially healthy coral and cleaning stations. |
+| [M. Hands Off](sites/m-hands-off.md) | Reef on Klein Bonaire's south shore toward its west end, set aside early in the marine park's history to measure diver impact, where a terrace of small coral hills and valleys, the tongue and groove formation, gives onto a gradual slope to about 37 m lined with cleaning stations, and a favoured night dive. |
 | [N. Forest](sites/n-forest.md) | Southwest peninsula drop-off of increasingly dense black coral forest, with an overhang at 27 m and a cave at 23 m sheltering a green moray, a resident loggerhead or a nurse shark. |
 | [O. South West Corner](sites/o-south-west-corner.md) | Klein Bonaire's southwest tip, open to deeper water, with black durgon, yellowtail snapper, green turtles, barracuda and tarpon. |
 | [P. Munk's Haven](sites/p-munks-haven.md) | Klein Bonaire site, not separately documented, sharing the character of the west side reefs. |
