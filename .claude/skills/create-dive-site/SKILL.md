@@ -164,6 +164,17 @@ Then work the findings. Fix style, structure and consistency directly. Hold each
 - **Conflicts.** In the region table or `map/data.js`, where each side changed a different site, keep both in the file's order and check `map/data.js` still parses. Any other conflict stops the merge: show the user both sides and wait.
 - **Clean up.** `git worktree remove --force .claude/worktrees/<region>-<slug>` and `git branch -d site/<region>/<slug>`, then report the merge commit. First check `git -C <worktree> status --short --ignored` lists only step 0's symlinks; anything else stops the clean up and goes to the user. Other worktrees and `site/` branches are expected, since many sites are worked in parallel; remove only this run's own and leave every other one untouched, without listing or reporting them.
 
+## 12. Summary
+
+Close the run with a short summary in chat, after the merge, as bold-led bullets with one or two lines each.
+
+- **Result.** The site, its coordinates, the merge commit, and the files changed.
+- **Key data points.** The seabed depth, the depth range, the distances.
+- **Key sections.** Depth, Current and Wind.
+- **Decisions made.** Each conflict between sources and how it was settled.
+- **Gaps.** Figures or information that was not established.
+- **Sources used.** Source that contributed to the file and what did they contribute.
+
 ## Template
 
 Placeholder text says what each row or bullet holds. "Compass and degrees" means the compass point spelled out in lowercase and the bearing ("west-southwest, 247°"). A sector is spelled out with its shorthand in parentheses ("south through west (S-W)"). Depths are below the region's datum where it has one, otherwise observed.
