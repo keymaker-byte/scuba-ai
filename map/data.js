@@ -910,8 +910,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/p-munks-haven.md",
       "site": {
-        "lat": 12.151583,
-        "lon": -68.329883
+        "lat": 12.15156,
+        "lon": -68.330208
       },
       "entry": null,
       "parking": null
