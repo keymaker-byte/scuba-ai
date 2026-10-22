@@ -117,7 +117,7 @@ SCTLD precaution applies uniformly across the park: disinfect before, between an
 | [P. Munk's Haven](sites/p-munks-haven.md) | Klein Bonaire site, not separately documented, sharing the character of the west side reefs. |
 | [Q. Twixt](sites/q-twixt.md) | Lightly documented west side site of two reefs separated by sand, with Caribbean reef sharks and barracuda. |
 | [R. Sharon's Serenity](sites/r-sharons-serenity.md) | Southwest corner reef with soft corals and large groupers, hawksbills at the cleaning stations most afternoons, and basket stars unfurling at night. |
-| [S. Valerie's Hill](sites/s-valeries-hill.md) | Reef of numerous sponges and plentiful black coral, with scrawled filefish and parrotfish. |
+| [S. Valerie's Hill](sites/s-valeries-hill.md) | Reef on Klein Bonaire's west side named after Captain Don's wife, a broad sand and coral terrace stepping down to about 11 m before a steep slope of numerous sponges and plentiful black coral, with scrawled filefish and parrotfish. |
 | [T. Mi Dushi](sites/t-mi-dushi.md) | Southwest side double reef with staghorn and yellow pencil coral shallows, jawfish and sailfin blennies, and seahorses around 15 m where the lagoon meets the sand channel. |
 | [U. C.H. Annex (Yellow M.)](sites/u-ch-annex.md) | Klein Bonaire site, undocumented. |
 | [V. Carl's Hill](sites/v-carls-hill.md) | Sheer wall on Klein Bonaire's northwest tip with the seldom seen featherbush hydroid, blue tang schools, and hawksbills and seahorses on the shallower sections. |

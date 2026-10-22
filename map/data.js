@@ -1402,8 +1402,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/s-valeries-hill.md",
       "site": {
-        "lat": 12.156999,
-        "lon": -68.327
+        "lat": 12.157276,
+        "lon": -68.327483
       },
       "entry": null,
       "parking": null
