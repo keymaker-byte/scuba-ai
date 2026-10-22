@@ -884,8 +884,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/t-mi-dushi.md",
       "site": {
-        "lat": 12.159917,
-        "lon": -68.32585
+        "lat": 12.159972,
+        "lon": -68.326002
       },
       "entry": null,
       "parking": null
