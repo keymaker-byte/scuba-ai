@@ -1210,8 +1210,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/r-sharons-serenity.md",
       "site": {
-        "lat": 12.155,
-        "lon": -68.329
+        "lat": 12.155074,
+        "lon": -68.329146
       },
       "entry": null,
       "parking": null
