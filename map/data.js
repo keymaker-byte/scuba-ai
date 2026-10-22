@@ -450,13 +450,13 @@ window.MAP_DATA = {
     },
     {
       "slug": "u-ch-annex",
-      "name": "U. C.H. Annex (Yellow M.)",
+      "name": "U. Carl's Hill Annex (Yellowman's Reef)",
       "region": "bonaire",
       "type": "boat",
       "file": "regions/bonaire/sites/u-ch-annex.md",
       "site": {
-        "lat": 12.164597,
-        "lon": -68.323728
+        "lat": 12.163097,
+        "lon": -68.324103
       },
       "entry": null,
       "parking": null
