@@ -116,7 +116,7 @@ SCTLD precaution applies uniformly across the park: disinfect before, between an
 | [O. South West Corner](sites/o-south-west-corner.md) | Klein Bonaire's southwest tip, open to deeper water, with black durgon, yellowtail snapper, green turtles, barracuda and tarpon. |
 | [P. Munk's Haven](sites/p-munks-haven.md) | Klein Bonaire site, not separately documented, sharing the character of the west side reefs. |
 | [Q. Twixt](sites/q-twixt.md) | Lightly documented west side site of two reefs separated by sand, with Caribbean reef sharks and barracuda. |
-| [R. Sharon's Serenity](sites/r-sharons-serenity.md) | Southwest corner reef with soft corals and large groupers, hawksbills at the cleaning stations most afternoons, and basket stars unfurling at night. |
+| [R. Sharon's Serenity](sites/r-sharons-serenity.md) | Reef at Klein Bonaire's southwest corner named for a favourite site of one of Captain Don's staff, a shallow terrace of soft corals close enough to shore for snorkelers above a steep slope of star corals and sponges, with large groupers, hawksbill turtles and basket stars that unfurl to feed at night. |
 | [S. Valerie's Hill](sites/s-valeries-hill.md) | Reef of numerous sponges and plentiful black coral, with scrawled filefish and parrotfish. |
 | [T. Mi Dushi](sites/t-mi-dushi.md) | Southwest side double reef with staghorn and yellow pencil coral shallows, jawfish and sailfin blennies, and seahorses around 15 m where the lagoon meets the sand channel. |
 | [U. C.H. Annex (Yellow M.)](sites/u-ch-annex.md) | Klein Bonaire site, undocumented. |
