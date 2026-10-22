@@ -115,7 +115,7 @@ SCTLD precaution applies uniformly across the park: disinfect before, between an
 | [N. Forest](sites/n-forest.md) | Reef off a small rocky peninsula on Klein Bonaire's south side near its west end, named for the fern-like black coral that grows denser down a steep drop-off below a gorgonian terrace, with a cave at about 23 m that shelters a green moray, a loggerhead or a nurse shark, a large overhang at 27 to 30 m, and friendly French angelfish. |
 | [O. South West Corner](sites/o-south-west-corner.md) | Klein Bonaire's southwest tip, open to deeper water, with black durgon, yellowtail snapper, green turtles, barracuda and tarpon. |
 | [P. Munk's Haven](sites/p-munks-haven.md) | Klein Bonaire site, not separately documented, sharing the character of the west side reefs. |
-| [Q. Twixt](sites/q-twixt.md) | Lightly documented west side site of two reefs separated by sand, with Caribbean reef sharks and barracuda. |
+| [Q. Twixt](sites/q-twixt.md) | Lightly documented reef on Klein Bonaire's west side, between Munk's Haven and Sharon's Serenity, where a sand and reef terrace at about 8 to 10 m runs close to 200 m out from the shore before the bottom falls steeply past 40 m. |
 | [R. Sharon's Serenity](sites/r-sharons-serenity.md) | Southwest corner reef with soft corals and large groupers, hawksbills at the cleaning stations most afternoons, and basket stars unfurling at night. |
 | [S. Valerie's Hill](sites/s-valeries-hill.md) | Reef of numerous sponges and plentiful black coral, with scrawled filefish and parrotfish. |
 | [T. Mi Dushi](sites/t-mi-dushi.md) | Southwest side double reef with staghorn and yellow pencil coral shallows, jawfish and sailfin blennies, and seahorses around 15 m where the lagoon meets the sand channel. |
