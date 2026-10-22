@@ -410,8 +410,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/k-capt-dons-reef.md",
       "site": {
-        "lat": 12.150117,
-        "lon": -68.31735
+        "lat": 12.149714,
+        "lon": -68.317387
       },
       "entry": null,
       "parking": null
