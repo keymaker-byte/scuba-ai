@@ -442,8 +442,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/v-carls-hill.md",
       "site": {
-        "lat": 12.16421,
-        "lon": -68.323728
+        "lat": 12.164649,
+        "lon": -68.32288
       },
       "entry": null,
       "parking": null
