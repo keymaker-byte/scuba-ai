@@ -1389,8 +1389,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/q-twixt.md",
       "site": {
-        "lat": 12.153521,
-        "lon": -68.32965
+        "lat": 12.153658,
+        "lon": -68.330133
       },
       "entry": null,
       "parking": null
