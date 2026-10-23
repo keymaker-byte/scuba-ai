@@ -123,7 +123,7 @@ SCTLD precaution applies uniformly across the park: disinfect before, between an
 | [V. Carl's Hill](sites/v-carls-hill.md) | Reef on Klein Bonaire's northwest tip, also called Punt P'abou and named for underwater photographer Carl Roessler, where a narrow soft coral terrace gives onto a sheer wall of sponges, orange cup corals and gorgonians with the seldom seen featherbush hydroid, blue tang schools, hawksbill turtles, and seahorses and frogfish. |
 | [W. Ebo's Special](sites/w-ebos-special.md) | North side site on a narrow sand plateau with caves swarming with fish and lobster, and the helix anchor mooring that set the pattern for later replacement moorings. |
 | [X. Leonora's Reef](sites/x-leonoras-reef.md) | North coast reef of huge hollow plate and star coral heads over 75 years old around 16 m, with tunnels through the largest. |
-| [Y. Knife](sites/y-knife.md) | North side reef of knife-like coral formations sheltering green morays, with rainbow and midnight parrotfish grazing the shallows. |
+| [Y. Knife](sites/y-knife.md) | North side reef between Leonora's Reef and Sampler, named for its knife-like coral formations, where a rubble and sand terrace grazed by midnight and rainbow parrotfish runs about 100 m out to a reef slope of coral heads and gorgonians, with green morays in the crevices and French and queen angelfish on the reef. |
 | [Z. Sampler](sites/z-sampler.md) | Klein Bonaire's northernmost and most photographed site, rocky overhangs sheltering morays, octopus and frogfish, with friendly angelfish. |
 
 ## Dive shops and air fills
