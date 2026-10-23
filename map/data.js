@@ -1197,8 +1197,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/z-sampler.md",
       "site": {
-        "lat": 12.168817,
-        "lon": -68.31005
+        "lat": 12.16896,
+        "lon": -68.310059
       },
       "entry": null,
       "parking": null
