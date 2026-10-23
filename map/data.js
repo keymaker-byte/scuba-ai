@@ -545,8 +545,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/w-ebos-special.md",
       "site": {
-        "lat": 12.165783,
-        "lon": -68.31925
+        "lat": 12.165887,
+        "lon": -68.319308
       },
       "entry": null,
       "parking": null
