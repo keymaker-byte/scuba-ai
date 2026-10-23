@@ -124,7 +124,7 @@ SCTLD precaution applies uniformly across the park: disinfect before, between an
 | [W. Ebo's Special](sites/w-ebos-special.md) | North shore reef toward Klein Bonaire's west end, also called Jerry's Jam and named for Bonaire's first certified diver, where a sand terrace gives onto a steep slope and small caves in the shallows hold spiny lobsters, large groupers and at times a sleeping nurse shark, below a helix anchor mooring that set the pattern for later replacements. |
 | [X. Leonora's Reef](sites/x-leonoras-reef.md) | Reef toward the west end of Klein Bonaire's north coast, where a flat shelf crowded with fish gives onto a steep slope cut by sandy channels, with huge hollow plate and star coral heads over 75 years old around 16 m, a small tunnel through the coral, and seahorses and morays. |
 | [Y. Knife](sites/y-knife.md) | North side reef between Leonora's Reef and Sampler, named for its knife-like coral formations, where a rubble and sand terrace grazed by midnight and rainbow parrotfish runs about 100 m out to a reef slope of coral heads and gorgonians, with green morays in the crevices and French and queen angelfish on the reef. |
-| [Z. Sampler](sites/z-sampler.md) | Klein Bonaire's northernmost and most photographed site, rocky overhangs sheltering morays, octopus and frogfish, with friendly angelfish. |
+| [Z. Sampler](sites/z-sampler.md) | Klein Bonaire's northernmost site on the islet's north coast west of the water taxi beach, a sand and coral terrace of yellowhead jawfish, sand divers and sailfin blennies out to a steep slope with large coral growth and overhangs, where friendly French and queen angelfish swim up to divers and morays, octopus, frogfish and orange seahorses hide in the reef. |
 
 ## Dive shops and air fills
 
