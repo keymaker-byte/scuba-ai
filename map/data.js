@@ -833,8 +833,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/x-leonoras-reef.md",
       "site": {
-        "lat": 12.167333,
-        "lon": -68.315417
+        "lat": 12.167429,
+        "lon": -68.315531
       },
       "entry": null,
       "parking": null
