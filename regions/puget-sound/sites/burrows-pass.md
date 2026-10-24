@@ -10,7 +10,6 @@ Shore dive on the north side of Burrows Pass, between Fidalgo Head and Burrows I
 | **Entry point coordinates** | 48.492318, -122.687631, the beach at the end of Cabana Way |
 | **Type** | Shore |
 | **Depth range** | 7.9 to 23.5 m below MLLW |
-| **Skill level** | Advanced |
 
 ## Getting there
 

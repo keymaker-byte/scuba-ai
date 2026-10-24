@@ -10,7 +10,6 @@ Kayak Point County Park sits on the east shore of Port Susan, a bay of Puget Sou
 | **Entry point coordinates** | 48.136101, -122.367890, off the beach |
 | **Type** | Shore |
 | **Depth range** | 0 m at the beach to over 30 m below MLLW, reached within roughly 150 m of the entry |
-| **Skill level** | All divers |
 
 ## Getting there
 

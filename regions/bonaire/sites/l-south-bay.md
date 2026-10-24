@@ -8,7 +8,6 @@ A boat dive in the middle of Klein Bonaire's south shore, in the lee of the isle
 | **Coordinates** | 12.14965, -68.320133 (8.6 m, near the outer edge of the terrace about 80 m off the beach) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | All levels |
 
 ## Getting there
 

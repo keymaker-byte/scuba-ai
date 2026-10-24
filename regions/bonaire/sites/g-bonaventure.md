@@ -8,7 +8,6 @@ A boat dive on the south shore of Klein Bonaire, facing the open Caribbean Sea. 
 | **Coordinates** | 12.144931, -68.304373 (top of the drop-off, just past the reef lip at about 9 m) |
 | **Type** | Boat |
 | **Depth range** | 5 to 30 m |
-| **Skill level** | Intermediate |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ A remote site in Washington Slagbaai National Park, on the park's northwest coas
 | **Entry point coordinates** | 12.269681, -68.413877, the sandy beach at the foot of the stairway |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

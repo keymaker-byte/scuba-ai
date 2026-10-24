@@ -10,7 +10,6 @@ Shore dive at Tolmie State Park on the south shore of Nisqually Reach, between J
 | **Entry point coordinates** | 47.120935, -122.776101, the beach in front of the footbridge over the estuary |
 | **Type** | Shore |
 | **Depth range** | 0 to 16 m below MLLW: sand flat from the beach, awash about 300 m out at a zero tide; foot of the slope about 14 m; barge tops about 11.5 to 12 m; seabed beside the barges about 14 to 16 m |
-| **Skill level** | Beginner and up on the dive itself, with the fitness for a long surface swim |
 
 ## Getting there
 

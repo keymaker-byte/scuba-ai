@@ -10,7 +10,6 @@ A short vertical wall on Bonaire's west coast north of Kralendijk, the house ree
 | **Entry point coordinates** | 12.174198, -68.290179, the yellow stone at the foot of the stairs behind the Dive Friends shop |
 | **Type** | Shore |
 | **Depth range** | 3.5 to 23 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

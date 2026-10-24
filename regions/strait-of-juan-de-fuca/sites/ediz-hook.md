@@ -10,7 +10,6 @@ Ediz Hook is the long sand spit that curls out from the base of Port Angeles and
 | **Entry point coordinates** | 48.141467, -123.430125, the beach below the pull-off |
 | **Type** | Shore |
 | **Depth range** | 0 to well beyond 40 m below MLLW. The colorful, life covered shelf stays inside about 18 m; beyond the reef edge the bottom keeps dropping over log debris with no defined limit |
-| **Skill level** | All divers on the shelf, inside the reef edge; the open slope beyond it needs real depth discipline, given the lack of any natural stopping point |
 
 ## Getting there
 

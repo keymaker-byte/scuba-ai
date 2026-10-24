@@ -10,7 +10,6 @@ A small cove in Washington Slagbaai National Park, the old landing of the Washin
 | **Entry point coordinates** | 12.282301, -68.413995, the cove beach |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

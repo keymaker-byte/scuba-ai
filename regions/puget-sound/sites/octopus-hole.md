@@ -10,7 +10,6 @@ Octopus Hole is a rock wall in a marine conservation area on the west shore of H
 | **Entry point coordinates** | 47.446565, -123.113949, the foot of a short path and rock steps below the north end of the lay-by |
 | **Type** | Shore |
 | **Depth range** | 5 to 25 m below MLLW, from the top of the shallow wall to the deep wall |
-| **Skill level** | All divers on the shallow wall; the deep wall is a deeper dive for experienced divers |
 
 ## Getting there
 

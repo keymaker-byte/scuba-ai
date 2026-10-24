@@ -8,7 +8,6 @@ A boat dive on the south-southwest shore of Klein Bonaire whose name means Joann
 | **Coordinates** | 12.149410, -68.315027 (about 9.5 m, on the second terrace about 100 m off the beach) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | All levels |
 
 ## Getting there
 

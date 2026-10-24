@@ -10,7 +10,6 @@ The southern of two routes at Boka Slagbaai and the southernmost dive site insid
 | **Entry point coordinates** | 12.264486, -68.413711, the southern end of the beach in front of the buildings |
 | **Type** | Shore |
 | **Depth range** | 2 to 24 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

@@ -8,7 +8,6 @@ A boat dive off the southeast point of Klein Bonaire, also called Piedra Kolet, 
 | **Coordinates** | 12.148885, -68.295929 (top of the drop-off, about 15 m past the reef lip at 8 m) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | All levels |
 
 ## Getting there
 

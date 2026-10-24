@@ -10,7 +10,6 @@ Shore dive at Saltwater State Park in Des Moines, on the mainland shore of East 
 | **Entry point coordinates** | 47.372431, -122.324328, the beach below the concrete stairs at the north end of the park beach, near where McSorley Creek drains into the Sound |
 | **Type** | Shore |
 | **Depth range** | Reef fingers roughly 7 to 24 m below MLLW; beyond them the bottom falls away sharply into much deeper water |
-| **Skill level** | Intermediate to advanced. The reef itself suits a confident diver, but the long surface swim, the depth at the reef's outer end and the steep drop past it call for fitness and good buoyancy control |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ A shore dive on Bonaire's west coast about 5 km northwest of Kralendijk, reached
 | **Entry point coordinates** | 12.191665, -68.297882, between the two yellow stones at the water's edge |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m, with the slope continuing past 35 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

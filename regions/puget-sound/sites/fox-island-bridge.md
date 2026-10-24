@@ -10,7 +10,6 @@ The Fox Island Bridge crosses the west end of Hale Passage, joining Fox Island t
 | **Entry point coordinates** | 47.274115, -122.650954, the gravel beach beside the boat ramp, at the base of the rock jetty |
 | **Type** | Shore |
 | **Depth range** | About 2 to 16 m below MLLW, from the inshore piles to the middle of the passage |
-| **Skill level** | Advanced |
 
 ## Getting there
 

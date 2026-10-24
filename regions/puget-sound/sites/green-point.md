@@ -10,7 +10,6 @@ Shore dive on the low, rocky point at the northwest corner of Washington Park, a
 | **Entry point coordinates** | 48.497675, -122.701240, the concrete stairs at the sharp bend in Washington Park's Loop Road |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 16 m below MLLW |
-| **Skill level** | Advanced |
 
 ## Getting there
 

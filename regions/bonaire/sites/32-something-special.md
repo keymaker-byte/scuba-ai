@@ -10,7 +10,6 @@ Something Special, also known as Pali Grandi, is a shore site on the Kralendijk 
 | **Entry point coordinates** | 12.161377, -68.283452, the rocks beside the footbridge and the mural wall |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

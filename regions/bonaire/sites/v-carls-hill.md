@@ -8,7 +8,6 @@ A boat dive on the northwest tip of Klein Bonaire, also known as Punt P'abou, na
 | **Coordinates** | 12.164649, -68.32288 (about 7 m, on the terrace about 17 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 5 to 30 m |
-| **Skill level** | Any level |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ Pinnacle Rock is a shore dive on the Strait of Juan de Fuca between Sekiu and Ne
 | **Entry point coordinates** | 48.323751, -124.469411, the rocky, cobble beach below the turnout |
 | **Type** | Shore |
 | **Depth range** | About 0 to 11 m below MLLW: cobble and boulder in the immediate shallows, giving way to the gently sloping, kelp covered bottom that reaches about 11 m at the base of the bed |
-| **Skill level** | Advanced for open water away from slack and for any exchange period dive; the sheltered channels between the rocks near slack suit less experienced divers in calm conditions |
 
 ## Getting there
 

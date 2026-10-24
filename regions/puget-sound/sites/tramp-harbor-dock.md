@@ -10,7 +10,6 @@ Shore dive beside a former oil dock turned public fishing pier on the east side 
 | **Entry point coordinates** | 47.413135, -122.437651, the ladder down the bulkhead to the beach beside the dock |
 | **Type** | Shore |
 | **Depth range** | 0 to about 9 m below MLLW along the dock; past the dock end the sand slopes to about 12.5 m within roughly 35 m, about 16 m within roughly 70 m and about 20 m within roughly 150 m |
-| **Skill level** | All levels |
 
 ## Getting there
 

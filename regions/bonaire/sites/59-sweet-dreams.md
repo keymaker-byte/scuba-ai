@@ -10,7 +10,6 @@ Sweet Dreams is a shore site on EEG Boulevard on Bonaire's south coast, off a sm
 | **Entry point coordinates** | 12.034321, -68.261544, the water's edge below the parking, on the turtle nesting beach |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced, for the surf and current on the exposed south coast |
 
 ## Getting there
 

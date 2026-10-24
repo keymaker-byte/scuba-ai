@@ -8,7 +8,6 @@ A boat dive on the southwest shore of Klein Bonaire, named for the pile of rocks
 | **Coordinates** | 12.147917, -68.311183 (about 6 m, on the terrace about 70 m off the beach) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | All levels |
 
 ## Getting there
 

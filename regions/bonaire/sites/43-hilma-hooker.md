@@ -10,7 +10,6 @@ Bonaire's best known wreck, a 72 m cargo ship lying on her starboard side on the
 | **Entry point coordinates** | 12.104510, -68.288146, the shore at the yellow stones by the lot |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

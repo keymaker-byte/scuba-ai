@@ -10,7 +10,6 @@ The Cargill salt works loading pier on EEG Boulevard south of Kralendijk, where 
 | **Entry point coordinates** | 12.083413, -68.282025, the break in the shoreline rock on the north side of the pier |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

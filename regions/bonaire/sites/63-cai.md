@@ -10,7 +10,6 @@ Cai is a shore dive on Bonaire's east coast at Lac Cai, where the deep channel t
 | **Entry point coordinates** | 12.102627, -68.221675, the sandy beach on the seaward side of the shell piles |
 | **Type** | Shore |
 | **Depth range** | 3 to 30 m |
-| **Skill level** | Advanced, with a local guide |
 
 ## Getting there
 

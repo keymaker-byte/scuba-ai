@@ -8,7 +8,6 @@ A boat dive on the west side of Klein Bonaire, also listed as Johanna's Revenge;
 | **Coordinates** | 12.159972, -68.326002 (9.7 m, on the terrace about 120 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 5 to 30 m |
-| **Skill level** | All levels |
 
 ## Getting there
 

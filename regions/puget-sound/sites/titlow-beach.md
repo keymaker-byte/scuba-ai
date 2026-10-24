@@ -10,7 +10,6 @@ Shore dive at Titlow Park in Tacoma, on the east shore of the Tacoma Narrows sou
 | **Entry point coordinates** | 47.247069, -122.553515, the beach at the foot of the ramp beside the deck |
 | **Type** | Shore |
 | **Depth range** | Ferry slip pilings about 4 to 5.5 m below MLLW; southern shelves about 6 to 12 m; the slope west of the pilings continues past 25 m |
-| **Skill level** | Intermediate. The pilings are shallow and the entry is easy, but the dive has to be timed to slack and the eddy and channel current read correctly |
 
 ## Getting there
 

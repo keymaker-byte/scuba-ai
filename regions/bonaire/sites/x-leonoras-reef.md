@@ -8,7 +8,6 @@ A boat dive toward the west end of Klein Bonaire's north coast. A flat, shallow 
 | **Coordinates** | 12.167429, -68.315531 (9 m, on the shelf about 60 m off the shore, near where the reef drops away) |
 | **Type** | Boat |
 | **Depth range** | 7 to 30 m, the slope running on to 40 m |
-| **Skill level** | Any level; the shallow shelf suits novice divers and snorkelers |
 
 ## Getting there
 

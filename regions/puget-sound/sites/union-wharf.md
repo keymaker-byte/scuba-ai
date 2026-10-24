@@ -10,7 +10,6 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 | **Entry point coordinates** | 48.114344, -122.755067, the beach at the foot of Adams Street |
 | **Type** | Shore |
 | **Depth range** | 0 m at the beach to about 11.6 m below MLLW off the pylons; the water off the current, smaller Union Wharf runs shallower, about 5 to 8 m below MLLW |
-| **Skill level** | Intermediate |
 
 ## Getting there
 

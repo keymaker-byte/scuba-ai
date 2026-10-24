@@ -10,7 +10,6 @@ Freshwater Bay opens north onto the Strait of Juan de Fuca between Angeles Point
 | **Entry point coordinates** | 48.146525, -123.641596, the county park boat ramp |
 | **Type** | Shore |
 | **Depth range** | 0 to about 17.6 m below MLLW: a shallow, partly drying sand and eelgrass crossing giving way to a rocky reef and Bachelor Rock's wall |
-| **Skill level** | Advanced |
 
 ## Getting there
 

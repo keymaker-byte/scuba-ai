@@ -10,7 +10,6 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 | **Entry point coordinates** | 47.177940, -122.590275, the beach in front of the Wind Pavilion and shower at the south end of the park |
 | **Type** | Shore |
 | **Depth range** | Eelgrass flat from the beach to about 2 m below MLLW; foot of the slope about 7.5 m; pipeline junction box and sunken boats about 10.5 to 11.5 m; the pipeline continues past 28 m |
-| **Skill level** | Beginner. Easy entry, an open sand bottom and little current; a common training site |
 
 ## Getting there
 

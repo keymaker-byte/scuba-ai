@@ -10,7 +10,6 @@ Scenic Beach State Park is a gently sloping sand and cobble beach on the east sh
 | **Entry point coordinates** | 47.650009, -122.846938, the concrete stairs at the middle of the park beach |
 | **Type** | Shore |
 | **Depth range** | Cobble shallows into eelgrass from about 1.5 m below MLLW, then a sandy slope dropping steadily past 20 m |
-| **Skill level** | All divers. A natural site for a first cold-water dive or a gear shakedown |
 
 ## Getting there
 

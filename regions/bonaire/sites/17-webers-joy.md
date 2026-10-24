@@ -10,7 +10,6 @@ A shore dive on Bonaire's northwest coast road south of the Radio Nederland towe
 | **Entry point coordinates** | 12.206482, -68.316599, the rubble beach at the foot of the path |
 | **Type** | Shore |
 | **Depth range** | 3 m in the shallows to 30 m on the slope, which continues past 40 m |
-| **Skill level** | All levels; the terrace suits novices and snorkelers, and the slope opens to deeper diving |
 
 ## Getting there
 

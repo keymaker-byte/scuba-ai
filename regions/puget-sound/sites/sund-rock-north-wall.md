@@ -10,7 +10,6 @@ Sund Rock North Wall is a rocky point on the west shore of Hood Canal, between H
 | **Entry point coordinates** | 47.435722, -123.120260, the easy ramp down to the pebble beach by the bench and boulder garden |
 | **Type** | Shore |
 | **Depth range** | Boulder garden 5 to 9 m below MLLW at the entry, the wall itself starting around 5 to 8 m and stepping down in ledges to about 17 m, with the base in silty sand at 19 to 21 m and the slope beyond continuing past 32 m |
-| **Skill level** | All divers in the boulder garden and along the shallow ledge; the deeper slope needs depth discipline |
 
 ## Getting there
 

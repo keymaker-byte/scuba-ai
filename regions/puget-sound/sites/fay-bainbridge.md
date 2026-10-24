@@ -10,7 +10,6 @@ Sand and eelgrass shore dive at the northeast tip of Bainbridge Island, facing o
 | **Entry point coordinates** | 47.702470, -122.506418, the beach at the south end of the day-use area |
 | **Type** | Shore |
 | **Depth range** | 0 to about 22 m below MLLW on the usual dived slope; the same sand keeps dropping well past 55 m beyond that, off the back of the area normally worked |
-| **Skill level** | Intermediate; current sensitive despite the gentle sand terrain |
 
 ## Getting there
 

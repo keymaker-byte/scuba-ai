@@ -10,7 +10,6 @@ Shore dive on the southwest shore of Bainbridge Island, on Rich Passage between 
 | **Entry point coordinates** | 47.587812, -122.531236, the beach below the boat ramp |
 | **Type** | Shore |
 | **Depth range** | 0 to about 18 m below MLLW on the sand and cobble slope worked from shore; the same bottom keeps dropping past that, leveling around 28 to 30 m roughly 500 to 650 m offshore, well outside the area normally worked |
-| **Skill level** | Open Water and above; current sensitive away from slack |
 
 ## Getting there
 

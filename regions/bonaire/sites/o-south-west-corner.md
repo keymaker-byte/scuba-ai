@@ -8,7 +8,6 @@ A boat dive off Klein Bonaire's southwest tip, where the islet's south and west 
 | **Coordinates** | 12.14955, -68.3295 (about 9 m, on the terrace at the mooring, about 100 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 5 to 30 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

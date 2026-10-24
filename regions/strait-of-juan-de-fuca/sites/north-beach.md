@@ -10,7 +10,6 @@ North Beach County Park sits on the Quimper Peninsula between McCurdy Point and 
 | **Entry point coordinates** | 48.142469, -122.782162, the park's boat launch off Kuhn Street |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 9 m below MLLW across the kelp bed; current builds quickly past that, and few dives go deeper |
-| **Skill level** | Advanced past the kelp's outer edge, where current picks up quickly; a shorter dive that stays inside the bed suits a broader range of divers in calm conditions |
 
 ## Getting there
 

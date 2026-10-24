@@ -10,7 +10,6 @@ Shore dive on the Mukilteo waterfront, on the shoreline south of Elliott Point i
 | **Entry point coordinates** | 47.946514, -122.307873, off the beach near the restrooms and the traffic circle at the park's south end |
 | **Type** | Shore |
 | **Depth range** | Roughly 2 to 23 m below MLLW on the dived slope, deeper beyond it |
-| **Skill level** | Intermediate; current sensitive |
 
 ## Getting there
 

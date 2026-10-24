@@ -8,7 +8,6 @@ A boat dive on Bonaire's west coast north of Kralendijk, named by Captain Don St
 | **Coordinates** | 12.186267, -68.297 (9 m, on the outer terrace about 75 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

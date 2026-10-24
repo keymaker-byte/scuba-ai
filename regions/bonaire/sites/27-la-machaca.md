@@ -10,7 +10,6 @@ The house reef of Captain Don's Habitat on Bonaire's west coast north of Kralend
 | **Entry point coordinates** | 12.172321, -68.289111, the end of Captain Don's Habitat's divers-only pier, with its ladders |
 | **Type** | Shore |
 | **Depth range** | 5 to 23 m |
-| **Skill level** | Beginner, including a first wreck dive |
 
 ## Getting there
 

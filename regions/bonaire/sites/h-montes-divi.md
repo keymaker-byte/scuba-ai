@@ -8,7 +8,6 @@ A boat dive on the south side of Klein Bonaire, named for the lone divi divi tre
 | **Coordinates** | 12.14565, -68.30855 (about 6 m, on the terrace near its outer edge, where the reef slope begins) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | All levels |
 
 ## Getting there
 

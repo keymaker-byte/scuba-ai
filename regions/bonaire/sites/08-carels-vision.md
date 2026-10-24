@@ -10,7 +10,6 @@ A remote site on Bonaire's northwest coast, between the BOPEC oil terminal and N
 | **Entry point coordinates** | 12.231072, -68.412294, the north side of the pebble beach |
 | **Type** | Shore |
 | **Depth range** | 4.5 to 30 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

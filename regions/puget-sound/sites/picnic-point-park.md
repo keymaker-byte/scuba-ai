@@ -10,7 +10,6 @@ Picnic Point is a shore dive on the east shore of Possession Sound, on the mainl
 | **Entry point coordinates** | 47.880524, -122.333531, the base of the footbridge, on the cobble beach |
 | **Type** | Shore |
 | **Depth range** | Roughly 2 to 21 m below MLLW on the gentle slope; beyond about 21 m the bottom drops away quickly into deeper water |
-| **Skill level** | All divers |
 
 ## Getting there
 

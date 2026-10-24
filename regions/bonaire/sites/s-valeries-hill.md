@@ -8,7 +8,6 @@ A boat dive on the west side of Klein Bonaire, south of the islet's middle, faci
 | **Coordinates** | 12.157276, -68.327483 (about 9 m, on the outer terrace about 115 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Any level |
 
 ## Getting there
 

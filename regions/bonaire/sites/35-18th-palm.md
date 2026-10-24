@@ -10,7 +10,6 @@ The house reef of Plaza Resort on Bonaire's west coast south of Kralendijk, name
 | **Entry point coordinates** | 12.138323, -68.276306, the sandy beach at Plaza Resort's northwest end |
 | **Type** | Shore |
 | **Depth range** | 3 to 27 m |
-| **Skill level** | Beginner on the terrace and inner reef; the outer reef at about 27 m calls for deep diving experience |
 
 ## Getting there
 

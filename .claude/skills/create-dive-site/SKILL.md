@@ -120,12 +120,13 @@ The thresholds come from fetch-limited wind wave growth (JONSWAP): at the wind t
 Write the figures from steps 5 to 7 and the research from step 4 into the template, following its section order, rows and formats. Beyond it:
 
 - **Type** is exactly Shore or Boat. Shore is anything reachable from land, however long the swim; Boat is only for no shore access at all. Swim distance, restrictions and guided-only rules go in Getting there.
+- **Skill level** is the diver's own call, made from the depth, current, entry and hazards the file describes; the file carries no rating of it. Prose may still note what a stretch of the site asks of a diver, as a hint.
 - **Air fills and dive shops** go in the region file. Facilities names only what is physically at the site.
 - **Every fact belongs**, whether from public data or repeated dives: coordinates, depths, station and bin, offset, current behaviour, entry, hazards, temperatures, life.
 
 ## 9. Bookkeeping
 
-- **Region row.** Under "Sites currently covered" in `<region>.md`: the site name linking to `sites/<slug>.md`, and one sentence the way a guidebook index reads: where it is, its terrain and structure, its landmarks, its notable life, anything unique. Hazards, current, slack, skill level and access stay in the site file.
+- **Region row.** Under "Sites currently covered" in `<region>.md`: the site name linking to `sites/<slug>.md`, and one sentence the way a guidebook index reads: where it is, its terrain and structure, its landmarks, its notable life, anything unique. Hazards, current, slack and access stay in the site file.
 - **Map entry.** One object in `map/data.js`'s top-level `sites` array. `site` is the Coordinates row, never parking or entry; `type` is the Type row lowercased; `parking` and `entry` are their rows, `null` for a boat site.
 
   ```json
@@ -192,7 +193,6 @@ Two to five sentences: what the site is, where, its character, and its headline 
 | **Entry point coordinates** | Shore only: decimal degrees of where you step in, and a brief description |
 | **Type** | Shore or Boat |
 | **Depth range** | Shallowest to deepest dived |
-| **Skill level** | Only if known |
 
 ## Getting there
 

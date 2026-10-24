@@ -10,7 +10,6 @@ A stretch of fringing reef on Bonaire's west coast north of Kralendijk, lying be
 | **Entry point coordinates** | 12.170737, -68.288344, the Buddy Dive Resort pier, with its ladders |
 | **Type** | Shore |
 | **Depth range** | 4 to 15 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

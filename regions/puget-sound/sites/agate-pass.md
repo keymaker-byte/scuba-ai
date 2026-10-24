@@ -10,7 +10,6 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 | **Entry point coordinates** | 47.711983, -122.563831, under the bridge |
 | **Type** | Shore |
 | **Depth range** | Roughly 7 to 10 m below MLLW along the channel, shallowest toward Suquamish and deepest at the bridge |
-| **Skill level** | Intermediate for a slack dive at the bridge or along the Bainbridge shore; advanced for the full drift across the channel to the Suquamish exit |
 
 ## Getting there
 

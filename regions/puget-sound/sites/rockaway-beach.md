@@ -10,7 +10,6 @@ Natural rock reef shore dive on the southeast shore of Bainbridge Island, at the
 | **Entry point coordinates** | 47.599182, -122.498575, the stairway at the north end of Rockaway Beach Park |
 | **Type** | Shore |
 | **Depth range** | Reef roughly 8 to 18 m below MLLW; the rock rib continues to about 26 m at its outer, southern edge |
-| **Skill level** | Intermediate to advanced; workable for less experienced divers with a guide |
 
 ## Getting there
 

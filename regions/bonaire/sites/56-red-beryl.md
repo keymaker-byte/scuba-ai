@@ -10,7 +10,6 @@ Red Beryl is a shore site on EEG Boulevard, about 11.5 km south of Kralendijk on
 | **Entry point coordinates** | 12.046954, -68.268287, the narrow beach at the large grey rock |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

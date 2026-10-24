@@ -10,7 +10,6 @@ A small, remote sandy cove on Bonaire's northwest coast, also called Doblet, rea
 | **Entry point coordinates** | 12.240712, -68.412275, the small sandy beach in the cove |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

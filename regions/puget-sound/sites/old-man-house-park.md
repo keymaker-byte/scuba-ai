@@ -10,7 +10,6 @@ Old Man House Park is a small Suquamish Tribe park on the Kitsap Peninsula shore
 | **Entry point coordinates** | 47.723938, -122.557699, the Old Man House Park beach |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 9 m below MLLW close to the park, deepening gradually into the pass channel |
-| **Skill level** | Intermediate. Current is real here, though markedly weaker than the channel can run further south near the bridge, over 1 m/s at times |
 
 ## Getting there
 

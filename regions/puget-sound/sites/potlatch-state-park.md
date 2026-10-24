@@ -10,7 +10,6 @@ Potlatch State Park is a shore dive off a long cobble and eelgrass beach on the 
 | **Entry point coordinates** | 47.361734, -123.155740, the cobble beach in front of the picnic area, 48 m east of the lot |
 | **Type** | Shore |
 | **Depth range** | 0 to 46 m below MLLW, from the eelgrass flat to the foot of the slope |
-| **Skill level** | All divers on the flat and the upper slope; the deep slope and sea whip field are for experienced divers |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ A small sand beach in Belnem, on EEG Boulevard about 3 km south of Kralendijk on
 | **Entry point coordinates** | 12.125500, -68.287336, the bottom of the seven step stairway |
 | **Type** | Shore |
 | **Depth range** | 5 to 30 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

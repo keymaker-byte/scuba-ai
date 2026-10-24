@@ -8,7 +8,6 @@ A boat dive on the north shore of Klein Bonaire toward its west end, also known 
 | **Coordinates** | 12.165887, -68.319308 (about 7 m, on the sand terrace about 56 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Any level |
 
 ## Getting there
 

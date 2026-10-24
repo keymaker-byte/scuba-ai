@@ -10,7 +10,6 @@ Shore dive off the Fox Island Fishing Pier at Toy Point, the eastern tip of Fox 
 | **Entry point coordinates** | 47.228206, -122.590572, the cobble beach at the foot of the trail, on the park side of the fence |
 | **Type** | Shore |
 | **Depth range** | Top of the shallow ledge about 2 m below MLLW, its base about 9 to 12 m; base of the deeper southern ledge about 21 m; the slope continues past 30 m |
-| **Skill level** | Advanced. The walls start shallow, but the current, its early turn and the absence of shelter call for experience diving slack windows |
 
 ## Getting there
 

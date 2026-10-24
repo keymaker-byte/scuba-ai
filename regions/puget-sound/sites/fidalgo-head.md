@@ -10,7 +10,6 @@ Shore dive across the shallow bay at Washington Park, on the west end of Fidalgo
 | **Entry point coordinates** | 48.497048, -122.700551, the concrete stairs at the sharp bend in Washington Park's Loop Road |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 12 m below MLLW along the base of the outer rock, shelving onto sand beyond it |
-| **Skill level** | Advanced |
 
 ## Getting there
 

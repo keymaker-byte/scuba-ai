@@ -10,7 +10,6 @@ White Slave is a shore site on EEG Boulevard on Bonaire's southwest coast, oppos
 | **Entry point coordinates** | 12.057598, -68.280941, the ironshore below the slave huts |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced, for the variable current and the long swim |
 
 ## Getting there
 

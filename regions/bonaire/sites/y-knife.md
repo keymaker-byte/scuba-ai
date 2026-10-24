@@ -8,7 +8,6 @@ A boat dive on the north side of Klein Bonaire, named for its knife-like coral f
 | **Coordinates** | 12.168667, -68.313183 (about 7 m, on the terrace about 90 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 6 to 30 m |
-| **Skill level** | Any level |
 
 ## Getting there
 

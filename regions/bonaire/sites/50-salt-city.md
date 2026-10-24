@@ -10,7 +10,6 @@ Salt City is a double reef shore site on EEG Boulevard, about 250 m south of Sal
 | **Entry point coordinates** | 12.081829, -68.281515, the worn ironshore slope below the road |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Beginner on the terrace and the first reef; the second reef calls for compass navigation and depth discipline |
 
 ## Getting there
 

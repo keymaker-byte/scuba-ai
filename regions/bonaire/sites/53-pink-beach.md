@@ -10,7 +10,6 @@ Pink Beach is a shore site on EEG Boulevard, about 1.9 km south of Salt Pier on 
 | **Entry point coordinates** | 12.065934, -68.281692, the north end of the beach, by the northernmost palm trees |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Beginner on the terrace in calm water; the reef slope calls for experience in current |
 
 ## Getting there
 

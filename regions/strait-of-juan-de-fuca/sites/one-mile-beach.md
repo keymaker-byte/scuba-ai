@@ -10,7 +10,6 @@ One Mile Beach is a shore dive on the Strait of Juan de Fuca about 1.6 km west o
 | **Entry point coordinates** | 48.271908, -124.316772, where the railroad grade trail comes down onto the beach |
 | **Type** | Shore |
 | **Depth range** | About 2 to 20 m below MLLW on the rock and kelp ground, dropping away rapidly beyond |
-| **Skill level** | Advanced |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ Buddy Dive Resort's house reef on Bonaire's west coast north of Kralendijk, ente
 | **Entry point coordinates** | 12.17075, -68.28843, the Buddy Dive Resort pier, with its ladders |
 | **Type** | Shore |
 | **Depth range** | 4.5 to 30 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

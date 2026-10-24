@@ -10,7 +10,6 @@ The west end of the Hood Canal Bridge meets the Olympic Peninsula shore at Shine
 | **Entry point coordinates** | 47.867908, -122.635022, the park beach north of the bridge |
 | **Type** | Shore |
 | **Depth range** | About 3 to 27 m below MLLW, from the top of the slope to the channel floor around the bridge structure |
-| **Skill level** | Advanced |
 
 ## Getting there
 
