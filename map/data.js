@@ -2579,6 +2579,25 @@ window.MAP_DATA = {
         "lat": 47.247069,
         "lon": -122.553515
       }
+    },
+    {
+      "slug": "tolmie",
+      "name": "Tolmie State Park (Tolmie Barges)",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/tolmie.md",
+      "site": {
+        "lat": 47.12435,
+        "lon": -122.77002
+      },
+      "parking": {
+        "lat": 47.119935,
+        "lon": -122.776219
+      },
+      "entry": {
+        "lat": 47.120935,
+        "lon": -122.776101
+      }
     }
   ]
 };
