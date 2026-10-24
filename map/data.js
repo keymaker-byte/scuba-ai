@@ -2391,6 +2391,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "twanoh-state-park",
+      "name": "Twanoh State Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/twanoh-state-park.md",
+      "site": {
+        "lat": 47.380753,
+        "lon": -122.969831
+      },
+      "parking": {
+        "lat": 47.37915,
+        "lon": -122.97268
+      },
+      "entry": {
+        "lat": 47.379349,
+        "lon": -122.971934
+      }
+    },
+    {
       "slug": "union-wharf",
       "name": "Union Wharf",
       "region": "puget-sound",
