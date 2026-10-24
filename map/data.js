@@ -2087,6 +2087,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "potlatch-state-park",
+      "name": "Potlatch State Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/potlatch-state-park.md",
+      "site": {
+        "lat": 47.361622,
+        "lon": -123.15338
+      },
+      "parking": {
+        "lat": 47.361782,
+        "lon": -123.156374
+      },
+      "entry": {
+        "lat": 47.361734,
+        "lon": -123.15574
+      }
+    },
+    {
       "slug": "richmond-beach-park",
       "name": "Richmond Beach Park (Richmond Beach Saltwater Park)",
       "region": "puget-sound",
