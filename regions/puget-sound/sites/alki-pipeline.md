@@ -30,6 +30,50 @@ The pipeline is the dive: find it, follow it out, follow it back. Working from t
 * **The true end.** The pipeline reappears and ends about 46 m farther out. To find it, hold a straight compass line southwest across the sand from the apparent end. This outermost section is the least visited part of the site and easy to miss.
 * **Return.** The pipe is the guide back in. Follow it northeast to the shallows and the pump-station wall.
 
+## Site map
+
+The pipeline runs straight out from the beach just west of the pump station on a heading of about 215°, in three pieces separated by short gaps of scattered rock. A short inshore run starts at the waterline and covers the first 70 m; the main run picks up again about 20 m farther out and continues to about 260 m, the apparent end; after a gap of about 35 m crossed by a few loose rocks, the pipe ends in a T-shaped concrete structure whose crossbar, about 35 m wide and lying across the line, is the true end. Two piles of rock and a pair of small blocks sit just beyond the crossbar in deeper water. A separate rock pile, about 90 m long and running roughly east to west, lies in the shallows about 90 m east-southeast of the pipe. The entry is at the pipe's shore end, and distances in the table below are measured along the pipe from the waterline. The bottom either side is eelgrass and sand out to about 4 m below MLLW, then open sand.
+
+Important! southwest is up; north is down-right.
+
+```
+                                     offshore, southwest, 215°
+                                                ▲
+                                    ░░    ░░░
+                                 ▪▪  H     ░░░
+                                  ┌───────────┐
+                                  └───┐ G ┌───┘
+                                      │ F │
+                                      └─┬─┘
+                                        ·
+                                        ·
+                                        ┃ E   apparent end
+                                        ┃
+                                        ┃
+                                        ┃ D
+                                        ┃
+                                        ┃
+                                        ┃ C
+                                        ·
+                                        ┃ B
+                                        ┃
+               ╱╱╱╱╱╱ rock pile         ┃ A
+ - - - - - - - - - - - - - - - - - - - -●- - - - - - - - - - - - - - - - - - - - -
+           pump station           entry ● parking
+                      Beach Drive SW, east ◀            ▶ west, Alki Point
+```
+
+| Point | From shore | Feature | Below MLLW |
+|---|---|---|---|
+| A | 0 m | Shore end of the inshore run, at the waterline | Dries |
+| B | 70 m | End of the inshore run; a gap of about 20 m with scattered rocks follows | Dries |
+| C | 90 m | Start of the main run | Dries |
+| D | 175 m | Middle of the main run, in eelgrass and sand | 1 m |
+| E | 260 m | Apparent end of the main run, anemones thick on the rock; hold the heading straight across the gap | 3 m |
+| F | 295 m | Base of the T, the stem leading out to the crossbar | 4 m |
+| G | 340 m | The crossbar, the true end of the pipe | 10 m |
+| H | 365 m | Two rock piles and two small blocks beyond the crossbar | 13 m |
+
 ## Current
 
 Currents here are light to moderate, and the site dives easily inside the point, but Alki Point sits just northwest and accelerates the flow close to and off the point, so a slack is worth planning. Local practice is to dive the slack before the ebb, entering the water about 45 minutes ahead of it.
