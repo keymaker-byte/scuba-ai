@@ -67,12 +67,12 @@ Important! southwest is up; north is down-right.
 |---|---|---|---|
 | A | 0 m | Shore end of the inshore run, at the waterline | Dries |
 | B | 70 m | End of the inshore run; a gap of about 20 m with scattered rocks follows | Dries |
-| C | 90 m | Start of the main run | Dries |
-| D | 175 m | Middle of the main run, in eelgrass and sand | 1 m |
-| E | 260 m | Apparent end of the main run, anemones thick on the rock; hold the heading straight across the gap | 3 m |
-| F | 295 m | Base of the T, the stem leading out to the crossbar | 4 m |
-| G | 340 m | The crossbar, the true end of the pipe | 10 m |
-| H | 365 m | Two rock piles and two small blocks beyond the crossbar | 13 m |
+| C | 90 m | Start of the main run | 6 m |
+| D | 175 m | Middle of the main run, in eelgrass and sand | 8 m |
+| E | 260 m | Apparent end of the main run, anemones thick on the rock; hold the heading straight across the gap | 10 m |
+| F | 295 m | Base of the T, the stem leading out to the crossbar | 12 m |
+| G | 340 m | The crossbar, the true end of the pipe | 14 m |
+| H | 365 m | Two rock piles and two small blocks beyond the crossbar | 16 m |
 
 ## Current
 
