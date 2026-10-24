@@ -75,4 +75,29 @@ Follow the region's planning conventions in their own order: each factor, the to
 | **Wind** | Speed, direction and call at exit |
 | **Swell and sea state** | The reading and its band at exit |
 
-**2. The summary.** Create a dive plan summary including site description (outside, how to park, underwater scene and life), and bullet points using emojis to summarise each dive factor. Make it short and to the point, include resulting data (e.g. current speed, wind speed, deph, temperature, vizibility).
+**2. The summary.** Create a dive plan summary including site description and bullet points using emojis to summarise each dive factor. Make it short and to the point, include resulting data (e.g. current speed/direction, wind speed/direction, deph, temperature, vizibility).
+
+- **Title.** Site name, day and date, and the splash time.
+- **Description.** One short paragraph: where the site is, the underwater scene and life, and any important rule.
+- **Bullets.** Times, parking, entry, surface swim, current, tide, depth, wind, temperature, viz, route, watch for.
+
+Follow the example below for the format.
+
+```markdown
+### 🤿 Example Reef: Sat 12 Jul, 9:30 AM
+
+A low rock reef runs out from the beach at a small city park, a line of boulders crossing a sand slope into open water. Plumose anemones cover the tops of the rocks, with rockfish and greenling in the gaps, and sea pens and flounders on the sand either side. A second, deeper boulder pile lies 30 m past the end of the main reef. The site is a marine reserve, so look, don't take.
+
+- ⏰ **Times:** meet 8:45 AM, in the water 9:30 AM, out 10:30 AM (60 min).
+- 🚗 **Parking:** free street parking along the park road beside the picnic area. Restrooms by the lot.
+- 🚶 **Entry:** follow the paved path down to the beach, then cross a short stretch of cobble to the water, easier on a higher tide.
+- 🏊 **Surface swim:** about 100 m W, lined up on the flagpole, until rocks appear below. Descend there.
+- 🌊 **Current:** slack around 10:05 AM on a small exchange, under 0.10 m/s for the whole dive towards SW.
+- 🌙 **Tide:** high +3.20 m at 10:10 AM.
+- 📏 **Depth:** 8 to 15 m along the reef, 18 m maximum at the outer pile.
+- 💨 **Wind:** N at 2 to 3 m/s, offshore, gusts under 4 m/s, flat water. Go.
+- 🌡️ **Temperature:** water about 11 °C, air 16 to 18 °C, sunny, dry.
+- 👀 **Viz:** about 5 m (nearby site, 9 Jul).
+- 🧭 **Route:** W at 270° along the reef, hold the bearing across the gap to the outer pile, turn by 10:00 AM, follow the reef E home, safety stop at 5 m.
+- ⚠️ **Watch for:** boat traffic (fly a buoy), seals (keep 90 m away).
+```
