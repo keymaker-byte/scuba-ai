@@ -1802,6 +1802,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "fox-island-west-wall",
+      "name": "Fox Island West Wall",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/fox-island-west-wall.md",
+      "site": {
+        "lat": 47.239217,
+        "lon": -122.63294
+      },
+      "parking": {
+        "lat": 47.239633,
+        "lon": -122.631492
+      },
+      "entry": {
+        "lat": 47.239512,
+        "lon": -122.631841
+      }
+    },
+    {
       "slug": "green-point",
       "name": "Green Point",
       "region": "puget-sound",
