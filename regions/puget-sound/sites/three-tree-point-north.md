@@ -10,7 +10,6 @@ Shore dive on the north side of Three Tree Point, a wooded residential point tha
 | **Entry point coordinates** | 47.452233, -122.379252, the north-side beach access at the end of SW 170th Street |
 | **Type** | Shore |
 | **Depth range** | Reef roughly 5 to 27 m below MLLW; the sand slope continues past 40 m |
-| **Skill level** | Intermediate; the shallow reef suits all divers, but the slope drops fast |
 
 ## Getting there
 

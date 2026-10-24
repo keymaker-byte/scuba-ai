@@ -10,7 +10,6 @@ Rosario Beach is a pebble and sand beach in Deception Pass State Park, at the so
 | **Entry point coordinates** | 48.417563, -122.663700, the south end of Rosario Beach |
 | **Type** | Shore |
 | **Depth range** | Rocky reef about 8 to 12 m below MLLW around Urchin Rocks and Rosario Head, sand beyond sloping to roughly 15 m; the outer walls of Northwest Island drop past 30 m |
-| **Skill level** | All divers in the bay; advanced for Rosario Head, Sharpe Cove and Northwest Island |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ Point Whitney is a shore dive on Hood Canal at the Washington Department of Fish
 | **Entry point coordinates** | 47.762059, -122.852490, through a gap in the perimeter fence on the lab's beach |
 | **Type** | Shore |
 | **Depth range** | Below MLLW: pipe from about 4.6 m at the fence gap down to 26 to 30 m at its end; a sea whip field continues beyond that from about 30 m, well past recreational no-decompression limits |
-| **Skill level** | All divers along the shallow pipe and its blocks; depth discipline matters more the further out the pipe is followed, and the sea whip field beyond its end is technical diving, outside this workspace's planning scope |
 
 ## Getting there
 

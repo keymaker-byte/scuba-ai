@@ -8,7 +8,6 @@ A broad, shallow reef plateau of sea fans and soft coral on Bonaire's east coast
 | **Coordinates** | 12.092221, -68.227574 (the plateau near the reef edge, 7.6 m) |
 | **Type** | Boat |
 | **Depth range** | 4 to 20 m |
-| **Skill level** | Advanced, with an experienced east coast guide |
 
 ## Getting there
 

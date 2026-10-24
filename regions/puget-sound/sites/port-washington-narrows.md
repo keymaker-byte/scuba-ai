@@ -12,7 +12,6 @@ Port Washington Narrows is the tidal cut through Bremerton joining Dyes Inlet to
 | **Exit parking coordinates** | 47.585384, -122.644592, the Lions Park lot beside the pier and boat ramp, for the second car |
 | **Type** | Shore |
 | **Depth range** | Roughly 6 to 10 m below MLLW along the channel between the two bridges, shoaling to a tideflat near the exit |
-| **Skill level** | Advanced |
 
 ## Getting there
 

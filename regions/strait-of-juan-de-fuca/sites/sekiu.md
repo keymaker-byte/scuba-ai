@@ -10,7 +10,6 @@ Sekiu Jetty is a shore dive in the town of Sekiu, on the western reach of the St
 | **Entry point coordinates** | 48.266559, -124.298775, the beach below the parking area |
 | **Type** | Shore |
 | **Depth range** | About 6 to 21 m below MLLW |
-| **Skill level** | Advanced for the rocky, kelp covered ground; the jetty and the beach nearer the marina suit less experienced divers in good conditions |
 
 ## Getting there
 

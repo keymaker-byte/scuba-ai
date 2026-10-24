@@ -10,7 +10,6 @@ One of the best known shore dives on Bonaire's west coast, about 7 km north of K
 | **Entry point coordinates** | 12.200149, -68.308632, the platform and steel ladder at the cliff edge, about 5 m of water below |
 | **Type** | Shore |
 | **Depth range** | 5 to 25 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

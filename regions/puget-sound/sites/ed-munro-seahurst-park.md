@@ -10,7 +10,6 @@ Shore dive off the long sand and cobble beach of Ed Munro Seahurst Park in Burie
 | **Entry point coordinates** | 47.478341, -122.363888, the beach directly in front of the lower lot, where the stream crosses the beach |
 | **Type** | Shore |
 | **Depth range** | Shore to about 12 m below MLLW at the barge; the sand slope continues past 24 m |
-| **Skill level** | All divers |
 
 ## Getting there
 

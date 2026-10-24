@@ -10,7 +10,6 @@ Kralendijk's town pier, a working cargo and cruise pier running out from the wat
 | **Entry point coordinates** | 12.150107, -68.278066, on the pier near its outer end |
 | **Type** | Shore |
 | **Depth range** | 3 to 11 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

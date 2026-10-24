@@ -10,7 +10,6 @@ A shore dive at the Port Townsend Marine Science Center pier, inside Fort Worden
 | **Entry point coordinates** | 48.136278, -122.761603, the beach by the pier and the tire reef it sits over (seabed 6 to 7 m below MLLW at the pier's end) |
 | **Type** | Shore |
 | **Depth range** | 0 m at the beach to about 13 m below MLLW at the outer edge of the underwater park; the pilings, hallways under the pier deck and tire reef sit around 6 to 7 m |
-| **Skill level** | All divers and snorkelers; current sensitive on a large exchange |
 
 ## Getting there
 

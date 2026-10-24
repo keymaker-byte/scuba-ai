@@ -10,7 +10,6 @@ Willemstoren Lighthouse is a shore site at Bonaire's southern tip, below the isl
 | **Entry point coordinates** | 12.027999, -68.237291, the rocky shore below the parking |
 | **Type** | Shore |
 | **Depth range** | 4 to 25 m |
-| **Skill level** | Advanced only, and only in calm conditions |
 
 ## Getting there
 

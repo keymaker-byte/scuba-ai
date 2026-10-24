@@ -10,7 +10,6 @@ Red Slave is a shore site on EEG Boulevard at the southern tip of Bonaire, the s
 | **Entry point coordinates** | 12.026288, -68.251255, the water's edge just south of the southernmost huts |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced, for the current at the island's southern point |
 
 ## Getting there
 

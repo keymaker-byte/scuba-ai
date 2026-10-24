@@ -10,7 +10,6 @@ Shore dive at Marina Beach Park in Edmonds, at the southwest end of the Port of 
 | **Entry point coordinates** | 47.804706, -122.394792, the beach at Marina Beach Park |
 | **Type** | Shore |
 | **Depth range** | Roughly 0 to 13 m below MLLW on the sand flat, falling away quickly beyond that to at least 20 m along the old dock line |
-| **Skill level** | Intermediate |
 
 ## Getting there
 

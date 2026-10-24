@@ -10,7 +10,6 @@ Illahee State Park sits on the Kitsap Peninsula's east shore in Bremerton, on th
 | **Entry point coordinates** | 47.599640, -122.595569, the stairs beside the fishing pier |
 | **Type** | Shore |
 | **Depth range** | 0 to about 13.6 m below MLLW along the pier and the sand slope normally worked past the pilings; the same bottom keeps dropping beyond that, reaching roughly 25 to 30 m within another 100 to 200 m, well outside the area normally dived |
-| **Skill level** | All divers |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ Shore dive off the Maplewild Avenue street-end beach on the south side of Three 
 | **Entry point coordinates** | 47.449970, -122.378898, the Maplewild Avenue beach access at the sharp bend where Maplewild Avenue SW reaches the shoreline at SW 172nd Street |
 | **Type** | Shore |
 | **Depth range** | About 1 to 27 m below MLLW; the slope continues past 30 m |
-| **Skill level** | Intermediate |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ A narrow public beach on EEG Boulevard just south of Flamingo Airport's runway, 
 | **Entry point coordinates** | 12.131406, -68.283886, the beach below the yellow marker stone |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

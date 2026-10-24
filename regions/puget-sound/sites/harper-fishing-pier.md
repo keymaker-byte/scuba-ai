@@ -10,7 +10,6 @@ Shore dive off the Port of Bremerton's public fishing pier at Harper, on Yukon H
 | **Entry point coordinates** | 47.522023, -122.519617, the beach beside the base of the pier, below the seawall |
 | **Type** | Shore |
 | **Depth range** | About 4 m below MLLW at the pier end, about 7 m at the wrecks, and about 12 m at the bottle field; the slope keeps falling gently offshore, reaching about 16 m some 150 m east-northeast of the pier end |
-| **Skill level** | All levels, including open water training |
 
 ## Getting there
 

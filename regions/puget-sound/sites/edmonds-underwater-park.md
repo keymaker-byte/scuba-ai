@@ -10,7 +10,6 @@ Edmonds Underwater Park is a shore dive on the Puget Sound waterfront at Edmonds
 | **Entry point coordinates** | 47.813587, -122.382224, Brackett's Landing North at the jetty. Either side of the jetty works for entry; this coordinate is the sheltered south side, facing the cove |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 12 m below MLLW, reaching about 13 m at the south end near the ferry |
-| **Skill level** | Intermediate |
 
 ## Getting there
 

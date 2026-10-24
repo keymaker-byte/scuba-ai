@@ -10,7 +10,6 @@ Alice in Wonderland is a shore site on EEG Boulevard south of Kralendijk, entere
 | **Entry point coordinates** | 12.099763, -68.285356, the small sandy beach at the end of the path from the lot |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Beginner on the first reef; advanced for the crossing and the second reef |
 
 ## Getting there
 

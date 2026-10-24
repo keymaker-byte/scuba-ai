@@ -10,7 +10,6 @@ Illahee Town Dock is a Port of Illahee community pier and boat ramp on the Kitsa
 | **Entry point coordinates** | 47.612635, -122.596063, the boat ramp at the Port of Illahee dock |
 | **Type** | Shore |
 | **Depth range** | 0 to about 14 m below MLLW along the dock, reef and outer slope normally worked; the bottom continues more gently beyond that, reaching roughly 19 to 22 m within another 100 to 300 m |
-| **Skill level** | All divers |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ Bonaire's northernmost dive site, a remote rocky bay inside Washington Slagbaai 
 | **Entry point coordinates** | 12.303201, -68.398433, the rocks on the south side of the bay |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m, with the reef continuing to about 40 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

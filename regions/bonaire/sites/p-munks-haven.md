@@ -8,7 +8,6 @@ A boat dive on the west side of Klein Bonaire, marked site P of Bonaire National
 | **Coordinates** | 12.151560, -68.330208 (about 7 m, on the terrace about 140 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | All levels on the terrace; the wall suits divers comfortable with depth control |
 
 ## Getting there
 

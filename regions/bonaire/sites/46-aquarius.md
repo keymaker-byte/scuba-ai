@@ -10,7 +10,6 @@ Aquarius is a double reef shore site on EEG Boulevard, about 1.7 km north of Sal
 | **Entry point coordinates** | 12.098373, -68.284879, the small sandy patch below the road |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Beginner on the terrace and the first reef; the second reef calls for compass navigation and depth discipline |
 
 ## Getting there
 

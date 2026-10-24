@@ -10,7 +10,6 @@ Shore dive on the southwest side of Alki Point in West Seattle, off Constellatio
 | **Entry point coordinates** | 47.572449, -122.413841, the beach in front of the pump station |
 | **Type** | Shore |
 | **Depth range** | Roughly 8 to 12 m below MLLW; shallow throughout |
-| **Skill level** | All divers |
 
 ## Getting there
 

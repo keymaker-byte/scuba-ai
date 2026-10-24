@@ -10,7 +10,6 @@ A stretch of fringing reef on Bonaire's west coast north of Kralendijk, entered 
 | **Entry point coordinates** | 12.164487, -68.287164, the beach in front of the steel pipe |
 | **Type** | Shore |
 | **Depth range** | 3 to 28 m |
-| **Skill level** | Beginner on the terrace and upper slope; the wreck at about 28 m calls for deep diving experience |
 
 ## Getting there
 

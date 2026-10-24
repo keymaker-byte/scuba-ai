@@ -8,7 +8,6 @@ A short, near-vertical wall on Bonaire's west coast north of Kralendijk, directl
 | **Coordinates** | 12.179567, -68.2938 (11 m, on the lip of the wall about 70 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 3.5 to 33 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

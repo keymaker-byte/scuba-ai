@@ -10,7 +10,6 @@ A remote site in Washington Slagbaai National Park, on the park's northwest coas
 | **Entry point coordinates** | 12.279661, -68.414086, the pebble beach below the cliff |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Intermediate to advanced |
 
 ## Getting there
 

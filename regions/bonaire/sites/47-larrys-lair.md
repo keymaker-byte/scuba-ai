@@ -10,7 +10,6 @@ Larry's Lair is a double reef shore site on EEG Boulevard, about 780 m north of 
 | **Entry point coordinates** | 12.090358, -68.283457, where the ironshore slopes into the water |
 | **Type** | Shore |
 | **Depth range** | 3.5 to 30 m |
-| **Skill level** | Beginner on the terrace and the first reef, given shore diving and compass experience; the second reef calls for advanced training and depth discipline |
 
 ## Getting there
 

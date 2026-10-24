@@ -10,7 +10,6 @@ The east end of the Hood Canal Bridge stands on a line of concrete piers running
 | **Entry point coordinates** | 47.856147, -122.608656, the beach at the southwest boundary of Salsbury Point County Park |
 | **Type** | Shore |
 | **Depth range** | About 2 to 11 m below MLLW, from the sand dollar beds in the shallows to the deep side of the outermost pier |
-| **Skill level** | Intermediate to advanced |
 
 ## Getting there
 

@@ -8,7 +8,6 @@ A sand-floored hole in the shallow reef plateau off Bonaire's east coast, just s
 | **Coordinates** | 12.094222, -68.228019 (the floor of the hole, about 14 m) |
 | **Type** | Boat |
 | **Depth range** | 4 to 14 m |
-| **Skill level** | Advanced, with an experienced east coast guide |
 
 ## Getting there
 

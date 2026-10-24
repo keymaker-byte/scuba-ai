@@ -10,7 +10,6 @@ The house reef of Divi Flamingo Beach Resort on J.A. Abraham Boulevard, just sou
 | **Entry point coordinates** | 12.144905, -68.276419, the end of the Divi Flamingo dive pier |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

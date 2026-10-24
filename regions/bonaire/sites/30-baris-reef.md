@@ -10,7 +10,6 @@ The house reef of Sand Dollar and Den Laman on Bonaire's west coast north of Kra
 | **Entry point coordinates** | 12.167271, -68.287153, the foot of the Isidel Beach Park ramp |
 | **Type** | Shore |
 | **Depth range** | 1 to 30 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

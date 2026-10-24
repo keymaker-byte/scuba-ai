@@ -10,7 +10,6 @@ A shore dive on Bonaire's west coast about 5 km north-northwest of Kralendijk, a
 | **Entry point coordinates** | 12.188403, -68.296632, the sand channel beside the yellow-painted rock |
 | **Type** | Shore |
 | **Depth range** | 3 to 30 m, with the slope continuing past 35 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

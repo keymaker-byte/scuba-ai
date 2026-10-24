@@ -10,7 +10,6 @@ One of Bonaire's few true vertical walls, on the northwest coast east of Karpata
 | **Entry point coordinates** | 12.218201, -68.348066, the limestone ledge |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m, with the wall continuing past 60 m |
-| **Skill level** | Advanced; a guide is recommended on the first visit |
 
 ## Getting there
 

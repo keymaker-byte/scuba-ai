@@ -10,7 +10,6 @@ A small rubble beach between low limestone cliffs on the northwest coast of Wash
 | **Entry point coordinates** | 12.290169, -68.411502, the rubble beach at the foot of the path down from the parking area |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

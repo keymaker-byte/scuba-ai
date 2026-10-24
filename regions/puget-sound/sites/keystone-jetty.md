@@ -10,7 +10,6 @@ Shore dive along the boulder jetty that shelters the Coupeville to Port Townsend
 | **Entry point coordinates** | 48.157600, -122.671052, the underwater park beach on the east side |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 19 m below MLLW; the end of the jetty is the deepest point |
-| **Skill level** | Intermediate |
 
 ## Getting there
 

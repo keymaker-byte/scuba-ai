@@ -8,7 +8,6 @@ The reef directly in front of No Name Beach, the long white sand beach on the no
 | **Coordinates** | 12.168717, -68.30515 (the shelf edge in front of the beach, 12.0 m) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Beginner |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ Atlantis is a shore site on EEG Boulevard, about 12 km south of Kralendijk on Bo
 | **Entry point coordinates** | 12.044189, -68.266715, the sand beach in front of the kite schools |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

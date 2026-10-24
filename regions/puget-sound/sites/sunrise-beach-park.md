@@ -10,7 +10,6 @@ Shore dive at Sunrise Beach Park, north of Gig Harbor on the west shore of Colvo
 | **Entry point coordinates** | 47.349331, -122.556020, the cobble beach at the foot of the trail, beside the shed and the log retaining wall |
 | **Type** | Shore |
 | **Depth range** | Wall top about 8 to 9 m below MLLW, base about 12 to 15 m; boulders continue down the slope past 30 m |
-| **Skill level** | Intermediate to advanced. The wall depth is moderate, but the timing, the surface swim and the hike call for experience diving current |
 
 ## Getting there
 

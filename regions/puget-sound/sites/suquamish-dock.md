@@ -10,7 +10,6 @@ Suquamish Dock is a long public dock and boat ramp on the Suquamish waterfront, 
 | **Entry point coordinates** | 47.729010, -122.551825, the Suquamish boat ramp, next to the dock |
 | **Type** | Shore |
 | **Depth range** | Roughly 2 to 9 m below MLLW near the dock, on a gently sloping sand bottom that deepens further out into the bay |
-| **Skill level** | Beginner and up |
 
 ## Getting there
 

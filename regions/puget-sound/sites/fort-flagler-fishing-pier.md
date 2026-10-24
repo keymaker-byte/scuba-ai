@@ -10,7 +10,6 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 | **Entry point coordinates** | 48.091333, -122.692536, the beach on the north side of the old pier site |
 | **Type** | Shore |
 | **Depth range** | 0 m at the beach to about 15 m below MLLW at the dive coordinate above; the rubble field beyond it runs a couple of metres deeper |
-| **Skill level** | Intermediate to advanced, current dependent; the shallows near the old pier line are workable for a beginner right at slack |
 
 ## Getting there
 

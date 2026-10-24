@@ -10,7 +10,6 @@ Jeannie's Glory is a shore site on EEG Boulevard, about 400 m north of Salt Pier
 | **Entry point coordinates** | 12.086629, -68.282787, the rocky step-in below the road |
 | **Type** | Shore |
 | **Depth range** | 3 to 30 m |
-| **Skill level** | Beginner in calm conditions; the entry and exit call for care |
 
 ## Getting there
 

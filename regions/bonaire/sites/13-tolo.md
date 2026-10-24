@@ -10,7 +10,6 @@ A shore site on Bonaire's northwest coast off a long stretch of coral beach, bel
 | **Entry point coordinates** | 12.215317, -68.337520, the coral rubble beach at the foot of the steps |
 | **Type** | Shore |
 | **Depth range** | 3 to 25 m, with the slope continuing past 40 m |
-| **Skill level** | All levels in calm surf |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ Shore dive at the end of Kamus Drive on the southwest shore of Fox Island, at th
 | **Entry point coordinates** | 47.239512, -122.631841, the cobble beach at the end of the road, past the boulders across the road end |
 | **Type** | Shore |
 | **Depth range** | Cobble and sand dollar beds from the beach to the top of the slope at about 1 m below MLLW; top of the ledge about 14 m; its base about 16.5 m; the boiler about 16 to 20 m; the slope continues past 30 m |
-| **Skill level** | Beginner. An easy entry and usually little current; the ledge takes a compass to find, and the slope below it runs deep |
 
 ## Getting there
 

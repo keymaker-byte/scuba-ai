@@ -10,7 +10,6 @@ Shore dive off Tongue Point, inside the Tongue Point Marine Life Sanctuary at Sa
 | **Entry point coordinates** | 48.166688, -123.704333, the stairs that lead out onto Tongue Point itself |
 | **Type** | Shore |
 | **Depth range** | Roughly 3 to 18.5 m below MLLW |
-| **Skill level** | Advanced |
 
 ## Getting there
 

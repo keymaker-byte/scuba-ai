@@ -10,7 +10,6 @@ Sund Rock South Wall is a boulder-strewn rock wall on the west shore of Hood Can
 | **Entry point coordinates** | 47.434743, -123.120024, a footpath down to a small, almost hidden beach right at the wall |
 | **Type** | Shore |
 | **Depth range** | Boulder formations roughly 6 to 15 m below MLLW at the wall |
-| **Skill level** | All divers |
 
 ## Getting there
 

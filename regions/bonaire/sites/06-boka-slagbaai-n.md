@@ -10,7 +10,6 @@ The northern of two routes at Boka Slagbaai, a sheltered bay in Washington Slagb
 | **Entry point coordinates** | 12.264879, -68.413619, the sandy beach on the north side of the largest building |
 | **Type** | Shore |
 | **Depth range** | 6 to 24 m |
-| **Skill level** | Advanced |
 
 ## Getting there
 

@@ -10,7 +10,6 @@ Shore dive on the main basin of Puget Sound at Shoreline, just north of Seattle,
 | **Entry point coordinates** | 47.763413, -122.385973, the beach in front of the restrooms and picnic shelter |
 | **Type** | Shore |
 | **Depth range** | Roughly 2 to 8 m below MLLW on the inshore shelf, dropping over an edge to about 15 m below MLLW at the outer debris and anchor field |
-| **Skill level** | All divers on the shallow shelf; the outer debris field is current sensitive and better suited to divers comfortable navigating on compass headings |
 
 ## Getting there
 

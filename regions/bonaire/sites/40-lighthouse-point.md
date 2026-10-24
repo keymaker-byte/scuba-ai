@@ -10,7 +10,6 @@ Lighthouse Point is the reef off Punt Vierkant, the bulge in the coast south of 
 | **Entry point coordinates** | 12.114108, -68.294899, the rocky shore below the parking |
 | **Type** | Shore |
 | **Depth range** | 7 to 30 m |
-| **Skill level** | Advanced, with drift diving experience |
 
 ## Getting there
 

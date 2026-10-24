@@ -8,7 +8,6 @@ A relaxed boat dive off Klein Bonaire's east point, facing Kralendijk across the
 | **Coordinates** | 12.156914, -68.291954 (the edge of the terrace at the top of the drop, 6.2 m) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | All levels |
 
 ## Getting there
 

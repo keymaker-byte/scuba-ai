@@ -10,7 +10,6 @@ Warren Avenue Bridge crosses Port Washington Narrows in Bremerton, the tidal cut
 | **Entry point coordinates** | 47.578183, -122.632519, the foot of the trail down to the beach beneath the bridge |
 | **Type** | Shore |
 | **Depth range** | Roughly 6 to 11 m below MLLW across the dive area between the three pylons, shoaling quickly toward both shores beyond that |
-| **Skill level** | Intermediate |
 
 ## Getting there
 

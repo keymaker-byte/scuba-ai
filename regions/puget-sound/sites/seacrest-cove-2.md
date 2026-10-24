@@ -10,7 +10,6 @@ Shore dive at Seacrest Park on the West Seattle waterfront, also known as Alki C
 | **Entry point coordinates** | 47.588696, -122.379871, the beach beside the Marination Ma Kai café |
 | **Type** | Shore |
 | **Depth range** | From the beach down past 40 m; the slope continues beyond the recreational limit |
-| **Skill level** | All divers; the easily reached deep water also makes it a standing technical training site |
 
 ## Getting there
 

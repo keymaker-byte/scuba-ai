@@ -10,7 +10,6 @@ Shore dive off a historic Mosquito Fleet steamer dock on the southwest shore of 
 | **Entry point coordinates** | 47.599824, -122.576689, the beach beside the base of the dock |
 | **Type** | Shore |
 | **Depth range** | 0 to about 3 m below MLLW under the dock; past the dock end the slope falls to about 9 m within roughly 30 m and about 17 m within roughly 80 m, and keeps dropping past 30 m |
-| **Skill level** | All levels, including snorkelers, at slack; current sensitive away from it |
 
 ## Getting there
 

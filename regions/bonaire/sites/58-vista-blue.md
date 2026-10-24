@@ -10,7 +10,6 @@ Vista Blue is a shore site on EEG Boulevard, about 13 km south of Kralendijk on 
 | **Entry point coordinates** | 12.036078, -68.263088, the small sandy beach below the parking |
 | **Type** | Shore |
 | **Depth range** | 4 to 30 m |
-| **Skill level** | Advanced, given the changeable current |
 
 ## Getting there
 
