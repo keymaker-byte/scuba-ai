@@ -1764,6 +1764,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "fox-island-bridge",
+      "name": "Fox Island Bridge",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/fox-island-bridge.md",
+      "site": {
+        "lat": 47.276092,
+        "lon": -122.650053
+      },
+      "parking": {
+        "lat": 47.274066,
+        "lon": -122.651032
+      },
+      "entry": {
+        "lat": 47.274115,
+        "lon": -122.650954
+      }
+    },
+    {
       "slug": "fox-island-east-wall",
       "name": "Fox Island East Wall",
       "region": "puget-sound",
