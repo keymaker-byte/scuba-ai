@@ -6,7 +6,7 @@ Shore dive on the southwest side of Alki Point in West Seattle, off Constellatio
 |---|---|
 | **Location** | West Seattle, WA. Southwest side of Alki Point, facing the main basin of Puget Sound |
 | **Coordinates** | 47.569906, -122.416610 (seabed 11.9 m below MLLW, at the end of the pipe); Alki Point lies about 0.7 km northwest |
-| **Parking coordinates** | 47.572746, -122.414088, on the street along Beach Drive SW |
+| **Parking coordinates** | 47.572237, -122.413031, on the street along Beach Drive SW, east of 63rd Avenue SW |
 | **Entry point coordinates** | 47.572449, -122.413841, the beach in front of the pump station |
 | **Type** | Shore |
 | **Depth range** | Roughly 8 to 12 m below MLLW; shallow throughout |
@@ -14,7 +14,7 @@ Shore dive on the southwest side of Alki Point in West Seattle, off Constellatio
 ## Getting there
 
 * **Entry.** From the beach in front of the concrete pump station at Constellation Park, at the south end of 63rd Avenue SW where it meets Beach Drive SW. Walk down the gently sloping concrete ramp toward the pump station, then over the cobbled beach to the water, staying off the private beach property to the side.
-* **Parking.** On the street along Beach Drive SW by Charles Richey Sr. Viewpoint and Constellation Park, in the 6300 block. Free, and it fills on summer weekends.
+* **Parking.** On the street along Beach Drive SW east of 63rd Avenue SW, about 60 m from the entry ramp. Free, and it fills on summer weekends. West of 63rd Avenue SW, Beach Drive SW is closed to parking and through traffic, signed as street closed and kept for walkers and local residents.
 * **Access.** Under Seattle park hours, roughly 04:00 to 23:30. About 18 km from central Seattle over the West Seattle Bridge, then Harbor Avenue SW and Alki Avenue SW around the point to 63rd Avenue SW and Beach Drive SW.
 * **Marine reserve.** The site sits in the Constellation Park Marine Reserve. Taking of fish, shellfish and seaweed is prohibited. Diving and observing are fine.
 * **Facilities.** A portable toilet stands at the foot of the entry ramp by the pump station. More complete restrooms, a picnic beach and interpretive tidepool art are at Constellation Park, toward the north end of 63rd Avenue SW. Fast food nearby across the neighbourhood.
@@ -59,7 +59,7 @@ Important! southwest is up; north is down-right.
                                         ┃
                ╱╱╱╱╱╱ rock pile         ┃ A
  - - - - - - - - - - - - - - - - - - - -●- - - - - - - - - - - - - - - - - - - - -
-           pump station           entry ● parking
+  parking ●        pump station   entry ●
                       Beach Drive SW, east ◀            ▶ west, Alki Point
 ```
 
