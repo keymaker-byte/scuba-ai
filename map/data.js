@@ -2125,6 +2125,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "reuben-tarte",
+      "name": "Reuben Tarte County Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/reuben-tarte.md",
+      "site": {
+        "lat": 48.613754,
+        "lon": -123.098057
+      },
+      "parking": {
+        "lat": 48.611957,
+        "lon": -123.10075
+      },
+      "entry": {
+        "lat": 48.612587,
+        "lon": -123.098132
+      }
+    },
+    {
       "slug": "richmond-beach-park",
       "name": "Richmond Beach Park (Richmond Beach Saltwater Park)",
       "region": "puget-sound",
