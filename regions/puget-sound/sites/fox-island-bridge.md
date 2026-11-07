@@ -47,7 +47,7 @@ The passage narrows to its shallowest at the bridge, and the exchange between Ca
 * **Diveable window.** Both slacks are dived. At the station the window under 0.25 m/s lasts about 40 to 130 minutes at slack before flood and 50 to 160 minutes at slack before ebb, 78 minutes typical for each, longest between two weak exchanges. Under the bridge it is shorter: the flow is pinched between the piers and the shore, and the current builds quickly once it turns, carrying a diver off the bridge line into the open passage and north along the jetty, away from the beach. Plan on a small exchange, reach the end of the jetty before slack, and start back at the first sign of current.
 * **The jetty.** The end of the jetty is a sheltered spot to wait for the current to ease before heading out, and the shallows along it give a lee on the return.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

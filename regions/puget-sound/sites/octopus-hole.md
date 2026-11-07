@@ -49,7 +49,7 @@ Octopus Hole is dived independently of the tide. The water here moves at around 
 * **Slack.** This reach of the canal behaves as a standing wave, so slack falls near high and low water. Here it runs about an hour and a quarter ahead of the high and low at Ayock Point.
 * **Diveable window.** All day, on any exchange.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

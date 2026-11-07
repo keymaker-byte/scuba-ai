@@ -46,7 +46,7 @@ Shore dive off Tongue Point, inside the Tongue Point Marine Life Sanctuary at Sa
 * **Beyond the reef.** Past the reef edge and out over the outer boulders, current builds quickly away from slack. Re-enter the reef and work back into shallower water if caught out in it.
 * **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs about 50 to 120 minutes, stretching past 4 hours on a weak neap turn. Pad the window, especially for any time spent on the outer boulders.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

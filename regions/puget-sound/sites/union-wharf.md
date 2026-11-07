@@ -44,7 +44,7 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 * **Ebb.** Also sets northeast, past the wharf toward the ferry pier, the same direction as the reversed flood. There is no clean slack between the two: the northeast current simply eases through the turn and rebuilds as the ebb develops. Daily peaks run 0.32 to 1.88 m/s at the station over the same 30 days.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 60 minutes, while the current here stays weak through most of the day, comfortably under 0.25 m/s, so the window is forgiving on strength. What it is not forgiving of is direction: it can swing from southwest to northeast, or ease and rebuild through a false slack, with little warning.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

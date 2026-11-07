@@ -14,7 +14,7 @@ Shore dive at Reuben Tarte County Park, also known as Reuben Tarte Picnic Area, 
 ## Getting there
 
 * **Entry.** An easy walk into the water off the dark gray pebble beach in the cove at the foot of the road, about 130 m due south of the dive coordinate.
-* **Parking.** The gravel upper lot at the top of the hill, about 200 m in a straight line from the entry, with very few spaces. Parking cost is not established. The lower lot at the beach holds one ADA-accessible space. Drive down the steep paved road to unload gear, then return the car to the upper lot and walk back down.
+* **Parking.** The gravel upper lot at the top of the hill, about 200 m in a straight line from the entry, with very few spaces. The lower lot at the beach holds one ADA-accessible space. Drive down the steep paved road to unload gear, then return the car to the upper lot and walk back down.
 * **Access.** A San Juan County day park, open dawn to dusk, with overnight use prohibited. The access road to the water is occasionally closed to vehicles, which makes for a long walk in gear. Reach the island on the Washington State Ferry from Anacortes to Friday Harbor. From Friday Harbor take Roche Harbor Road for about 11.4 km, turn right on Rouleau Road for 1.6 km, right on Limestone Point Road for 1.3 km, then right on San Juan Drive for 0.5 km to the lot on the left.
 * **Facilities.** A toilet in the lower beach area.
 
@@ -52,7 +52,7 @@ Three channels converge at this corner of the island and drive the flow around t
 * **Route on slack before flood.** Dive the shoreline southeast of the cove first, so the rising flood carries the return leg northwest toward the beach.
 * **Route on slack before ebb.** Dive the shoreline north-northwest of the cove first, staying southeast of the silted area, so the rising ebb carries the return leg southeast toward the beach.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

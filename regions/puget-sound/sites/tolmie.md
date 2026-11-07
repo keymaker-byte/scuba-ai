@@ -53,7 +53,7 @@ The barges lie in a shallow bay off the main stream of Nisqually Reach, and the 
 * **At the surface.** The current runs faster at the surface out by the buoy than near the beach, and a diver on the surface on a running tide drifts along the shore, east-southeast on the ebb and west-northwest on the flood, lengthening the swim back to the park beach.
 * **Near slack.** The current around the barges swings direction as it turns; keep a compass heading near slack.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

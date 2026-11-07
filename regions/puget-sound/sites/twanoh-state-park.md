@@ -51,7 +51,7 @@ Twanoh is dived independently of the tidal current. The water here moves at 0.10
 * **Slack.** This reach of the canal behaves as a standing wave, so slack falls near high and low water, about 40 minutes before each high and low at Lynch Cove Dock.
 * **Drift.** A light drift along the slope carries the jellies in the water column past a diver.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

@@ -44,7 +44,7 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 * **Ebb.** Sets north, out of the pass toward Suquamish and Port Madison. This is the drift direction, from the bridge to Old Man House Park. The current is markedly stronger at the bridge than at the Suquamish end, roughly twice the speed, so the same tide that is comfortable at the north end can be running hard at the south end. Daily peaks run 0.51 to 1.29 m/s at the station over the same 30 days.
 * **Diveable window.** Slack at the bridge is brief, about 35 to 65 minutes at the station and narrower still on a big exchange; the pass is comfortable to work for a look-and-see dive only within that window, and is a drift the rest of the cycle. Plan around a modest exchange, under about 2 m, for the easiest current; a large spring exchange can push the bridge current well past 1 m/s.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

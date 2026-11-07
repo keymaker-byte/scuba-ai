@@ -43,7 +43,7 @@ North Beach County Park sits on the Quimper Peninsula between McCurdy Point and 
 * **Ebb.** Sets west along the beach, away from Point Wilson, mirroring the flood; weak inshore, building fast beyond the kelp, with daily peaks of 0.41 to 2.04 m/s at the station over the same 30 days, regularly exceeding the flood's.
 * **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs about 35 to 65 minutes, a little longer around the ebb to flood turn. Diving through a building exchange is only a same-entry dive inside the kelp's shelter, where the current stays weak in both directions: work along the inside edge one way as the exchange builds, then turn and work back through that same sheltered water rather than out in the open flow past the outer edge, which is the limit of the dive even when riding an exchange.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

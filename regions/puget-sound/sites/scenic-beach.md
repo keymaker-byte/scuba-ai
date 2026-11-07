@@ -46,7 +46,7 @@ The current here is weak at every stage of the tide, running parallel to the bea
 * **Slack.** Falls roughly an hour to ninety minutes before the tide extremes at Seabeck, but with peaks this weak the slack time is academic. At most a mild drift is felt on the longer legs.
 * **Diveable window.** All day, any tide stage. Slack timing comes from the site's own ENPAC15 extract, with the Seabeck tide table as a cross-check. Plan around tide height for the entry and boat traffic on the surface rather than around current.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

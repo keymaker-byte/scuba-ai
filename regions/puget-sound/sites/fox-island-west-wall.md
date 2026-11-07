@@ -51,7 +51,7 @@ The beach sits out of the main stream between the Tacoma Narrows and Carr Inlet,
 * **Diveable window.** Most tides are diveable away from slack, and the site stays diveable well into a running tide. For the stillest water, dive near either slack; a typical window under 0.25 m/s at the station runs about 50 to 70 minutes, narrower on a big exchange.
 * **Unexpected current.** On some days a current runs along the ledge strong enough to need a hand-over-hand pull along the bottom, independent of the predicted current, and strongest at the southeast end of the ledge. A mild set along the slope can also persist long after slack. Watch the sand and particles in the water on the way down, and turn the dive back toward the entry if the water starts to move.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

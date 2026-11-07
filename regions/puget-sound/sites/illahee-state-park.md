@@ -45,7 +45,7 @@ Current here is negligible at every stage of the tide, at the surface and depth-
 * **Shallows.** The water above the pilings can push harder on an incoming tide, enough to work against right at the dock, even with the rest of the site sitting under 0.15 m/s. Treat the top few metres near the pier with more caution than the open current axis alone would suggest.
 * **Diveable window.** All day, any tide stage. Slack timing comes from the site's own ENPAC15 extract, cross-checked against the Brownsville tide table. Current is not the limiting factor at this site; boat traffic and visibility are.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

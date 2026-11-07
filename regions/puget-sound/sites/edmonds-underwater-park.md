@@ -130,7 +130,7 @@ Current is a secondary factor here and the site is genuinely mild for the Sound,
 * **Local current.** The flow in the park is lighter than at the station and is also shaped by wind and by the ferry's propeller wash at the adjacent slip, so it can run when the tide is nominally slack and set across your path rather than along the axis above. About 0.5 m/s is comfortable; twice that is workable but no fun. A small exchange, under roughly 1.2 m, leaves almost no current.
 * **Diveable window.** The window is wide because the current is weak. The station's slack runs anywhere from close to the park's own turn to a little over an hour behind it. Current at the station stays under 0.25 m/s for about 1.5 to 13 hours at a time. High slack is preferred, for an easier entry across a covered beach and cleaner, less silt-laden water. A big exchange or a very low tide is what raises the risk of being carried toward the ferry, so those are the days to be conservative. Surface current-indicator buoys with tails at the site show the set direction.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

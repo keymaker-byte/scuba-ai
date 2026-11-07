@@ -44,7 +44,7 @@ Pinnacle Rock is a shore dive on the Strait of Juan de Fuca between Sekiu and Ne
 * **Ebb.** Sets west-northwest, parallel to shore toward Neah Bay and the strait's mouth, with daily peaks of 0.35 to 0.84 m/s at the station over the same 30 days, and tends to run the stronger of the two.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 110 to 240 minutes. The rock and kelp ground breaks up and shelters most of the flow near slack, but this site sits well out toward the open mouth of the strait, with a long, direct exposure, and both current and surge build faster once away from the largest rocks. Dive only in calm conditions, time the entry to slack, and treat any dive that runs into a developing exchange as a drift dive, working with the flow or across it rather than against it.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

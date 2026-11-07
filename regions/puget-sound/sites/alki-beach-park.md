@@ -88,7 +88,7 @@ Currents are usually mild here and the site dives as a benign training beach, bu
 * **Ebb.** Sets southwest early, then swings northwest into Elliott Bay as the ebb builds. The ebb runs stronger than the flood. Daily peaks run 0.25 to 0.46 m/s at the station over the same 30 days.
 * **Diveable window.** Plan the slack before the flood and keep an eye on the point; the shallow, sandy inshore ground itself carries little current on a small exchange. Current at the station stays under 0.25 m/s for about 2 to 8 hours at a time.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

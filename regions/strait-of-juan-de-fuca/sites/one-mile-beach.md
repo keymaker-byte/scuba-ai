@@ -43,7 +43,7 @@ One Mile Beach is a shore dive on the Strait of Juan de Fuca about 1.6 km west o
 * **Ebb.** Sets west-northwest, parallel to shore toward the open strait and the Pacific, with daily peaks of 0.35 to 0.84 m/s at the station over the same 30 days.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 110 to 240 minutes. The rock and kelp ground shelters most of the dive from the tidal flow; current among the rocks is generally a non-factor near slack. It builds quickly once past the drop-off, so stay on the shelf once away from slack, and dive only on a calm day with weak surge.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|
