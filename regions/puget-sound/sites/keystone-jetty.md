@@ -50,7 +50,7 @@ Current is the defining constraint, strong and erratic, and it does not behave s
 * **When the slack fails to arrive.** A slack at the station is necessary but not sufficient. The jetty current is a local eddy off the main channel, and on some exchanges the channel passes through slack while the eddy keeps running southwest and never truly stops. The pattern to watch for is a strongly diurnal day, or a flood following the slack that is much weaker than the ebb before it: the flood is what resets the flow, and a weak one may leave the current simply running on. Before committing, read the max flood and ebb either side of the slack rather than the slack alone. Prefer a slack flanked by two moderate, roughly equal maxes; be wary when the following flood is weak or the window is short, since the site then turns fast and being a few minutes late leaves you in current. Be ready to abort if it is still running at the end of the jetty.
 * **Read the surface before committing.** The clock and the station prediction only get you close; confirm from the beach before gearing up. Floating logs and other debris drifting across the harbour show whether the water is actually moving and which way, a direct read on the eddy that the station's slack time cannot promise on its own.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

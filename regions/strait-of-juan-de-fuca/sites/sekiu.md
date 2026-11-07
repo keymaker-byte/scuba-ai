@@ -43,7 +43,7 @@ Sekiu Jetty is a shore dive in the town of Sekiu, on the western reach of the St
 * **Ebb.** Sets west-northwest at the station, out toward the open strait, with daily peaks of 0.35 to 0.84 m/s at the station over the same 30 days. Slack before ebb at the site falls well later than the raw station time, by well over an hour.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 110 to 240 minutes. The kelp bed and rock formations shelter most of the dive from the tidal flow; current close among them is generally a non-factor. It builds quickly once out past the kelp's outer edge, so stay inside it once away from slack.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

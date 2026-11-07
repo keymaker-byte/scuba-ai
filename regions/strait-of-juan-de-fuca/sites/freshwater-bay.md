@@ -46,7 +46,7 @@ Freshwater Bay opens north onto the Strait of Juan de Fuca between Angeles Point
 * **Inside the bay.** The crossing and the reef's inside face stay weak through most of the cycle. The tide is actually felt on the outer wall, beyond the reef.
 * **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs about 50 to 120 minutes, stretching past 4 hours on a weak neap turn. The rock itself can turn up to about 40 minutes earlier or later than the station, so pad the window accordingly.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

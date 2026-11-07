@@ -49,7 +49,7 @@ Potlatch is dived independently of the tide. The water here moves at 0.02 m/s or
 * **Diveable window.** All day on either slack. Peak current stays far under 0.25 m/s on every exchange, so nothing narrows it.
 * **Drift.** A barely noticeable drift can run north along the slope below the drop-off.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

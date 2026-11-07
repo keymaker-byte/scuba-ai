@@ -50,7 +50,7 @@ All of Hood Canal fills and drains through the channel beneath the bridge.
 * **Surface and depth differ.** The surface water can turn before the water at depth, ebbing while the bottom is still at slack or in a weak flood, so the current felt on the surface swim can differ from the current at the piers.
 * **No handholds.** The smooth sand bottom offers nothing to grip, so a diver caught by the current cannot pull along the bottom against it.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|
@@ -59,7 +59,7 @@ Legacy correction, carried as published and separate from the reconciled figures
 | **Slack before flood** | At the reference |
 | **Slack before ebb** | 46 minutes before the reference |
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

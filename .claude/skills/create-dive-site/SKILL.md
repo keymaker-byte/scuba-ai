@@ -233,7 +233,7 @@ Optional sentence on what dominates the current. Tidal and wind driven only.
 * **Drivers.** Wind driven: the winds or seasons that strengthen or reverse the set.
 * **Topic.** Further local behaviour, each led by a bold topic.
 
-Optional, tidal only: "Legacy correction, carried as published and separate from the reconciled figures above:"
+Optional, tidal only: "Legacy correction:"
 
 | | |
 |---|---|

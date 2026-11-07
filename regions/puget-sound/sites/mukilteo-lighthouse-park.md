@@ -43,7 +43,7 @@ Shore dive on the Mukilteo waterfront, on the shoreline south of Elliott Point i
 * **Ebb.** Sets south, away from the point, with daily peaks of 0.09 to 0.28 m/s at the station over the same 30 days.
 * **Diveable window.** On a small exchange the current stays weak most of the day. On a bigger one it runs hard, with a down current reported near the point, and the site is only comfortable within a tight slack window. Current at the station stays under 0.25 m/s for about 1.5 to 15 hours at a time.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

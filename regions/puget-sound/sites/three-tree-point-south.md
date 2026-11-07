@@ -50,7 +50,7 @@ The current runs strong along this shore, and the shoreline set runs west toward
 * **Diveable window.** Slack before the flood and a mild flood are the calmer times here, and slack before the flood also brings the best visibility. Current at the station stays under 0.25 m/s for about 10 to 23 hours at a time, broken by 1 to 4 hours around the stronger daily floods.
 * **Where the current sits.** It runs strongest near the surface and in the shallows, pushing west toward the point.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

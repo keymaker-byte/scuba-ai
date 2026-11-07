@@ -42,7 +42,7 @@ Shore dive on the southwest shore of Bainbridge Island, on Rich Passage between 
 * **Ebb.** Sets southeast, parallel to the shore, back out toward the main basin past Rockaway Beach and Alki Point. Daily peaks run 0.34 to 0.97 m/s at the station over the same 30 days, a real current to plan around.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 55 to 150 minutes. Varies by exchange, from a little over an hour on a big exchange to several hours on a small one. Always check the window for the specific day rather than assuming it is wide, and confirm slack in the water, especially toward the bottom of the working depth, below the station's shallow bins.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

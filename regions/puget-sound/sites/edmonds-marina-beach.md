@@ -43,7 +43,7 @@ Shore dive at Marina Beach Park in Edmonds, at the southwest end of the Port of 
 * **Ebb.** Sets north-northeast, back toward the Possession Sound split and Admiralty Inlet. Usually the stronger exchange, and the one to plan around, with daily peaks of 0.12 to 0.52 m/s at the station over the same 30 days.
 * **Diveable window.** Current at the station stays weak for long stretches on an ordinary day, so timing is often forgiving. Current at the station stays under 0.25 m/s for about 1 to 19 hours at a time. Plan to the slack itself rather than the window's printed edges, and pad it.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|

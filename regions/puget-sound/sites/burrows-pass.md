@@ -59,7 +59,7 @@ Diveable on the slack before the ebb only. Do not dive on a flood exchange or at
 * **Layered reversal.** The ebb begins at the surface and works downward. Early in a low-volume ebb, water above about 13.7 m can already run northeast toward the exit while water below still runs southwest, outbound, on the tail of the flood. The transition band sits roughly 12 to 18 m below the surface. Ascend to about 12 m or shallower to catch the homeward ebb.
 * **Exchange size.** A small ebb may never reverse the deep flow, and the back eddy that carries you home may not form; too large an exchange is also unwelcome. A moderate ebb is the target. On a failed reversal the flow can sweep west onto the rocks and cliffs at the point.
 
-Legacy correction, carried as published and separate from the reconciled figures above:
+Legacy correction:
 
 | | |
 |---|---|
