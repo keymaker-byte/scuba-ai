@@ -1631,6 +1631,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "eagle-cove",
+      "name": "Eagle Cove",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/eagle-cove.md",
+      "site": {
+        "lat": 48.4593,
+        "lon": -123.0305
+      },
+      "entry": {
+        "lat": 48.461618,
+        "lon": -123.032128
+      },
+      "parking": {
+        "lat": 48.463033,
+        "lon": -123.032675
+      }
+    },
+    {
       "slug": "ed-munro-seahurst-park",
       "name": "Ed Munro Seahurst Park",
       "region": "puget-sound",
