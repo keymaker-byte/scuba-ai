@@ -1973,6 +1973,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "low-island",
+      "name": "Low Island (San Juan County Park North Beach)",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/low-island.md",
+      "site": {
+        "lat": 48.543504,
+        "lon": -123.163626
+      },
+      "parking": {
+        "lat": 48.542818,
+        "lon": -123.16045
+      },
+      "entry": {
+        "lat": 48.543312,
+        "lon": -123.160719
+      }
+    },
+    {
       "slug": "mukilteo-lighthouse-park",
       "name": "Mukilteo Lighthouse Park (Clay Wall)",
       "region": "puget-sound",
