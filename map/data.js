@@ -1631,6 +1631,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "deadman-bay",
+      "name": "Deadman Bay",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/deadman-bay.md",
+      "site": {
+        "lat": 48.5124,
+        "lon": -123.1472
+      },
+      "parking": {
+        "lat": 48.513815,
+        "lon": -123.144599
+      },
+      "entry": {
+        "lat": 48.513147,
+        "lon": -123.145216
+      }
+    },
+    {
       "slug": "ed-munro-seahurst-park",
       "name": "Ed Munro Seahurst Park",
       "region": "puget-sound",
