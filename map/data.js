@@ -2258,6 +2258,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "smallpox-bay",
+      "name": "Smallpox Bay (San Juan County Park)",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/smallpox-bay.md",
+      "site": {
+        "lat": 48.5406,
+        "lon": -123.162
+      },
+      "parking": {
+        "lat": 48.541877,
+        "lon": -123.159678
+      },
+      "entry": {
+        "lat": 48.541476,
+        "lon": -123.159834
+      }
+    },
+    {
       "slug": "sund-rock-north-wall",
       "name": "Sund Rock North Wall",
       "region": "puget-sound",
