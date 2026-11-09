@@ -2,6 +2,8 @@
 
 <https://diveatlas.org>
 
+> **Suspended.** diveatlas.org has been unreachable since November 2026 (the server resets every TLS handshake), so no region names this tool. Once `near` answers again, restore it to the Region Specific Research tools line of each region's site conventions, beside `diversatlas.md`.
+
 A community wiki of dive sites. Each site page carries structured properties (coordinate, region, access type, water type, depth range, a skill level category) followed by a guidebook-style write-up: location and access, diving, attractions and life, hazards, facilities.
 
 - **Use it for.** Writing a new site file: a second pin for the dive area to cross-check against our own coordinate, and the write-up's entry, landmarks, parking, hazards and facilities, which a good page covers in useful local detail.
