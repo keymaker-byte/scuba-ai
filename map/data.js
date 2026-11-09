@@ -2826,6 +2826,25 @@ window.MAP_DATA = {
         "lat": 48.456381,
         "lon": -123.006867
       }
+    },
+    {
+      "slug": "odlin-county-park-north",
+      "name": "Odlin County Park (North)",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/odlin-county-park-north.md",
+      "site": {
+        "lat": 48.56146,
+        "lon": -122.89298
+      },
+      "parking": {
+        "lat": 48.559046,
+        "lon": -122.890647
+      },
+      "entry": {
+        "lat": 48.559004,
+        "lon": -122.890642
+      }
     }
   ]
 };
