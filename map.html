@@ -55,6 +55,13 @@
   }
   #data-refresh:hover { background: #e5e7eb; }
   #count { color: #555; font-size: 12px; margin-top: 6px; }
+  #currents-status { margin-left: 20px; }
+  #currents-status:empty { display: none; }
+  #currents-status.error { color: #7f1d1d; }
+  #time-label { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  #time-sub { font-size: 11px; color: #6b7280; font-variant-numeric: tabular-nums; margin-top: 1px; }
+  #time-slider { width: 100%; margin: 6px 0 2px; accent-color: #2563eb; }
+  #time-ends { display: flex; justify-content: space-between; font-size: 10px; color: #6b7280; }
   #panel-footer {
     margin-top: 10px; padding-top: 8px; border-top: 1px solid #e5e7eb;
   }
@@ -200,6 +207,15 @@
       <label><input type="checkbox" id="toggle-satellite">Satellite imagery</label>
       <label><input type="checkbox" id="toggle-depth-contours-noaa">Depth contours (NOAA)</label>
       <label><input type="checkbox" id="toggle-depth-contours-emodnet">Depth contours (EMODnet)</label>
+      <label><input type="checkbox" id="toggle-currents">Tidal currents (ADCIRC)</label>
+      <div class="hint" id="currents-status"></div>
+    </div>
+
+    <div class="section" id="time-section">
+      <div id="time-label"></div>
+      <div id="time-sub"></div>
+      <input type="range" id="time-slider" min="0" max="720" step="1" value="0" aria-label="Map time">
+      <div id="time-ends"><span>Now</span><span>+5 days</span></div>
     </div>
 
     <div class="section">
@@ -243,6 +259,9 @@
 <script src="map/marked.umd.js"></script>
 <script src="map/leaflet.js"></script>
 <script src="map/data.js"></script>
+<script src="map/tz-lookup.js"></script>
+<script src="map/currents.js"></script>
+<script src="map/currents/index.js"></script>
 <script>
 const COLORS = {
   shoreSite: "#2563eb",
@@ -307,6 +326,8 @@ L.control.zoom({ position: 'topright' }).addTo(map);
 // add order, which is why the parking icon (an L.marker) was floating above
 // the circleMarker pins (in overlayPane) no matter what. Explicit panes with
 // their own z-index give each pin type a fixed, order-independent layer.
+map.createPane('paneCurrents'); map.getPane('paneCurrents').style.zIndex = 405;
+map.getPane('paneCurrents').style.pointerEvents = 'none';
 map.createPane('paneParking'); map.getPane('paneParking').style.zIndex = 410;
 map.createPane('paneEntry');   map.getPane('paneEntry').style.zIndex = 420;
 map.createPane('paneShore');   map.getPane('paneShore').style.zIndex = 430;
@@ -654,6 +675,150 @@ function applyEmodnetContourToggle() {
     map.removeLayer(emodnetContourLayer);
   }
 }
+// Tidal current overlays, one file per area, listed in map/currents/index.js;
+// `tools/adcirc_current.py export-map` writes both. The files load only when the checkbox is
+// first ticked.
+const CURRENT_OVERLAYS = window.MAP_CURRENT_INDEX || [];
+
+const toggleCurrents = document.getElementById('toggle-currents');
+// Empty, and hidden, except while the overlay loads or when it fails.
+const currentsStatus = document.getElementById('currents-status');
+const timeSlider = document.getElementById('time-slider');
+const timeLabel = document.getElementById('time-label');
+
+// The slider runs from now to five days ahead in 10 minute steps (720 of them). Its left end is always the
+// present minute; the base the steps count from moves forward as the clock does, keeping the
+// moment picked further right where it was.
+const TIME_STEP_MS = 10 * 60 * 1000;
+const floorTo = (ms, step) => Math.floor(ms / step) * step;
+let timeBase = floorTo(Date.now(), TIME_STEP_MS);
+// The main line reads in the time zone at the map's centre, looked up from the zone boundaries
+// in map/tz-lookup.js, so every tool driven by the slider shares it. Borders there are coarse
+// and can be a few km off; open ocean reads its nautical zone. A failed lookup reads UTC, named
+// as such, never a plausible local time in the wrong zone.
+function mapTimeZone() {
+  const c = map.getCenter();
+  try {
+    return tzlookup(c.lat, ((c.lng + 540) % 360) - 180);
+  } catch (err) {
+    return 'UTC';
+  }
+}
+// Day and clock in en-GB ("Sun 8 Nov, 19:40"); the zone's abbreviation from en-US, which names
+// PST and PDT where en-GB writes GMT-8, so the daylight saving side of a date is always shown.
+const zoneName = (fmt, ms) => fmt.formatToParts(ms).find(p => p.type === 'timeZoneName').value;
+const timeFormats = {};
+function timeFormatFor(tz) {
+  if (!timeFormats[tz]) {
+    const clock = new Intl.DateTimeFormat('en-GB', {
+      timeZone: tz, weekday: 'short', day: 'numeric', month: 'short',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+    });
+    const zone = new Intl.DateTimeFormat('en-US', { timeZone: tz, timeZoneName: 'short' });
+    timeFormats[tz] = { format: ms => `${clock.format(ms)} ${zoneName(zone, ms)}` };
+  }
+  return timeFormats[tz];
+}
+
+// The second line: the same moment in UTC and in the computer's own zone, for reading the map
+// against a clock elsewhere.
+const shortClock = tz => new Intl.DateTimeFormat('en-GB', {
+  timeZone: tz, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+});
+const utcClock = shortClock('UTC');
+const localClock = shortClock(undefined);
+const localZone = new Intl.DateTimeFormat('en-US', { timeZoneName: 'short' });
+const subTimeFormat = {
+  format: ms => `${utcClock.format(ms)} UTC · ${localClock.format(ms)} local ${zoneName(localZone, ms)}`,
+};
+const timeSub = document.getElementById('time-sub');
+
+function mapTime() {
+  const step = Number(timeSlider.value);
+  return step === 0 ? floorTo(Date.now(), 60000) : timeBase + step * TIME_STEP_MS;
+}
+function showMapTime() {
+  timeLabel.textContent = (Number(timeSlider.value) === 0 ? 'Now, ' : '') + timeFormatFor(mapTimeZone()).format(mapTime());
+  timeSub.textContent = subTimeFormat.format(mapTime());
+  if (currentLayer) currentLayer.setTime(mapTime());
+}
+timeSlider.addEventListener('input', showMapTime);
+map.on('moveend', showMapTime);
+setInterval(() => {
+  const picked = mapTime();
+  const base = floorTo(Date.now(), TIME_STEP_MS);
+  if (base > timeBase) {
+    const wasNow = Number(timeSlider.value) === 0;
+    timeBase = base;
+    timeSlider.value = wasNow ? 0 : Math.max(0, Math.round((picked - base) / TIME_STEP_MS));
+  }
+  showMapTime();
+}, 30000);
+
+let currentLayer = null;
+let currentsLoading = null;
+
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = resolve;
+    s.onerror = () => reject(new Error(`${src} failed to load`));
+    document.body.appendChild(s);
+  });
+}
+
+// Load every overlay file, decode it, and reproduce the values the Python tool computed when it
+// wrote the file. A file that fails to load or to match stops the overlay with a message,
+// never a partial or silently wrong field.
+function loadCurrents() {
+  if (!currentsLoading) {
+    currentsLoading = (async () => {
+      const fields = [];
+      if (!CURRENT_OVERLAYS.length) throw new Error('map/currents/index.js lists no overlays');
+      for (const o of CURRENT_OVERLAYS) {
+        await loadScript(o.file);
+        const data = (window.MAP_CURRENTS || {})[o.name];
+        if (!data) throw new Error(`${o.file} did not define MAP_CURRENTS["${o.name}"]`);
+        const field = new DiveCurrents.CurrentField(data);
+        const check = field.selfCheck();
+        if (!check.ok) {
+          throw new Error(`${o.file} failed its self-check against adcirc_current.py ` +
+            `(off by up to ${check.worst.toFixed(3)} m/s); regenerate it with export-map`);
+        }
+        fields.push(field);
+      }
+      return new DiveCurrents.CurrentLayer(fields, { pane: 'paneCurrents' });
+    })();
+    currentsLoading.catch(() => { currentsLoading = null; });
+  }
+  return currentsLoading;
+}
+
+async function applyCurrentsToggle() {
+  if (!toggleCurrents.checked) {
+    if (currentLayer) map.removeLayer(currentLayer);
+    if (!currentsStatus.classList.contains('error')) currentsStatus.textContent = '';
+    return;
+  }
+  currentsStatus.classList.remove('error');
+  if (!currentLayer) currentsStatus.textContent = 'Loading currents…';
+  try {
+    const layer = await loadCurrents();
+    currentLayer = layer;
+    currentsStatus.textContent = '';
+    if (toggleCurrents.checked) {
+      layer.setTime(mapTime());
+      map.addLayer(layer);
+    }
+  } catch (err) {
+    currentsStatus.classList.add('error');
+    currentsStatus.textContent = `Currents unavailable: ${err.message}`;
+  }
+}
+toggleCurrents.addEventListener('change', applyCurrentsToggle);
+showMapTime();
+
 toggleSatellite.addEventListener('change', applySatelliteToggle);
 toggleDepthContoursNoaa.addEventListener('change', applyNoaaContourToggle);
 toggleDepthContoursEmodnet.addEventListener('change', applyEmodnetContourToggle);
@@ -671,6 +836,7 @@ const persistedControls = {
   satellite: toggleSatellite,
   contoursNoaa: toggleDepthContoursNoaa,
   contoursEmodnet: toggleDepthContoursEmodnet,
+  currents: toggleCurrents,
 };
 
 function saveMenuState() {
@@ -697,10 +863,12 @@ if (savedMenuState) {
   toggleSatellite.checked = !!savedMenuState.satellite;
   toggleDepthContoursNoaa.checked = !!savedMenuState.contoursNoaa;
   toggleDepthContoursEmodnet.checked = !!savedMenuState.contoursEmodnet;
+  toggleCurrents.checked = !!savedMenuState.currents;
   // region-filter's own options don't exist yet; restored once they're built, below.
   applySatelliteToggle();
   applyNoaaContourToggle();
   applyEmodnetContourToggle();
+  applyCurrentsToggle();
 }
 
 for (const [key, el] of Object.entries(persistedControls)) {

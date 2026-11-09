@@ -5,6 +5,7 @@
   adcirc_current.py predict --file F [--date D] [--position P]        slacks and peaks
   adcirc_current.py window --file F [--date D] [--position P]         diveable windows under a speed threshold
   adcirc_current.py at --file F --time "D HH:MM" [--position P]       current at a moment
+  adcirc_current.py export-map --bbox S W N E [--bbox ...] --name N --label L   the map viewer's overlay
   adcirc_current.py selftest                                          verify the astronomy
 
 """
@@ -394,6 +395,178 @@ def cmd_extract(a):
     print(json.dumps(doc, indent=2))
 
 
+def cmd_export_map(a):
+    """Write the mesh inside a bounding box, with its harmonic constants, as a script the map
+    viewer loads: window.MAP_CURRENTS[name] = {...}. The browser reconstructs the current at
+    every node for any moment with the same astronomy as `at`, and interpolates linearly across
+    each triangle, which is exactly what `extract` does with the constants themselves."""
+    import array
+    import base64
+    _need_db()
+    boxes = a.bbox
+    S, W = min(b[0] for b in boxes), min(b[1] for b in boxes)
+    N, E = max(b[2] for b in boxes), max(b[3] for b in boxes)
+    log = lambda m: print(m, file=sys.stderr, flush=True)
+    log(f"Reading mesh ({os.path.basename(MESH_GZ)})...")
+    lon, lat, elems = read_mesh()
+    # several boxes let the coverage follow a coastline a single rectangle would overshoot
+    inside = lambda i: any(bs <= lat[i] <= bn and bw <= lon[i] <= be for bs, bw, bn, be in boxes)
+    # every element with a node in the box, so the field runs right up to the box's edge
+    tris = [n for n in elems if inside(n[0]) or inside(n[1]) or inside(n[2])]
+    nodes = sorted({i for n in tris for i in n})
+    if not nodes:
+        sys.exit("No mesh nodes inside that box.")
+    if len(nodes) > 65535:
+        sys.exit(f"{len(nodes)} nodes: too many for the 16-bit triangle index; split the box.")
+    index = {node: k for k, node in enumerate(nodes)}
+    log(f"  {len(nodes)} nodes, {len(tris)} elements. Streaming fort.54 (a few minutes)...")
+    header = read_vel_header()
+    vals = read_vel_nodes(nodes)
+    missing = [n for n in nodes if n not in vals]
+    if missing:
+        sys.exit(f"fort.54 is missing {len(missing)} of the box's nodes (first: {missing[0]}).")
+
+    # Keep the constituents that matter here. Each one dropped can add at most its amplitude
+    # to the error at a node; keep adding the largest until no node loses more than --max-drop.
+    amp_at = [[max(vals[n][k][0], vals[n][k][2]) for n in nodes] for k in range(len(header))]
+    order = sorted(range(len(header)), key=lambda k: -sum(x * x for x in amp_at[k]))
+    keep = []
+    for cut in range(1, len(order) + 1):
+        keep = order[:cut]
+        dropped = order[cut:]
+        worst = max((sum(amp_at[k][j] for k in dropped) for j in range(len(nodes))), default=0.0)
+        if worst <= a.max_drop:
+            break
+    keep.sort()
+    log(f"  keeping {len(keep)} of {len(header)} constituents "
+        f"(worst-case dropped amplitude {worst:.3f} m/s): "
+        + ", ".join(header[k][0] for k in keep))
+
+    # Cartesian form per node: u(t) = sum f * (a cos(base) + b sin(base)), a = A cos(phi),
+    # b = A sin(phi). Quantized to int16 with one scale per constituent.
+    # Laid out node by node, then constituent, then (a_u, b_u, a_v, b_v).
+    cons_meta, per_cons = [], []
+    for k in keep:
+        name, freq, fnf, eqarg = header[k]
+        comps = []
+        for n in nodes:
+            ua, up, va, vp = vals[n][k]
+            comps.append((ua * math.cos(up * DEG), ua * math.sin(up * DEG),
+                          va * math.cos(vp * DEG), va * math.sin(vp * DEG)))
+        peak = max(abs(x) for c in comps for x in c) or 1.0
+        per_cons.append(comps)
+        cons_meta.append({"name": name, "fRef": fnf, "v0u": eqarg, "scale": peak / 32767.0})
+    coeff = array.array("h")
+    for j in range(len(nodes)):
+        for comps, c in zip(per_cons, cons_meta):
+            coeff.extend(int(round(x / c["scale"])) for x in comps[j])
+    # the browser's astronomy constants come from the same calibration as `at`
+    C = calibrate([{"name": c["name"], "f_ref": c["fRef"], "v0u_deg": c["v0u"]} for c in cons_meta])
+    for c in cons_meta:
+        (nT, ns, nh, np_, npp), key = CONSTITUENTS[c["name"]]
+        c.update({"doodson": [nT, ns, nh, np_, npp], "nodal": key, "C": C[c["name"]]})
+
+    # Quantized constants as `reconstruct` reads them, to build the browser's self-check.
+    nk = len(keep)
+
+    def node_cons(j):
+        out = []
+        for i, c in enumerate(cons_meta):
+            base = (j * nk + i) * 4
+            qa, qb, qc, qd = (coeff[base + m] * c["scale"] for m in range(4))
+            out.append({"name": c["name"], "f_ref": c["fRef"],
+                        "u_amp": math.hypot(qa, qb), "u_phase": math.degrees(math.atan2(qb, qa)),
+                        "v_amp": math.hypot(qc, qd), "v_phase": math.degrees(math.atan2(qd, qc))})
+        return out
+
+    # self-check samples: the fastest node and a spread of others, at a spread of moments
+    # and, over the 40 fastest nodes plus a spread of 40 more, what truncation costs
+    speed = [sum(amp_at[k][j] for k in keep) for j in range(len(nodes))]
+    fastest = sorted(range(len(nodes)), key=lambda j: -speed[j])[:40]
+    picks = sorted(set(fastest[:1]) | set(range(0, len(nodes), max(1, len(nodes) // 5))))
+    probe = sorted(set(fastest) | set(range(0, len(nodes), max(1, len(nodes) // 40))))
+    t0 = datetime.now(UTC).replace(minute=0, second=0, microsecond=0)
+    moments = [t0 + timedelta(hours=h) for h in (0, 7.25, 31.5, 77.75, 166)]
+    checks, trunc_err = [], 0.0
+    for j in probe:
+        qc = node_cons(j)
+        Cq = calibrate([{"name": c["name"], "f_ref": c["f_ref"], "v0u_deg": m["v0u"]}
+                        for c, m in zip(qc, cons_meta)])
+        # all 37 constituents, unquantized, at the same node: what truncation costs
+        allc = [{"name": header[k][0], "f_ref": header[k][2], "v0u_deg": header[k][3],
+                 "u_amp": vals[nodes[j]][k][0], "u_phase": vals[nodes[j]][k][1],
+                 "v_amp": vals[nodes[j]][k][2], "v_phase": vals[nodes[j]][k][3]}
+                for k in range(len(header))]
+        Call = calibrate(allc)
+        for t in moments:
+            u = reconstruct(qc, Cq, t, "u")
+            v = reconstruct(qc, Cq, t, "v")
+            if j in picks:
+                checks.append({"node": j, "t": int(t.timestamp()), "u": round(u, 5), "v": round(v, 5)})
+            uf, vf = reconstruct(allc, Call, t, "u"), reconstruct(allc, Call, t, "v")
+            trunc_err = max(trunc_err, math.hypot(u - uf, v - vf))
+    log(f"  truncation + quantization error against all {len(header)} constituents, "
+        f"{len(probe)} nodes x {len(moments)} moments: max {trunc_err:.3f} m/s")
+
+    xy = array.array("f")
+    for n in nodes:
+        xy.extend((lon[n], lat[n]))
+    tri = array.array("H")
+    for n in tris:
+        tri.extend(index[i] for i in n)
+    if sys.byteorder != "little":
+        for arr in (xy, tri, coeff):
+            arr.byteswap()
+    b64 = lambda arr: base64.b64encode(arr.tobytes()).decode("ascii")
+    doc = {
+        "name": a.name,
+        "label": a.label,
+        "bbox": [S, W, N, E],
+        "boxes": boxes,
+        "source": "ENPAC15 ADCIRC tidal database, depth-averaged",
+        "maxSpeedMs": _cfg("max_speed_ms", 0.25),
+        "nodeCount": len(nodes),
+        "triangleCount": len(tris),
+        "constituents": cons_meta,
+        "nodes": b64(xy),
+        "triangles": b64(tri),
+        "coefficients": b64(coeff),
+        "checks": checks,
+    }
+    out = a.out or os.path.join(WORKSPACE, "map", "currents", f"{a.name}.js")
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    with open(out, "w") as fh:
+        fh.write("// Generated by tools/adcirc_current.py export-map; regenerate rather than edit.\n")
+        fh.write(f"// {a.label}: {len(nodes)} ENPAC15 mesh nodes, {len(tris)} elements, "
+                 f"{len(keep)} constituents. Times are reconstructed in the browser.\n")
+        fh.write("window.MAP_CURRENTS = window.MAP_CURRENTS || {};\n")
+        fh.write(f"window.MAP_CURRENTS[{json.dumps(a.name)}] = ")
+        fh.write(json.dumps(doc, separators=(",", ":")))
+        fh.write(";\n")
+    log(f"  wrote {os.path.relpath(out, WORKSPACE)} ({os.path.getsize(out) / 1e6:.1f} MB)")
+
+    # The index beside it lists every overlay, read by the map at load: this export's entry is added or replaced, the others kept.
+    index_path = os.path.join(os.path.dirname(out), "index.js")
+    entries = []
+    if os.path.exists(index_path):
+        with open(index_path) as fh:
+            src = fh.read()
+        try:
+            entries = json.loads(src[src.index("[", src.index("MAP_CURRENT_INDEX")):src.rindex("]") + 1])
+        except ValueError as e:
+            sys.exit(f"Could not read {index_path}: {e}. Fix or delete it, then re-run export-map.")
+    entries = [e for e in entries if e["name"] != a.name]
+    entries.append({"name": a.name, "label": a.label, "file": os.path.relpath(out, WORKSPACE),
+                    "boxes": boxes})
+    entries.sort(key=lambda e: e["name"])
+    with open(index_path, "w") as fh:
+        fh.write("// Generated by tools/adcirc_current.py export-map: every tidal current overlay.\n")
+        fh.write("window.MAP_CURRENT_INDEX = ")
+        fh.write(json.dumps(entries, indent=2))
+        fh.write(";\n")
+    log(f"  updated {os.path.relpath(index_path, WORKSPACE)} ({len(entries)} overlay(s))")
+
+
 def load_doc(a):
     """The extract JSON to predict against: --json holds it inline, --file names a path to
     read it from. argparse enforces that exactly one of the two is given."""
@@ -720,6 +893,17 @@ def main():
     s.add_argument("--position", choices=sorted(POSITION_FRACS), help=position_help)
     s.add_argument("--tz", default=None, help=tz_help)
     s.set_defaults(fn=cmd_at)
+
+    s = sub.add_parser("export-map", help="write a box of the mesh for the map viewer's current overlay")
+    s.add_argument("--bbox", nargs=4, type=float, metavar=("S", "W", "N", "E"), required=True,
+                   action="append", help="bounding box in degrees: south, west, north, east; "
+                   "repeat it to cover the union of several boxes")
+    s.add_argument("--name", required=True, help="the overlay's key, and its file name under map/currents/")
+    s.add_argument("--label", required=True, help="display name of the area it covers")
+    s.add_argument("--max-drop", type=float, default=0.03,
+                   help="m/s: the most amplitude dropped constituents may cost any node (default 0.03)")
+    s.add_argument("--out", help="output path (default map/currents/<name>.js)")
+    s.set_defaults(fn=cmd_export_map)
 
     s = sub.add_parser("selftest", help="validate astronomy against the ADCIRC header")
     s.set_defaults(fn=cmd_selftest)
