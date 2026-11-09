@@ -2826,6 +2826,25 @@ window.MAP_DATA = {
         "lat": 48.456381,
         "lon": -123.006867
       }
+    },
+    {
+      "slug": "spencer-spit",
+      "name": "Spencer Spit State Park (Frost Island)",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/spencer-spit.md",
+      "site": {
+        "lat": 48.53904,
+        "lon": -122.84967
+      },
+      "parking": {
+        "lat": 48.535963,
+        "lon": -122.859324
+      },
+      "entry": {
+        "lat": 48.536531,
+        "lon": -122.851814
+      }
     }
   ]
 };
