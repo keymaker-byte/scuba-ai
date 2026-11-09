@@ -344,18 +344,52 @@ const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/
 // (ncei_depth, emodnet_depth) in a site file; both are for visual orientation on the map
 // viewer only.
 
+// Both overlays are WMS: every tile is an image the server renders on demand, so each
+// tile is a real cost. NOAA's server answers a burst of parallel requests (both servers
+// speak HTTP/2, so the browser fires every visible tile at once) by dropping 10 to 20% of
+// them with an HTML "Could not access any server machines" page, which the browser cannot
+// decode as an image, leaving a permanently blank square. Hence:
+//   tileSize 512        a quarter of the requests for the same screen, at the same detail
+//   updateWhenIdle      request tiles when a pan ends, rather than every 200 ms during it
+//   updateWhenZooming   no requests for the intermediate levels of a zoom animation
+//   keepBuffer          keep more off-screen tiles, so panning back shows them instantly
+const WMS_OVERLAY_OPTIONS = {
+  format: 'image/png',
+  transparent: true,
+  version: '1.3.0',
+  tileSize: 512,
+  updateWhenIdle: true,
+  updateWhenZooming: false,
+  keepBuffer: 4,
+};
+
+// A tile that fails is retried with backoff (1, 2, 4, 8 s), with a retry parameter on the
+// URL so the browser never serves the failed answer back from its cache. A tile already
+// scrolled off and pruned is left alone.
+const WMS_MAX_RETRIES = 4;
+function retryFailedTiles(layer) {
+  layer.on('tileerror', ({ tile, coords }) => {
+    const attempt = Number(tile.dataset.retry || 0) + 1;
+    if (attempt > WMS_MAX_RETRIES) return;
+    tile.dataset.retry = attempt;
+    setTimeout(() => {
+      if (!layer._map || !layer._tiles[layer._tileCoordsToKey(coords)]) return;
+      tile.src = `${layer.getTileUrl(coords)}&retry=${attempt}`;
+    }, 1000 * 2 ** (attempt - 1));
+  });
+  return layer;
+}
+
 // NOAA's official chart data, "Depths, currents, etc" layer only (isobaths and soundings),
 // transparent elsewhere. US chart coverage only, blank over foreign waters (e.g. Bonaire).
-const noaaContourLayer = L.tileLayer.wms(
+const noaaContourLayer = retryFailedTiles(L.tileLayer.wms(
   'https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/NOAAChartDisplay/MapServer/exts/MaritimeChartService/WMSServer',
   {
+    ...WMS_OVERLAY_OPTIONS,
     layers: '2',
-    format: 'image/png',
-    transparent: true,
-    version: '1.3.0',
     attribution: 'NOAA Office of Coast Survey',
   }
-);
+));
 
 // EMODnet Bathymetry's depth contour lines, covering European seas and the wider North
 // Atlantic (roughly 70.5W-43E, 11N-90N), which reaches Bonaire but not the US Pacific
@@ -398,14 +432,12 @@ const EMODNET_CONTOUR_SLD = `<?xml version="1.0" encoding="UTF-8"?>
     </UserStyle>
   </NamedLayer>
 </StyledLayerDescriptor>`;
-const emodnetContourLayer = L.tileLayer.wms('https://ows.emodnet-bathymetry.eu/wms', {
+const emodnetContourLayer = retryFailedTiles(L.tileLayer.wms('https://ows.emodnet-bathymetry.eu/wms', {
+  ...WMS_OVERLAY_OPTIONS,
   layers: 'emodnet:contours',
-  format: 'image/png',
-  transparent: true,
-  version: '1.3.0',
   SLD_BODY: EMODNET_CONTOUR_SLD,
   attribution: 'EMODnet Bathymetry',
-});
+}));
 
 
 function regionInfo(slug) {
