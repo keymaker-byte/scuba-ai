@@ -6,7 +6,7 @@ Rock wall along the west side of Frost Island, reached from the tip of Spencer S
 |---|---|
 | **Location** | Spencer Spit State Park, Lopez Island, WA. The channel between Spencer Spit and Frost Island at the north end of Lopez Sound |
 | **Coordinates** | 48.53904, -122.84967 (seabed 17.2 m below MLLW), at the foot of the Frost Island wall north of the spit |
-| **Parking coordinates** | 48.535963, -122.859324, at the base of the spit where the access road meets the beach |
+| **Parking coordinates** | 48.535963, -122.859324, the parking area at the base of the spit |
 | **Entry point coordinates** | 48.536531, -122.851814, the sandy point at the very tip of the spit |
 | **Type** | Shore |
 | **Depth range** | The surface at the spit to 23 m below MLLW on the channel floor and at the foot of the wall |
@@ -14,9 +14,9 @@ Rock wall along the west side of Frost Island, reached from the tip of Spencer S
 ## Getting there
 
 * **Entry.** Walk or swim to the sandy point at the tip of the spit and enter there. The point faces north, with Frost Island across the channel to the east-northeast. A replica log cabin stands on the outer part of the spit, and the water can also be entered on either side of the spit beside it, with the rest of the way to the point covered by wading or a surface swim.
-* **Parking.** The base of the spit, where the access road meets the beach, lies about 560 m from the tip, the length of the walk out with the gear. A Discover Pass is required for parking in Washington State Parks ($10 for a day, $45 for a year). The steep gravel road from the ranger station down to the beach is restricted to load and unload use; ask at the ranger station for permission to drive gear down, unload at the bottom, and return the car to the parking area above the spit. The park keeps carts that make the walk out the spit manageable, and a wagon of your own serves as well.
-* **Access.** The park is open 8 a.m. to dusk year round, at 521 A Bakerview Road. From the Lopez ferry landing drive south 3.2 km, turn left onto Center Road for 1.1 km, left onto Cross Road for 0.6 km, right onto Port Stanley Road for 0.5 km, then left onto Bakerview Road for the last 0.8 km to the park gate. Past the second gate, the first road on the right leads to the ranger station and the access road down to the beach. Frost Island is private land with no public access; stay off its shore and keep every surface stop in the water.
-* **Facilities.** Restrooms at the upper parking area, a picnic shelter and picnic tables at the base of the spit, a picnic table about a third of the way out the spit and another beside the cabin, a composting toilet near the beach campsites, and park mooring buoys on both sides of the spit.
+* **Parking.** The parking area at the base of the spit, about 560 m from the tip, the length of the walk out with the gear. A Discover Pass is required for parking in Washington State Parks ($10 for a day, $45 for a year). The park keeps carts that make the walk out the spit manageable, and a wagon of your own serves as well.
+* **Access.** The park is open 8 a.m. to dusk year round, at 521 A Bakerview Road. From the Lopez ferry landing drive south 3.2 km, turn left onto Center Road for 1.1 km, left onto Cross Road for 0.6 km, right onto Port Stanley Road for 0.5 km, then left onto Bakerview Road for the last 0.8 km to the park gate. Frost Island is private land with no public access; stay off its shore and keep every surface stop in the water.
+* **Facilities.** Restrooms in the park, a picnic shelter and picnic tables at the base of the spit, a picnic table about a third of the way out the spit and another beside the cabin, a composting toilet near the beach campsites, and park mooring buoys on both sides of the spit.
 
 ## Navigation and landmarks
 
