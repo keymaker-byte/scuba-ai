@@ -28,6 +28,8 @@ Important! Always read all three of the region's steering files and the `<site>.
 
 `map.html`, with its supporting files under `map/`, is a local map viewer: every dive site plotted, colored by shore or boat access, with parking and entry point pins for shore sites. It reads `map/data.js`, the index of every site's coordinates and every region's display name and steering-file link, as a top-level `regions` object keyed by region folder slug plus a `sites` array; a site's `region` field is only a lookup key into that `regions` object, and `map.html` derives neither a region's name nor its file path from a slug, only from what's written there.
 
+The tidal current overlay files under `map/currents/` are written by `adcirc_current.py export-map`.
+
 Populating `map/data.js` is handled by the `create-dive-region` and `create-dive-site` skills, each keeping its own part of it current (a region's entry in `regions`, a site's entry in `sites`) as part of creating or updating that region or site file. Invoke those rather than editing `map/data.js` by hand.
 
 ## Planning a dive
