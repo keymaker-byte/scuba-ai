@@ -1593,6 +1593,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "brown-rock",
+      "name": "Brown Rock",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/brown-rock.md",
+      "site": {
+        "lat": 48.604216,
+        "lon": -122.812144
+      },
+      "parking": {
+        "lat": 48.606394,
+        "lon": -122.816768
+      },
+      "entry": {
+        "lat": 48.606007,
+        "lon": -122.816522
+      }
+    },
+    {
       "slug": "burrows-pass",
       "name": "Burrows Pass (Skyline Wall)",
       "region": "puget-sound",
