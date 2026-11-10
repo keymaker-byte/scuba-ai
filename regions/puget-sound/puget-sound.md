@@ -39,6 +39,7 @@ A fjord, not a sound: a narrow trench separating the Kitsap Peninsula from the O
 
 | Site | Description |
 |---|---|
+| [Agate Beach County Park](sites/agate-beach-county-park.md) | Cobble beach on Outer Bay at the south end of Lopez Island, looking past Iceberg Island to the Strait of Juan de Fuca, where a shallow eelgrass bay holds rock formations breaking the surface: a near rock with giant Pacific octopus, Shark Fin Rock in mid-bay, and Outer Rock, whose broad outer face is covered in urchins, with kelp and boulders along the north shore. |
 | [Agate Pass](sites/agate-pass.md) | Tidal strait between Bainbridge Island and the Kitsap Peninsula at Suquamish, centred on the Agate Pass Bridge pylons, encrusted with plumose anemones and barnacles with lingcod, cabezon and rockfish in their lee; the cobble channel runs 1.6 km north to Old Man House Park, the classic drift. |
 | [Alki Beach Park (Junkyard)](sites/alki-beach-park.md) | Sandy north-facing beach near Alki Point in West Seattle, where a guide rope leads down the slope past dumped debris, the junkyard reef of a designated octopus preserve, with early-1900s boardwalk pilings in the eelgrass shallows. |
 | [Alki Pipeline](sites/alki-pipeline.md) | Old outfall pipeline off Constellation Park on the southwest side of Alki Point, a broken rock path over white sand topped with orange and white plumose anemones the whole way out, sea pen fields beside it, and a little-visited true end 46 m past the apparent one. |

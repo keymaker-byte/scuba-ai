@@ -1536,6 +1536,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "agate-beach-county-park",
+      "name": "Agate Beach County Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/agate-beach-county-park.md",
+      "site": {
+        "lat": 48.430817,
+        "lon": -122.887589
+      },
+      "entry": {
+        "lat": 48.429218,
+        "lon": -122.877231
+      },
+      "parking": {
+        "lat": 48.429265,
+        "lon": -122.87685
+      }
+    },
+    {
       "slug": "agate-pass",
       "name": "Agate Pass",
       "region": "puget-sound",
