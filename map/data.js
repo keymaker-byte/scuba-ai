@@ -2357,6 +2357,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "seacrest-cove-1",
+      "name": "Seacrest Cove 1",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/seacrest-cove-1.md",
+      "site": {
+        "lat": 47.588105,
+        "lon": -122.376548
+      },
+      "entry": {
+        "lat": 47.58737,
+        "lon": -122.377862
+      },
+      "parking": {
+        "lat": 47.586978,
+        "lon": -122.377943
+      }
+    },
+    {
       "slug": "seacrest-cove-2",
       "name": "Seacrest Cove 2",
       "region": "puget-sound",
