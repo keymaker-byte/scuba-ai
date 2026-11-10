@@ -2395,6 +2395,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "seacrest-cove-3",
+      "name": "Seacrest Cove 3",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/seacrest-cove-3.md",
+      "site": {
+        "lat": 47.590522,
+        "lon": -122.380062
+      },
+      "entry": {
+        "lat": 47.590001,
+        "lon": -122.381387
+      },
+      "parking": {
+        "lat": 47.590011,
+        "lon": -122.381719
+      }
+    },
+    {
       "slug": "smallpox-bay",
       "name": "Smallpox Bay (San Juan County Park)",
       "region": "san-juan-islands",
