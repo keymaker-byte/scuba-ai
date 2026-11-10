@@ -1,0 +1,53 @@
+# San Juan Islands Site File Conventions
+
+These conventions apply to every site file written in this region.
+
+## Region Specific Research
+
+Read in full for every site file.
+
+- **Tools.**
+  - `subsurface_log.md`, the site's dives, matched by name and logged position; a dive matching only one is checked, and confirmed with the user when unclear. Their depths, times, temperatures, visibility, current felt and notes feed every section.
+  - `diversatlas.md`, found by the dive area coordinate: a second pin, entry, parking, landmarks, access, life and hazards.
+- **Sources.**
+  - [NW Dive Club](https://nwdiveclub.com/viewforum.php?f=6), community write-ups of how a site is dived: the entry, what's worth seeing, what to expect. Read it through the Wayback Machine (`https://archive.org/wayback/available?url=<page>`, then `curl --compressed` the snapshot), and confirm the snapshot holds the full thread.
+  - [The Perfect Dive](https://web.archive.org/web/20220413053905/http://theperfectdive.com/DEF-SiteList.asp), a defunct catalog of Pacific Northwest sites, frozen around 2022: dive type, difficulty, entry and attractions per site, including several lesser-known sites. Read this pinned snapshot with `curl --compressed`.
+  - [Emerald Diving](https://www.emeralddiving.com/local_sites_sj.html), a diver's own guide to boat sites across the islands and Rosario Strait, one page per site with its location, depth, conditions and life. Read it live.
+  - [San Juan Islands National Wildlife Refuge](https://www.fws.gov/refuge/san-juan-islands), which islands and rocks are refuge, closed to landing with their surrounding water closed to watercraft. Checked for every site near a rock or islet.
+
+## Depth
+
+- **Datum.** Every depth is normalized to MLLW, mean lower low water, the datum NOAA's charts and tide predictions use for these waters. The seabed is fixed and the surface is not, so a raw depth reading holds only at the tide it was taken; every depth worth keeping is converted to depth below MLLW and never mixed with another datum. Tide height is signed, negative on a minus tide, so subtracting a negative tide height makes the datum depth the deeper number:
+
+  ```
+  depth below MLLW datum  =  observed depth (computer)  -  tide height at that moment
+  depth below surface     =  datum depth                +  predicted tide height
+  ```
+
+- **Tools.**
+  - `ncei_depth.md`, the seabed depth below MLLW at the dive area coordinate.
+  - `noaa_tide.md`, the tide station: its typical range (median daily range, largest daily range, the year's span), and the dive log's maximum depths normalized to MLLW for the depth range.
+- **Tide station.** A NOAA station on the same channel or shore as the site, its name and position verified. The islands carry a dense network of subordinate tide stations, so the nearest station often sits across a pass or on another island's shore; where it does, the nearest one on the site's own side of the pass governs.
+
+## Current
+
+- **Current type.** Tidal.
+- **Tools.**
+  - `adcirc_current.md`, the site's ENPAC15 extract, attached to the site's `<slug>.json`, and its predictions of slack times and set direction.
+  - `noaa_current.md`, the governing station, its recommended bin, axes, peak speeds and diveable windows.
+  - `noaa_legacy_current.md`, the legacy reference behind a legacy correction: Admiralty Inlet, off Bush Point (`PCT1541`), the reference older tables used for Haro Strait and the west and south shores of San Juan Island; Rosario Strait (`PCT1996`); and San Juan Channel, south entrance (`PCT2186`).
+  - `subsurface_log.md`, the set and strength actually felt at the site, and the timed slacks behind the observed offset.
+- **Spatial extract.** The site's extract from `adcirc_current.md`, taken at the dive area coordinate once it holds and attached to the site JSON. The dive area coordinate itself must sit inside the ENPAC15 mesh, and the extract is taken there. One outside the mesh moves the dive site: ask the user for a new dive area coordinate and test each until one sits inside, then carry it into the Coordinates row, the site JSON and the map entry, and redo every figure read at the dive area (seabed depth, the dive area shore facing and fetch, the distance and bearing from the entry). Where no point near the dive area sits inside the mesh, the site has no extract: work the current from the station alone, and say so in chat.
+- **Governing station.** The nearest live NOAA harmonic station (type H) with depth bins in the same channel as the site, nearest by the water path rather than a straight line over land: no pass, narrows, island, sheltering spit or harbor lies between them. Among the islands a straight line often crosses land or another channel, so the water path decides. Where a point, a pass mouth or a channel junction shapes the site's flow, the station at that feature governs over a nearer one in the open channel. Subordinate (type S) and weak-and-variable (type W) stations never govern; where no harmonic station qualifies, the row names the nearest one with predictions and states that none governs. The extract never decides the choice; it stands beside the station at planning time as an independent estimate.
+- **Recommended bin.** The station's published bin nearest the dive area's seabed depth.
+- **Span.** 30 consecutive days of predictions, starting on the day the figures are computed: the governing station's at the recommended bin for the peak speeds and the diveable window, and the extract's at the bottom of the water column for the site sets. Thirty days takes in both spring tides of the lunar month, the larger perigean one included.
+- **Axes and peak speeds.** The governing station's own, at the recommended bin: its axes in the Station flood axis and Station ebb axis rows, and the range of its daily peak flood and ebb over the span.
+- **Site sets.** Two separate calculations over the span, each read from the extract at the dive area and each in its own row. The Site flood set is the direction the extract sets toward while the station floods: match each of the station's maximum floods to the extract's nearest maximum, and take the median direction of those maxima. The Site ebb set is the same calculation against the station's maximum ebbs. A site's flow can run at any angle to the station's, around a point, into a bay or along a shore away from the station, so each set comes from timing, never from which direction lies nearer the station's flood axis. The two sets usually run opposite each other; where they differ, an eddy or a turn in the flow shapes the site, and the prose underneath describes it, along with any shore-parallel set the extract misses. A site with no extract reads "As the station" in both rows.
+- **Diveable window.** The station's windows under the current threshold, at the recommended bin, over the span. The tide's strong inequality makes the windows uneven: the prose names the long window on the weak exchange and the short one either side of the large ebb, and notes any day the weak exchange holds under the threshold with no clean slack.
+- **Observed offset.** Timed slacks from the site's logged dives only, each a computer bookmark or a "slack HH:MM" note, measured against the station's nearest predicted slack that day. A slack's offset is established at 4 observations on 4 days, springs and neaps both, all within 10 minutes of their median, which its row states as a fact; otherwise not established. Neither the extract nor a legacy correction feeds it.
+- **Legacy correction.** A correction published in an older current table goes in its own table at the end of the Current section, recorded as published: the legacy station by name and position with its distance and direction from the site, the reference station it was published against, by name and ID, and the minutes for each slack against the reference station.
+- **Points and channel junctions.** Off a point or where channels meet, upwellings, downwellings and whirlpools form, and the set close to shore can run opposite to the channel's. The prose describes the eddy where community sources or the dive log record one.
+
+## Wind
+
+- **Tool.** `shore_exposure.md`. On the south shores open to the Strait of Juan de Fuca and on the southern Haro Strait shore, the fetch along the straits reads capped; the swell those shores take arrives from beyond any fetch the tool measures, and the site's prose names it where community sources or the dive log record surge on the entry.

@@ -18,6 +18,10 @@ window.MAP_DATA = {
       "name": "Puget Sound",
       "file": "regions/puget-sound/puget-sound.md"
     },
+    "san-juan-islands": {
+      "name": "San Juan Islands",
+      "file": "regions/san-juan-islands/san-juan-islands.md"
+    },
     "strait-of-juan-de-fuca": {
       "name": "Strait of Juan de Fuca",
       "file": "regions/strait-of-juan-de-fuca/strait-of-juan-de-fuca.md"
@@ -1538,9 +1542,9 @@ window.MAP_DATA = {
     {
       "slug": "agate-beach-county-park",
       "name": "Agate Beach County Park",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/agate-beach-county-park.md",
+      "file": "regions/san-juan-islands/sites/agate-beach-county-park.md",
       "site": {
         "lat": 48.430817,
         "lon": -122.887589
@@ -1614,9 +1618,9 @@ window.MAP_DATA = {
     {
       "slug": "brown-rock",
       "name": "Brown Rock",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/brown-rock.md",
+      "file": "regions/san-juan-islands/sites/brown-rock.md",
       "site": {
         "lat": 48.604216,
         "lon": -122.812144
@@ -1633,9 +1637,9 @@ window.MAP_DATA = {
     {
       "slug": "burrows-pass",
       "name": "Burrows Pass (Skyline Wall)",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/burrows-pass.md",
+      "file": "regions/san-juan-islands/sites/burrows-pass.md",
       "site": {
         "lat": 48.49042,
         "lon": -122.69148
@@ -1671,9 +1675,9 @@ window.MAP_DATA = {
     {
       "slug": "deadman-bay",
       "name": "Deadman Bay",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/deadman-bay.md",
+      "file": "regions/san-juan-islands/sites/deadman-bay.md",
       "site": {
         "lat": 48.5124,
         "lon": -123.1472
@@ -1690,9 +1694,9 @@ window.MAP_DATA = {
     {
       "slug": "eagle-cove",
       "name": "Eagle Cove",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/eagle-cove.md",
+      "file": "regions/san-juan-islands/sites/eagle-cove.md",
       "site": {
         "lat": 48.4593,
         "lon": -123.0305
@@ -1766,9 +1770,9 @@ window.MAP_DATA = {
     {
       "slug": "fidalgo-head",
       "name": "Fidalgo Head",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/fidalgo-head.md",
+      "file": "regions/san-juan-islands/sites/fidalgo-head.md",
       "site": {
         "lat": 48.49216,
         "lon": -122.70335
@@ -1899,9 +1903,9 @@ window.MAP_DATA = {
     {
       "slug": "green-point",
       "name": "Green Point",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/green-point.md",
+      "file": "regions/san-juan-islands/sites/green-point.md",
       "site": {
         "lat": 48.49995,
         "lon": -122.70132
@@ -2051,9 +2055,9 @@ window.MAP_DATA = {
     {
       "slug": "lime-kiln-point",
       "name": "Lime Kiln Point",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/lime-kiln-point.md",
+      "file": "regions/san-juan-islands/sites/lime-kiln-point.md",
       "site": {
         "lat": 48.515457,
         "lon": -123.1531
@@ -2070,9 +2074,9 @@ window.MAP_DATA = {
     {
       "slug": "low-island",
       "name": "Low Island (San Juan County Park North Beach)",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/low-island.md",
+      "file": "regions/san-juan-islands/sites/low-island.md",
       "site": {
         "lat": 48.543504,
         "lon": -123.163626
@@ -2241,9 +2245,9 @@ window.MAP_DATA = {
     {
       "slug": "reuben-tarte",
       "name": "Reuben Tarte County Park",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/reuben-tarte.md",
+      "file": "regions/san-juan-islands/sites/reuben-tarte.md",
       "site": {
         "lat": 48.613754,
         "lon": -123.098057
@@ -2298,9 +2302,9 @@ window.MAP_DATA = {
     {
       "slug": "rosario-beach",
       "name": "Rosario Beach",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/rosario-beach.md",
+      "file": "regions/san-juan-islands/sites/rosario-beach.md",
       "site": {
         "lat": 48.41745,
         "lon": -122.6668
@@ -2374,9 +2378,9 @@ window.MAP_DATA = {
     {
       "slug": "smallpox-bay",
       "name": "Smallpox Bay (San Juan County Park)",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/smallpox-bay.md",
+      "file": "regions/san-juan-islands/sites/smallpox-bay.md",
       "site": {
         "lat": 48.5406,
         "lon": -123.162
@@ -2830,9 +2834,9 @@ window.MAP_DATA = {
     {
       "slug": "south-beach",
       "name": "South Beach (American Camp)",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/south-beach.md",
+      "file": "regions/san-juan-islands/sites/south-beach.md",
       "site": {
         "lat": 48.454652,
         "lon": -123.006985
@@ -2849,9 +2853,9 @@ window.MAP_DATA = {
     {
       "slug": "doe-bay",
       "name": "Doe Bay",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/doe-bay.md",
+      "file": "regions/san-juan-islands/sites/doe-bay.md",
       "site": {
         "lat": 48.6388,
         "lon": -122.78
@@ -2868,9 +2872,9 @@ window.MAP_DATA = {
     {
       "slug": "spencer-spit",
       "name": "Spencer Spit State Park (Frost Island)",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/spencer-spit.md",
+      "file": "regions/san-juan-islands/sites/spencer-spit.md",
       "site": {
         "lat": 48.53904,
         "lon": -122.84967
@@ -2887,9 +2891,9 @@ window.MAP_DATA = {
     {
       "slug": "odlin-county-park-north",
       "name": "Odlin County Park (North)",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/odlin-county-park-north.md",
+      "file": "regions/san-juan-islands/sites/odlin-county-park-north.md",
       "site": {
         "lat": 48.56146,
         "lon": -122.89298
@@ -2906,9 +2910,9 @@ window.MAP_DATA = {
     {
       "slug": "odlin-county-park-south",
       "name": "Odlin County Park (South)",
-      "region": "puget-sound",
+      "region": "san-juan-islands",
       "type": "shore",
-      "file": "regions/puget-sound/sites/odlin-county-park-south.md",
+      "file": "regions/san-juan-islands/sites/odlin-county-park-south.md",
       "site": {
         "lat": 48.55822,
         "lon": -122.89585
