@@ -28,6 +28,7 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 |---|---|
 | [Bonaire](regions/bonaire/bonaire.md) | A Caribbean island in the Netherlands' ABC islands, ringed by a near-continuous fringing reef dived almost entirely from shore at marked yellow rocks, with wind driven rather than tidal current. |
 | [Puget Sound](regions/puget-sound/puget-sound.md) | An estuary in western Washington, reaching the Pacific through the Strait of Juan de Fuca. Made up of four basins, the Main Basin, Whidbey Basin, Hood Canal and South Sound, separated by submarine sills. |
+| [San Juan Islands](regions/san-juan-islands/san-juan-islands.md) | The archipelago in northwest Washington where the Strait of Juan de Fuca meets the Strait of Georgia, between Haro and Rosario Straits, with the Rosario Strait shore of Fidalgo Island at Anacortes; high-current island diving through channels and passes. |
 | [Strait of Juan de Fuca](regions/strait-of-juan-de-fuca/strait-of-juan-de-fuca.md) | The strait running between Vancouver Island, British Columbia, and the Olympic Peninsula, Washington, connecting the inland Salish Sea to the open Pacific. |
 | [Washington State Lakes](regions/washington-state-lakes/washington-state-lakes.md) | Freshwater lakes scattered across Washington State, from glacial lakes in the Olympics and Cascades to lowland lakes near Puget Sound. |
 
