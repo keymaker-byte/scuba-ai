@@ -2243,6 +2243,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "redondo",
+      "name": "Redondo",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/redondo.md",
+      "site": {
+        "lat": 47.3493,
+        "lon": -122.3273
+      },
+      "entry": {
+        "lat": 47.348601,
+        "lon": -122.324411
+      },
+      "parking": {
+        "lat": 47.348317,
+        "lon": -122.324071
+      }
+    },
+    {
       "slug": "reuben-tarte",
       "name": "Reuben Tarte County Park",
       "region": "san-juan-islands",
