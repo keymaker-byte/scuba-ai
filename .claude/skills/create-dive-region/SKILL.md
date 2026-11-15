@@ -127,7 +127,7 @@ Read in full for every site file.
 
 - **Current type.** Tidal, wind driven, or none, with the reason for none.
 - **Tool** or **Tools.** Each tool behind a current figure, with what it gives: a spatial extract, the station, bin, axes, peak speeds and windows, timed observations.
-- **Figure.** One bullet per figure the site skill's Current section requires for this type, naming how it is produced: how the station and its bin are chosen, how an observed offset is established from timed slacks in the dive log, how the model and any legacy correction are carried, the current threshold the window is measured against, and the wording for a figure no source gives.
+- **Figure.** One bullet per figure the site skill's Current section requires for this type, naming how it is produced: how the station and its bin are chosen, how an observed offset is established from timed slacks in the dive log, how the model, any subordinate station and any legacy correction are carried, the current threshold the window is measured against, and the wording for a figure no source gives.
 - **Topic.** Optional, one bullet per reach that behaves differently from the rest of the region.
 
 ## Wind

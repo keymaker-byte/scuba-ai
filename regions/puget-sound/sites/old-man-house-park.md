@@ -42,6 +42,15 @@ Old Man House Park is a small Suquamish Tribe park on the Kitsap Peninsula shore
 * **Ebb.** Sets northeast, out into Port Madison. Peaks roughly 0.4 to 0.7 m/s here, against 0.51 to 1.29 m/s at the station; this is the direction a drift dive rides down from the bridge to this beach.
 * **Diveable window.** Typically an hour and a half or more around each slack, a broader window than the fast water further up the channel near the bridge, where the station's windows run about 35 to 65 minutes.
 
+Subordinate station:
+
+| | |
+|---|---|
+| **Subordinate station** | Agate Passage, north end (PCT1636), 47°43.32′ N, 122°33.30′ W, about 0.25 km south-southwest |
+| **Subordinate reference** | Point Wilson, 1.6 mi. NE of (PUG1624), bin 47 |
+| **Slack before flood** | 49 minutes before the reference |
+| **Slack before ebb** | 44 minutes before the reference |
+
 ## Wind
 
 | | |

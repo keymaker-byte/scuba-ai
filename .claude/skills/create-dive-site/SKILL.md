@@ -233,6 +233,15 @@ Optional sentence on what dominates the current. Tidal and wind driven only.
 * **Drivers.** Wind driven: the winds or seasons that strengthen or reverse the set.
 * **Topic.** Further local behaviour, each led by a bold topic.
 
+Optional, tidal only: "Subordinate station:"
+
+| | |
+|---|---|
+| **Subordinate station** | Name, ID, position, and distance and direction from the dive area |
+| **Subordinate reference** | The reference station and bin NOAA publishes the corrections against: name, ID and bin |
+| **Slack before flood** | Minutes before or after the reference, as published |
+| **Slack before ebb** | Minutes before or after the reference, as published |
+
 Optional, tidal only: "Legacy correction:"
 
 | | |
