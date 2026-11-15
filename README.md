@@ -37,7 +37,7 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 | Tool | Source | Does | Script |
 |---|---|---|---|
 | [NOAA CO-OPS currents](tools/noaa_current.md) | NOAA CO-OPS | Current predictions at a NOAA current station, computed locally from NOAA's harmonic constants: slack, max flood/ebb, and diveable windows under a speed threshold, at a chosen depth bin. | `noaa_current.py` |
-| [NOAA CO-OPS water levels](tools/noaa_tide.md) | NOAA CO-OPS | Tide height predictions at a NOAA tide station; converts an observed depth to depth below MLLW datum and back (`normalize` / `project`). | `noaa_tide.py` |
+| [NOAA CO-OPS water levels](tools/noaa_tide.md) | NOAA CO-OPS | Tide height predictions at a NOAA tide station, computed locally from NOAA's harmonic constants; converts an observed depth to depth below MLLW datum and back (`normalize` / `project`). | `noaa_tide.py` |
 | [ENPAC15 (ADCIRC spatial tidal currents)](tools/adcirc_current.md) | ADCIRC / ENPAC15 | Extracts a site specific tidal current prediction from the ENPAC15 model (for sites with no nearby current station), then predicts slacks, peaks and diveable windows from that extract. | `adcirc_current.py` |
 | [NCEI coastal DEM](tools/ncei_depth.md) | NOAA NCEI | Seabed depth at a coordinate, with conversion to depth below MLLW via NOAA VDatum. US only. | `ncei_depth.py` |
 | [EMODnet Bathymetry](tools/emodnet_depth.md) | EMODnet + GEBCO | Seabed depth at a coordinate outside the US, from real survey soundings where EMODnet has coverage, falling back to the global GEBCO grid. | `emodnet_depth.py` |
