@@ -45,6 +45,15 @@ The point is current sensitive: missing the window by even a little brings on cu
 * **Ebb.** Sets south past the point, then bends into the shallow bay off West Beach, curling counterclockwise across the beach shallows before flowing back out past Green Point. Daily peaks run 0.37 to 2.25 m/s at the station over the same 30 days.
 * **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 80 minutes. Plan tight to slack; the point itself follows the full current cycle. The inner cove and West Beach shallows run comparatively sheltered on a small exchange, but that shelter does not extend out to the point.
 
+Subordinate station:
+
+| | |
+|---|---|
+| **Subordinate station** | Green Point, 0.8 mile northwest of (PCT2026), 48°30.28′ N, 122°42.37′ W, about 0.6 km northwest |
+| **Subordinate reference** | Belle Rock Light, east of (PUG1729), bin 21 |
+| **Slack before flood** | 43 minutes before the reference |
+| **Slack before ebb** | 34 minutes before the reference |
+
 Legacy correction:
 
 | | |
