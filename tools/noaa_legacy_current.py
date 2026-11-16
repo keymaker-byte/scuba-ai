@@ -382,8 +382,7 @@ def main():
     def dated(sp):
         sp.add_argument("station", help="legacy NOAA ID, e.g. PCT1341 or an ACT ID")
         sp.add_argument("--date", type=date.fromisoformat, default=date.today())
-        sp.add_argument("--tz", default=_cfg("default_tz", "America/Los_Angeles"),
-                        help="IANA zone for the output; default from tool-config.json")
+        sp.add_argument("--tz", required=True, metavar="IANA_ZONE", help="the site's time zone, the `tz` in its JSON")
 
     s = sub.add_parser("predict", help="slack / max flood / max ebb")
     dated(s)

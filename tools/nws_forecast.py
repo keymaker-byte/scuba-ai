@@ -130,10 +130,13 @@ def value_at(spans, t):
     return None
 
 
-def fetch(lat, lon):
+def fetch(lat, lon, tzname):
     pt = get(f"{BASE}/points/{lat:.4f},{lon:.4f}",
              "NWS point lookup (NWS covers US coordinates only)")["properties"]
-    tz = ZoneInfo(pt["timeZone"])
+    try:
+        tz = ZoneInfo(tzname)
+    except Exception:
+        sys.exit(f"{tzname} is not an IANA time zone name. Pass the site's `tz` from its JSON, e.g. America/Los_Angeles.")
     grid = get(pt["forecastGridData"])["properties"]
     hourly = get(pt["forecastHourly"] + "?units=si")["properties"]["periods"]
     layers = {k: intervals(grid.get(k), tz) for k in
@@ -189,7 +192,7 @@ def _reorder(raw):
 
 def cmd_forecast(a):
     lat, lon = a.near
-    doc = fetch(lat, lon)
+    doc = fetch(lat, lon, a.tz)
     day = datetime.strptime(a.date, "%Y-%m-%d").replace(tzinfo=doc["tz"])
     check_covered(doc, day, day + timedelta(days=1))
     print_header(doc, lat, lon)
@@ -209,7 +212,7 @@ def cmd_forecast(a):
 
 def cmd_at(a):
     lat, lon = a.near
-    doc = fetch(lat, lon)
+    doc = fetch(lat, lon, a.tz)
     t = datetime.strptime(a.time, "%Y-%m-%d %H:%M").replace(tzinfo=doc["tz"])
     check_covered(doc, t, t + timedelta(minutes=1))
     print_header(doc, lat, lon)
@@ -237,12 +240,14 @@ def main():
     s = sub.add_parser("forecast", help="hourly conditions for one local calendar day")
     s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True)
     s.add_argument("--date", required=True, metavar="YYYY-MM-DD")
+    s.add_argument("--tz", required=True, metavar="IANA_ZONE", help="the site's time zone, the `tz` in its JSON")
     _call_args(s)
     s.set_defaults(fn=cmd_forecast)
 
     s = sub.add_parser("at", help="conditions at one local moment")
     s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True)
     s.add_argument("--time", required=True, metavar="YYYY-MM-DD HH:MM")
+    s.add_argument("--tz", required=True, metavar="IANA_ZONE", help="the site's time zone, the `tz` in its JSON")
     _call_args(s)
     s.set_defaults(fn=cmd_at)
 

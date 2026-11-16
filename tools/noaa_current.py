@@ -32,10 +32,6 @@ REPORT = os.path.join(DB, "_verify.jsonl")
 MD = "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations"
 DG = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
 KN = 0.514444  # m/s per knot
-# NOAA gives a station's standard offset from UTC and whether it keeps daylight time; these
-# are the US zones that pair with each offset. `--tz` overrides with the site's own zone.
-ZONES = {-4: "America/Puerto_Rico", -5: "America/New_York", -6: "America/Chicago", -7: "America/Denver",
-         -8: "America/Los_Angeles", -9: "America/Anchorage", -10: "Pacific/Honolulu", 10: "Pacific/Guam"}
 
 
 def _cfg(key, default):
@@ -180,18 +176,12 @@ def pick_bin(doc, num):
     return str(num), b
 
 
-def zone_of(doc, override):
-    if override:
-        return ZoneInfo(override)
+def zone_of(name):
+    """The zone every time prints in: the site's own, passed as --tz."""
     try:
-        off = int(float(doc["tz_offset"]))
-    except (TypeError, ValueError):
-        sys.exit(f"NOAA gives no time zone for {doc['id']}; pass --tz with the site's IANA zone.")
-    if doc.get("observes_dst") is False:
-        return timezone(timedelta(hours=off), f"UTC{off:+d}")
-    if off not in ZONES:
-        sys.exit(f"{doc['id']} keeps UTC{off:+d}, a zone this tool has no name for; pass --tz.")
-    return ZoneInfo(ZONES[off])
+        return ZoneInfo(name)
+    except Exception:
+        sys.exit(f"{name} is not an IANA time zone name. Pass the site's `tz` from its JSON, e.g. America/Los_Angeles.")
 
 
 # --- astronomy (Schureman, Manual of Harmonic Analysis and Prediction of Tides, 1958) ------
@@ -452,7 +442,7 @@ def cmd_bins(a):
 def cmd_predict(a):
     doc = station(a.station)
     num, b = pick_bin(doc, a.bin)
-    tz = zone_of(doc if b.get("type") != "S" else reference(b)[0], a.tz)
+    tz = zone_of(a.tz)
     header(doc, num, b, a.date, tz)
     if b.get("type") == "S":
         ev = subordinate_events(b, a.date, tz)
@@ -476,7 +466,7 @@ def cmd_window(a):
     if b.get("type") == "S":
         sys.exit(f"{doc['id']} bin {num} is subordinate: NOAA defines it by its slacks and maxima alone, "
                  "with no speed curve between them to measure a window on. Use `predict`.")
-    tz = zone_of(doc, a.tz)
+    tz = zone_of(a.tz)
     lim = a.max_speed
     header(doc, num, b, a.date, tz)
     print(f"  windows with |current| <= {lim:.2f} m/s\n")
@@ -730,7 +720,7 @@ def main():
         sp.add_argument("--bin", type=int, help="the site file's Recommended bin")
 
     def zoned(sp):
-        sp.add_argument("--tz", help="IANA zone for the output; default is the station's own zone")
+        sp.add_argument("--tz", required=True, metavar="IANA_ZONE", help="the site's time zone, the `tz` in its JSON")
 
     s = sub.add_parser("predict", help="slack / max flood / max ebb")
     dated(s)

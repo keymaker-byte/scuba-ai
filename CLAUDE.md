@@ -73,6 +73,7 @@ If a tool errors out, an API is unreachable, or a site is down, stop and report 
 ## Time convention: use the timezone of the dive site
 
 - **Use local time zone.** Dive sites and planning should use the dive site local time zone. Never carry a UTC timestamp into a plan, a site file, or the log. This is a strict rule because slack, wind, and entry time are only useful against each other. A source silently read in the wrong zone or time shifts the slack window by 7 to 8 hours, which is obvious, or by exactly one hour across a DST boundary, which is not obvious and looks entirely plausible.
+- **Pass the site's zone to every tool that takes one.** A tool with a `--tz` option is run with the site's `tz` from its `<slug>.json`, every time. The current and tide tools require it.
 
 ## Depth convention: normalize to a fixed datum
 
