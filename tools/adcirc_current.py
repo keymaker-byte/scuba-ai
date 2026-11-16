@@ -50,19 +50,7 @@ def resolve_tz(name):
     try:
         return ZoneInfo(name)
     except Exception:
-        sys.exit(f"Unknown timezone '{name}'. Pass an IANA name, e.g. America/Los_Angeles.")
-
-
-def site_tz(doc, override):
-    """The zone to plan a site in: an explicit --tz wins, otherwise the zone the site was
-    extracted in (stored in its .json alongside lat/lon). No other fallback: guessing a
-    site's timezone is exactly the kind of silent error that shifts a slack window and looks
-    entirely plausible, so a site with no stored zone must fail, not default."""
-    name = override or doc.get("tz")
-    if not name:
-        sys.exit("This extract has no stored timezone.\n"
-                 "  Re-extract with --tz <zone>, or pass --tz on this command.")
-    return resolve_tz(name)
+        sys.exit(f"{name} is not an IANA time zone name. Pass the site's `tz` from its JSON, e.g. America/Los_Angeles.")
 
 # ADCIRC run wc2015_v1a: fort.15 REFTIME 0.0, run id "410day_start_11162004". The nodal
 # factors and equilibrium arguments in the fort.53/54 headers are therefore referenced to
@@ -733,7 +721,7 @@ def slacks_and_peaks(sig, signed_fn=None):
 
 def cmd_predict(a):
     doc = load_doc(a)
-    tz = site_tz(doc, a.tz)
+    tz = resolve_tz(a.tz)
     factor, note = position_factor(a.position)
     bearing, samp = principal_axis(doc, tz, a.date)
     sig = _signed(samp, bearing)
@@ -757,7 +745,7 @@ def cmd_predict(a):
 
 def cmd_window(a):
     doc = load_doc(a)
-    tz = site_tz(doc, a.tz)
+    tz = resolve_tz(a.tz)
     factor, note = position_factor(a.position)
     bearing, samp = principal_axis(doc, tz, a.date)
     sig = _signed(samp, bearing)
@@ -805,7 +793,7 @@ def cmd_window(a):
 
 def cmd_at(a):
     doc = load_doc(a)
-    tz = site_tz(doc, a.tz)
+    tz = resolve_tz(a.tz)
     factor, note = position_factor(a.position)
     t_local = datetime.strptime(a.time, "%Y-%m-%d %H:%M").replace(tzinfo=tz)
     cons, C = doc["enpac15_constituents"], calibrate(doc["enpac15_constituents"])
@@ -863,8 +851,7 @@ def main():
 
     position_help = ("where in the water column: bottom, mid, or surface (default: the "
                       "column mean, unscaled)")
-    tz_help = ("override the site's stored timezone (IANA name); normally unneeded, the "
-               "extract already knows which zone the site is in")
+    tz_help = "the site's time zone, the `tz` in its JSON"
 
     def doc_source(sp):
         g = sp.add_mutually_exclusive_group(required=True)
@@ -875,7 +862,7 @@ def main():
         doc_source(sp)
         sp.add_argument("--date", type=date.fromisoformat, default=date.today())
         sp.add_argument("--position", choices=sorted(POSITION_FRACS), help=position_help)
-        sp.add_argument("--tz", default=None, help=tz_help)
+        sp.add_argument("--tz", required=True, metavar="IANA_ZONE", help=tz_help)
 
     s = sub.add_parser("predict", help="slack / max flood / max ebb")
     dated(s)
@@ -891,7 +878,7 @@ def main():
     doc_source(s)
     s.add_argument("--time", required=True, metavar="YYYY-MM-DD HH:MM")
     s.add_argument("--position", choices=sorted(POSITION_FRACS), help=position_help)
-    s.add_argument("--tz", default=None, help=tz_help)
+    s.add_argument("--tz", required=True, metavar="IANA_ZONE", help=tz_help)
     s.set_defaults(fn=cmd_at)
 
     s = sub.add_parser("export-map", help="write a box of the mesh for the map viewer's current overlay")

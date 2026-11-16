@@ -21,7 +21,7 @@ The slack time and direction, on the day, for the station that governs the site:
 - **Minimums are named.** A weak point between two floods prints as `min flood`, between two ebbs as `min ebb`, with its speed. NOAA prints the same event as a second flood or ebb, or as a slack when it is near zero. NOAA also leaves out a maximum too small to round above zero; the tool prints it.
 - **The first hours of a new year.** NOAA's slack and maximum listing keeps the old year's node factors for a few hours into January 1 UTC, while its own speed series changes at the first hour. The tool follows the speed series, so an event in those hours can sit a few minutes and up to 0.08 m/s from NOAA's listing, and the change itself can print as a small extra maximum at 00:00 UTC. January 1 UTC begins on the afternoon or evening of December 31 local time; on a subordinate bin the affected hours move with its time correction.
 - **Every time it prints is at the station, un-offset.** The site file's Observed offset is applied to it, where established.
-- **Times.** Local to the station: NOAA gives each station's standard offset from UTC and whether it keeps daylight time, and the tool prints in the US zone that matches, named in the header (Puerto Rico, Eastern, Central, Mountain, Pacific, Alaska, Hawaii, Guam). A station whose daylight flag NOAA leaves empty is read as keeping the zone's usual daylight time. A subordinate station prints in its reference station's zone. `--tz` takes the site's own IANA zone, and is the one to pass wherever the site's clock differs from the zone in the header.
+- **Times.** `--tz` is required on every command that prints a time: the site's own IANA zone, the `tz` in its JSON. Every time prints in that zone, named in the header, daylight time included.
 - **A failed download stops the run.** A refusal, an empty or non-JSON answer, or an unreachable API ends the run with what failed and the URL asked for, and leaves no partial station file behind. A cached station needs no network.
 
 ## Before relying on it
@@ -38,15 +38,15 @@ The slack time and direction, on the day, for the station that governs the site:
 Standard library only.
 
 ```sh
-python3 tools/noaa_current.py stations --near <lat> <lon>                    # site file: stations near the site
-python3 tools/noaa_current.py bins STATION_ID                                # site file: bins, their depths and kinds
-python3 tools/noaa_current.py predict STATION_ID --bin B --date 2026-07-12   # site file and planning: slack, max flood, max ebb
-python3 tools/noaa_current.py window STATION_ID --bin B --date 2026-07-12    # site file and planning: diveable windows
-python3 tools/noaa_current.py fetch --near <lat> <lon> --km 50               # cache every station within a radius
-python3 tools/noaa_current.py fetch STATION_ID [STATION_ID ...]              # cache named stations
-python3 tools/noaa_current.py fetch --all                                    # cache every station NOAA lists
-python3 tools/noaa_current.py verify STATION_ID --bin B --days 30            # compare one bin with NOAA's live API
-python3 tools/noaa_current.py verify --all                                   # compare every published bin of every cached station
+python3 tools/noaa_current.py stations --near <lat> <lon>                                    # site file: stations near the site
+python3 tools/noaa_current.py bins STATION_ID                                                # site file: bins, their depths and kinds
+python3 tools/noaa_current.py predict STATION_ID --bin B --date 2026-07-12 --tz <IANA_ZONE>  # site file and planning: slack, max flood, max ebb
+python3 tools/noaa_current.py window STATION_ID --bin B --date 2026-07-12 --tz <IANA_ZONE>   # site file and planning: diveable windows
+python3 tools/noaa_current.py fetch --near <lat> <lon> --km 50                               # cache every station within a radius
+python3 tools/noaa_current.py fetch STATION_ID [STATION_ID ...]                              # cache named stations
+python3 tools/noaa_current.py fetch --all                                                    # cache every station NOAA lists
+python3 tools/noaa_current.py verify STATION_ID --bin B --days 30                            # compare one bin with NOAA's live API
+python3 tools/noaa_current.py verify --all                                                   # compare every published bin of every cached station
 ```
 
 `predict` prints the day's slacks and maxima under a header naming the station, bin, time zone and the date its constants were fetched. `window` is the planning command: it reports every span where the current stays under `--max-speed`, to the minute, with its duration and peak, so a 72-minute window and a 20-minute one stop looking alike. The threshold defaults to `noaa_current.max_speed_ms` in `tool-config.json`, 0.25 m/s where the key is absent, a placeholder for what is comfortable in a drysuit, worth setting from experience. A site file's peak speeds and typical window come from `predict` and `window` run across 30 consecutive days, which takes in both spring tides of the lunar month, the larger perigean one included.

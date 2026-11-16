@@ -41,12 +41,6 @@ REPORT = os.path.join(DB, "_verify.jsonl")
 MD = "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations"
 DG = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
 
-# NOAA gives each station a standard offset from UTC. These are the US zones at each offset;
-# any other offset prints as a fixed offset. `--tz` overrides with the site's own zone.
-ZONES = {-4: "America/Puerto_Rico", -5: "America/New_York", -6: "America/Chicago", -7: "America/Denver",
-         -8: "America/Los_Angeles", -9: "America/Anchorage", -10: "Pacific/Honolulu",
-         -11: "Pacific/Pago_Pago", 10: "Pacific/Guam"}
-
 
 def get(url, missing_ok=False):
     """Fetch NOAA JSON, or stop the run with what failed. NOAA sends its JSON error body with
@@ -152,20 +146,12 @@ def reference(doc):
     return ref
 
 
-def zone_of(doc, override=None):
-    """The station's local zone, from NOAA's standard offset for it and its position. Alaska
-    north of 50° keeps Alaska time east of 169°30'W and Aleutian time west of it, whatever
-    older offset NOAA still lists; Bermuda is the one station group at UTC-4 with daylight time."""
-    if override:
-        return ZoneInfo(override)
-    off, lat, lon = int(doc["tz_offset"]), doc["lat"], doc["lon"]
-    if lat >= 50 and off in (-9, -10, -11):
-        return ZoneInfo("America/Adak" if lon < -169.5 or lon > 0 else "America/Anchorage")
-    if off == -4 and lat > 30:
-        return ZoneInfo("Atlantic/Bermuda")
-    if off in ZONES:
-        return ZoneInfo(ZONES[off])
-    return timezone(timedelta(hours=off), f"UTC{off:+d}")
+def zone_of(name):
+    """The zone every time prints in: the site's own, passed as --tz."""
+    try:
+        return ZoneInfo(name)
+    except Exception:
+        sys.exit(f"{name} is not an IANA time zone name. Pass the site's `tz` from its JSON, e.g. America/Los_Angeles.")
 
 
 def zone_name(tz):
@@ -410,7 +396,7 @@ def cmd_stations(a):
 
 def cmd_predict(a):
     doc = station(a.station)
-    tz = zone_of(doc, a.tz)
+    tz = zone_of(a.tz)
     start, end = local_day(a.date, tz)
     ex = extremes(doc, start - timedelta(days=1), end + timedelta(days=1))
     pts = day_extremes(ex, a.date, tz)
@@ -425,7 +411,7 @@ def cmd_predict(a):
 
 def cmd_range(a):
     doc = station(a.station)
-    tz = zone_of(doc, a.tz)
+    tz = zone_of(a.tz)
     start = local_day(date(a.year, 1, 1), tz)[0]
     end = local_day(date(a.year, 12, 31), tz)[1]
     ex = extremes(doc, start - timedelta(days=1), end + timedelta(days=1))
@@ -452,7 +438,7 @@ def cmd_range(a):
 
 
 def _moment(a, doc):
-    tz = zone_of(doc, a.tz)
+    tz = zone_of(a.tz)
     return tz, a.time.replace(tzinfo=tz).astimezone(timezone.utc)
 
 
@@ -479,7 +465,7 @@ def cmd_normalize(a):
 
 def cmd_project(a):
     doc = station(a.station)
-    tz = zone_of(doc, a.tz)
+    tz = zone_of(a.tz)
     start, end = local_day(a.date, tz)
     ex = [e for e in extremes(doc, start - timedelta(hours=1), end + timedelta(hours=1)) if _round(e[0], tz).date() == a.date]
     header(doc, f"{a.date}  a feature {a.datum_depth:.1f} m below MLLW datum", tz)
@@ -647,7 +633,7 @@ def main():
 
     def zoned(sp):
         sp.add_argument("station")
-        sp.add_argument("--tz", help="IANA zone for the times; default is the station's own zone")
+        sp.add_argument("--tz", required=True, metavar="IANA_ZONE", help="the site's time zone, the `tz` in its JSON")
 
     s = sub.add_parser("stations", help="find tide stations near a site")
     s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True)

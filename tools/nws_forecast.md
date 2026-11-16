@@ -22,12 +22,12 @@ The wind source for US sites, and the go / no go call on it. National Weather Se
 Standard library only.
 
 ```sh
-python3 tools/nws_forecast.py at --near <lat> <lon> --time "2026-07-12 09:30" --bad WSW-W --short SW,WNW-NW,S    # planning: the call at the entry or exit time
-python3 tools/nws_forecast.py forecast --near <lat> <lon> --date 2026-07-12 --bad WSW-W --short SW,WNW-NW,S      # planning: the call for every hour of the day
-python3 tools/nws_forecast.py forecast --near <lat> <lon> --date 2026-07-12                              # conditions alone, no call
+python3 tools/nws_forecast.py at --near <lat> <lon> --time "2026-07-12 09:30" --tz <IANA_ZONE> --bad WSW-W --short SW,WNW-NW,S    # planning: the call at the entry or exit time
+python3 tools/nws_forecast.py forecast --near <lat> <lon> --date 2026-07-12 --tz <IANA_ZONE> --bad WSW-W --short SW,WNW-NW,S      # planning: the call for every hour of the day
+python3 tools/nws_forecast.py forecast --near <lat> <lon> --date 2026-07-12 --tz <IANA_ZONE>                              # conditions alone, no call
 ```
 
-Give it the entry point's coordinate. Both commands print the gridpoint, the site's time zone and the forecast's last update, then wind speed, direction, gust, wave height, air temperature, chance of rain and sky, with the call added whenever `--bad` or `--short` is given. Times are local to the site, in the zone NWS assigns the gridpoint. Speeds are m/s; direction is degrees true, the direction the wind comes from. NWS holds each value constant over a span of one or more hours, so `at` reports the span containing the moment asked for. A malformed sector stops the run before any request.
+Give it the entry point's coordinate. Both commands print the gridpoint, the site's time zone and the forecast's last update, then wind speed, direction, gust, wave height, air temperature, chance of rain and sky, with the call added whenever `--bad` or `--short` is given. `--tz` is required: the site's own IANA zone, the `tz` in its JSON, and every time is read and printed in it. Speeds are m/s; direction is degrees true, the direction the wind comes from. NWS holds each value constant over a span of one or more hours, so `at` reports the span containing the moment asked for. A malformed sector stops the run before any request.
 
 ### Worked examples
 

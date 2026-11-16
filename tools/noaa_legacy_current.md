@@ -9,7 +9,8 @@ Predictions for the NOAA current reference stations retired when NOAA re-surveye
 - **Reference stations only.** It carries each reference station's own constants. A legacy subordinate station has no constants of its own; its slack is the reference's slack plus the correction, which the site file records.
 - **Expired references.** A few reference stations had already expired from the 2018 listing that supplies the IDs, along with every subordinate station that depended on them. Their constants are still in the 2010 harmonics, and the tool carries their IDs itself: The Narrows, north end (midstream) (`PCT1766`), superseded by PUG1524.
 - **Archived constants.** The constants are the 2010 edition of NOAA's published harmonics, the edition NOAA's own tables used until the re-survey. `selftest` checks the tool against slack times NOAA printed in its 2013 tables, the Tidal Current Tables for the Pacific Coast of North America and Asia (<https://tidesandcurrents.noaa.gov/tidetables/2013/pcct2013book.pdf>, one of the yearly books on NOAA's historic tables page), with one day per station typed in from its daily pages; run it after any change to the data, and add a station's printed slacks there whenever a reference is added.
-- **Every time it prints is at the station, un-offset,** in local clock time (`--tz`, default from `tool-config.json`), daylight saving included. NOAA's printed tables give local standard time.
+- **Every time it prints is at the station, un-offset.** The site file's legacy correction is applied to it.
+- **Times.** `--tz` is required on every command that prints a time: the site's own IANA zone, the `tz` in its JSON. Every time prints in that zone, named in the header, daylight time included. NOAA's printed tables give local standard time.
 - **Units.** Speed in m/s, flood positive, ebb negative, against the station's own flood and ebb directions, which the header prints.
 
 ## `tools/noaa_legacy_current.py`
@@ -17,10 +18,10 @@ Predictions for the NOAA current reference stations retired when NOAA re-surveye
 Standard library only.
 
 ```sh
-python3 tools/noaa_legacy_current.py stations --near <lat> <lon>          # legacy reference stations near a site
-python3 tools/noaa_legacy_current.py predict PCT1341 --date 2026-07-12    # slack, max flood, max ebb
-python3 tools/noaa_legacy_current.py window PCT1341 --date 2026-07-12     # diveable windows
-python3 tools/noaa_legacy_current.py selftest                             # check against NOAA's printed 2013 tables
+python3 tools/noaa_legacy_current.py stations --near <lat> <lon>                         # legacy reference stations near a site
+python3 tools/noaa_legacy_current.py predict PCT1341 --date 2026-07-12 --tz <IANA_ZONE>  # slack, max flood, max ebb
+python3 tools/noaa_legacy_current.py window PCT1341 --date 2026-07-12 --tz <IANA_ZONE>   # diveable windows
+python3 tools/noaa_legacy_current.py selftest                                            # check against NOAA's printed 2013 tables
 ```
 
 The first run downloads two files into `tools/db/` and reads them locally after that: the 2010 harmonics (`harmonics-dwf-20100529-free.tcd`, about 1.7 MB) from Debian's package archive, and the 2018 harmonics listing that maps each legacy station's name to its NOAA ID, kept as `noaa_legacy_current_index.json`. Deleting either fetches it again. `window` reports every span under `--max-speed`, which defaults to `noaa_legacy_current.max_speed_ms` in `tool-config.json` (0.25 m/s).
