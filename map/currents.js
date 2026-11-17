@@ -1,4 +1,4 @@
-// Tidal current overlay for map.html: the ENPAC15 ADCIRC field, reconstructed in the browser
+// Tidal current overlay for map.html: an ADCIRC tidal database's field, reconstructed in the browser
 // for any moment from the harmonic constants that `tools/adcirc_current.py export-map` writes
 // to map/currents/<name>.js. The astronomy below is a line-for-line port of that tool's
 // mean_longitudes, _base_nodal, nodal and reconstruct, and each overlay file carries values the

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Spatial tidal currents from the ENPAC15 ADCIRC tidal database.
+"""Spatial tidal currents from the ADCIRC tidal databases: ENPAC15 (Eastern North Pacific)
+and EC2015 (Western North Atlantic, Gulf of Mexico and Caribbean Sea).
 
   adcirc_current.py extract --near LAT LON                           print a point's extract, once
   adcirc_current.py predict --file F [--date D] [--position P]        slacks and peaks
@@ -15,6 +16,7 @@ import json
 import math
 import os
 import sys
+import urllib.error
 import urllib.request
 from datetime import date, datetime, timezone, timedelta
 from zoneinfo import ZoneInfo
@@ -22,18 +24,66 @@ from zoneinfo import ZoneInfo
 HERE = os.path.dirname(os.path.abspath(__file__))
 WORKSPACE = os.path.dirname(HERE)
 DB = os.path.join(HERE, "db")
-MESH_GZ = os.path.join(DB, "wc2015_v1a_chk.grd.gz")
-VEL_GZ = os.path.join(DB, "wc2015-v1a_1200tau1dt1VDatum_fort.54.gz")
-
-# The ADCIRC tidal databases are distributed as static tarballs (no query API). The full
-# ENPAC15 archive (elevation + velocity) lives on Dropbox, linked from
-# https://adcirc.org/products/adcirc-tidal-databases/ . We only need the mesh and the
-# velocity harmonics (fort.54); the 215 MB elevation file (fort.53) is skipped.
-DB_TAR_URL = "https://www.dropbox.com/s/yeswh43qhw982ut/ENPAC15_tidaldatabase.tar?dl=1"
-TAR_MESH = "ENPAC15_tidaldatabase/wc2015_v1a_chk.grd.gz"
-TAR_VEL = "ENPAC15_tidaldatabase/wc2015-v1a_1200tau1dt1VDatum_fort.54.gz"
-
 UTC = timezone.utc
+
+# The ADCIRC tidal databases are distributed as static tarballs (no query API), linked from
+# https://adcirc.org/products/adcirc-tidal-databases/ . Only the mesh and the velocity
+# harmonics (fort.54) are kept; the elevation file (fort.53) is skipped.
+#
+# epoch: the start of the ADCIRC run the database comes from. The nodal factors and
+# equilibrium arguments in its fort.54 header are referenced to this instant; we calibrate
+# our astronomy's phase constants against those header values, which pins our convention to
+# ADCIRC's own regardless of the ±90°/180° species offsets.
+#   ENPAC15, run wc2015_v1a: fort.15 REFTIME 0.0, run id "410day_start_11162004".
+#   EC2015, run ec2012_v3d_otis3: REFTIM 0.0, run id "410day_start111791" (RunNotes.txt:
+#   "nodal factors set for 410-day run starting on 11/17/1991").
+# Both runs are 410 days long. ADCIRC sets the header's nodal factors f, and the nodal phase u
+# inside its equilibrium arguments, at the middle of the run: f in both headers matches our
+# series at epoch + 205 days to 0.002 (selftest), against 0.06 to 0.12 at the epoch itself.
+# The equilibrium arguments' astronomical part V0 is at the epoch.
+# domain: the mesh's own extent (S, W, N, E), which picks the database for a coordinate.
+DATABASES = {
+    "ENPAC15": {
+        "key": "enpac15_constituents",
+        "region": "Eastern North Pacific",
+        "url": "https://www.dropbox.com/s/yeswh43qhw982ut/ENPAC15_tidaldatabase.tar?dl=1",
+        "size": "~700 MB",
+        "tar_mesh": "ENPAC15_tidaldatabase/wc2015_v1a_chk.grd.gz",
+        "tar_vel": "ENPAC15_tidaldatabase/wc2015-v1a_1200tau1dt1VDatum_fort.54.gz",
+        "mesh": os.path.join(DB, "wc2015_v1a_chk.grd.gz"),
+        "vel": os.path.join(DB, "wc2015-v1a_1200tau1dt1VDatum_fort.54.gz"),
+        "epoch": datetime(2004, 11, 16, 0, 0, tzinfo=UTC),
+        "domain": (19.57, -187.59, 61.50, -109.56),
+    },
+    "EC2015": {
+        "key": "ec2015_constituents",
+        "region": "Western North Atlantic, Gulf of Mexico and Caribbean Sea",
+        "url": "https://www.dropbox.com/s/muitrh9i4jlfqy2/ec2015_tidaldb.tar?dl=1",
+        "size": "~2.6 GB",
+        "tar_mesh": "ec2015_tidaldb/ec2012_v3d_chk.grd.gz",
+        "tar_vel": "ec2015_tidaldb/ec2012_v3d_otis3_fort.54.gz",
+        "mesh": os.path.join(DB, "ec2012_v3d_chk.grd.gz"),
+        "vel": os.path.join(DB, "ec2012_v3d_otis3_fort.54.gz"),
+        "epoch": datetime(1991, 11, 17, 0, 0, tzinfo=UTC),
+        "domain": (5.72, -97.86, 45.87, -53.81),
+    },
+}
+
+
+def in_domain(name, lat, lon):
+    S, W, N, E = DATABASES[name]["domain"]
+    return S <= lat <= N and W <= lon <= E
+
+
+def doc_db(doc, src="the extract"):
+    """(database name, constituents) of a site JSON's extract; exits when it holds none."""
+    found = [(n, doc[d["key"]]) for n, d in DATABASES.items() if d["key"] in doc]
+    if not found:
+        keys = " or ".join(d["key"] for d in DATABASES.values())
+        sys.exit(f"No ADCIRC extract in {src} ({keys}): it holds the site's lat/lon/tz only.")
+    if len(found) > 1:
+        sys.exit(f"{src} holds extracts from more than one database; keep only one.")
+    return found[0]
 
 
 def _cfg(key, default):
@@ -52,11 +102,6 @@ def resolve_tz(name):
     except Exception:
         sys.exit(f"{name} is not an IANA time zone name. Pass the site's `tz` from its JSON, e.g. America/Los_Angeles.")
 
-# ADCIRC run wc2015_v1a: fort.15 REFTIME 0.0, run id "410day_start_11162004". The nodal
-# factors and equilibrium arguments in the fort.53/54 headers are therefore referenced to
-# this instant. We calibrate our astronomy's phase constants against those header values,
-# which pins our convention to ADCIRC's own regardless of the ±90°/180° species offsets.
-REF_EPOCH = datetime(2004, 11, 16, 0, 0, tzinfo=UTC)
 
 DEG = math.pi / 180.0
 
@@ -177,10 +222,17 @@ def nodal(key, N, header_f):
     return table[key]
 
 
-def calibrate(cons):
-    """Given the constituent list from an extract (each with name, v0u_deg, f_ref), return
-    {name: C_rad}. C absorbs ADCIRC's species phase offsets and any convention constant."""
-    s, h, p, N, pp, T = mean_longitudes(REF_EPOCH)
+def nodal_epoch(db):
+    """The instant a database's nodal factors and nodal phases are set for: mid-run."""
+    return DATABASES[db]["epoch"] + timedelta(days=205)
+
+
+def calibrate(cons, db):
+    """Given the constituent list from an extract (each with name, v0u_deg, f_ref) and the
+    database it came from, return {name: C_rad}. C absorbs ADCIRC's species phase offsets and
+    any convention constant. V0 is taken at the run's epoch and u at mid-run, as ADCIRC does."""
+    s, h, p, _, pp, T = mean_longitudes(DATABASES[db]["epoch"])
+    N = mean_longitudes(nodal_epoch(db))[3]
     C = {}
     for c in cons:
         name = c["name"]
@@ -210,38 +262,50 @@ def reconstruct(cons, C, dt, comp):
 # Mesh + fort.54 extraction
 # --------------------------------------------------------------------------------------
 
-def _need_db():
-    if os.path.exists(MESH_GZ) and os.path.exists(VEL_GZ):
+def _need_db(db):
+    d = DATABASES[db]
+    if os.path.exists(d["mesh"]) and os.path.exists(d["vel"]):
         return
     os.makedirs(DB, exist_ok=True)
-    print("ENPAC15 database not present in tools/db/.")
-    print(f"Downloading ~700 MB from the ADCIRC tidal database (one time)...", flush=True)
+    log = lambda m: print(m, file=sys.stderr, flush=True)
+    log(f"{db} database not present in tools/db/.")
+    log(f"Downloading {d['size']} from the ADCIRC tidal database (one time)...")
     import tarfile
-    req = urllib.request.Request(DB_TAR_URL, headers={"User-Agent": "dive-planning"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        # stream the tar; extract only the two members we need, never storing the 700 MB
-        with tarfile.open(fileobj=r, mode="r|") as tar:
-            targets = {TAR_MESH: MESH_GZ, TAR_VEL: VEL_GZ}
-            for m in tar:
-                if m.name in targets:
-                    print(f"  extracting {m.name} ({m.size / 1e6:.0f} MB)...", flush=True)
-                    src = tar.extractfile(m)
-                    with open(targets[m.name], "wb") as out:
-                        while True:
-                            chunk = src.read(1 << 20)
-                            if not chunk:
-                                break
-                            out.write(chunk)
-                    targets.pop(m.name)
-                    if not targets:
-                        break
-    print("  done.", flush=True)
+    req = urllib.request.Request(d["url"], headers={"User-Agent": "dive-planning"})
+    targets = {d["tar_mesh"]: d["mesh"], d["tar_vel"]: d["vel"]}
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            # stream the tar; extract only the two members we need, never storing the archive
+            with tarfile.open(fileobj=r, mode="r|") as tar:
+                for m in tar:
+                    if m.name in targets:
+                        log(f"  extracting {m.name} ({m.size / 1e6:.0f} MB)...")
+                        src, part = tar.extractfile(m), targets[m.name] + ".part"
+                        with open(part, "wb") as out:
+                            while True:
+                                chunk = src.read(1 << 20)
+                                if not chunk:
+                                    break
+                                out.write(chunk)
+                        if os.path.getsize(part) != m.size:
+                            raise OSError(f"{m.name} arrived short")
+                        os.replace(part, targets.pop(m.name))
+                        if not targets:
+                            break
+    except (OSError, tarfile.TarError, urllib.error.URLError) as e:
+        for path in targets.values():
+            if os.path.exists(path + ".part"):
+                os.remove(path + ".part")
+        sys.exit(f"{db} download failed ({getattr(e, 'reason', e)}).\n  {d['url']}")
+    if targets:
+        sys.exit(f"{db} archive is missing {', '.join(targets)}.\n  {d['url']}")
+    log("  done.")
 
 
-def read_mesh():
+def read_mesh(db):
     """Return (lon, lat, elements). lon/lat indexed by node number (1-based, index 0 unused).
     elements are (n1, n2, n3)."""
-    with gzip.open(MESH_GZ, "rt") as fh:
+    with gzip.open(DATABASES[db]["mesh"], "rt") as fh:
         fh.readline()  # title
         ne, np_ = (int(x) for x in fh.readline().split())
         lon = [0.0] * (np_ + 1)
@@ -292,9 +356,9 @@ def locate(lon, lat, elems, qlon, qlat):
     return [bn, bn, bn], [1 / 3, 1 / 3, 1 / 3], False, dist_km
 
 
-def read_vel_header():
+def read_vel_header(db):
     """Return list of (name, freq_rad_s, f_ref, v0u_deg) from the fort.54 header, in order."""
-    with gzip.open(VEL_GZ, "rt") as fh:
+    with gzip.open(DATABASES[db]["vel"], "rt") as fh:
         nfreq = int(fh.readline())
         out = []
         for _ in range(nfreq):
@@ -305,13 +369,13 @@ def read_vel_header():
     return out
 
 
-def read_vel_nodes(want):
+def read_vel_nodes(db, want):
     """Stream fort.54; return {node: [(u_amp, u_phase, v_amp, v_phase), ...37...]} for the
     requested node numbers. Node records are in increasing order, so we stop at the last."""
     want = set(want)
     stop = max(want)
     found = {}
-    with gzip.open(VEL_GZ, "rt") as fh:
+    with gzip.open(DATABASES[db]["vel"], "rt") as fh:
         nfreq = int(fh.readline())
         for _ in range(nfreq):
             fh.readline()
@@ -348,25 +412,34 @@ def interp_polar(amp1, ph1, amp2, ph2, amp3, ph3, w):
 # --------------------------------------------------------------------------------------
 
 def cmd_extract(a):
-    """Print the constituents at a point as {"enpac15_constituents": [...]} on stdout,
-    for the caller to attach to the site JSON; progress goes to stderr."""
-    _need_db()
+    """Print the constituents at a point as {"<db>_constituents": [...]} on stdout, for the
+    caller to attach to the site JSON; progress goes to stderr. The database is the one whose
+    domain holds the point."""
     qlat, qlon = a.near
     log = lambda m: print(m, file=sys.stderr, flush=True)
-    log(f"Reading mesh ({os.path.basename(MESH_GZ)})...")
-    lon, lat, elems = read_mesh()
+    dbs = [n for n in DATABASES if in_domain(n, qlat, qlon)]
+    if not dbs:
+        sys.exit(f"{qlat}, {qlon} is outside every ADCIRC database this tool carries: "
+                 + "; ".join(f"{n} covers {d['region']}" for n, d in DATABASES.items()) + ".")
+    db = dbs[0]
+    _need_db(db)
+    log(f"{db}: reading mesh ({os.path.basename(DATABASES[db]['mesh'])})...")
+    lon, lat, elems = read_mesh(db)
     log(f"  {len(elems)} elements, locating {qlat:.5f}, {qlon:.5f}...")
     nodes, w, inside, dist_km = locate(lon, lat, elems, qlon, qlat)
     if not inside:
-        sys.exit(f"Point is outside the wet mesh, {dist_km:.2f} km past the boundary.\n"
+        sys.exit(f"Point is outside the {db} wet mesh, {dist_km:.2f} km past the boundary.\n"
                  f"  Walk the coordinate onto the covered side (toward the dive area) and "
                  f"re-run extract; a boundary-snapped point reads as near-still water, not "
                  f"the site's real current, so this tool refuses it rather than predicting "
                  f"off it. Trust a NOAA station instead if the site never lands inside the mesh.")
-    log(f"  in element with nodes {nodes}, weights {w[0]:.3f}/{w[1]:.3f}/{w[2]:.3f}")
-    header = read_vel_header()
-    log("Streaming fort.54 for the 3 nodes (one pass, may take a minute)...")
-    vals = read_vel_nodes(nodes)
+    side_km = max(math.hypot((lon[nodes[i]] - lon[nodes[i - 1]]) * math.cos(math.radians(qlat)),
+                             lat[nodes[i]] - lat[nodes[i - 1]]) * 111.0 for i in range(3))
+    log(f"  in element with nodes {nodes}, weights {w[0]:.3f}/{w[1]:.3f}/{w[2]:.3f}, "
+        f"longest side {side_km * 1000:.0f} m")
+    header = read_vel_header(db)
+    log("Streaming fort.54 for the 3 nodes (one pass, a minute or several)...")
+    vals = read_vel_nodes(db, nodes)
     cons = []
     for k, (name, freq, fnf, eqarg) in enumerate(header):
         n0, n1, n2 = vals[nodes[0]][k], vals[nodes[1]][k], vals[nodes[2]][k]
@@ -376,7 +449,7 @@ def cmd_extract(a):
             "name": name, "f_ref": fnf, "v0u_deg": eqarg,
             "u_amp": u_amp, "u_phase": u_ph, "v_amp": v_amp, "v_phase": v_ph,
         })
-    doc = {"enpac15_constituents": cons}
+    doc = {DATABASES[db]["key"]: cons}
     axis, _ = principal_axis(doc, resolve_tz("UTC"))
     log(f"  {len(cons)} constituents. Principal current axis {axis:.0f}°/{(axis + 180) % 360:.0f}° T.")
     log("  Validate against the nearest NOAA station before trusting timing (see selftest).")
@@ -390,13 +463,19 @@ def cmd_export_map(a):
     each triangle, which is exactly what `extract` does with the constants themselves."""
     import array
     import base64
-    _need_db()
     boxes = a.bbox
     S, W = min(b[0] for b in boxes), min(b[1] for b in boxes)
     N, E = max(b[2] for b in boxes), max(b[3] for b in boxes)
     log = lambda m: print(m, file=sys.stderr, flush=True)
-    log(f"Reading mesh ({os.path.basename(MESH_GZ)})...")
-    lon, lat, elems = read_mesh()
+    dbs = [n for n in DATABASES
+           if all(in_domain(n, (bs + bn) / 2, (bw + be) / 2) for bs, bw, bn, be in boxes)]
+    if not dbs:
+        sys.exit("The boxes do not all sit inside one ADCIRC database: "
+                 + "; ".join(f"{n} covers {d['region']}" for n, d in DATABASES.items()) + ".")
+    db = dbs[0]
+    _need_db(db)
+    log(f"{db}: reading mesh ({os.path.basename(DATABASES[db]['mesh'])})...")
+    lon, lat, elems = read_mesh(db)
     # several boxes let the coverage follow a coastline a single rectangle would overshoot
     inside = lambda i: any(bs <= lat[i] <= bn and bw <= lon[i] <= be for bs, bw, bn, be in boxes)
     # every element with a node in the box, so the field runs right up to the box's edge
@@ -408,8 +487,8 @@ def cmd_export_map(a):
         sys.exit(f"{len(nodes)} nodes: too many for the 16-bit triangle index; split the box.")
     index = {node: k for k, node in enumerate(nodes)}
     log(f"  {len(nodes)} nodes, {len(tris)} elements. Streaming fort.54 (a few minutes)...")
-    header = read_vel_header()
-    vals = read_vel_nodes(nodes)
+    header = read_vel_header(db)
+    vals = read_vel_nodes(db, nodes)
     missing = [n for n in nodes if n not in vals]
     if missing:
         sys.exit(f"fort.54 is missing {len(missing)} of the box's nodes (first: {missing[0]}).")
@@ -449,7 +528,7 @@ def cmd_export_map(a):
         for comps, c in zip(per_cons, cons_meta):
             coeff.extend(int(round(x / c["scale"])) for x in comps[j])
     # the browser's astronomy constants come from the same calibration as `at`
-    C = calibrate([{"name": c["name"], "f_ref": c["fRef"], "v0u_deg": c["v0u"]} for c in cons_meta])
+    C = calibrate([{"name": c["name"], "f_ref": c["fRef"], "v0u_deg": c["v0u"]} for c in cons_meta], db)
     for c in cons_meta:
         (nT, ns, nh, np_, npp), key = CONSTITUENTS[c["name"]]
         c.update({"doodson": [nT, ns, nh, np_, npp], "nodal": key, "C": C[c["name"]]})
@@ -479,13 +558,13 @@ def cmd_export_map(a):
     for j in probe:
         qc = node_cons(j)
         Cq = calibrate([{"name": c["name"], "f_ref": c["f_ref"], "v0u_deg": m["v0u"]}
-                        for c, m in zip(qc, cons_meta)])
+                        for c, m in zip(qc, cons_meta)], db)
         # all 37 constituents, unquantized, at the same node: what truncation costs
         allc = [{"name": header[k][0], "f_ref": header[k][2], "v0u_deg": header[k][3],
                  "u_amp": vals[nodes[j]][k][0], "u_phase": vals[nodes[j]][k][1],
                  "v_amp": vals[nodes[j]][k][2], "v_phase": vals[nodes[j]][k][3]}
                 for k in range(len(header))]
-        Call = calibrate(allc)
+        Call = calibrate(allc, db)
         for t in moments:
             u = reconstruct(qc, Cq, t, "u")
             v = reconstruct(qc, Cq, t, "v")
@@ -511,7 +590,7 @@ def cmd_export_map(a):
         "label": a.label,
         "bbox": [S, W, N, E],
         "boxes": boxes,
-        "source": "ENPAC15 ADCIRC tidal database, depth-averaged",
+        "source": f"{db} ADCIRC tidal database, depth-averaged",
         "maxSpeedMs": _cfg("max_speed_ms", 0.25),
         "nodeCount": len(nodes),
         "triangleCount": len(tris),
@@ -525,7 +604,7 @@ def cmd_export_map(a):
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w") as fh:
         fh.write("// Generated by tools/adcirc_current.py export-map; regenerate rather than edit.\n")
-        fh.write(f"// {a.label}: {len(nodes)} ENPAC15 mesh nodes, {len(tris)} elements, "
+        fh.write(f"// {a.label}: {len(nodes)} {db} mesh nodes, {len(tris)} elements, "
                  f"{len(keep)} constituents. Times are reconstructed in the browser.\n")
         fh.write("window.MAP_CURRENTS = window.MAP_CURRENTS || {};\n")
         fh.write(f"window.MAP_CURRENTS[{json.dumps(a.name)}] = ")
@@ -571,14 +650,14 @@ def load_doc(a):
             sys.exit(f"Could not read --file {a.file}: {e}")
         except json.JSONDecodeError as e:
             sys.exit(f"Could not parse JSON in {a.file}: {e}")
-    if "enpac15_constituents" not in doc:
-        sys.exit(f"No ENPAC15 extract in {src}: it holds the site's lat/lon/tz only.")
+    doc_db(doc, src)
     return doc
 
 
 def series(doc, day, tz):
     """(local_datetime, u_east, v_north) every 6 minutes across the local day, plus a margin."""
-    cons, C = doc["enpac15_constituents"], calibrate(doc["enpac15_constituents"])
+    db, cons = doc_db(doc)
+    C = calibrate(cons, db)
     start = datetime(day.year, day.month, day.day, tzinfo=tz)
     out = []
     for i in range(-20, 240 + 20):  # -2h .. +26h at 6-min steps
@@ -637,7 +716,8 @@ def reconstructors(doc, bearing):
     """(signed_fn, mag_fn): callables from a local datetime to the along-axis signed speed and
     to the total speed magnitude (both un-scaled by depth), evaluating the full reconstruction
     at any instant. These let slack and window boundaries be root-found off the 6-minute grid."""
-    cons, C = doc["enpac15_constituents"], calibrate(doc["enpac15_constituents"])
+    db, cons = doc_db(doc)
+    C = calibrate(cons, db)
     ax_e, ax_n = math.sin(bearing * DEG), math.cos(bearing * DEG)
 
     def uv(t_local):
@@ -727,7 +807,7 @@ def cmd_predict(a):
     sig = _signed(samp, bearing)
     signed_fn, _ = reconstructors(doc, bearing)
     axis_a, axis_b = bearing % 360, (bearing + 180) % 360
-    print(f"{doc['lat']:.4f}, {doc['lon']:.4f}  {a.date}  ENPAC15 tidal current")
+    print(f"{doc['lat']:.4f}, {doc['lon']:.4f}  {a.date}  {doc_db(doc)[0]} tidal current")
     print(f"  principal axis {axis_a:.0f}° T / {axis_b:.0f}° T "
           f"(which is flood is site-specific; confirm against the tide or a NOAA station)")
     print(f"  {note}")
@@ -751,7 +831,7 @@ def cmd_window(a):
     sig = _signed(samp, bearing)
     _, mag_fn = reconstructors(doc, bearing)
     lim = a.max_speed
-    print(f"{doc['lat']:.4f}, {doc['lon']:.4f}  {a.date}  ENPAC15 tidal current")
+    print(f"{doc['lat']:.4f}, {doc['lon']:.4f}  {a.date}  {doc_db(doc)[0]} tidal current")
     print(f"  windows with speed <= {lim:.2f} m/s (principal axis {bearing:.0f}° T)")
     print(f"  {note}\n")
     # runs of below-threshold samples on the full grid, then root-find each edge (where the
@@ -796,47 +876,56 @@ def cmd_at(a):
     tz = resolve_tz(a.tz)
     factor, note = position_factor(a.position)
     t_local = datetime.strptime(a.time, "%Y-%m-%d %H:%M").replace(tzinfo=tz)
-    cons, C = doc["enpac15_constituents"], calibrate(doc["enpac15_constituents"])
+    db, cons = doc_db(doc)
+    C = calibrate(cons, db)
     t_utc = t_local.astimezone(UTC)
     u = reconstruct(cons, C, t_utc, "u") * factor
     v = reconstruct(cons, C, t_utc, "v") * factor
     spd = math.hypot(u, v)
     toward = math.degrees(math.atan2(u, v)) % 360
-    print(f"{doc['lat']:.4f}, {doc['lon']:.4f}  {t_local:%Y-%m-%d %H:%M %Z}")
+    print(f"{doc['lat']:.4f}, {doc['lon']:.4f}  {t_local:%Y-%m-%d %H:%M %Z}  {db} tidal current")
     print(f"  {note}")
     print(f"  speed {spd:.2f} m/s   toward {toward:.0f}° T   (east {u:+.2f}, north {v:+.2f})")
 
 
 def cmd_selftest(a):
-    """Validate the astronomy against the fort.54 header values at REF_EPOCH: the frequency
-    implied by each constituent's Doodson coefficients, and its nodal factor f."""
-    _need_db()
-    header = read_vel_header()
-    s, h, p, N, pp, T = mean_longitudes(REF_EPOCH)
-    rates = {"T": 15.0, "s": 0.54901653, "h": 0.04106864, "p": 0.00464183, "pp": 0.00000196}
-    print(f"Astronomy self-test at REF_EPOCH {REF_EPOCH:%Y-%m-%d %H:%M} UTC")
-    print("  constituent   freq(mine)   freq(hdr)   dω%     f(mine)  f(hdr)   df")
-    fmax = wmax = 0.0
-    for name, freq, fnf, eqarg in header:
-        (nT, ns, nh, np_, npp), key = CONSTITUENTS[name]
-        deg_hr = (nT * rates["T"] + ns * rates["s"] + nh * rates["h"]
-                  + np_ * rates["p"] + npp * rates["pp"])
-        mine = deg_hr * DEG / 3600.0  # rad/s
-        dw = 100 * (mine - freq) / freq if freq else 0.0
-        f, _ = nodal(key, N, fnf)
-        df = f - fnf
-        wmax = max(wmax, abs(dw))
-        if key not in ("fixed",):
-            fmax = max(fmax, abs(df))
-        print(f"  {name:<11} {mine:.6e} {freq:.6e} {dw:+6.2f}  {f:7.4f} {fnf:7.4f} {df:+.4f}")
-    print(f"\n  max |dω| = {wmax:.3f}%   max |df| (computed groups) = {fmax:.4f}")
-    # Frequencies are structural (wrong Doodson coefficients show here); they must be tight.
-    # Nodal f is a series approximation of ADCIRC's exact value; a few percent is expected and
-    # affects amplitude only, not slack timing.
-    if wmax < 0.1 and fmax < 0.07:
-        print("  PASS: frequencies match structurally; nodal factors within series tolerance.")
-    else:
-        print("  CHECK: a large frequency deviation means a wrong Doodson coefficient.")
+    """Validate the astronomy against each database's fort.54 header values at its epoch: the
+    frequency implied by each constituent's Doodson coefficients, and its nodal factor f."""
+    ok = True
+    for db in (a.db or list(DATABASES)):
+        _need_db(db)
+        epoch = nodal_epoch(db)
+        header = read_vel_header(db)
+        s, h, p, N, pp, T = mean_longitudes(epoch)
+        rates = {"T": 15.0, "s": 0.54901653, "h": 0.04106864, "p": 0.00464183, "pp": 0.00000196}
+        print(f"{db} astronomy self-test at mid-run, {epoch:%Y-%m-%d %H:%M} UTC")
+        print("  constituent   freq(mine)   freq(hdr)   dω%     f(mine)  f(hdr)   df")
+        fmax = wmax = 0.0
+        for name, freq, fnf, eqarg in header:
+            if name not in CONSTITUENTS:
+                sys.exit(f"  {db} carries {name}, a constituent this tool does not know.")
+            (nT, ns, nh, np_, npp), key = CONSTITUENTS[name]
+            deg_hr = (nT * rates["T"] + ns * rates["s"] + nh * rates["h"]
+                      + np_ * rates["p"] + npp * rates["pp"])
+            mine = deg_hr * DEG / 3600.0  # rad/s
+            dw = 100 * (mine - freq) / freq if freq else 0.0
+            f, _ = nodal(key, N, fnf)
+            df = f - fnf
+            wmax = max(wmax, abs(dw))
+            if key not in ("fixed",):
+                fmax = max(fmax, abs(df))
+            print(f"  {name:<11} {mine:.6e} {freq:.6e} {dw:+6.2f}  {f:7.4f} {fnf:7.4f} {df:+.4f}")
+        print(f"\n  max |dω| = {wmax:.3f}%   max |df| (computed groups) = {fmax:.4f}")
+        # Frequencies are structural (wrong Doodson coefficients show here); they must be tight.
+        # Nodal f is a series approximation of ADCIRC's exact value at mid-run; it agrees to a
+        # few thousandths, and a larger gap means the epoch or the mid-run convention is off.
+        if wmax < 0.1 and fmax < 0.01:
+            print("  PASS: frequencies match structurally; nodal factors within series tolerance.\n")
+        else:
+            ok = False
+            print("  CHECK: a large frequency deviation means a wrong Doodson coefficient.\n")
+    if not ok:
+        sys.exit(1)
 
 
 def main():
@@ -892,7 +981,9 @@ def main():
     s.add_argument("--out", help="output path (default map/currents/<name>.js)")
     s.set_defaults(fn=cmd_export_map)
 
-    s = sub.add_parser("selftest", help="validate astronomy against the ADCIRC header")
+    s = sub.add_parser("selftest", help="validate astronomy against each database's ADCIRC header")
+    s.add_argument("--db", choices=sorted(DATABASES), action="append",
+                   help="one database (repeatable); default every database")
     s.set_defaults(fn=cmd_selftest)
 
     a = p.parse_args()
