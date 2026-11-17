@@ -30,6 +30,8 @@
 
   "emodnet_depth": {},
 
+  "gebco_depth": {},
+
   "dcbd_depth": {},
 
   "shore_exposure": {
