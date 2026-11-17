@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Seabed depth at a coordinate from EMODnet Bathymetry, with a GEBCO fallback.
+"""Seabed depth at a coordinate from EMODnet Bathymetry.
 
-  emodnet_depth.py LAT LON            depth below LAT, EMODnet's survey-backed grid, GEBCO on no coverage
-  emodnet_depth.py LAT LON --gebco    skip straight to the global GEBCO grid
+  emodnet_depth.py LAT LON    depth below LAT, from EMODnet's survey-backed grid
 
 """
 import argparse
@@ -13,7 +12,6 @@ import urllib.parse
 import urllib.request
 
 EMODNET_URL = "https://rest.emodnet-bathymetry.eu/depth_sample"
-GEBCO_URL = "https://api.opentopodata.org/v1/gebco2020"
 
 
 def emodnet(lat, lon):
@@ -24,24 +22,22 @@ def emodnet(lat, lon):
         with urllib.request.urlopen(url, timeout=30) as r:
             if r.status == 204:
                 return None
-            return json.load(r)
+            body = r.read()
     except urllib.error.HTTPError as e:
         if e.code == 204:
             return None
-        raise RuntimeError(f"EMODnet request failed ({e.code} {e.reason})")
-    except urllib.error.URLError as e:
-        raise RuntimeError(f"EMODnet request failed ({e.reason})")
-
-
-def gebco(lat, lon):
-    """Return the GEBCO_2024 elevation (m, signed) at this point via OpenTopoData."""
-    url = GEBCO_URL + "?" + urllib.parse.urlencode({"locations": f"{lat},{lon}"})
-    with urllib.request.urlopen(url, timeout=30) as r:
-        d = json.load(r)
-    res = d["results"][0]
-    if res.get("elevation") is None:
-        raise RuntimeError("GEBCO returned no elevation for this point")
-    return res["elevation"]
+        sys.exit(f"EMODnet request failed ({e.code} {e.reason})\n  {url}")
+    except (urllib.error.URLError, TimeoutError, OSError) as e:
+        sys.exit(f"EMODnet request failed ({getattr(e, 'reason', e)})\n  {url}")
+    if not body.strip():
+        return None
+    try:
+        d = json.loads(body)
+    except ValueError:
+        sys.exit(f"EMODnet answered with something other than JSON\n  {url}")
+    if not isinstance(d, dict) or d.get("avg") is None:
+        return None
+    return d
 
 
 def print_emodnet(d):
@@ -66,40 +62,18 @@ def print_emodnet(d):
         print("  note: this point fell between grid nodes and was interpolated")
 
 
-def print_gebco(elev):
-    if elev >= 0:
-        print(f"  ABOVE WATER: +{elev:.1f} m (GEBCO_2024, ~450 m grid). Check the coordinate.")
-        return
-    print(f"  seabed {-elev:.1f} m below sea level (approx.)  [GEBCO_2024, ~450 m grid, global]")
-
-
 def main():
     p = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("lat", type=float)
     p.add_argument("lon", type=float)
-    p.add_argument("--gebco", action="store_true",
-                   help="skip EMODnet and use the coarser global GEBCO grid directly")
     a = p.parse_args()
 
     print(f"{a.lat}, {a.lon}")
-
-    if not a.gebco:
-        try:
-            d = emodnet(a.lat, a.lon)
-        except RuntimeError as e:
-            print(f"  EMODnet unavailable: {e}")
-            d = None
-        if d is not None:
-            print_emodnet(d)
-            return
-        print("  EMODnet: no coverage at this point, falling back to GEBCO")
-
-    try:
-        elev = gebco(a.lat, a.lon)
-    except (RuntimeError, urllib.error.URLError, KeyError, IndexError) as e:
-        sys.exit(f"  GEBCO request failed ({e}); no depth available for this point")
-    print_gebco(elev)
+    d = emodnet(a.lat, a.lon)
+    if d is None:
+        sys.exit("  EMODnet has no coverage at this point.")
+    print_emodnet(d)
 
 
 if __name__ == "__main__":
