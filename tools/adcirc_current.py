@@ -75,6 +75,11 @@ def in_domain(name, lat, lon):
     return S <= lat <= N and W <= lon <= E
 
 
+def point_key(db):
+    """The site JSON key recording where a database's extract was taken."""
+    return DATABASES[db]["key"].replace("_constituents", "_extract_point")
+
+
 def doc_db(doc, src="the extract"):
     """(database name, constituents) of a site JSON's extract; exits when it holds none."""
     found = [(n, doc[d["key"]]) for n, d in DATABASES.items() if d["key"] in doc]
@@ -356,6 +361,40 @@ def locate(lon, lat, elems, qlon, qlat):
     return [bn, bn, bn], [1 / 3, 1 / 3, 1 / 3], False, dist_km
 
 
+WALK_STEP_M = 5
+
+
+def walk_in(lon, lat, elems, qlon, qlat, step_m):
+    """The nearest point of the mesh to (qlon, qlat), on the edge of its wet area, stepped
+    step_m further in toward the centroid of the element it lies on (at most halfway there).
+    Returns (lat, lon) rounded to 5 decimals, about a metre."""
+    sc = math.cos(math.radians(qlat))
+    px, py = qlon * sc, qlat
+    for r in (0.05, 0.2, 1.0, 5.0):
+        cand = [n for n in elems
+                if any(abs(lat[i] - qlat) <= r and abs(lon[i] - qlon) <= r / sc for i in n)]
+        if cand:
+            break
+    best = None
+    for n in cand:
+        tri = [(lon[i] * sc, lat[i]) for i in n]
+        for k in range(3):
+            (ax, ay), (bx, by) = tri[k], tri[k - 1]
+            dx, dy = bx - ax, by - ay
+            L2 = dx * dx + dy * dy
+            t = 0.0 if L2 == 0 else max(0.0, min(1.0, ((px - ax) * dx + (py - ay) * dy) / L2))
+            cx, cy = ax + t * dx, ay + t * dy
+            d = math.hypot(cx - px, cy - py)
+            if best is None or d < best[0]:
+                best = (d, cx, cy, tri)
+    _, cx, cy, tri = best
+    gx, gy = sum(t[0] for t in tri) / 3, sum(t[1] for t in tri) / 3
+    L = math.hypot(gx - cx, gy - cy)
+    step = min(step_m / 111000.0, 0.5 * L)
+    wx, wy = cx + (gx - cx) * step / L, cy + (gy - cy) * step / L
+    return round(wy, 5), round(wx / sc, 5)
+
+
 def read_vel_header(db):
     """Return list of (name, freq_rad_s, f_ref, v0u_deg) from the fort.54 header, in order."""
     with gzip.open(DATABASES[db]["vel"], "rt") as fh:
@@ -412,7 +451,8 @@ def interp_polar(amp1, ph1, amp2, ph2, amp3, ph3, w):
 # --------------------------------------------------------------------------------------
 
 def cmd_extract(a):
-    """Print the constituents at a point as {"<db>_constituents": [...]} on stdout, for the
+    """Print the extract point and the constituents there as {"<db>_extract_point": {...},
+    "<db>_constituents": [...]} on stdout, for the
     caller to attach to the site JSON; progress goes to stderr. The database is the one whose
     domain holds the point."""
     qlat, qlon = a.near
@@ -427,12 +467,19 @@ def cmd_extract(a):
     lon, lat, elems = read_mesh(db)
     log(f"  {len(elems)} elements, locating {qlat:.5f}, {qlon:.5f}...")
     nodes, w, inside, dist_km = locate(lon, lat, elems, qlon, qlat)
+    site = a.site
+    if not inside and a.walk:
+        site = site or (qlat, qlon)
+        qlat, qlon = walk_in(lon, lat, elems, qlon, qlat, WALK_STEP_M)
+        log(f"  outside the wet mesh; walked to the nearest point inside it, "
+            f"{WALK_STEP_M} m in from its edge: {qlat:.5f}, {qlon:.5f}")
+        nodes, w, inside, dist_km = locate(lon, lat, elems, qlon, qlat)
     if not inside:
-        sys.exit(f"Point is outside the {db} wet mesh, {dist_km:.2f} km past the boundary.\n"
-                 f"  Walk the coordinate onto the covered side (toward the dive area) and "
-                 f"re-run extract; a boundary-snapped point reads as near-still water, not "
-                 f"the site's real current, so this tool refuses it rather than predicting "
-                 f"off it. Trust a NOAA station instead if the site never lands inside the mesh.")
+        sys.exit(f"Point is outside the {db} wet mesh, {dist_km:.2f} km from its nearest node.\n"
+                 f"  A boundary-snapped point reads as near-still water, not the site's real "
+                 f"current, so this tool refuses it rather than predicting off it. The region's "
+                 f"site conventions say where the extract is taken instead; --walk takes it at "
+                 f"the nearest point inside the mesh.")
     side_km = max(math.hypot((lon[nodes[i]] - lon[nodes[i - 1]]) * math.cos(math.radians(qlat)),
                              lat[nodes[i]] - lat[nodes[i - 1]]) * 111.0 for i in range(3))
     log(f"  in element with nodes {nodes}, weights {w[0]:.3f}/{w[1]:.3f}/{w[2]:.3f}, "
@@ -449,7 +496,10 @@ def cmd_extract(a):
             "name": name, "f_ref": fnf, "v0u_deg": eqarg,
             "u_amp": u_amp, "u_phase": u_ph, "v_amp": v_amp, "v_phase": v_ph,
         })
-    doc = {DATABASES[db]["key"]: cons}
+    slat, slon = site if site else (qlat, qlon)
+    km = math.hypot((qlon - slon) * math.cos(math.radians(slat)), qlat - slat) * 111.0
+    doc = {point_key(db): {"lat": qlat, "lon": qlon, "distance_from_site_km": round(km, 2)},
+           DATABASES[db]["key"]: cons}
     axis, _ = principal_axis(doc, resolve_tz("UTC"))
     log(f"  {len(cons)} constituents. Principal current axis {axis:.0f}°/{(axis + 180) % 360:.0f}° T.")
     log("  Validate against the nearest NOAA station before trusting timing (see selftest).")
@@ -936,6 +986,13 @@ def main():
     s = sub.add_parser("extract", help="print a point's constituents as JSON, to attach to the site JSON")
     s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True,
                    help="the extraction point: the dive area, or a point walked into the mesh")
+    s.add_argument("--site", nargs=2, type=float, metavar=("LAT", "LON"),
+                   help="the site's own coordinate, when the extraction point is elsewhere "
+                        "(default: the --near point)")
+    s.add_argument("--walk", action="store_true",
+                   help="a --near point outside the wet mesh is walked to the nearest point "
+                        f"inside it, {WALK_STEP_M} m in from its edge, and recorded as the extract "
+                        "point, with --near as the site")
     s.set_defaults(fn=cmd_extract)
 
     position_help = ("where in the water column: bottom, mid, or surface (default: the "

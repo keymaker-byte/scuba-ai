@@ -2,6 +2,11 @@
   "lat": 47.588105,
   "lon": -122.376548,
   "tz": "America/Los_Angeles",
+  "enpac15_extract_point": {
+    "lat": 47.588105,
+    "lon": -122.376548,
+    "distance_from_site_km": 0.0
+  },
   "enpac15_constituents": [
     {
       "name": "M(2)",
