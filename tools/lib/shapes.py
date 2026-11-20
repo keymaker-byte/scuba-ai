@@ -125,3 +125,35 @@ def inside(ring, x, y):
 def contains(rings, lon, lat):
     """Point in polygon, holes included: inside an odd number of the polygon's rings."""
     return sum(inside(r, lon, lat) for r in rings) % 2 == 1
+
+
+def crossings(name, S, W, N, E, lats):
+    """For each latitude, the sorted longitudes between W and E where it crosses the dataset's
+    outlines inside the box: a point lies inside the shapes where an odd number of crossings sit
+    west of it. The land polygons come cut into pieces whose cuts run through land, and a cut
+    crosses twice at one longitude, which leaves the count right."""
+    lat0, lon0 = (S + N) / 2, (W + E) / 2
+    km = math.hypot((N - S) * 111.32, (E - W) * 111.32 * math.cos(math.radians(lat0))) / 2 + 2
+    band = 0.01
+    edges, buckets = [], {}
+    for _, rings in polygons(name, lat0, lon0, km):
+        for r in rings:
+            for (ax, ay), (bx, by) in zip(r, r[1:] + r[:1]):
+                if ay == by or max(ay, by) < S or min(ay, by) > N:
+                    continue
+                edges.append((ax, ay, bx, by))
+                for k in range(int(min(ay, by) // band), int(max(ay, by) // band) + 1):
+                    buckets.setdefault(k, []).append(len(edges) - 1)
+    out = []
+    for lat in lats:
+        xs = []
+        for i in buckets.get(int(lat // band), ()):
+            ax, ay, bx, by = edges[i]
+            if (ay > lat) != (by > lat):
+                xs.append(ax + (lat - ay) * (bx - ax) / (by - ay))
+        xs.sort()
+        # crossings west of the box decide only whether its west edge starts on land
+        west = sum(1 for x in xs if x < W)
+        inner = [x for x in xs if W <= x <= E]
+        out.append(([W] if west % 2 else []) + inner)
+    return out

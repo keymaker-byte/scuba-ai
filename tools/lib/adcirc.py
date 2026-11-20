@@ -1,0 +1,610 @@
+"""ADCIRC tidal databases shared by adcirc_current.py and blend_model.py: the databases
+and their download, the astronomy calibrated to each run, the mesh and velocity readers, and the
+map viewer's overlay writer."""
+import gzip
+import json
+import math
+import os
+import sys
+import urllib.error
+import urllib.request
+from datetime import datetime, timezone, timedelta
+
+TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+WORKSPACE = os.path.dirname(TOOLS)
+DB = os.path.join(TOOLS, "db")
+UTC = timezone.utc
+
+# The ADCIRC tidal databases are distributed as static tarballs (no query API), linked from
+# https://adcirc.org/products/adcirc-tidal-databases/ . Only the mesh and the velocity
+# harmonics (fort.54) are kept; the elevation file (fort.53) is skipped.
+#
+# epoch: the start of the ADCIRC run the database comes from. The nodal factors and
+# equilibrium arguments in its fort.54 header are referenced to this instant; we calibrate
+# our astronomy's phase constants against those header values, which pins our convention to
+# ADCIRC's own regardless of the ±90°/180° species offsets.
+#   ENPAC15, run wc2015_v1a: fort.15 REFTIME 0.0, run id "410day_start_11162004".
+#   EC2015, run ec2012_v3d_otis3: REFTIM 0.0, run id "410day_start111791" (RunNotes.txt:
+#   "nodal factors set for 410-day run starting on 11/17/1991").
+# Both runs are 410 days long. ADCIRC sets the header's nodal factors f, and the nodal phase u
+# inside its equilibrium arguments, at the middle of the run: f in both headers matches our
+# series at epoch + 205 days to 0.002 (selftest), against 0.06 to 0.12 at the epoch itself.
+# The equilibrium arguments' astronomical part V0 is at the epoch.
+# domain: the mesh's own extent (S, W, N, E), which picks the database for a coordinate.
+DATABASES = {
+    "ENPAC15": {
+        "key": "enpac15_constituents",
+        "region": "Eastern North Pacific",
+        "url": "https://www.dropbox.com/s/yeswh43qhw982ut/ENPAC15_tidaldatabase.tar?dl=1",
+        "size": "~700 MB",
+        "tar_mesh": "ENPAC15_tidaldatabase/wc2015_v1a_chk.grd.gz",
+        "tar_vel": "ENPAC15_tidaldatabase/wc2015-v1a_1200tau1dt1VDatum_fort.54.gz",
+        "mesh": os.path.join(DB, "wc2015_v1a_chk.grd.gz"),
+        "vel": os.path.join(DB, "wc2015-v1a_1200tau1dt1VDatum_fort.54.gz"),
+        "epoch": datetime(2004, 11, 16, 0, 0, tzinfo=UTC),
+        "domain": (19.57, -187.59, 61.50, -109.56),
+    },
+    "EC2015": {
+        "key": "ec2015_constituents",
+        "region": "Western North Atlantic, Gulf of Mexico and Caribbean Sea",
+        "url": "https://www.dropbox.com/s/muitrh9i4jlfqy2/ec2015_tidaldb.tar?dl=1",
+        "size": "~2.6 GB",
+        "tar_mesh": "ec2015_tidaldb/ec2012_v3d_chk.grd.gz",
+        "tar_vel": "ec2015_tidaldb/ec2012_v3d_otis3_fort.54.gz",
+        "mesh": os.path.join(DB, "ec2012_v3d_chk.grd.gz"),
+        "vel": os.path.join(DB, "ec2012_v3d_otis3_fort.54.gz"),
+        "epoch": datetime(1991, 11, 17, 0, 0, tzinfo=UTC),
+        "domain": (5.72, -97.86, 45.87, -53.81),
+    },
+}
+
+
+def in_domain(name, lat, lon):
+    S, W, N, E = DATABASES[name]["domain"]
+    return S <= lat <= N and W <= lon <= E
+
+
+DEG = math.pi / 180.0
+
+# --------------------------------------------------------------------------------------
+# Tidal astronomy (pure Python, Schureman-style series). Doodson coefficients are on
+# (T, s, h, p, pp): T = mean-sun hour angle, s/h/p/pp = mean longitudes of moon, sun,
+# lunar perigee, solar perigee. The ascending-node term is carried by the nodal (f, u)
+# correction, not by a coefficient. Frequencies implied by these coefficients are checked
+# against the fort.54 header in `selftest`.
+# --------------------------------------------------------------------------------------
+
+# name -> (doodson (nT, ns, nh, np, npp), nodal_key)
+CONSTITUENTS = {
+    "M(2)":      ((2, -2, 2, 0, 0),  "M2"),
+    "N(2)":      ((2, -3, 2, 1, 0),  "M2"),
+    "S(2)":      ((2, 0, 0, 0, 0),   "none"),
+    "O(1)":      ((1, -2, 1, 0, 0),  "O1"),
+    "K(1)":      ((1, 0, 1, 0, 0),   "K1"),
+    "K(2)":      ((2, 0, 2, 0, 0),   "K2"),
+    "L(2)":      ((2, -1, 2, -1, 0), "fixed"),
+    "2N(2)":     ((2, -4, 2, 2, 0),  "M2"),
+    "R(2)":      ((2, 0, 1, 0, -1),  "none"),
+    "T(2)":      ((2, 0, -1, 0, 1),  "none"),
+    "Lambda(2)": ((2, -1, 0, 1, 0),  "M2"),
+    "Mu(2)":     ((2, -4, 4, 0, 0),  "M2"),
+    "Nu(2)":     ((2, -3, 4, -1, 0), "M2"),
+    "J(1)":      ((1, 1, 1, -1, 0),  "J1"),
+    "M(1)":      ((1, -1, 1, 0, 0),  "fixed"),
+    "OO(1)":     ((1, 2, 1, 0, 0),   "OO1"),
+    "P(1)":      ((1, 0, -1, 0, 0),  "none"),
+    "Q(1)":      ((1, -3, 1, 1, 0),  "O1"),
+    "2Q(1)":     ((1, -4, 1, 2, 0),  "O1"),
+    "Rho(1)":    ((1, -3, 3, -1, 0), "O1"),
+    "M(4)":      ((4, -4, 4, 0, 0),  "M2^2"),
+    "M(6)":      ((6, -6, 6, 0, 0),  "M2^3"),
+    "M(8)":      ((8, -8, 8, 0, 0),  "M2^4"),
+    "S(4)":      ((4, 0, 0, 0, 0),   "none"),
+    "S(6)":      ((6, 0, 0, 0, 0),   "none"),
+    "M(3)":      ((3, -3, 3, 0, 0),  "M2^1.5"),
+    "S(1)":      ((1, 0, 0, 0, 0),   "none"),
+    "MK(3)":     ((3, -2, 3, 0, 0),  "M2*K1"),
+    "2MK(3)":    ((3, -4, 3, 0, 0),  "M2^2*K1"),
+    "MN(4)":     ((4, -5, 4, 1, 0),  "M2^2"),
+    "MS(4)":     ((4, -2, 2, 0, 0),  "M2"),
+    "2SM(2)":    ((2, 2, -2, 0, 0),  "M2"),
+    "Mf":        ((0, 2, 0, 0, 0),   "Mf"),
+    "Msf":       ((0, 2, -2, 0, 0),  "M2"),
+    "Mm":        ((0, 1, 0, -1, 0),  "Mm"),
+    "Sa":        ((0, 0, 1, 0, 0),   "none"),
+    "Ssa":       ((0, 0, 2, 0, 0),   "none"),
+    # the steady current, carried as a constituent of zero frequency by a map overlay that has one
+    "Z0":        ((0, 0, 0, 0, 0),   "none"),
+}
+
+
+def mean_longitudes(dt):
+    """s, h, p, N, pp (degrees) at a UTC datetime, plus T (mean-sun hour angle, deg)."""
+    jd = 2440587.5 + dt.timestamp() / 86400.0
+    t = (jd - 2451545.0) / 36525.0  # Julian centuries from J2000.0
+    s = 218.3164477 + 481267.88123421 * t - 0.0015786 * t * t
+    h = 280.46646 + 36000.76983 * t + 0.0003032 * t * t
+    p = 83.3532465 + 4069.0137287 * t - 0.01032 * t * t
+    n = 125.04452 - 1934.136261 * t + 0.0020708 * t * t
+    pp = 282.937348 + 1.7195366 * t + 0.00045688 * t * t
+    ut_h = dt.hour + dt.minute / 60.0 + dt.second / 3600.0
+    tt = 15.0 * ut_h  # constant offset folds into the per-constituent phase calibration
+    return s % 360, h % 360, p % 360, n % 360, pp % 360, tt % 360
+
+
+def _base_nodal(key, N):
+    """Schureman f (factor) and u (phase, deg) for the fundamental nodal groups."""
+    c, c2, c3 = math.cos(N * DEG), math.cos(2 * N * DEG), math.cos(3 * N * DEG)
+    s, s2, s3 = math.sin(N * DEG), math.sin(2 * N * DEG), math.sin(3 * N * DEG)
+    if key == "M2":
+        return 1.0004 - 0.0373 * c + 0.0002 * c2, -2.14 * s
+    if key == "O1":
+        return (1.0089 + 0.1871 * c - 0.0147 * c2 + 0.0014 * c3,
+                10.80 * s - 1.34 * s2 + 0.19 * s3)
+    if key == "K1":
+        return (1.0060 + 0.1150 * c - 0.0088 * c2 + 0.0006 * c3,
+                -8.86 * s + 0.68 * s2 - 0.07 * s3)
+    if key == "K2":
+        return (1.0241 + 0.2863 * c + 0.0083 * c2 - 0.0015 * c3,
+                -17.74 * s + 0.68 * s2 - 0.04 * s3)
+    if key == "J1":
+        return (1.0129 + 0.1676 * c - 0.0170 * c2 + 0.0016 * c3,
+                -12.94 * s + 1.34 * s2 - 0.19 * s3)
+    if key == "OO1":
+        return (1.1027 + 0.6504 * c + 0.0317 * c2 - 0.0014 * c3,
+                -36.68 * s + 4.02 * s2 - 0.57 * s3)
+    if key == "Mf":
+        return 1.0429 + 0.4135 * c - 0.0040 * c2, -23.74 * s + 2.68 * s2 - 0.38 * s3
+    if key == "Mm":
+        return 1.0000 - 0.1300 * c + 0.0013 * c2, 0.0
+    return 1.0, 0.0
+
+
+def nodal(key, N, header_f):
+    """f, u (deg) for any constituent key, including compound products. `header_f` is used
+    for the two special constituents (L2, M1) whose nodal depends on perigee, not just N;
+    holding them at the database's own reference value costs only their tiny time variation.
+    """
+    if key == "none":
+        return 1.0, 0.0
+    if key == "fixed":
+        return header_f, 0.0
+    if key in ("M2", "O1", "K1", "K2", "J1", "OO1", "Mf", "Mm"):
+        return _base_nodal(key, N)
+    # compound constituents: f multiplies, u adds
+    fm, um = _base_nodal("M2", N)
+    fk, uk = _base_nodal("K1", N)
+    table = {
+        "M2^2": (fm ** 2, 2 * um),
+        "M2^3": (fm ** 3, 3 * um),
+        "M2^4": (fm ** 4, 4 * um),
+        "M2^1.5": (fm ** 1.5, 1.5 * um),
+        "M2*K1": (fm * fk, um + uk),
+        "M2^2*K1": (fm ** 2 * fk, 2 * um + uk),
+    }
+    return table[key]
+
+
+def nodal_epoch(db):
+    """The instant a database's nodal factors and nodal phases are set for: mid-run."""
+    return DATABASES[db]["epoch"] + timedelta(days=205)
+
+
+def calibrate(cons, db):
+    """Given the constituent list from an extract (each with name, v0u_deg, f_ref) and the
+    database it came from, return {name: C_rad}. C absorbs ADCIRC's species phase offsets and
+    any convention constant. V0 is taken at the run's epoch and u at mid-run, as ADCIRC does."""
+    s, h, p, _, pp, T = mean_longitudes(DATABASES[db]["epoch"])
+    N = mean_longitudes(nodal_epoch(db))[3]
+    C = {}
+    for c in cons:
+        name = c["name"]
+        (nT, ns, nh, np_, npp), key = CONSTITUENTS[name]
+        a = (nT * T + ns * s + nh * h + np_ * p + npp * pp) * DEG
+        _, u = nodal(key, N, c["f_ref"])
+        C[name] = c["v0u_deg"] * DEG - (a + u * DEG)
+    return C
+
+
+def reconstruct(cons, C, dt, comp):
+    """Depth-averaged velocity component (m/s) at UTC datetime `dt`. comp = 'u' (east) or
+    'v' (north)."""
+    s, h, p, N, pp, T = mean_longitudes(dt)
+    amp_key, ph_key = (comp + "_amp"), (comp + "_phase")
+    total = 0.0
+    for c in cons:
+        (nT, ns, nh, np_, npp), key = CONSTITUENTS[c["name"]]
+        a = (nT * T + ns * s + nh * h + np_ * p + npp * pp) * DEG
+        f, u = nodal(key, N, c["f_ref"])
+        base = a + u * DEG + C[c["name"]]
+        total += f * c[amp_key] * math.cos(base - c[ph_key] * DEG)
+    return total
+
+# --------------------------------------------------------------------------------------
+# Mesh + fort.54 extraction
+# --------------------------------------------------------------------------------------
+
+def need_db(db):
+    d = DATABASES[db]
+    if os.path.exists(d["mesh"]) and os.path.exists(d["vel"]):
+        return
+    os.makedirs(DB, exist_ok=True)
+    log = lambda m: print(m, file=sys.stderr, flush=True)
+    log(f"{db} database not present in tools/db/.")
+    log(f"Downloading {d['size']} from the ADCIRC tidal database (one time)...")
+    import tarfile
+    req = urllib.request.Request(d["url"], headers={"User-Agent": "dive-planning"})
+    targets = {d["tar_mesh"]: d["mesh"], d["tar_vel"]: d["vel"]}
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            # stream the tar; extract only the two members we need, never storing the archive
+            with tarfile.open(fileobj=r, mode="r|") as tar:
+                for m in tar:
+                    if m.name in targets:
+                        log(f"  extracting {m.name} ({m.size / 1e6:.0f} MB)...")
+                        src, part = tar.extractfile(m), targets[m.name] + ".part"
+                        with open(part, "wb") as out:
+                            while True:
+                                chunk = src.read(1 << 20)
+                                if not chunk:
+                                    break
+                                out.write(chunk)
+                        if os.path.getsize(part) != m.size:
+                            raise OSError(f"{m.name} arrived short")
+                        os.replace(part, targets.pop(m.name))
+                        if not targets:
+                            break
+    except (OSError, tarfile.TarError, urllib.error.URLError) as e:
+        for path in targets.values():
+            if os.path.exists(path + ".part"):
+                os.remove(path + ".part")
+        sys.exit(f"{db} download failed ({getattr(e, 'reason', e)}).\n  {d['url']}")
+    if targets:
+        sys.exit(f"{db} archive is missing {', '.join(targets)}.\n  {d['url']}")
+    log("  done.")
+
+
+def read_mesh(db, depth=False):
+    """Return (lon, lat, elements), or (lon, lat, depth, elements) with `depth`. lon/lat/depth
+    indexed by node number (1-based, index 0 unused); depth is the mesh's own water depth in
+    metres. elements are (n1, n2, n3)."""
+    with gzip.open(DATABASES[db]["mesh"], "rt") as fh:
+        fh.readline()  # title
+        ne, np_ = (int(x) for x in fh.readline().split())
+        lon = [0.0] * (np_ + 1)
+        lat = [0.0] * (np_ + 1)
+        dep = [0.0] * (np_ + 1)
+        for _ in range(np_):
+            parts = fh.readline().split()
+            i = int(parts[0])
+            lon[i] = float(parts[1])
+            lat[i] = float(parts[2])
+            dep[i] = float(parts[3])
+        elems = []
+        for _ in range(ne):
+            parts = fh.readline().split()
+            elems.append((int(parts[2]), int(parts[3]), int(parts[4])))
+    return (lon, lat, dep, elems) if depth else (lon, lat, elems)
+
+
+def locate(lon, lat, elems, qlon, qlat):
+    """Find the element containing (qlon, qlat); return (nodes, weights, inside, dist_km).
+    Inside the mesh dist_km is 0. Outside (a shore-entry coordinate is often just past the
+    model's wet boundary), snap to the element on the nearest node and report how far out."""
+    for n in elems:
+        x1, y1 = lon[n[0]], lat[n[0]]
+        x2, y2 = lon[n[1]], lat[n[1]]
+        x3, y3 = lon[n[2]], lat[n[2]]
+        if qlon < min(x1, x2, x3) or qlon > max(x1, x2, x3):
+            continue
+        if qlat < min(y1, y2, y3) or qlat > max(y1, y2, y3):
+            continue
+        det = (y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3)
+        if det == 0:
+            continue
+        w1 = ((y2 - y3) * (qlon - x3) + (x3 - x2) * (qlat - y3)) / det
+        w2 = ((y3 - y1) * (qlon - x3) + (x1 - x3) * (qlat - y3)) / det
+        w3 = 1 - w1 - w2
+        if w1 >= -1e-9 and w2 >= -1e-9 and w3 >= -1e-9:
+            return list(n), [w1, w2, w3], True, 0.0
+    # outside: nearest node, and the element on it
+    scale = math.cos(math.radians(qlat))
+    bn, bd = 1, float("inf")
+    for i in range(1, len(lon)):
+        d = ((lon[i] - qlon) * scale) ** 2 + (lat[i] - qlat) ** 2
+        if d < bd:
+            bd, bn = d, i
+    dist_km = math.sqrt(bd) * 111.0
+    for n in elems:
+        if bn in n:
+            return list(n), [1 / 3, 1 / 3, 1 / 3], False, dist_km
+    return [bn, bn, bn], [1 / 3, 1 / 3, 1 / 3], False, dist_km
+
+
+WALK_STEP_M = 5
+
+
+def walk_in(lon, lat, elems, qlon, qlat, step_m):
+    """The nearest point of the mesh to (qlon, qlat), on the edge of its wet area, stepped
+    step_m further in toward the centroid of the element it lies on (at most halfway there).
+    Returns (lat, lon) rounded to 5 decimals, about a metre."""
+    sc = math.cos(math.radians(qlat))
+    px, py = qlon * sc, qlat
+    for r in (0.05, 0.2, 1.0, 5.0):
+        cand = [n for n in elems
+                if any(abs(lat[i] - qlat) <= r and abs(lon[i] - qlon) <= r / sc for i in n)]
+        if cand:
+            break
+    best = None
+    for n in cand:
+        tri = [(lon[i] * sc, lat[i]) for i in n]
+        for k in range(3):
+            (ax, ay), (bx, by) = tri[k], tri[k - 1]
+            dx, dy = bx - ax, by - ay
+            L2 = dx * dx + dy * dy
+            t = 0.0 if L2 == 0 else max(0.0, min(1.0, ((px - ax) * dx + (py - ay) * dy) / L2))
+            cx, cy = ax + t * dx, ay + t * dy
+            d = math.hypot(cx - px, cy - py)
+            if best is None or d < best[0]:
+                best = (d, cx, cy, tri)
+    _, cx, cy, tri = best
+    gx, gy = sum(t[0] for t in tri) / 3, sum(t[1] for t in tri) / 3
+    L = math.hypot(gx - cx, gy - cy)
+    step = min(step_m / 111000.0, 0.5 * L)
+    wx, wy = cx + (gx - cx) * step / L, cy + (gy - cy) * step / L
+    return round(wy, 5), round(wx / sc, 5)
+
+
+def read_vel_header(db):
+    """Return list of (name, freq_rad_s, f_ref, v0u_deg) from the fort.54 header, in order."""
+    with gzip.open(DATABASES[db]["vel"], "rt") as fh:
+        nfreq = int(fh.readline())
+        out = []
+        for _ in range(nfreq):
+            parts = fh.readline().split()
+            freq, fnf, eqarg = float(parts[0]), float(parts[1]), float(parts[2])
+            name = parts[3]
+            out.append((name, freq, fnf, eqarg))
+    return out
+
+
+def read_vel_nodes(db, want):
+    """Stream fort.54; return {node: [(u_amp, u_phase, v_amp, v_phase), ...37...]} for the
+    requested node numbers. Node records are in increasing order, so we stop at the last."""
+    want = set(want)
+    stop = max(want)
+    found = {}
+    with gzip.open(DATABASES[db]["vel"], "rt") as fh:
+        nfreq = int(fh.readline())
+        for _ in range(nfreq):
+            fh.readline()
+        fh.readline()  # NP
+        while want:
+            line = fh.readline()
+            if not line:
+                break
+            node = int(line.split()[0])
+            rows = [fh.readline() for _ in range(nfreq)]
+            if node in want:
+                cons = []
+                for r in rows:
+                    a = r.split()
+                    cons.append((float(a[0]), float(a[1]), float(a[2]), float(a[3])))
+                found[node] = cons
+                want.discard(node)
+            if node >= stop:
+                break
+    return found
+
+
+def interp_polar(amp1, ph1, amp2, ph2, amp3, ph3, w):
+    """Weight-interpolate three (amp, phase-deg) pairs via their complex form."""
+    re = im = 0.0
+    for amp, ph, wi in ((amp1, ph1, w[0]), (amp2, ph2, w[1]), (amp3, ph3, w[2])):
+        re += wi * amp * math.cos(ph * DEG)
+        im += wi * amp * math.sin(ph * DEG)
+    return math.hypot(re, im), math.degrees(math.atan2(im, re)) % 360
+
+
+
+# --------------------------------------------------------------------------------------
+# The map viewer's current overlay
+# --------------------------------------------------------------------------------------
+
+def write_overlay(name, label, boxes, db, lon, lat, nodes, tris, header, vals, max_drop, source,
+                  out, tool, max_speed, extra=None, kind=None):
+    """Write an overlay as a script the map viewer loads: window.MAP_CURRENTS[name] = {...}, and
+    add or replace its entry in the index beside it. `nodes` are mesh node numbers, `tris` triples
+    of them, `header` the (name, freq, f_ref, v0u_deg) of each constituent and `vals` each node's
+    (u_amp, u_phase, v_amp, v_phase) per constituent, in ADCIRC's own convention. The browser
+    reconstructs every node for any moment with the same astronomy as `reconstruct` and
+    interpolates linearly across each triangle. `extra` adds keys to the overlay, `kind` to its
+    index entry."""
+    import array
+    import base64
+    log = lambda m: print(m, file=sys.stderr, flush=True)
+    S, W = min(b[0] for b in boxes), min(b[1] for b in boxes)
+    N, E = max(b[2] for b in boxes), max(b[3] for b in boxes)
+    if len(nodes) > 65535:
+        sys.exit(f"{len(nodes)} nodes: too many for the 16-bit triangle index; split the box.")
+    index = {node: k for k, node in enumerate(nodes)}
+
+    # Keep the constituents that matter here. Each one dropped can add at most its amplitude
+    # to the error at a node; keep adding the largest until no node loses more than max_drop.
+    amp_at = [[max(vals[n][k][0], vals[n][k][2]) for n in nodes] for k in range(len(header))]
+    order = sorted(range(len(header)), key=lambda k: -sum(x * x for x in amp_at[k]))
+    keep = []
+    for cut in range(1, len(order) + 1):
+        keep = order[:cut]
+        dropped = order[cut:]
+        worst = max((sum(amp_at[k][j] for k in dropped) for j in range(len(nodes))), default=0.0)
+        if worst <= max_drop:
+            break
+    keep.sort()
+    log(f"  keeping {len(keep)} of {len(header)} constituents "
+        f"(worst-case dropped amplitude {worst:.3f} m/s): "
+        + ", ".join(header[k][0] for k in keep))
+
+    # Cartesian form per node: u(t) = sum f * (a cos(base) + b sin(base)), a = A cos(phi),
+    # b = A sin(phi). Quantized to int16 with one scale per constituent.
+    # Laid out node by node, then constituent, then (a_u, b_u, a_v, b_v).
+    cons_meta, per_cons = [], []
+    for k in keep:
+        cname, freq, fnf, eqarg = header[k]
+        comps = []
+        for n in nodes:
+            ua, up, va, vp = vals[n][k]
+            comps.append((ua * math.cos(up * DEG), ua * math.sin(up * DEG),
+                          va * math.cos(vp * DEG), va * math.sin(vp * DEG)))
+        peak = max(abs(x) for c in comps for x in c) or 1.0
+        per_cons.append(comps)
+        cons_meta.append({"name": cname, "fRef": fnf, "v0u": eqarg, "scale": peak / 32767.0})
+    coeff = array.array("h")
+    for j in range(len(nodes)):
+        for comps, c in zip(per_cons, cons_meta):
+            coeff.extend(int(round(x / c["scale"])) for x in comps[j])
+    # the browser's astronomy constants come from the same calibration as `reconstruct`
+    C = calibrate([{"name": c["name"], "f_ref": c["fRef"], "v0u_deg": c["v0u"]} for c in cons_meta], db)
+    for c in cons_meta:
+        (nT, ns, nh, np_, npp), key = CONSTITUENTS[c["name"]]
+        c.update({"doodson": [nT, ns, nh, np_, npp], "nodal": key, "C": C[c["name"]]})
+
+    # Quantized constants as `reconstruct` reads them, to build the browser's self-check.
+    nk = len(keep)
+
+    def node_cons(j):
+        res = []
+        for i, c in enumerate(cons_meta):
+            base = (j * nk + i) * 4
+            qa, qb, qc, qd = (coeff[base + m] * c["scale"] for m in range(4))
+            res.append({"name": c["name"], "f_ref": c["fRef"],
+                        "u_amp": math.hypot(qa, qb), "u_phase": math.degrees(math.atan2(qb, qa)),
+                        "v_amp": math.hypot(qc, qd), "v_phase": math.degrees(math.atan2(qd, qc))})
+        return res
+
+    # self-check samples: the fastest node and a spread of others, at a spread of moments
+    # and, over the 40 fastest nodes plus a spread of 40 more, what truncation costs
+    speed = [sum(amp_at[k][j] for k in keep) for j in range(len(nodes))]
+    fastest = sorted(range(len(nodes)), key=lambda j: -speed[j])[:40]
+    picks = sorted(set(fastest[:1]) | set(range(0, len(nodes), max(1, len(nodes) // 5))))
+    probe = sorted(set(fastest) | set(range(0, len(nodes), max(1, len(nodes) // 40))))
+    t0 = datetime.now(UTC).replace(minute=0, second=0, microsecond=0)
+    moments = [t0 + timedelta(hours=h) for h in (0, 7.25, 31.5, 77.75, 166)]
+    checks, trunc_err = [], 0.0
+    for j in probe:
+        qc = node_cons(j)
+        Cq = calibrate([{"name": c["name"], "f_ref": c["f_ref"], "v0u_deg": m["v0u"]}
+                        for c, m in zip(qc, cons_meta)], db)
+        # every constituent, unquantized, at the same node: what truncation costs
+        allc = [{"name": header[k][0], "f_ref": header[k][2], "v0u_deg": header[k][3],
+                 "u_amp": vals[nodes[j]][k][0], "u_phase": vals[nodes[j]][k][1],
+                 "v_amp": vals[nodes[j]][k][2], "v_phase": vals[nodes[j]][k][3]}
+                for k in range(len(header))]
+        Call = calibrate(allc, db)
+        for t in moments:
+            u = reconstruct(qc, Cq, t, "u")
+            v = reconstruct(qc, Cq, t, "v")
+            if j in picks:
+                checks.append({"node": j, "t": int(t.timestamp()), "u": round(u, 5), "v": round(v, 5)})
+            uf, vf = reconstruct(allc, Call, t, "u"), reconstruct(allc, Call, t, "v")
+            trunc_err = max(trunc_err, math.hypot(u - uf, v - vf))
+    log(f"  truncation + quantization error against all {len(header)} constituents, "
+        f"{len(probe)} nodes x {len(moments)} moments: max {trunc_err:.3f} m/s")
+
+    xy = array.array("f")
+    for n in nodes:
+        xy.extend((lon[n], lat[n]))
+    tri = array.array("H")
+    for n in tris:
+        tri.extend(index[i] for i in n)
+    if sys.byteorder != "little":
+        for arr in (xy, tri, coeff):
+            arr.byteswap()
+    b64 = lambda arr: base64.b64encode(arr.tobytes()).decode("ascii")
+    doc = {
+        "name": name,
+        "label": label,
+        "bbox": [S, W, N, E],
+        "boxes": boxes,
+        "source": source,
+        "maxSpeedMs": max_speed,
+        "nodeCount": len(nodes),
+        "triangleCount": len(tris),
+        "constituents": cons_meta,
+        "nodes": b64(xy),
+        "triangles": b64(tri),
+        "coefficients": b64(coeff),
+        "checks": checks,
+    }
+    doc["landMask"] = land_mask(S, W, N, E)
+    doc.update(extra or {})
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    with open(out, "w") as fh:
+        fh.write(f"// Generated by tools/{tool} export-map; regenerate rather than edit.\n")
+        fh.write(f"// {label}: {len(nodes)} {db} mesh nodes, {len(tris)} elements, "
+                 f"{len(keep)} constituents. Times are reconstructed in the browser.\n")
+        fh.write("window.MAP_CURRENTS = window.MAP_CURRENTS || {};\n")
+        fh.write(f"window.MAP_CURRENTS[{json.dumps(name)}] = ")
+        fh.write(json.dumps(doc, separators=(",", ":")))
+        fh.write(";\n")
+    log(f"  wrote {os.path.relpath(out, WORKSPACE)} ({os.path.getsize(out) / 1e6:.1f} MB)")
+
+    # The index beside it lists every overlay, read by the map at load: this export's entry is
+    # added or replaced, the others kept.
+    index_path = os.path.join(os.path.dirname(out), "index.js")
+    entries = []
+    if os.path.exists(index_path):
+        with open(index_path) as fh:
+            src = fh.read()
+        try:
+            entries = json.loads(src[src.index("[", src.index("MAP_CURRENT_INDEX")):src.rindex("]") + 1])
+        except ValueError as e:
+            sys.exit(f"Could not read {index_path}: {e}. Fix or delete it, then re-run export-map.")
+    entries = [e for e in entries if e["name"] != name]
+    entry = {"name": name, "label": label, "file": os.path.relpath(out, WORKSPACE), "boxes": boxes}
+    if kind:
+        entry["kind"] = kind
+    entries.append(entry)
+    entries.sort(key=lambda e: e["name"])
+    with open(index_path, "w") as fh:
+        fh.write("// Generated by tools/blend_model.py export-map: "
+                 "every tidal current overlay.\n")
+        fh.write("window.MAP_CURRENT_INDEX = ")
+        fh.write(json.dumps(entries, indent=2))
+        fh.write(";\n")
+    log(f"  updated {os.path.relpath(index_path, WORKSPACE)} ({len(entries)} overlay(s))")
+
+
+MASK_M = 37.5   # m: the land mask's cell, a quarter of the map's drawing grid
+
+
+def land_mask(S, W, N, E):
+    """The coastline over a box, for the map viewer to keep its trails off land: rows evenly
+    spaced in Web Mercator and columns in longitude, MASK_M apart, each row holding the columns
+    where it crosses the coastline (OpenStreetMap's land polygons, through lib/shapes.py). A
+    point is on land where an odd number of its row's crossings lie west of it."""
+    import array
+    import base64
+    from lib import shapes
+    log = lambda m: print(m, file=sys.stderr, flush=True)
+    merc = lambda lat: math.log(math.tan(math.pi / 4 + math.radians(lat) / 2))
+    d_lon = MASK_M / (111320 * math.cos(math.radians((S + N) / 2)))
+    d_y = math.radians(d_lon)
+    y_n = merc(N)
+    rows = math.ceil((y_n - merc(S)) / d_y)
+    cols = math.ceil((E - W) / d_lon)
+    if cols > 65535:
+        sys.exit(f"the land mask is {cols} columns wide, past its 16-bit index; split the box.")
+    lats = [math.degrees(2 * math.atan(math.exp(y_n - (r + 0.5) * d_y)) - math.pi / 2) for r in range(rows)]
+    log(f"  land mask: {rows} x {cols} cells of {MASK_M:g} m from the coastline...")
+    xs = shapes.crossings("land", S, W, N, E, lats)
+    offsets, cross = array.array("I", [0]), array.array("H")
+    for row in xs:
+        cross.extend(min(cols, max(0, round((x - W) / d_lon))) for x in row)
+        offsets.append(len(cross))
+    if sys.byteorder != "little":
+        offsets.byteswap()
+        cross.byteswap()
+    b64 = lambda arr: base64.b64encode(arr.tobytes()).decode("ascii")
+    return {"W": W, "yN": y_n, "dLon": d_lon, "rows": rows, "cols": cols,
+            "offsets": b64(offsets), "crossings": b64(cross)}

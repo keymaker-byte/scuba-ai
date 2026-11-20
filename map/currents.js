@@ -1,18 +1,21 @@
-// Tidal current overlay for map.html: an ADCIRC tidal database's field, reconstructed in the browser
-// for any moment from the harmonic constants that `tools/adcirc_current.py export-map` writes
-// to map/currents/<name>.js. The astronomy below is a line-for-line port of that tool's
-// mean_longitudes, _base_nodal, nodal and reconstruct, and each overlay file carries values the
-// tool computed itself, which `selfCheck` reproduces before the overlay is allowed to draw.
+// Tidal current overlay for map.html: the Blend Model's seafloor field, reconstructed in the
+// browser for any moment from the harmonic constants that `tools/blend_model.py export-map`
+// writes to map/currents/<name>.js. The astronomy below is a line-for-line port of
+// tools/lib/adcirc.py's mean_longitudes, _base_nodal, nodal and reconstruct, and each overlay
+// file carries values the tool computed itself, which `selfCheck` reproduces before the overlay
+// is allowed to draw.
 //
 // Particles that drift along the flow, each trail coloured by its speed, over whatever lies
-// beneath (the depth layer among it). They read a regular grid laid over the mesh, evenly spaced
+// beneath (the depth layer among it). An overlay that carries each node's distance to the nearest
+// current station it was corrected with draws its trails fainter the further that station is.
+// Each overlay also carries the coastline, and no trail starts or runs over land. They read a regular grid laid over the mesh, evenly spaced
 // in Web Mercator so that it maps onto the screen with a plain scale and offset at every zoom.
 (function (root) {
   'use strict';
 
   const DEG = Math.PI / 180;
 
-  // ---- astronomy (port of tools/adcirc_current.py) ---------------------------------------
+  // ---- astronomy (port of tools/lib/adcirc.py) -------------------------------------------
 
   function meanLongitudes(ms) {
     const jd = 2440587.5 + ms / 86400000;
@@ -84,9 +87,41 @@
           this.coeff.length !== 4 * this.nodeCount * this.cons.length) {
         throw new Error('overlay arrays do not match their stated sizes');
       }
+      // the coastline, as each mask row's crossings: land where an odd number lie west of a point
+      const m = data.landMask;
+      this.mask = m ? { ...m, dY: m.dLon * DEG, off: decode(m.offsets, Uint32Array), cr: decode(m.crossings, Uint16Array) } : null;
+      // distance to the nearest station, 0.1 km a step, 255 where none is within reach
+      this.near = data.nearestKm ? decode(data.nearestKm, Uint8Array) : null;
+      if (this.near && this.near.length !== this.nodeCount) {
+        throw new Error('overlay station distances do not match its node count');
+      }
       this.u = new Float32Array(this.nodeCount);
       this.v = new Float32Array(this.nodeCount);
       this.time = null;
+    }
+
+    // whether a point, as its longitude and Web Mercator y, lies on land; false with no mask
+    onLand(lon, my) {
+      const m = this.mask;
+      if (!m) return false;
+      const r = Math.floor((m.yN - my) / m.dY);
+      if (r < 0 || r >= m.rows) return false;
+      const c = (lon - m.W) / m.dLon;
+      const a = m.off[r];
+      let lo = a, hi = m.off[r + 1];
+      while (lo < hi) {
+        const mid = (lo + hi) >> 1;
+        if (m.cr[mid] <= c) lo = mid + 1; else hi = mid;
+      }
+      return ((lo - a) & 1) === 1;
+    }
+
+    // km to the nearest station at a point of an element, null where a corner has none in reach
+    nearKm(a, b, c, w1, w2, w3) {
+      if (!this.near) return null;
+      const n = this.near;
+      if (n[a] === 255 || n[b] === 255 || n[c] === 255) return null;
+      return (w1 * n[a] + w2 * n[b] + w3 * n[c]) / 10;
     }
 
     // u, v (m/s, east and north, depth-averaged) at every node at a UTC instant in ms
@@ -116,7 +151,7 @@
     }
 
     // Reproduce the values the Python tool computed when it wrote the file; any drift means the
-    // browser's astronomy no longer matches `adcirc_current.py`, and the overlay must not draw.
+    // browser's astronomy no longer matches the Python tool's, and the overlay must not draw.
     selfCheck(tolerance = 0.002) {
       let worst = 0;
       for (const c of this.data.checks) {
@@ -144,7 +179,8 @@
         if (w1 < -1e-9 || w2 < -1e-9 || w3 < -1e-9) continue;
         const u = w1 * this.u[a] + w2 * this.u[b] + w3 * this.u[c];
         const v = w1 * this.v[a] + w2 * this.v[b] + w3 * this.v[c];
-        return { u, v, speed: Math.hypot(u, v), toward: (Math.atan2(u, v) / DEG + 360) % 360 };
+        return { u, v, speed: Math.hypot(u, v), toward: (Math.atan2(u, v) / DEG + 360) % 360,
+          km: this.nearKm(a, b, c, w1, w2, w3), field: this };
       }
       return null;
     }
@@ -153,7 +189,9 @@
   // A regular grid over the field's box, square cells of about `cellM` metres, evenly spaced in
   // Web Mercator. Each cell remembers the element its centre falls in, as its number plus one,
   // and two of its weights in 1/255ths, kept small so a box the size of the Salish Sea fits in
-  // memory; cells outside the mesh hold 0 and stay blank.
+  // memory. A cell whose centre is outside the mesh but which still reaches into it, along the
+  // mesh's edge, takes the element one of its corners falls in, so the trails run up to the
+  // mesh's own coastline; cells wholly outside the mesh hold 0 and stay blank.
   class FieldGrid {
     constructor(field, cellM = 150) {
       const [S, W, N, E] = field.data.bbox;
@@ -178,27 +216,46 @@
       const { xy, tri } = field;
       const gx = j => (xy[2 * j] - W) / this.dLon;
       const gy = j => (this.yN - mercY(xy[2 * j + 1])) / this.dY;
-      for (let e = 0; e < tri.length; e += 3) {
-        const x1 = gx(tri[e]), y1 = gy(tri[e]), x2 = gx(tri[e + 1]), y2 = gy(tri[e + 1]), x3 = gx(tri[e + 2]), y3 = gy(tri[e + 2]);
-        const det = (y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3);
-        if (det === 0) continue;
-        const c0 = Math.max(0, Math.floor(Math.min(x1, x2, x3) - 0.5));
-        const c1 = Math.min(this.cols - 1, Math.ceil(Math.max(x1, x2, x3) - 0.5));
-        const r0 = Math.max(0, Math.floor(Math.min(y1, y2, y3) - 0.5));
-        const r1 = Math.min(this.rows - 1, Math.ceil(Math.max(y1, y2, y3) - 0.5));
-        for (let r = r0; r <= r1; r++) {
-          const py = r + 0.5;
-          for (let c = c0; c <= c1; c++) {
-            const idx = r * this.cols + c;
-            if (this.elem[idx] !== 0) continue;
-            const px = c + 0.5;
-            const a = ((y2 - y3) * (px - x3) + (x3 - x2) * (py - y3)) / det;
-            const b = ((y3 - y1) * (px - x3) + (x1 - x3) * (py - y3)) / det;
-            if (a < -1e-9 || b < -1e-9 || 1 - a - b < -1e-9) continue;
-            this.elem[idx] = e / 3 + 1;
-            this.w1[idx] = Math.round(Math.max(0, a) * 255);
-            this.w2[idx] = Math.round(Math.max(0, b) * 255);
+      // First every cell centre that falls in an element, then, for the cells still empty, a
+      // corner (or the middle of a side) that does.
+      const probes = [[[0.5, 0.5]], [[0, 0], [1, 0], [0, 1], [1, 1], [0.5, 0], [0.5, 1], [0, 0.5], [1, 0.5]]];
+      for (const offsets of probes) {
+        for (let e = 0; e < tri.length; e += 3) {
+          const x1 = gx(tri[e]), y1 = gy(tri[e]), x2 = gx(tri[e + 1]), y2 = gy(tri[e + 1]), x3 = gx(tri[e + 2]), y3 = gy(tri[e + 2]);
+          const det = (y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3);
+          if (det === 0) continue;
+          const c0 = Math.max(0, Math.floor(Math.min(x1, x2, x3) - 1));
+          const c1 = Math.min(this.cols - 1, Math.ceil(Math.max(x1, x2, x3)));
+          const r0 = Math.max(0, Math.floor(Math.min(y1, y2, y3) - 1));
+          const r1 = Math.min(this.rows - 1, Math.ceil(Math.max(y1, y2, y3)));
+          for (let r = r0; r <= r1; r++) {
+            for (let c = c0; c <= c1; c++) {
+              const idx = r * this.cols + c;
+              if (this.elem[idx] !== 0) continue;
+              for (const [ox, oy] of offsets) {
+                const px = c + ox, py = r + oy;
+                const a = ((y2 - y3) * (px - x3) + (x3 - x2) * (py - y3)) / det;
+                const b = ((y3 - y1) * (px - x3) + (x1 - x3) * (py - y3)) / det;
+                if (a < -1e-9 || b < -1e-9 || 1 - a - b < -1e-9) continue;
+                this.elem[idx] = e / 3 + 1;
+                this.w1[idx] = Math.round(Math.max(0, a) * 255);
+                this.w2[idx] = Math.round(Math.max(0, b) * 255);
+                break;
+              }
+            }
           }
+        }
+      }
+      // how faint each cell draws: 0 within 2 km of a station, 1 to 6 km, 2 beyond or with none
+      this.fade = null;
+      if (field.near) {
+        this.fade = new Uint8Array(size);
+        for (let i = 0; i < size; i++) {
+          if (this.elem[i] === 0) continue;
+          const e = (this.elem[i] - 1) * 3;
+          const x = this.w1[i] / 255, y = this.w2[i] / 255;
+          const km = field.nearKm(tri[e], tri[e + 1], tri[e + 2], x, y, Math.max(0, 1 - x - y));
+          this.fade[i] = km === null || km >= 6 ? 2 : km >= 2 ? 1 : 0;
         }
       }
     }
@@ -216,18 +273,24 @@
       }
     }
 
-    // bilinear u, v at a fractional grid position; null where any corner is outside the mesh
+    // u, v at a fractional grid position, and the fade, blended from the four nearest cell
+    // centres that hold the mesh; null where the position's own cell is outside it
     sample(gx, gy) {
+      const own = Math.floor(gy) * this.cols + Math.floor(gx);
+      if (gx < 0 || gy < 0 || gx >= this.cols || gy >= this.rows || !this.elem[own]) return null;
       const x = gx - 0.5, y = gy - 0.5;
       const c = Math.floor(x), r = Math.floor(y);
-      if (c < 0 || r < 0 || c + 1 >= this.cols || r + 1 >= this.rows) return null;
-      const i = r * this.cols + c;
-      const { elem } = this;
-      if (!elem[i] || !elem[i + 1] || !elem[i + this.cols] || !elem[i + this.cols + 1]) return null;
       const fx = x - c, fy = y - r;
-      const bl = (arr) => (arr[i] * (1 - fx) + arr[i + 1] * fx) * (1 - fy) +
-        (arr[i + this.cols] * (1 - fx) + arr[i + this.cols + 1] * fx) * fy;
-      return [bl(this.u), bl(this.v)];
+      let u = 0, v = 0, w = 0;
+      for (const [dc, dr, k] of [[0, 0, (1 - fx) * (1 - fy)], [1, 0, fx * (1 - fy)], [0, 1, (1 - fx) * fy], [1, 1, fx * fy]]) {
+        const cc = c + dc, rr = r + dr;
+        if (cc < 0 || rr < 0 || cc >= this.cols || rr >= this.rows) continue;
+        const i = rr * this.cols + cc;
+        if (!this.elem[i] || k === 0) continue;
+        u += this.u[i] * k; v += this.v[i] * k; w += k;
+      }
+      if (w === 0) return [this.u[own], this.v[own], this.fade ? this.fade[own] : 0];
+      return [u / w, v / w, this.fade ? this.fade[own] : 0];
     }
   }
 
@@ -257,6 +320,8 @@
     [2.75, [127, 29, 29]],
   ];
   const STROKES = BANDS.map(([, rgb]) => `rgb(${rgb.join(',')})`);
+  // trail opacity by distance to the nearest station: within 2 km, 2 to 6 km, beyond
+  const FADES = [1, 0.6, 0.35];
   const bandOf = sp => {
     let k = 0;
     while (k < BANDS.length - 1 && sp >= BANDS[k + 1][0]) k++;
@@ -267,7 +332,7 @@
 
   function makeLayer(L) {
     return L.Layer.extend({
-      options: { pane: 'overlayPane', particleSpeed: 1.4, particleDensity: 1 / 220, maxParticles: 6000 },
+      options: { pane: 'overlayPane', particleSpeed: 0.75, particleDensity: 1 / 220, maxParticles: 6000 },
 
       initialize(fields, options) {
         L.setOptions(this, options);
@@ -276,7 +341,7 @@
         this._particles = [];
       },
 
-      // The current at a coordinate at the layer's moment, exactly as `adcirc_current.py at`
+      // The current at a coordinate at the layer's moment, exactly as `blend_model.py at`
       // reads an extract there: { u, v, speed, toward } in m/s and degrees true, null outside
       // every mesh.
       readAt(lat, lon) {
@@ -362,7 +427,13 @@
         this._animate();
       },
 
-      // a random point on screen that sits inside a field's mesh, or null after a few tries
+      // whether a screen point lies on land, by its field's coastline
+      _onLand(view, x, y) {
+        const g = view.g;
+        return g.field.onLand(g.W + ((x - view.nw.x) / view.sx) * g.dLon, g.yN - ((y - view.nw.y) / view.sy) * g.dY);
+      },
+
+      // a random point on screen that sits inside a field's mesh and off land, or null after a few tries
       _spawn(p) {
         const views = this._views.filter(v => v.visible);
         if (!views.length) return false;
@@ -370,7 +441,7 @@
           const x = Math.random() * this._size.x, y = Math.random() * this._size.y;
           for (const view of views) {
             const gx = (x - view.nw.x) / view.sx, gy = (y - view.nw.y) / view.sy;
-            if (view.g.sample(gx, gy)) {
+            if (view.g.sample(gx, gy) && !this._onLand(view, x, y)) {
               p.x = x; p.y = y; p.view = view; p.age = Math.floor(Math.random() * 90); p.live = true;
               return true;
             }
@@ -402,8 +473,8 @@
           ctx.fillStyle = 'rgba(0,0,0,0.95)';
           ctx.fillRect(0, 0, w, h);
           ctx.globalCompositeOperation = 'source-over';
-          // This frame's segments by speed band, wider in faster water.
-          const segs = BANDS.map(() => []);
+          // This frame's segments by speed band, wider in faster water, and by fade.
+          const segs = Array.from({ length: BANDS.length * FADES.length }, () => []);
           const k = this.options.particleSpeed;
           for (const p of this._particles) {
             if (--p.age < 0 || !p.live) {
@@ -418,7 +489,8 @@
             const sp = Math.hypot(uv[0], uv[1]);
             const m = sp > 0 ? k / Math.sqrt(sp) : 0;
             const nx = p.x + uv[0] * m, ny = p.y - uv[1] * m;
-            segs[bandOf(sp)].push(p.x, p.y, nx, ny);
+            if (this._onLand(view, nx, ny)) { p.age = -1; continue; }
+            segs[bandOf(sp) * FADES.length + uv[2]].push(p.x, p.y, nx, ny);
             p.x = nx; p.y = ny;
             if (nx < 0 || ny < 0 || nx > w || ny > h) p.age = -1;
           }
@@ -431,13 +503,16 @@
             }
           };
           const width = b => (b === 0 ? 1 : 1.3 + Math.min(BANDS[b][0], 2) * 0.6);
-          segs.forEach((xy, b) => {
+          segs.forEach((xy, k) => {
             if (!xy.length) return;
+            const b = Math.floor(k / FADES.length);
             path(xy);
+            ctx.globalAlpha = FADES[k % FADES.length];
             ctx.strokeStyle = b === 0 ? 'rgba(255,255,255,0.8)' : STROKES[b];
             ctx.lineWidth = width(b);
             ctx.stroke();
           });
+          ctx.globalAlpha = 1;
           this._frame = requestAnimationFrame(step);
         };
         this._frame = requestAnimationFrame(step);

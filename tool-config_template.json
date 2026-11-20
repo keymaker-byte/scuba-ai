@@ -23,6 +23,10 @@
     "max_speed_ms": 0.25
   },
 
+  "blend_model": {
+    "max_speed_ms": 0.25
+  },
+
   "ncei_depth": {
     "user_agent_email": "<your-email>@example.com",
     "default_region": "<VDatum region for your coordinates, e.g. westcoast; see tools/ncei_depth.py --help>"
