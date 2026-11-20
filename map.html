@@ -55,13 +55,68 @@
   }
   #data-refresh:hover { background: #e5e7eb; }
   #count { color: #555; font-size: 12px; margin-top: 6px; }
-  #currents-status { margin-left: 20px; }
-  #currents-status:empty { display: none; }
+  /* The layer readouts keep a fixed number of lines whatever they hold, so the panel never
+     changes size: a reading wraps inside its lines, and an empty line shows its placeholder. */
+  .fixed-lines {
+    margin-left: 20px; overflow: hidden;
+    display: -webkit-box; -webkit-box-orient: vertical;
+  }
+  .fixed-lines:empty::before { content: attr(data-placeholder); color: #9ca3af; }
+  #currents-status { font-variant-numeric: tabular-nums; line-height: 16px; height: 32px; -webkit-line-clamp: 2; }
   #currents-status.error { color: #7f1d1d; }
-  #time-label { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
-  #time-sub { font-size: 11px; color: #6b7280; font-variant-numeric: tabular-nums; margin-top: 1px; }
-  #time-slider { width: 100%; margin: 6px 0 2px; accent-color: #2563eb; }
-  #time-ends { display: flex; justify-content: space-between; font-size: 10px; color: #6b7280; }
+  #depth-status { font-variant-numeric: tabular-nums; line-height: 16px; height: 48px; -webkit-line-clamp: 3; }
+  #depth-status.error { color: #7f1d1d; }
+  /* Depth tiles one pixel larger than their 256 px slot, so neighbours overlap; at the
+     fractional positions a high-density screen gives them, exact fits leave hairline gaps. */
+  .leaflet-paneDepth-pane canvas.leaflet-tile { width: 257px !important; height: 257px !important; }
+  /* A layer's colour key, always in place: faded while the layer is off. */
+  .legend { margin: 2px 0 4px 20px; opacity: 0.4; }
+  .legend.on { opacity: 1; }
+  .legend .bar { display: flex; height: 10px; border-radius: 2px; overflow: hidden; border: 1px solid rgba(0,0,0,0.15); }
+  .legend .bar span { flex: 1; }
+  .legend .ticks { display: flex; font-size: 10px; color: #6b7280; font-variant-numeric: tabular-nums; }
+  .legend .ticks span { flex: 1; text-align: left; margin-left: -3px; white-space: nowrap; }
+  /* Centred under the map, starting right of the open panel (12 px in, 240 px plus padding
+     wide) when the window is too narrow for both. */
+  #time-bar {
+    --bar-left: max(280px, calc((100% - 720px) / 2));
+    position: absolute; bottom: 28px; left: var(--bar-left); z-index: 1000;
+    width: min(720px, calc(100% - var(--bar-left) - 16px)); box-sizing: border-box;
+    background: rgba(255,255,255,0.96); border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25); padding: 10px 18px 8px; color: #1a1a1a;
+  }
+  #time-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  #time-label { font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  #time-sub { font-size: 12px; color: #6b7280; font-variant-numeric: tabular-nums; }
+  #time-slider {
+    -webkit-appearance: none; appearance: none; display: block;
+    width: 100%; height: 28px; margin: 6px 0 0; background: transparent; cursor: pointer;
+  }
+  #time-slider::-webkit-slider-runnable-track {
+    height: 8px; border-radius: 4px;
+    background: linear-gradient(to right, #2563eb var(--fill, 0%), #dbe3f0 var(--fill, 0%));
+  }
+  #time-slider::-moz-range-track { height: 8px; border-radius: 4px; background: #dbe3f0; }
+  #time-slider::-moz-range-progress { height: 8px; border-radius: 4px; background: #2563eb; }
+  #time-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 22px; height: 22px; margin-top: -7px; border-radius: 50%;
+    background: #2563eb; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.35);
+  }
+  #time-slider::-moz-range-thumb {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #2563eb; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.35);
+  }
+  #time-slider:focus-visible { outline: 2px solid #93c5fd; outline-offset: 2px; border-radius: 6px; }
+  /* Day marks under the thumb's centre at each day: the thumb's 22 px keep it 11 px from either end. */
+  #time-ends { position: relative; height: 15px; font-size: 11px; color: #6b7280; }
+  #time-ends span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+  #time-ends span:first-child { transform: translateX(-11px); }
+  #time-ends span:last-child { transform: translateX(calc(-100% + 11px)); }
+  @media (max-width: 600px) {
+    #time-bar { --bar-left: 16px; bottom: 20px; padding: 8px 12px 6px; z-index: 1001; }
+    #time-label { font-size: 13px; }
+    #time-sub { font-size: 11px; }
+  }
   #panel-footer {
     margin-top: 10px; padding-top: 8px; border-top: 1px solid #e5e7eb;
   }
@@ -154,6 +209,21 @@
 <body>
 
 <div id="error-banner"></div>
+<div id="time-bar">
+  <div id="time-head">
+    <div id="time-label"></div>
+    <div id="time-sub"></div>
+  </div>
+  <input type="range" id="time-slider" min="0" max="720" step="1" value="0" aria-label="Map time">
+  <div id="time-ends">
+    <span style="left: 11px">Now</span>
+    <span style="left: calc(11px + (100% - 22px) * 0.2)">+1 day</span>
+    <span style="left: calc(11px + (100% - 22px) * 0.4)">+2 days</span>
+    <span style="left: calc(11px + (100% - 22px) * 0.6)">+3 days</span>
+    <span style="left: calc(11px + (100% - 22px) * 0.8)">+4 days</span>
+    <span style="left: calc(100% - 11px)">+5 days</span>
+  </div>
+</div>
 <div id="panel">
   <div id="panel-header">
     <div id="brand">
@@ -207,15 +277,12 @@
       <label><input type="checkbox" id="toggle-satellite">Satellite imagery</label>
       <label><input type="checkbox" id="toggle-depth-contours-noaa">Depth contours (NOAA)</label>
       <label><input type="checkbox" id="toggle-depth-contours-emodnet">Depth contours (EMODnet)</label>
+      <label><input type="checkbox" id="toggle-depth-ncei">Depth (NCEI)</label>
+      <div class="legend" id="depth-legend"></div>
+      <div class="hint fixed-lines" id="depth-status" data-placeholder="Depth under the pointer"></div>
       <label><input type="checkbox" id="toggle-currents">Tidal currents (ADCIRC)</label>
-      <div class="hint" id="currents-status"></div>
-    </div>
-
-    <div class="section" id="time-section">
-      <div id="time-label"></div>
-      <div id="time-sub"></div>
-      <input type="range" id="time-slider" min="0" max="720" step="1" value="0" aria-label="Map time">
-      <div id="time-ends"><span>Now</span><span>+5 days</span></div>
+      <div class="legend" id="currents-legend"></div>
+      <div class="hint fixed-lines" id="currents-status" data-placeholder="Current under the pointer"></div>
     </div>
 
     <div class="section">
@@ -261,6 +328,8 @@
 <script src="map/data.js"></script>
 <script src="map/tz-lookup.js"></script>
 <script src="map/currents.js"></script>
+<script src="map/tides.js"></script>
+<script src="map/depth.js"></script>
 <script src="map/currents/index.js"></script>
 <script>
 const COLORS = {
@@ -326,6 +395,8 @@ L.control.zoom({ position: 'topright' }).addTo(map);
 // add order, which is why the parking icon (an L.marker) was floating above
 // the circleMarker pins (in overlayPane) no matter what. Explicit panes with
 // their own z-index give each pin type a fixed, order-independent layer.
+map.createPane('paneDepth'); map.getPane('paneDepth').style.zIndex = 402;
+map.getPane('paneDepth').style.pointerEvents = 'none';
 map.createPane('paneCurrents'); map.getPane('paneCurrents').style.zIndex = 405;
 map.getPane('paneCurrents').style.pointerEvents = 'none';
 map.createPane('paneParking'); map.getPane('paneParking').style.zIndex = 410;
@@ -738,9 +809,17 @@ function mapTime() {
   return step === 0 ? floorTo(Date.now(), 60000) : timeBase + step * TIME_STEP_MS;
 }
 function showMapTime() {
+  timeSlider.style.setProperty('--fill', `${(100 * timeSlider.value) / timeSlider.max}%`);
   timeLabel.textContent = (Number(timeSlider.value) === 0 ? 'Now, ' : '') + timeFormatFor(mapTimeZone()).format(mapTime());
   timeSub.textContent = subTimeFormat.format(mapTime());
-  if (currentLayer) currentLayer.setTime(mapTime());
+  if (currentLayer) {
+    currentLayer.setTime(mapTime());
+    if (typeof currentLastPoint !== 'undefined' && currentLastPoint) showCurrentAt(currentLastPoint);
+  }
+  if (typeof depthLayer !== 'undefined' && depthLayer) {
+    depthLayer.setTime(mapTime());
+    if (depthLastPoint) showDepthAt(depthLastPoint);
+  }
 }
 timeSlider.addEventListener('input', showMapTime);
 map.on('moveend', showMapTime);
@@ -795,9 +874,20 @@ function loadCurrents() {
   return currentsLoading;
 }
 
+const currentsLegend = document.getElementById('currents-legend');
+const CURRENTS_HINT = 'Point at the water for its current';
+(function buildCurrentsLegend() {
+  const LABELS = new Set([0, 0.1, 0.25, 0.5, 0.9, 1.4, 2.2]);
+  const bands = DiveCurrents.BANDS;
+  const bar = bands.map(([, rgb]) => `<span style="background:rgb(${rgb.join(',')})"></span>`).join('');
+  const ticks = bands.map(([from]) => `<span>${LABELS.has(from) ? from : ''}</span>`).join('');
+  currentsLegend.innerHTML = `<div class="bar">${bar}</div><div class="ticks">${ticks}</div>`;
+})();
+
 async function applyCurrentsToggle() {
   if (!toggleCurrents.checked) {
     if (currentLayer) map.removeLayer(currentLayer);
+    currentsLegend.classList.remove('on');
     if (!currentsStatus.classList.contains('error')) currentsStatus.textContent = '';
     return;
   }
@@ -806,10 +896,11 @@ async function applyCurrentsToggle() {
   try {
     const layer = await loadCurrents();
     currentLayer = layer;
-    currentsStatus.textContent = '';
+    currentsStatus.textContent = CURRENTS_HINT;
     if (toggleCurrents.checked) {
       layer.setTime(mapTime());
       map.addLayer(layer);
+      currentsLegend.classList.add('on');
     }
   } catch (err) {
     currentsStatus.classList.add('error');
@@ -818,6 +909,161 @@ async function applyCurrentsToggle() {
 }
 toggleCurrents.addEventListener('change', applyCurrentsToggle);
 showMapTime();
+
+// Seabed depth from NCEI's coastal DEM at the map's moment, tide included. The tiles carry
+// the depth below NAVD 88 itself (`tools/ncei_depth.py --export-map` writes map/depth/ncei/ and
+// map/depth/ncei.js); the tide stations and the points tying NAVD 88 to MLLW come from
+// map/tides/stations.js (`tools/noaa_tide.py export-map`). Both load when the checkbox is first
+// ticked, and each reproduces the values its Python tool computed before anything is drawn;
+// a mismatch stops the layer with a message. The colours follow the time slider. While the
+// layer is on, the lines under the checkbox read the point under the pointer (or at a tap):
+// depth below MLLW + the tide = the depth at the map's moment.
+const toggleDepthNcei = document.getElementById('toggle-depth-ncei');
+const depthStatus = document.getElementById('depth-status');
+const depthLegend = document.getElementById('depth-legend');
+const DEPTH_HINT = 'Point at the water for its depth';
+// A readout longer than its fixed lines is cut there; hovering shows it whole.
+for (const el of document.querySelectorAll('.fixed-lines')) {
+  new MutationObserver(() => { el.title = el.textContent; }).observe(el, { childList: true, characterData: true, subtree: true });
+}
+let depthSource = null;
+var depthLayer = null;  // var: showMapTime, above, reads it before this line runs
+let depthLoading = null;
+
+(function buildDepthLegend() {
+  const bands = DiveDepth.BANDS;
+  const LABELS = new Set([0, 5, 10, 20, 40, 100]);
+  const swatch = c => `<span style="background:rgb(${c.join(',')})"></span>`;
+  const bar = swatch(DiveDepth.DRY) + bands.map(b => swatch(b.color)).join('');
+  const ticks = ['dry', 0, ...bands.slice(0, -1).map(b => b.to)]
+    .map(d => `<span>${d === 'dry' || LABELS.has(d) ? d : ''}</span>`).join('');
+  depthLegend.innerHTML = `<div class="bar">${bar}</div><div class="ticks">${ticks}</div>`;
+})();
+
+function loadDepth() {
+  if (!depthLoading) {
+    depthLoading = (async () => {
+      await loadScript('map/tides/stations.js');
+      if (!window.MAP_TIDES) throw new Error('map/tides/stations.js did not define MAP_TIDES');
+      const tides = new DiveTides.TideModel(window.MAP_TIDES);
+      const tideCheck = tides.selfCheck();
+      if (!tideCheck.ok) {
+        throw new Error('the tide stations failed their self-check against noaa_tide.py ' +
+          `(off by up to ${tideCheck.worst.toFixed(3)} m); regenerate them with export-map`);
+      }
+      await loadScript('map/depth/ncei.js');
+      const meta = (window.MAP_DEPTH || {}).ncei;
+      if (!meta) throw new Error('map/depth/ncei.js did not define MAP_DEPTH.ncei');
+      const source = new DiveDepth.DepthSource(meta, tides);
+      let check;
+      try {
+        check = await source.check(map);
+      } catch (err) {
+        if (err && err.name === 'SecurityError') {
+          throw new Error('the browser blocks reading the depth tiles from a local file; open the map from its web address');
+        }
+        throw err;
+      }
+      if (!check.ok) {
+        throw new Error('it failed its self-check against ncei_depth.py ' +
+          `(off by up to ${Number.isFinite(check.worst) ? check.worst.toFixed(2) + ' m' : 'a missing tile'}); ` +
+          'regenerate it with --export-map');
+      }
+      depthSource = source;
+      const layer = new DiveDepth.DepthLayer(source, { pane: 'paneDepth' });
+      layer.on('tidefailure', e => {
+        depthStatus.classList.add('error');
+        depthStatus.textContent = `Depth unavailable: ${e.error.message}`;
+      });
+      return layer;
+    })();
+    depthLoading.catch(() => { depthLoading = null; });
+  }
+  return depthLoading;
+}
+
+async function applyDepthToggle() {
+  if (!toggleDepthNcei.checked) {
+    if (depthLayer) map.removeLayer(depthLayer);
+    depthLegend.classList.remove('on');
+    if (!depthStatus.classList.contains('error')) depthStatus.textContent = '';
+    return;
+  }
+  depthStatus.classList.remove('error');
+  if (!depthLayer) depthStatus.textContent = 'Loading depth…';
+  try {
+    const layer = await loadDepth();
+    depthLayer = layer;
+    depthStatus.textContent = DEPTH_HINT;
+    if (toggleDepthNcei.checked) {
+      layer.setTime(mapTime());
+      map.addLayer(layer);
+      depthLegend.classList.add('on');
+    }
+  } catch (err) {
+    depthStatus.classList.add('error');
+    depthStatus.textContent = `Depth unavailable: ${err.message}`;
+  }
+}
+toggleDepthNcei.addEventListener('change', applyDepthToggle);
+
+// The point under the pointer, one lookup per animation frame at most, read again when the
+// slider moves.
+let depthQuery = null;
+var depthLastPoint = null;
+let depthFrame = 0;
+const metres = v => `${v < 0 ? '−' : ''}${Math.abs(v).toFixed(1)} m`;
+const signed = v => `${v < 0 ? '−' : '+'}${Math.abs(v).toFixed(1)} m`;
+async function showDepthAt(latlng) {
+  if (!depthSource || !depthLayer || !map.hasLayer(depthLayer)) return;
+  depthLastPoint = latlng;
+  const asked = {};
+  depthQuery = asked;
+  let r;
+  try {
+    r = await depthSource.readAt(map, latlng, mapTime());
+  } catch (err) {
+    return;
+  }
+  if (depthQuery !== asked || !map.hasLayer(depthLayer) || depthStatus.classList.contains('error')) return;
+  if (r && r.lake) {
+    depthStatus.textContent = `${r.lake}: ${metres(r.depth)} below the surface`;
+    return;
+  }
+  if (r === null || r.land) {
+    depthStatus.textContent = r === null ? 'No NCEI depth here' : 'Above the highest tide';
+    return;
+  }
+  const total = r.total >= 0 ? metres(r.total) : `dry, ${(-r.total).toFixed(1)} m above the water`;
+  depthStatus.textContent = `MLLW ${metres(r.mllw)} + tide ${signed(r.tide)} = ${total}`;
+}
+map.on('mousemove', e => {
+  if (depthFrame) return;
+  depthFrame = requestAnimationFrame(() => { depthFrame = 0; showDepthAt(e.latlng); });
+});
+map.on('click', e => showDepthAt(e.latlng));
+
+// The tidal current under the pointer at the map's moment: its speed, and the direction it
+// sets toward, as `adcirc_current.py at` reads it.
+var currentLastPoint = null;  // var: showMapTime, above, reads it before this line runs
+const COMPASS = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
+function showCurrentAt(latlng) {
+  if (!currentLayer || !map.hasLayer(currentLayer) || currentsStatus.classList.contains('error')) return;
+  currentLastPoint = latlng;
+  const r = currentLayer.readAt(latlng.lat, latlng.lng);
+  if (!r) {
+    currentsStatus.textContent = 'No tidal current model here';
+    return;
+  }
+  const toward = Math.round(r.toward) % 360;
+  currentsStatus.textContent = `${r.speed.toFixed(2)} m/s toward ${String(toward).padStart(3, '0')}° (${COMPASS[Math.round(toward / 22.5) % 16]})`;
+}
+let currentFrame = 0;
+map.on('mousemove', e => {
+  if (currentFrame) return;
+  currentFrame = requestAnimationFrame(() => { currentFrame = 0; showCurrentAt(e.latlng); });
+});
+map.on('click', e => showCurrentAt(e.latlng));
 
 toggleSatellite.addEventListener('change', applySatelliteToggle);
 toggleDepthContoursNoaa.addEventListener('change', applyNoaaContourToggle);
@@ -837,6 +1083,7 @@ const persistedControls = {
   contoursNoaa: toggleDepthContoursNoaa,
   contoursEmodnet: toggleDepthContoursEmodnet,
   currents: toggleCurrents,
+  depthNcei: toggleDepthNcei,
 };
 
 function saveMenuState() {
@@ -864,11 +1111,13 @@ if (savedMenuState) {
   toggleDepthContoursNoaa.checked = !!savedMenuState.contoursNoaa;
   toggleDepthContoursEmodnet.checked = !!savedMenuState.contoursEmodnet;
   toggleCurrents.checked = !!savedMenuState.currents;
+  toggleDepthNcei.checked = !!savedMenuState.depthNcei;
   // region-filter's own options don't exist yet; restored once they're built, below.
   applySatelliteToggle();
   applyNoaaContourToggle();
   applyEmodnetContourToggle();
   applyCurrentsToggle();
+  applyDepthToggle();
 }
 
 for (const [key, el] of Object.entries(persistedControls)) {
