@@ -2,7 +2,7 @@
 
 <https://osmdata.openstreetmap.de/data/land-polygons.html>, <https://www.hydrosheds.org/products/hydrolakes>
 
-Which way a dive site's shore faces, and how far wind travels over open water to reach it from each of 16 compass directions. It reads two global shoreline datasets, OpenStreetMap's coastline for the sea and HydroLAKES for lakes, both downloaded once and read locally through `tools/lib/shapes.py`, shared with `ncei_depth`, so it works at any coordinate worldwide with the same method everywhere.
+Which way a dive site's shore faces, and how far wind travels over open water to reach it from each of 16 compass directions. It reads two global shoreline datasets, OpenStreetMap's coastline for the sea and HydroLAKES for lakes, both downloaded once and read locally through `tools/lib/shapes.py`, a shared library, so it works at any coordinate worldwide with the same method everywhere.
 
 - **Use it for.** Writing a site file's Wind section, the `create-dive-site` skill's wind step: the Entry shore facing and Dive area shore facing rows, and the shore relation and fetch for each of the 16 directions that sort it into Bad, short fetch, Mixed or Fine, whose sectors a plan then passes to the wind forecast tool for its go / no go call.
 - **Sea shoreline.** OpenStreetMap's coastline as land polygons, published by osmdata.openstreetmap.de and rebuilt from the live map daily. A ~900 MB download, unpacked into `tools/db/land_polygons/` (1.2 GB) and read locally after that. Deleting the folder fetches the current edition on the next run. The polygons come cut into pieces on a roughly 1° grid; every cut runs through land between two points on the shoreline, so it never stands between a site and open water.
