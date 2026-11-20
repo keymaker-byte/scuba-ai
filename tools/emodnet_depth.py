@@ -2,7 +2,6 @@
 """Seabed depth at a coordinate from EMODnet Bathymetry.
 
   emodnet_depth.py LAT LON    depth below LAT, from EMODnet's survey-backed grid
-
 """
 import argparse
 import json

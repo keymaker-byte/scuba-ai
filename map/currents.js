@@ -4,9 +4,9 @@
 // mean_longitudes, _base_nodal, nodal and reconstruct, and each overlay file carries values the
 // tool computed itself, which `selfCheck` reproduces before the overlay is allowed to draw.
 //
-// Two layers on one Leaflet layer: speed as shades of blue, and particles that drift along the
-// flow. Both read a regular grid laid over the mesh, evenly spaced in Web Mercator so that it
-// maps onto the screen with a plain scale and offset at every zoom.
+// Particles that drift along the flow, each trail coloured by its speed, over whatever lies
+// beneath (the depth layer among it). They read a regular grid laid over the mesh, evenly spaced
+// in Web Mercator so that it maps onto the screen with a plain scale and offset at every zoom.
 (function (root) {
   'use strict';
 
@@ -233,57 +233,62 @@
 
   // ---- colour ---------------------------------------------------------------------------------
 
-  // Speed in m/s to a colour, in stepped bands so each level stands apart from the next: light
-  // sky blue at slack, through teal, green and yellow, to red in the fastest passes. The slow
-  // bands are pale and partly transparent, close to the base map's own water, so the shoreline,
-  // where the water is usually slow, blends into the map. Each band runs from its own speed up
-  // to the next band's; the 0.25 m/s step is the window threshold.
+  // Speed in m/s to a trail colour, in stepped bands so each level stands apart from the next,
+  // in hues the depth layer's blues leave free: white at still water and violet through the slow
+  // bands, a jump to teal at SLOW, the window threshold, then green and yellow to red in the
+  // fastest passes. Each band runs from its own speed up to the next band's; the legend shows
+  // the same bands.
+  const SLOW = 0.25;
   const BANDS = [
-    [0.00, [125, 211, 252], 0.40],
-    [0.05, [56, 189, 248], 0.50],
-    [0.10, [14, 165, 233], 0.58],
-    [0.18, [2, 132, 199], 0.64],
-    [0.25, [3, 105, 161], 0.68],
-    [0.33, [29, 78, 216], 0.70],
-    [0.40, [18, 163, 168], 0.72],
-    [0.50, [20, 184, 166], 0.72],
-    [0.60, [47, 191, 138], 0.72],
-    [0.70, [34, 197, 94], 0.72],
-    [0.80, [124, 207, 79], 0.72],
-    [0.90, [163, 230, 53], 0.72],
-    [1.00, [200, 214, 47], 0.72],
-    [1.12, [230, 222, 40], 0.72],
-    [1.25, [250, 204, 21], 0.72],
-    [1.37, [251, 176, 30], 0.72],
-    [1.50, [249, 147, 34], 0.72],
-    [1.75, [240, 115, 30], 0.72],
-    [2.00, [232, 84, 28], 0.72],
-    [2.25, [220, 55, 30], 0.72],
-    [2.50, [200, 29, 29], 0.72],
-    [2.75, [153, 27, 27], 0.72],
+    [0.00, [255, 255, 255]],
+    [0.05, [196, 181, 253]],
+    [0.10, [167, 139, 250]],
+    [0.15, [139, 92, 246]],
+    [0.20, [109, 40, 217]],
+    [0.25, [20, 184, 166]],
+    [0.35, [34, 197, 94]],
+    [0.50, [132, 204, 22]],
+    [0.70, [234, 179, 8]],
+    [0.90, [245, 158, 11]],
+    [1.10, [249, 115, 22]],
+    [1.40, [239, 68, 68]],
+    [1.80, [220, 38, 38]],
+    [2.20, [185, 28, 28]],
+    [2.75, [127, 29, 29]],
   ];
-  const LUT_MAX = 3.0, LUT_N = 301;
-  const LUT = new Uint8ClampedArray(LUT_N * 4);
-  for (let i = 0; i < LUT_N; i++) {
-    const sp = (i / (LUT_N - 1)) * LUT_MAX + 1e-9;
+  const STROKES = BANDS.map(([, rgb]) => `rgb(${rgb.join(',')})`);
+  const bandOf = sp => {
     let k = 0;
     while (k < BANDS.length - 1 && sp >= BANDS[k + 1][0]) k++;
-    const [, rgb, alpha] = BANDS[k];
-    for (let ch = 0; ch < 3; ch++) LUT[i * 4 + ch] = rgb[ch];
-    LUT[i * 4 + 3] = 255 * alpha;
-  }
+    return k;
+  };
 
   // ---- the Leaflet layer ----------------------------------------------------------------------
 
   function makeLayer(L) {
     return L.Layer.extend({
-      options: { pane: 'overlayPane', particleSpeed: 0.9, particleDensity: 1 / 220, maxParticles: 6000 },
+      options: { pane: 'overlayPane', particleSpeed: 1.4, particleDensity: 1 / 220, maxParticles: 6000 },
 
       initialize(fields, options) {
         L.setOptions(this, options);
         this._grids = fields.map(f => new FieldGrid(f));
         this._time = Date.now();
         this._particles = [];
+      },
+
+      // The current at a coordinate at the layer's moment, exactly as `adcirc_current.py at`
+      // reads an extract there: { u, v, speed, toward } in m/s and degrees true, null outside
+      // every mesh.
+      readAt(lat, lon) {
+        for (const g of this._grids) {
+          if (g.field.time !== this._time) {
+            g.field.computeNodes(this._time);
+            g.update();
+          }
+          const r = g.field.at(lat, lon);
+          if (r) return r;
+        }
+        return null;
       },
 
       setTime(ms) {
@@ -293,24 +298,14 @@
         this._pendingTime = requestAnimationFrame(() => {
           this._pendingTime = null;
           this._computeField();
-          this._drawSpeed();
         });
       },
 
       onAdd(map) {
         const pane = map.getPane(this.options.pane);
-        this._speedCanvas = L.DomUtil.create('canvas', 'leaflet-zoom-hide current-speed', pane);
         this._particleCanvas = L.DomUtil.create('canvas', 'leaflet-zoom-hide current-particles', pane);
-        for (const c of [this._speedCanvas, this._particleCanvas]) {
-          c.style.position = 'absolute';
-          c.style.pointerEvents = 'none';
-        }
-        this._raster = this._grids.map(g => {
-          const c = document.createElement('canvas');
-          c.width = g.cols;
-          c.height = g.rows;
-          return { canvas: c, ctx: c.getContext('2d'), image: c.getContext('2d').createImageData(g.cols, g.rows) };
-        });
+        this._particleCanvas.style.position = 'absolute';
+        this._particleCanvas.style.pointerEvents = 'none';
         map.on('moveend zoomend resize viewreset', this._reset, this);
         map.on('zoomstart movestart', this._pause, this);
         this._computeField();
@@ -323,25 +318,14 @@
         cancelAnimationFrame(this._frame);
         cancelAnimationFrame(this._pendingTime);
         this._pendingTime = null;
-        this._speedCanvas.remove();
         this._particleCanvas.remove();
       },
 
       _computeField() {
-        this._grids.forEach((g, n) => {
+        for (const g of this._grids) {
           g.field.computeNodes(this._time);
           g.update();
-          const { image } = this._raster[n];
-          const px = image.data;
-          for (let i = 0; i < g.elem.length; i++) {
-            const o = i * 4;
-            if (g.elem[i] === 0) { px[o + 3] = 0; continue; }
-            const sp = Math.hypot(g.u[i], g.v[i]);
-            const k = Math.min(LUT_N - 1, Math.floor((sp / LUT_MAX) * (LUT_N - 1))) * 4;
-            px[o] = LUT[k]; px[o + 1] = LUT[k + 1]; px[o + 2] = LUT[k + 2]; px[o + 3] = LUT[k + 3];
-          }
-          this._raster[n].ctx.putImageData(image, 0, 0);
-        });
+        }
       },
 
       _pause() {
@@ -355,7 +339,7 @@
         const size = map.getSize();
         const ratio = window.devicePixelRatio || 1;
         const topLeft = map.containerPointToLayerPoint([0, 0]);
-        for (const c of [this._speedCanvas, this._particleCanvas]) {
+        for (const c of [this._particleCanvas]) {
           c.width = size.x * ratio;
           c.height = size.y * ratio;
           c.style.width = `${size.x}px`;
@@ -373,22 +357,9 @@
           const r0 = Math.max(0, Math.floor(-nw.y / sy)), r1 = Math.min(g.rows, Math.ceil((size.y - nw.y) / sy));
           return { g, nw, sx, sy, visible: c1 > c0 && r1 > r0 };
         });
-        this._drawSpeed();
         this._seedParticles();
         this._pause();
         this._animate();
-      },
-
-      _drawSpeed() {
-        if (!this._size) return;
-        const ctx = this._speedCanvas.getContext('2d');
-        ctx.clearRect(0, 0, this._size.x, this._size.y);
-        ctx.imageSmoothingEnabled = true;
-        this._views.forEach((view, n) => {
-          if (!view.visible) return;
-          const { g, nw, sx, sy } = view;
-          ctx.drawImage(this._raster[n].canvas, nw.x, nw.y, sx * g.cols, sy * g.rows);
-        });
       },
 
       // a random point on screen that sits inside a field's mesh, or null after a few tries
@@ -423,16 +394,16 @@
 
       _animate() {
         const ctx = this._particleCanvas.getContext('2d');
+        ctx.lineCap = 'round';
         const step = () => {
           if (!this._map) return;
           const { x: w, y: h } = this._size;
           ctx.globalCompositeOperation = 'destination-in';
-          ctx.fillStyle = 'rgba(0,0,0,0.92)';
+          ctx.fillStyle = 'rgba(0,0,0,0.95)';
           ctx.fillRect(0, 0, w, h);
           ctx.globalCompositeOperation = 'source-over';
-          ctx.strokeStyle = 'rgba(255,255,255,0.85)';
-          ctx.lineWidth = 1.2;
-          ctx.beginPath();
+          // This frame's segments by speed band, wider in faster water.
+          const segs = BANDS.map(() => []);
           const k = this.options.particleSpeed;
           for (const p of this._particles) {
             if (--p.age < 0 || !p.live) {
@@ -442,13 +413,31 @@
             const view = p.view;
             const uv = view.g.sample((p.x - view.nw.x) / view.sx, (p.y - view.nw.y) / view.sy);
             if (!uv) { p.age = -1; continue; }
-            const nx = p.x + uv[0] * k, ny = p.y - uv[1] * k;
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(nx, ny);
+            // On screen a trail moves with the square root of the speed, so slow water still
+            // visibly drifts while the fastest passes stay readable; 1 m/s is unchanged.
+            const sp = Math.hypot(uv[0], uv[1]);
+            const m = sp > 0 ? k / Math.sqrt(sp) : 0;
+            const nx = p.x + uv[0] * m, ny = p.y - uv[1] * m;
+            segs[bandOf(sp)].push(p.x, p.y, nx, ny);
             p.x = nx; p.y = ny;
             if (nx < 0 || ny < 0 || nx > w || ny > h) p.age = -1;
           }
-          ctx.stroke();
+          // Each band's trails as one path, in its own colour; slow water draws thin and white.
+          const path = xy => {
+            ctx.beginPath();
+            for (let i = 0; i < xy.length; i += 4) {
+              ctx.moveTo(xy[i], xy[i + 1]);
+              ctx.lineTo(xy[i + 2], xy[i + 3]);
+            }
+          };
+          const width = b => (b === 0 ? 1 : 1.3 + Math.min(BANDS[b][0], 2) * 0.6);
+          segs.forEach((xy, b) => {
+            if (!xy.length) return;
+            path(xy);
+            ctx.strokeStyle = b === 0 ? 'rgba(255,255,255,0.8)' : STROKES[b];
+            ctx.lineWidth = width(b);
+            ctx.stroke();
+          });
           this._frame = requestAnimationFrame(step);
         };
         this._frame = requestAnimationFrame(step);
@@ -456,7 +445,7 @@
     });
   }
 
-  const api = { meanLongitudes, nodal, CurrentField, FieldGrid };
+  const api = { meanLongitudes, nodal, CurrentField, FieldGrid, BANDS, SLOW };
   if (typeof module === 'object' && module.exports) {
     module.exports = api;
   } else {

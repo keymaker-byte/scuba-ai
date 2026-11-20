@@ -4,7 +4,6 @@
   diveatlas.py near LAT LON [--radius 2]   every site within a radius (km), nearest first
   diveatlas.py search "seacrest"           fallback: sites whose title matches every term
   diveatlas.py site "Seacrest Cove 2"      one site's page, as plain text
-
 """
 import argparse
 import json

@@ -8,14 +8,6 @@ read from CHS's own predictions kept on this machine.
   chs_current.py fetch [STATION ...] [--near LAT LON --km R] [--all] [--year Y ...]   cache ahead of time
   chs_current.py verify STATION [--date D] [--days N]           compare the cache with CHS's live API
   chs_current.py verify --all [--date D] [--days N]             the same for every cached station
-
-STATION is the CHS five-digit station code, e.g. 07100.
-
-CHS publishes finished predictions, with no harmonic constants to compute from, and only for
-the years it holds. The data lives in tools/db/chs_current/: the station list, one file per
-station, and one file per station and year holding that year's speed series and its slack and
-maximum events. Each is downloaded the first time it is needed. Delete a file, or the folder,
-to fetch CHS's current values again.
 """
 import argparse
 import json

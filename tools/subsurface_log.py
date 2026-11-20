@@ -4,7 +4,6 @@
   subsurface_log.py list [--site S] [--since D] [--limit N]   recent dives, one line each
   subsurface_log.py show SELECTOR                             one dive: aggregates, ratings, marks, notes
   subsurface_log.py profile SELECTOR [--csv]                  one dive: the per-sample series
-
 """
 import argparse
 import csv

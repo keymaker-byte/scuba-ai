@@ -14,7 +14,8 @@ These conventions apply to every site file written in this region.
 ## Depth
 
 - **Datum.** None: fresh water has no tide, so an observed depth is simply true.
-- **Depth range.** The dive log's maximum depths and the research sources; the lakes fall outside the workspace's bathymetry tools.
+- **Tool.** `ncei_depth.md`, the lake bed's depth below the lake's surface at the dive area coordinate. Where the tool gives no depth, the Coordinates row carries none and the gap is reported in chat.
+- **Depth range.** The dive log's maximum depths and the research sources.
 
 ## Current
 

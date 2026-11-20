@@ -4,9 +4,6 @@
   nws_forecast.py at --near LAT LON --time "D HH:MM" --bad S --short S     planning: the call at the entry or exit time
   nws_forecast.py forecast --near LAT LON --date D --bad S --short S       planning: the call for every hour of the day
   nws_forecast.py forecast --near LAT LON --date D                         conditions alone, no call
-
-  S is a sector from the site's Wind section, compass points clockwise (SW-WNW).
-
 """
 import argparse
 import json
@@ -36,9 +33,6 @@ def _cfg(key, default):
 
 
 # ---------------------------------------------------------------- the go / no go call
-# The limits live in this tool's section of tool-config.json. The site's own Wind section names
-# its Bad and short fetch sectors; every other direction counts as Fine, checked against the
-# offshore limit alone.
 
 LIMITS = {
     "go_below_ms": _cfg("go_below_ms", 5.0),
