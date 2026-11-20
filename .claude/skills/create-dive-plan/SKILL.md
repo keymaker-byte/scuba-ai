@@ -39,6 +39,7 @@ Follow the region's planning conventions in their own order: each factor, the to
 
 - **Format.** Follow the format below, present plan in chat.
 - **Time Format.** For time use 12-hour clock system.
+- **Day Format.** Refer to the dive day by its day or date ("Saturday's tide", "on the day"). Use "today", "tonight" or "tomorrow" only for a dive on the calendar day of the session.
 - **Directions Format.** For directions (current, wind) use a human readable format using the 8 Compass Points abbreviations.
 
 ---
