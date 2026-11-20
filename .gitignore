@@ -3,6 +3,6 @@
 .claude/settings.json
 temp/
 tools/db/
-tools/__pycache__/
+__pycache__/
 tool-config.json
 .claude/worktrees/

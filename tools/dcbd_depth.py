@@ -3,10 +3,6 @@
 
   dcbd_depth.py at LAT LON [--radius M]                     depth at a point, and the spread around it
   dcbd_depth.py transect LAT1 LON1 LAT2 LON2 [--step M]     depth every few metres along a line
-
-The grid covers Bonaire and Klein Bonaire from the shoreline out to as deep as the survey reached,
-20 m at most and often less. Land, deeper water and anything unsurveyed hold no data; the tool then
-reports the nearest pixel that has some.
 """
 import argparse
 import json

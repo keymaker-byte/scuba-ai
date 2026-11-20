@@ -4,9 +4,6 @@
   open_meteo_wind.py at --near LAT LON --time "D HH:MM" --tz ZONE --bad S --short S   planning: the call at the entry or exit time
   open_meteo_wind.py forecast --near LAT LON --date D --tz ZONE --bad S --short S     planning: the call for every hour of the day
   open_meteo_wind.py forecast --near LAT LON --date D --tz ZONE                       wind alone, no call
-
-  S is a sector from the site's Wind section, compass points clockwise (SW-WNW).
-
 """
 import argparse
 import json
@@ -40,9 +37,6 @@ CHECK_MODEL = _cfg("cross_check_model", "gfs_seamless")
 
 
 # ---------------------------------------------------------------- the go / no go call
-# The limits live in this tool's section of tool-config.json. The site's own Wind section names
-# its Bad and short fetch sectors; every other direction counts as Fine, checked against the
-# offshore limit alone.
 
 LIMITS = {
     "go_below_ms": _cfg("go_below_ms", 5.0),

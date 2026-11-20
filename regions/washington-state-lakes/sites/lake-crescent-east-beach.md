@@ -5,7 +5,7 @@ A deep, glacially carved lake in Olympic National Park on the Olympic Peninsula,
 | | |
 |---|---|
 | **Location** | Olympic National Park, Clallam County, WA. South shore of Lake Crescent, near the eastern end |
-| **Coordinates** | 48.085275, -123.744945 (East Beach dive area, a short swim out from the beach, on a slope that keeps dropping well past sport diving limits, so no single seabed depth applies) |
+| **Coordinates** | 48.085275, -123.744945 (East Beach dive area, on the slope 140 m out from the beach, 26 m) |
 | **Parking coordinates** | 48.085610, -123.743013, the small unpaved lot at East Beach |
 | **Entry point coordinates** | 48.085592, -123.743128, the East Beach shoreline |
 | **Type** | Shore |

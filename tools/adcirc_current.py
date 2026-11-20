@@ -8,7 +8,6 @@ and EC2015 (Western North Atlantic, Gulf of Mexico and Caribbean Sea).
   adcirc_current.py at --file F --time "D HH:MM" [--position P]       current at a moment
   adcirc_current.py export-map --bbox S W N E [--bbox ...] --name N --label L   the map viewer's overlay
   adcirc_current.py selftest                                          verify the astronomy
-
 """
 import argparse
 import gzip

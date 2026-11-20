@@ -10,13 +10,7 @@
   noaa_tide.py fetch [STATION ...] [--near LAT LON --km R] [--all]   cache stations ahead of time
   noaa_tide.py verify STATION [--date D] [--days N]          compare with NOAA's live API
   noaa_tide.py verify --all                                  compare every cached station
-
-The data lives in tools/db/noaa_tide/: the station list, and one file per station, each
-downloaded from NOAA the first time it is needed. A reference station's file holds its harmonic
-constants and its datums; a subordinate station's holds NOAA's corrections to its reference
-station. Delete a file, or the folder, to fetch NOAA's current values again.
-
-The astronomy is noaa_current.py's (Schureman, with NOAA's conventions).
+  noaa_tide.py export-map --bbox S W N E                     the map viewer's tide stations
 """
 import argparse
 import itertools
@@ -32,12 +26,13 @@ from datetime import date, datetime, time, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import noaa_current as nc  # noqa: E402  the shared astronomy
+import lib.tidal_astronomy as astro  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "tools", "db", "noaa_tide")
 LIST = os.path.join(DB, "stations.json")
 REPORT = os.path.join(DB, "_verify.jsonl")
+VDATUM_FILE = os.path.join(ROOT, "tools", "db", "ncei_depth", "vdatum.json")  # ncei_depth --mllw keeps it
 MD = "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations"
 DG = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
 
@@ -125,8 +120,24 @@ def station(sid, quiet=False):
             sys.exit(f"NOAA: no datums answer for {sid}. Nothing was cached. Retry later.")
         d = {x["name"]: x["value"] for x in dat.get("datums") or []}
         doc["msl"], doc["mllw"], doc["epoch"] = d.get("MSL"), d.get("MLLW"), dat.get("epoch")
+        doc["navd88"] = d.get("NAVD88")
     _save(path, doc)
     return doc
+
+
+def navd88(doc):
+    """NAVD 88's height above MLLW at a reference station, metres, or None where NOAA ties
+    the station to no NAVD 88. A station file cached before this was kept has its datums
+    downloaded again once, and the answer saved with it."""
+    if "navd88" not in doc:
+        dat = get(f"{MD}/{doc['id']}/datums.json?units=metric") or {}
+        if "datums" not in dat:
+            sys.exit(f"NOAA: no datums answer for {doc['id']}. Nothing was changed. Retry later.")
+        doc["navd88"] = {x["name"]: x["value"] for x in dat.get("datums") or []}.get("NAVD88")
+        _save(os.path.join(DB, f"{doc['id']}.json"), doc)
+    if doc["navd88"] is None or doc.get("mllw") is None:
+        return None
+    return doc["navd88"] - doc["mllw"]
 
 
 def reference(doc):
@@ -163,7 +174,7 @@ def zone_name(tz):
 # Degrees per hour of T, s, h, p, p1: what a constituent's argument coefficients add up to.
 RATE = (15.0, 0.54901653, 0.04106864, 0.00464183, 0.00000196)
 
-# Constituents beyond noaa_current's 37: (T, s, h, p, p1) coefficients, constant, nodal parts.
+# Constituents beyond lib/tidal_astronomy.py's 37: (T, s, h, p, p1) coefficients, constant, nodal parts.
 EXTRA = {
     "SIGMA1": ((1, -4, 3, 0, 0), 90, [("O1", 2)]),
     # NOAA's names for pi1, psi1 and phi1, each with no nodal part.
@@ -181,8 +192,8 @@ NAMED = {"OO2": {"O1": 1, "Q1": 1}, "3KM5": {"K2": 1, "K1": 1, "M2": 1}}
 
 
 def _base(name):
-    key = nc.ALIAS.get(name.upper(), name.upper())
-    return nc.CONS.get(key) or EXTRA.get(key)
+    key = astro.ALIAS.get(name.upper(), name.upper())
+    return astro.CONS.get(key) or EXTRA.get(key)
 
 
 def _rate(coef):
@@ -260,7 +271,7 @@ def _spell(key, speed):
 
 
 def prepare(cons, year):
-    nd = nc.nodal(year)
+    nd = astro.nodal(year)
     out = []
     for name, amp, phase, speed in cons:
         if not amp:
@@ -283,7 +294,7 @@ def height(ref, t):
     key = (ref["id"], t.year)
     if key not in _PREP:
         _PREP[key] = prepare(ref["cons"], t.year)
-    s, h, p, _, p1 = nc.longitudes(t)
+    s, h, p, _, p1 = astro.longitudes(t)
     T = 15.0 * (t.hour + t.minute / 60 + t.second / 3600 + t.microsecond / 3.6e9) + 180.0
     z = ref["msl"] - ref["mllw"]
     rad = math.radians
@@ -627,6 +638,74 @@ def when(s):
     return datetime.strptime(s, "%Y-%m-%d %H:%M")
 
 
+MAP_FILE = os.path.join(ROOT, "map", "tides", "stations.js")
+MAP_YEARS_BACK, MAP_YEARS_AHEAD = 1, 10
+
+
+def cmd_export_map(a):
+    """Write map/tides/stations.js for the map viewer's depth layer: every reference station
+    inside the boxes with constants, MSL and MLLW, its constituents prepared for each year the
+    map may ask about and its heights at sample moments, which the viewer reproduces before it
+    uses them; and the points where NAVD 88's height above MLLW is known, from the stations
+    NOAA ties to NAVD 88 and the answers VDatum gave ncei_depth, which place the depth layer's
+    NAVD 88 depths on MLLW."""
+    import random
+    st = station_list()["stations"]
+    inside = lambda lat, lon: any(s <= lat <= n and w <= lon <= ea for s, w, n, ea in a.bbox)
+    ids = sorted(sid for sid, e in st.items() if e["type"] == "R" and inside(e["lat"], e["lon"]))
+    y0 = date.today().year - MAP_YEARS_BACK
+    years = list(range(y0, date.today().year + MAP_YEARS_AHEAD + 1))
+    rng = random.Random(1)
+    out, left_out, datum = [], [], []
+    for sid in ids:
+        doc = station(sid)
+        if not doc.get("cons") or doc.get("msl") is None or doc.get("mllw") is None:
+            left_out.append(f"{sid} {doc['name']}: no constants or no MSL/MLLW datum")
+            continue
+        off = navd88(doc)
+        if off is not None:
+            datum.append({"lat": doc["lat"], "lon": doc["lon"], "navd88": round(off, 4),
+                          "from": f"station {sid}"})
+        prep = {y: prepare(doc["cons"], y) for y in years}
+        checks = []
+        for _ in range(4):
+            t = datetime(rng.choice(years), 1, 1, tzinfo=timezone.utc) + timedelta(minutes=rng.randrange(525600))
+            checks.append({"t": int(t.timestamp() * 1000), "h": round(height(doc, t), 5)})
+        # The highest tide of the year, hourly: ground below it is the tide's to cover.
+        y = date.today().year
+        start = datetime(y, 1, 1, tzinfo=timezone.utc)
+        high = max(height(doc, start + timedelta(hours=k)) for k in range(366 * 24))
+        out.append({
+            "id": sid, "name": doc["name"], "lat": doc["lat"], "lon": doc["lon"],
+            "msl": round(doc["msl"] - doc["mllw"], 4), "high": round(high, 3),
+            "coef": [list(c) for c, _, _ in prep[years[0]]],
+            "years": {str(y): {"arg": [round(k, 5) for _, k, _ in p], "amp": [round(m, 6) for _, _, m in p]}
+                      for y, p in prep.items()},
+            "checks": checks,
+        })
+    if os.path.exists(VDATUM_FILE):
+        with open(VDATUM_FILE) as f:
+            for p in json.load(f).get("samples", []):
+                if inside(p["lat"], p["lon"]):
+                    datum.append({"lat": p["lat"], "lon": p["lon"], "navd88": p["navd88_above_mllw"],
+                                  "from": f"VDatum {p['fetched']}"})
+    if not out:
+        sys.exit("No reference station inside the boxes carries constants and an MLLW datum.")
+    if not datum:
+        sys.exit("No point inside the boxes ties NAVD 88 to MLLW: no station NOAA ties to NAVD 88, "
+                 "and no VDatum answer cached by ncei_depth --mllw.")
+    data = {"built": date.today().isoformat(), "epoch": astro.EPOCH.isoformat(), "rate": list(RATE),
+            "first_year": years[0], "last_year": years[-1], "stations": out, "datum": datum}
+    os.makedirs(os.path.dirname(MAP_FILE), exist_ok=True)
+    with open(MAP_FILE, "w") as f:
+        f.write("// Written by tools/noaa_tide.py export-map; regenerate rather than edit.\n")
+        f.write(f"window.MAP_TIDES = {json.dumps(data, separators=(',', ':'))};\n")
+    print(f"wrote {len(out)} stations, {years[0]} to {years[-1]}, and {len(datum)} NAVD 88 points "
+          f"to map/tides/stations.js ({os.path.getsize(MAP_FILE) / 1e3:.0f} KB)", file=sys.stderr)
+    for line in left_out:
+        print(f"  left out {line}", file=sys.stderr)
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -684,6 +763,11 @@ def main():
     s.add_argument("--time-tol", type=float, default=3.0, help="minutes, default 3")
     s.add_argument("--pause", type=float, default=0.2, help="seconds between stations with --all, default 0.2")
     s.set_defaults(fn=cmd_verify)
+
+    s = sub.add_parser("export-map", help="the map viewer's tide stations, for the depth layer")
+    s.add_argument("--bbox", nargs=4, type=float, action="append", required=True, metavar=("S", "W", "N", "E"),
+                   help="every reference station inside this box; repeatable")
+    s.set_defaults(fn=cmd_export_map)
 
     a = p.parse_args()
     a.fn(a)

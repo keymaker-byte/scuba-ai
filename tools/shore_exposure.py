@@ -4,21 +4,17 @@
   shore_exposure.py LAT LON --entry ELAT ELON       site file, shore site: both shore facings, the swim out, the fetch
   shore_exposure.py LAT LON                         site file, boat site: the dive area shore facing and the fetch
   shore_exposure.py LAT LON ... --json              the same result as JSON
-
 """
 import argparse
 import json
 import math
-import mmap
-import shutil
-import struct
+import os
 import sys
-import urllib.error
-import urllib.request
-import zipfile
 from pathlib import Path
 
-DB = Path(__file__).parent / "db"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib import shapes  # noqa: E402
+
 R_KM = 6371.0
 POINTS = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
           "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
@@ -37,112 +33,10 @@ MAX_FETCH_KM = _cfg("max_fetch_km", 30)
 SHORE_SPAN_M = _cfg("shore_span_m", 250)
 _email = _cfg("user_agent_email", None)
 USER_AGENT = f"dive-planning ({_email})" if _email else "dive-planning"
+shapes.USER_AGENT = USER_AGENT
 
 
-# ---------------------------------------------------------------- shoreline datasets
-# Two global polygon datasets, each one download kept under tools/db/ and fetched again whenever
-# it is missing. The sea shoreline is OpenStreetMap's coastline as land polygons, cut into pieces
-# on a roughly 1° grid so a search reads only the pieces near the site. Lakes are HydroLAKES,
-# every lake of 10 ha or more, with islands as holes; the land polygons count a lake as land.
-
-DATASETS = {
-    "land": {"url": "https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip",
-             "dir": DB / "land_polygons", "stem": "land_polygons", "parts": (".shp", ".shx")},
-    "lakes": {"url": "https://data.hydrosheds.org/file/hydrolakes/HydroLAKES_polys_v10_shp.zip",
-              "dir": DB / "hydrolakes", "stem": "HydroLAKES_polys_v10", "parts": (".shp", ".shx", ".dbf")},
-}
-
-
-def _files(name):
-    d = DATASETS[name]
-    return [d["dir"] / (d["stem"] + ext) for ext in d["parts"]]
-
-
-def ensure(name):
-    """The dataset's extracted files, downloading and unpacking the archive if any is missing."""
-    d, files = DATASETS[name], _files(name)
-    if all(f.exists() for f in files):
-        return
-    d["dir"].mkdir(parents=True, exist_ok=True)
-    part = d["dir"] / "download.zip.part"
-    print(f"{name} dataset missing; downloading {d['url']}", file=sys.stderr)
-    req = urllib.request.Request(d["url"], headers={"User-Agent": USER_AGENT})
-    try:
-        with urllib.request.urlopen(req, timeout=120) as r, open(part, "wb") as f:
-            total = int(r.headers.get("Content-Length") or 0)
-            done = step = 0
-            while chunk := r.read(1 << 20):
-                f.write(chunk)
-                done += len(chunk)
-                if done >= step:
-                    print(f"  {done / 1e6:.0f} / {total / 1e6:.0f} MB", file=sys.stderr)
-                    step += 100 << 20
-    except (urllib.error.URLError, OSError) as e:
-        part.unlink(missing_ok=True)
-        sys.exit(f"{name} download failed: {getattr(e, 'reason', e)}; stop and report it")
-    print("  unpacking", file=sys.stderr)
-    with zipfile.ZipFile(part) as z:
-        for member in z.namelist():
-            for dest in files:
-                if member.rsplit("/", 1)[-1] == dest.name:
-                    tmp = dest.with_suffix(dest.suffix + ".part")
-                    with z.open(member) as src, open(tmp, "wb") as out:
-                        shutil.copyfileobj(src, out, 1 << 20)
-                    tmp.rename(dest)
-    part.unlink()
-    missing = [f.name for f in files if not f.exists()]
-    if missing:
-        sys.exit(f"the {name} archive held no {', '.join(missing)}; its layout may have changed")
-
-
-def polygons(name, lat, lon, km):
-    """Every polygon in the dataset whose bounding box reaches within km of the point, as
-    (record number, rings), each ring a list of (lon, lat). Longitudes are shifted by 360 where
-    the search crosses the antimeridian, so every ring sits on the same side as the point."""
-    ensure(name)
-    shp_path, shx_path = _files(name)[:2]
-    dlat = km / 111.32
-    dlon = min(180.0, km / (111.32 * max(0.01, math.cos(math.radians(lat)))))
-    s, n, w, e = lat - dlat, lat + dlat, lon - dlon, lon + dlon
-    shifts = [0.0] + ([360.0] if w < -180 else []) + ([-360.0] if e > 180 else [])
-    found = []
-    with open(shx_path, "rb") as fx, open(shp_path, "rb") as fs:
-        idx = fx.read()[100:]
-        shp = mmap.mmap(fs.fileno(), 0, access=mmap.ACCESS_READ)
-        try:
-            for rec, (off, _) in enumerate(struct.iter_unpack(">ii", idx)):
-                pos = off * 2 + 8
-                typ, x0, y0, x1, y1 = struct.unpack_from("<i4d", shp, pos)
-                if typ != 5 or y1 < s or y0 > n:
-                    continue
-                shift = next((k for k in shifts if x1 + k >= w and x0 + k <= e), None)
-                if shift is None:
-                    continue
-                nparts, npts = struct.unpack_from("<2i", shp, pos + 36)
-                parts = struct.unpack_from(f"<{nparts}i", shp, pos + 44)
-                xy = struct.unpack_from(f"<{2 * npts}d", shp, pos + 44 + 4 * nparts)
-                bounds = list(parts) + [npts]
-                found.append((rec, [[(xy[2 * i] + shift, xy[2 * i + 1]) for i in range(bounds[j], bounds[j + 1])]
-                                    for j in range(nparts)]))
-        finally:
-            shp.close()
-    return found
-
-
-def lake_record(rec):
-    """A HydroLAKES attribute row, by record number, as {field: text}."""
-    with open(_files("lakes")[2], "rb") as f:
-        head = f.read(32)
-        hlen, rlen = struct.unpack_from("<HH", head, 8)
-        fields, pos = [], 1
-        while (desc := f.read(32))[0] != 0x0D:
-            name = desc[:11].split(b"\0")[0].decode()
-            fields.append((name, pos, desc[16]))
-            pos += desc[16]
-        f.seek(hlen + rec * rlen)
-        row = f.read(rlen)
-    return {k: row[p:p + w].decode("latin-1").strip() for k, p, w in fields}
-
+# ---------------------------------------------------------------- shoreline datasets: lib/shapes.py
 
 # ---------------------------------------------------------------- geometry
 # A local flat projection centred on the dive point, in km: x east, y north. Over the 30 km a fetch
@@ -166,19 +60,6 @@ def _axis_aligned(a, b):
     from the water reaches the shoreline before any cut, so fetch reads every edge; the facing leaves
     these out, losing only a few short real ones."""
     return a[0] == b[0] or a[1] == b[1]
-
-
-def _inside(ring, x, y):
-    c = False
-    for (x1, y1), (x2, y2) in zip(ring, ring[1:] + ring[:1]):
-        if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1):
-            c = not c
-    return c
-
-
-def _contains(rings, lon, lat):
-    """Point in polygon, holes included: inside an odd number of the polygon's rings."""
-    return sum(_inside(r, lon, lat) for r in rings) % 2 == 1
 
 
 def _cross(a, b):
@@ -271,14 +152,14 @@ def exposure(a):
     lat, lon, cap = a.lat, a.lon, a.max_fetch
     proj = _proj(lat, lon)
     lake = None
-    land = polygons("land", lat, lon, cap)
-    if any(_contains(rings, lon, lat) for _, rings in land):
-        lake = next(((rec, rings) for rec, rings in polygons("lakes", lat, lon, 0) if _contains(rings, lon, lat)), None)
+    land = shapes.polygons("land", lat, lon, cap)
+    if any(shapes.contains(rings, lon, lat) for _, rings in land):
+        lake = next(((rec, rings) for rec, rings in shapes.polygons("lakes", lat, lon, 0) if shapes.contains(rings, lon, lat)), None)
         if lake is None:
             sys.exit("the coordinate sits on land, and inside no HydroLAKES lake (10 ha or more); walk it toward the water")
 
     if lake:
-        info = lake_record(lake[0])
+        info = shapes.lake_record(lake[0])
         segs = _segments(lake[1], proj)
         facing_segs = segs
         source = (f"HydroLAKES, {info.get('Lake_name') or 'unnamed lake'} "

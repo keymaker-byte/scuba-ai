@@ -6,8 +6,6 @@ predicted from their archived pre-2016 harmonic constants.
   noaa_legacy_current.py predict STATION [--date D]       slack / max flood / max ebb
   noaa_legacy_current.py window STATION [--date D]        diveable windows under a speed threshold
   noaa_legacy_current.py selftest                         check against NOAA's printed 2013 tables
-
-STATION is the legacy NOAA ID, e.g. PCT1341 on the Pacific or an ACT ID on the Atlantic.
 """
 import argparse
 import bz2

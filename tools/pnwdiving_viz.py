@@ -5,7 +5,6 @@
   pnwdiving_viz.py --site skyline    one site
   pnwdiving_viz.py --max-age 3       only reports from the last N days
   pnwdiving_viz.py --refresh         bypass the cache
-
 """
 import argparse
 import html as H

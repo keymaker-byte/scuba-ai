@@ -2,7 +2,6 @@
 """Seabed depth at a coordinate from the global GEBCO grid, served by OpenTopoData.
 
   gebco_depth.py LAT LON    elevation from GEBCO_2020, ~450 m grid, anywhere on Earth
-
 """
 import argparse
 import json

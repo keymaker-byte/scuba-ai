@@ -4,7 +4,6 @@
   diversatlas.py near LAT LON [--radius 2]   every site within a radius (km), nearest first
   diversatlas.py search "keystone"           fallback: sites whose name matches every term
   diversatlas.py site keystone-jetty         one site's full record
-
 """
 import argparse
 import json
