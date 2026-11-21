@@ -82,21 +82,41 @@ The first test case. 1.4 km from PUG1516, the column-mean version missed its bin
 
 ## Extending it
 
+`blend_model.py` holds the method; what it reads comes through three seams, each a list a new source joins without touching the correction:
+
+- **Tidal databases.** `DATABASES` in `tools/lib/adcirc.py` (ENPAC15, EC2015), picked by `database_for(bbox)` as the one whose domain holds the region's box.
+- **Station networks.** `NETWORKS` in `tools/lib/current_stations.py` (NOAA harmonic, CHS predictions). Each network's `gather` lists its stations in a box from its own tool's cache, and its `prepare` turns one into bins and returns its vertical profile rows.
+- **Bathymetries.** `SOURCES` in `tools/lib/seabed.py` (NCEI tiles, DCBD Bonaire), asked in order for the seabed under each station and map node, from data already on this machine. A station no bathymetry covers takes the database's own depth.
+
 ### A new region on the same database
 
-1. Cache its stations: `noaa_current.py fetch --near`, `chs_current.py fetch --near` for the fit year, and the NCEI tiles where depths are wanted (ask before a download; tiles are large).
+1. Cache its stations (`noaa_current.py fetch --near`, `chs_current.py fetch --near` for the fit year) and the bathymetry where depths are wanted (ask before a download; NCEI tiles are large).
 2. `build --name <region> --bbox S W N E`, then `verify --name <region>`. The at-stations test must read 0, 0, 0; read the hidden and legacy tables against the nearest station and the database alone.
-3. `export-map` for its layer, and `extract --site` on each of its sites.
+3. `export-map` for its layer, and `extract --site` on all of its sites in one run.
 
 `load_region` picks the first region whose box holds a point, so boxes should not overlap.
 
+### A region with no stations
+
+Bonaire is one: EC2015's field around the island, with the nearest current station, in Puerto Rico, about 700 km away. The method degrades in three places, and each is stated in the output:
+
+- **No correction.** With no station within 16 km a point takes the database's own constants (`blend_at` with no candidates); with none in the region at all, every point does.
+- **No measured profile.** `profile_table` finds no rows, and `vfac` falls back to the 1/7 power law over the whole column, speed alone, with no change in timing. Borrowing another region's profile was rejected: the Salish Sea's comes from a cold, stratified, strongly tidal estuary.
+- **No flood name.** With no station within 300 km, `orient` leaves the axis as `principal_axis` gives it, and the header calls flood and ebb the two ends of the axis. Bonaire's current is wind driven, and its plans read the tidal stream's direction alone.
+
+`verify` reports that it has nothing to test and writes a verify file with no stations. Adding a station network that covers such a region turns it into an ordinary one at the next build.
+
 ### A new tidal database
 
-`database_for(bbox)` picks the ADCIRC database whose domain holds the box (`tools/lib/adcirc.py` carries ENPAC15 and EC2015). A different model enters through the same seam: it needs a mesh with element connectivity for the paths, the shore test and the map, and constituents at any point converted to NOAA's convention (`to_noaa`, `TREF`). The blend itself only sees `uv`, the database's complex east and north constituents at a point, so a model that can produce them plugs in without touching the correction.
+A different model enters as a `DATABASES` entry with its reader: it needs a mesh with element connectivity for the paths, the shore test and the map, and constituents at any point converted to NOAA's convention (`to_noaa`, `TREF`). The blend itself only sees `uv`, the database's complex east and north constituents at a point, so a model that can produce them plugs in without touching the correction.
 
 ### A new station network
 
-A source is a dict with `id`, `kind`, `name`, `lat`, `lon`, `flood` and `bins`, each bin [fraction of the depth, steady current cm/s, azimuth, {constituent: complex amplitude in NOAA's convention}]. NOAA's harmonic stations give these directly; CHS shows the route for a network that publishes predictions only: fit constants to a year of them (`harmonic_fit`) and treat the series as one bin at mid-depth, or at its stated depth where the network gives one. Every new kind goes into `cmd_build` beside the NOAA and CHS loops; nothing downstream changes.
+A class in `NETWORKS` with a `kind`, `gather(inbox, fit_year)` returning (stations, others without constants), and `prepare(station, H, Hdem, fit_year, log)` setting `bins` and returning profile rows. A station is a dict with `id`, `kind`, `name`, `lat`, `lon` and `flood`; each bin is [fraction of the depth, steady current cm/s, azimuth, {constituent: complex amplitude in NOAA's convention}]. NOAA's harmonic stations give these directly. CHS shows the route for a network that publishes predictions only: fit constants to a year of them (`harmonic_fit`) and treat the series as one bin at mid-depth, or at its stated depth where the network gives one. Only a network with several bins over a known seabed adds profile rows.
+
+### A new bathymetry
+
+A class in `SOURCES` with a `name`, a `datum` and `elevation(lat, lon)`, answering metres, negative under water, from data already on this machine, or None where it holds nothing. It reads its tool's cache and never downloads; the shared reader belongs in `tools/lib/`, as `dem_tiles.py` and `dcbd.py` do for their tools.
 
 ### Several databases at once
 
@@ -104,4 +124,4 @@ A coast covered by two models, or a model refined by a regional one, would build
 
 ### Changing the method
 
-Change one thing, rebuild, and run `verify`. Keep the at-stations test at zero, compare the hidden and legacy medians with the figures above, and update `blend_model.md` and this file with what was tried and what it scored, kept or not. The settings in force are recorded in each region file under `settings`.
+Change one thing, rebuild, and run `verify`. A change to the region file's layout raises `FORMAT`, which makes every command ask for a rebuild. Keep the at-stations test at zero, compare the hidden and legacy medians with the figures above, and update `blend_model.md` and this file with what was tried and what it scored, kept or not. The settings in force are recorded in each region file under `settings`.

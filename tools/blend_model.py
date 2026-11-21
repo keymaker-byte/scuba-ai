@@ -28,19 +28,17 @@ from lib.adcirc import (CONSTITUENTS, DATABASES, WALK_STEP_M, calibrate, in_doma
                         read_vel_header, read_vel_nodes, walk_in, write_overlay)
 from lib.current_harmonics import events, series  # noqa: E402
 from lib import shapes  # noqa: E402
-from lib.dem_tiles import CachedTiles  # noqa: E402
+from lib.current_stations import NETWORKS, NOAA_DB, cx, noaa_arg, noaa_name  # noqa: E402
+from lib.seabed import Seabed  # noqa: E402
 from lib.tcd import Harmonics, velocity  # noqa: E402
-from lib.tidal_astronomy import ALIAS, CONS, longitudes  # noqa: E402
+from lib.tidal_astronomy import CONS  # noqa: E402
 from lib.tidal_astronomy import nodal as noaa_nodal  # noqa: E402
 
 WORKSPACE = os.path.dirname(HERE)
 DB = os.path.join(HERE, "db", "blend_model")
-NOAA_DB = os.path.join(HERE, "db", "noaa_current")
-CHS_DB = os.path.join(HERE, "db", "chs_current")
 TCD = os.path.join(HERE, "db", "harmonics-dwf-20100529-free.tcd")
 UTC = timezone.utc
 DEG = math.pi / 180
-KN = 0.514444
 
 # The ADCIRC constants are written in NOAA's convention at this instant; both astronomies carry
 # the node factors forward from it, so the result holds for any year.
@@ -57,14 +55,12 @@ PRIOR = 0.3
 EXACT_KM = 0.5
 MIN_AMP = 1.0       # cm/s: a station constituent this small in the database keeps its band's correction
 ABOVE_BOTTOM = 2.0  # m: the lowest measured height above the seabed
-CHS_NAMES = ["M2", "S2", "N2", "K2", "K1", "O1", "P1", "Q1", "2N2", "NU2", "MU2", "L2", "T2", "J1", "M1",
-             "OO1", "2Q1", "RHO", "M4", "MS4", "MN4", "S4", "M6", "2MK3", "MK3", "M3", "M8", "LAM2",
-             "SSA", "SA"]
 BANDS_KM = [(0, 2), (2, 6), (6, REACH_KM), (REACH_KM, None)]
 MARGIN = 0.15       # degrees of mesh kept around a region for the paths through the water
 EXTEND_KM = 1.0     # how far toward shore a point outside the wet mesh takes the mesh edge's constants
 ORIENT_KM = 300.0    # how far through the water the station naming the flood is looked for
 LINE_STEP_M = 10.0  # spacing of the water test along the line from a point to the mesh edge
+FORMAT = 2          # the region file's layout; a region built by another reads as out of date
 
 
 def log(m):
@@ -89,27 +85,11 @@ def resolve_tz(name):
 
 # --- constituents in NOAA's convention ----------------------------------------------------
 
-def noaa_name(name):
-    k = name.replace("(", "").replace(")", "").upper()
-    return ALIAS.get(k, k)
-
-
 def band(name):
     """1 diurnal, 2 semidiurnal, 3 the higher species, 0 long period: the group whose station
     correction a constituent shares when it has none of its own."""
     s = CONS[name][0][0]
     return 0 if s == 0 else 1 if s == 1 else 2 if s == 2 else 3
-
-
-def _noaa_arg(key, t):
-    """NOAA's argument (deg) for a constituent at UTC t, node phase included."""
-    coef, const, parts = CONS[key]
-    nd = noaa_nodal(t.year)
-    u = sum(nd[b][1] * p for b, p in parts)
-    s, h, p, _, p1 = longitudes(t)
-    T = 15.0 * (t.hour + t.minute / 60 + t.second / 3600) + 180.0
-    cT, cs, ch, cp, cp1 = coef
-    return cT * T + cs * s + ch * h + cp * p + cp1 * p1 + const + u
 
 
 def to_noaa(cons, db):
@@ -130,7 +110,7 @@ def to_noaa(cons, db):
         f_noaa = 1.0
         for b, pw in CONS[key][2]:
             f_noaa *= nd[b][0] ** abs(pw)
-        sh = base - _noaa_arg(key, TREF)
+        sh = base - noaa_arg(key, TREF)
         r = 100 * f_adc / f_noaa
         out[key] = (r * c["u_amp"] * cmath.exp(-1j * (c["u_phase"] - sh) * DEG),
                     r * c["v_amp"] * cmath.exp(-1j * (c["v_phase"] - sh) * DEG))
@@ -161,17 +141,12 @@ def adcirc_axis(uv, toward):
     return (az + 180) % 360 if math.cos((toward - az) * DEG) < 0 else az
 
 
-def bin_z(b):
-    return {noaa_name(c[0]): c[1] * cmath.exp(-1j * c[2] * DEG) for c in b["cons"]}
-
-
 def make_bin(Z, mean, az):
     cons = [[k, round(abs(z), 4), round((-math.degrees(cmath.phase(z))) % 360, 3), 0.0, 0.0]
-            for k, z in Z.items() if abs(z) >= 0.0005]
+            for k, z in sorted(Z.items()) if abs(z) >= 0.0005]
     return {"cons": cons, "mean_major": round(mean, 3), "azimuth": round(az, 1)}
 
 
-cx = lambda z: [round(z.real, 6), round(z.imag, 6)]
 xc = lambda v: complex(v[0], v[1])
 
 
@@ -197,7 +172,11 @@ def profile_table(rows, exclude=None):
 
 def vfac(tab, frac):
     """The profile's complex ratio at a fraction of the depth above the seabed. Below the lowest
-    tenth it follows the 1/7 power of the height."""
+    tenth it follows the 1/7 power of the height. A region with no measured profile, one whose
+    stations have too few bins or none, takes the 1/7 power law over the whole column: the
+    speed at a height relative to the column mean, with no change in timing."""
+    if not tab:
+        return complex((8 / 7) * max(frac, 0.01) ** (1 / 7), 0)
     if frac <= tab[0][0]:
         return tab[0][1] * (max(frac, 0.01) / tab[0][0]) ** (1 / 7)
     for (f0, z0), (f1, z1) in zip(tab, tab[1:]):
@@ -367,6 +346,10 @@ def orient(az, dists, sources, exclude=None):
     return az, (s, d)
 
 
+class Refused(Exception):
+    """A point the tool does not cover: on land, or water outside its reach toward shore."""
+
+
 # --- the mesh, and paths through the water --------------------------------------------------
 
 class Mesh:
@@ -408,21 +391,21 @@ class Mesh:
         land = lambda la, lo, rings: any(shapes.contains(r, lo, la) for r in rings)
         near = [r for _, r in shapes.polygons("land", lat, lon, 0)]
         if land(lat, lon, near):
-            sys.exit(f"{lat}, {lon} is on land by OpenStreetMap's coastline: give a coordinate in the water.")
+            raise Refused(f"{lat}, {lon} is on land by OpenStreetMap's coastline: give a coordinate in the water.")
         nodes, w, inside, _ = locate(self.lon, self.lat, self.elems, lon, lat)
         if inside:
             return nodes, w, 0.0
         elat, elon = walk_in(self.lon, self.lat, self.elems, lon, lat, WALK_STEP_M)
         km = math.hypot((elon - lon) * math.cos(math.radians(lat)), elat - lat) * 111.2
         if km > EXTEND_KM:
-            sys.exit(f"{lat}, {lon} is water {km:.2f} km from the {self.db} mesh, past the {EXTEND_KM:g} km the "
+            raise Refused(f"{lat}, {lon} is water {km:.2f} km from the {self.db} mesh, past the {EXTEND_KM:g} km the "
                      f"tool reaches toward shore: the point is outside the tool's coverage. Stop and report it.")
         rings = [r for _, r in shapes.polygons("land", lat, lon, km + 0.1)]
         n = max(1, int(km * 1000 / LINE_STEP_M))
         for i in range(1, n + 1):
             f = i / n
             if land(lat + (elat - lat) * f, lon + (elon - lon) * f, rings):
-                sys.exit(f"{lat}, {lon} is water outside the {self.db} mesh, and land lies between it and the "
+                raise Refused(f"{lat}, {lon} is water outside the {self.db} mesh, and land lies between it and the "
                          f"mesh's nearest edge {km:.2f} km away: the point is outside the tool's coverage. Stop and report it.")
         nodes, w, inside, _ = locate(self.lon, self.lat, self.elems, elon, elat)
         return nodes, w, km
@@ -483,7 +466,7 @@ def load_region(name=None, lat=None, lon=None):
             reg = json.load(f)
         S, W, N, E = reg["bbox"]
         if lat is None or (S <= lat <= N and W <= lon <= E):
-            if "bins" not in (reg["sources"] or [{}])[0]:
+            if reg.get("format") != FORMAT:
                 sys.exit(f"The {n} region was built by an older version of the tool: run `build` again.")
             for s in reg["sources"]:
                 s["uv"] = {k: (xc(v[0]), xc(v[1])) for k, v in s["uv"].items()}
@@ -491,110 +474,17 @@ def load_region(name=None, lat=None, lon=None):
     sys.exit(f"No built region holds {lat}, {lon}; the built regions are {', '.join(names)}.")
 
 
-def chs_signed(code, year):
-    """A CHS station's speed series for one UTC year, every 6 minutes, signed flood positive by
-    the flood or ebb event between the slacks around it."""
-    p = os.path.join(CHS_DB, f"{code}_{year}.json")
-    if not os.path.exists(p):
-        sys.exit(f"CHS station {code} has no cached {year}. Cache it with "
-                 f"`python3 tools/chs_current.py fetch {code} --year {year}`, then build again.")
-    with open(p) as f:
-        d = json.load(f)
-    t0 = datetime(year, 1, 1, tzinfo=UTC)
-    ev = [(t0 + timedelta(minutes=m), k) for m, k, _ in d["events"]]
-    ms = d["mins"] if "mins" in d else range(d["start"], d["start"] + d["step"] * len(d["kn"]), d["step"])
-    out, j = [], 0
-    for m, kn in zip(ms, d["kn"]):
-        if m % 60:
-            continue
-        t = t0 + timedelta(minutes=m)
-        while j < len(ev) and ev[j][0] <= t:
-            j += 1
-        lo = j - 1
-        while lo >= 0 and ev[lo][1] != "S":
-            lo -= 1
-        hi = j
-        while hi < len(ev) and ev[hi][1] != "S":
-            hi += 1
-        kinds = {k for _, k in ev[max(lo, 0):min(hi + 1, len(ev))] if k in ("F", "E")}
-        if len(kinds) == 1:
-            out.append((t, (1 if "F" in kinds else -1) * kn * KN))
-    return out
-
-
-def harmonic_fit(ser, names):
-    """Least squares on hourly samples: the mean (m/s) and {name: (A cm/s, g deg)} in NOAA's
-    convention."""
-    names = [n for n in names if n in CONS]
-    n = 1 + 2 * len(names)
-    M = [[0.0] * n for _ in range(n)]
-    v = [0.0] * n
-    nds = {}
-    for t, y in ser:
-        nd = nds.setdefault(t.year, noaa_nodal(t.year))
-        r = [1.0]
-        for k in names:
-            f = 1.0
-            for b, p in CONS[k][2]:
-                f *= nd[b][0] ** abs(p)
-            V = _noaa_arg(k, t) * DEG
-            r += [f * math.cos(V), f * math.sin(V)]
-        for i in range(n):
-            ri = r[i]
-            v[i] += ri * y
-            Mi = M[i]
-            for j in range(i, n):
-                Mi[j] += ri * r[j]
-    for i in range(n):
-        for j in range(i):
-            M[i][j] = M[j][i]
-    for i in range(n):
-        p = max(range(i, n), key=lambda k: abs(M[k][i]))
-        M[i], M[p], v[i], v[p] = M[p], M[i], v[p], v[i]
-        for k in range(n):
-            if k != i and M[k][i]:
-                f = M[k][i] / M[i][i]
-                Mk, Mi = M[k], M[i]
-                for j in range(i, n):
-                    Mk[j] -= f * Mi[j]
-                v[k] -= f * v[i]
-    x = [v[i] / M[i][i] for i in range(n)]
-    return x[0], {k: (100 * math.hypot(x[1 + 2 * i], x[2 + 2 * i]),
-                      math.degrees(math.atan2(x[2 + 2 * i], x[1 + 2 * i])) % 360) for i, k in enumerate(names)}
-
-
 def cmd_build(a):
     S, W, N, E = a.bbox
     inbox = lambda la, lo: S <= la <= N and W <= lo <= E
     db = database_for(a.bbox)
-    with open(os.path.join(NOAA_DB, "stations.json")) as f:
-        lst = json.load(f)["stations"]
-    missing = [sid for sid, s in lst.items() if inbox(s["lat"], s["lon"])
-               and not os.path.exists(os.path.join(NOAA_DB, f"{sid}.json"))]
-    if missing:
-        sys.exit(f"{len(missing)} NOAA stations in the box are not cached ({', '.join(missing[:8])}...). "
-                 f"Cache them with `python3 tools/noaa_current.py fetch --near <lat> <lon> --km <r>`, then build again.")
+    networks = [n() for n in NETWORKS]
+    kind_of = {n.kind: n for n in networks}
     sources, others = [], []
-    for sid, s in sorted(lst.items()):
-        if not inbox(s["lat"], s["lon"]):
-            continue
-        with open(os.path.join(NOAA_DB, f"{sid}.json")) as f:
-            doc = json.load(f)
-        bins = [b for b in doc["bins"].values() if b.get("cons")]
-        if bins:
-            sources.append({"id": sid, "kind": "noaa", "name": doc["name"], "lat": doc["lat"], "lon": doc["lon"],
-                            "_bins": bins, "flood": bins[0]["azimuth"]})
-        else:
-            kinds = {b.get("type") for b in doc["bins"].values()}
-            others.append({"id": sid, "kind": "noaa subordinate" if "S" in kinds else "noaa weak",
-                           "name": doc["name"], "lat": doc["lat"], "lon": doc["lon"]})
-    for fn in sorted(os.listdir(CHS_DB)):
-        if len(fn) == 10 and fn.endswith(".json"):
-            with open(os.path.join(CHS_DB, fn)) as f:
-                d = json.load(f)
-            if inbox(float(d["lat"]), float(d["lon"])):
-                sources.append({"id": "CHS" + d["code"], "kind": "chs", "name": d["name"], "lat": float(d["lat"]),
-                                "lon": float(d["lon"]), "code": d["code"], "flood": float(d["flood"])})
+    for n in networks:
+        s, o = n.gather(inbox, a.fit_year)
+        sources += s
+        others += o
     legacy = []
     if os.path.exists(TCD):
         h = Harmonics(TCD)
@@ -604,55 +494,35 @@ def cmd_build(a):
                 legacy.append({"id": r["name"], "kind": "legacy", "name": r["name"], "lat": r["lat"], "lon": r["lon"],
                                **{k: r[k] for k in ("ref", "flood_dir", "ebb_dir", "flood_time", "ebb_time",
                                                     "flood_mult", "ebb_mult", "sbf_time", "sbe_time")}})
-    log(f"{sum(s['kind'] == 'noaa' for s in sources)} NOAA harmonic stations, "
-        f"{sum(s['kind'] == 'chs' for s in sources)} CHS stations, {len(others)} other NOAA stations, "
-        f"{len(legacy)} legacy subordinate stations")
+    log(", ".join(f"{sum(s['kind'] == n.kind for s in sources)} {n.kind} stations" for n in networks)
+        + f", {len(others)} other stations without constants, {len(legacy)} legacy subordinate stations")
 
     mesh = Mesh(db, a.bbox)
-    tiles = CachedTiles()
+    seabed = Seabed()
     pts = sources + legacy
     for s in pts:
         nodes, w, la, lo = mesh.place(s["lat"], s["lon"])
         s["_nodes"], s["_w"] = nodes, w
         s["node"] = max(zip(w, nodes))[1]
         s["seabed_mesh"] = round(sum(wi * mesh.dep[n] for wi, n in zip(w, nodes)), 2)
-        e = tiles.elevation(s["lat"], s["lon"])
-        s["seabed_ncei"] = round(-e, 2) if e is not None and e < 0 else None
-    header = read_vel_header(db)
-    log(f"Streaming the velocity file for {len(pts)} points (a few minutes)...")
-    vals = read_vel_nodes(db, sorted({n for s in pts for n in s["_nodes"]}))
+        # the seabed from the bathymetry that covers the station, where one is on this machine
+        e, src = seabed.elevation(s["lat"], s["lon"])
+        s["seabed_dem"] = round(-e, 2) if e is not None and e < 0 else None
+        s["seabed_source"] = src if s["seabed_dem"] is not None else None
+    if pts:
+        header = read_vel_header(db)
+        log(f"Streaming the velocity file for {len(pts)} points (a few minutes)...")
+        vals = read_vel_nodes(db, sorted({n for s in pts for n in s["_nodes"]}))
+    else:
+        log("No station in the box: every point takes the database's own current, scaled to the height.")
     for s in pts:
         s["uv"] = to_noaa(adcirc_cons(header, vals, s["_nodes"], s["_w"]), db)
 
     rows = []
     for s in sources:
-        H = s["seabed_ncei"] or s["seabed_mesh"]
-        if s["kind"] == "noaa":
-            bins = s["_bins"]
-            # every bin with its height as a fraction of the depth above the seabed, its steady
-            # current, its axis and its constants
-            s["bins"] = [[round(min(max((H - b["depth"]) / H, 0.02), 0.98), 3) if H and b.get("depth") is not None else 0.5,
-                          b.get("mean_major") or 0.0, b["azimuth"], {c: cx(z) for c, z in bin_z(b).items()}]
-                         for b in bins]
-            deep = sorted((b for b in bins if b.get("depth") is not None), key=lambda b: b["depth"])
-            Hn = s["seabed_ncei"]
-            if len(deep) >= 3 and Hn and deep[-1]["depth"] <= Hn + 3:
-                cm = {c: sum(bin_z(b)[c] for b in deep) / len(deep) for c in ("M2", "K1")}
-                for b in deep:
-                    Z = bin_z(b)
-                    rows.append({"id": s["id"], "frac": round((Hn - b["depth"]) / Hn, 4),
-                                 "m2r": abs(Z["M2"]) / abs(cm["M2"]),
-                                 "m2p": -math.degrees(cmath.phase(Z["M2"] / cm["M2"])) / 28.984 * 60,
-                                 "k1r": abs(Z["K1"]) / abs(cm["K1"]),
-                                 "k1p": -math.degrees(cmath.phase(Z["K1"] / cm["K1"])) / 15.041 * 60})
-        else:
-            log(f"  fitting constants to CHS {s['code']} {s['name']}, {a.fit_year}...")
-            mean, cons = harmonic_fit(chs_signed(s["code"], a.fit_year), CHS_NAMES)
-            full = {k: A * cmath.exp(-1j * g * DEG) for k, (A, g) in cons.items()}
-            s["cons"] = [[k, round(A, 4), round(g, 3), 0.0, 0.0] for k, (A, g) in cons.items()]
-            s["mean_major"] = round(mean * 100, 3)
-            # one series, taken as the middle of the water column
-            s["bins"] = [[0.5, round(mean * 100, 3), s["flood"], {c: cx(z) for c, z in full.items()}]]
+        # every bin with its height as a fraction of the depth above the seabed, its steady
+        # current, its axis and its constants
+        rows += kind_of[s["kind"]].prepare(s, s["seabed_dem"] or s["seabed_mesh"], s["seabed_dem"], a.fit_year, log)
     log(f"  vertical profile from {len({r['id'] for r in rows})} stations, {len(rows)} bins")
 
     log("Paths through the water between stations...")
@@ -666,7 +536,7 @@ def cmd_build(a):
         s["uv"] = {k: [cx(zu), cx(zv)] for k, (zu, zv) in s["uv"].items()}
         for k in ("_nodes", "_w", "_bins"):
             s.pop(k, None)
-    doc = {"name": a.name, "bbox": a.bbox, "db": db, "built": datetime.now(UTC).isoformat(timespec="seconds"), "fit_year": a.fit_year,
+    doc = {"format": FORMAT, "name": a.name, "bbox": a.bbox, "db": db, "built": datetime.now(UTC).isoformat(timespec="seconds"), "fit_year": a.fit_year,
            "sources": sources, "others": others, "legacy": legacy, "profile_rows": rows,
            "settings": {"neighbours": NEIGHBOURS, "reach_km": REACH_KM, "soften_km": SOFTEN_KM, "prior": PRIOR,
                         "exact_km": EXACT_KM}}
@@ -680,47 +550,33 @@ def cmd_build(a):
 # --- a point --------------------------------------------------------------------------------
 
 def read_site(path):
-    """A site JSON's coordinate and seabed depth: (doc, lat, lon, seabed_m); stops when any is missing."""
+    """A site JSON's coordinate and seabed depth: (doc, lat, lon, seabed_m); refuses a file it cannot
+    read or one missing any of them."""
     try:
         with open(path) as f:
             doc = json.load(f)
     except OSError as e:
-        sys.exit(f"Could not read --site {path}: {e}")
+        raise Refused(f"Could not read --site {path}: {e}")
     except json.JSONDecodeError as e:
-        sys.exit(f"Could not parse JSON in {path}: {e}")
+        raise Refused(f"Could not parse JSON in {path}: {e}")
     missing = [k for k in ("lat", "lon", "seabed_m") if not isinstance(doc.get(k), (int, float))]
     if missing:
-        sys.exit(f"{path} has no {', '.join(missing)}: the site JSON carries the dive area's coordinate and "
-                 f"its seabed depth below the datum, written when the site is created.")
+        raise Refused(f"{path} has no {', '.join(missing)}: the site JSON carries the dive area's coordinate and "
+                      f"its seabed depth below the datum, written when the site is created.")
+    if doc["seabed_m"] <= 0:
+        raise Refused(f"{path}: seabed_m is the seabed depth below the datum, a positive number of metres.")
     return doc, doc["lat"], doc["lon"], doc["seabed_m"]
 
 
-def cmd_extract(a):
-    if a.site:
-        site_doc, qlat, qlon, a.seabed = read_site(a.site)
-    else:
-        if not a.near or a.seabed is None:
-            sys.exit("Give --site <slug.json>, or --near LAT LON with --seabed M.")
-        site_doc, (qlat, qlon) = None, a.near
-    reg = load_region(lat=qlat, lon=qlon)
+def extract_point(uv, start, mesh, reg, H, above_bottom, qlat, qlon):
+    """The blend_model_current object for a point placed in the mesh: its constants at the height
+    asked for and at the fastest height above, with the stations behind them."""
     sources = reg["sources"]
-    mesh = Mesh(reg["db"], reg["bbox"])
-    if a.seabed <= 0:
-        sys.exit("--seabed is the seabed depth below the datum, a positive number of metres.")
-    nodes, w, ext = mesh.place_site(qlat, qlon)
-    if ext:
-        log(f"  water the mesh does not reach: the mesh edge's constants, {ext * 1000:.0f} m away across water")
-    header = read_vel_header(reg["db"])
-    log("Streaming the velocity file for the 3 nodes (a minute or several)...")
-    vals = read_vel_nodes(reg["db"], nodes)
-    uv = to_noaa(adcirc_cons(header, vals, nodes, w), reg["db"])
-    start = max(zip(w, nodes))[1]
     d = mesh.paths(start, ORIENT_KM)
     dists = floor_km({i: d[s["node"]] for i, s in enumerate(sources) if s["node"] in d}, qlat, qlon, sources)
     cand = neighbours(dists, sources)
     prof = profile_table(reg["profile_rows"])
-    H = a.seabed
-    hab = min(a.above_bottom, H)
+    hab = min(above_bottom, H)
     frac = max(hab / H, 0.01)
     bottom, az, near = point_bin(uv, cand, prof, frac, dists, sources)
     # the fastest height above, for the descent and ascent: the strongest semidiurnal current
@@ -734,29 +590,78 @@ def cmd_extract(a):
     if near and not any(st["sets_flood_ebb_direction"] for st in stations):
         stations.append({"id": near[0]["id"], "name": near[0]["name"], "km": round(near[1], 2),
                          "sets_flood_ebb_direction": True})
-    doc = {
-        "blend_model_current": {
-            "extract_point": {"lat": qlat, "lon": qlon, "seabed_m": H,
-                              "extracted": datetime.now(UTC).isoformat(timespec="seconds")},
-            "flood_dir": round(az, 1), "ebb_dir": round((az + 180) % 360, 1),
-            # the prediction reads the constituents and the steady current; the axis is flood_dir's
-            "bottom": {"above_bottom_m": round(hab, 2), "cons": bottom["cons"], "mean_major": bottom["mean_major"]},
-            "upper": {"above_bottom_m": round(upf * H, 1), "cons": upper["cons"], "mean_major": upper["mean_major"]},
-            "stations": stations},
-    }
-    log(f"  flood {az:.0f}°, from {near[0]['id']} {near[1]:.1f} km away" if near else "  no station to set the flood direction")
+    log(f"  flood {az:.0f}°, from {near[0]['id']} {near[1]:.1f} km away" if near
+        else f"  axis {az:.0f}° and {(az + 180) % 360:.0f}°: no station within {ORIENT_KM:.0f} km names the flood")
     for dd, s in cand:
         log(f"  {s['id']:<9} {dd:5.1f} km  {s['name']}")
     if not cand:
         log(f"  no station within {REACH_KM:.0f} km through the water: the database's own current, scaled to the height")
-    if site_doc is None:
-        print(json.dumps(doc, indent=2))
-        return
-    site_doc["blend_model_current"] = doc["blend_model_current"]
-    with open(a.site + ".part", "w") as f:
-        f.write(json.dumps(site_doc, indent=2) + "\n")
-    os.replace(a.site + ".part", a.site)
-    log(f"  wrote blend_model_current into {a.site}")
+    return {
+        "extract_point": {"lat": qlat, "lon": qlon, "seabed_m": H,
+                          "extracted": datetime.now(UTC).isoformat(timespec="seconds")},
+        "flood_dir": round(az, 1), "ebb_dir": round((az + 180) % 360, 1),
+        # the prediction reads the constituents and the steady current; the axis is flood_dir's
+        "bottom": {"above_bottom_m": round(hab, 2), "cons": bottom["cons"], "mean_major": bottom["mean_major"]},
+        "upper": {"above_bottom_m": round(upf * H, 1), "cons": upper["cons"], "mean_major": upper["mean_major"]},
+        "stations": stations}
+
+
+def cmd_extract(a):
+    """One point printed, or every site given, each written into its own JSON. Every site is read
+    and placed before any is written, so a refused one stops the run with nothing changed; the
+    database's constants for all of them are read in one pass."""
+    if a.site:
+        jobs = []
+        refused = []
+        for path in a.site:
+            try:
+                doc, lat, lon, H = read_site(path)
+                jobs.append({"path": path, "doc": doc, "lat": lat, "lon": lon, "H": H})
+            except Refused as e:
+                refused.append(str(e))
+    else:
+        if not a.near or a.seabed is None:
+            sys.exit("Give --site <slug.json> [...], or --near LAT LON with --seabed M.")
+        if a.seabed <= 0:
+            sys.exit("--seabed is the seabed depth below the datum, a positive number of metres.")
+        jobs, refused = [{"path": None, "lat": a.near[0], "lon": a.near[1], "H": a.seabed}], []
+    groups = {}
+    for j in jobs:
+        reg = load_region(lat=j["lat"], lon=j["lon"])
+        groups.setdefault(reg["name"], [reg, []])[1].append(j)
+    meshes = {}
+    for name, (reg, js) in groups.items():
+        mesh = meshes[name] = Mesh(reg["db"], reg["bbox"])
+        for j in js:
+            try:
+                j["nodes"], j["w"], ext = mesh.place_site(j["lat"], j["lon"])
+            except Refused as e:
+                refused.append(f"{j['path'] or 'the point'}: {e}")
+                continue
+            if ext:
+                log(f"  {j['path'] or 'the point'}: water the mesh does not reach, the mesh edge's constants "
+                    f"{ext * 1000:.0f} m away across water")
+    if refused:
+        sys.exit("Nothing was written. Stop and report:\n  " + "\n  ".join(refused))
+    for name, (reg, js) in groups.items():
+        mesh = meshes[name]
+        header = read_vel_header(reg["db"])
+        nodes = sorted({n for j in js for n in j["nodes"]})
+        log(f"Streaming the {reg['db']} velocity file for {len(js)} point(s), {len(nodes)} nodes (a minute or several)...")
+        vals = read_vel_nodes(reg["db"], nodes)
+        for j in js:
+            log(j["path"] or f"{j['lat']}, {j['lon']}")
+            uv = to_noaa(adcirc_cons(header, vals, j["nodes"], j["w"]), reg["db"])
+            start = max(zip(j["w"], j["nodes"]))[1]
+            cur = extract_point(uv, start, mesh, reg, j["H"], a.above_bottom, j["lat"], j["lon"])
+            if j["path"] is None:
+                print(json.dumps({"blend_model_current": cur}, indent=2))
+                continue
+            j["doc"]["blend_model_current"] = cur
+            with open(j["path"] + ".part", "w") as f:
+                f.write(json.dumps(j["doc"], indent=2) + "\n")
+            os.replace(j["path"] + ".part", j["path"])
+            log(f"  wrote blend_model_current into {j['path']}")
 
 
 def load_doc(a):
@@ -831,7 +736,8 @@ def print_header(doc, day, tz):
     print(f"{p['lat']:.5f}, {p['lon']:.5f}  {day}  {c['bottom']['above_bottom_m']:g} m above a {p['seabed_m']:g} m seabed  "
           f"({getattr(tz, 'key', None) or tz.tzname(None)})")
     fs = next((s for s in c["stations"] if s.get("sets_flood_ebb_direction")), None)
-    src = f", the flood direction of {fs['id']} {fs['km']:.1f} km away" if fs else ""
+    src = (f", the flood direction of {fs['id']} {fs['km']:.1f} km away" if fs else
+           ": the two ends of the current's axis, with no station to name which one is the flood")
     print(f"  flood {c['flood_dir']:.0f}°   ebb {c['ebb_dir']:.0f}°{src}")
     corr = [s for s in c["stations"] if s["km"] < REACH_KM]
     if corr:
@@ -1010,6 +916,15 @@ def _table(title, res, methods):
 def cmd_verify(a):
     reg = load_region(a.name)
     sources = reg["sources"]
+    if not any(s["kind"] == "noaa" for s in sources):
+        # every test predicts a NOAA station's bins; a region without them has nothing to test,
+        # and its predictions are the database's own current scaled to the height
+        out = {"verified": date.today().isoformat(), "stations": 0}
+        with open(os.path.join(DB, f"{reg['name']}_verify.json"), "w") as f:
+            json.dump(out, f, indent=1)
+        print(f"The {reg['name']} region holds no NOAA harmonic station: nothing to verify against. "
+              f"Its predictions are the {reg['db']} database's own current, scaled to the height.")
+        return
     days = a.days
     t0 = datetime(a.start.year, a.start.month, a.start.day, tzinfo=UTC)
     minutes = days * 1440
@@ -1026,7 +941,7 @@ def cmd_verify(a):
         if not bins:
             continue
         tb = max(bins, key=lambda b: b["depth"])
-        H = s["seabed_ncei"] or s["seabed_mesh"]
+        H = s["seabed_dem"] or s["seabed_mesh"]
         frac = max((H - tb["depth"]) / H, 0.02)
         dists = floor_km({int(j): d for j, d in s["water_km"].items()}, s["lat"], s["lon"], sources)
         cand = neighbours(dists, sources, exclude=s["id"])
@@ -1043,7 +958,7 @@ def cmd_verify(a):
             else:
                 with open(os.path.join(NOAA_DB, f"{o['id']}.json")) as f:
                     ob = [b for b in json.load(f)["bins"].values() if b.get("cons") and b.get("depth") is not None]
-                Ho = o["seabed_ncei"] or o["seabed_mesh"]
+                Ho = o["seabed_dem"] or o["seabed_mesh"]
                 nb = min(ob, key=lambda b: abs((Ho - b["depth"]) / Ho - frac))
             if math.cos((nb["azimuth"] - az) * DEG) < 0:
                 nb = {"cons": [[c[0], c[1], (c[2] + 180) % 360, 0, 0] for c in nb["cons"]],
@@ -1125,7 +1040,7 @@ def cmd_verify(a):
     at = {"slack": [], "speed": [], "direction": []}
     prof = profile_table(reg["profile_rows"])
     for i, s in enumerate(sources):
-        if s["kind"] != "noaa" or not s["seabed_ncei"]:
+        if s["kind"] != "noaa" or not s["seabed_dem"]:
             continue
         with open(os.path.join(NOAA_DB, f"{s['id']}.json")) as f:
             bins = sorted((b for b in json.load(f)["bins"].values() if b.get("cons") and b.get("depth") is not None),
@@ -1134,7 +1049,7 @@ def cmd_verify(a):
             continue
         dists = floor_km({int(j): d for j, d in s["water_km"].items()}, s["lat"], s["lon"], sources) | {i: 0.0}
         cand = neighbours(dists, sources)
-        H = s["seabed_ncei"]
+        H = s["seabed_dem"]
         for tb in {id(b): b for b in (bins[-1], bins[len(bins) // 2], bins[0])}.values():
             frac = min(max((H - tb["depth"]) / H, 0.02), 0.98)
             pb, az, _ = point_bin(s["uv"], cand, prof, frac, dists, sources)
@@ -1189,17 +1104,17 @@ def cmd_export_map(a):
             k = (x, y) if x < y else (y, x)
             count[k] = count.get(k, 0) + 1
     shore = {i for (x, y), c in count.items() if c == 1 and (inside(x) or inside(y)) for i in (x, y)}
-    tiles = CachedTiles()
+    seabed = Seabed()
     depth = {}
     for n in sorted({i for t in tris for i in t}):
-        e = tiles.elevation(lat[n], lon[n])
+        e, _ = seabed.elevation(lat[n], lon[n])
         if e is not None:
             depth[n] = -e
     tris = [t for t in tris if all(i in depth for i in t)]
     nodes = sorted({i for t in tris for i in t})
     if not nodes:
-        sys.exit("No mesh node in the boxes has a cached NCEI depth.")
-    log(f"  {len(nodes)} nodes with a cached NCEI depth, {len(tris)} elements")
+        sys.exit("No mesh node in the boxes has a seabed depth from a bathymetry on this machine.")
+    log(f"  {len(nodes)} nodes with a seabed depth, {len(tris)} elements")
     log("Paths through the water from every station...")
     near = {n: [] for n in nodes}
     for i, s in enumerate(sources):
@@ -1269,7 +1184,8 @@ def main():
 
     s = sub.add_parser("extract", help="a site's constants, written into its JSON (or a point's, printed)")
     g = s.add_mutually_exclusive_group(required=True)
-    g.add_argument("--site", metavar="PATH", help="the site JSON: reads its lat, lon and seabed_m, and writes the extract into it")
+    g.add_argument("--site", metavar="PATH", nargs="+",
+                   help="one or more site JSONs: reads each one's lat, lon and seabed_m, and writes the extract into it")
     g.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), help="a point that is not a site yet: prints the extract")
     s.add_argument("--seabed", type=float, metavar="M", help="with --near: the seabed depth at the point, m")
     s.add_argument("--above-bottom", type=float, default=ABOVE_BOTTOM, metavar="M",

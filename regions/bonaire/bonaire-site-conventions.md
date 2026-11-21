@@ -21,7 +21,8 @@ These conventions apply to every site file written in this region.
 - **Usual set and typical speed.** The research sources' descriptions of the site and the dive log's own dives there, taken as behaviour and cross-checked between sources.
 - **Drivers.** The winds or seasons those same sources tie to a stronger or reversed set.
 - **No source.** A set no source describes is written as not established.
-- **Spatial extract.** `adcirc_current.md`, the site's EC2015 extract, run with `--walk` on the dive area coordinate and attached to the site's `<slug>.json` whole, for planning. It feeds no row of the site file: the tidal stream it models runs a few centimetres a second around the island, from mesh elements about 3.5 km across, and the usual set comes from the sources above. Where the dive area coordinate falls outside the EC2015 mesh, the extract is taken at the nearest point inside the mesh, 5 m in from its edge, and its `ec2015_extract_point` records that point and its `distance_from_site_km`, both reported in chat. A moved dive area coordinate takes a new extract.
+- **Tool.** `blend_model.md`, the site's extract, attached to the site's `<slug>.json`, for planning. It feeds no bullet of the site file: the tidal stream it models runs a few centimetres a second around the island, from mesh elements about 3.5 km across with no current station within reach, and the usual set comes from the sources above.
+- **Extract.** Taken once the dive area coordinate holds, with `extract --site` on the site JSON, at the tool's default height above the seabed. A coordinate the tool refuses, on land or in water outside its coverage, stops the site: report it and wait.
 
 ## Wind
 
