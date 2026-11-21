@@ -26,30 +26,10 @@ Warren Avenue Bridge crosses Port Washington Narrows in Bremerton, the tidal cut
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Port Washington Narrows, Warren Ave. Bridge (PUG1510), about 0.2 km northeast at the bridge |
-| **Recommended bin** | bin 1, at 6.3 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | west, 279° |
-| **Station ebb axis** | east-southeast, 102° |
-| **Site flood set** | west-northwest, 288°, up the narrows toward Dyes Inlet |
-| **Site ebb set** | east-southeast, 108°, down the narrows toward Sinclair Inlet |
-
-* **Flood.** Sets west-northwest, running up the narrows toward Dyes Inlet, with daily peaks of 1.05 to 1.76 m/s at the station over 30 days.
-* **Ebb.** Sets east-southeast, running down the narrows toward Sinclair Inlet and out to Puget Sound through Rich Passage, with daily peaks of 0.52 to 1.48 m/s at the station over the same 30 days.
-* **Diveable window.** The current becomes noticeable again within five to ten minutes of slack, so the window closes fast on either side of it. Its width varies a great deal by exchange, from under thirty minutes on a tight one to well over an hour and a half on a wide one; a typical window under 0.25 m/s at the station runs about 35 to 85 minutes. Begin the dive thirty to forty minutes ahead of the predicted slack, and start the swim back to shore as soon as the current turns.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Beneath the Warren Avenue Bridge, a correction for the site itself, published without a station number or position |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 23 minutes before the reference |
-| **Slack before ebb** | 55 minutes after the reference |
+* **Type.** Tidal.
+* **Flood.** Sets west-northwest, running up the narrows toward Dyes Inlet, and runs hard.
+* **Ebb.** Sets east-southeast, running down the narrows toward Sinclair Inlet and out to Puget Sound through Rich Passage.
+* **Diveable window.** The current becomes noticeable again within minutes of slack, so the window closes fast on either side of it. Its width varies a great deal by exchange, short on a tight one and much longer on a wide one. Begin the dive well ahead of the predicted slack, and start the swim back to shore as soon as the current turns.
 
 ## Wind
 
@@ -61,7 +41,6 @@ Legacy correction:
 A narrow inland cut through residential Bremerton, with land close on both sides.
 
 * **Fine.** All directions (N-NNW). The surrounding shore leaves little open water for wind to build a fetch across, no more than 1.5 km from any direction.
-* **Wind against current.** West-northwest (WNW) blows against the flood, over too short a fetch to matter; the current, not wind, sets the go or no go call.
 
 ## Depth and tide
 

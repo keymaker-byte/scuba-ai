@@ -26,30 +26,10 @@ Kayak Point County Park sits on the east shore of Port Susan, a bay of Puget Sou
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. The nearest station with predictions is Camano Head-Sandy Point, passage (PUG1618), about 9.9 km south |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | north-northeast, 14° |
-| **Site ebb set** | south-southwest, 194° |
-
+* **Type.** Tidal.
 * **Flood.** Sets north-northeast up Port Susan, weak.
 * **Ebb.** Sets south-southwest down Port Susan, weak.
-* **Diveable window.** Current at the dive point stays weak all day, well under 0.05 m/s in the depth averaged prediction, so the site does not depend on a tight slack window the way a passage or a point does. Slack timing comes from the site's own ENPAC15 extract; a late entry is not the problem here that it would be at a true current site.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Edmonds, 2.7 miles WSW of, 47°48.38′ N, 122°26.67′ W, about 37.1 km south |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 44 minutes after the reference |
-| **Slack before ebb** | 13 minutes after the reference |
+* **Diveable window.** Current at the dive point stays weak all day, so the site does not depend on a tight slack window the way a passage or a point does; a late entry is not the problem here that it would be at a true current site.
 
 ## Wind
 
@@ -63,7 +43,6 @@ The beach faces west to northwest across Port Susan, toward Camano Island.
 * **Bad.** West through north-northwest (W-NNW), onshore over 5.7 to 12.1 km, with open fetch across the bay to Camano Island and up Port Susan.
 * **Short fetch.** North through north-northeast (N-NNE), onshore over 1.0 to 3.1 km.
 * **Fine.** Northeast clockwise through west-southwest (NE-WSW): offshore from east through south-southwest over the mainland, which keeps the beach flat, and cross-shore under 4.4 km from northeast, east-northeast, southwest and west-southwest.
-* **Wind against current.** Current here is weak enough that wind is the dominant surface hazard on its own; there is no strong current axis for it to run against.
 
 ## Depth and tide
 

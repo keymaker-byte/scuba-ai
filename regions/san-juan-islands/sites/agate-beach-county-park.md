@@ -32,32 +32,12 @@ Shore dive into Outer Bay from Agate Beach County Park, a cobble beach at the so
 
 Outer Bay sits off the tidal stream of the eastern Strait of Juan de Fuca, which runs fast outside the mouth while the inner bay stays slow.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Cattle Point, 1.2 nm SE of (PUG1742), about 4.4 km west |
-| **Recommended bin** | Bin 18, at 23.8 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | north, 353° |
-| **Station ebb axis** | south, 183° |
-| **Site flood set** | northwest, 318° |
-| **Site ebb set** | southeast, 140° |
-
-* **Flood.** Enters the bay from the west and drives onto the northern rocky face. Where the bluff rounds to the north just outside Outer Rock it splits in two: the outer branch runs northwest along the bluff toward Johns Point, and the inshore branch runs along the bluff toward the beach, turns clockwise along the beach, and flows back out along the southern shore. A diver who returns from Outer Rock along the north shore on a flood rides it back to the entry. Daily peaks at the station run 0.40 to 1.22 m/s over 30 days; at the dive coordinate the flow stays far weaker, about 0.05 m/s at most near the bottom, setting weakly northwest along the bay's axis.
-* **Ebb.** Almost nonexistent inside Outer Bay on a small or moderate exchange, about 2 m or less. On a larger exchange a weak ebb current moves inshore. Daily peaks at the station run 0.90 to 2.39 m/s over 30 days; inside the bay the ebb stays slack or near it.
-* **Diveable window.** Both slacks serve, and the inner bay stays diveable through much of the tide. The long swim to Shark Fin Rock and Outer Rock suits the slack before flood best, with the flood then carrying the return along the north shore. Under 0.25 m/s at the station, a single slack before flood runs about 30 to 115 minutes, typically about 70, and a single slack before ebb about 35 to 215 minutes, typically about 65. The strong ebbs, up to 2.39 m/s, narrow the slacks either side of them. Around a weak exchange the station stays under the threshold across two slacks in one window, for 210 to 280 minutes.
+* **Type.** Tidal.
+* **Flood.** Enters the bay from the west and drives onto the northern rocky face. Where the bluff rounds to the north just outside Outer Rock it splits in two: the outer branch runs northwest along the bluff toward Johns Point, and the inshore branch runs along the bluff toward the beach, turns clockwise along the beach, and flows back out along the southern shore. A diver who returns from Outer Rock along the north shore on a flood rides it back to the entry. At the dive coordinate itself the flow stays faint near the bottom, setting weakly northwest along the bay's axis.
+* **Ebb.** Almost nonexistent inside Outer Bay on a small or moderate exchange. On a larger exchange a weak ebb current moves inshore, while the strait outside runs hard.
+* **Diveable window.** Both slacks serve, and the inner bay stays diveable through much of the tide. The long swim to Shark Fin Rock and Outer Rock suits the slack before flood best, with the flood then carrying the return along the north shore. The strong ebbs narrow the slacks either side of them, and around a weak exchange two slacks run together into one long quiet spell.
 * **Eddies in the bay.** The flow inside the bay turns and splits around the rocks and the bluff, so the set at any one spot can run across or against the tide outside.
 * **Outside the mouth.** Beyond the mouth of the bay the water opens onto the stream off Iceberg Point, which picks up quickly with the tide.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Cattle Point, 1.2 miles southeast of, 48°26.03′ N, 122°56.82′ W, about 4.4 km west |
-| **Legacy reference** | San Juan Channel (south entrance) (PCT2186) |
-| **Slack before flood** | 11 minutes after the reference |
-| **Slack before ebb** | 34 minutes after the reference |
 
 ## Wind
 
@@ -71,7 +51,6 @@ The beach faces west out of the bay's mouth, past Iceberg Island to the open str
 * **Bad.** Southwest through west (SW-W), onshore over 27 to more than 30 km of open water across the Strait of Juan de Fuca, driving wind waves and swell into the bay and surge onto the cobble beach.
 * **Short fetch.** West-northwest through north-northwest (WNW-NNW), onshore over 1.9 to 2.6 km, building chop across the mouth of the bay onto the beach.
 * **Fine.** North clockwise through south-southwest (N-SSW), blocked by the island itself and by the headland running out to Iceberg Point, with 790 m of fetch at most.
-* **Wind against current.** The current at the dive coordinate peaks at about 0.05 m/s near the bottom, too weak to stack against the wind.
 
 ## Depth and tide
 
@@ -114,5 +93,5 @@ The site swings about 2.3 m between an average high and low water, and up to 3.6
 * **Access.** The beach stairs are gone, and the bank down to the beach is rock armor. Climbing it in gear is a fall hazard.
 * **The beach.** The round cobbles roll underfoot, and surge off the strait makes standing, donning and doffing fins hard at the waterline.
 * **Wind waves and swell.** Wind from southwest through west crosses the open strait straight into the bay and can make the entry and exit on the beach unsafe.
-* **Current outside the bay.** Beyond the mouth of the bay the stream off Iceberg Point runs fast, up to 2.39 m/s at the station. Stay inside the bay, and expect the flood to drive onto the north shore.
+* **Current outside the bay.** Beyond the mouth of the bay the stream off Iceberg Point runs fast, ripping on the largest ebbs. Stay inside the bay, and expect the flood to drive onto the north shore.
 * **Kelp.** Kelp grows along both rocky shores. Ascend clear of it, and carry a cutting tool.

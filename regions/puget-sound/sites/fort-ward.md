@@ -26,39 +26,10 @@ Shore dive on the southwest shore of Bainbridge Island, on Rich Passage between 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Rich Passage, LB 8 (ks0101), about 1.1 km, same passage |
-| **Recommended bin** | bin 7, at 9.4 m; the station's only published bins run to 3.4, 4.4 and 9.4 m, all shallower than the site's working depth |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | northwest, 313° |
-| **Station ebb axis** | east-southeast, 109° |
-| **Site flood set** | north-northwest, 338° |
-| **Site ebb set** | south-southeast, 158° |
-
-* **Flood.** Sets northwest, parallel to the shore, up the passage toward Sinclair Inlet, with daily peaks of 0.39 to 0.70 m/s at the station over 30 days.
-* **Ebb.** Sets southeast, parallel to the shore, back out toward the main basin past Rockaway Beach and Alki Point. Daily peaks run 0.34 to 0.97 m/s at the station over the same 30 days, a real current to plan around.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 55 to 150 minutes. Varies by exchange, from a little over an hour on a big exchange to several hours on a small one. Always check the window for the specific day rather than assuming it is wide, and confirm slack in the water, especially toward the bottom of the working depth, below the station's shallow bins.
-
-Subordinate station:
-
-| | |
-|---|---|
-| **Subordinate station** | Off Pleasant Beach (PCT1701), 47°35.00′ N, 122°32.00′ W, about 0.3 km south |
-| **Subordinate reference** | Point Wilson, 1.6 mi. NE of (PUG1624), bin 47 |
-| **Slack before flood** | 25 minutes after the reference |
-| **Slack before ebb** | 10 minutes after the reference |
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Off Pleasant Beach, Rich Passage, 47°35′ N, 122°32′ W, about 0.3 km south |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 14 minutes before the reference |
-| **Slack before ebb** | 36 minutes after the reference |
+* **Type.** Tidal.
+* **Flood.** Sets northwest, parallel to the shore, up the passage toward Sinclair Inlet.
+* **Ebb.** Sets southeast, parallel to the shore, back out toward the main basin past Rockaway Beach and Alki Point, a real current to plan around.
+* **Diveable window.** Varies by exchange, from a little over an hour on a big exchange to several hours on a small one. Check the window for the specific day rather than assuming it is wide, and confirm slack in the water, especially toward the bottom of the working depth.
 
 ## Wind
 
@@ -72,7 +43,6 @@ The beach faces west-southwest across Rich Passage toward the Kitsap Peninsula s
 * **Short fetch.** South through west-northwest (S-WNW), onshore over 1.1 to 2.3 km across the passage, builds meaningful chop here.
 * **Mixed.** South-southeast (SSE), cross-shore over 10.8 km up the passage from the main basin.
 * **Fine.** Northwest clockwise through southeast (NW-SE): offshore from north through east-southeast, blocked by Bainbridge Island's own landmass behind the beach, and cross-shore under 2.4 km from southeast, northwest and north-northwest, down the passage from Sinclair Inlet.
-* **Wind against current.** Northwest through north-northwest (NW-NNW), over 1.2 to 2.4 km, opposing the flood's northwest set is the roughest combination. South-southeast through south-southwest (SSE-SSW), over 2.1 to 10.8 km, opposes the ebb's southeast set.
 
 ## Depth and tide
 

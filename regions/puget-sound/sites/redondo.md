@@ -31,23 +31,12 @@ Shore dive at Redondo Beach in Des Moines, on the mainland shore of East Passage
 
 ## Current
 
-The station describes East Passage; the water on the slope moves far less than the station, and the current that matters here comes in short bursts along the shallows on the biggest exchanges.
+The water on the slope moves far less than in East Passage offshore, and the current that matters here comes in short bursts along the shallows on the biggest exchanges.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Browns Point, 1.6 miles North of (PUG1521), about 9.8 km west-southwest in East Passage |
-| **Recommended bin** | bin 24, at 48.5 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | southwest, 232° |
-| **Station ebb axis** | northeast, 49° |
-| **Site flood set** | east, 94° |
-| **Site ebb set** | west-southwest, 238° |
-
-* **Flood.** Sets east toward the slope at the foot of the deep line, at only 0.01 to 0.02 m/s near the bottom. Daily peaks run 0.18 to 0.34 m/s at the station over 30 days. On a large flood an unpredictable current runs along the shore in the shallows, strongest toward the north eelgrass.
-* **Ebb.** Sets west-southwest at the foot of the deep line, just as weakly. Daily peaks run 0.06 to 0.22 m/s at the station over the same 30 days. On a large ebb, the shallows in front of the aquarium can run hard to the north, enough to pin a diver to the bottom and force a crawl; a few metres down the slope it eases. The same ebbs can also set up downwellings along the drop-off in front of the aquarium and down to the bottle field.
-* **Diveable window.** The site is dived at any state of the tide on most days. Over 30 days the station stays under 0.25 m/s all day on about half the days; on the rest, a flood peak over it near the spring tides breaks the day into windows of about 10 hours. The times to avoid, or to dive with extra gas, are the beginning and end of the largest ebbs, when the shallows run hard.
+* **Type.** Tidal.
+* **Flood.** Sets east toward the slope at the foot of the deep line, barely moving near the bottom. On a large flood an unpredictable current runs along the shore in the shallows, strongest toward the north eelgrass.
+* **Ebb.** Sets west-southwest at the foot of the deep line, just as weakly. On a large ebb, the shallows in front of the aquarium can run hard to the north, enough to pin a diver to the bottom and force a crawl; a few metres down the slope it eases. The same ebbs can also set up downwellings along the drop-off in front of the aquarium and down to the bottle field.
+* **Diveable window.** The site is dived at any state of the tide on most days. The times to avoid, or to dive with extra gas, are the beginning and end of the largest ebbs, when the shallows run hard.
 * **The Redondo River.** The local name for the bursty shore-parallel current. It arrives without warning, rarely lasts long, and turns the visibility to silt within minutes. It shows most at the start and end of the largest ebbs, and also at the start of a flood following a very low tide. A diver caught in it stays low and works along the bottom, down the slope and out of the shallows' set.
 
 ## Wind
@@ -63,7 +52,6 @@ The beach faces west-northwest across East Passage toward Vashon Island, with op
 * **Short fetch.** Southwest (SW), onshore over 1.4 km, enough to put a short chop on the flat in front of the stairs.
 * **Mixed.** North (N), cross-shore over 5.2 km, running chop along the beach.
 * **Fine.** North-northeast clockwise through south-southwest (NNE-SSW): offshore from northeast through south-southeast, off the hillside behind the beach, and cross-shore over under 1 km from north-northeast, south and south-southwest.
-* **Wind against current.** No wind with 1 km or more of fetch opposes the flood's easterly set; the winds that do, east-northeast through southeast, are offshore over under 1 km. The ebb's peaks stay under the 0.25 m/s threshold, too weak to stack against wind.
 
 ## Depth and tide
 

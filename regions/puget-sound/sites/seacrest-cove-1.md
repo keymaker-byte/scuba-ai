@@ -34,21 +34,10 @@ Shore dive at the southeast end of Seacrest Park on the West Seattle waterfront,
 
 Current is negligible here. The cove sits deep inside Elliott Bay, sheltered from the main tidal streams, and stays diveable through the whole cycle on any exchange; pick the entry time for tide height, daylight and visibility.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Harbor Island West (PUG1507), about 1.3 km east-southeast at the mouth of the West Waterway |
-| **Recommended bin** | bin 9, at 6.6 m, the deepest published |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south, 177° |
-| **Station ebb axis** | north, 356° |
-| **Site flood set** | south-southwest, 197° |
-| **Site ebb set** | north, 10° |
-
-* **Flood.** Sets south-southwest, onto the beach and toward Salty's. Daily peak at the station runs 0.10 to 0.22 m/s over 30 days, and the water at the cove itself moves far less.
-* **Ebb.** Sets north, off the beach and toward the fishing pier. Daily peak at the station runs 0.07 to 0.14 m/s on the days it ebbs over 30 days; on 2 days in 30 the station predicts no ebb.
-* **Diveable window.** Any tide. The station stays under 0.25 m/s every hour of every day across 30 days, so the whole day is one window.
+* **Type.** Tidal.
+* **Flood.** Sets south-southwest, onto the beach and toward Salty's, and the water at the cove itself barely moves.
+* **Ebb.** Sets north, off the beach and toward the fishing pier, weaker still; on some days there is hardly an ebb at all.
+* **Diveable window.** Any tide; the whole day is one window.
 
 ## Wind
 
@@ -62,7 +51,6 @@ The beach faces northeast across Elliott Bay toward downtown Seattle.
 * **Short fetch.** North through east-southeast (N-ESE), onshore over 1.1 to 4.3 km across the bay onto the entry, which builds chop on the rocks; a northerly has the longest fetch, in through the bay mouth.
 * **Mixed.** North-northwest (NNW), cross-shore over 5.6 km down the Sound, running chop along the beach.
 * **Fine.** Southeast clockwise through northwest (SE-NW): offshore from south through west-northwest, blocked by the West Seattle hill behind the park, and cross-shore under 1 km from southeast, south-southeast and northwest.
-* **Wind against current.** The current is too weak to stack against any wind.
 
 ## Depth and tide
 

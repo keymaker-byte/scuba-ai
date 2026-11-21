@@ -13,7 +13,7 @@ Shore dive off a historic Mosquito Fleet steamer dock on the southwest shore of 
 
 ## Getting there
 
-* **Entry.** Climb over two or three drift logs to the sand beside the dock and walk in. Facing out along the dock, enter on the left (south) side on a flood and on the right (north) side on an ebb, so you start up-current. At high tide the walk is a few steps and there is no surface swim; at low tide the walk out is longer across the sand dollar bed, so step around the dark purple live ones (the gray ones are dead).
+* **Entry.** Climb over two or three drift logs to the sand beside the dock and walk in. Facing out along the dock, enter on the right (north) side on a flood and on the left (south) side on an ebb, so you start up-current. At high tide the walk is a few steps and there is no surface swim; at low tide the walk out is longer across the sand dollar bed, so step around the dark purple live ones (the gray ones are dead).
 * **Parking.** Free roadside parking at the pier on Crystal Springs Drive NE, room for only a handful of cars.
 * **Access.** Bainbridge Island Metro Park and Recreation District land, a 0.1 ha park whose listed amenities are fishing and scuba diving. Open dawn to dusk. 3949 Crystal Springs Drive NE, Bainbridge Island, about 9 km from the Winslow ferry terminal by way of Lynwood Center and Point White Drive.
 * **Facilities.** The pier itself; no restrooms.
@@ -27,21 +27,10 @@ Shore dive off a historic Mosquito Fleet steamer dock on the southwest shore of 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Rich Passage, West end (PUG1514), about 1.6 km southeast |
-| **Recommended bin** | bin 8, at 3.5 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | west-southwest, 239° |
-| **Station ebb axis** | northeast, 55° |
-| **Site flood set** | north-northwest, 344° |
-| **Site ebb set** | south-southeast, 164° |
-
-* **Flood.** At the dock the flood sets north, about 345°, along the shore up Port Orchard, while the station out in Rich Passage reports it heading southwest into Sinclair Inlet. Daily peaks at the station run 1.06 to 1.83 m/s over 30 days; along the dock the current is far weaker but still enough to make holding a position over the shallow sand hard work.
-* **Ebb.** Sets south, about 165°, along the shore back toward Rich Passage, with daily peaks of 0.55 to 2.08 m/s at the station over the same 30 days.
-* **Diveable window.** Either slack. A typical window under 0.25 m/s at the station runs about 30 to 70 minutes. The point sits where Rich Passage, Port Orchard and Sinclair Inlet meet. Arrive early, watch the water along the pilings, and be ready to wait or call the dive. With a slight current running, start west of the pilings and work up-current first.
+* **Type.** Tidal.
+* **Flood.** Sets south-southeast along the shore toward Point White. Along the dock the current is far weaker than in Rich Passage but still enough to make holding a position over the shallow sand hard work.
+* **Ebb.** Sets north-northwest along the shore up Port Orchard.
+* **Diveable window.** Either slack, and short. The point sits where Rich Passage, Port Orchard and Sinclair Inlet meet. Arrive early, watch the water along the pilings, and be ready to wait or call the dive. With a slight current running, start west of the pilings and work up-current first.
 
 ## Wind
 
@@ -55,7 +44,6 @@ The beach faces west-southwest across Port Orchard toward Bremerton, with Port O
 * **Bad.** South-southwest (SSW), onshore over 6.3 km.
 * **Short fetch.** Southwest through northwest (SW-NW), onshore over 1.2 to 2.0 km of open water.
 * **Fine.** North-northwest clockwise through south (NNW-S): offshore from north-northeast through southeast, blocked by the island behind the beach, and cross-shore under 3.1 km along Port Orchard from north-northwest, north, south-southeast and south.
-* **Wind against current.** Northwest through north (NW-N), over 1.9 to 3.1 km, opposing the flood's northward set along the shore, or south-southeast through south-southwest (SSE-SSW), over 1.8 to 6.3 km, against the ebb's southward set, is the roughest combination.
 
 ## Depth and tide
 

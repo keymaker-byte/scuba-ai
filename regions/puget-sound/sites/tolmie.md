@@ -35,32 +35,12 @@ Shore dive at Tolmie State Park on the south shore of Nisqually Reach, between J
 
 The barges lie in a shallow bay off the main stream of Nisqually Reach, and the water over them moves slowly.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Nisqually Reach, 0.5 miles South of Lyle Point (PUG1534), about 5.4 km east |
-| **Recommended bin** | bin 16, at 8.8 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | west, 259° |
-| **Station ebb axis** | east, 088° |
-| **Site flood set** | west-northwest, 295° |
-| **Site ebb set** | east-southeast, 115° |
-
-* **Flood.** Sets west-northwest across the bay, toward the private shore beyond the park's western boundary. Daily peaks run 0.53 to 1.07 m/s at the station over 30 days; over the barges it stays far weaker, about 0.1 m/s or less near the bottom.
-* **Ebb.** Sets east-southeast, toward the private shore east of the park. Daily peaks run 0.41 to 1.11 m/s at the station over the same 30 days, again far weaker over the barges.
-* **Diveable window.** Either slack. Current at the station stays under 0.25 m/s for 54 to 144 minutes at slack before flood, typically about 90 minutes, and 84 to 138 minutes at slack before ebb, typically about 100 minutes. On the weakest exchanges of the month it stays under that for up to about 6 hours. Big exchanges around new and full moon give the shortest windows. The current over the barges is light on most tides, and timing the dive near slack matters most for the surface swim.
+* **Type.** Tidal.
+* **Flood.** Sets west-northwest across the bay, toward the private shore beyond the park's western boundary, and stays far weaker over the barges than out in the reach.
+* **Ebb.** Sets east-southeast, toward the private shore east of the park, again far weaker over the barges.
+* **Diveable window.** Either slack, a comfortable length on most days and much longer on the weakest exchanges of the month. Big exchanges around new and full moon give the shortest windows. The current over the barges is light on most tides, and timing the dive near slack matters most for the surface swim.
 * **At the surface.** The current runs faster at the surface out by the buoy than near the beach, and a diver on the surface on a running tide drifts along the shore, east-southeast on the ebb and west-northwest on the flood, lengthening the swim back to the park beach.
 * **Near slack.** The current around the barges swings direction as it turns; keep a compass heading near slack.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Nisqually Reach, 47°07′ N, 122°42′ W, about 5.4 km east |
-| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
-| **Slack before flood** | 26 minutes after the reference |
-| **Slack before ebb** | 20 minutes after the reference |
 
 ## Wind
 
@@ -75,7 +55,6 @@ The beach faces northeast across Nisqually Reach toward Anderson Island and the 
 * **Short fetch.** North (N), onshore over 4.8 km, and northeast through east-northeast (NE-ENE), onshore over 3.7 to 3.9 km. Each raises a chop on the swim and over the shallow flat.
 * **Mixed.** North-northwest (NNW), cross-shore over 19.1 km of open water, running a swell along the beach and across the swim.
 * **Fine.** Southeast clockwise through northwest, offshore off the wooded shore and bluffs behind the park, or cross-shore over 2.0 km or less. The beach lies in the lee of southerly storm winds.
-* **Wind against current.** West-northwest through north-northwest (WNW-NNW) blows against the flood, and east through east-southeast (E-ESE) against the ebb. The current over the barges is too weak to raise chop of its own; the concern is the surface swim, and the main stream farther out in the reach.
 
 ## Depth and tide
 

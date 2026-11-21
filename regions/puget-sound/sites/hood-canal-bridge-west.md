@@ -30,21 +30,10 @@ The west end of the Hood Canal Bridge meets the Olympic Peninsula shore at Shine
 
 All of Hood Canal fills and drains through the channel beneath the bridge.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Hood Canal Bridge (PUG1603), in the canal about 1.3 km south-southwest |
-| **Recommended bin** | bin 20, at 6.68 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | southwest, 219° |
-| **Station ebb axis** | northeast, 46° |
-| **Site flood set** | southwest, 231° |
-| **Site ebb set** | northeast, 51° |
-
-* **Flood.** Sets southwest along the channel into Hood Canal, with daily peaks of 0.28 to 0.73 m/s at the station over 30 days.
-* **Ebb.** Sets northeast along the channel out of the canal, with daily peaks of 0.34 to 0.76 m/s at the station over the same 30 days.
-* **Diveable window.** Under 0.25 m/s at the station, slack before ebb typically lasts about 2 to 4 hours and slack before flood about 1 to 3 hours; a large exchange narrows both. Choose a day with a long, flat span of slack, and keep enough gas in reserve to cross the channel back to shore if the current picks up early.
+* **Type.** Tidal.
+* **Flood.** Sets southwest along the channel into Hood Canal.
+* **Ebb.** Sets northeast along the channel out of the canal.
+* **Diveable window.** Slack before ebb runs long and slack before flood shorter; a large exchange narrows both. Choose a day with a long, flat span of slack, and keep enough gas in reserve to cross the channel back to shore if the current picks up early.
 * **Surface and depth differ.** The surface water can turn before the water at depth, ebbing while the bottom is still at slack or in a weak flood. The current near the seabed runs weaker than at the surface, which makes the bottom the safer route back to shore.
 * **Bare slope.** The slope between the shore and the structure is bare sand, so a diver caught by the current on the return swims against it the whole way back.
 
@@ -60,7 +49,6 @@ The swim out runs 50° off the entry shore's facing, along the shore toward the 
 * **Short fetch.** East-northeast through south (ENE-S), onshore over 2.2 to 4.7 km across the canal entrance, enough to raise a chop on the beach.
 * **Mixed.** Northeast (NE), along the shore over 5.3 km, and south-southwest through southwest (SSW-SW), along the shore over 7.0 to 12.0 km down the length of the canal, each running a wind swell past the entry.
 * **Fine.** West-southwest clockwise through north-northeast (WSW-NNE): offshore from west-southwest through north, with the Olympic Peninsula shore within 600 m upwind from west through north, and cross-shore over 1.9 km from north-northeast.
-* **Wind against current.** South-southwest through west-southwest (SSW-WSW) blows against the flood, over 4.1 to 12.0 km, worst from the southwest along the length of the canal. North-northeast through east (NNE-E) blows against the ebb, over 1.9 to 5.3 km.
 
 ## Depth and tide
 

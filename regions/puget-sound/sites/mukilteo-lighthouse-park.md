@@ -27,30 +27,10 @@ Shore dive on the Mukilteo waterfront, on the shoreline south of Elliott Point i
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA West of Mukilteo (PUG1609), about 1.4 km west |
-| **Recommended bin** | bin 36, at 18.8 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | north-northeast, 13° |
-| **Station ebb axis** | south-southwest, 198° |
-| **Site flood set** | north-northeast, 23° |
-| **Site ebb set** | south-southwest, 203° |
-
-* **Flood.** Sets north, up the shore toward Elliott Point and the ferry terminal, with daily peaks of 0.17 to 0.40 m/s at the station over 30 days.
-* **Ebb.** Sets south, away from the point, with daily peaks of 0.09 to 0.28 m/s at the station over the same 30 days.
-* **Diveable window.** On a small exchange the current stays weak most of the day. On a bigger one it runs hard, with a down current reported near the point, and the site is only comfortable within a tight slack window. Current at the station stays under 0.25 m/s for about 1.5 to 15 hours at a time.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Edmonds, 2.7 miles WSW of, 47°48.38′ N, 122°26.67′ W, about 18.6 km south-southwest |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 44 minutes after the reference |
-| **Slack before ebb** | 13 minutes after the reference |
+* **Type.** Tidal.
+* **Flood.** Sets north, up the shore toward Elliott Point and the ferry terminal.
+* **Ebb.** Sets south, away from the point.
+* **Diveable window.** On a small exchange the current stays weak most of the day. On a bigger one it runs hard, with a down current reported near the point, and the site is only comfortable within a tight slack window.
 
 ## Wind
 
@@ -65,7 +45,6 @@ The beach faces west across Possession Sound toward Whidbey Island.
 * **Short fetch.** West through northwest (W-NW), onshore over 3.2 to 4.4 km.
 * **Mixed.** North through north-northeast (N-NNE), over 6.5 to 11.0 km, and south-southwest (SSW), over more than 30 km, cross-shore.
 * **Fine.** Northeast clockwise through south (NE-S): offshore from northeast through south-southeast, blowing off the bluff behind the park, and cross-shore over 570 m from the south.
-* **Wind against current.** South-southwest through west-southwest (SSW-WSW), over 5.0 km to more than 30 km, through a strong ebb is the combination to avoid. North through north-northeast (N-NNE), over 6.5 to 11.0 km, opposes the flood.
 
 ## Depth and tide
 

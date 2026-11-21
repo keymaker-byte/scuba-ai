@@ -98,6 +98,77 @@
       this.u = new Float32Array(this.nodeCount);
       this.v = new Float32Array(this.nodeCount);
       this.time = null;
+      this._shoreEdges(data);
+    }
+
+    // The mesh's own shoreline, its edges bucketed by 0.02°: water the mesh does not reach takes
+    // the current at the nearest point of it, within extendKm, as `extract` does.
+    _shoreEdges(data) {
+      this.extendKm = data.extendKm || 0;
+      this.buckets = new Map();
+      if (!data.shoreNodes || !this.extendKm) return;
+      const sh = decode(data.shoreNodes, Uint8Array);
+      if (sh.length !== this.nodeCount) throw new Error('overlay shoreline nodes do not match its node count');
+      const { xy, tri } = this;
+      const seen = new Map();
+      for (let e = 0; e < tri.length; e += 3) {
+        for (let k = 0; k < 3; k++) {
+          const a = tri[e + k], b = tri[e + (k + 1) % 3];
+          const key = a < b ? a * 1e6 + b : b * 1e6 + a;
+          seen.set(key, seen.has(key) ? -1 : e * 3 + k);
+        }
+      }
+      for (const [key, v] of seen) {
+        if (v < 0) continue;
+        const e = Math.floor(v / 3), k = v % 3;
+        const a = tri[e + k], b = tri[e + (k + 1) % 3];
+        if (!sh[a] || !sh[b]) continue;
+        const r0 = Math.floor(Math.min(xy[2 * a + 1], xy[2 * b + 1]) / 0.02), r1 = Math.floor(Math.max(xy[2 * a + 1], xy[2 * b + 1]) / 0.02);
+        const c0 = Math.floor(Math.min(xy[2 * a], xy[2 * b]) / 0.02), c1 = Math.floor(Math.max(xy[2 * a], xy[2 * b]) / 0.02);
+        for (let r = r0; r <= r1; r++) {
+          for (let c = c0; c <= c1; c++) {
+            const id = r * 100000 + c;
+            if (!this.buckets.has(id)) this.buckets.set(id, []);
+            this.buckets.get(id).push(e, k);
+          }
+        }
+      }
+    }
+
+    // For water outside the mesh: the element and weights at the nearest point of the mesh's
+    // shoreline, when it lies within extendKm and the straight line to it crosses no land; null
+    // otherwise, and null on land.
+    edgePoint(lat, lon) {
+      if (!this.buckets.size || this.onLand(lon, mercY(lat))) return null;
+      const { xy, tri } = this;
+      const sc = Math.cos(lat * DEG), kmDeg = 111.2;
+      const R = Math.floor(lat / 0.02), C = Math.floor(lon / 0.02);
+      let best = null;
+      for (let r = R - 1; r <= R + 1; r++) {
+        for (let c = C - 1; c <= C + 1; c++) {
+          const list = this.buckets.get(r * 100000 + c);
+          if (!list) continue;
+          for (let i = 0; i < list.length; i += 2) {
+            const e = list[i], k = list[i + 1];
+            const a = tri[e + k], b = tri[e + (k + 1) % 3];
+            const ax = xy[2 * a] * sc, ay = xy[2 * a + 1], bx = xy[2 * b] * sc, by = xy[2 * b + 1];
+            const dx = bx - ax, dy = by - ay, L2 = dx * dx + dy * dy;
+            const t = L2 ? Math.max(0, Math.min(1, ((lon * sc - ax) * dx + (lat - ay) * dy) / L2)) : 0;
+            const d = Math.hypot(ax + t * dx - lon * sc, ay + t * dy - lat) * kmDeg;
+            if (!best || d < best.d) best = { d, e, k, t, lat: ay + t * dy, lon: (ax + t * dx) / sc };
+          }
+        }
+      }
+      if (!best || best.d > this.extendKm) return null;
+      const n = Math.max(1, Math.ceil(best.d * 100));
+      for (let i = 1; i < n; i++) {
+        const f = i / n;
+        if (this.onLand(lon + (best.lon - lon) * f, mercY(lat + (best.lat - lat) * f))) return null;
+      }
+      const w = [0, 0, 0];
+      w[best.k] = 1 - best.t;
+      w[(best.k + 1) % 3] = best.t;
+      return { e: best.e, w1: w[0], w2: w[1], w3: w[2] };
     }
 
     // whether a point, as its longitude and Web Mercator y, lies on land; false with no mask
@@ -163,9 +234,16 @@
     }
 
     // The current at a coordinate, interpolated across its element in lon/lat exactly as
-    // `extract` does; null outside the mesh. Needs computeNodes first.
+    // `extract` does, or at the nearest point of the mesh's shoreline for water the mesh does not
+    // reach; null elsewhere. Needs computeNodes first.
     at(lat, lon) {
       const { xy, tri } = this;
+      const value = (a, b, c, w1, w2, w3) => {
+        const u = w1 * this.u[a] + w2 * this.u[b] + w3 * this.u[c];
+        const v = w1 * this.v[a] + w2 * this.v[b] + w3 * this.v[c];
+        return { u, v, speed: Math.hypot(u, v), toward: (Math.atan2(u, v) / DEG + 360) % 360,
+          km: this.nearKm(a, b, c, w1, w2, w3), field: this };
+      };
       for (let e = 0; e < tri.length; e += 3) {
         const a = tri[e], b = tri[e + 1], c = tri[e + 2];
         const x1 = xy[2 * a], y1 = xy[2 * a + 1], x2 = xy[2 * b], y2 = xy[2 * b + 1], x3 = xy[2 * c], y3 = xy[2 * c + 1];
@@ -177,12 +255,10 @@
         const w2 = ((y3 - y1) * (lon - x3) + (x1 - x3) * (lat - y3)) / det;
         const w3 = 1 - w1 - w2;
         if (w1 < -1e-9 || w2 < -1e-9 || w3 < -1e-9) continue;
-        const u = w1 * this.u[a] + w2 * this.u[b] + w3 * this.u[c];
-        const v = w1 * this.v[a] + w2 * this.v[b] + w3 * this.v[c];
-        return { u, v, speed: Math.hypot(u, v), toward: (Math.atan2(u, v) / DEG + 360) % 360,
-          km: this.nearKm(a, b, c, w1, w2, w3), field: this };
+        return value(a, b, c, w1, w2, w3);
       }
-      return null;
+      const q = this.edgePoint(lat, lon);
+      return q ? value(tri[q.e], tri[q.e + 1], tri[q.e + 2], q.w1, q.w2, q.w3) : null;
     }
   }
 
@@ -190,8 +266,9 @@
   // Web Mercator. Each cell remembers the element its centre falls in, as its number plus one,
   // and two of its weights in 1/255ths, kept small so a box the size of the Salish Sea fits in
   // memory. A cell whose centre is outside the mesh but which still reaches into it, along the
-  // mesh's edge, takes the element one of its corners falls in, so the trails run up to the
-  // mesh's own coastline; cells wholly outside the mesh hold 0 and stay blank.
+  // mesh's edge, takes the element one of its corners falls in. A water cell beyond the mesh's
+  // own shoreline, within the field's extendKm of it, takes the nearest point of that shoreline,
+  // so the trails run up to the coast; every other cell holds 0 and stays blank.
   class FieldGrid {
     constructor(field, cellM = 150) {
       const [S, W, N, E] = field.data.bbox;
@@ -243,6 +320,21 @@
                 break;
               }
             }
+          }
+        }
+      }
+      // water the mesh does not reach, within extendKm of its shoreline: the nearest edge point
+      if (field.buckets.size) {
+        for (let r = 0; r < this.rows; r++) {
+          const lat = invMercY(this.yN - (r + 0.5) * this.dY);
+          for (let c = 0; c < this.cols; c++) {
+            const idx = r * this.cols + c;
+            if (this.elem[idx] !== 0) continue;
+            const q = field.edgePoint(lat, W + (c + 0.5) * this.dLon);
+            if (!q) continue;
+            this.elem[idx] = q.e / 3 + 1;
+            this.w1[idx] = Math.round(q.w1 * 255);
+            this.w2[idx] = Math.round(q.w2 * 255);
           }
         }
       }

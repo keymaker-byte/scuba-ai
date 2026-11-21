@@ -28,21 +28,10 @@ Illahee Town Dock is a Port of Illahee community pier and boat ramp on the Kitsa
 
 Current here is negligible at every stage of the tide, at the surface and depth-averaged alike, so this is not a slack-tide dive.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. The nearest station with predictions is Rich Passage, West end (PUG1514), about 3.5 km southeast, in the pass |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | north, 4° |
-| **Site ebb set** | south, 184° |
-
-* **Flood.** Sets north, up the Port Orchard reach, negligible in strength and staying under about 0.15 m/s at any stage of the tide.
+* **Type.** Tidal.
+* **Flood.** Sets north, up the Port Orchard reach, negligible in strength at any stage of the tide.
 * **Ebb.** Sets south, down the reach toward Rich Passage and the main basin, similarly weak.
-* **Diveable window.** All day, any tide stage. Slack timing comes from the site's own ENPAC15 extract, cross-checked against the Brownsville tide table. Current is not the limiting factor at this site; boat traffic, visibility and the reef's own rope lines are.
+* **Diveable window.** All day, any tide stage. Current is not the limiting factor at this site; boat traffic, visibility and the reef's own rope lines are.
 
 ## Wind
 
@@ -55,7 +44,6 @@ The site faces east, across the Port Orchard reach toward Bainbridge Island.
 
 * **Short fetch.** North-northeast through southeast (NNE-SE), onshore over 1.5 to 2.9 km, the open fetch across the reach to Bainbridge Island.
 * **Fine.** South-southeast clockwise through north (SSE-N): offshore from south-southwest through northwest, blocked by the Kitsap Peninsula landmass behind the site, and cross-shore under 4.1 km from south-southeast, south, north-northwest and north.
-* **Wind against current.** Not a real factor here; the current stays too weak at every stage of the tide to stack meaningfully against any wind.
 
 ## Depth and tide
 

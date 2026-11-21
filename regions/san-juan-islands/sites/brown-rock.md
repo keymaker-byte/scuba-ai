@@ -30,21 +30,10 @@ Small rock formation in the cove on the Orcas Island side of Obstruction Pass, r
 
 The rock sits in the cove off the main channel of Obstruction Pass, and the channel flow wraps into the cove as a counter-clockwise eddy along the Orcas shore.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Obstruction Pass, north of Obstruction Island (PUG1705), about 110 m south-southwest |
-| **Recommended bin** | Bin 1, at 16.4 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | east, 100° |
-| **Station ebb axis** | west, 274° |
-| **Site flood set** | east, 83° |
-| **Site ebb set** | west, 263° |
-
-* **Flood.** Enters Obstruction Pass from its southwest end and drives onto Brown Rock, where it splits in two. Inshore of the rock the flood turns counter-clockwise and runs back west along the shore toward the county pier and the boat ramp. Daily peaks at the station run 0.45 to 1.19 m/s over 30 days.
-* **Ebb.** Enters Obstruction Pass at its east end and follows the curve of the Orcas shore west past Brown Rock, the county pier and the boat ramp, then out along the south-southwest shore of the cove. Daily peaks at the station run 0.40 to 0.92 m/s over 30 days.
-* **Diveable window.** Both slacks serve. Under 0.25 m/s at the station, the slack before ebb typically runs 72 to 138 minutes. The slack before flood typically runs 60 to 120 minutes, shrinks to about 40 minutes ahead of the strongest floods, and stretches to several hours on days when the weaker of the two daily floods stays under the threshold.
+* **Type.** Tidal.
+* **Flood.** Enters Obstruction Pass from its southwest end and drives onto Brown Rock, where it splits in two. Inshore of the rock the flood turns counter-clockwise and runs back west along the shore toward the county pier and the boat ramp.
+* **Ebb.** Enters Obstruction Pass at its east end and follows the curve of the Orcas shore west past Brown Rock, the county pier and the boat ramp, then out along the south-southwest shore of the cove.
+* **Diveable window.** Both slacks serve. The slack before flood shrinks ahead of the strongest floods and stretches to several hours on days when the weaker of the two daily floods stays gentle.
 * **No slack inshore.** Along the shore between the rock and the pier the water runs west toward the pier on both the flood and the ebb. It slows at mid-channel slack and picks up again in the same direction.
 * **At the rock.** The flow splits around the rock and shifts direction around it, pushing a diver back and forth among the boulders.
 
@@ -60,7 +49,6 @@ The entry shore faces the cove and Obstruction Island across the pass; the dive 
 * **Bad.** East-southeast through southeast (ESE-SE), onshore over 5.7 to 9.4 km of open water down the east entrance of the pass, building chop on the beach and across the swim out.
 * **Mixed.** Southwest (SW), cross-shore over 7.3 km down the west entrance of the pass, running swell past the entry.
 * **Fine.** South-southeast through south-southwest (SSE-SSW), blocked by Obstruction Island 410 to 670 m across the pass, and west-southwest clockwise through east (WSW-E), blocked by Orcas Island itself, with 570 m of fetch at most.
-* **Wind against current.** East-southeast (ESE), over 5.7 km, blows against the east flood set. Southwest (SW), over 7.3 km, blows against the west ebb set and the west inshore set along the shore.
 
 ## Depth and tide
 

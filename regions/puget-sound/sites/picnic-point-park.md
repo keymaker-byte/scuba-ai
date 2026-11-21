@@ -26,30 +26,10 @@ Picnic Point is a shore dive on the east shore of Possession Sound, on the mainl
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Possession Sound Entrance (PUG1605), about 2.7 km northwest, mid-channel |
-| **Recommended bin** | bin 40, at 18.0 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | north-northeast, 31° |
-| **Station ebb axis** | south-southwest, 204° |
-| **Site flood set** | north, 5° |
-| **Site ebb set** | south, 185° |
-
-* **Flood.** Sets north-northeast, parallel to shore. Weak, generally under about 0.3 to 0.35 m/s even on a larger exchange, with daily peaks of 0.13 to 0.37 m/s at the station over 30 days.
-* **Ebb.** Sets south-southwest, parallel to shore. Weak, generally under about 0.25 m/s, with daily peaks of 0.10 to 0.32 m/s at the station over the same 30 days.
-* **Diveable window.** Current at this station rarely reaches the 0.25 m/s mark, so the window stays wide across most of the day, typically about 1.5 to 13 hours, and timing is forgiving compared with a true tidal channel. Still plan around the published slack, since the water is calmest and clearest then.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Edmonds, 2.7 miles WSW of, 47°48.38′ N, 122°26.67′ W, about 11.5 km southwest |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 44 minutes after the reference |
-| **Slack before ebb** | 13 minutes after the reference |
+* **Type.** Tidal.
+* **Flood.** Sets north-northeast, parallel to shore. Weak, even on a larger exchange.
+* **Ebb.** Sets south-southwest, parallel to shore. Weak.
+* **Diveable window.** The window stays wide across most of the day, and timing is forgiving compared with a true tidal channel. Still plan around the slack, since the water is calmest and clearest then.
 
 ## Wind
 
@@ -64,7 +44,6 @@ The beach faces west across Possession Sound and the main basin toward Whidbey I
 * **Short fetch.** Northwest (NW), onshore over 4.2 km.
 * **Mixed.** North-northwest through north (NNW-N), cross-shore over 6.1 to 24.0 km.
 * **Fine.** North-northeast clockwise through south (NNE-S): offshore from north-northeast through southeast, off the land side of the park, and cross-shore under 3.4 km from south-southeast and south.
-* **Wind against current.** The current here is weak enough that wind is the deciding factor at the entry regardless of tide; an onshore westerly builds chop and surge on the cobble beach at any current state. South-southeast through southwest (SSE-SW), over 1.4 to 15.5 km, opposes the ebb, and north-northwest through north-northeast (NNW-NNE), over 2.0 to 24.0 km, the flood.
 
 ## Depth and tide
 

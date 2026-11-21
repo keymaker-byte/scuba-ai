@@ -29,30 +29,10 @@ Shore dive across the shallow bay at Washington Park, on the west end of Fidalgo
 
 Fidalgo Head sits where the flow through Burrows Pass meets the open water off the headland. Expect current to matter on every dive here.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Burrows Pass (PUG1738), about 1.3 km east-southeast at the mouth of the pass; the dive is on the headland just outside it, at a bifurcation where the flow splits |
-| **Recommended bin** | bin 23, at 8.6 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | west-northwest, 283° |
-| **Station ebb axis** | east, 89° |
-| **Site flood set** | northwest, 322°, curling along the Fidalgo Head shoreline as it rounds the point |
-| **Site ebb set** | southeast, 142°, curling along the shoreline as it divides at the head |
-
-* **Flood.** Runs westward through Burrows Pass into Rosario Strait, then turns and moves inshore along Fidalgo Head, rounding the head heading northwest and setting into the bay toward West Beach. Daily peaks run 1.31 to 1.69 m/s at the station over 30 days.
-* **Ebb.** Sets south past Green Point, bends into the bay, and collides with the rocky shoreline of Fidalgo Head. The flow then divides: the stronger part continues south, flowing out along the outer third of the headland; the weaker part turns north and flows back toward West Beach. Daily peaks run 0.47 to 1.48 m/s at the station over the same 30 days.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 90 minutes. Enter 20 to 30 minutes before slack, preferably ahead of a flood, so the crossing runs against only a minimal current and the return leg runs entirely with the building flood. Returning on an ebb instead, the swim back along the shoreline can run against the current at first; about a third of the way in from the headland there is a quiet current-divide zone, and past it the remaining swim runs with an inbound current.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Green Point, 0.8 mile northwest of, 48°30.28′ N, 122°42.37′ W, about 1.4 km north |
-| **Legacy reference** | Rosario Strait (PCT1996) |
-| **Slack before flood** | 55 minutes before the reference |
-| **Slack before ebb** | 8 minutes before the reference |
+* **Type.** Tidal.
+* **Flood.** Runs westward through Burrows Pass into Rosario Strait, then turns and moves inshore along Fidalgo Head, rounding the head heading northwest and setting into the bay toward West Beach.
+* **Ebb.** Sets south past Green Point, bends into the bay, and collides with the rocky shoreline of Fidalgo Head. The flow then divides: the stronger part continues south, flowing out along the outer third of the headland; the weaker part turns north and flows back toward West Beach.
+* **Diveable window.** Enter shortly before slack, preferably ahead of a flood, so the crossing runs against only a minimal current and the return leg runs entirely with the building flood. Returning on an ebb instead, the swim back along the shoreline can run against the current at first; about a third of the way in from the headland there is a quiet current-divide zone, and past it the remaining swim runs with an inbound current.
 
 ## Wind
 
@@ -67,7 +47,6 @@ The entry is on the sheltered bay; Fidalgo Head sits on the north side of Burrow
 * **Short fetch.** Southeast (SE) and south-southwest (SSW), onshore over about 1 km.
 * **Mixed.** West through west-northwest (W-WNW), cross-shore over 5.3 to 7.6 km off Rosario Strait.
 * **Fine.** Northwest clockwise through east-southeast (NW-ESE), offshore, the north blocked by the park's own high ground, and east up the narrow throat of Burrows Pass with little room to build a fetch even when it blows; and south-southeast through south (SSE-S), onshore under 1 km across the bay.
-* **Wind against current.** West-northwest through north (WNW-N), over 5.3 to 16.9 km, blows against the flood, the same current the return leg is usually timed to ride home; wind and current opposition stack right on the exposed crossing. Southeast (SE), over about 1 km, opposes the ebb.
 
 ## Depth and tide
 

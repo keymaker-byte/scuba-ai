@@ -28,32 +28,12 @@ Shore dive off Tongue Point, inside the Tongue Point Marine Life Sanctuary at Sa
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Angeles Point current station (PUG1639), about 13.3 km east, same shore |
-| **Recommended bin** | bin 1, at 18.6 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | east-northeast, 69° |
-| **Station ebb axis** | northwest, 304° |
-| **Site flood set** | east-northeast, 75° |
-| **Site ebb set** | west-southwest, 255° |
-
-* **Flood.** Sets east-northeast along the shore, with daily peaks of 0.66 to 1.42 m/s at the station over 30 days.
-* **Ebb.** Sets west-southwest along the shore, toward the open strait, with daily peaks of 0.30 to 1.58 m/s at the station over the same 30 days.
+* **Type.** Tidal.
+* **Flood.** Sets east-northeast along the shore.
+* **Ebb.** Sets west-southwest along the shore, toward the open strait.
 * **Inside the reef.** Kelp and rock break up most of the tidal flow, and current close to shore, above about 13.7 m, stays weak through most of the cycle.
 * **Beyond the reef.** Past the reef edge and out over the outer boulders, current builds quickly away from slack. Re-enter the reef and work back into shallower water if caught out in it.
-* **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs about 50 to 120 minutes, stretching past 4 hours on a weak neap turn. Pad the window, especially for any time spent on the outer boulders.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Angeles Point, 2.3 miles north of, 48°12′ N, 123°33′ W, about 12.1 km east-northeast |
-| **Legacy reference** | Juan de Fuca - East (07100), at Race Rocks |
-| **Slack before flood** | 1 hour 22 minutes after the reference |
-| **Slack before ebb** | 32 minutes before the reference |
+* **Diveable window.** Slack to slack, either turn, stretching for hours on a weak neap turn. Pad the window, especially for any time spent on the outer boulders.
 
 ## Wind
 
@@ -67,7 +47,6 @@ Tongue Point faces north into the open strait, with Crescent Bay opening to the 
 * **Bad.** Northwest clockwise through east-northeast (NW-ENE), onshore over 18.8 km to more than 30 km, straight across the strait or along it.
 * **Mixed.** East (E), cross-shore over more than 30 km, and west through west-northwest (W-WNW), cross-shore over 21.6 km to more than 30 km down the strait's open axis from the Pacific, each running a swell along the shore past the entry.
 * **Fine.** East-southeast clockwise through west-southwest: offshore from southeast through west-southwest, off the land, and cross-shore over 1.7 km from the east-southeast.
-* **Wind against current.** Southwest through west-northwest (SW-WNW) against the ebb, which sets toward the open strait, over 1.7 km to more than 30 km, is the combination to avoid. Northeast through east-southeast (NE-ESE) against the flood, over 1.7 km to more than 30 km.
 
 ## Depth and tide
 

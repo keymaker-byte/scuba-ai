@@ -29,34 +29,14 @@ Octopus Hole is a rock wall in a marine conservation area on the west shore of H
 
 ## Current
 
-Octopus Hole is dived independently of the tide. The water here moves at around 0.1 m/s through the whole column, about 0.15 m/s on the largest exchanges, well under any speed that would close the site.
+Octopus Hole is dived independently of the tide. The water here moves gently through the whole column, even on the largest exchanges, well under any speed that would close the site.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. The nearest station with predictions is Hazel Point (PUG1601), about 38 km northeast at the canal entrance |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | southwest, 223°, up-canal toward Hoodsport and the Great Bend |
-| **Site ebb set** | northeast, 43°, down-canal toward Lilliwaup and the entrance |
-
-* **Flood.** Sets southwest along the shore, filling the canal toward the Great Bend, and peaks around 0.1 m/s.
+* **Type.** Tidal.
+* **Flood.** Sets southwest along the shore, filling the canal toward the Great Bend, gently.
 * **Ebb.** Sets northeast, draining toward the entrance, at similar strength.
 * **Along the wall.** On a large exchange a mild set can run south along the wall, toward its far end, on the ebb as well as on the flood. Read the water at the north end and start the dive into whatever set it finds.
 * **Slack.** This reach of the canal behaves as a standing wave, so slack falls near high and low water. Here it runs about an hour and a quarter ahead of the high and low at Ayock Point.
 * **Diveable window.** All day, on any exchange.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Foulweather Bluff, 47°55.90′ N, 122°38.33′ W, about 64.7 km north-northeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | At the reference |
-| **Slack before ebb** | 15 minutes before the reference |
 
 ## Wind
 
@@ -71,7 +51,6 @@ The beach faces east-southeast across Hood Canal, here about 2 km wide, backed b
 * **Short fetch.** East-northeast through south-southeast (ENE-SSE), onshore over 2.2 to 3.7 km across the canal, short fetch but straight onto the beach.
 * **Mixed.** South (S), over 5.5 km, runs up the canal roughly parallel to the shore, building a swell that runs past the entry along the shore.
 * **Fine.** South-southwest clockwise through north-northeast (SSW-NNE): offshore from southwest through north-northwest, blocked by the high ground behind the site, and cross-shore under 2.0 km from south-southwest, north and north-northeast.
-* **Wind against current.** Rarely an issue, since the current is too weak to stack against a wind. Wind alone decides the surface, so read the forecast for the beach.
 
 ## Depth and tide
 

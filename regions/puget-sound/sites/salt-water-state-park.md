@@ -28,30 +28,10 @@ Shore dive at Saltwater State Park in Des Moines, on the mainland shore of East 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Browns Point, 1.6 miles North of (PUG1521), about 10.7 km west-southwest in East Passage |
-| **Recommended bin** | bin 34, at 8.5 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | southwest, 234° |
-| **Station ebb axis** | northeast, 42° |
-| **Site flood set** | south-southeast, 164° |
-| **Site ebb set** | north-northwest, 344° |
-
-* **Flood.** Sets south-southeast, parallel to the beach. Daily peaks run 0.23 to 0.48 m/s at the station over 30 days.
-* **Ebb.** Sets north-northwest, also parallel to the beach. Daily peaks run 0.05 to 0.18 m/s at the station over the same 30 days.
-* **Diveable window.** Current here is generally light, and local divers describe it as weak and variable rather than a clean, predictable exchange; it is not well represented by the standard south Sound approach of correcting off the Tacoma Narrows. Rather than chase a precise slack at a distant station, the established local practice is to plan around high water on a small exchange day: enter roughly 45 minutes to an hour before high water and exit about 30 minutes after. Current at the station stays under 0.25 m/s for about 2 to 11 hours at a time. Avoid large exchanges, and avoid a strong ebb altogether if a southwest wind is blowing. Low water shortens the remaining swim once you reach the water, but only after a long, exposed walk across the drained tide flat to get there, and the walking is the worse trade.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | None; the reference is used directly |
-| **Legacy reference** | The Narrows, north end (midstream) (PCT1766), 47°18.37′ N, 122°32.98′ W, about 18.2 km west-southwest |
-| **Slack before flood** | At the reference |
-| **Slack before ebb** | At the reference |
+* **Type.** Tidal.
+* **Flood.** Sets south-southeast, parallel to the beach.
+* **Ebb.** Sets north-northwest, also parallel to the beach, the weaker of the two.
+* **Diveable window.** Current here is generally light, and local divers describe it as weak and variable rather than a clean, predictable exchange. The established local practice is to plan around high water on a small exchange day: enter shortly before high water and exit soon after it. Avoid large exchanges, and avoid a strong ebb altogether if a southwest wind is blowing. Low water shortens the remaining swim once you reach the water, but only after a long, exposed walk across the drained tide flat to get there, and the walking is the worse trade.
 
 ## Wind
 
@@ -66,7 +46,6 @@ The beach faces west across East Passage toward Vashon Island.
 * **Short fetch.** South-southwest (SSW), onshore over 4.0 km, and west-northwest (WNW), onshore over 3.9 km.
 * **Mixed.** North-northwest (NNW), cross-shore over 9.2 km.
 * **Fine.** North clockwise through south (N-S): offshore from north-northeast through southeast, off the wooded bluff behind the park, and cross-shore under 3.0 km from north, south-southeast and south.
-* **Wind against current.** A southwest wind on the north-northwest ebb is the combination to avoid; it is the one this site's own divers warn about most. Northwest through north (NW-N), over 2.6 to 11.9 km, opposes the ebb, and south through south-southwest (S-SSW), over 3.0 to 4.0 km, the flood.
 
 ## Depth and tide
 

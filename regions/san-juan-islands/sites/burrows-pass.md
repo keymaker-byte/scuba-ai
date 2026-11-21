@@ -41,32 +41,12 @@ Safety stops work at the shallow north-northeast end of the ledge, or on the san
 
 Diveable on the slack before the ebb only. Do not dive on a flood exchange or at the slack before a flood.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Burrows Pass current station (PUG1738), about 0.4 km away, at the site |
-| **Recommended bin** | bin 1, at 30.6 m |
-| **Observed offset, slack before flood** | Zero |
-| **Observed offset, slack before ebb** | Zero |
-| **Station flood axis** | west, 275° |
-| **Station ebb axis** | east, 95° |
-| **Site flood set** | west-northwest, 286° |
-| **Site ebb set** | east-southeast, 106° |
-
-* **Flood.** Sets southwest past the entry and out of the pass, around Fidalgo Head and into Rosario Strait. Strong, with daily peaks of 1.12 to 1.48 m/s at the station over 30 days.
-* **Ebb.** Sets northeast, back into the pass toward the entry and exit. Gentler, with daily peaks of 0.36 to 1.20 m/s at the station over the same 30 days.
-* **Diveable window.** The slack before the ebb only. A typical window under 0.25 m/s at the station runs about 40 to 95 minutes; the layered reversal and the exchange size decide whether it serves.
+* **Type.** Tidal.
+* **Flood.** Sets southwest past the entry and out of the pass, around Fidalgo Head and into Rosario Strait. Strong.
+* **Ebb.** Sets northeast, back into the pass toward the entry and exit. Gentler.
+* **Diveable window.** The slack before the ebb only; the layered reversal and the exchange size decide whether it serves.
 * **Layered reversal.** The ebb begins at the surface and works downward. Early in a low-volume ebb, water above about 13.7 m can already run northeast toward the exit while water below still runs southwest, outbound, on the tail of the flood. The transition band sits roughly 12 to 18 m below the surface. Ascend to about 12 m or shallower to catch the homeward ebb.
 * **Exchange size.** A small ebb may never reverse the deep flow, and the back eddy that carries you home may not form; too large an exchange is also unwelcome. A moderate ebb is the target. On a failed reversal the flow can sweep west onto the rocks and cliffs at the point.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Between Fidalgo Head and Burrows Island, 48°29.33′ N, 122°42.20′ W, about 0.9 km west |
-| **Legacy reference** | Rosario Strait (PCT1996) |
-| **Slack before flood** | None published |
-| **Slack before ebb** | 32 minutes before the reference |
 
 ## Wind
 
@@ -79,7 +59,6 @@ The entry beach is on the north shore of the pass, facing south-southwest toward
 
 * **Bad.** West-southwest (WSW), onshore over 10.1 km, straight up the axis of the pass from its Rosario Strait opening.
 * **Fine.** West clockwise through southwest (W-SW): offshore from northwest through east-northeast, and under 2.1 km of fetch from every other direction.
-* **Wind against current.** East-southeast (ESE), over 2.1 km, against the homeward ebb on the leg spent at the surface, and west-southwest (WSW), over 10.1 km, against the flood. The ebb pairing is the one to avoid.
 
 ## Depth and tide
 

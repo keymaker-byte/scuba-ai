@@ -27,32 +27,11 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Point Wilson, 0.6 mi. NE of (PUG1623), about 4.3 km north |
-| **Recommended bin** | bin 33, at 17.1 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | southeast, 124° |
-| **Station ebb axis** | northwest, 322° |
-| **Site flood set** | southwest, 231°, early in the flood, then northeast, 051° for the rest of it |
-| **Site ebb set** | northeast, 051°, along the shore past the wharf |
-
-* **Weak and variable.** NOAA's own current station closest to the site, 0.6 km off the beach, carries no numeric prediction at all and is flagged weak and variable rather than a clean flood and ebb.
-* **Flood.** Sets southwest early in the flood, past the ferry pier toward the wharf, then swings back to run northeast partway through the flood cycle, well before the tide itself turns. Daily peaks run 0.87 to 1.93 m/s at the station over 30 days.
-* **Ebb.** Also sets northeast, past the wharf toward the ferry pier, the same direction as the reversed flood. There is no clean slack between the two: the northeast current simply eases through the turn and rebuilds as the ebb develops. Daily peaks run 0.32 to 1.88 m/s at the station over the same 30 days.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 60 minutes, while the current here stays weak through most of the day, comfortably under 0.25 m/s, so the window is forgiving on strength. What it is not forgiving of is direction: it can swing from southwest to northeast, or ease and rebuild through a false slack, with little warning.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Point Hudson, a correction for the site itself, published without a station number or position |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 2 hours 26 minutes before the reference |
-| **Reversal of flood current** | 30 minutes before the reference's slack before flood |
-| **Slack before ebb** | At the reference |
+* **Type.** Tidal.
+* **Weak and variable.** The water off the beach is weak and variable rather than a clean flood and ebb.
+* **Flood.** Sets southwest early in the flood, past the ferry pier toward the wharf, then swings back to run northeast partway through the flood cycle, well before the tide itself turns.
+* **Ebb.** Also sets northeast, past the wharf toward the ferry pier, the same direction as the reversed flood. There is no clean slack between the two: the northeast current simply eases through the turn and rebuilds as the ebb develops.
+* **Diveable window.** The current here stays weak through most of the day, so the window is forgiving on strength. What it is not forgiving of is direction: it can swing from southwest to northeast, or ease and rebuild through a false slack, with little warning.
 
 * **Slack before flood.** The turn into the early flood, which sets southwest past the abandoned ferry pier toward Union Wharf.
 * **Reversal of flood current.** Partway through the flood cycle, the current reverses to run northeast, from Union Wharf toward the abandoned ferry pier. Its timing varies with the size of the exchange, so the published time is a starting point to confirm in the water.
@@ -69,7 +48,6 @@ The beach faces south-southeast, out across Port Townsend Bay.
 
 * **Bad.** Northeast through south-southwest (NE-SSW), with several kilometres of open fetch across the bay toward Indian Island and Marrowstone Island, 2.9 to 11.6 km.
 * **Fine.** Southwest clockwise through north-northeast (SW-NNE), off the town bluff, or cross-shore over 4.5 km or less.
-* **Wind against current.** The current here runs along the shore rather than on or off it, so chop is driven mainly by fetch. Northeast through east (NE-E) blows against the northeast running current and can build a short, steep chop over the wharf pilings, worth checking before a long surface swim out to the pylons; south-southwest through west-southwest (SSW-WSW) blows against the early flood's southwest set.
 
 ## Depth and tide
 

@@ -29,32 +29,12 @@ Rocky shoreline at the north end of Odlin County Park on Lopez Island, entered b
 
 The site sits on the east shore of Upright Channel, which joins Harney Channel to the north with San Juan Channel to the southwest. The water off the shoreline runs with the channel, and the bay to the south holds slacker water.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Upright Channel narrows (PUG1723), about 2.3 km west-southwest |
-| **Recommended bin** | Bin 7, at 29.44 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | northeast, 43° |
-| **Station ebb axis** | southwest, 232° |
-| **Site flood set** | northeast, 54° |
-| **Site ebb set** | southwest, 234° |
-
-* **Flood.** Sets northeast up the channel past the shoreline toward Upright Head on every exchange. Daily peaks at the station run 0.58 to 1.29 m/s over 30 days.
-* **Ebb.** On exchanges of 1.2 m or less the ebb also sets northeast past the park, with the flood. On larger exchanges it sets southwest first, then reverses and runs northeast while the tide is still falling; the reversal comes up to three hours into the ebb, and its timing varies with the size of the exchange. The ebb flowing east through San Juan Channel is deflected off the west shore of Lopez into the south end of Upright Channel, and once it outweighs the ebb entering from the north, the flow past the park turns northeast. Daily peaks at the station run 0.38 to 0.70 m/s over 30 days.
-* **Diveable window.** The slack before ebb is the one that serves. Under 0.25 m/s at the station it typically runs 102 to 138 minutes, shrinks to about 12 minutes ahead of the strongest ebbs, and stretches to about five hours on days when the weaker ebb stays under the threshold. A second slack follows on a larger ebb, as the southwest ebb weakens against the northeast flow and reverses.
-* **No slack before flood at the site.** The station turns, but the water off the shoreline is already running northeast by the end of the ebb, and it only slows at minimum current before picking up again as the flood.
+* **Type.** Tidal.
+* **Flood.** Sets northeast up the channel past the shoreline toward Upright Head on every exchange.
+* **Ebb.** On small exchanges the ebb also sets northeast past the park, with the flood. On larger exchanges it sets southwest first, then reverses and runs northeast while the tide is still falling; the reversal comes well into the ebb, and its timing varies with the size of the exchange. The ebb flowing east through San Juan Channel is deflected off the west shore of Lopez into the south end of Upright Channel, and once it outweighs the ebb entering from the north, the flow past the park turns northeast.
+* **Diveable window.** The slack before ebb is the one that serves. It shrinks to almost nothing ahead of the strongest ebbs, and stretches for hours on days when the weaker ebb stays gentle. A second slack follows on a larger ebb, as the southwest ebb weakens against the northeast flow and reverses.
+* **No slack before flood at the site.** The water off the shoreline is already running northeast by the end of the ebb, and it only slows at minimum current before picking up again as the flood.
 * **Outside the bay.** Current is mild close to the pier and strengthens along the shoreline toward Upright Head, where it can be strong enough to end a dive away from slack.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Harney Channel, 48°35.45′ N, 122°55.23′ W, about 3.8 km north-northwest |
-| **Legacy reference** | San Juan Channel (south entrance) (PCT2186) |
-| **Slack before flood** | 15 minutes after the reference |
-| **Slack before ebb** | 11 minutes after the reference |
 
 ## Wind
 
@@ -68,7 +48,6 @@ The shoreline faces straight across Upright Channel toward Shaw Island, with Upr
 * **Bad.** West-southwest (WSW), onshore over 7.4 km of open water down Upright Channel, building chop on the entry and along the shoreline.
 * **Short fetch.** Southwest (SW), onshore over 1.9 km, and west through north-northwest (W-NNW), onshore over 1.6 to 3.5 km across Upright Channel, raising chop on the entry.
 * **Fine.** North clockwise through south-southwest (N-SSW). North and north-northeast run along the shore; northeast through south-southeast blow off Upright Head and Lopez Island with 100 to 420 m of fetch; south and south-southwest run along the shore with under 600 m of fetch.
-* **Wind against current.** Southwest (SW) over 1.9 km, west-southwest (WSW) over 7.4 km and west (W) over 3.5 km blow against the southwest ebb set. The winds opposing the northeast flood set, and the ebb once it reverses onto that set, blow off the land with under 250 m of fetch.
 
 ## Depth and tide
 

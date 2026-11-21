@@ -27,30 +27,10 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Marrowstone Point, 0.8 mi. NE of (PUG1619), about 2.1 km northeast |
-| **Recommended bin** | bin 46, at 9.0 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | southeast, 129° |
-| **Station ebb axis** | north-northwest, 349° |
-| **Site flood set** | south, 172° |
-| **Site ebb set** | north, 352° |
-
-* **Flood.** Sets southeast in the main channel, but a reverse eddy runs along the shoreline south of Marrowstone Point: right at the pier, both flood and ebb push north-northwest, past the site toward the point. Daily peaks run 1.42 to 2.35 m/s at the station over 30 days.
-* **Ebb.** Sets north-northwest, both in the channel and along the shore, the same direction as the nearshore flood push, with daily peaks of 0.92 to 2.33 m/s at the station over the same 30 days. Visibility tends to be better on the ebb to flood slack than the flood to ebb.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 30 to 55 minutes. Exposed directly to Admiralty Inlet, so current builds fast off slack and the window is unforgiving of a late entry. Pick a small exchange day and check the water visually before committing to the swim out.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Marrowstone Point, 0.3 mile northeast of, 48°06′ N, 122°41′ W, about 1.0 km north-northeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 53 minutes before the reference |
-| **Slack before ebb** | 1 hour 13 minutes before the reference |
+* **Type.** Tidal.
+* **Flood.** Sets southeast in the main channel, but a reverse eddy runs along the shoreline south of Marrowstone Point: right at the pier, both flood and ebb push north-northwest, past the site toward the point.
+* **Ebb.** Sets north-northwest, both in the channel and along the shore, the same direction as the nearshore flood push. Visibility tends to be better on the ebb to flood slack than the flood to ebb.
+* **Diveable window.** Short. Exposed directly to Admiralty Inlet, so current builds fast off slack and the window is unforgiving of a late entry. Pick a small exchange day and check the water visually before committing to the swim out.
 
 ## Wind
 
@@ -64,7 +44,6 @@ The beach faces east across Admiralty Inlet toward Whidbey Island.
 * **Bad.** Northeast through south-southeast (NE-SSE), onshore over 6.2 to 20.6 km, with open fetch running the length of the inlet in both directions.
 * **Mixed.** North-northeast (NNE), cross-shore over 8.7 km.
 * **Fine.** South clockwise through north (S-N): offshore from southwest through north-northwest over Marrowstone Island, and cross-shore under 1.4 km from south, south-southwest and north.
-* **Wind against current.** North through north-northeast (N-NNE), over 1.0 to 8.7 km, against the north-setting ebb and the nearshore push on both exchanges, builds steep chop right at the entry; avoid it. Southeast through south (SE-S), over 1.4 to 20.6 km, opposes the flood in the channel.
 
 ## Depth and tide
 

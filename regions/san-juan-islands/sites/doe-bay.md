@@ -32,32 +32,12 @@ Shore dive from the beach of Doe Bay Resort and Retreat on the southeast shore o
 
 The inner bay is sheltered, and the Rosario Strait exchange sets past the points and over the open slope.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Peapod Rocks Light, 1.2 nm south of (PUG1706), about 3.0 km southeast |
-| **Recommended bin** | Bin 11, at 11.8 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | north-northeast, 22° |
-| **Station ebb axis** | southwest, 220° |
-| **Site flood set** | north, 9° |
-| **Site ebb set** | south, 189° |
-
-* **Flood.** Runs north-northeast up Rosario Strait past the mouth of the bay and sets north into the bay at the dive coordinate. Daily peaks at the station run 0.71 to 2.30 m/s over 30 days.
-* **Ebb.** Runs southwest down Rosario Strait and sets south out of the bay at the dive coordinate. Some ebbs run long, with two peaks and no slack between them. Daily peaks at the station run 0.57 to 2.15 m/s over 30 days.
-* **Diveable window.** Both slacks serve. Under 0.25 m/s at the station, the slack before flood typically runs 36 to 90 minutes and the slack before ebb 54 to 84 minutes, with the shortest windows near 30 minutes between strong exchanges. Where an exchange stays weak, two slacks merge into a single quiet spell of 4 to nearly 6 hours.
+* **Type.** Tidal.
+* **Flood.** Runs north-northeast up Rosario Strait past the mouth of the bay and sets north into the bay at the dive coordinate.
+* **Ebb.** Runs southwest down Rosario Strait and sets south out of the bay at the dive coordinate. Some ebbs run long, with two peaks and no slack between them.
+* **Diveable window.** Both slacks serve, shortest between strong exchanges. Where an exchange stays weak, two slacks merge into a single long quiet spell.
 * **Inside the bay.** The current inshore, over the beach shallows, the estuary mouth and the inner shorelines, is minimal.
 * **At the points.** The current strengthens once outside the bay, at the points and over the open slope beyond them.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Peapod Rocks Light, 1.2 miles south of, 48°37.33′ N, 122°44.83′ W, about 3.0 km southeast |
-| **Legacy reference** | Rosario Strait (PCT1996) |
-| **Slack before flood** | 8 minutes after the reference |
-| **Slack before ebb** | 49 minutes after the reference |
 
 ## Wind
 
@@ -69,7 +49,6 @@ Legacy correction:
 * **Bad.** East through south (E-S), onshore over 5.7 to 22.1 km of open water across Rosario Strait, building wind swell on the beach and the swim out.
 * **Short fetch.** South-southwest (SSW), onshore over 4.1 km, enough to raise chop in the bay.
 * **Fine.** Southwest clockwise through east-northeast (SW-ENE), blocked by the bay's own shores and Orcas Island, with 480 m of fetch at most.
-* **Wind against current.** South-southeast through south-southwest (SSE-SSW), over 4.1 to 8.0 km, blows against the south ebb set. Every wind opposing the north flood set, north-northwest through northeast (NNW-NE), crosses under 1 km of fetch, too short to stack.
 
 ## Depth and tide
 
@@ -111,7 +90,7 @@ The site swings about 2.5 m between high and low water on a median day, and up t
 
 ## Hazards
 
-* **Current past the points.** Rosario Strait peaks at the station exceed 2 m/s on the largest exchanges, and the current builds quickly once a diver leaves the shelter of the bay. Dive the points and the slope at slack.
+* **Current past the points.** Rosario Strait rips on the largest exchanges, and the current builds quickly once a diver leaves the shelter of the bay. Dive the points and the slope at slack.
 * **Depth off the southeast shore.** The slope beyond the southeast shore's rock passes 30 m within 180 m of the dive coordinate. A diver drifting offshore loses the rock to open water, so keep the shoreline on one side.
 * **Boats.** Occasional small boats use the bay, the resort keeps private mooring buoys in it, and guided kayak tours launch from the beach in summer. Fly a dive flag and ascend along the shoreline.
 * **Silt.** The silty bottom clouds quickly, and a stirred-up bay loses its visibility for the rest of the dive.

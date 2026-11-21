@@ -29,31 +29,11 @@ Rock wall along the west side of Frost Island, reached from the tip of Spencer S
 
 The channel between the spit and Frost Island carries the exchange between Lopez Sound and the water north of Lopez Island, and sets northwest on the flood and southeast on the ebb.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Thatcher Pass (PUG1733), about 3.6 km east-southeast |
-| **Recommended bin** | Bin 17, at 18.5 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | west-southwest, 255° |
-| **Station ebb axis** | east, 90° |
-| **Site flood set** | west-northwest, 297° |
-| **Site ebb set** | east-southeast, 117° |
-
-* **Flood.** Sets west-northwest through the channel and past the north end of the wall. Daily peaks at the station run 0.11 to 0.66 m/s over 30 days.
-* **Ebb.** Sets east-southeast through the channel, from the north end of the wall back toward the crossing. Daily peaks at the station run 0.11 to 1.44 m/s over 30 days.
-* **Diveable window.** Both slacks serve. Under 0.25 m/s at the station, the slack before flood typically runs 85 to 175 minutes and shrinks to under an hour ahead of the strongest floods. The slack before ebb typically runs 2.8 to 7.8 hours, because the weaker flood often stays near the threshold for hours, and shrinks to under an hour ahead of the strongest ebbs.
+* **Type.** Tidal.
+* **Flood.** Sets west-northwest through the channel and past the north end of the wall.
+* **Ebb.** Sets east-southeast through the channel, from the north end of the wall back toward the crossing, the stronger of the two.
+* **Diveable window.** Both slacks serve. The slack before flood shrinks ahead of the strongest floods. The slack before ebb often runs for hours, because the weaker flood stays gentle, and shrinks ahead of the strongest ebbs.
 * **In the channel.** Current runs strongly through the narrow channel on both tides, hardest on the ebb, and scours its floor. The slack before ebb gives a return with the current.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Frost-Willow Island, between, 48°32.35′ N, 122°49.85′ W, about 1.4 km east |
-| **Legacy reference** | Rosario Strait (PCT1996) |
-| **Slack before flood** | 46 minutes after the reference |
-| **Slack before ebb** | 19 minutes after the reference |
 
 ## Wind
 
@@ -67,7 +47,6 @@ The entry is the point of the spit, with water on three sides; the dive area fac
 * **Bad.** North (N), onshore over 9.4 km of open water up the channel and beyond it, building chop on the point and across the crossing.
 * **Short fetch.** North-northeast (NNE), onshore over 3.8 km, and northwest (NW), onshore over 2.2 km, raising chop on the point.
 * **Fine.** Northeast clockwise through west-northwest (NE-WNW), blocked by Frost Island across the channel and by Lopez Island and the spit itself, and north-northwest (NNW), with 740 m of fetch.
-* **Wind against current.** Northwest (NW), over 2.2 km, blows against the west-northwest flood set.
 
 ## Depth and tide
 

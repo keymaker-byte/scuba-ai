@@ -31,31 +31,11 @@ Shore dive at Titlow Park in Tacoma, on the east shore of the Tacoma Narrows sou
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA The Narrows, South end (midstream) (PUG1528), about 1.6 km north |
-| **Recommended bin** | bin 17, at 8.0 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | southwest, 220° |
-| **Station ebb axis** | north-northeast, 026° |
-| **Site flood set** | north, 011°, in the back eddy inside the pilings |
-| **Site ebb set** | south, 191°, inside the pilings |
-
-* **Flood.** In the main channel offshore of the pilings, the flood runs south out of the Narrows toward Day Island and the South Sound, with daily peaks of 1.60 to 3.16 m/s at the station over 30 days. Inside the pilings, between the slip and the beach, a back eddy turns it around, and the water sets north along the shore.
-* **Ebb.** Offshore, the ebb runs north toward the Narrows Bridge, slightly weaker than the flood, with daily peaks of 1.01 to 2.62 m/s at the station over the same 30 days. Inshore of the pilings the water sets south.
+* **Type.** Tidal.
+* **Flood.** In the main channel offshore of the pilings, the flood runs south out of the Narrows toward Day Island and the South Sound, and runs hard. Inside the pilings, between the slip and the beach, a back eddy turns it around, and the water sets north along the shore.
+* **Ebb.** Offshore, the ebb runs north toward the Narrows Bridge, slightly weaker than the flood. Inshore of the pilings the water sets south.
 * **The water among the pilings.** The slip and the beach sit in sheltered water that runs far slower than the channel, so the inshore water can feel calm while the channel just past the outer pilings is already moving. The eddy along the shore is rarely fully still.
-* **Diveable window.** Either slack, on a small exchange. A typical window under 0.25 m/s at the station runs about 25 to 40 minutes. Summer days often bring two slacks close together with only a small exchange between them, long enough for two dives. Time the dive so the slack falls about midway through it, and plan the route so the end of the dive rides the shoreline eddy north toward the pilings and the entry: on a flood, visit the shelves first and come back north along the shore. Leave the eddy at the pilings and swim in to the ramp; past them it carries on north along the beach toward the lagoon culvert. Past the outer pilings, a flood carries a diver south toward Day Island and an ebb north toward the bridge, so turn back to the slip as soon as the water starts to move.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Titlow Beach, a correction for the site itself, published without a station number or position |
-| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
-| **Slack before flood** | 5 minutes before the reference |
-| **Slack before ebb** | 33 minutes after the reference |
+* **Diveable window.** Either slack, on a small exchange, and short. Summer days often bring two slacks close together with only a small exchange between them, long enough for two dives. Time the dive so the slack falls about midway through it, and plan the route so the end of the dive rides the shoreline eddy north toward the pilings and the entry: on a flood, visit the shelves first and come back north along the shore. Leave the eddy at the pilings and swim in to the ramp; past them it carries on north along the beach toward the lagoon culvert. Past the outer pilings, a flood carries a diver south toward Day Island and an ebb north toward the bridge, so turn back to the slip as soon as the water starts to move.
 
 ## Wind
 
@@ -69,7 +49,6 @@ The beach faces west across the Narrows toward the Gig Harbor peninsula, about 1
 * **Bad.** South through southwest (S-SW), which come up from the South Sound past Day Island and Fox Island and push chop onto the beach, and north (N), the strong northerlies funnelled down the Narrows.
 * **Short fetch.** West-southwest through north-northwest (WSW-NNW), onshore over 2.0 to 3.9 km across the Narrows.
 * **Fine.** North-northeast clockwise through south-southeast (NNE-SSE), offshore off the bluff behind the park, or cross-shore over 310 m or less.
-* **Wind against current.** South through west-southwest (S-WSW) blows against the south setting flood in the channel, and north (N) against the north setting ebb, stacking a steep, confused chop. Under the bridge it can break.
 
 ## Depth and tide
 

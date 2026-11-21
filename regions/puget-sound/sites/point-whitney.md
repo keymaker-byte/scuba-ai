@@ -31,22 +31,11 @@ Point Whitney is a shore dive on Hood Canal at the Washington Department of Fish
 
 Current here is negligible at every stage of the tide, at the surface and depth-averaged alike, which is why the site is dived on any tide rather than timed to a slack.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. The nearest station with predictions is Hazel Point (PUG1601), about 10.5 km southeast |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | north-northwest, 333°, into Dabob Bay |
-| **Site ebb set** | south-southeast, 153°, out of the bay toward the main canal |
-
+* **Type.** Tidal.
 * **Flood.** Sets north-northwest into Dabob Bay, negligible in strength.
 * **Ebb.** Sets south-southeast out of the bay toward the main canal, similarly negligible.
-* **Slack.** This corner of the canal behaves like the rest of Hood Canal, as a standing wave, so slack falls close to high and low water rather than midway between them. With the whole day already under about 0.13 m/s, the distinction rarely matters here.
-* **Diveable window.** All day, any tide stage. Slack timing comes from the site's own ENPAC15 extract, cross-checked against the Whitney Point tide table. Current is not the limiting factor at this site; access, visibility and boat traffic are.
+* **Slack.** This corner of the canal behaves like the rest of Hood Canal, as a standing wave, so slack falls close to high and low water rather than midway between them. With the whole day's current gentle, the distinction rarely matters here.
+* **Diveable window.** All day, any tide stage. Current is not the limiting factor at this site; access, visibility and boat traffic are.
 
 ## Wind
 
@@ -60,7 +49,6 @@ The beach faces north, out across the mouth of Dabob Bay into Hood Canal.
 * **Bad.** Northeast (NE), onshore over 6.7 km, the open fetch up the canal and across the bay mouth.
 * **Short fetch.** Northwest through north-northeast (NW-NNE), onshore over 1.4 to 3.4 km.
 * **Fine.** East-northeast clockwise through west-northwest (ENE-WNW): offshore from east-southeast through southwest, blocked by the high ground inland toward Brinnon, and under 4.8 km of fetch from every other direction.
-* **Wind against current.** Not a factor here; the current is too weak to stack against any wind. Read the beach forecast rather than the marine one.
 
 ## Depth and tide
 

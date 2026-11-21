@@ -28,21 +28,10 @@ Ediz Hook is the long sand spit that curls out from the base of Port Angeles and
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. NOAA lists the harbor's current as weak and variable. The nearest station with predictions is Ediz Hook Light, 1.2 mi N of (PUG1638), about 3.1 km north-northeast on the strait side of the spit |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | southeast, 138° |
-| **Site ebb set** | northwest, 318° |
-
-* **Flood.** Sets southeast inside the harbor. Out at the harbor mouth, beyond the spit, the flood sets east with daily peaks of 0.26 to 0.95 m/s.
-* **Ebb.** Sets northwest inside the harbor. Out at the harbor mouth the ebb sets west-northwest, with daily peaks of 0.38 to 1.24 m/s.
-* **At the dive site.** Sheltered well inside the harbor basin, the current stays under 0.03 m/s all day through the whole tidal cycle, out of reach of the flow at the harbor mouth; this is not a slack tide dive.
+* **Type.** Tidal.
+* **Flood.** Sets southeast inside the harbor. Out at the harbor mouth, beyond the spit, the flood sets east.
+* **Ebb.** Sets northwest inside the harbor. Out at the harbor mouth the ebb sets west-northwest.
+* **At the dive site.** Sheltered well inside the harbor basin, the water barely moves all day through the whole tidal cycle, out of reach of the flow at the harbor mouth; this is not a slack tide dive.
 * **Diveable window.** Any time. This is one of the few sites in the region where current genuinely does not govern the plan, a useful fallback when current rules out a dive elsewhere on the strait.
 
 ## Wind
@@ -57,7 +46,6 @@ The inside shore looks into Port Angeles Harbor, sheltered from the open strait 
 * **Short fetch.** Southeast through west-southwest (SE-WSW), onshore over 2.0 to 4.1 km of harbor water, enough to put chop on the entry.
 * **Mixed.** East-southeast (ESE), cross-shore over 6.5 km down the length of the harbor, which runs a swell past the entry.
 * **Fine.** West clockwise through east: offshore from northwest through east-northeast, blocked entirely by the spit, and cross-shore over 1.2 km or less from the east and from west through west-northwest.
-* **Wind against current.** The current at the dive site stays well under the region's threshold, too weak to stack against wind.
 
 ## Depth and tide
 

@@ -76,23 +76,12 @@ Important! southwest is up; north is down-right.
 
 ## Current
 
-Currents here are light to moderate, and the site dives easily inside the point, but Alki Point sits just northwest and accelerates the flow close to and off the point, so a slack is worth planning. Local practice is to dive the slack before the ebb, entering the water about 45 minutes ahead of it.
+Currents here are light to moderate, and the site dives easily inside the point, but Alki Point sits just northwest and accelerates the flow close to and off the point, so a slack is worth planning. Local practice is to dive the slack before the ebb, entering the water well ahead of it.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Alki Point, West of (PUG1516), about 1.1 km northwest |
-| **Recommended bin** | bin 17, at 11.5 m, which matches the working depth. The deeper published bins (31 m, 59 m) sit in the channel, below anything dived here |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south-southwest, 215° |
-| **Station ebb axis** | north, 4° |
-| **Site flood set** | south-southeast, 153° |
-| **Site ebb set** | north-northwest, 333° |
-
-* **Flood.** Sets south-southwest, down-sound past the point and into the main basin. Along the reef it runs southwest, in the direction the pipe leads. Daily peaks run 0.13 to 0.49 m/s at the station over 30 days.
-* **Ebb.** Sets north, back around Alki Point toward Elliott Bay, with daily peaks of 0.25 to 0.46 m/s at the station over the same 30 days.
-* **Diveable window.** Plan the slack before the ebb and splash about 45 minutes before it. The inshore ground over the pipe and sand carries little current on a small exchange; the livelier water is out and off the point. Current at the station stays under 0.25 m/s for about 2 to 8 hours at a time.
+* **Type.** Tidal.
+* **Flood.** Sets south-southwest, down-sound past the point and into the main basin. Along the reef it runs southwest, in the direction the pipe leads.
+* **Ebb.** Sets north, back around Alki Point toward Elliott Bay.
+* **Diveable window.** Plan the slack before the ebb and splash well ahead of it. The inshore ground over the pipe and sand carries little current on a small exchange; the livelier water is out and off the point.
 
 ## Wind
 
@@ -107,7 +96,6 @@ The beach faces southwest into the open main basin.
 * **Short fetch.** South-southeast (SSE), onshore over 4.0 km, putting chop on the entry.
 * **Mixed.** West-northwest through northwest (WNW-NW), cross-shore over 7.8 to 8.0 km, running a swell along the beach.
 * **Fine.** North-northwest clockwise through southeast (NNW-SE): offshore from north-northwest through east, blowing off the West Seattle land behind the beach, and cross-shore under 1.1 km from east-southeast and southeast.
-* **Wind against current.** Southeast through south (SE-S) against the flood, over 1.1 to 18.8 km, steepens the chop on the entry; west-northwest through northwest (WNW-NW) against the ebb, over 7.8 to 8.0 km. When a south wind is up, the Elliott Bay shore around the point, sheltered from it, is the standard fallback.
 
 ## Depth and tide
 

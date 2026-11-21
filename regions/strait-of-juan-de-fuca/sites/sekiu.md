@@ -27,30 +27,10 @@ Sekiu Jetty is a shore dive in the town of Sekiu, on the western reach of the St
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Pillar Point current station (PUG1641), about 19.5 km east, out in the open strait |
-| **Recommended bin** | bin 75, at 12.4 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | east-southeast, 115° |
-| **Station ebb axis** | west-northwest, 290° |
-| **Site flood set** | east-southeast, 108° |
-| **Site ebb set** | west-northwest, 288° |
-
-* **Flood.** Sets east-southeast at the station, running into Clallam Bay, with daily peaks of 0.19 to 0.82 m/s at the open-water station over 30 days. Inshore among the kelp and rock, the flow is broken up and generally weak.
-* **Ebb.** Sets west-northwest at the station, out toward the open strait, with daily peaks of 0.35 to 0.84 m/s at the station over the same 30 days. Slack before ebb at the site falls well later than the raw station time, by well over an hour.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 110 to 240 minutes. The kelp bed and rock formations shelter most of the dive from the tidal flow; current close among them is generally a non-factor. It builds quickly once out past the kelp's outer edge, so stay inside it once away from slack.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Pillar Point, 48°16′ N, 124°04′ W, about 17.1 km east |
-| **Legacy reference** | Strait of Juan de Fuca Entrance (PCT1341) |
-| **Slack before flood** | 35 minutes before the reference |
-| **Slack before ebb** | 1 hour 27 minutes after the reference |
+* **Type.** Tidal.
+* **Flood.** Sets east-southeast offshore, running into Clallam Bay. Inshore among the kelp and rock, the flow is broken up and generally weak.
+* **Ebb.** Sets west-northwest offshore, out toward the open strait. Slack before ebb at the site falls late, well after the open strait turns.
+* **Diveable window.** Long. The kelp bed and rock formations shelter most of the dive from the tidal flow; current close among them is generally a non-factor. It builds quickly once out past the kelp's outer edge, so stay inside it once away from slack.
 
 ## Wind
 
@@ -65,7 +45,6 @@ The entry faces into Clallam Bay, with the open strait beyond it.
 * **Short fetch.** East-southeast (ESE), onshore over 3.2 km across Clallam Bay, putting chop on the entry.
 * **Mixed.** Northwest through north-northwest (NW-NNW), cross-shore over more than 30 km up the open strait, with a long, unbroken fetch to the Pacific, running a swell past the entry.
 * **Fine.** Southeast clockwise through west-northwest: cross-shore over 1.6 km or less from the southeast and south-southeast, and offshore from south through west-northwest, off the land.
-* **Wind against current.** West-northwest through northwest (WNW-NW) against the ebb, which sets toward the open strait, over 4.1 km to more than 30 km, is the combination to avoid. East-northeast through southeast (ENE-SE) against the flood, over 1.6 km to more than 30 km.
 
 ## Depth and tide
 

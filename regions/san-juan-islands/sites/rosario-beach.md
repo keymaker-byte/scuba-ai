@@ -31,30 +31,10 @@ Four separate dives run from the one beach. Working from the sand entry at the s
 
 Dive at slack, and on a low exchange. The strait runs fast, and the offshore legs are unforgiving of a late window.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Point Colville, 3.0 nm east of (Lawson Reef, 1 nm NW of) (PUG1727), about 5.4 km west across Rosario Strait |
-| **Recommended bin** | bin 30, at 10.3 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | north-northeast, 21° |
-| **Station ebb axis** | south, 186° |
-| **Site flood set** | north-northwest, 343°, bending northwest along Rosario Head |
-| **Site ebb set** | south-southeast, 163°, bending southeast along Rosario Head |
-
-* **Flood.** Sets northwest past Rosario Head, Urchin Rocks and Northwest Island. Inshore, a segment rounds Urchin Rocks and curls counterclockwise through the bay, across the beach shallows, then out along the northwest cliffs. Daily peaks run 0.24 to 0.87 m/s at the station over 30 days.
-* **Ebb.** Sets southeast past Northwest Island, Urchin Rocks and the outer face of Rosario Head. Inshore, a segment runs along the northwest shore toward the beach, turns clockwise past the beach, flows out past Urchin Rocks (it can fluctuate here) and across the face of the head, and part of it rounds the south tip of Rosario Head into Sharpe Cove. The strait itself runs hard, with daily ebb peaks of 0.15 to 1.67 m/s at the station over the same 30 days; the bay around Urchin Rocks is comparatively sheltered.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 65 to 155 minutes. For Urchin Rocks, begin about 30 minutes before the flood so the outbound swim is on the dying ebb and the return is with the building flood curling into the bay. For Rosario Head into Sharpe Cove, dive on an ebb and swim with the current around the head, keeping the wall in sight to avoid being carried past its end. For Northwest Island, swim out in the last 30 minutes of the flood and return on the ebb along the north shore. Plan every version so the return leg is with the current.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Deception Island, 2.7 miles west of, 48°24.75′ N, 122°44.37′ W, about 5.4 km west |
-| **Legacy reference** | Rosario Strait (PCT1996) |
-| **Slack before flood** | 1 hour 8 minutes after the reference |
-| **Slack before ebb** | 38 minutes after the reference |
+* **Type.** Tidal.
+* **Flood.** Sets northwest past Rosario Head, Urchin Rocks and Northwest Island. Inshore, a segment rounds Urchin Rocks and curls counterclockwise through the bay, across the beach shallows, then out along the northwest cliffs.
+* **Ebb.** Sets southeast past Northwest Island, Urchin Rocks and the outer face of Rosario Head. Inshore, a segment runs along the northwest shore toward the beach, turns clockwise past the beach, flows out past Urchin Rocks (it can fluctuate here) and across the face of the head, and part of it rounds the south tip of Rosario Head into Sharpe Cove. The strait itself runs hard; the bay around Urchin Rocks is comparatively sheltered.
+* **Diveable window.** For Urchin Rocks, begin shortly before the flood so the outbound swim is on the dying ebb and the return is with the building flood curling into the bay. For Rosario Head into Sharpe Cove, dive on an ebb and swim with the current around the head, keeping the wall in sight to avoid being carried past its end. For Northwest Island, swim out at the end of the flood and return on the ebb along the north shore. Plan every version so the return leg is with the current.
 
 ## Wind
 
@@ -68,7 +48,6 @@ The bay opens west to northwest onto Rosario Strait, sheltered by Rosario Head t
 * **Bad.** Southwest through west-northwest (SW-WNW), onshore over 12.2 km to more than 30 km, straight into the bay off the strait, building chop on the entry and a head sea on the surface swim.
 * **Mixed.** South through south-southwest (S-SSW), cross-shore over 5.4 km to more than 30 km down the strait.
 * **Fine.** Northwest clockwise through south-southeast (NW-SSE): offshore from northeast through south-southeast, blocked by the high ground behind the beach, and onshore or cross-shore under 1 km from northwest through north-northeast.
-* **Wind against current.** South-southeast through south-southwest (SSE-SSW), over 1.9 km to more than 30 km, stacked against the ebb raises the worst surface chop; no wind with 1 km of fetch opposes the flood here. Cross-check the wind against the ebb and flood before committing to the Northwest Island crossing.
 
 ## Depth and tide
 

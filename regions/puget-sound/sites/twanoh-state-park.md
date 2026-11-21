@@ -31,34 +31,14 @@ Twanoh State Park is a shore dive off the south shore of Hood Canal, on the arm 
 
 ## Current
 
-Twanoh is dived independently of the tidal current. The water here moves at 0.10 m/s or less on every exchange, far under any speed that would close the site.
+Twanoh is dived independently of the tidal current. The water here barely moves on any exchange, far under any speed that would close the site.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. The nearest station with predictions is Hazel Point (PUG1601), about 38 km north-northeast toward the canal entrance |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | east-northeast, 75°, up the arm toward Lynch Cove |
-| **Site ebb set** | west-southwest, 255°, down the arm toward the Great Bend |
-
-* **Flood.** Sets east-northeast along the shore toward Lynch Cove, peaking at 0.06 to 0.10 m/s.
-* **Ebb.** Sets west-southwest along the shore toward the Great Bend, peaking at 0.04 to 0.09 m/s.
-* **Diveable window.** Any time of day, on either exchange. Peak current stays far under 0.25 m/s on every exchange, so nothing narrows it.
-* **Slack.** This reach of the canal behaves as a standing wave, so slack falls near high and low water, about 40 minutes before each high and low at Lynch Cove Dock.
+* **Type.** Tidal.
+* **Flood.** Sets east-northeast along the shore toward Lynch Cove, gently.
+* **Ebb.** Sets west-southwest along the shore toward the Great Bend, gently.
+* **Diveable window.** Any time of day, on either exchange; nothing narrows it.
+* **Slack.** This reach of the canal behaves as a standing wave, so slack falls near high and low water, shortly before each high and low at Lynch Cove Dock.
 * **Drift.** A light drift along the slope carries the jellies in the water column past a diver.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Foulweather Bluff, 47°55.90′ N, 122°38.33′ W, about 66.1 km north-northeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | At the reference |
-| **Slack before ebb** | 15 minutes before the reference |
 
 ## Wind
 
@@ -72,7 +52,6 @@ The beach is a straight shore facing across the arm of the canal toward the Kits
 * **Bad.** East-northeast (ENE), onshore over 6.0 km down the arm from Lynch Cove, and builds chop straight onto the beach and the surface swim.
 * **Short fetch.** North-northwest through northeast (NNW-NE), onshore over 1.8 to 4.8 km across the arm, and east (E), onshore over 1.1 km, both straight onto the beach and the surface swim.
 * **Fine.** East-southeast clockwise through northwest (ESE-NW): offshore from south-southeast through west, off the land behind the park, and cross-shore over 300 m to 1.9 km from east-southeast, southeast, west-northwest and northwest.
-* **Wind against current.** The current is too weak to stack against a wind. Wind alone decides the surface, so read the forecast for the beach.
 
 ## Depth and tide
 

@@ -30,34 +30,14 @@ Shore dive from the north beach of San Juan County Park, on the west side of San
 
 Haro Strait's tidal stream runs past the island, setting northeast on the flood and southwest on the ebb, and the channel between the island and the park carries strong rips when it runs.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA South Haro Strait, south of Lime Kiln Light (PUG1724), about 5.1 km south |
-| **Recommended bin** | Bin 31, at 32.6 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | northwest, 310° |
-| **Station ebb axis** | south-southeast, 147° |
-| **Site flood set** | northeast, 52° |
-| **Site ebb set** | southwest, 232° |
-
-* **Flood.** Sets northeast past the island toward the park's north shore. Daily peaks at the station run 0.49 to 1.03 m/s over 30 days.
-* **Ebb.** Sets southwest past the island, away from the beach and out toward open water. Daily peaks at the station run 0.37 to 1.55 m/s over 30 days.
-* **Diveable window.** Dive at slack before a small exchange. Under 0.25 m/s at the station, the slack before flood typically runs 66 to 132 minutes and the slack before ebb 60 to 108 minutes, the shortest about 25 minutes between two strong exchanges. Where a weak exchange falls between two slacks, the current can stay under the threshold for 3 hours or more.
+* **Type.** Tidal.
+* **Flood.** Sets northeast past the island toward the park's north shore.
+* **Ebb.** Sets southwest past the island, away from the beach and out toward open water.
+* **Diveable window.** Dive at slack before a small exchange. The shortest slacks fall between two strong exchanges, and where a weak exchange falls between two slacks the current can stay gentle for hours.
 * **Rips in the channel.** Strong rip currents develop between the park shore and the island once the stream picks up. Make the swim out and back only inside the window.
 * **North Bay.** The sandy cove at the entry can hold quieter water during a flood than the open shore.
 * **Route on slack before flood.** Swim out early in the window, dive the wall, and work back along the island's north side, so the rising flood sets the return northeast toward the north shore and the beach.
 * **Route on slack before ebb.** Leave the wall early: the rising ebb sets southwest, away from the beach and out past the island's west side into open strait.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Kellett Bluff, west of, 48°35.35′ N, 123°13.50′ W, about 6.8 km northwest |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 1 minute after the reference |
-| **Slack before ebb** | 36 minutes after the reference |
 
 ## Wind
 
@@ -71,7 +51,6 @@ Low Island stands between the dive coordinate and the open strait to the west, s
 * **Bad.** Southwest through west-southwest (SW-WSW), onshore over 12.2 to 13.6 km of open water, and west-northwest through northwest (WNW-NW), onshore over 14.2 to 20.1 km, driving wind waves across the channel onto the beach.
 * **Mixed.** South-southwest (SSW), cross-shore over 13.7 km, running swell past the entry.
 * **Fine.** West (W), sheltered by Low Island, with 40 to 240 m of fetch. North-northwest clockwise through south (NNW-S), blocked by San Juan Island, with 920 m of fetch at most.
-* **Wind against current.** South-southwest through west-southwest (SSW-WSW), over 12.2 to 13.7 km, blows against the southwest ebb set. No wind with 1 km of fetch opposes the northeast flood set.
 
 ## Depth and tide
 

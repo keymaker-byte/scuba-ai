@@ -26,33 +26,13 @@ Sund Rock South Wall is a boulder-strewn rock wall on the west shore of Hood Can
 
 ## Current
 
-Sund Rock South Wall is dived independently of the tide. The current in the channel peaks around 0.25 m/s on a large exchange and is weaker again inshore in the bay, so there is no slack window to hit and no exchange size that closes the site.
+Sund Rock South Wall is dived independently of the tide. The current in the channel stays gentle even on a large exchange and is weaker again inshore in the bay, so there is no slack window to hit and no exchange size that closes the site.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. The nearest station with predictions is Hazel Point (PUG1601), about 40 km northeast toward the canal entrance |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | southwest, 221°, up-canal past Hoodsport toward the Great Bend |
-| **Site ebb set** | northeast, 041°, down-canal past Lilliwaup toward the entrance |
-
-* **Flood.** Sets southwest, filling the canal toward the Great Bend, and peaks around 0.25 m/s mid-channel.
+* **Type.** Tidal.
+* **Flood.** Sets southwest, filling the canal toward the Great Bend, gently.
 * **Ebb.** Sets northeast, draining toward the entrance, and runs through the bay toward Sund Rock at its northeast point. Similar strength to the flood.
-* **Slack.** This reach of the canal behaves as a standing wave, so slack falls close to high and low water rather than midway between them. Slack at the site falls close to high and low water at Union, which makes the tide table a usable guide to it here; the exact offset is not established and is confirmed in the water. This is a local exception, and it does not hold elsewhere in the Sound.
+* **Slack.** This reach of the canal behaves as a standing wave, so slack falls close to high and low water rather than midway between them. Slack at the site falls close to high and low water at Union, which makes the tide table a usable guide to it here. This is a local exception, and it does not hold elsewhere in the Sound.
 * **Diveable window.** All day. What little current there is rarely matters at this contained, shallower depth range.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Foulweather Bluff, 47°55.90′ N, 122°38.33′ W, about 66.1 km north-northeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | At the reference |
-| **Slack before ebb** | 15 minutes before the reference |
 
 ## Wind
 
@@ -67,7 +47,6 @@ The bay opens east and northeast onto Hood Canal, backed by the steep ground of 
 * **Short fetch.** North-northeast (NNE), onshore over 3.4 km, and east-northeast through southeast (ENE-SE), onshore over 2.0 to 3.1 km across the canal; though the fetch is short, they blow straight into the entry.
 * **Mixed.** South (S), cross-shore over 10.5 km up the canal, roughly parallel to the shore, so it builds a swell that passes the entry rather than driving into it.
 * **Fine.** South-southwest clockwise through north (SSW-N), offshore and blocked by the high ground behind the site or under 600 m of fetch; and south-southeast (SSE), cross-shore over 3.0 km.
-* **Wind against current.** North-northeast through east-northeast (NNE-ENE) blows against the ebb, but the current is too weak to stack against a wind. Wind alone is what decides the surface, so read the beach forecast rather than the marine one.
 
 ## Depth and tide
 

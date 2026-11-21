@@ -27,30 +27,10 @@ One Mile Beach is a shore dive on the Strait of Juan de Fuca about 1.6 km west o
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Pillar Point current station (PUG1641), about 20.9 km east, out in the open strait |
-| **Recommended bin** | bin 75, at 12.4 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | east-southeast, 115° |
-| **Station ebb axis** | west-northwest, 290° |
-| **Site flood set** | east-southeast, 116° |
-| **Site ebb set** | west-northwest, 296° |
-
-* **Flood.** Sets east-southeast, parallel to shore toward Sekiu, with daily peaks of 0.19 to 0.82 m/s at the open-water station over 30 days.
-* **Ebb.** Sets west-northwest, parallel to shore toward the open strait and the Pacific, with daily peaks of 0.35 to 0.84 m/s at the station over the same 30 days.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 110 to 240 minutes. The rock and kelp ground shelters most of the dive from the tidal flow; current among the rocks is generally a non-factor near slack. It builds quickly once past the drop-off, so stay on the shelf once away from slack, and dive only on a calm day with weak surge.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Pillar Point, 48°16′ N, 124°04′ W, about 18.6 km east |
-| **Legacy reference** | Strait of Juan de Fuca Entrance (PCT1341) |
-| **Slack before flood** | 35 minutes before the reference |
-| **Slack before ebb** | 1 hour 27 minutes after the reference |
+* **Type.** Tidal.
+* **Flood.** Sets east-southeast, parallel to shore toward Sekiu.
+* **Ebb.** Sets west-northwest, parallel to shore toward the open strait and the Pacific.
+* **Diveable window.** Long. The rock and kelp ground shelters most of the dive from the tidal flow; current among the rocks is generally a non-factor near slack. It builds quickly once past the drop-off, so stay on the shelf once away from slack, and dive only on a calm day with weak surge.
 
 ## Wind
 
@@ -64,7 +44,6 @@ The beach faces north into the open strait.
 * **Bad.** Northwest clockwise through east-northeast (NW-ENE), onshore over 22 km to more than 30 km, straight up the open strait with a long, unbroken fetch to the Pacific, or across it.
 * **Mixed.** East (E), cross-shore over more than 30 km down the strait, which runs a swell along the beach past the entry.
 * **Fine.** East-southeast clockwise through west-northwest: offshore from southeast through west-southwest, off the land, and cross-shore over 5 km or less from the east-southeast, west and west-northwest.
-* **Wind against current.** West-northwest through north-northwest (WNW-NNW) against the ebb, which sets toward the open strait, over 2.5 km to more than 30 km, is the combination to avoid. East through east-southeast (E-ESE) against the flood, over 4.8 km to more than 30 km.
 
 ## Depth and tide
 

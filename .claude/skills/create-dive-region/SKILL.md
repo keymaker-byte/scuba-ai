@@ -38,7 +38,7 @@ If a search turns up a page that looks relevant but won't load, an archived copy
 
 ## 3. Write the files
 
-Follow each file's template at the bottom of this skill for structure and section order. Omit a section the template marks optional only when the region genuinely has nothing for it. Name a tool by its file, `tool_name.md`, wherever it is used, never by its script or a command; the tool's own file holds how to run it. Every tool and source lives in the convention that uses it, under a **Tool** or **Tools** bullet, with one sub-bullet per item when there are several. Leave the "Sites currently covered" table with its header row only; the `create-dive-site` skill adds a row there the first time a site is written into this region.
+Follow each file's template at the bottom of this skill for structure and section order. Omit a section the template marks optional only when the region genuinely has nothing for it. Name a tool by its file, `tool_name.md`, wherever it is used, never by its script or a command; the tool's own file holds how to run it. Every tool and source lives in the convention that uses it: each tool in its own **Tool** bullet, and the sources under a **Sources** bullet, one sub-bullet each. Leave the "Sites currently covered" table with its header row only; the `create-dive-site` skill adds a row there the first time a site is written into this region.
 
 ## 4. Bookkeeping, once the files exist
 
@@ -112,22 +112,21 @@ These conventions apply to every site file written in this region.
 
 Read in full for every site file.
 
-- **Tools.**
-  - `tool_name.md`, how the site is found in it, and what it gives a site file.
+- **Tool.** `tool_name.md`, how the site is found in it, and what it gives a site file. One bullet per tool.
 - **Sources.** Optional; omit when the region has no websites of its own.
   - [Source name](url), what it is and holds, and how to read it (a pinned archive snapshot, a Wayback Machine lookup).
 
 ## Depth
 
 - **Datum.** The fixed datum depth is normalized to here and why, with the arithmetic for converting an observed depth to it and back; or "None", with the reason a plain observed depth is true here.
-- **Tool** or **Tools.** Each tool behind a depth figure, with what it gives: the seabed depth at the dive area, the tide station and its typical range, the normalization of logged depths. Where no tool covers the region, the bullet that replaces it names where the depth range comes from.
+- **Tool.** One bullet per tool behind a depth figure, with what it gives: the seabed depth at the dive area, the tide station and its typical range, the normalization of logged depths. Where no tool covers the region, the bullet that replaces it names where the depth range comes from.
 - **Topic.** Optional, one bullet per region-specific rule: how a tide station is chosen, a reach where the bathymetry thins out.
 
 ## Current
 
 - **Current type.** Tidal, wind driven, or none, with the reason for none.
-- **Tool** or **Tools.** Each tool behind a current figure, with what it gives: a spatial extract, the station, bin, axes, peak speeds and windows, timed observations.
-- **Figure.** One bullet per figure the site skill's Current section requires for this type, naming how it is produced: how the station and its bin are chosen, how an observed offset is established from timed slacks in the dive log, how the model, any subordinate station and any legacy correction are carried, the current threshold the window is measured against, and the wording for a figure no source gives.
+- **Tool.** One bullet per tool behind a current figure, with what it gives: the model's extract and its sets, peak speeds and windows, timed observations.
+- **Figure.** One bullet per figure the site needs from a tool, naming how it is produced: how the extract is taken, and what stops a site the model doesn't cover.
 - **Topic.** Optional, one bullet per reach that behaves differently from the rest of the region.
 
 ## Wind

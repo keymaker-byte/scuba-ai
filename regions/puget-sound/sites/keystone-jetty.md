@@ -32,32 +32,12 @@ The jetty is the spine of the dive, worked out along the boulders and back. Work
 
 Current is the defining constraint, strong and erratic, and it does not behave simply. Plan from a current table, not a tide table.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Point Wilson, 2.7 mi. NE of (PUG1625), about 3.0 km west-northwest across Admiralty Inlet |
-| **Recommended bin** | bin 34, at 17.0 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | southeast, 137° |
-| **Station ebb axis** | north-northwest, 333° |
-| **Site flood set** | east-northeast, 73° |
-| **Site ebb set** | west-southwest, 253° |
-
-* **Flood.** Sets southeast up Admiralty Inlet at the station, with daily peaks of 1.34 to 2.30 m/s over 30 days. Locally, the early flood runs in along the jetty, then turns in the shallows and flows parallel to shore toward the wharf pilings. A large exchange striking the jetty divides in two, one arm running out along the rocks and one inshore.
-* **Ebb.** Sets north-northwest out of the inlet at the station, with daily peaks of 0.90 to 2.93 m/s over the same 30 days. Locally the flow runs southwest, past the wharf toward the jetty, then turns and flows out along the rocks at the jetty.
-* **Diveable window.** The slack before flood only, with a typical window under 0.25 m/s at the station of about 25 to 55 minutes. True slack before ebb does not happen here, the current merely slows before building again, so it is not a window. The current can run hard at the exposed end even when the shore looks calm. The flow is slower on the bottom, the boulders give hand holds and shelter.
-* **When the slack fails to arrive.** A slack at the station is necessary but not sufficient. The jetty current is a local eddy off the main channel, and on some exchanges the channel passes through slack while the eddy keeps running southwest and never truly stops. The pattern to watch for is a strongly diurnal day, or a flood following the slack that is much weaker than the ebb before it: the flood is what resets the flow, and a weak one may leave the current simply running on. Before committing, read the max flood and ebb either side of the slack rather than the slack alone. Prefer a slack flanked by two moderate, roughly equal maxes; be wary when the following flood is weak or the window is short, since the site then turns fast and being a few minutes late leaves you in current. Be ready to abort if it is still running at the end of the jetty.
-* **Read the surface before committing.** The clock and the station prediction only get you close; confirm from the beach before gearing up. Floating logs and other debris drifting across the harbour show whether the water is actually moving and which way, a direct read on the eddy that the station's slack time cannot promise on its own.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Admiralty Head, 0.5 mile west of, 48°09′ N, 122°42′ W, about 2.3 km west-southwest |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 31 minutes before the reference |
-| **Slack before ebb** | 1 minute after the reference |
+* **Type.** Tidal.
+* **Flood.** Sets southeast up Admiralty Inlet in the channel. Locally, the early flood runs in along the jetty, then turns in the shallows and flows parallel to shore toward the wharf pilings. A large exchange striking the jetty divides in two, one arm running out along the rocks and one inshore.
+* **Ebb.** Sets north-northwest out of the inlet in the channel. Locally the flow runs southwest, past the wharf toward the jetty, then turns and flows out along the rocks at the jetty.
+* **Diveable window.** The slack before flood only, and short. True slack before ebb does not happen here, the current merely slows before building again, so it is not a window. The current can run hard at the exposed end even when the shore looks calm. The flow is slower on the bottom, the boulders give hand holds and shelter.
+* **When the slack fails to arrive.** A predicted slack is necessary but not sufficient. The jetty current is a local eddy off the main channel, and on some exchanges the channel passes through slack while the eddy keeps running southwest and never truly stops. The pattern to watch for is a strongly diurnal day, or a flood following the slack that is much weaker than the ebb before it: the flood is what resets the flow, and a weak one may leave the current simply running on. Before committing, read the max flood and ebb either side of the slack rather than the slack alone. Prefer a slack flanked by two moderate, roughly equal maxes; be wary when the following flood is weak or the window is short, since the site then turns fast and being a few minutes late leaves you in current. Be ready to abort if it is still running at the end of the jetty.
+* **Read the surface before committing.** The clock and the prediction only get you close; confirm from the beach before gearing up. Floating logs and other debris drifting across the harbour show whether the water is actually moving and which way, a direct read on the eddy that a predicted slack cannot promise on its own.
 
 ## Wind
 
@@ -72,7 +52,6 @@ The park faces Admiralty Bay, open to the south and southeast down Admiralty Inl
 * **Short fetch.** East-northeast through east (ENE-E), onshore over 1.9 to 4.2 km.
 * **Mixed.** South-southwest through southwest (SSW-SW), cross-shore over 6.7 to 12.3 km.
 * **Fine.** West-southwest clockwise through northeast (WSW-NE): offshore from west-southwest through north, and cross-shore under 330 m from north-northeast and northeast.
-* **Wind against current.** East-northeast through east-southeast (ENE-ESE), over 1.9 to 5.5 km, opposes the flood and builds steep wind-over-tide chop as the flood makes up, right on the slack-before-flood window you dive. Southwest (SW), over 12.3 km, opposes the ebb.
 
 ## Depth and tide
 

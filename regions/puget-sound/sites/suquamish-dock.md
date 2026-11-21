@@ -25,20 +25,9 @@ Suquamish Dock is a long public dock and boat ramp on the Suquamish waterfront, 
 
 ## Current
 
-Negligible at every stage of the tide. This stretch of Port Madison sits off to the side of Agate Passage's main flow, and it shows: the site's own ENPAC15 extract predicts a peak of only about 0.14 m/s all day, against well over 1 m/s in the passage itself, a couple of kilometres south.
+Negligible at every stage of the tide. This stretch of Port Madison sits off to the side of Agate Passage's main flow, and it shows: the water here barely moves all day, while the passage itself, a couple of kilometres south, runs hard.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. The nearest station with predictions is Agate Passage, south end (PUG1501), about 2.4 km southwest through Agate Passage |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | south-southwest, 197°, weak enough that the set matters little |
-| **Site ebb set** | north-northeast, 017°, likewise weak |
-
+* **Type.** Tidal.
 * **Diveable window.** All day. Current is not a planning factor here.
 
 ## Wind
@@ -51,7 +40,6 @@ Negligible at every stage of the tide. This stretch of Port Madison sits off to 
 * **Bad.** East through east-southeast (E-ESE), onshore over 11.8 to 13.2 km down the length of Port Madison.
 * **Short fetch.** East-northeast (ENE), and southeast through south-southeast (SE-SSE), onshore over 2.7 to 4.5 km.
 * **Fine.** South clockwise through northeast (S-NE), offshore off the waterfront, cross-shore over 2.8 km or less, or onshore under 1 km.
-* **Wind against current.** The water is too weak to stack against a wind; wind alone sets the surface.
 
 ## Depth and tide
 

@@ -1,6 +1,6 @@
 # Old Man House Park
 
-Old Man House Park is a small Suquamish Tribe park on the Kitsap Peninsula shore, at the point where Agate Passage, the tidal channel separating Bainbridge Island from the Kitsap Peninsula, opens north into Port Madison. It sits at the historical site of Old Man House, once the largest longhouse on Puget Sound. The park works as a shore dive in its own right, in real but moderate current, since it sits only a short distance inside the passage's mouth; well up the channel to the south, at the Agate Pass Bridge, the same tide runs much harder, over 1 m/s at times. Divers also use the park as the take-out for a longer dive, a 1.6 km drift with the ebb current that starts at the bridge and rides the tide down the length of the passage to this beach.
+Old Man House Park is a small Suquamish Tribe park on the Kitsap Peninsula shore, at the point where Agate Passage, the tidal channel separating Bainbridge Island from the Kitsap Peninsula, opens north into Port Madison. It sits at the historical site of Old Man House, once the largest longhouse on Puget Sound. The park works as a shore dive in its own right, in real, steady current that runs strong on a large exchange, since it sits only a short distance inside the passage's mouth; well up the channel to the south, at the Agate Pass Bridge, the same tide runs much harder. Divers also use the park as the take-out for a longer dive, a 1.6 km drift with the ebb current that starts at the bridge and rides the tide down the length of the passage to this beach.
 
 | | |
 |---|---|
@@ -26,30 +26,10 @@ Old Man House Park is a small Suquamish Tribe park on the Kitsap Peninsula shore
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Agate Passage, south end (PUG1501), about 1.8 km southwest at the bridge |
-| **Recommended bin** | bin 1, at 7.65 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south-southwest, 200° |
-| **Station ebb axis** | north-northeast, 21° |
-| **Site flood set** | west-southwest, 238° |
-| **Site ebb set** | east-northeast, 58° |
-
-* **Flood.** Sets southwest, back up the channel. Peaks roughly 0.6 to 0.7 m/s here, against daily peaks of 0.90 to 1.63 m/s at the station over 30 days.
-* **Ebb.** Sets northeast, out into Port Madison. Peaks roughly 0.4 to 0.7 m/s here, against 0.51 to 1.29 m/s at the station; this is the direction a drift dive rides down from the bridge to this beach.
-* **Diveable window.** Typically an hour and a half or more around each slack, a broader window than the fast water further up the channel near the bridge, where the station's windows run about 35 to 65 minutes.
-
-Subordinate station:
-
-| | |
-|---|---|
-| **Subordinate station** | Agate Passage, north end (PCT1636), 47°43.32′ N, 122°33.30′ W, about 0.25 km south-southwest |
-| **Subordinate reference** | Point Wilson, 1.6 mi. NE of (PUG1624), bin 47 |
-| **Slack before flood** | 49 minutes before the reference |
-| **Slack before ebb** | 44 minutes before the reference |
+* **Type.** Tidal.
+* **Flood.** Sets southwest, back up the channel, steady here and strong on a large exchange, though weaker than at the bridge.
+* **Ebb.** Sets northeast, out into Port Madison, steady here and strong on a large exchange; this is the direction a drift dive rides down from the bridge to this beach.
+* **Diveable window.** Either slack, broader than in the fast water further up the channel near the bridge, and shorter on a large exchange.
 
 ## Wind
 
@@ -64,7 +44,6 @@ The beach faces southeast across the north mouth of Agate Passage into Port Madi
 * **Short fetch.** South-southwest (SSW), onshore over 1.2 km.
 * **Mixed.** East-northeast (ENE), cross-shore over 13.2 km.
 * **Fine.** Southeast through south (SE-S), onshore under 1 km across the pass mouth; and southwest clockwise through northeast (SW-NE), offshore from west through north-northeast and cross-shore under 3.6 km.
-* **Wind against current.** North-northeast through east (NNE-E), over 2.8 to 13.4 km, against the ebb, the drift direction out of the pass; south-southwest (SSW), over 1.2 km, against the flood.
 
 ## Depth and tide
 

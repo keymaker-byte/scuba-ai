@@ -28,39 +28,10 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Agate Passage, south end (PUG1501), essentially at the site, about 0.2 km away |
-| **Recommended bin** | bin 1, at 7.65 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south-southwest, 200° |
-| **Station ebb axis** | north-northeast, 21° |
-| **Site flood set** | southwest, 218° |
-| **Site ebb set** | northeast, 38° |
-
-* **Flood.** Sets south, back into the pass toward the bridge and the main basin, with daily peaks of 0.90 to 1.63 m/s at the station over 30 days.
-* **Ebb.** Sets north, out of the pass toward Suquamish and Port Madison. This is the drift direction, from the bridge to Old Man House Park. The current is markedly stronger at the bridge than at the Suquamish end, roughly twice the speed, so the same tide that is comfortable at the north end can be running hard at the south end. Daily peaks run 0.51 to 1.29 m/s at the station over the same 30 days.
-* **Diveable window.** Slack at the bridge is brief, about 35 to 65 minutes at the station and narrower still on a big exchange; the pass is comfortable to work for a look-and-see dive only within that window, and is a drift the rest of the cycle. Plan around a modest exchange, under about 2 m, for the easiest current; a large spring exchange can push the bridge current well past 1 m/s.
-
-Subordinate station:
-
-| | |
-|---|---|
-| **Subordinate station** | Agate Passage, north end (PCT1636), 47°43.32′ N, 122°33.30′ W, about 1.4 km northeast |
-| **Subordinate reference** | Point Wilson, 1.6 mi. NE of (PUG1624), bin 47 |
-| **Slack before flood** | 49 minutes before the reference |
-| **Slack before ebb** | 44 minutes before the reference |
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Agate Passage, north end, 47°43.32′ N, 122°33.30′ W, about 1.4 km northeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 1 hour 28 minutes before the reference |
-| **Slack before ebb** | 18 minutes before the reference |
+* **Type.** Tidal.
+* **Flood.** Sets south, back into the pass toward the bridge and the main basin.
+* **Ebb.** Sets north, out of the pass toward Suquamish and Port Madison. This is the drift direction, from the bridge to Old Man House Park. The current runs much harder at the bridge than at the Suquamish end, so the same tide that is comfortable at the north end can be running hard at the south end.
+* **Diveable window.** Slack at the bridge is brief, and narrowest on a big exchange; the pass is comfortable to work for a look-and-see dive only within that window, and is a drift the rest of the cycle. A small exchange gives the easiest current, and a large spring exchange runs the bridge hard.
 
 ## Wind
 
@@ -73,7 +44,6 @@ The pass runs roughly north to south between wooded, steep shores, about 270 m w
 
 * **Mixed.** Northeast (NE), over 5.2 km, and south-southwest (SSW), over 8.0 km, cross-shore at the entry along the channel's own axis. Wind blowing along the length of the channel is the one direction that can raise chop.
 * **Fine.** East-northeast through south (ENE-S), offshore; and southwest clockwise through north-northeast (SW-NNE), under 2 km of fetch across and along the narrow channel. The high wooded banks block much of it regardless.
-* **Wind against current.** A northeast wind (NE) against the ebb, over 5.2 km, is the combination to avoid, especially near the Suquamish end where the drift surfaces. South through southwest (S-SW) against the flood, over 1.7 to 8.0 km.
 
 ## Depth and tide
 

@@ -30,31 +30,11 @@ The Fox Island Bridge crosses the west end of Hale Passage, joining Fox Island t
 
 The passage narrows to its shallowest at the bridge, and the exchange between Carr Inlet and the Tacoma Narrows runs fastest where the piers meet the shore.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Hale Passage, West end (PUG1530), about 1.1 km west-northwest in the same channel |
-| **Recommended bin** | bin 18, at 4.24 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | west-northwest, 283° |
-| **Station ebb axis** | east-southeast, 105° |
-| **Site flood set** | west, 280° |
-| **Site ebb set** | east, 100° |
-
-* **Flood.** Sets west through the bridge toward Carr Inlet. Water striking the east side of the jetty turns north and runs out along it. Daily peaks run 0.43 to 0.96 m/s at the station over 30 days.
-* **Ebb.** Sets east through the bridge toward the Tacoma Narrows. Water striking the west side of the jetty turns north along it, then rounds its end and turns east with the main flow. Daily peaks run 0.64 to 1.01 m/s at the station over the same 30 days.
-* **Diveable window.** Both slacks are dived. At the station the window under 0.25 m/s lasts about 40 to 130 minutes at slack before flood and 50 to 160 minutes at slack before ebb, 78 minutes typical for each, longest between two weak exchanges. Under the bridge it is shorter: the flow is pinched between the piers and the shore, and the current builds quickly once it turns, carrying a diver off the bridge line into the open passage and north along the jetty, away from the beach. Plan on a small exchange, reach the end of the jetty before slack, and start back at the first sign of current.
+* **Type.** Tidal.
+* **Flood.** Sets west through the bridge toward Carr Inlet. Water striking the east side of the jetty turns north and runs out along it.
+* **Ebb.** Sets east through the bridge toward the Tacoma Narrows. Water striking the west side of the jetty turns north along it, then rounds its end and turns east with the main flow.
+* **Diveable window.** Both slacks are dived, and the window is longest between two weak exchanges. Under the bridge it is short: the flow is pinched between the piers and the shore, and the current builds quickly once it turns, carrying a diver off the bridge line into the open passage and north along the jetty, away from the beach. Plan on a small exchange, reach the end of the jetty before slack, and start back at the first sign of current.
 * **The jetty.** The end of the jetty is a sheltered spot to wait for the current to ease before heading out, and the shallows along it give a lee on the return.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Fox Island Bridge, a correction for the site itself, published without a station number or position |
-| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
-| **Slack before flood** | 45 minutes before the reference |
-| **Slack before ebb** | 2 hours 20 minutes before the reference |
 
 ## Wind
 
@@ -67,7 +47,6 @@ The site faces across the narrow west end of Hale Passage, about 550 m to the ma
 
 * **Short fetch.** West-northwest through northwest (WNW-NW), onshore over 1.3 to 2.6 km from the mouth of Carr Inlet. Wind from these directions raises chop on the entry beach and the surface swim along the jetty.
 * **Fine.** North-northwest clockwise through west (NNW-W). North-northwest through northeast is onshore but crosses under 1 km of the passage; east-northeast and east are cross-shore, along the passage, over 0.7 to 1.7 km; east-southeast through southwest is offshore, with Fox Island behind the beach; west-southwest and west are cross-shore over under 1 km.
-* **Wind against current.** East through southeast (E-SE) against the ebb setting east, over 1.6 to 4.5 km; west-northwest through northwest (WNW-NW) against the flood setting west, over 1.3 to 2.6 km.
 
 ## Depth and tide
 

@@ -27,23 +27,12 @@ Shore dive on the Mukilteo waterfront, on the south shore of Possession Sound at
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA West of Mukilteo (PUG1609), about 1.9 km west, mid-channel |
-| **Recommended bin** | bin 36, at 18.8 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | north-northeast, 13° |
-| **Station ebb axis** | south-southwest, 198° |
-| **Site flood set** | northeast, 43° |
-| **Site ebb set** | southwest, 223° |
-
-* **Flood.** Sets north-northeast at the station, with daily peaks of 0.17 to 0.40 m/s over 30 days.
-* **Ebb.** Sets south-southwest at the station, with daily peaks of 0.09 to 0.28 m/s over the same 30 days.
-* **Deep layer.** The deep water goes properly slack on the tidal cycle and can be planned from the current station.
+* **Type.** Tidal.
+* **Flood.** Sets north-northeast.
+* **Ebb.** Sets south-southwest, the weaker of the two.
+* **Deep layer.** The deep water goes properly slack on the tidal cycle and can be planned from the predicted slack.
 * **Shallow layer.** Along this shore the shallow water shows a persistent eastward drift that does not follow the tide. Whether it ever reverses is not established, so treat the shallows as potentially always setting east.
-* **Diveable window.** Current at the station stays under 0.25 m/s for about 1.5 to 15 hours at a time; the shallow eastward drift runs regardless.
+* **Diveable window.** Long on most days; the shallow eastward drift runs regardless.
 
 ## Wind
 
@@ -58,7 +47,6 @@ The beach faces north to northwest, into Possession Sound.
 * **Short fetch.** West-northwest (WNW), onshore over 3.8 km.
 * **Mixed.** East-northeast (ENE), over 5.8 km, and west-southwest (WSW), over 5.2 km, cross-shore.
 * **Fine.** East through southwest (E-SW): offshore from east-southeast through southwest, where the beach stays flat regardless of speed, and cross-shore over 460 m from the east; and west (W), cross-shore over 3.7 km.
-* **Wind against current.** North through east-northeast (N-ENE), over 5.8 to 10.3 km, against the flood is the combination to avoid. West-southwest (WSW), over 5.2 km, opposes the ebb.
 
 ## Depth and tide
 

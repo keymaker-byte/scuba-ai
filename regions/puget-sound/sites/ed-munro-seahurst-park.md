@@ -29,31 +29,11 @@ Shore dive off the long sand and cobble beach of Ed Munro Seahurst Park in Burie
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Dolphin Point, 1.3 miles East of (PUG1520), about 5.0 km west-northwest in the main channel off Fauntleroy |
-| **Recommended bin** | bin 35, at 14.5 m, matching the working depth. The other published bin, at 42 m, sits well below the site |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south, 186° |
-| **Station ebb axis** | north-northwest, 343° |
-| **Site flood set** | south-southwest, 195° |
-| **Site ebb set** | north-northeast, 15° |
-
-* **Local flow.** The water here is weak and runs along the shore, north-northeast and south-southwest (about 18° and 198°). Out in the channel the station's currents reach a few tenths of a metre per second; along this beach the flow stays a fraction of that on most days.
-* **Flood.** Sets south-southwest along the shore, with daily peaks of 0.19 to 0.42 m/s at the station over 30 days.
-* **Ebb.** Out in the channel the ebb sets north, but close in front of the entry an eddy keeps the near-shore water setting south on the ebb as well, so expect a southward set on either exchange. Daily peaks run 0.12 to 0.25 m/s at the station over the same 30 days.
-* **Diveable window.** Current is minimal for most of the day, picking up to moderate only on the larger exchanges. Slack along the beach turns later than at the station, typically by 40 minutes to over an hour, and on weak exchanges the turn is so gentle its timing is ill defined. On a big exchange, plan the dive around the station's slack and expect a southward drift; finishing south of the entry is an easy walk back along the beach. Current at the station stays under 0.25 m/s for about 1 to 18 hours at a time.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Alki Point, 0.3 mile west of, 47°34.53′ N, 122°25.68′ W, about 11.7 km north-northwest |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 36 minutes before the reference |
-| **Slack before ebb** | 13 minutes before the reference |
+* **Type.** Tidal.
+* **Local flow.** The water here is weak and runs along the shore, north-northeast and south-southwest. Out in the channel the current runs noticeably harder; along this beach the flow stays a fraction of that on most days.
+* **Flood.** Sets south-southwest along the shore.
+* **Ebb.** Out in the channel the ebb sets north, but close in front of the entry an eddy keeps the near-shore water setting south on the ebb as well, so expect a southward set on either exchange.
+* **Diveable window.** Current is minimal for most of the day, picking up to moderate only on the larger exchanges. Slack along the beach turns late, and on weak exchanges the turn is so gentle its timing is ill defined. On a big exchange, expect a southward drift; finishing south of the entry is an easy walk back along the beach.
 
 ## Wind
 
@@ -68,7 +48,6 @@ The beach faces west-northwest across the main basin toward Vashon Island.
 * **Short fetch.** North-northwest through north (NNW-N), onshore over 1.3 to 2.2 km.
 * **Mixed.** South-southwest through southwest (SSW-SW), cross-shore over 7.5 to 9.5 km, running along the shore up East Passage and roughening the beach.
 * **Fine.** North-northeast clockwise through south (NNE-S): offshore from east-northeast through south, blowing off the wooded bluff behind the beach, and cross-shore under 1 km from north-northeast and northeast.
-* **Wind against current.** The water close in sets south on both exchanges, so south-southwest through southwest (SSW-SW), over 7.5 to 9.5 km, opposes it and steepens the chop over the entry; that is the combination to avoid. North-northwest through north (NNW-N), over 1.3 to 2.2 km, opposes the ebb out in the channel.
 
 ## Depth and tide
 

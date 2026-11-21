@@ -27,30 +27,10 @@ North Beach County Park sits on the Quimper Peninsula between McCurdy Point and 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Point Wilson current station (PUG1623), about 2.8 km east, off the tip of the point |
-| **Recommended bin** | bin 45, at 5.1 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | east-southeast, 120° |
-| **Station ebb axis** | northwest, 321° |
-| **Site flood set** | east, 83° |
-| **Site ebb set** | west, 263° |
-
-* **Flood.** Sets east along the beach toward Point Wilson. Weak inside the kelp, it builds quickly past the outer edge, with daily peaks of 0.56 to 1.54 m/s at the open-water station over 30 days. A diver carried past Point Wilson on the flood drifts into Admiralty Inlet, a stronger and different current regime.
-* **Ebb.** Sets west along the beach, away from Point Wilson, mirroring the flood; weak inshore, building fast beyond the kelp, with daily peaks of 0.41 to 2.04 m/s at the station over the same 30 days, regularly exceeding the flood's.
-* **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs about 35 to 65 minutes, a little longer around the ebb to flood turn. Diving through a building exchange is only a same-entry dive inside the kelp's shelter, where the current stays weak in both directions: work along the inside edge one way as the exchange builds, then turn and work back through that same sheltered water rather than out in the open flow past the outer edge, which is the limit of the dive even when riding an exchange.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Point Wilson, 1.1 miles northwest of, 48°10′ N, 122°46′ W, about 2.7 km north-northeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 1 hour 53 minutes before the reference |
-| **Slack before ebb** | 8 minutes before the reference |
+* **Type.** Tidal.
+* **Flood.** Sets east along the beach toward Point Wilson. Weak inside the kelp, it builds quickly past the outer edge into a strong open-water stream. A diver carried past Point Wilson on the flood drifts into Admiralty Inlet, a stronger and different current regime.
+* **Ebb.** Sets west along the beach, away from Point Wilson, mirroring the flood; weak inshore, building fast beyond the kelp, and regularly stronger than the flood.
+* **Diveable window.** Slack to slack, either turn, a little longer around the ebb to flood turn. Diving through a building exchange is only a same-entry dive inside the kelp's shelter, where the current stays weak in both directions: work along the inside edge one way as the exchange builds, then turn and work back through that same sheltered water rather than out in the open flow past the outer edge, which is the limit of the dive even when riding an exchange.
 
 ## Wind
 
@@ -64,7 +44,6 @@ The beach faces north into the mouth of Admiralty Inlet, open to the Strait of J
 * **Bad.** West-northwest through northeast (WNW-NE), onshore over 7.5 km to more than 30 km, either a long fetch up the open strait or across the mouth of the inlet.
 * **Mixed.** East-northeast through east (ENE-E), cross-shore over 7.8 to 13.1 km, and west (W), cross-shore over 24.3 km up the strait, each running a swell along the beach past the entry.
 * **Fine.** East-southeast clockwise through west-southwest: offshore from east-southeast through southwest, off the land, and cross-shore over 2.3 km from the west-southwest. A southerly blows off the land here and leaves the beach calm while south-facing shores nearby are blown out.
-* **Wind against current.** West-southwest through west-northwest (WSW-WNW) against the ebb, which sets west along the beach, over 2.3 km to more than 30 km, is the combination to avoid. Northeast through east (NE-E) against the flood, over 7.5 to 13.1 km.
 
 ## Depth and tide
 

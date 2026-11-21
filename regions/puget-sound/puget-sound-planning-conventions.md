@@ -5,12 +5,7 @@ These conventions apply to every dive planned in this region.
 Ordered by what actually kills a dive plan in the Sound:
 
 1. **Current** (primary). Nearly everything is a slack-tide dive; the window, not the site, is the plan.
-   - **Station Tool.** `noaa_current.md`, the slack and diveable windows at the site's governing station and recommended bin, with the site's observed offset applied where established. A current station sets the slack; a tide station never does.
-   - **Spacial Model Tool.** `adcirc_current.md`, the day's slack and set from the site's extract, read by passing the site's `sites/<slug>.json` as `--file`. The Sound is four basins separated by sills that locally accelerate and redirect the flow, so a station some distance away does not always represent the site's own water, even a well proven one. Where the site JSON's `enpac15_extract_point` carries a `distance_from_site_km` above 0, the plan states the model was read that far from the site.
-   - **Subordinate Station Tool.** `noaa_current.md`, where the site file carries a subordinate station: its slack on the day, read with `predict` on the subordinate station's own ID, which applies NOAA's corrections to the reference.
-   - **Legacy Station Tool.** `noaa_legacy_current.md`, where the site file carries a legacy correction: the legacy reference's slack on the day, plus the correction.
-   - **Current Reconciliation.** To reconciliate current slack prediction, put every source estimate side by side: the station, spacial model, subordinate station and legacy station (apply offsets where established). Then follow these steps: 1) Calculate their overlapped time window. 2) If 2 or more sources match within a 30 mins range calculate a mid point. Always present all sources and the reconciliated values.
-   - **Station Weight.** No established offset: the station is a data point only, shown but left out of the overlap and mid point. Sole source: it sets the window, flagged as un-offset.
+   - **Tool.** `blend_model.md`, the day's slacks, sets and diveable windows at the bottom, with the fastest water above for the descent and ascent, read by passing the site's `sites/<slug>.json` as `--file`. The tool applies the site's observed offset where one is established. A current prediction sets the slack; a tide station never does.
 2. **Wind** (secondary). Wind decides whether the entry is diveable at all: chop on the entry, surf on the beach, a surface swim into a fetch.
    - **Tool.** `nws_forecast.md`, the wind call at the entry and the exit time against the site's Wind section sectors.
 3. **Viz** (informational). Won't stop the dive, but sets expectations and gear (torch, reel).

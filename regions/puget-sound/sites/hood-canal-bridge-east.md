@@ -31,42 +31,13 @@ The east end of the Hood Canal Bridge stands on a line of concrete piers running
 
 All of Hood Canal fills and drains through the channel beneath the bridge.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Hood Canal Bridge (PUG1603), in mid-channel about 1.2 km west |
-| **Recommended bin** | bin 20, at 6.68 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | southwest, 219° |
-| **Station ebb axis** | northeast, 46° |
-| **Site flood set** | south-southwest, 212° |
-| **Site ebb set** | north-northeast, 32° |
-
-* **Flood.** Sets south-southwest in mid-channel, past the park toward the bridge and into Hood Canal, with daily peaks of 0.28 to 0.73 m/s at the station over 30 days.
-* **Ebb.** Sets north-northeast in mid-channel, from the bridge back toward the park and out of the canal, with daily peaks of 0.34 to 0.76 m/s at the station over the same 30 days.
-* **Diveable window.** The site is dived on slack before ebb, the high water slack. Under 0.25 m/s at the station it typically lasts about 2 to 4 hours, and slack before flood about 1 to 3 hours; a large exchange narrows both. At the outer piers the slack runs much shorter than the station window, and the current builds quickly once it turns. Enter the water 45 to 60 minutes ahead of slack before ebb, ride the last of the flood to the bridge, explore the piers through slack, and return to the park with the new ebb.
+* **Type.** Tidal.
+* **Flood.** Sets south-southwest in mid-channel, past the park toward the bridge and into Hood Canal.
+* **Ebb.** Sets north-northeast in mid-channel, from the bridge back toward the park and out of the canal.
+* **Diveable window.** The site is dived on slack before ebb, the high water slack, which runs long; slack before flood is shorter, and a large exchange narrows both. At the outer piers the slack runs much shorter than in the open channel, and the current builds quickly once it turns. Enter the water well ahead of slack before ebb, ride the last of the flood to the bridge, explore the piers through slack, and return to the park with the new ebb.
 * **Inshore reverse current.** From about two and a half hours into the flood, a reverse current runs along the shoreline from the old pilings back toward Salsbury Point, against the mid-channel flood.
 * **Surface and depth differ.** The surface water can turn before the water at depth, ebbing while the bottom is still at slack or in a weak flood, so the current felt on the surface swim can differ from the current at the piers.
 * **No handholds.** The smooth sand bottom offers nothing to grip, so a diver caught by the current cannot pull along the bottom against it.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Salsbury Point, a correction for the site itself, published without a station number or position |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | At the reference |
-| **Slack before ebb** | 46 minutes before the reference |
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Hood Canal Bridge, a correction for the site itself, published without a station number or position |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 1 hour 3 minutes before the reference |
-| **Slack before ebb** | 4 minutes after the reference |
 
 ## Wind
 
@@ -81,7 +52,6 @@ The swim out runs 57° off the entry shore's facing, along the shore to the brid
 * **Short fetch.** West-northwest through north (WNW-N), onshore over 2.2 to 3.6 km, enough to raise a chop on the entry.
 * **Mixed.** North-northeast (NNE), along the shore over 5.6 km, and southwest (SW), along the shore over 15.2 km along the length of the canal, each running a wind swell past the entry.
 * **Fine.** Northeast through south-southwest (NE-SSW): offshore from east-northeast through south, where the Kitsap shore lies within 300 m upwind, and cross-shore over less than 5 km of fetch at either end.
-* **Wind against current.** South-southwest through west-southwest (SSW-WSW) blows against the flood, over 2.2 to 15.2 km, worst from the southwest along the length of the canal. North through northeast (N-NE) blows against the ebb, over 3.6 to 5.6 km.
 
 ## Depth and tide
 

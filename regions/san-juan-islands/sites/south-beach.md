@@ -30,32 +30,12 @@ Shore dive off South Beach, the longest public beach in the San Juan Islands, in
 
 The flow along the beach is weak on the shelf, and the strong tidal stream runs offshore of it, through the strait and into San Juan Channel around Cattle Point.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Cattle Point, 1.2 nm SE of (PUG1742), about 5.0 km east-southeast |
-| **Recommended bin** | Bin 21, at 11.8 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | north, 2° |
-| **Station ebb axis** | south, 183° |
-| **Site flood set** | west-northwest, 288° |
-| **Site ebb set** | east-southeast, 109° |
-
-* **Flood.** Sets west-northwest along the beach, away from Cattle Point. Daily peaks at the station run 0.46 to 1.22 m/s over 30 days.
-* **Ebb.** Sets east-southeast along the beach, toward Cattle Point. Daily peaks at the station run 1.22 to 2.47 m/s over 30 days, the stronger of the two exchanges.
-* **Diveable window.** Both slacks serve. Under 0.25 m/s at the station, the slack before flood typically runs 40 to 80 minutes and the slack before ebb 50 to 65 minutes, the shortest under 15 minutes between two strong exchanges. Where a weak exchange falls between two slacks, the current can stay under the threshold for over 4 hours.
+* **Type.** Tidal.
+* **Flood.** Sets west-northwest along the beach, away from Cattle Point.
+* **Ebb.** Sets east-southeast along the beach, toward Cattle Point, the stronger of the two exchanges.
+* **Diveable window.** Both slacks serve, and run very short between two strong exchanges. Where a weak exchange falls between two slacks, the current can stay gentle for hours.
 * **Along the beach.** Close inshore the current runs parallel to the shore, often to the east, and the long open beach makes a drift dive simple: let it carry you along the shelf and exit wherever it leaves you, then walk back along the sand.
 * **Off the shelf.** Past the shelf edge the bottom drops into the open strait, where the tidal stream runs far stronger than on the shelf.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Cattle Point, 2.8 miles SSW of, 48°24′ N, 123°00′ W, about 6.1 km south |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 1 hour 17 minutes before the reference |
-| **Slack before ebb** | 1 hour 4 minutes after the reference |
 
 ## Wind
 
@@ -67,7 +47,6 @@ Legacy correction:
 * **Bad.** East-southeast through southwest (ESE-SW), onshore over 9.2 to more than 30 km of open water across the eastern Strait of Juan de Fuca, driving wind waves straight onto the beach and building surf on the entry and exit.
 * **Mixed.** West-southwest through west (WSW-W), along the shore over 19.1 to more than 30 km, running swell along the beach past the entry.
 * **Fine.** West-northwest clockwise through east (WNW-E), blocked by the island itself, with 1.5 km of fetch at most.
-* **Wind against current.** West-southwest through west (WSW-W), over 19.1 to more than 30 km, blows against the west-northwest flood set. East through southeast (E-SE), over 1.5 to 28.2 km, blows against the east-southeast ebb set.
 
 ## Depth and tide
 
@@ -109,5 +88,5 @@ The site swings about 2.2 m between high and low water on a typical day, and up 
 
 * **Surf.** The beach faces the open strait, and wind from east-southeast through southwest builds waves that break on the entry. Getting out through the surf, and back in at the end, can knock a diver down and strip loose gear such as weights. Check the waves before kitting up, and dive only when the beach is calm.
 * **Drift.** The current along the beach carries a diver east or west of the entry during the dive. Plan to exit downstream along the beach, and expect the walk back on sand in full gear.
-* **Shelf edge.** About 450 m out the bottom drops from about 12 m to past 30 m within 150 m, into the open strait, where the tidal stream runs up to 2.47 m/s at the station. Turn back before the edge.
+* **Shelf edge.** About 450 m out the bottom drops from about 12 m to past 30 m within 150 m, into the open strait, where the tidal stream rips. Turn back before the edge.
 * **Driftwood.** Storms throw large logs onto the beach, and in waves they roll in the surf line.

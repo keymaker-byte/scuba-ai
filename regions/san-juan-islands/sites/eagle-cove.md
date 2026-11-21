@@ -31,33 +31,13 @@ Shore dive from the beach of Eagle Cove County Park, a wide, secluded south-faci
 
 The cove sits beside the tidal stream of Haro Strait and the eastern Strait of Juan de Fuca, which drives a clockwise eddy through it on the flood.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Cattle Point, 4.6 nm SW of (PUG1743), about 8.4 km south |
-| **Recommended bin** | Bin 22, at 16.9 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | northeast, 54° |
-| **Station ebb axis** | southwest, 228° |
-| **Site flood set** | west, 275° |
-| **Site ebb set** | east, 90° |
-
-* **Flood.** Sets west into the cove and drives onto the western shore between Eagle Point and the inner point. There it turns south-southwest and runs out along the rocky shore, rounding Eagle Point to join the west-northwest flow of Haro Strait. The part that strikes the inner point splits off, runs in along the shore, turns clockwise across the beach and flows out along the eastern shore. A diver swimming out along the west shore on a flood swims against the current until the inner point, then rides an outbound current toward Eagle Point. On days with a flood, daily peaks at the station run 0.43 to 0.84 m/s over 30 days; on some days the station shows no flood at all.
-* **Ebb.** Its pattern depends on the size of the exchange. On a tidal exchange of about 1.8 m or less, the ebb inside the cove follows the clockwise flood pattern. On an exchange of about 3 m or more, the ebb sets east-northeast past the mouth of the cove from Eagle Point, and the current inside the cove stays light. Between the two, the ebb can take either pattern. Daily peaks at the station run 0.15 to 0.75 m/s over 30 days.
-* **Diveable window.** Both slacks serve. Under 0.25 m/s at the station, the slack before flood runs 84 to 366 minutes, typically about 140, and the slack before ebb 84 to 354 minutes, typically about 155. Around a weak exchange the current stays under the threshold across two slacks, for 210 minutes or more. The inner cove is diveable through more of the tide than Eagle Point, where the stream picks up first.
+* **Type.** Tidal.
+* **Flood.** Sets west into the cove and drives onto the western shore between Eagle Point and the inner point. There it turns south-southwest and runs out along the rocky shore, rounding Eagle Point to join the west-northwest flow of Haro Strait. The part that strikes the inner point splits off, runs in along the shore, turns clockwise across the beach and flows out along the eastern shore. A diver swimming out along the west shore on a flood swims against the current until the inner point, then rides an outbound current toward Eagle Point. On some days there is no flood at all.
+* **Ebb.** Its pattern depends on the size of the exchange. On a small exchange, the ebb inside the cove follows the clockwise flood pattern. On a large exchange, the ebb sets east-northeast past the mouth of the cove from Eagle Point, and the current inside the cove stays light. Between the two, the ebb can take either pattern.
+* **Diveable window.** Both slacks serve, and run long. Around a weak exchange the current stays gentle across two slacks. The inner cove is diveable through more of the tide than Eagle Point, where the stream picks up first.
 * **Eagle Point.** The current at the point always sets away from the cove, and picks up there while the cove is still slack. Plan the dive to Eagle Point at slack and turn early: once the flood starts, the return along the west shore runs against the outbound set until the inner point, where the eddy turns back into the cove.
 * **East side.** On a flood, swimming east along the shore rides the clockwise eddy out around the unnamed point; slightly deeper water carries the return.
 * **Wind.** Strong wind, offshore included, shifts the timing of slack in the cove.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Cattle Point, 2.8 miles SSW of, 48°24′ N, 123°00′ W, about 7.0 km south-southeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 77 minutes before the reference |
-| **Slack before ebb** | 64 minutes after the reference |
 
 ## Wind
 
@@ -71,7 +51,6 @@ The beach faces south-southeast out of the cove's mouth, while the dive area's n
 * **Bad.** Southeast through southwest (SE-SW), onshore over 21.5 km to more than 30 km of open water across the Strait of Juan de Fuca, driving wind waves and swell into the mouth of the cove and onto the beach.
 * **Mixed.** West-southwest (WSW), along the shore over more than 30 km, running swell past Eagle Point into the mouth of the cove.
 * **Fine.** West clockwise through east-southeast (W-ESE), blocked by Eagle Point and the island itself, with 510 m of fetch at most.
-* **Wind against current.** West-southwest (WSW), over more than 30 km, blows against the west flood set. Southeast (SE), over 21.5 km, blows against the east ebb set.
 
 ## Depth and tide
 
@@ -114,7 +93,7 @@ The site swings about 2.2 m between an average high and low water, and up to 3.6
 
 ## Hazards
 
-* **Current.** Off Eagle Point the stream always sets away from the cove and picks up while the cove is still slack, reaching 0.84 m/s on the largest floods at the station. Dive the point at slack and turn early, since the return along the west shore runs against the outbound flood set.
+* **Current.** Off Eagle Point the stream always sets away from the cove and picks up while the cove is still slack, running briskly on the largest floods. Dive the point at slack and turn early, since the return along the west shore runs against the outbound flood set.
 * **Lost fishing nets.** Gillnets and lines lost from fishing boats snag on the rock off Eagle Point and along this shore, from about 18 m to below 50 m. A monofilament net kills fish, crabs and diving birds, and can entangle a diver. Keep clear of any net, carry a cutting tool, and report it to WDFW's derelict gear line.
 * **Bull kelp.** The summer canopy along both sides of the cove is thick. Ascend clear of it, and carry a cutting tool.
 * **Wind waves and swell.** Wind from southeast through southwest crosses the open strait straight into the cove and can spoil the entry and exit on the beach.

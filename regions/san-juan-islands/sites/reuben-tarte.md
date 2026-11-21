@@ -1,6 +1,6 @@
 # Reuben Tarte County Park
 
-Shore dive at Reuben Tarte County Park, also known as Reuben Tarte Picnic Area, from a small pebble cove on the northeast corner of San Juan Island where San Juan, Spieden and President channels meet. Rock walls, ledges and cascading boulders run along the shore on both sides of the cove and around the small rocky knoll that forms its east side, with a soft silty slope further northwest. The site is current-swept and full of invertebrates and fish. Current is the headline hazard, and every dive here is timed to slack.
+Shore dive at Reuben Tarte County Park, also known as Reuben Tarte Picnic Area, from a small pebble cove on the northeast corner of San Juan Island where San Juan, Spieden and President channels meet. Rock walls, ledges and cascading boulders run along the shore on both sides of the cove and around the small rocky knoll that forms its east side, with a soft silty slope further northwest. The site sits in moving water and is full of invertebrates and fish. The current along the cove runs gentle on most tides and steady on a large exchange, and dives here are timed to slack.
 
 | | |
 |---|---|
@@ -32,34 +32,14 @@ Shore dive at Reuben Tarte County Park, also known as Reuben Tarte Picnic Area, 
 
 Three channels converge at this corner of the island and drive the flow around the cove.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Spieden Channel, north of Limestone Point (PUG1719), about 1.9 km northwest |
-| **Recommended bin** | Bin 19, at 14.4 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | east, 85° |
-| **Station ebb axis** | west, 281° |
-| **Site flood set** | northeast, 47° |
-| **Site ebb set** | southwest, 227° |
-
+* **Type.** Tidal.
 * **Inside the cove.** Water inside the cove turns counter-clockwise on both the flood and the ebb.
 * **Set along the shore.** Open water at the dive coordinate sets northeast on the flood and southwest on the ebb. Close along the shore the flow runs northwest on the flood and southeast on the ebb, and the routes below ride that along-shore flow.
-* **Flood.** Runs west-northwest up San Juan Channel along this shore toward Limestone Point, then turns north-northeast into President Channel at the east end of Spieden Channel. Daily peaks at the station run 0.63 to 1.90 m/s over 30 days.
-* **Ebb.** Comes south-southwest down President Channel and strikes the shore between Limestone Point and the cove. There it divides at a quiet silted area northwest of the cove: to the northwest the water runs away from the cove around Limestone Point into Spieden Channel, and to the southeast it runs toward the cove, past it and through Rocky Bay into San Juan Channel. Daily peaks at the station run 0.67 to 2.34 m/s over 30 days.
-* **Diveable window.** Both slacks serve. Under 0.25 m/s at the station, the slack before flood typically runs 48 to 78 minutes and the slack before ebb 42 to 66 minutes; slacks between strong exchanges shrink to about 30 minutes.
+* **Flood.** Runs west-northwest up San Juan Channel along this shore toward Limestone Point, then turns north-northeast into President Channel at the east end of Spieden Channel.
+* **Ebb.** Comes south-southwest down President Channel and strikes the shore between Limestone Point and the cove. There it divides at a quiet silted area northwest of the cove: to the northwest the water runs away from the cove around Limestone Point into Spieden Channel, and to the southeast it runs toward the cove, past it and through Rocky Bay into San Juan Channel.
+* **Diveable window.** Both slacks serve.
 * **Route on slack before flood.** Dive the shoreline southeast of the cove first, so the rising flood carries the return leg northwest toward the beach.
 * **Route on slack before ebb.** Dive the shoreline north-northwest of the cove first, staying southeast of the silted area, so the rising ebb carries the return leg southeast toward the beach.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Limestone Point, Spieden Channel, 48°37.58′ N, 123°06.55′ W, about 1.6 km north-northwest |
-| **Legacy reference** | San Juan Channel (south entrance) (PCT2186) |
-| **Slack before flood** | 23 minutes after the reference |
-| **Slack before ebb** | 60 minutes before the reference |
 
 ## Wind
 
@@ -72,7 +52,6 @@ Legacy correction:
 * **Short fetch.** East (E), onshore over 3.4 km, enough to raise chop in the cove.
 * **Mixed.** East-southeast through southeast (ESE-SE), cross-shore over 6.7 to 8.2 km, running swell past the entry.
 * **Fine.** South-southeast clockwise through north-northwest (SSE-NNW), blocked by the island itself, with 680 m of fetch at most.
-* **Wind against current.** North-northeast through east (NNE-E), over 3.4 to 15.4 km, blows against the northeast flood set in open water. Along the shore, north (N), over 16.8 km, blows against the northwest flood, and east through southeast (E-SE), over 3.4 to 8.2 km, against the southeast ebb. No wind with 1 km of fetch opposes the southwest ebb set.
 
 ## Depth and tide
 
@@ -95,7 +74,7 @@ The site swings about 2.4 m between an average high and low water, and up to 3.8
 
 * **Typical range.** About 3 to 9 m. The water is haziest when the current is running and clearest before the spring bloom.
 * **Season.** Spring before the bloom reaches about 9 m; summer and early autumn plankton bring it down.
-* **Tide.** Strong current lowers it toward the bottom of the range.
+* **Tide.** Running current lowers it toward the bottom of the range.
 
 ## Temperature
 
@@ -112,7 +91,7 @@ The site swings about 2.4 m between an average high and low water, and up to 3.8
 
 ## Hazards
 
-* **Current.** This is a slack dive. A dive outside the window runs short and covers little ground, and peaks at the station exceed 2 m/s on the largest ebbs.
+* **Current.** Gentle along the cove on most tides and steady on a large exchange. Dive at slack, so the along-shore flow carries the return leg to the beach.
 * **Depth off the mouth.** The slope steepens sharply northeast of the cove and passes 30 m within 150 m of the dive coordinate. A diver swept or drifting offshore loses the wall to open water, so stay on the rock and keep the wall on one side.
 * **Bull kelp.** Bull kelp around the knoll can entangle a diver at the surface. Ascend clear of it, or swim under it on the way back.
 * **Wind swell.** Wind from north through southeast raises swell on the exposed shore and can spoil the entry and exit.

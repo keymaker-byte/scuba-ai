@@ -30,36 +30,16 @@ Shore dive in a small pebble cove on the west side of San Juan Island, just sout
 
 Haro Strait's tidal stream runs past the mouth of the bay, and inside it the flow breaks into eddies that set in different directions along each shore.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA South Haro Strait, south of Lime Kiln Light (PUG1724), about 1.9 km south-southwest |
-| **Recommended bin** | Bin 31, at 32.6 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | northwest, 310° |
-| **Station ebb axis** | south-southeast, 147° |
-| **Site flood set** | northwest, 326° |
-| **Site ebb set** | south-southeast, 147° |
-
-* **Flood.** Sets northwest across the mouth of the bay, toward Lime Kiln Point. Daily peaks at the station run 0.49 to 1.12 m/s over 30 days.
-* **Ebb.** Sets south-southeast across the mouth of the bay, down the island. Daily peaks at the station run 0.37 to 1.55 m/s over 30 days.
-* **Diveable window.** Both slacks serve; slack before a small exchange gives the most forgiving dive. Under 0.25 m/s at the station, the slack before flood typically runs 66 to 168 minutes and the slack before ebb 66 to 108 minutes, the shortest about 50 minutes between two strong exchanges. Where a weak exchange falls between two slacks, the current can stay under the threshold for 3 hours or more.
+* **Type.** Tidal.
+* **Flood.** Sets northwest across the mouth of the bay, toward Lime Kiln Point.
+* **Ebb.** Sets south-southeast across the mouth of the bay, down the island.
+* **Diveable window.** Both slacks serve; slack before a small exchange gives the most forgiving dive. The shortest slacks fall between two strong exchanges, and where a weak exchange falls between two slacks the current can stay gentle for hours.
 * **Circular currents.** Three or more circular current patterns form in the bay on both the flood and the ebb. A diver swimming out along either shore meets the current changing direction, and growing stronger, as the swim goes on.
 * **On the flood, east side.** Swimming out along the east side, the current first runs against the diver, then eases through a slack stretch, and then runs with the diver, outward.
 * **On the flood, west side.** Swimming out along the west side, the current first runs with the diver, reverses a short distance from the beach to run inbound against the swim, and reverses again farther out along the rock to run outward.
 * **On the ebb, east side.** Swimming out along the east side, the current first runs outward with the diver, then turns inbound, and near the mouth turns outward again.
 * **On the ebb, west side.** Swimming out along the west side, the current first runs against the diver, eases through a quiet stretch, turns outward, and near the mouth runs against the diver again.
 * **Wind and slack.** Wind, offshore wind included, can shift the turn of the current at the site, so treat any predicted slack as approximate.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Discovery Island, 3.3 miles northeast of, 48°27′ N, 123°09′ W, about 6.9 km south |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 76 minutes after the reference |
-| **Slack before ebb** | 59 minutes after the reference |
 
 ## Wind
 
@@ -73,7 +53,6 @@ The bay opens south-southwest between its two rock shores.
 * **Bad.** South-southeast through west (SSE-W), onshore over 11 to more than 30 km of open water across Haro Strait, driving wind waves and surge straight into the bay and onto the beach.
 * **Mixed.** West-northwest (WNW), along the shore over 17.5 km, running a swell past the mouth of the bay.
 * **Fine.** Northwest clockwise through southeast (NW-SE), blocked by the island itself and the bay's two shores, with 240 m of fetch at most.
-* **Wind against current.** West-northwest (WNW), over 17.5 km, blows against the northwest flood set. South-southeast through south (SSE-S), over more than 30 km, blows against the south-southeast ebb set.
 
 ## Depth and tide
 
@@ -115,7 +94,7 @@ The site swings about 2.2 m between an average high and low water, and up to 3.6
 
 ## Hazards
 
-* **Current.** Circular currents change direction along both shores and strengthen toward the mouth, and outside the bay the stream runs at up to 1.55 m/s on the largest ebbs at the station. The inner bay suits any diver; the mouth and the outer walls ask for experience in current. Dive at slack, ideally before a small exchange, and turn back early if the current builds.
+* **Current.** Circular currents change direction along both shores and strengthen toward the mouth, and outside the bay the stream runs hard on the largest ebbs. The inner bay suits any diver; the mouth and the outer walls ask for experience in current. Dive at slack, ideally before a small exchange, and turn back early if the current builds.
 * **Bull kelp.** Thick bull kelp along both shores in summer and fall can entangle a diver at the surface. Ascend clear of the canopy and carry a cutting tool.
 * **Wind surge.** Wind from south-southeast through west crosses open water straight into the bay, building surge on the rock and chop on the cobble beach.
 * **The hillside.** The walk down the steep, grassy hillside and the climb back up in full gear are tiring, and the cobble beach shifts underfoot at the water's edge.

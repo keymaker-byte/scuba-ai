@@ -27,31 +27,11 @@ A shore dive at the Port Townsend Marine Science Center pier, inside Fort Worden
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Point Wilson, 0.6 mi. NE of (PUG1623), about 1.9 km north-northeast |
-| **Recommended bin** | bin 45, at 5.1 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | east-southeast, 120° |
-| **Station ebb axis** | northwest, 321° |
-| **Site flood set** | south-southwest, 205° |
-| **Site ebb set** | north-northeast, 25° |
-
-* **Flood.** Sets south-southwest, parallel to the shore, running from Point Wilson down past the pier. Daily peaks run 0.56 to 1.54 m/s at the station over 30 days.
-* **Ebb.** Sets north-northeast, back out toward Point Wilson and the Strait, with daily peaks of 0.41 to 2.04 m/s at the station over the same 30 days.
+* **Type.** Tidal.
+* **Flood.** Sets south-southwest, parallel to the shore, running from Point Wilson down past the pier.
+* **Ebb.** Sets north-northeast, back out toward Point Wilson and the Strait.
 * **Nearshore push.** Right along the beach, a current sets south toward the pier on both the flood and the ebb, not just the flood; it is weak but persistent, and divers drifting with it can use the pier itself for shelter.
-* **Diveable window.** Current stays weak most of the day, rarely above 0.3 to 0.4 m/s even off slack, and the window around each slack runs well over two hours on an average exchange. It narrows and strengthens on a large exchange, and that is when timing the dive to slack matters. A typical window under 0.25 m/s at the station runs about 35 to 65 minutes.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Point Wilson, 0.5 mile northeast of, 48°09′ N, 122°45′ W, about 1.7 km north-northeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 1 hour 8 minutes before the reference |
-| **Slack before ebb** | 47 minutes before the reference |
+* **Diveable window.** Current stays weak most of the day, even off slack, and the window around each slack runs well over two hours on an average exchange. It narrows and strengthens on a large exchange, and that is when timing the dive to slack matters.
 
 ## Wind
 
@@ -64,7 +44,6 @@ The beach faces east-southeast across the entrance to Port Townsend Bay and Admi
 
 * **Bad.** Northeast through south-southeast (NE-SSE), onshore over 5.5 to 12.3 km across Admiralty Inlet.
 * **Fine.** South clockwise through north-northeast (S-NNE): offshore from southwest through north-northwest over the park and the peninsula, and cross-shore under 1 km from south, south-southwest, north and north-northeast.
-* **Wind against current.** North-northeast through northeast (NNE-NE), over 0.85 to 7.1 km, against the ebb stacks chop right on the exposed part of the entry. South through southwest (S-SW), over 0.3 to 1.0 km, opposes the flood.
 
 ## Depth and tide
 

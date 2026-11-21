@@ -26,21 +26,10 @@ Camano Island State Park sits at the southwest tip of Camano Island, facing Sara
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | Camano Head-Sandy Point passage (PUG1618), about 10.9 km southeast, at the confluence off Camano Head |
-| **Recommended bin** | bin 35, at 23.7 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | northwest, 304° |
-| **Station ebb axis** | east-southeast, 117° |
-| **Site flood set** | west-northwest, 282° |
-| **Site ebb set** | east-southeast, 102° |
-
-* **Flood.** Sets northwest, with daily peaks of 0.23 to 0.38 m/s at the station over 30 days.
-* **Ebb.** Sets southeast, with daily peaks of 0.08 to 0.27 m/s at the station over the same 30 days.
-* **Diveable window.** Current here runs genuinely strong for a shore site, the confluence off Camano Head pulls harder than the open passage further north along the island. Plan the entry around slack at the governing station and build in a wide margin either side rather than trusting the station's time directly. Current at the site does not track the station's slack on a fixed lag. Current at the station stays under 0.25 m/s for about 2 to 15 hours at a time, and the strongest water sits off Camano Head.
+* **Type.** Tidal.
+* **Flood.** Sets northwest.
+* **Ebb.** Sets southeast, the weaker of the two.
+* **Diveable window.** Current here runs genuinely strong for a shore site, the confluence off Camano Head pulls harder than the open passage further north along the island, and the strongest water sits off the head. Build in a wide margin either side of slack.
 
 ## Wind
 
@@ -55,7 +44,6 @@ The beach faces across Saratoga Passage toward Whidbey Island.
 * **Short fetch.** South through southwest (S-SW), onshore over 2.7 to 3.4 km.
 * **Mixed.** East-southeast (ESE), over 5.8 km, and west through west-northwest (W-WNW), over 5.0 to 6.1 km, cross-shore.
 * **Fine.** Northwest clockwise through east (NW-E): offshore from northwest through east-northeast, blocked by the island itself, and cross-shore over 2.7 km from the east.
-* **Wind against current.** Right off Camano Head the current sets northwest on the flood and southeast on the ebb. West-southwest through northwest (WSW-NW) against the flood, over 5.0 to 9.9 km, and east-northeast through southeast (ENE-SE) against the ebb, over 2.3 to 25.1 km, both stack wind and current where the current is already strongest.
 
 ## Depth and tide
 

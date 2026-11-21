@@ -28,30 +28,10 @@ Pinnacle Rock is a shore dive on the Strait of Juan de Fuca between Sekiu and Ne
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Pillar Point current station (PUG1641), about 32 km east, out in the open strait |
-| **Recommended bin** | bin 75, at 12.4 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | east-southeast, 115° |
-| **Station ebb axis** | west-northwest, 290° |
-| **Site flood set** | east-southeast, 120° |
-| **Site ebb set** | west-northwest, 300° |
-
-* **Flood.** Sets east-southeast, parallel to shore toward Sekiu and Pillar Point, with daily peaks of 0.19 to 0.82 m/s at the open-water station over 30 days.
-* **Ebb.** Sets west-northwest, parallel to shore toward Neah Bay and the strait's mouth, with daily peaks of 0.35 to 0.84 m/s at the station over the same 30 days, and tends to run the stronger of the two.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 110 to 240 minutes. The rock and kelp ground breaks up and shelters most of the flow near slack, but this site sits well out toward the open mouth of the strait, with a long, direct exposure, and both current and surge build faster once away from the largest rocks. Dive only in calm conditions, time the entry to slack, and treat any dive that runs into a developing exchange as a drift dive, working with the flow or across it rather than against it.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | None; the reference is used directly |
-| **Legacy reference** | Strait of Juan de Fuca Entrance (PCT1341) |
-| **Slack before flood** | At the reference's time |
-| **Slack before ebb** | At the reference's time |
+* **Type.** Tidal.
+* **Flood.** Sets east-southeast, parallel to shore toward Sekiu and Pillar Point.
+* **Ebb.** Sets west-northwest, parallel to shore toward Neah Bay and the strait's mouth, and tends to run the stronger of the two.
+* **Diveable window.** Long. The rock and kelp ground breaks up and shelters most of the flow near slack, but this site sits well out toward the open mouth of the strait, with a long, direct exposure, and both current and surge build faster once away from the largest rocks. Dive only in calm conditions, time the entry to slack, and treat any dive that runs into a developing exchange as a drift dive, working with the flow or across it rather than against it.
 
 ## Wind
 
@@ -65,7 +45,6 @@ The beach faces northeast into the open strait, with a long, unbroken fetch to t
 * **Bad.** North-northwest clockwise through east (NNW-E), onshore over 22 km to more than 30 km of open strait.
 * **Mixed.** East-southeast (ESE) and northwest (NW), cross-shore over more than 30 km each, running a swell along the shore past the entry.
 * **Fine.** Southeast clockwise through west-northwest: offshore from south-southeast through west, off the land, and cross-shore over 1.5 km or less from the southeast and west-northwest.
-* **Wind against current.** West-northwest through north-northwest (WNW-NNW) against the ebb, which sets toward the open strait's mouth, over 1.3 km to more than 30 km, is the combination to avoid. East through southeast (E-SE) against the flood, over 1.5 km to more than 30 km.
 
 ## Depth and tide
 

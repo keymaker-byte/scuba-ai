@@ -27,21 +27,10 @@ Natural rock reef shore dive on the southeast shore of Bainbridge Island, at the
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Restoration Point (PUG1512), about 3.1 km southeast |
-| **Recommended bin** | bin 10, at 24.7 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | southeast, 142° |
-| **Station ebb axis** | northeast, 42° |
-| **Site flood set** | south-southwest, 200° |
-| **Site ebb set** | north-northeast, 20° |
-
-* **Flood.** Sets south, into the sound, with daily peaks of 0.14 to 0.32 m/s at the station over 30 days.
-* **Ebb.** Sets north-northeast, back out toward the strait. It is the stronger, more troublesome phase at this site, with daily peaks of 0.28 to 0.62 m/s at the station over the same 30 days.
-* **Diveable window.** Current at the station stays under 0.25 m/s for about 2 to 6 hours at a time. Best on the flood or the slack ahead of the ebb. On a small exchange, under about 2 m of tidal range, the ebb itself stays manageable; on a larger exchange, plan to be out of the water before it builds.
+* **Type.** Tidal.
+* **Flood.** Sets south, into the sound.
+* **Ebb.** Sets north-northeast, back out toward the strait. It is the stronger, more troublesome phase at this site.
+* **Diveable window.** Best on the flood or the slack ahead of the ebb. On a small exchange the ebb itself stays manageable; on a larger exchange, plan to be out of the water before it builds.
 
 ## Wind
 
@@ -56,7 +45,6 @@ The beach faces east-northeast across the main basin toward Alki Point and West 
 * **Short fetch.** North (N), onshore over 2.6 km, and east-southeast (ESE), onshore over 1.2 km.
 * **Mixed.** Southeast (SE), cross-shore over 10.4 km.
 * **Fine.** South-southeast clockwise through north-northwest (SSE-NNW): offshore from south through west-northwest, blocked by the point and the wooded shore behind the cove, and cross-shore under 1.4 km from south-southeast, northwest and north-northwest.
-* **Wind against current.** North through northeast (N-NE), over 2.6 to 20.5 km, opposing the north-northeast ebb is the combination to avoid. South-southeast through south-southwest (SSE-SSW), over 1.0 to 1.4 km, opposes the flood.
 
 ## Depth and tide
 

@@ -1,6 +1,6 @@
 ---
 name: create-dive-plan
-description: This skill should be used when the user asks to plan a dive, create a dive plan, plan a dive at a site, or build an entry-to-exit profile. Covers identifying the site and date, loading the region's planning conventions, pulling every current estimate the site has for the entry and exit time, the wind, swell and tide checks, ordering the route so the return never fights the current, applying the workspace conventions, and presenting the plan in chat as a table plus a summary to share with dive buddies.
+description: This skill should be used when the user asks to plan a dive, create a dive plan, plan a dive at a site, or build an entry-to-exit profile. Covers identifying the site and date, loading the region's planning conventions, the current prediction for the entry and exit time, the wind, swell and tide checks, ordering the route so the return never fights the current, applying the workspace conventions, and presenting the plan in chat as a table plus a summary to share with dive buddies.
 ---
 
 # Create a dive plan
@@ -24,11 +24,12 @@ Read the site file, its `<slug>.json` companion beside it in `sites/`, `<region>
 
 ## 3. Build the plan
 
-Follow the region's planning conventions in their own order: each factor, the tool that reads it, and how its estimates combine. Beyond them:
+Follow the region's planning conventions in their own order: each factor and the tool that reads it. Beyond them:
 
 - **Both ends of the dive.** Every factor at the entry time and again at the exit time. Current builds, wind rises or shifts, and fog moves in while the diver is underwater.
 - **Never return against the current.** Order the route so the leg back to the entry runs with the current or through slack. Where the current sets a known direction after slack, work the far leg first, up-current of the entry, and turn for home before the current builds against the return.
-- **Wind.** A marginal call means a short surface swim only, with the entry and exit confirmed from shore before kitting up. A forecast direction in the site's Wind against current sectors while the current runs is noted beside the call.
+- **Wind.** A marginal call means a short surface swim only, with the entry and exit confirmed from shore before kitting up.
+- **Wind against current.** At the entry and at the exit, compare the forecast wind with the current's predicted set at that moment. A wind blowing from within 45° of the direction the current flows toward, from a direction outside the site's Fine sectors, while the current runs at or above the region's threshold, stands the chop up steeper and shorter than the wind alone: note it beside the wind call. A slower current, or a site whose current type is wind driven or none, has nothing to note.
 - **Swell.** Breaking waves at the entry under 0.5 m are go, 0.5 to 1 m marginal, over 1 m no go.
 - **The verdict.** A no go reading on any factor ends the plan at that site and time; a marginal one stays in the plan with the condition its band attaches.
 - **Divable Window.** Consider all factors that impact a divable window, suggest the best window to dive.
@@ -50,10 +51,10 @@ Follow the region's planning conventions in their own order: each factor, the to
 |---|---|
 | **Site and date** | Site name, region, date and dive time |
 | **Site Summary** | Site summary, where to park, how to enter the water |
-| **Diveable window** | The window from factors overlap, its padding, and any estimates flagged as far apart |
+| **Diveable window** | The window from the factors' overlap and its padding |
 | **Verdict** | Go, marginal or no go, and the factor that decides it |
 | **Time** | Time for meet, entry time, exit time, dive runtime |
-| **Current** | Prediced current slack time closer to the dive, each source and final reconciliation |
+| **Current** | Predicted slack closest to the dive, its set either side, and the observed offset where the site carries one |
 | **Tide** | Predicted tide slack closer to the dive, size of the tide exchange comparable to the month |
 | **Weather** | Wind conditions, air temperature, sky, rain and fog |
 | **Visibility and temperature** | Recent visibility reports and the expected water temperature |
@@ -63,17 +64,17 @@ Follow the region's planning conventions in their own order: each factor, the to
 | Entry Factor | |
 |---|---|
 | **Time** | Entry time |
-| **Current** | Speed and set at entry, each source and final reconciliation |
+| **Current** | Speed and set at entry, at the bottom and in the fastest water above |
 | **Tide** | Height at entry |
-| **Wind** | Speed, direction and call at entry |
+| **Wind** | Speed, direction and call at entry, and any wind against current |
 | **Swell and sea state** | The reading and its band at entry |
 
 | Exit Factor | |
 |---|---|
 | **Time** | Exit time |
-| **Current** | Speed and set at exit, each source and final reconciliation |
+| **Current** | Speed and set at exit, at the bottom and in the fastest water above |
 | **Tide** | Height at exit |
-| **Wind** | Speed, direction and call at exit |
+| **Wind** | Speed, direction and call at exit, and any wind against current |
 | **Swell and sea state** | The reading and its band at exit |
 
 **2. The summary.** Create a dive plan summary including site description and bullet points using emojis to summarise each dive factor. Make it short and to the point, include resulting data (e.g. current speed/direction, wind speed/direction, deph, temperature, vizibility).

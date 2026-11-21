@@ -27,30 +27,10 @@ Shore dive at Marina Beach Park in Edmonds, at the southwest end of the Port of 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Edmonds, 2.5 mi. West of (PUG1503), about 3.5 km offshore |
-| **Recommended bin** | bin 34, at 20.5 m, the shallowest published |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south-southeast, 161° |
-| **Station ebb axis** | north, 358° |
-| **Site flood set** | south, 185° |
-| **Site ebb set** | north, 5° |
-
-* **Flood.** Sets south-southeast, into the main basin. Generally the weaker of the two exchanges, with daily peaks of 0.06 to 0.18 m/s at the station over 30 days.
-* **Ebb.** Sets north-northeast, back toward the Possession Sound split and Admiralty Inlet. Usually the stronger exchange, and the one to plan around, with daily peaks of 0.12 to 0.52 m/s at the station over the same 30 days.
-* **Diveable window.** Current at the station stays weak for long stretches on an ordinary day, so timing is often forgiving. Current at the station stays under 0.25 m/s for about 1 to 19 hours at a time. Plan to the slack itself rather than the window's printed edges, and pad it.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Edmonds Marina Beach, a correction for the site itself, published without a station number or position |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 10 minutes before the reference |
-| **Slack before ebb** | 1 hour 32 minutes before the reference |
+* **Type.** Tidal.
+* **Flood.** Sets south-southeast, into the main basin. Generally the weaker of the two exchanges.
+* **Ebb.** Sets north-northeast, back toward the Possession Sound split and Admiralty Inlet. Usually the stronger exchange, and the one to plan around.
+* **Diveable window.** Current stays weak for long stretches on an ordinary day, so timing is often forgiving. Plan to the slack itself rather than the window's edges, and pad it.
 
 ## Wind
 
@@ -64,7 +44,6 @@ The beach faces roughly west, across the main basin toward the south end of Whid
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over 6.5 to 20.0 km across the main basin, builds chop on the long surface swim.
 * **Mixed.** North-northwest through north (NNW-N), over 13.1 to 21.7 km, and south (S), over 11.6 km, cross-shore, running a swell along the beach.
 * **Fine.** North-northeast clockwise through south-southeast (NNE-SSE): offshore from north-northeast through southeast, off the land side, and cross-shore over 1.2 km from south-southeast, leave the entry sheltered.
-* **Wind against current.** North-northwest through north-northeast (NNW-NNE), over 13.1 to 28.1 km, opposing the ebb's northward set is the roughest combination for the surface swim back in. South-southeast through southwest (SSE-SW), over 1.2 to 20.0 km, opposes the flood.
 
 ## Depth and tide
 
@@ -103,7 +82,7 @@ Edmonds swings up to about 4.9 m between high and low water, a large share of th
 ## Hazards
 
 * **The long swim.** Roughly 230 m of open sand each way before the interesting ground even begins, more again to work the remnants past the drop-off. Watch gas and turn with distance as well as pressure in mind.
-* **Current.** Runs harder on the ebb than the flood at the governing station; a current that seems trivial at the shallow entry can be more work at the drop-off.
+* **Current.** Runs harder on the ebb than the flood; a current that seems trivial at the shallow entry can be more work at the drop-off.
 * **Depth creep.** The remnants sit past 18 m with the slope continuing beyond, and nothing at the drop-off itself marks a clear stopping point. Watch the computer, not the terrain.
 * **Boat traffic.** Recreational and fishing boats work in and out of the adjacent Port of Edmonds marina. Fly a marker buoy on the surface swim.
 * **Snags.** Old creosote piling stumps, scattered rubble and derelict line lie around the remnants at the drop-off. Carry a cutting tool.

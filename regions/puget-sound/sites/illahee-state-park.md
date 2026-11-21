@@ -28,31 +28,11 @@ Illahee State Park sits on the Kitsap Peninsula's east shore in Bremerton, on th
 
 Current here is negligible at every stage of the tide, at the surface and depth-averaged alike, so this is not a slack-tide dive.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. The nearest station with predictions is Rich Passage, West end (PUG1514), about 2.6 km east-southeast, in the pass |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | north, 350° |
-| **Site ebb set** | south, 170° |
-
-* **Flood.** Sets NNW, up the Port Orchard reach toward Agate Passage and Brownsville, negligible in strength and staying under about 0.15 m/s at any stage of the tide.
+* **Type.** Tidal.
+* **Flood.** Sets north-northwest, up the Port Orchard reach toward Agate Passage and Brownsville, negligible in strength at any stage of the tide.
 * **Ebb.** Sets SSE, down the reach toward Rich Passage and the main basin, similarly weak.
-* **Shallows.** The water above the pilings can push harder on an incoming tide, enough to work against right at the dock, even with the rest of the site sitting under 0.15 m/s. Treat the top few metres near the pier with more caution than the open current axis alone would suggest.
-* **Diveable window.** All day, any tide stage. Slack timing comes from the site's own ENPAC15 extract, cross-checked against the Brownsville tide table. Current is not the limiting factor at this site; boat traffic and visibility are.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | West end, Rich Passage, 47°35.40′ N, 122°33.73′ W, about 2.6 km east-southeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 44 minutes before the reference |
-| **Slack before ebb** | 46 minutes after the reference |
+* **Shallows.** The water above the pilings can push harder on an incoming tide, enough to work against right at the dock, even with the rest of the site barely moving. Treat the top few metres near the pier with more caution than the open current alone would suggest.
+* **Diveable window.** All day, any tide stage. Current is not the limiting factor at this site; boat traffic and visibility are.
 
 ## Wind
 
@@ -65,7 +45,6 @@ The site faces northeast, across the Port Orchard reach toward Bainbridge Island
 
 * **Short fetch.** North through east-southeast (N-ESE), onshore over 1.3 to 3.1 km, the open fetch down the reach from Agate Passage and across the water to Bainbridge Island.
 * **Fine.** Southeast clockwise through north-northwest (SE-NNW): offshore from south through west-northwest, blocked by the Kitsap Peninsula landmass behind the site, and cross-shore under 3.1 km from southeast, south-southeast, northwest and north-northwest.
-* **Wind against current.** Not a real factor here; the current stays too weak at every stage of the tide to stack meaningfully against any wind.
 
 ## Depth and tide
 

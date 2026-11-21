@@ -30,33 +30,10 @@ Port Washington Narrows is the tidal cut through Bremerton joining Dyes Inlet to
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Port Washington Narrows, Warren Ave. Bridge (PUG1510), on the drift path, about 1.4 km northwest of the entry |
-| **Recommended bin** | bin 1, at 6.25 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | west-northwest, 279° |
-| **Station ebb axis** | east-southeast, 102° |
-| **Site flood set** | north-northwest, 333° |
-| **Site ebb set** | south-southeast, 153° |
-
-* **Flood.** Sets up the narrows from Sinclair Inlet toward Dyes Inlet, north-northwest (about 333°) beneath the Manette Bridge and swinging west-northwest by the Warren Avenue Bridge. This is the drift direction. Daily peak flood at the station runs 1.05 to 1.76 m/s over 30 days; at the Manette end it runs about 80 percent of that.
-* **Ebb.** Sets down the narrows from Dyes Inlet toward Sinclair Inlet, out past the Manette Bridge into open water. Daily peak ebb at the station runs 0.52 to 1.48 m/s over the same 30 days. Never drift the ebb: the only take-out is at the Manette Bridge itself, easily missed, with Sinclair Inlet beyond it.
-* **Diveable window.** The flood, not a slack. Entering at the turn makes for a long dive, since the first hour of the flood carries a diver well under a kilometre. Entering roughly an hour after the slack before flood, as the current builds, brings the full 2.6 km drift to about an hour to an hour and a quarter on an average exchange; a weak flood takes longer and a strong one less. Check the flood's peak speed for the day and size the entry time and gas to it.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Port Washington Narrows, south entrance, 47°34′ N, 122°37′ W, about 0.4 km south-southeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 9 minutes before the reference |
-| **Slack before ebb** | 55 minutes after the reference |
-| **Maximum flood** | 13 minutes after the reference |
-| **Maximum ebb** | 1 hour 8 minutes after the reference |
-| **Maximum speed ratio** | 0.6 of the reference on the flood, 0.7 on the ebb |
+* **Type.** Tidal.
+* **Flood.** Sets up the narrows from Sinclair Inlet toward Dyes Inlet, north-northwest beneath the Manette Bridge and swinging west-northwest by the Warren Avenue Bridge. This is the drift direction, a little gentler at the Manette end.
+* **Ebb.** Sets down the narrows from Dyes Inlet toward Sinclair Inlet, out past the Manette Bridge into open water. Never drift the ebb: the only take-out is at the Manette Bridge itself, easily missed, with Sinclair Inlet beyond it.
+* **Diveable window.** The flood, not a slack. Entering at the turn makes for a long dive, since the early flood carries a diver slowly. Entering once the current has begun to build after the slack before flood covers the 2.6 km drift in a comfortable dive on an average exchange; a weak flood takes longer and a strong one less. Check the flood's peak for the day and size the entry time and gas to it.
 
 ## Wind
 
@@ -69,7 +46,6 @@ A narrow inland cut through residential Bremerton, with land close on both sides
 
 * **Short fetch.** South through south-southwest (S-SSW), onshore over 2.5 to 3.3 km up Sinclair Inlet, the one direction with any fetch to the Manette entry.
 * **Fine.** Southwest clockwise through south-southeast (SW-SSE); the surrounding shore leaves little open water for wind to build across.
-* **Wind against current.** A northwesterly (NW), over 1.8 km, runs against the flood and can raise a short chop in the channel, worth noting for a surface swim to the take-out but rarely enough to cancel the dive. Southeast through south (SE-S), over 2.1 to 2.6 km, opposes the ebb.
 
 ## Depth and tide
 

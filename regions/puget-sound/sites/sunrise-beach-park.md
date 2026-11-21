@@ -30,31 +30,10 @@ Shore dive at Sunrise Beach Park, north of Gig Harbor on the west shore of Colvo
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Gig Harbor Entrance (PUG1523), about 2.9 km south-southwest |
-| **Recommended bin** | bin 8, at 9.3 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south-southwest, 198° |
-| **Station ebb axis** | north, 357° |
-| **Site flood set** | south-southwest, 207°, early in the flood, then north-northeast, 027° for the rest of it |
-| **Site ebb set** | north-northeast, 027°, along the shore toward the entry |
-
-* **Flood.** Locally the current runs parallel to shore, along 27° and 207°. As the Narrows begins to flood, the water at the site sets south past the entry and the wall for a short period, then goes slack again a few minutes after the station turns to flood and swings north. For most of the flood it runs north past the beach, back toward the entry. Daily peaks run 0.37 to 0.53 m/s at the station over 30 days.
-* **Ebb.** Sets north along the shore, toward the entry. Colvos Passage carries a net northward flow, so the ebb simply continues what the late flood started. Before ebb the north going current slows, then builds again on the ebb, often without ever stopping. Daily peaks run 0.23 to 0.56 m/s at the station over the same 30 days.
-* **Diveable window.** The slack before flood, on a small exchange. A typical window under 0.25 m/s at the station runs about 65 to 275 minutes. For a dive that rides the current both ways, enter while the water still sets south early in the flood, which carries a diver along the beach to the wall, and it reverses to north shortly after the station begins to flood, carrying the diver back toward the entry. The end of the ebb, just before this window, is the hardest part of the cycle to predict, with weak flow fluctuating in direction and the possibility of downcurrents; do not drop early into it. Exchanges of about 2.5 m or less at the Gig Harbor tide station give the longest windows; a big exchange can leave current running through the whole dive. On a low exchange day the slowing before ebb is also diveable, as a short lull.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Sunrise Beach, a correction for the site itself, published without a station number or position |
-| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
-| **Slack before flood** | 1 hour 30 minutes before the reference |
-| **Reversal of flood current** | 4 minutes after the reference's slack before flood |
-| **Slack before ebb** | 16 minutes before the reference |
+* **Type.** Tidal.
+* **Flood.** Locally the current runs parallel to shore. As the Narrows begins to flood, the water at the site sets south past the entry and the wall for a short period, then goes slack again shortly after the main channel turns to flood and swings north. For most of the flood it runs north past the beach, back toward the entry.
+* **Ebb.** Sets north along the shore, toward the entry. Colvos Passage carries a net northward flow, so the ebb simply continues what the late flood started. Before ebb the north going current slows, then builds again on the ebb, often without ever stopping.
+* **Diveable window.** The slack before flood, on a small exchange, and long on most days. For a dive that rides the current both ways, enter while the water still sets south early in the flood, which carries a diver along the beach to the wall, and it reverses to north shortly after the main channel begins to flood, carrying the diver back toward the entry. The end of the ebb, just before this window, is the hardest part of the cycle to predict, with weak flow fluctuating in direction and the possibility of downcurrents; do not drop early into it. Small exchanges give the longest windows; a big exchange can leave current running through the whole dive. On a low exchange day the slowing before ebb is also diveable, as a short lull.
 
 ## Wind
 
@@ -68,7 +47,6 @@ The beach faces east-southeast across Colvos Passage toward Vashon Island, about
 * **Bad.** North through north-northeast (N-NNE), down the length of Colvos Passage, which builds a short steep chop against the beach; southeast (SE), onshore over 13.2 km; and south (S), which comes up Colvos Passage from Dalco Passage over 5.7 km and puts chop on the surface swim.
 * **Short fetch.** Northeast through east-southeast (NE-ESE), and south-southeast (SSE), onshore over 2.1 to 4.2 km across the passage, and usually minor.
 * **Fine.** South-southwest clockwise through north-northwest (SSW-NNW), offshore off the wooded bluff behind the park, or cross-shore over 3.5 km.
-* **Wind against current.** North-northeast through east-northeast (NNE-ENE) blows against the north going current along shore, and south through south-southwest (S-SSW) against the brief south set early in the flood. A strong surface current blown up by the wind can run when the water at depth is mild, and it makes the swim back to the entry rough and slow.
 
 ## Depth and tide
 

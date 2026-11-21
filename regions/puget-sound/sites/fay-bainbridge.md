@@ -25,30 +25,10 @@ Sand and eelgrass shore dive at the northeast tip of Bainbridge Island, facing o
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Point Jefferson, East of (PUG1509), about 5.3 km northeast, across the main basin |
-| **Recommended bin** | bin 1, at 21.6 m, matching the working depth |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south-southwest, 212° |
-| **Station ebb axis** | north-northeast, 14° |
-| **Site flood set** | south-southeast, 158° |
-| **Site ebb set** | north-northwest, 338° |
-
-* **Flood.** In the open channel the station reads a south-southwest set. Along this shore itself the flood runs parallel to the beach instead, setting southeast. Daily peaks run 0.22 to 0.70 m/s at the station over 30 days.
-* **Ebb.** The station's channel axis is north-northeast, but along the shore in front of the site the ebb sets northwest, parallel to the beach, then bends west as it rounds Point Monroe into Port Madison. Daily peaks run 0.19 to 0.71 m/s at the station over the same 30 days.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 80 to 160 minutes. Wide on a small exchange, several hours under 0.25 m/s. On a larger exchange the window narrows to a little over an hour either side of slack, with flood and ebb both running past 0.5 m/s; treat this as current sensitive on any exchange over about 3 m, not just the big ones.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Agate Passage, north end, 47°43.32′ N, 122°33.30′ W, about 4.4 km west-northwest |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 1 hour 28 minutes before the reference |
-| **Slack before ebb** | 18 minutes before the reference |
+* **Type.** Tidal.
+* **Flood.** In the open channel the flood sets south-southwest. Along this shore itself it runs parallel to the beach instead, setting southeast.
+* **Ebb.** The channel's ebb runs north-northeast, but along the shore in front of the site it sets northwest, parallel to the beach, then bends west as it rounds Point Monroe into Port Madison.
+* **Diveable window.** Wide on a small exchange, several hours of light water. On a larger exchange the window narrows to a little over an hour either side of slack, with both flood and ebb running briskly; treat this as current sensitive on any sizeable exchange, not just the big ones.
 
 ## Wind
 
@@ -62,7 +42,6 @@ The beach faces roughly east-northeast, open across the main basin toward Posses
 * **Bad.** North-northeast through southeast (NNE-SE), onshore over 5.1 to 11.6 km, which runs a long fetch up the main basin onto this beach.
 * **Mixed.** South-southeast (SSE), over 20.5 km, and north-northwest (NNW), over 5.3 km, cross-shore, running a swell along the beach.
 * **Fine.** South through northwest (S-NW), offshore from south-southwest through northwest, blocked by Bainbridge Island's own landmass behind the beach, and cross-shore over 4.3 km from the south; and north (N), cross-shore over 4.5 km.
-* **Wind against current.** North-northwest through north-northeast (NNW-NNE), over 4.5 to 5.3 km, opposing the ebb's northwest set along the shore is the roughest combination; southeast through south (SE-S), over 4.3 to 20.5 km, opposes the flood's southeast set.
 
 ## Depth and tide
 

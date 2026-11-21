@@ -30,30 +30,10 @@ Shore dive off the Fox Island Fishing Pier at Toy Point, the eastern tip of Fox 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Gibson Point, 0.8 miles East of (PUG1531), about 1 km south |
-| **Recommended bin** | bin 18, at 9.5 m; bin 13 at 24.5 m slacks up to about 30 minutes apart from it, earlier or later |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south-southwest, 204° |
-| **Station ebb axis** | northeast, 42° |
-| **Site flood set** | south-southwest, 207° |
-| **Site ebb set** | north-northeast, 27° |
-
-* **Flood.** Runs parallel to shore, setting south past the beach toward Toy Point and the pier side of the point, then around Toy Point toward Gibson Point. It is the stronger of the two, with daily peaks of 1.11 to 1.84 m/s at the station over 30 days.
-* **Ebb.** Also parallel to shore, rounding Toy Point and setting north along the wall toward Fox Point. It runs weaker than the flood, with daily peaks of 0.64 to 1.34 m/s at the station over the same 30 days. The water along the wall begins setting north well ahead of the station's slack before ebb, so a dive timed to the station alone meets a building northward current instead of a turn.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 40 to 70 minutes. Either slack on a small exchange, best a slack between two weak maximums; on a big exchange the window can close almost as it opens. Before ebb, drop about an hour ahead of the station's slack and swim south first, so the return north rides the ebb as it builds; before flood, swim north first, so the return south rides the flood. The current along the walls does not pour down them, so a diver caught by it can climb the ledges and drift back toward the entry. Watch for the turn and be ready to end the dive early: once the water runs there is nowhere to shelter but the beach. Whirlpools and swirling water off the beach and beside the pier mean the current is still running; wait on the beach until the surface settles.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Toy Point, Fox Island, a correction for the site itself, published without a station number or position |
-| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
-| **Slack before flood** | 56 minutes before the reference |
-| **Slack before ebb** | 1 hour 5 minutes before the reference |
+* **Type.** Tidal.
+* **Flood.** Runs parallel to shore, setting south past the beach toward Toy Point and the pier side of the point, then around Toy Point toward Gibson Point. It is the stronger of the two.
+* **Ebb.** Also parallel to shore, rounding Toy Point and setting north along the wall toward Fox Point. It runs weaker than the flood. The water along the wall begins setting north early, ahead of the slack before ebb, so a dive timed to the slack alone meets a building northward current instead of a turn.
+* **Diveable window.** Short. Either slack on a small exchange, best a slack between two weak maximums; on a big exchange the window can close almost as it opens. Before ebb, drop well ahead of slack and swim south first, so the return north rides the ebb as it builds; before flood, swim north first, so the return south rides the flood. The current along the walls does not pour down them, so a diver caught by it can climb the ledges and drift back toward the entry. Watch for the turn and be ready to end the dive early: once the water runs there is nowhere to shelter but the beach. Whirlpools and swirling water off the beach and beside the pier mean the current is still running; wait on the beach until the surface settles.
 
 ## Wind
 
@@ -68,7 +48,6 @@ The beach faces east-southeast across the south end of the Narrows toward Day Is
 * **Short fetch.** East-northeast through south-southeast (ENE-SSE), onshore over 1.7 to 2.1 km across to Day Island.
 * **Mixed.** South-southwest (SSW), cross-shore over 7.8 km.
 * **Fine.** Southwest clockwise through north-northwest (SW-NNW), offshore off the island behind the park, and north-northeast through northeast (NNE-NE), cross-shore under 4.2 km.
-* **Wind against current.** South through southwest (S-SW), over 1.2 to 7.8 km, against the south-setting flood, or north-northeast through east-northeast (NNE-ENE), over 2.1 to 4.2 km, against the north-setting ebb, stacks a steep chop along the shore. Both make the end of the dive at the surface rough when it is already late in the window.
 
 ## Depth and tide
 

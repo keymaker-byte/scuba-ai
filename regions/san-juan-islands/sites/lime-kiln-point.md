@@ -30,34 +30,14 @@ Shore dive below the Lime Kiln lighthouse in Lime Kiln Point State Park, on the 
 
 Haro Strait's tidal stream runs along the point, setting north-northwest on the flood and south-southeast on the ebb, and the point bends and splits it close inshore.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA South Haro Strait, south of Lime Kiln Light (PUG1724), about 2.0 km south-southwest |
-| **Recommended bin** | Bin 31, at 32.6 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | northwest, 310° |
-| **Station ebb axis** | south-southeast, 147° |
-| **Site flood set** | north-northwest, 330° |
-| **Site ebb set** | south-southeast, 150° |
-
-* **Flood.** Sets north-northwest along the wall, past the lighthouse toward the north cove. Daily peaks at the station run 0.49 to 1.12 m/s over 30 days.
-* **Ebb.** Sets south-southeast along the wall, past the cleft and on toward Deadman Bay. Daily peaks at the station run 0.37 to 1.55 m/s over 30 days.
-* **Diveable window.** Both slacks serve. Under 0.25 m/s at the station, the slack before flood typically runs 80 to 100 minutes and the slack before ebb 70 to 85 minutes, the shortest about 35 minutes between two strong exchanges. Where a weak exchange falls between two slacks, the current can stay under the threshold for 4 hours or more. A slack followed by a small exchange gives the most forgiving dive.
-* **Station timing.** Slack at the point keeps its own timing against the station, arriving well before the predicted slack on some days and well after it on others, and on a weak exchange the point can run an ebb while the station predicts a flood. Look at the water and the kelp before entering to confirm the current has slowed.
+* **Type.** Tidal.
+* **Flood.** Sets north-northwest along the wall, past the lighthouse toward the north cove.
+* **Ebb.** Sets south-southeast along the wall, past the cleft and on toward Deadman Bay.
+* **Diveable window.** Both slacks serve, shortest between two strong exchanges. Where a weak exchange falls between two slacks, the current can stay gentle for hours. A slack followed by a small exchange gives the most forgiving dive.
+* **Its own timing.** Slack at the point keeps its own timing, arriving well before the predicted slack on some days and well after it on others, and on a weak exchange the point can run an ebb while the prediction shows a flood. Look at the water and the kelp before entering to confirm the current has slowed.
 * **Close inshore.** At diving depth the current runs parallel to the shore. In the kelp off the point it can run opposite to the main channel, and it can change direction during a dive and differ with depth. On the ebb, the south-setting stream strikes the point, turns away from shore and swirls clockwise in the small bay south of it.
 * **Route on slack before flood.** Enter at the cleft and work the wall south of the lighthouse first, so the rising flood carries the return north-northwest to the cleft, or past the lighthouse to the north cove.
 * **Route on slack before ebb.** Enter at the north cove, or head north from the cleft first, so the rising ebb carries the return south-southeast to the cleft.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Discovery Island, 3.3 miles northeast of, 48°27′ N, 123°09′ W, about 7.3 km south |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 1 hour 16 minutes after the reference |
-| **Slack before ebb** | 59 minutes after the reference |
 
 ## Wind
 
@@ -69,7 +49,6 @@ Legacy correction:
 * **Bad.** South through west-northwest (S-WNW), onshore over 11.6 to more than 30 km of open water across Haro Strait and up from the Strait of Juan de Fuca, driving wind waves straight onto the cleft and the rocks of the entry.
 * **Mixed.** South-southeast (SSE), along the shore over more than 30 km, and northwest (NW), along the shore over 12.1 km, each running swell past the entry.
 * **Fine.** North-northwest clockwise through southeast (NNW-SE), blocked by the island itself, with 690 m of fetch at most.
-* **Wind against current.** West-northwest through northwest (WNW-NW), over 12.1 to 17.0 km, blows against the north-northwest flood set. South-southeast through south (SSE-S), over more than 30 km, blows against the south-southeast ebb set.
 
 ## Depth and tide
 
@@ -109,7 +88,7 @@ The site swings about 2.2 m between high and low water on a typical day, and up 
 
 ## Hazards
 
-* **Current.** The stream sweeps the point at up to 1.55 m/s on the largest ebbs at the station, and close inshore it can run against the channel and change with depth. Dive at slack before a small exchange, and confirm the water has slowed before entering.
+* **Current.** The stream sweeps the point hard on the largest ebbs, and close inshore it can run against the channel and change with depth. Dive at slack before a small exchange, and confirm the water has slowed before entering.
 * **Depth.** The wall drops past 40 m within about 150 m of shore, below the 34 m maximum operating depth of EAN32 at 1.4 bar. Watch depth and no-decompression time closely on the descent.
 * **Entry and exit.** The cleft is steep, slick and lined with sharp rock, and the walk to it is long and uphill on the return. Enter only when the swell is small.
 * **Wind and wakes.** Wind from south through west-northwest drives waves onto the entry. Large ships in Haro Strait raise short-lived rollers on the rocks.

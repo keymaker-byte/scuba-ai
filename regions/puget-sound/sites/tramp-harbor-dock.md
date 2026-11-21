@@ -26,21 +26,10 @@ Shore dive beside a former oil dock turned public fishing pier on the east side 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Dolphin Point, 1.3 miles East of (PUG1520), about 9.8 km north, mid East Passage |
-| **Recommended bin** | bin 35, at 14.5 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south, 186° |
-| **Station ebb axis** | north-northwest, 343° |
-| **Site flood set** | southeast, 130°, a few centimetres per second |
-| **Site ebb set** | northwest, 310°, likewise weak |
-
-* **Flood.** Sets south down East Passage at the station, with daily peaks of 0.19 to 0.42 m/s there over 30 days. Inside Tramp Harbor the tidal current is only a few centimetres per second.
-* **Ebb.** Sets north-northwest up East Passage at the station, with daily peaks of 0.12 to 0.25 m/s there over the same 30 days. The harbor stays essentially still.
-* **Diveable window.** Any time of the tide. The harbor sits out of the main flow of East Passage, so its weak current has no meaningful slack to time; the station gives only the state of the open passage beyond the harbor mouth, where current stays under 0.25 m/s for about 1 to 18 hours at a time.
+* **Type.** Tidal.
+* **Flood.** Sets south down East Passage offshore. Inside Tramp Harbor the tidal current barely moves.
+* **Ebb.** Sets north-northwest up East Passage offshore. The harbor stays essentially still.
+* **Diveable window.** Any time of the tide. The harbor sits out of the main flow of East Passage, so its weak current has no meaningful slack to time.
 
 ## Wind
 
@@ -54,7 +43,6 @@ The beach faces east-northeast across Tramp Harbor into East Passage, with the i
 * **Bad.** North through east-southeast (N-ESE). North winds blow down the length of East Passage straight into the harbor over the longest fetch, building chop on the entry and the surface swim; northeast through east-southeast cross East Passage from the Des Moines shore, onshore over 5.8 to 8.9 km.
 * **Short fetch.** Southeast (SE), onshore over 2.1 km.
 * **Fine.** South-southeast clockwise through north-northwest (SSE-NNW), offshore and blocked by the island, or cross-shore over 1.3 km or less; south winds are largely blocked by Maury Island.
-* **Wind against current.** Inside the harbor the current is too weak to stack against a wind. Out in East Passage, a north wind against the north setting ebb stacks up steep chop at the harbor mouth.
 
 ## Depth and tide
 

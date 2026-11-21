@@ -113,31 +113,11 @@ The `#` column is the Edmonds to Kingston ferry lane, immediately west of the De
 
 Current is a secondary factor here and the site is genuinely mild for the Sound, but it does run, driven by wind and by the ferry's propeller wash as much as by the tide. The real concern is not a fierce channel but being set sideways toward the ferry lane without noticing.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Possession Sound Entrance (PUG1605), about 9.5 km north, mid-channel; the park sits where the main flow of Puget Sound splits, part north into Possession Sound and part continuing south through the main basin |
-| **Recommended bin** | bin 40, at 18 m, the shallowest published; the station sits in deep water off the site |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | northeast, 31° |
-| **Station ebb axis** | south-southwest, 204° |
-| **Site flood set** | northeast, 41° |
-| **Site ebb set** | southwest, 221°, towards the ferry |
-
-* **Flood.** Sets northeast, both at the station and at the park, off the ferry slip rather than onto it. Modest, generally well under 0.5 m/s on ordinary exchanges. Daily peaks run 0.13 to 0.37 m/s at the station over 30 days.
-* **Ebb.** Sets southwest, both at the station and at the park, with the component that carries toward the ferry slip; this is the phase to watch for the ferry hazard. Usually under about 0.6 m/s, reaching around 1 m/s on a large spring exchange. Daily peaks run 0.10 to 0.32 m/s at the station over the same 30 days.
-* **Local current.** The flow in the park is lighter than at the station and is also shaped by wind and by the ferry's propeller wash at the adjacent slip, so it can run when the tide is nominally slack and set across your path rather than along the axis above. About 0.5 m/s is comfortable; twice that is workable but no fun. A small exchange, under roughly 1.2 m, leaves almost no current.
-* **Diveable window.** The window is wide because the current is weak. The station's slack runs anywhere from close to the park's own turn to a little over an hour behind it. Current at the station stays under 0.25 m/s for about 1.5 to 13 hours at a time. High slack is preferred, for an easier entry across a covered beach and cleaner, less silt-laden water. A big exchange or a very low tide is what raises the risk of being carried toward the ferry, so those are the days to be conservative. Surface current-indicator buoys with tails at the site show the set direction.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Edmonds, 2.7 miles WSW of, 47°48.38′ N, 122°26.67′ W, about 4.6 km west-southwest |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 44 minutes after the reference |
-| **Slack before ebb** | 13 minutes after the reference |
+* **Type.** Tidal.
+* **Flood.** Sets northeast in the park, off the ferry slip rather than onto it, and stays modest on ordinary exchanges.
+* **Ebb.** Sets southwest, with the component that carries toward the ferry slip; this is the phase to watch for the ferry hazard. Usually moderate, and brisk on a large spring exchange.
+* **Local current.** The flow in the park is light and is also shaped by wind and by the ferry's propeller wash at the adjacent slip, so it can run when the tide is nominally slack and set across your path rather than along the axis above. A moderate current is comfortable and a brisk one workable but no fun. A small exchange leaves almost no current.
+* **Diveable window.** The window is wide because the current is weak. High slack is preferred, for an easier entry across a covered beach and cleaner, less silt-laden water. A big exchange or a very low tide is what raises the risk of being carried toward the ferry, so those are the days to be conservative. Surface current-indicator buoys with tails at the site show the set direction.
 
 ## Wind
 
@@ -151,7 +131,6 @@ The beach faces roughly west to northwest, onto the open main basin of Puget Sou
 * **Bad.** West clockwise through north-northeast (W-NNE), onshore over 7.3 to 20.9 km, with open fetch across the basin, builds chop and surge on the entry and swell over the shallow structures. A strong onshore wind is felt as surge close to shore even when the deeper water is calmer. A rock breakwater just north of the entry gives the beach some shelter from a north wind, but not from northwest.
 * **Mixed.** Southwest through west-southwest (SW-WSW), cross-shore over 8.8 to 9.1 km.
 * **Fine.** Northeast clockwise through south-southwest (NE-SSW): offshore from east through south-southwest, and cross-shore under 1.6 km from northeast and east-northeast, leave the entry sheltered.
-* **Wind against current.** Southwest through west-southwest (SW-WSW), over 8.8 to 9.1 km, against the ebb steepens the chop; north through northeast (N-NE), over 1.6 to 14.5 km, against the flood. The greater problem here is that any wind adds its own surface drift toward the ferry lane and stirs silt in the shallows, worsening an already marginal viz.
 
 ## Depth and tide
 

@@ -34,31 +34,11 @@ Shore dive at the end of Kamus Drive on the southwest shore of Fox Island, at th
 
 The beach sits out of the main stream between the Tacoma Narrows and Carr Inlet, and on most tides the water over the slope and the ledge barely moves.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Gibson Point, 0.8 miles East of (PUG1531), about 4.0 km southeast by water, around Gibson Point |
-| **Recommended bin** | bin 18, at 9.5 m; bin 13 at 24.5 m slacks from about 15 minutes earlier to about 30 minutes later |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south-southwest, 204° |
-| **Station ebb axis** | northeast, 42° |
-| **Site flood set** | northwest, 319°, along the shore toward Carr Inlet |
-| **Site ebb set** | southeast, 139°, along the shore toward Gibson Point |
-
-* **Flood.** Sets northwest along the shore into Carr Inlet, weak at the site. At the station it is the stronger of the two, with daily peaks of 0.97 to 1.84 m/s over 30 days.
-* **Ebb.** Sets southeast along the shore toward Gibson Point, also weak at the site. At the station, daily peaks run 0.59 to 1.34 m/s over the same 30 days.
-* **Diveable window.** Most tides are diveable away from slack, and the site stays diveable well into a running tide. For the stillest water, dive near either slack; a typical window under 0.25 m/s at the station runs about 50 to 70 minutes, narrower on a big exchange.
+* **Type.** Tidal.
+* **Flood.** Sets northwest along the shore into Carr Inlet, weak at the site.
+* **Ebb.** Sets southeast along the shore toward Gibson Point, also weak at the site.
+* **Diveable window.** Most tides are diveable away from slack, and the site stays diveable well into a running tide. For the stillest water, dive near either slack, narrower on a big exchange.
 * **Unexpected current.** On some days a current runs along the ledge strong enough to need a hand-over-hand pull along the bottom, independent of the predicted current, and strongest at the southeast end of the ledge. A mild set along the slope can also persist long after slack. Watch the sand and particles in the water on the way down, and turn the dive back toward the entry if the water starts to move.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Gibson Point, 0.8 mile east of, 47.2180, -122.5895, about 4.0 km southeast of the site |
-| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
-| **Slack before flood** | 28 minutes after the reference |
-| **Slack before ebb** | 8 minutes after the reference |
 
 ## Wind
 
@@ -73,7 +53,6 @@ The beach faces west-southwest across the mouth of Carr Inlet toward McNeil Isla
 * **Short fetch.** South-southwest through west-southwest (SSW-WSW), onshore over 3.0 to 3.8 km across to McNeil Island, enough to build a chop on the entry.
 * **Mixed.** South-southeast (SSE), cross-shore over 7.7 km, and northwest (NW), cross-shore over 11.4 km down Carr Inlet, each running a swell along the beach past the entry.
 * **Fine.** North-northwest clockwise through southeast (NNW-SE), offshore off the island behind the beach, or cross-shore over 1.1 km or less.
-* **Wind against current.** West-northwest through northwest (WNW-NW), over 9.4 to 11.4 km, blows against the northwest-setting flood, and southeast through south (SE-S), over 1.1 to 8.1 km, against the southeast-setting ebb. The water at the site usually runs too slowly to stack a chop of its own; it matters on the days the current picks up.
 
 ## Depth and tide
 

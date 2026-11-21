@@ -48,13 +48,14 @@ Read both of these region files in full before anything else.
 ## 3. Verify the coordinate and write the site JSON
 
 - **Depth.** Check the seabed depth at the coordinate with the site conventions' Depth tool. If it is too deep or off the divable slope, walk it toward shore and re-check until its depth matches what the sources describe as dived.
-- **Site JSON.** Once the coordinate holds, write `<slug>.json` beside where the site file will go, for every site in every region: `lat` and `lon` are the Coordinates row, `tz` is the site's IANA time zone.
+- **Site JSON.** Once the coordinate holds, write `<slug>.json` beside where the site file will go, for every site in every region: `lat` and `lon` are the coordinate, `tz` is the site's IANA time zone, and `seabed_m` is the seabed depth there in metres, read with the Depth tool and expressed as the site conventions' Depth section sets it (below the region's datum, or a plain observed depth where it has none). The Coordinates row later states these same figures; the tools read them from the JSON.
 
   ```json
   {
     "lat": <lat>,
     "lon": <lon>,
-    "tz": "<IANA zone>"
+    "tz": "<IANA zone>",
+    "seabed_m": <depth>
   }
   ```
   
@@ -64,7 +65,7 @@ Three passes, each finished before the next starts.
 
 ### 4.1 Research tools
 
-Run every tool under the site conventions' Region Specific Research Tools. Done when each has produced its result or been reported as failed.
+Run every tool the site conventions' Region Specific Research section names. Done when each has produced its result or been reported as failed.
 
 ### 4.2 Research sources
 
@@ -91,7 +92,8 @@ Produce every depth figure by the site conventions' Depth section: the seabed de
 Produce every current figure by the site conventions' Current section.
 
 - **Type.** As the region sets it, unless a specific site water behaves differently.
-- **Local behaviour.** An eddy, a set along a wall, a turn in the shallows. Figures come from the region's method; behaviour may come from community sources.
+- **In words.** The Current section describes the water from the research and the log: where it pushes, in compass points, and how it feels, in terms like ripping, steady or gentle.
+- **Local behaviour.** An eddy, a set along a wall, a turn in the shallows, described in words.
 - **Observation outranks the model.** A behaviour the existing file or the research describes from the water (a drift that ignores the tide, a set no tool shows) stays in the prose even where a tool disagrees. Report the disagreement in chat; never resolve it by dropping the observation.
 - **Missing figure.** Written as not established, and reported in chat.
 
@@ -113,7 +115,6 @@ The thresholds come from fetch-limited wind wave growth (JONSWAP): at the wind t
 - **Sectors.** Adjacent directions in the same class form one sector, named clockwise end to end.
 - **Calm only.** A site research shows dives only in calm whatever the direction (an exposed windward coast, a kite beach) classes every direction Bad, with the reason.
 - **Local knowledge.** Research can move a direction up a class (Fine to Short fetch or Bad, Short fetch to Bad), never down, with the reason and a source: funnelling along a narrows or valley lake, swell wrapping a point. A wind note the existing file carries from observation stays in its bullet even where the class doesn't move.
-- **Wind against current.** Take the set directions from the Current section (the site flood and ebb sets, or the usual set). An opposing wind blows from where the water flows toward, within 45° either side; name each one with 1 km or more of fetch and the set it opposes. A peak current under the region's threshold is too weak to stack against wind. Current type none: the water holds still, so wind alone sets the surface. Current type wind driven: leave the bullet out, since the wind sets the current itself. A tidal Current section with no set direction is a gap: stop and report it.
 
 ## 8. Write the file
 
@@ -122,7 +123,7 @@ Write the figures from steps 5 to 7 and the research from step 4 into the templa
 - **Type** is exactly Shore or Boat. Shore is anything reachable from land, however long the swim; Boat is only for no shore access at all. Swim distance, restrictions and guided-only rules go in Getting there.
 - **Skill level** is the diver's own call, made from the depth, current, entry and hazards the file describes; the file carries no rating of it. Prose may still note what a stretch of the site asks of a diver, as a hint.
 - **Air fills and dive shops** go in the region file. Facilities names only what is physically at the site.
-- **Every fact belongs**, whether from public data or repeated dives: coordinates, depths, station and bin, offset, current behaviour, entry, hazards, temperatures, life.
+- **Every fact belongs**, whether from public data or repeated dives: coordinates, depths, current sets and speeds, an observed offset, current behaviour, entry, hazards, temperatures, life.
 
 ## 9. Bookkeeping
 
@@ -142,9 +143,9 @@ Write the figures from steps 5 to 7 and the research from step 4 into the templa
   }
   ```
 
-- **Site JSON.** The file step 3 wrote, with every attachment the site conventions name.
+- **Site JSON.** The file step 3 wrote, with every attachment the site conventions name. Its `lat`, `lon` and `seabed_m` read exactly as the Coordinates row states them.
 
-Keep the row, the map entry and the site JSON current whenever the site's coordinates, name, type, parking or entry change.
+Keep the row, the map entry and the site JSON current whenever the site's coordinates, seabed depth, name, type, parking or entry change.
 
 ## 10. Independent audit
 
@@ -152,7 +153,7 @@ Launch a fresh `general-purpose` agent with the Agent tool. Give it the site fil
 
 - **Conventions.** `CLAUDE.md`'s Writing style, Units, Time and Depth, line by line over the site file.
 - **Structure.** The site file against the template: every section in order, every required row and bullet present, each in its placeholder's format. Type reads exactly Shore or Boat, and Facilities names only what is physically at the site.
-- **Depth, current and wind.** A figure the file lacks reads as not established. Every Bad, Short fetch and Mixed sector is named clockwise with its shorthand in parentheses and its fetch range. The wind against current bullet names a set the file's own Current section gives.
+- **Depth, current and wind.** A figure the file lacks reads as not established. Every Bad, Short fetch and Mixed sector is named clockwise with its shorthand in parentheses and its fetch range.
 - **Consistency.** A fact stated twice (a depth, a distance, a bearing, a current strength) reads the same everywhere in the site file.
 - **Claims to check.** A sentence that reads as one anecdote stated as fact, or a fact that looks carried over from a neighbouring site.
 
@@ -213,43 +214,14 @@ Optional, for a site with a mapped line or trail: a short description of how it 
 
 Optional sentence on what dominates the current. Tidal and wind driven only.
 
-| | |
-|---|---|
-| **Current type** | Tidal, Wind driven, or None |
-| **Governing station** | Tidal: name, ID, and distance |
-| **Recommended bin** | Tidal: number and depth |
-| **Observed offset, slack before flood** | Tidal: minutes before or after the station, by the region's observed offset rule, or "Not established; slack should be confirmed in the water" |
-| **Observed offset, slack before ebb** | Tidal: the same, for slack before ebb |
-| **Station flood axis** | Tidal: compass and degrees |
-| **Station ebb axis** | Tidal: compass and degrees |
-| **Site flood set** | Tidal: the region's typical set at the dive area, compass and degrees, or "As the station" |
-| **Site ebb set** | Tidal: the region's typical set at the dive area, compass and degrees, or "As the station" |
-| **Usual set** | Wind driven: compass and degrees |
-| **Typical speed** | Wind driven: range in m/s |
-
-* **Flood.** Tidal: where it sets locally, and its daily peak speed range over the region's span, in m/s.
-* **Ebb.** Tidal: where it sets locally, and its daily peak speed range over the region's span, in m/s.
-* **Diveable window.** Tidal: which slack, its typical length under the region's threshold, and what narrows it.
+* **Type.** Tidal, Wind driven, or None.
+* **Flood.** Tidal: where it sets locally and how strongly it runs.
+* **Ebb.** Tidal: the same, for the ebb.
+* **Diveable window.** Tidal: which slack, how long it holds, and what narrows it.
+* **Observed offset.** Tidal, only once established by the current tool's own method: minutes before or after the prediction, for slack before flood and slack before ebb.
+* **Usual set.** Wind driven: where it sets and how strongly it runs.
 * **Drivers.** Wind driven: the winds or seasons that strengthen or reverse the set.
 * **Topic.** Further local behaviour, each led by a bold topic.
-
-Optional, tidal only: "Subordinate station:"
-
-| | |
-|---|---|
-| **Subordinate station** | Name, ID, position, and distance and direction from the dive area |
-| **Subordinate reference** | The reference station and bin NOAA publishes the corrections against: name, ID and bin |
-| **Slack before flood** | Minutes before or after the reference, as published |
-| **Slack before ebb** | Minutes before or after the reference, as published |
-
-Optional, tidal only: "Legacy correction:"
-
-| | |
-|---|---|
-| **Legacy station** | Name, position, and distance and direction from the site, or "None; the reference is used directly" |
-| **Legacy reference** | The reference station the correction was published against: name and ID |
-| **Slack before flood** | Minutes before or after the reference, as published |
-| **Slack before ebb** | Minutes before or after the reference, as published |
 
 ## Wind
 
@@ -264,7 +236,6 @@ Optional prose on the shoreline's shape where the bearing alone doesn't carry it
 * **Short fetch.** Each Short fetch sector, its fetch range, and why it spoils the entry.
 * **Mixed.** Each Mixed sector, its fetch range, and the swell it runs past the entry.
 * **Fine.** The Fine directions and what blocks them (a bluff, a headland, a breakwater).
-* **Wind against current.** Tidal or none only: each opposing wind and the set it opposes, or that the current is too weak to stack, or that the water holds still.
 
 ## Depth and tide
 

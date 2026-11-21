@@ -33,31 +33,11 @@ Shore dive off the Maplewild Avenue street-end beach on the south side of Three 
 
 The current runs strong along this shore, and the shoreline set runs west toward the point on both exchanges.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Dolphin Point, 1.3 miles East of (PUG1520), about 6.7 km north-northwest, mid East Passage |
-| **Recommended bin** | bin 35, at 14.5 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south, 186° |
-| **Station ebb axis** | north-northwest, 343° |
-| **Site flood set** | southeast, 138° |
-| **Site ebb set** | northwest, 318° |
-
-* **Flood.** Sets southeast down East Passage off the slope, while along the shore the water turns counterclockwise and runs west toward the point. Daily peaks of 0.19 to 0.42 m/s at the station over 30 days.
-* **Ebb.** Sets northwest off the slope, and along the shore it also runs west toward the point. At the site the ebb runs noticeably stronger than a flood of comparable size. Daily peaks of 0.12 to 0.25 m/s at the station over the same 30 days.
-* **Diveable window.** Slack before the flood and a mild flood are the calmer times here, and slack before the flood also brings the best visibility. Current at the station stays under 0.25 m/s for about 10 to 23 hours at a time, broken by 1 to 4 hours around the stronger daily floods.
+* **Type.** Tidal.
+* **Flood.** Sets southeast down East Passage off the slope, while along the shore the water turns counterclockwise and runs west toward the point.
+* **Ebb.** Sets northwest off the slope, and along the shore it also runs west toward the point. At the site the ebb runs noticeably stronger than a flood of comparable size.
+* **Diveable window.** Slack before the flood and a mild flood are the calmer times here, and slack before the flood also brings the best visibility. The current stays light for most of the day, broken by a stretch around the stronger daily floods.
 * **Where the current sits.** It runs strongest near the surface and in the shallows, pushing west toward the point.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Alki Point, 0.3 mile west of, 47°34.53′ N, 122°25.68′ W, about 14.5 km north-northwest |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 36 minutes before the reference |
-| **Slack before ebb** | 13 minutes before the reference |
 
 ## Wind
 
@@ -71,7 +51,6 @@ The beach faces due south across East Passage toward Vashon Island, with the poi
 * **Bad.** South-southeast through southwest (SSE-SW), onshore over 5.9 to 10.8 km of open water down East Passage and across to Vashon, which builds chop on the entry.
 * **Short fetch.** East-southeast through southeast (ESE-SE), onshore over 1.7 to 2.9 km.
 * **Fine.** West-southwest clockwise through east (WSW-E): offshore from west-northwest through northeast, west-northwest over 4.5 km of water past the point and the rest over 140 m or less off the land behind the beach, and cross-shore over 4.8 km or less from west-southwest and west, and 380 m or less from east-northeast and east.
-* **Wind against current.** East-southeast through south (ESE-S) blows against the southeast setting flood, and west-northwest (WNW), over 4.5 km, against the northwest setting ebb; either steepens the surface chop.
 
 ## Depth and tide
 

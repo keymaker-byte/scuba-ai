@@ -31,19 +31,8 @@ Shore dive at Seacrest Park on the West Seattle waterfront, also known as Alki C
 
 Current is not a planning factor here. The cove sits deep inside Elliott Bay, away from the main tidal streams, and stays diveable through the whole cycle on any exchange; pick the entry time for tide height, boat traffic and daylight rather than slack.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Harbor Island West (PUG1507), about 1.5 km east-southeast at the mouth of the West Waterway |
-| **Recommended bin** | bin 9, at 6.6 m, the deepest published |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south, 177° |
-| **Station ebb axis** | north, 356° |
-| **Site flood set** | south-southwest, 203° |
-| **Site ebb set** | north-northeast, 23° |
-
-* **Strength.** Weak throughout. Station peaks stay near or under 0.2 m/s even on large exchanges, and the depth-averaged flow at the cove itself runs weaker still, so whole days pass inside a 0.25 m/s window. Daily peaks at the station run 0.09 to 0.22 m/s on the flood and 0.07 to 0.15 m/s on the ebb over 30 days.
+* **Type.** Tidal.
+* **Strength.** Weak throughout, even on large exchanges, and the flow at the cove itself runs weaker still, so whole days pass without a current worth timing.
 * **Set.** What little stream there is runs along the shore on a roughly north-northeast to south-southwest axis, the flood side setting toward the Duwamish waterways.
 * **Diveable window.** Any tide. Ship wakes and wind chop move more water at the entry than the tide does.
 
@@ -59,7 +48,6 @@ The beach faces northeast across Elliott Bay. With almost no tidal stream, the r
 * **Short fetch.** North through east-southeast (N-ESE), onshore over 1.7 to 4.8 km across the bay onto the entry, which builds chop on the beach; a northerly has the longest fetch, in through the bay mouth.
 * **Mixed.** North-northwest (NNW), cross-shore over 5.5 km down the Sound.
 * **Fine.** Southeast clockwise through northwest (SE-NW): offshore from south through west-northwest, blocked by the West Seattle hill behind the park, and cross-shore under 1 km from southeast, south-southeast and northwest. The cove is often calm when the beach around the point is blown out, which makes it the standing bad-weather alternative.
-* **Wind against current.** Not a factor; the current is too weak to stack against any wind.
 
 ## Depth and tide
 

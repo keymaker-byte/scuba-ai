@@ -29,39 +29,10 @@ Shore dive on the low, rocky point at the northwest corner of Washington Park, a
 
 The point is current sensitive: missing the window by even a little brings on current strong enough to force a dive to turn back well short of its target depth.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Belle Rock Light, east of (PUG1729), about 2.2 km west |
-| **Recommended bin** | bin 15, at 19.0 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | north-northeast, 15° |
-| **Station ebb axis** | south-southwest, 211° |
-| **Site flood set** | north-northeast, 24° |
-| **Site ebb set** | south-southwest, 204° |
-
-* **Flood.** Sets north-northeast, rounding Green Point out of the bay and into the main channel toward Rosario Strait, with daily peaks of 1.01 to 1.76 m/s at the station over 30 days.
-* **Ebb.** Sets south past the point, then bends into the shallow bay off West Beach, curling counterclockwise across the beach shallows before flowing back out past Green Point. Daily peaks run 0.37 to 2.25 m/s at the station over the same 30 days.
-* **Diveable window.** A typical window under 0.25 m/s at the station runs about 35 to 80 minutes. Plan tight to slack; the point itself follows the full current cycle. The inner cove and West Beach shallows run comparatively sheltered on a small exchange, but that shelter does not extend out to the point.
-
-Subordinate station:
-
-| | |
-|---|---|
-| **Subordinate station** | Green Point, 0.8 mile northwest of (PCT2026), 48°30.28′ N, 122°42.37′ W, about 0.6 km northwest |
-| **Subordinate reference** | Belle Rock Light, east of (PUG1729), bin 21 |
-| **Slack before flood** | 43 minutes before the reference |
-| **Slack before ebb** | 34 minutes before the reference |
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Green Point, 0.8 mile northwest of, 48°30.28′ N, 122°42.37′ W, about 0.6 km northwest |
-| **Legacy reference** | Rosario Strait (PCT1996) |
-| **Slack before flood** | 55 minutes before the reference |
-| **Slack before ebb** | 8 minutes before the reference |
+* **Type.** Tidal.
+* **Flood.** Sets north-northeast, rounding Green Point out of the bay and into the main channel toward Rosario Strait.
+* **Ebb.** Sets south past the point, then bends into the shallow bay off West Beach, curling counterclockwise across the beach shallows before flowing back out past Green Point.
+* **Diveable window.** Short. Plan tight to slack; the point itself follows the full current cycle. The inner cove and West Beach shallows run comparatively sheltered on a small exchange, but that shelter does not extend out to the point.
 
 ## Wind
 
@@ -76,7 +47,6 @@ Green Point faces open water to the north and northwest, toward Burrows Bay and 
 * **Short fetch.** North (N), onshore over 4.8 km.
 * **Mixed.** West-southwest through west (WSW-W), cross-shore over 6.9 to 9.1 km.
 * **Fine.** East-northeast clockwise through southwest (ENE-SW): offshore from east-southeast through southwest, sheltered by the park's own peninsula, and cross-shore under 1 km from east-northeast and east.
-* **Wind against current.** North through northeast (N-NE), over 4.8 to 9.6 km, already the worst fetch direction here, blows against the flood, which sets north-northeast out of the bay; that combination raises the steepest water right where the dive rounds the point. South-southwest through west-southwest (SSW-WSW), over 9.1 km to more than 30 km, opposes the ebb.
 
 ## Depth and tide
 

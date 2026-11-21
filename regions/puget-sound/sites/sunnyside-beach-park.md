@@ -32,32 +32,11 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Steilacoom, 0.8 miles North of (PUG1532), about 1.2 km west-northwest |
-| **Recommended bin** | bin 16, at 13.9 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | southwest, 215° |
-| **Station ebb axis** | northeast, 051° |
-| **Site flood set** | northeast, 057°, along the beach |
-| **Site ebb set** | southwest, 237°, along the beach |
-
-* **The site's own water.** The beach sits out of the main stream between the Narrows and Nisqually Reach, and the water over the slope and the pipeline moves slowly. Along this shore it sets parallel to the beach, northeast and southwest. On most tides it is close to still, and on a large exchange it builds to a mild, noticeable current around the station's maximum.
-* **Ebb.** Inshore, the ebb runs opposite to the channel: while the main stream sets north toward the Narrows, the water along the beach sets south. At depth on an ebb it can also set gently offshore. Daily peaks run 0.11 to 0.28 m/s at the station over 30 days.
-* **Flood.** Early in the flood the inshore water keeps setting south, then it turns and runs north along the beach for the rest of the flood. The inshore current can switch direction more than once during a dive. Daily peaks run 0.09 to 0.24 m/s at the station over the same 30 days.
-* **Diveable window.** Most tides. Current at the station stays under 0.25 m/s for about 1.5 to 21 hours at a time. On a big exchange, dive close to the station's slack for the stillest water and the best visibility; the bottom silts up as the flood builds toward its maximum.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Sunnyside Beach Park, a correction for the site itself, published without a station number or position |
-| **Legacy reference** | The Narrows, north end (midstream) (PCT1766) |
-| **Slack before flood** | 20 minutes after the reference |
-| **Reversal of flood current** | 1 hour 38 minutes after the reference's slack before flood |
-| **Slack before ebb** | 21 minutes after the reference |
+* **Type.** Tidal.
+* **The site's own water.** The beach sits out of the main stream between the Narrows and Nisqually Reach, and the water over the slope and the pipeline moves slowly. Along this shore it sets parallel to the beach, northeast and southwest. On most tides it is close to still, and on a large exchange it builds to a mild, noticeable current around the peak of the tide.
+* **Ebb.** Inshore, the ebb runs opposite to the channel: while the main stream sets north toward the Narrows, the water along the beach sets south. At depth on an ebb it can also set gently offshore.
+* **Flood.** Early in the flood the inshore water keeps setting south, then it turns and runs north along the beach for the rest of the flood. The inshore current can switch direction more than once during a dive.
+* **Diveable window.** Most tides. On a big exchange, dive close to slack for the stillest water and the best visibility; the bottom silts up as the flood builds toward its maximum.
 
 ## Wind
 
@@ -70,7 +49,6 @@ The beach faces west-northwest across the South Sound toward Fox Island and Ketr
 
 * **Bad.** Southwest through north (SW-N), onshore over 5.1 to 17.2 km from west through north, the strong northerlies coming down out of the Narrows. Southwesterlies come up Nisqually Reach over a long fetch and push chop onto the beach.
 * **Fine.** North-northeast clockwise through south-southwest (NNE-SSW), offshore off the bluff behind the park, or cross-shore over 1.9 km or less.
-* **Wind against current.** West-southwest through west (WSW-W) blows against the ebb, and north-northeast (NNE) against the flood. The inshore current is weak and raises no chop of its own; the concern is offshore in the main stream.
 
 ## Depth and tide
 

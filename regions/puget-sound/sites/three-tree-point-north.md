@@ -29,31 +29,11 @@ The reef is spread across a broad area and is easy to miss piecemeal, so most di
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Dolphin Point, 1.3 miles East of (PUG1520), about 6.3 km north-northwest, mid East Passage |
-| **Recommended bin** | bin 28, at 42.5 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | south, 184° |
-| **Station ebb axis** | north-northwest, 343° |
-| **Site flood set** | south, 176°, wrapping southwest toward the point along the shore |
-| **Site ebb set** | north, 356° |
-
-* **Flood.** In the channel the flood sets south down East Passage; along the north side of the point it wraps clockwise and runs southwest toward the point, parallel to shore. The flood is the stronger of the two exchanges here, with daily peaks of 0.14 to 0.44 m/s at the station over 30 days.
-* **Ebb.** The channel ebb sets north-northwest, and back-eddies form off the point. Because the ebb is the gentler exchange, the slack before the ebb and the ebb itself are the calmer times to dive. Daily peaks run 0.10 to 0.23 m/s at the station over the same 30 days.
+* **Type.** Tidal.
+* **Flood.** In the channel the flood sets south down East Passage; along the north side of the point it wraps clockwise and runs southwest toward the point, parallel to shore. The flood is the stronger of the two exchanges here.
+* **Ebb.** The channel ebb sets north-northwest, and back-eddies form off the point. Because the ebb is the gentler exchange, the slack before the ebb and the ebb itself are the calmer times to dive.
 * **Where the current sits.** It is usually mild and often unnoticeable at depth, and stronger in the shallows. Staying toward the northeast, junkyard end keeps you out of most of it, and the water builds as you work southwest toward the point. The junkyard is sheltered on an ebb, while the straight-out ground toward the point is best on slack or a mild ebb. Strong current is rare and comes with large tidal exchanges; on a big exchange, enter down-current and drift back to the entry.
-* **Diveable window.** Current at the station stays under 0.25 m/s for about 1 to 19 hours at a time.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Alki Point, 0.3 mile west of, 47°34.53′ N, 122°25.68′ W, about 14.1 km north-northwest |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | 36 minutes before the reference |
-| **Slack before ebb** | 13 minutes before the reference |
+* **Diveable window.** Long on most days.
 
 ## Wind
 
@@ -68,7 +48,6 @@ The beach faces north to northwest across East Passage.
 * **Short fetch.** West (W), onshore over 4.8 km, and north-northeast (NNE), onshore over 3.7 km.
 * **Mixed.** Southwest (SW), cross-shore over 6.2 km.
 * **Fine.** Northeast clockwise through south-southwest (NE-SSW), offshore off the point and the land behind the beach, or cross-shore over 1.3 km or less; and west-southwest (WSW), cross-shore over 4.9 km.
-* **Wind against current.** Northwest through north-northeast (NW-NNE) blows against the north setting ebb and steepens the surface chop. That is the combination to avoid.
 
 ## Depth and tide
 

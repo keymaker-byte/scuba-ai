@@ -29,31 +29,11 @@ Scenic Beach State Park is a gently sloping sand and cobble beach on the east sh
 
 The current here is weak at every stage of the tide, running parallel to the beach along the canal axis, and the site can be dived at any time.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. The nearest station with predictions is Hazel Point (PUG1601), about 7.9 km northeast toward the canal entrance |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | southwest, 232°, up-canal past Seabeck toward the Great Bend |
-| **Site ebb set** | northeast, 52°, down-canal toward the entrance |
-
-* **Flood.** Sets southwest along the beach, filling the canal, peaking around 0.1 m/s depth-averaged.
+* **Type.** Tidal.
+* **Flood.** Sets southwest along the beach, filling the canal, gently.
 * **Ebb.** Sets northeast along the beach toward Misery Point, similar strength.
 * **Slack.** Falls roughly an hour to ninety minutes before the tide extremes at Seabeck, but with peaks this weak the slack time is academic. At most a mild drift is felt on the longer legs.
-* **Diveable window.** All day, any tide stage. Slack timing comes from the site's own ENPAC15 extract, with the Seabeck tide table as a cross-check. Plan around tide height for the entry and boat traffic on the surface rather than around current.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Foulweather Bluff, 47°55.90′ N, 122°38.33′ W, about 35.0 km north-northeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | At the reference |
-| **Slack before ebb** | 15 minutes before the reference |
+* **Diveable window.** All day, any tide stage. Plan around tide height for the entry and boat traffic on the surface rather than around current.
 
 ## Wind
 
@@ -68,7 +48,6 @@ The beach faces north-northwest across Hood Canal toward the Toandos Peninsula a
 * **Short fetch.** North-northeast (NNE), onshore over 4.5 km, and west through west-northwest (W-WNW), onshore over 3.9 to 4.7 km.
 * **Mixed.** Northeast through east-northeast (NE-ENE), over 5.4 to 8.3 km, and west-southwest (WSW), over 10.8 km, cross-shore, running up and down the canal roughly parallel to the shore and building a swell that passes the beach rather than driving into it.
 * **Fine.** East through southwest (E-SW): offshore from east through south-southwest, off the Kitsap high ground behind the park, leaving the beach in the lee, and cross-shore over 3.0 km from the southwest.
-* **Wind against current.** Not a factor; the current is too weak to stack against any wind. The surface state is set by wind alone, so read the point forecast for the beach, not the marine forecast for the canal.
 
 ## Depth and tide
 

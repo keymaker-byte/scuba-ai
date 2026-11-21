@@ -29,31 +29,11 @@ Freshwater Bay opens north onto the Strait of Juan de Fuca between Angeles Point
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Angeles Point current station (PUG1639), about 8.6 km east-northeast, same shore |
-| **Recommended bin** | bin 1, at 18.6 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | east-northeast, 69° |
-| **Station ebb axis** | northwest, 304° |
-| **Site flood set** | southeast, 143° |
-| **Site ebb set** | northwest, 323° |
-
-* **Flood.** Sets southeast, back into the bay past Bachelor Rock, roughly toward the boat ramp, with daily peaks of 0.66 to 1.42 m/s at the station over 30 days.
-* **Ebb.** Sets northwest, out of the bay toward the open strait past Bachelor Rock, close to the station's own ebb axis, with daily peaks of 0.30 to 1.58 m/s at the station over the same 30 days.
+* **Type.** Tidal.
+* **Flood.** Sets southeast, back into the bay past Bachelor Rock, roughly toward the boat ramp.
+* **Ebb.** Sets northwest, out of the bay toward the open strait past Bachelor Rock.
 * **Inside the bay.** The crossing and the reef's inside face stay weak through most of the cycle. The tide is actually felt on the outer wall, beyond the reef.
-* **Diveable window.** Slack to slack, either turn. A typical window under 0.25 m/s at the station runs about 50 to 120 minutes, stretching past 4 hours on a weak neap turn. The rock itself can turn up to about 40 minutes earlier or later than the station, so pad the window accordingly.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Angeles Point, 2.3 miles north of, 48°12′ N, 123°33′ W, about 8.4 km northeast |
-| **Legacy reference** | Juan de Fuca - East (07100), at Race Rocks |
-| **Slack before flood** | 1 hour 22 minutes after the reference |
-| **Slack before ebb** | 32 minutes before the reference |
+* **Diveable window.** Slack to slack, either turn, stretching for hours on a weak neap turn. The rock itself can turn noticeably earlier or later than the prediction, so pad the window accordingly.
 
 ## Wind
 
@@ -68,7 +48,6 @@ The bay opens roughly north onto the strait, between Angeles Point to the east a
 * **Short fetch.** East-southeast (ESE), onshore over 4.2 km, putting chop on the crossing.
 * **Mixed.** Northwest through north-northwest (NW-NNW), cross-shore over 26 km to more than 30 km, which runs a swell past the rock and the entry.
 * **Fine.** Southeast clockwise through west-northwest: cross-shore over 2 km or less from the southeast and south-southeast, and offshore from south through west-northwest, off the land and behind Observatory Point. West is the region's prevailing summer wind, and Bachelor Rock sits right at the edge of the bay, so a westerly can put waves on the rock's west side; the dive works the east side, but check the rock under any west wind.
-* **Wind against current.** Northwest through north (NW-N) against the ebb, over 19 km to more than 30 km, builds the worst chop right where the swim is most exposed, off the outer wall. East-southeast through south (ESE-S) against the flood, over 1.0 to 4.2 km.
 
 ## Depth and tide
 

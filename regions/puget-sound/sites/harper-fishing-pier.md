@@ -28,21 +28,10 @@ Shore dive off the Port of Bremerton's public fishing pier at Harper, on Yukon H
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | NOAA Blake Island, S of (PUG1517), about 2.3 km east |
-| **Recommended bin** | bin 21, at 13.3 m |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | west-southwest, 244° |
-| **Station ebb axis** | north, 350° |
-| **Site flood set** | southeast, 127° |
-| **Site ebb set** | northwest, 307° |
-
-* **Flood.** At the pier the flood sets weakly southeast along the shore of Yukon Harbor, about 125°, while the station out in the channel sets west-southwest, with daily peaks of 0.07 to 0.33 m/s there over 30 days.
-* **Ebb.** Sets weakly northwest along the shore, about 305°. A noticeable northward set along the bottom turns up occasionally on a big ebb; it is manageable by staying low and pulling along the bottom. Daily peaks run 0.47 to 0.99 m/s at the station over the same 30 days.
-* **Diveable window.** The site is not a slack dive. While the station reads under 0.36 m/s there is no current at the pier, and up to about 0.51 m/s there is only a light current that still dives comfortably. The station's ebb dominates and its floods are often barely measurable, so on most days that covers most of the day. Check the station's peak for the day and save the dive for another day only when it runs well past 0.51 m/s. Current at the station stays under 0.25 m/s for about 1.5 to 6 hours at a time.
+* **Type.** Tidal.
+* **Flood.** At the pier the flood sets weakly southeast along the shore of Yukon Harbor, while out in the channel it runs west-southwest.
+* **Ebb.** Sets weakly northwest along the shore. A noticeable northward set along the bottom turns up occasionally on a big ebb; it is manageable by staying low and pulling along the bottom.
+* **Diveable window.** The site is not a slack dive. On most days there is little or no current at the pier, and a light current that still dives comfortably through much of the day. The ebb dominates and the floods are often barely felt; save the dive for another day only on a big ebb.
 
 ## Wind
 
@@ -56,7 +45,6 @@ The beach faces east-northeast across Yukon Harbor toward Blake Island, with the
 * **Bad.** North (N), onshore over 5.7 km, and east (E), onshore over 9.3 km, blow straight in across the harbor and the open channel past Blake Island, building chop on the float entry and the rocky exit.
 * **Short fetch.** North-northeast through east-northeast (NNE-ENE), onshore over 2.0 to 2.5 km, and east-southeast (ESE), onshore over 3.5 km.
 * **Fine.** Southeast clockwise through north-northwest (SE-NNW): offshore from south through west-northwest, Puget Sound's usual storm direction, blowing off the land behind the beach and leaving the harbor calm, and cross-shore under 4.5 km from southeast, south-southeast, northwest and north-northwest.
-* **Wind against current.** The current here is too weak for the combination to matter much; northwest through north-northwest (NW-NNW), over 2.5 to 4.5 km, against a strong ebb is the only one worth noting.
 
 ## Depth and tide
 

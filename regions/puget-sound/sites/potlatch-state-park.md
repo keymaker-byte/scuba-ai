@@ -29,34 +29,14 @@ Potlatch State Park is a shore dive off a long cobble and eelgrass beach on the 
 
 ## Current
 
-Potlatch is dived independently of the tide. The water here moves at 0.02 m/s or less on every exchange, far under any speed that would close the site.
+Potlatch is dived independently of the tide. The water here barely moves on any exchange, far under any speed that would close the site.
 
-| | |
-|---|---|
-| **Current type** | Tidal |
-| **Governing station** | None governs. The nearest station with predictions is Hazel Point (PUG1601), about 47 km northeast toward the canal entrance |
-| **Recommended bin** | Not applicable |
-| **Observed offset, slack before flood** | Not established; slack should be confirmed in the water |
-| **Observed offset, slack before ebb** | Not established; slack should be confirmed in the water |
-| **Station flood axis** | Not applicable |
-| **Station ebb axis** | Not applicable |
-| **Site flood set** | southeast, 145°, toward the Great Bend and Annas Bay |
-| **Site ebb set** | northwest, 325°, down-canal toward Hoodsport and the entrance |
-
-* **Flood.** Sets southeast toward the Great Bend, peaking at 0.01 to 0.02 m/s.
-* **Ebb.** Sets northwest toward the canal entrance, peaking at 0.01 to 0.02 m/s.
-* **Slack.** This reach of the canal behaves as a standing wave, so slack falls near high and low water, about 50 minutes after each high and low at Union.
-* **Diveable window.** All day on either slack. Peak current stays far under 0.25 m/s on every exchange, so nothing narrows it.
+* **Type.** Tidal.
+* **Flood.** Sets southeast toward the Great Bend, barely moving.
+* **Ebb.** Sets northwest toward the canal entrance, barely moving.
+* **Slack.** This reach of the canal behaves as a standing wave, so slack falls near high and low water, shortly after each high and low at Union.
+* **Diveable window.** All day on either slack; nothing narrows it.
 * **Drift.** A barely noticeable drift can run north along the slope below the drop-off.
-
-Legacy correction:
-
-| | |
-|---|---|
-| **Legacy station** | Foulweather Bluff, 47°55.90′ N, 122°38.33′ W, about 74.2 km north-northeast |
-| **Legacy reference** | Admiralty Inlet (off Bush Point) (PCT1541) |
-| **Slack before flood** | At the reference |
-| **Slack before ebb** | 15 minutes before the reference |
 
 ## Wind
 
@@ -71,7 +51,6 @@ The beach is a straight east-facing shore. The water opens east across the canal
 * **Short fetch.** Northeast through east-northeast (NE-ENE) and east-southeast through south-southeast (ESE-SSE), onshore over 2.1 to 4.1 km across the canal, short fetch but straight onto the beach.
 * **Mixed.** North-northeast (NNE), over 14.6 km, blows up the length of the canal nearly parallel to the shore and runs a swell along the beach past the entry.
 * **Fine.** South clockwise through north (S-N): offshore from southwest through north-northwest, blocked by the high ground behind the park and the highway, and cross-shore over 1.0 to 1.3 km from south, south-southwest and north.
-* **Wind against current.** The current is too weak to stack against a wind. Wind alone decides the surface, so read the forecast for the beach.
 
 ## Depth and tide
 
