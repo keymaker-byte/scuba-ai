@@ -25,7 +25,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from lib.adcirc import (CONSTITUENTS, DATABASES, WALK_STEP_M, calibrate, in_domain,  # noqa: E402
                         interp_polar, locate, mean_longitudes, need_db, nodal, read_mesh,
-                        read_vel_header, read_vel_nodes, walk_in, write_overlay)
+                        read_vel_header, read_vel_nodes, walk_in, land_mask, write_index)
 from lib.current_harmonics import events, series  # noqa: E402
 from lib import shapes  # noqa: E402
 from lib.current_stations import NETWORKS, NOAA_DB, cx, noaa_arg, noaa_name  # noqa: E402
@@ -568,9 +568,10 @@ def read_site(path):
     return doc, doc["lat"], doc["lon"], doc["seabed_m"]
 
 
-def extract_point(uv, start, mesh, reg, H, above_bottom, qlat, qlon):
+def extract_point(uv, start, mesh, reg, H, above_bottom, qlat, qlon, say=log):
     """The blend_model_current object for a point placed in the mesh: its constants at the height
-    asked for and at the fastest height above, with the stations behind them."""
+    asked for and at the fastest height above, with the stations behind them; `say` takes the
+    progress lines."""
     sources = reg["sources"]
     d = mesh.paths(start, ORIENT_KM)
     dists = floor_km({i: d[s["node"]] for i, s in enumerate(sources) if s["node"] in d}, qlat, qlon, sources)
@@ -590,12 +591,12 @@ def extract_point(uv, start, mesh, reg, H, above_bottom, qlat, qlon):
     if near and not any(st["sets_flood_ebb_direction"] for st in stations):
         stations.append({"id": near[0]["id"], "name": near[0]["name"], "km": round(near[1], 2),
                          "sets_flood_ebb_direction": True})
-    log(f"  flood {az:.0f}°, from {near[0]['id']} {near[1]:.1f} km away" if near
+    say(f"  flood {az:.0f}°, from {near[0]['id']} {near[1]:.1f} km away" if near
         else f"  axis {az:.0f}° and {(az + 180) % 360:.0f}°: no station within {ORIENT_KM:.0f} km names the flood")
     for dd, s in cand:
-        log(f"  {s['id']:<9} {dd:5.1f} km  {s['name']}")
+        say(f"  {s['id']:<9} {dd:5.1f} km  {s['name']}")
     if not cand:
-        log(f"  no station within {REACH_KM:.0f} km through the water: the database's own current, scaled to the height")
+        say(f"  no station within {REACH_KM:.0f} km through the water: the database's own current, scaled to the height")
     return {
         "extract_point": {"lat": qlat, "lon": qlon, "seabed_m": H,
                           "extracted": datetime.now(UTC).isoformat(timespec="seconds")},
@@ -1083,10 +1084,43 @@ def cmd_verify(a):
 
 # --- map --------------------------------------------------------------------------------------
 
+MAP_YEARS_BACK, MAP_YEARS_AHEAD = 1, 10  # the years the map's astronomy is prepared for
+
+
+def site_jsons(boxes):
+    """Every site JSON in the workspace whose dive area lies inside the boxes and holds a Blend
+    Model extract: (slug, path, doc)."""
+    root = os.path.join(WORKSPACE, "regions")
+    out = []
+    for region in sorted(os.listdir(root)):
+        d = os.path.join(root, region, "sites")
+        if not os.path.isdir(d):
+            continue
+        for fn in sorted(os.listdir(d)):
+            if not fn.endswith(".json"):
+                continue
+            with open(os.path.join(d, fn)) as f:
+                doc = json.load(f)
+            la, lo = doc.get("lat"), doc.get("lon")
+            if "blend_model_current" in doc and isinstance(la, (int, float)) and isinstance(lo, (int, float)) \
+                    and any(bs <= la <= bn and bw <= lo <= be for bs, bw, bn, be in boxes):
+                out.append((fn[:-5], os.path.join(d, fn), doc))
+    return out
+
+
 def cmd_export_map(a):
-    """The seafloor current at every mesh node with a cached NCEI depth: the database's
-    constants at each node corrected by the stations around it and scaled to the height above
-    the seabed, written as an overlay the map viewer draws like the database's own."""
+    """The map viewer's seafloor overlay: everything the browser needs to run the tool's own
+    blend at any point, the database's constants at every mesh node in the boxes, the stations'
+    corrections, the vertical profile and each node's distances through the water to the
+    stations, with the astronomy prepared for each year the map may show. The browser computes
+    the current at a point exactly as `extract` and `at` do there; the trails it draws run along
+    each node's own blended axis. Values the tool computed at sample nodes and at every site in
+    the boxes ride along, and the browser reproduces them before it draws anything."""
+    import array
+    import base64
+    import random
+    from lib.current_harmonics import prepare, speed
+    from lib.tidal_astronomy import EPOCH
     boxes = a.bbox
     S, W = min(b[0] for b in boxes), min(b[1] for b in boxes)
     N, E = max(b[2] for b in boxes), max(b[3] for b in boxes)
@@ -1105,16 +1139,38 @@ def cmd_export_map(a):
             count[k] = count.get(k, 0) + 1
     shore = {i for (x, y), c in count.items() if c == 1 and (inside(x) or inside(y)) for i in (x, y)}
     seabed = Seabed()
-    depth = {}
+    elev = {}
     for n in sorted({i for t in tris for i in t}):
         e, _ = seabed.elevation(lat[n], lon[n])
         if e is not None:
-            depth[n] = -e
-    tris = [t for t in tris if all(i in depth for i in t)]
+            elev[n] = e
+    tris = [t for t in tris if all(i in elev for i in t)]
     nodes = sorted({i for t in tris for i in t})
     if not nodes:
         sys.exit("No mesh node in the boxes has a seabed depth from a bathymetry on this machine.")
+    if len(nodes) > 65535:
+        sys.exit(f"{len(nodes)} nodes: too many for the 16-bit triangle index; split the box.")
+    index = {n: j for j, n in enumerate(nodes)}
     log(f"  {len(nodes)} nodes with a seabed depth, {len(tris)} elements")
+    hab = a.above_bottom
+    # each node's seabed for the trails: its own, or, at a corner on land or in water shallower
+    # than the height, the deepest water at the middle of the elements around it, so the trails
+    # along a shore run at the height above the shore's own seabed
+    depth = {}
+    around = {}
+    for t in tris:
+        for i in t:
+            around.setdefault(i, []).append(t)
+    for n in nodes:
+        d = -elev[n]
+        if d <= hab:
+            mids = []
+            for t in around[n]:
+                e, _ = seabed.elevation(sum(lat[i] for i in t) / 3, sum(lon[i] for i in t) / 3)
+                if e is not None and -e > hab:
+                    mids.append(-e)
+            d = max(mids) if mids else d
+        depth[n] = d
     log("Paths through the water from every station...")
     near = {n: [] for n in nodes}
     for i, s in enumerate(sources):
@@ -1124,51 +1180,146 @@ def cmd_export_map(a):
     log(f"Streaming the velocity file for {len(nodes)} nodes (a few minutes)...")
     header = read_vel_header(reg["db"])
     vals = read_vel_nodes(reg["db"], nodes)
-    prof = profile_table(reg["profile_rows"])
-    hab = a.above_bottom
-    out_vals, nearest = {}, []
+    node_uv = {}
     for n in nodes:
         cons = [{"name": h[0], "f_ref": h[2], "v0u_deg": h[3], "u_amp": v[0], "u_phase": v[1],
                  "v_amp": v[2], "v_phase": v[3]} for h, v in zip(header, vals[n])]
-        uv = to_noaa(cons, reg["db"])
+        node_uv[n] = to_noaa(cons, reg["db"])
+    keys = sorted(node_uv[nodes[0]])
+    # the database's constants as int16 with one scale per node, its largest value, so weak
+    # water keeps the shape of its tidal ellipse: east and north, real and imaginary, node by node
+    scale = array.array("f", [max(max(abs(z.real), abs(z.imag)) for k in keys for z in node_uv[n][k]) / 32767 or 1.0
+                              for n in nodes])
+    q = array.array("h")
+    for j, n in enumerate(nodes):
+        for k in keys:
+            zu, zv = node_uv[n][k]
+            q.extend(int(round(x / scale[j])) for x in (zu.real, zu.imag, zv.real, zv.imag))
+    deq = lambda j: {k: (complex(q[(j * len(keys) + m) * 4] * scale[j], q[(j * len(keys) + m) * 4 + 1] * scale[j]),
+                         complex(q[(j * len(keys) + m) * 4 + 2] * scale[j], q[(j * len(keys) + m) * 4 + 3] * scale[j]))
+                     for m, k in enumerate(keys)}
+    # every constituent a prediction sums: the database's and the stations' own
+    names = sorted(set(keys) | {c for s in sources for b in s["bins"] for c in b[3]})
+    y0 = date.today().year - MAP_YEARS_BACK
+    years = list(range(y0, date.today().year + MAP_YEARS_AHEAD + 1))
+    prep = {y: prepare([[c, 1.0, 0.0, 0.0, 0.0] for c in names], y) for y in years}
+    astronomy = {"epoch": EPOCH.isoformat(), "names": names, "species": [CONS[c][0][0] for c in names],
+                 "coef": [list(p[0]) for p in prep[years[0]]],
+                 "years": {str(y): {"arg": [p[1] for p in pp], "f": [p[2] for p in pp]} for y, pp in prep.items()}}
+    prof = profile_table(reg["profile_rows"])
+    jc = lambda z: [z.real, z.imag]
+    stations = []
+    for s in sources:
+        bins = [[frac, {c: jc(L) for c, L in Lc.items()}, {str(b): jc(L) for b, L in Lb.items()}, mean, turn,
+                 {c: jc(z) for c, z in Z.items()}, az]
+                for frac, Lc, Lb, mean, turn, Z, az in source_bins(s)]
+        stations.append({"id": s["id"], "lat": s["lat"], "lon": s["lon"], "bins": bins})
+    # each node's stations within reach through the water: how many, which and how far
+    cnt, src, km = array.array("B"), array.array("H"), array.array("f")
+    for n in nodes:
+        lst = sorted((i, d) for d, i in near[n])
+        if len(lst) > 255:
+            sys.exit("a node with more than 255 stations within reach: the count is a byte.")
+        cnt.append(len(lst))
+        for i, d in lst:
+            src.append(i)
+            km.append(d)
+
+    def bottom_uv(Zb, az, t):
+        sp = speed(Zb, t)
+        return sp * math.sin(az * DEG), sp * math.cos(az * DEG)
+
+    rng = random.Random(1)
+    moments = [datetime(rng.choice(years), 1, 1, tzinfo=UTC) + timedelta(minutes=rng.randrange(525600)) for _ in range(5)]
+    # the browser's port of the blend, proved at sample nodes: each one blended here from the
+    # same int16 constants the browser reads, with the trails' seabed
+    m2 = {n: abs(node_uv[n]["M2"][0]) + abs(node_uv[n]["M2"][1]) for n in nodes}
+    picks = sorted(set(sorted(nodes, key=lambda n: -m2[n])[:3]) | set(nodes[::max(1, len(nodes) // 12)]))
+    node_checks = []
+    for n in picks:
+        j = index[n]
         fl = floor_km({i: d for d, i in near[n]}, lat[n], lon[n], sources)
-        cand = sorted(((d, sources[i]) for i, d in fl.items()), key=lambda x: x[0])[:NEIGHBOURS]
-        nearest.append(cand[0][0] if cand else None)
-        frac = min(hab / depth[n], 1.0) if depth[n] > hab else 1.0
-        Zn, m, az, _ = blend_at(uv, cand, prof, frac, fl, sources)
-        axis = adcirc_axis(uv, az)
-        A = along(uv, axis)
-        # the database's field at the node, turned onto the blended axis and scaled and shifted to
-        # the blended constants along it; a constituent the database barely carries fades with it
-        turn = wrap90(az - axis)
-        ct, st = math.cos(turn * DEG), math.sin(turn * DEG)
-        row = []
-        for h, v in zip(header, vals[n]):
-            key = noaa_name(h[0])
-            if key not in uv:
-                row.append(v)
-                continue
-            F = Zn.get(key, 0) / A[key] if abs(A[key]) >= 0.01 else 0j
-            # turned clockwise by `turn`, then scaled and shifted by the correction
-            cu, cv = cmath.rect(v[0], v[1] * DEG), cmath.rect(v[2], v[3] * DEG)
-            cu, cv = cu * ct + cv * st, cv * ct - cu * st
-            cu, cv = cu * F.conjugate(), cv * F.conjugate()
-            row.append((abs(cu), math.degrees(cmath.phase(cu)), abs(cv), math.degrees(cmath.phase(cv))))
-        m = m / 100
-        mu, mv = m * math.sin(az * DEG), m * math.cos(az * DEG)
-        row.append((abs(mu), 0.0 if mu >= 0 else 180.0, abs(mv), 0.0 if mv >= 0 else 180.0))
-        out_vals[n] = row
-    header = header + [("Z0", 0.0, 1.0, 0.0)]
-    import array
-    import base64
-    q = array.array("B", [255 if d is None else min(254, round(d * 10)) for d in nearest])
+        H = depth[n]
+        frac = max(min(hab, H) / H, 0.01) if H > 0 else 1.0
+        Zn, mean, az, _ = blend_at(deq(j), neighbours(fl, sources), prof, frac, fl, sources)
+        b = make_bin(Zn, mean, az)
+        for t in moments:
+            u, v = bottom_uv(b, az, t)
+            node_checks.append({"node": j, "t": int(t.timestamp() * 1000), "u": round(u, 6), "v": round(v, 6)})
+    # every site in the boxes, extracted here as `extract` does, so the browser proves it gives
+    # each site's own numbers; a site whose JSON holds a different extract is named
+    sites, stale = [], []
+    for slug, path, doc in site_jsons(boxes):
+        try:
+            _, la, lo, H = read_site(path)
+            nn, w, _ = mesh.place_site(la, lo)
+        except Refused as e:
+            log(f"  {slug}: left out of the site checks, {e}")
+            continue
+        if any(x not in index for x in nn):
+            log(f"  {slug}: left out of the site checks, its element is outside the overlay")
+            continue
+        uv = to_noaa(adcirc_cons(header, vals, nn, w), reg["db"])
+        cur = extract_point(uv, max(zip(w, nn))[1], mesh, reg, H, a.above_bottom, la, lo, say=lambda m: None)
+        mine = {"cons": cur["bottom"]["cons"], "mean_major": cur["bottom"]["mean_major"]}
+        held = doc["blend_model_current"]
+        theirs = {"cons": held["bottom"]["cons"], "mean_major": held["bottom"]["mean_major"]}
+        span = [moments[0] + timedelta(minutes=10 * k) for k in range(150)]
+        off = max(abs(speed(mine, t) - speed(theirs, t)) for t in span)
+        if off > 0.001 or abs(held["flood_dir"] - cur["flood_dir"]) > 0.1 or held["extract_point"]["seabed_m"] != H:
+            stale.append(f"{slug} ({off:.3f} m/s)")
+        # what `at` prints: the signed speed along the flood direction, which it gives to 0.1°
+        sites.append({"slug": slug, "lat": la, "lon": lo, "seabed": H, "flood": cur["flood_dir"],
+                      "checks": [{"t": int(t.timestamp() * 1000), "s": round(speed(mine, t), 6)} for t in moments]})
+    log(f"  {len(sites)} sites in the boxes carried as checks")
+    if stale:
+        log(f"  {len(stale)} site JSON(s) hold an extract that differs from the region as built; re-extract them: "
+            + ", ".join(stale))
+
+    xy, tri, dep = array.array("f"), array.array("H"), array.array("f")
+    for n in nodes:
+        xy.extend((lon[n], lat[n]))
+        dep.append(depth[n])
+    for t in tris:
+        tri.extend(index[i] for i in t)
     sh = array.array("B", [1 if n in shore else 0 for n in nodes])
-    extra = {"aboveBottomM": hab, "nearestKm": base64.b64encode(q.tobytes()).decode("ascii"),
-             "shoreNodes": base64.b64encode(sh.tobytes()).decode("ascii"), "extendKm": EXTEND_KM}
+    arrays = (xy, tri, dep, scale, q, cnt, src, km, sh)
+    if sys.byteorder != "little":
+        for arr in arrays:
+            arr.byteswap()
+    b64 = lambda arr: base64.b64encode(arr.tobytes()).decode("ascii")
+    out_doc = {
+        "name": a.name, "label": a.label, "bbox": [S, W, N, E], "boxes": boxes,
+        "source": f"{reg['db']} ADCIRC tidal database corrected by NOAA and CHS current stations, "
+                  f"{hab:g} m above the seabed",
+        "maxSpeedMs": _cfg("max_speed_ms", 0.25),
+        "nodeCount": len(nodes), "triangleCount": len(tris),
+        "nodes": b64(xy), "triangles": b64(tri), "depth": b64(dep), "shoreNodes": b64(sh),
+        "database": {"names": keys, "scale": b64(scale), "uv": b64(q)},
+        "near": {"count": b64(cnt), "station": b64(src), "km": b64(km)},
+        "stations": stations,
+        "profile": {str(b): [[f, z.real, z.imag] for f, z in prof[b]] for b in (1, 2)},
+        "astronomy": astronomy,
+        "settings": {"aboveBottomM": hab, "neighbours": NEIGHBOURS, "reachKm": REACH_KM, "softenKm": SOFTEN_KM,
+                     "prior": PRIOR, "exactKm": EXACT_KM, "minAmp": MIN_AMP, "extendKm": EXTEND_KM,
+                     "walkStepM": WALK_STEP_M, "lineStepM": LINE_STEP_M},
+        "checks": {"nodes": node_checks, "sites": sites},
+        "landMask": land_mask(S, W, N, E),
+    }
     out = a.out or os.path.join(WORKSPACE, "map", "currents", f"{a.name}.js")
-    write_overlay(a.name, a.label, boxes, reg["db"], lon, lat, nodes, tris, header, out_vals, a.max_drop,
-                  f"{reg['db']} ADCIRC tidal database corrected by NOAA and CHS current stations, {hab:g} m above the seabed",
-                  out, "blend_model.py", _cfg("max_speed_ms", 0.25), extra=extra, kind="seafloor")
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    with open(out + ".part", "w") as fh:
+        fh.write("// Generated by tools/blend_model.py export-map; regenerate rather than edit.\n")
+        fh.write(f"// {a.label}: {len(nodes)} {reg['db']} mesh nodes, {len(tris)} elements, {len(sources)} stations, "
+                 f"{len(sites)} sites. The browser runs the tool's blend.\n")
+        fh.write("window.MAP_CURRENTS = window.MAP_CURRENTS || {};\n")
+        fh.write(f"window.MAP_CURRENTS[{json.dumps(a.name)}] = ")
+        fh.write(json.dumps(out_doc, separators=(",", ":")))
+        fh.write(";\n")
+    os.replace(out + ".part", out)
+    log(f"  wrote {os.path.relpath(out, WORKSPACE)} ({os.path.getsize(out) / 1e6:.1f} MB)")
+    write_index(out, {"name": a.name, "label": a.label, "file": os.path.relpath(out, WORKSPACE),
+                      "boxes": boxes, "kind": "seafloor"})
 
 
 def main():
@@ -1233,8 +1384,6 @@ def main():
     s.add_argument("--label", required=True, help="display name of the area it covers")
     s.add_argument("--region", help="the built region to correct with (default the one holding the boxes' centre)")
     s.add_argument("--above-bottom", type=float, default=ABOVE_BOTTOM, metavar="M")
-    s.add_argument("--max-drop", type=float, default=0.03,
-                   help="m/s: the most amplitude dropped constituents may cost any node (default 0.03)")
     s.add_argument("--out", help="output path (default map/currents/<name>.js)")
     s.set_defaults(fn=cmd_export_map)
 

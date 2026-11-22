@@ -1,67 +1,43 @@
-// Tidal current overlay for map.html: the Blend Model's seafloor field, reconstructed in the
-// browser for any moment from the harmonic constants that `tools/blend_model.py export-map`
-// writes to map/currents/<name>.js. The astronomy below is a line-for-line port of
-// tools/lib/adcirc.py's mean_longitudes, _base_nodal, nodal and reconstruct, and each overlay
-// file carries values the tool computed itself, which `selfCheck` reproduces before the overlay
+// Tidal current overlay for map.html: the Blend Model's seafloor current, computed in the
+// browser exactly as `tools/blend_model.py` computes it. `blend_model.py export-map` writes
+// map/currents/<name>.js with the tool's inputs: the ADCIRC database's constants at every mesh
+// node, the stations' corrections, the regional vertical profile, each node's distances through
+// the water to the stations, and the astronomy prepared for each year the map may show. The code
+// below is a line-for-line port of the tool's blend_at, at_frac, vprof and its prediction, and of
+// `extract`'s placing of a point in the mesh, so the current read at a point and a seabed depth is
+// the current `extract` and `at` give there. Each overlay file carries values the tool computed at
+// sample nodes and at every dive site it covers, which `selfCheck` reproduces before the overlay
 // is allowed to draw.
 //
-// Particles that drift along the flow, each trail coloured by its speed, over whatever lies
-// beneath (the depth layer among it). An overlay that carries each node's distance to the nearest
-// current station it was corrected with draws its trails fainter the further that station is.
-// Each overlay also carries the coastline, and no trail starts or runs over land. They read a regular grid laid over the mesh, evenly spaced
-// in Web Mercator so that it maps onto the screen with a plain scale and offset at every zoom.
+// Particles drift along the flow, each trail coloured by its speed, over whatever lies beneath
+// (the depth layer among it). The trails run along each mesh node's own blended axis, the flood
+// and ebb axis the tool predicts on, with the node's seabed, and are interpolated between nodes;
+// they draw fainter where no station lies within the tool's reach and the field is the database's
+// own. Each overlay also carries the coastline, and no trail starts or runs over land. They read a
+// regular grid laid over the mesh, evenly spaced in Web Mercator so that it maps onto the screen
+// with a plain scale and offset at every zoom.
 (function (root) {
   'use strict';
 
   const DEG = Math.PI / 180;
+  const TAU = 2 * Math.PI;
+  const mod = (a, n) => ((a % n) + n) % n;  // Python's %, never negative
+  const wrap90 = x => mod(x + 90, 180) - 90;
 
-  // ---- astronomy (port of tools/lib/adcirc.py) -------------------------------------------
+  // ---- complex numbers, as [re, im] ----------------------------------------------------------
 
-  function meanLongitudes(ms) {
-    const jd = 2440587.5 + ms / 86400000;
-    const t = (jd - 2451545.0) / 36525.0;
-    const s = 218.3164477 + 481267.88123421 * t - 0.0015786 * t * t;
-    const h = 280.46646 + 36000.76983 * t + 0.0003032 * t * t;
-    const p = 83.3532465 + 4069.0137287 * t - 0.01032 * t * t;
-    const n = 125.04452 - 1934.136261 * t + 0.0020708 * t * t;
-    const pp = 282.937348 + 1.7195366 * t + 0.00045688 * t * t;
-    const d = new Date(ms);
-    const utH = d.getUTCHours() + d.getUTCMinutes() / 60 + d.getUTCSeconds() / 3600;
-    return { s, h, p, n, pp, T: 15 * utH };
-  }
-
-  function baseNodal(key, N) {
-    const c = Math.cos(N * DEG), c2 = Math.cos(2 * N * DEG), c3 = Math.cos(3 * N * DEG);
-    const s = Math.sin(N * DEG), s2 = Math.sin(2 * N * DEG), s3 = Math.sin(3 * N * DEG);
-    switch (key) {
-      case 'M2': return [1.0004 - 0.0373 * c + 0.0002 * c2, -2.14 * s];
-      case 'O1': return [1.0089 + 0.1871 * c - 0.0147 * c2 + 0.0014 * c3, 10.80 * s - 1.34 * s2 + 0.19 * s3];
-      case 'K1': return [1.0060 + 0.1150 * c - 0.0088 * c2 + 0.0006 * c3, -8.86 * s + 0.68 * s2 - 0.07 * s3];
-      case 'K2': return [1.0241 + 0.2863 * c + 0.0083 * c2 - 0.0015 * c3, -17.74 * s + 0.68 * s2 - 0.04 * s3];
-      case 'J1': return [1.0129 + 0.1676 * c - 0.0170 * c2 + 0.0016 * c3, -12.94 * s + 1.34 * s2 - 0.19 * s3];
-      case 'OO1': return [1.1027 + 0.6504 * c + 0.0317 * c2 - 0.0014 * c3, -36.68 * s + 4.02 * s2 - 0.57 * s3];
-      case 'Mf': return [1.0429 + 0.4135 * c - 0.0040 * c2, -23.74 * s + 2.68 * s2 - 0.38 * s3];
-      case 'Mm': return [1.0000 - 0.1300 * c + 0.0013 * c2, 0.0];
-      default: return [1.0, 0.0];
-    }
-  }
-
-  function nodal(key, N, fRef) {
-    if (key === 'none') return [1.0, 0.0];
-    if (key === 'fixed') return [fRef, 0.0];
-    if (['M2', 'O1', 'K1', 'K2', 'J1', 'OO1', 'Mf', 'Mm'].includes(key)) return baseNodal(key, N);
-    const [fm, um] = baseNodal('M2', N);
-    const [fk, uk] = baseNodal('K1', N);
-    switch (key) {
-      case 'M2^2': return [fm ** 2, 2 * um];
-      case 'M2^3': return [fm ** 3, 3 * um];
-      case 'M2^4': return [fm ** 4, 4 * um];
-      case 'M2^1.5': return [fm ** 1.5, 1.5 * um];
-      case 'M2*K1': return [fm * fk, um + uk];
-      case 'M2^2*K1': return [fm ** 2 * fk, 2 * um + uk];
-      default: throw new Error(`unknown nodal group ${key}`);
-    }
-  }
+  const cadd = (a, b) => [a[0] + b[0], a[1] + b[1]];
+  const cmul = (a, b) => [a[0] * b[0] - a[1] * b[1], a[0] * b[1] + a[1] * b[0]];
+  const cdiv = (a, b) => {
+    const d = b[0] * b[0] + b[1] * b[1];
+    return [(a[0] * b[0] + a[1] * b[1]) / d, (a[1] * b[0] - a[0] * b[1]) / d];
+  };
+  const cscale = (a, k) => [a[0] * k, a[1] * k];
+  const cabs = a => Math.hypot(a[0], a[1]);
+  const clog = a => [Math.log(cabs(a)), Math.atan2(a[1], a[0])];
+  const cexp = a => { const m = Math.exp(a[0]); return [m * Math.cos(a[1]), m * Math.sin(a[1])]; };
+  // a complex log with its phase unwrapped to within half a turn of ref's
+  const wrapc = (z, ref) => [z[0], ref[1] + mod(z[1] - ref[1] + Math.PI, TAU) - Math.PI];
 
   function decode(b64, Type) {
     const bin = atob(b64);
@@ -73,38 +49,359 @@
   const mercY = lat => Math.log(Math.tan(Math.PI / 4 + lat * DEG / 2));
   const invMercY = y => (2 * Math.atan(Math.exp(y)) - Math.PI / 2) / DEG;
 
+  // ---- astronomy (port of tools/lib/tidal_astronomy.py and current_harmonics.speed) ---------
+
+  // Each constituent's argument coefficients, and per UTC year its node factor and its constant
+  // with the node phase, held for the year as NOAA holds them.
+  class Astronomy {
+    constructor(a) {
+      this.epoch = Date.parse(a.epoch);
+      this.names = a.names;
+      this.species = a.species;
+      this.coef = a.coef;
+      this.years = a.years;
+      this.first = Math.min(...Object.keys(a.years).map(Number));
+      this.last = Math.max(...Object.keys(a.years).map(Number));
+    }
+
+    // f cos(arg) and f sin(arg) of every constituent at a UTC instant in ms: a constituent's
+    // speed there is Re(Z (fc + i fs)), with Z = A e^(-ig) in cm/s
+    factors(ms) {
+      const d = new Date(ms);
+      const y = this.years[d.getUTCFullYear()];
+      if (!y) {
+        throw new Error(`the current overlay covers ${this.first} to ${this.last}; ` +
+          'regenerate it with blend_model.py export-map');
+      }
+      const T0 = (ms - this.epoch) / 86400000 / 36525;
+      const s = 270.434164 + 481267.8831417 * T0 - 0.0011333 * T0 * T0;
+      const h = 279.696678 + 36000.768925 * T0 + 0.0003025 * T0 * T0;
+      const p = 334.329556 + 4069.0340333 * T0 - 0.010325 * T0 * T0;
+      const p1 = 281.220833 + 1.719175 * T0 + 0.0004528 * T0 * T0;
+      const T = 15 * (d.getUTCHours() + d.getUTCMinutes() / 60 + d.getUTCSeconds() / 3600
+        + d.getUTCMilliseconds() / 3.6e6) + 180;
+      const n = this.names.length, fc = new Float64Array(n), fs = new Float64Array(n);
+      for (let k = 0; k < n; k++) {
+        const c = this.coef[k];
+        const arg = (c[0] * T + c[1] * s + c[2] * h + c[3] * p + c[4] * p1 + y.arg[k]) * DEG;
+        fc[k] = y.f[k] * Math.cos(arg);
+        fs[k] = y.f[k] * Math.sin(arg);
+      }
+      return { fc, fs };
+    }
+  }
+
+  // ---- the blend (port of tools/blend_model.py) -----------------------------------------------
+
+  // Constituents are held by their index in the astronomy's list, each as a complex pair in a
+  // Float64Array; a constituent a station or a bin does not carry holds NaN.
+  const has = (a, i) => a[2 * i] === a[2 * i];  // not NaN
+  const BANDS_OF = [1, 2, 3];
+  const MAX_SPECIES = 8;
+
+  class Blend {
+    constructor(data) {
+      const st = data.settings;
+      this.prior = st.prior;
+      this.soft2 = st.softenKm * st.softenKm;
+      this.exact2 = st.exactKm * st.exactKm;
+      this.neighbours = st.neighbours;
+      this.reach = st.reachKm;
+      const names = data.astronomy.names;
+      this.na = names.length;
+      this.idx = new Map(names.map((c, i) => [c, i]));
+      this.sp = Int8Array.from(data.astronomy.species);
+      this.band = Int8Array.from(this.sp, sp => (sp === 0 ? 0 : sp === 1 ? 1 : sp === 2 ? 2 : 3));
+      // each band's key constituent (BAND_KEY), by its species
+      this.bandSp = { 1: this.sp[this.idx.get('K1')], 2: this.sp[this.idx.get('M2')], 3: this.sp[this.idx.get('M4')] };
+      this.dbIdx = Int16Array.from(data.database.names, c => this.idx.get(c));
+      const tab = rows => rows.map(([f, re, im]) => [f, [re, im]]);
+      this.prof = { 1: tab(data.profile[1] || []), 2: tab(data.profile[2] || []) };
+      this.speciesHere = [...new Set(this.sp)];
+      const pack = o => {
+        const a = new Float64Array(2 * this.na).fill(NaN);
+        for (const [c, z] of Object.entries(o)) { const i = this.idx.get(c); a[2 * i] = z[0]; a[2 * i + 1] = z[1]; }
+        return a;
+      };
+      this.stations = data.stations.map(s => ({
+        id: s.id, lat: s.lat, lon: s.lon,
+        bins: s.bins.map(([frac, Lc, Lb, mean, turn, Z, az]) => {
+          const lb = new Float64Array(8).fill(NaN);
+          for (const [k, z] of Object.entries(Lb)) { lb[2 * k] = z[0]; lb[2 * k + 1] = z[1]; }
+          return { frac, Lc: pack(Lc), Lb: lb, mean, turn, Z: pack(Z), az, v: this.table(frac) };
+        }),
+      }));
+    }
+
+    // the profile's complex ratio at a fraction of the depth above the seabed (vfac)
+    vfac(tab, frac) {
+      if (!tab.length) return [(8 / 7) * Math.max(frac, 0.01) ** (1 / 7), 0];
+      if (frac <= tab[0][0]) return cscale(tab[0][1], (Math.max(frac, 0.01) / tab[0][0]) ** (1 / 7));
+      for (let i = 0; i + 1 < tab.length; i++) {
+        const [f0, z0] = tab[i], [f1, z1] = tab[i + 1];
+        if (frac <= f1) {
+          const w = (frac - f0) / (f1 - f0);
+          return cadd(cscale(z0, 1 - w), cscale(z1, w));
+        }
+      }
+      return tab[tab.length - 1][1];
+    }
+
+    // The ratio to the column mean at a fraction of the depth for every species (vprof): the
+    // diurnal table for the diurnals and the semidiurnal one for the rest, its phase scaled by
+    // the species; amplitude alone for the long period ones. [re, im] per species.
+    table(f) {
+      const t = new Float64Array(2 * (MAX_SPECIES + 1));
+      const y = this.vfac(this.prof[2], f), m = cabs(y), ph = Math.atan2(y[1], y[0]);
+      for (const sp of this.speciesHere) {
+        const z = sp === 1 ? this.vfac(this.prof[1], f) : sp === 0 ? [m, 0] : [m * Math.cos(ph * sp / 2), m * Math.sin(ph * sp / 2)];
+        t[2 * sp] = z[0];
+        t[2 * sp + 1] = z[1];
+      }
+      return t;
+    }
+
+    // a station at a fraction of the depth, vq the table there (at_frac)
+    atFrac(st, f, vq) {
+      const bins = st.bins, last = bins[bins.length - 1], n2 = 2 * this.na;
+      if (bins.length === 1 || f <= bins[0].frac || f >= last.frac) {
+        const b = bins.length === 1 || f <= bins[0].frac ? bins[0] : last;
+        // per species, the profile's ratio from the bin's height to f, and its log
+        const adj = new Float64Array(2 * (MAX_SPECIES + 1)), la = new Float64Array(adj.length);
+        for (const sp of this.speciesHere) {
+          const [ar, ai] = cdiv([vq[2 * sp], vq[2 * sp + 1]], [b.v[2 * sp], b.v[2 * sp + 1]]);
+          adj[2 * sp] = ar; adj[2 * sp + 1] = ai;
+          la[2 * sp] = Math.log(Math.hypot(ar, ai)); la[2 * sp + 1] = Math.atan2(ai, ar);
+        }
+        const Lc = new Float64Array(n2), Z = new Float64Array(n2), Lb = new Float64Array(8).fill(NaN);
+        for (let i = 0; i < this.na; i++) {
+          const s2 = 2 * this.sp[i];
+          Lc[2 * i] = b.Lc[2 * i] + la[s2]; Lc[2 * i + 1] = b.Lc[2 * i + 1] + la[s2 + 1];
+          const zr = b.Z[2 * i], zi = b.Z[2 * i + 1];
+          Z[2 * i] = zr * adj[s2] - zi * adj[s2 + 1]; Z[2 * i + 1] = zr * adj[s2 + 1] + zi * adj[s2];
+        }
+        for (const k of BANDS_OF) {
+          const s2 = 2 * this.bandSp[k];
+          Lb[2 * k] = b.Lb[2 * k] + la[s2]; Lb[2 * k + 1] = b.Lb[2 * k + 1] + la[s2 + 1];
+        }
+        return { Lc, Lb, mean: b.mean, turn: b.turn, Z, az: b.az };
+      }
+      for (let i = 0; i + 1 < bins.length; i++) {
+        const lo = bins[i], hi = bins[i + 1];
+        if (lo.frac <= f && f <= hi.frac) {
+          const w = hi.frac > lo.frac ? (f - lo.frac) / (hi.frac - lo.frac) : 0;
+          const mix = (a, b, wrap) => {
+            const out = new Float64Array(a.length).fill(NaN);
+            for (let j = 0; j < a.length; j += 2) {
+              if (a[j] !== a[j] || b[j] !== b[j]) continue;
+              const bi = wrap ? a[j + 1] + mod(b[j + 1] - a[j + 1] + Math.PI, TAU) - Math.PI : b[j + 1];
+              out[j] = a[j] * (1 - w) + b[j] * w;
+              out[j + 1] = a[j + 1] * (1 - w) + bi * w;
+            }
+            return out;
+          };
+          return {
+            Lc: mix(lo.Lc, hi.Lc, true), Lb: mix(lo.Lb, hi.Lb, true),
+            mean: lo.mean * (1 - w) + hi.mean * w, turn: lo.turn + wrap90(hi.turn - lo.turn) * w,
+            Z: mix(lo.Z, hi.Z, false),
+            az: mod(lo.az + (mod(hi.az - lo.az + 180, 360) - 180) * w, 360),
+          };
+        }
+      }
+      throw new Error(`station ${st.id} has no bin around ${f}`);
+    }
+
+    // the database's main axis at a point, from its tidal ellipses (principal_axis); uv holds
+    // (Zu re, im, Zv re, im) per constituent
+    principalAxis(uv) {
+      let sxx = 0, syy = 0, sxy = 0;
+      for (const i of this.dbIdx) {
+        const k = 4 * i;
+        sxx += uv[k] * uv[k] + uv[k + 1] * uv[k + 1];
+        syy += uv[k + 2] * uv[k + 2] + uv[k + 3] * uv[k + 3];
+        sxy += uv[k] * uv[k + 2] + uv[k + 1] * uv[k + 3];
+      }
+      const th = 0.5 * Math.atan2(2 * sxy, sxx - syy);
+      return mod(Math.atan2(Math.cos(th), Math.sin(th)) / DEG, 360);
+    }
+
+    // The current at a point, from the database's constants there, its stations within reach
+    // nearest first ([{d, st}]) and a fraction of the depth above the seabed: { Z, mean, az },
+    // Z the complex constants along az in cm/s per constituent, zero where none (blend_at).
+    // The tool then points the axis at the nearest station's flood, turning Z and mean with
+    // it; the current itself, az with the signed speed along it, is the same either way.
+    blendAt(uv, cand, frac) {
+      const na = this.na, vq = this.table(frac);
+      const az0 = this.principalAxis(uv);
+      const Z = new Float64Array(2 * na);
+      const along = (az, i) => {
+        const sa = Math.sin(az * DEG), ca = Math.cos(az * DEG), k = 4 * i;
+        return [uv[k] * sa + uv[k + 2] * ca, uv[k + 1] * sa + uv[k + 3] * ca];
+      };
+      if (!cand.length) {
+        for (const i of this.dbIdx) {
+          const z = cmul(along(az0, i), [vq[2 * this.sp[i]], vq[2 * this.sp[i] + 1]]);
+          Z[2 * i] = z[0]; Z[2 * i + 1] = z[1];
+        }
+        return { Z, mean: 0, az: az0 };
+      }
+      const ws = cand.map(c => 1 / (c.d * c.d + this.soft2));
+      const tot = this.prior + ws.reduce((a, b) => a + b, 0);
+      const per = cand.map(c => this.atFrac(c.st, frac, vq));
+      const lam = this.exact2 / (this.exact2 + cand[0].d * cand[0].d);
+      let e = 0, n = this.prior;
+      per.forEach((p, i) => { e += ws[i] * Math.sin(2 * p.turn * DEG); n += ws[i] * Math.cos(2 * p.turn * DEG); });
+      let turn = Math.atan2(e, n) / DEG / 2;
+      turn += lam * wrap90(per[0].turn - turn);
+      const az = mod(az0 + turn, 360);
+      const axis = Math.cos((az - az0) * DEG) < 0 ? mod(az0 + 180, 360) : az0;
+      const lq = s => clog([vq[2 * s], vq[2 * s + 1]]);
+      // each band's ratio, drawn toward the regional profile alone
+      const Lband = {};
+      for (const b of BANDS_OF) {
+        const k = { 1: this.idx.get('K1'), 2: this.idx.get('M2'), 3: this.idx.get('M4') }[b];
+        const base = lq(this.bandSp[b]);
+        let ar = this.prior * base[0], ai = this.prior * base[1];
+        per.forEach((p, j) => {
+          const L = has(p.Lc, k) ? [p.Lc[2 * k], p.Lc[2 * k + 1]] : has(p.Lb, b) ? [p.Lb[2 * b], p.Lb[2 * b + 1]] : base;
+          const wc = wrapc(L, base);
+          ar += ws[j] * wc[0]; ai += ws[j] * wc[1];
+        });
+        Lband[b] = [ar / tot, ai / tot];
+      }
+      // each constituent's, drawn toward its band's
+      for (const i of this.dbIdx) {
+        const b = this.band[i], sp = this.sp[i];
+        const lb = b ? Lband[b] : lq(sp);
+        let ar = this.prior * lb[0], ai = this.prior * lb[1];
+        per.forEach((p, j) => {
+          let L;
+          if (has(p.Lc, i)) L = [p.Lc[2 * i], p.Lc[2 * i + 1]];
+          else if (b && has(p.Lb, b)) {
+            const r = clog(cdiv([vq[2 * sp], vq[2 * sp + 1]], [vq[2 * this.bandSp[b]], vq[2 * this.bandSp[b] + 1]]));
+            L = [p.Lb[2 * b] + r[0], p.Lb[2 * b + 1] + r[1]];
+          } else L = lb;
+          const wc = wrapc(L, lb);
+          ar += ws[j] * wc[0]; ai += ws[j] * wc[1];
+        });
+        const z = cmul(along(axis, i), cexp([ar / tot, ai / tot]));
+        Z[2 * i] = z[0]; Z[2 * i + 1] = z[1];
+      }
+      let mean = 0;
+      per.forEach((p, j) => { mean += ws[j] * p.mean * Math.cos((p.az - az) * DEG); });
+      mean /= tot;
+      // near a station, its own current
+      const sign = Math.cos((per[0].az - az) * DEG) >= 0 ? 1 : -1;
+      const own = per[0].Z, a = lam * sign, c = 1 - lam;
+      for (let i = 0; i < na; i++) {
+        const or = has(own, i) ? own[2 * i] : 0, oi = has(own, i) ? own[2 * i + 1] : 0;
+        Z[2 * i] = a * or + c * Z[2 * i];
+        Z[2 * i + 1] = a * oi + c * Z[2 * i + 1];
+      }
+      return { Z, mean: lam * sign * per[0].mean + (1 - lam) * mean, az };
+    }
+  }
+
   // ---- the field ----------------------------------------------------------------------------
 
   class CurrentField {
     constructor(data) {
       this.data = data;
       this.nodeCount = data.nodeCount;
-      this.cons = data.constituents;
+      const n = this.nodeCount;
       this.xy = decode(data.nodes, Float32Array);         // lon, lat per node
       this.tri = decode(data.triangles, Uint16Array);     // three node indices per element
-      this.coeff = decode(data.coefficients, Int16Array); // node, constituent, (a_u, b_u, a_v, b_v)
-      if (this.xy.length !== 2 * this.nodeCount || this.tri.length !== 3 * data.triangleCount ||
-          this.coeff.length !== 4 * this.nodeCount * this.cons.length) {
+      this.depth = decode(data.depth, Float32Array);      // the trails' seabed per node, m
+      const db = data.database;
+      this.dbNames = db.names;
+      const q = decode(db.uv, Int16Array);                // node, constituent, (Zu re, im, Zv re, im)
+      const scale = decode(db.scale, Float32Array);       // per node, cm/s a step
+      const nk = db.names.length;
+      if (this.xy.length !== 2 * n || this.tri.length !== 3 * data.triangleCount ||
+          this.depth.length !== n || scale.length !== n || q.length !== 4 * n * nk) {
         throw new Error('overlay arrays do not match their stated sizes');
       }
+      this.uv = new Float64Array(q.length);
+      for (let j = 0, k = 0; j < n; j++) {
+        for (let i = 0; i < 4 * nk; i++, k++) this.uv[k] = q[k] * scale[j];
+      }
+      // each node's stations within reach through the water
+      const cnt = decode(data.near.count, Uint8Array);
+      this.nearSt = decode(data.near.station, Uint16Array);
+      this.nearKmPath = decode(data.near.km, Float32Array);
+      if (cnt.length !== n || this.nearSt.length !== this.nearKmPath.length) {
+        throw new Error('overlay station distances do not match its node count');
+      }
+      this.nearAt = new Uint32Array(n + 1);
+      for (let j = 0; j < n; j++) this.nearAt[j + 1] = this.nearAt[j] + cnt[j];
+      this.blend = new Blend(data);
+      this.astro = new Astronomy(data.astronomy);
+      this.settings = data.settings;
+      this.ab = data.settings.aboveBottomM;
       // the coastline, as each mask row's crossings: land where an odd number lie west of a point
       const m = data.landMask;
       this.mask = m ? { ...m, dY: m.dLon * DEG, off: decode(m.offsets, Uint32Array), cr: decode(m.crossings, Uint16Array) } : null;
-      // distance to the nearest station, 0.1 km a step, 255 where none is within reach
-      this.near = data.nearestKm ? decode(data.nearestKm, Uint8Array) : null;
-      if (this.near && this.near.length !== this.nodeCount) {
-        throw new Error('overlay station distances do not match its node count');
-      }
-      this.u = new Float32Array(this.nodeCount);
-      this.v = new Float32Array(this.nodeCount);
-      this.time = null;
       this._shoreEdges(data);
+      // the trails: every node blended once, at its own seabed
+      const na = this.astro.names.length;
+      this.nodeZ = new Float64Array(n * na * 2);
+      this.nodeMean = new Float64Array(n);
+      this.nodeSin = new Float64Array(n);
+      this.nodeCos = new Float64Array(n);
+      this.nearest = new Float32Array(n);
+      for (let j = 0; j < n; j++) {
+        const lat = this.xy[2 * j + 1], lon = this.xy[2 * j];
+        const cand = this.candidates(j, lat, lon);
+        this.nearest[j] = cand.length ? cand[0].d : NaN;
+        const r = this.blend.blendAt(this.nodeUV([j], [1]), cand, this.frac(this.depth[j]));
+        this.nodeZ.set(r.Z, j * na * 2);
+        this.nodeMean[j] = r.mean;
+        this.nodeSin[j] = Math.sin(r.az * DEG);
+        this.nodeCos[j] = Math.cos(r.az * DEG);
+      }
+      this.u = new Float32Array(n);
+      this.v = new Float32Array(n);
+      this.time = null;
     }
 
-    // The mesh's own shoreline, its edges bucketed by 0.02°: water the mesh does not reach takes
-    // the current at the nearest point of it, within extendKm, as `extract` does.
+    // the fraction of the depth the height above the seabed sits at, as `extract` takes it
+    frac(H) {
+      return H > 0 ? Math.max(Math.min(this.ab, H) / H, 0.01) : 1;
+    }
+
+    // the database's constants across an element, (Zu re, im, Zv re, im) per constituent
+    nodeUV(nodes, w) {
+      const nk = this.dbNames.length, out = new Float64Array(4 * this.blend.na), di = this.blend.dbIdx;
+      for (let i = 0; i < nk; i++) {
+        let a = 0, b = 0, c = 0, d = 0;
+        for (let m = 0; m < nodes.length; m++) {
+          const k = (nodes[m] * nk + i) * 4, x = w[m];
+          a += x * this.uv[k]; b += x * this.uv[k + 1]; c += x * this.uv[k + 2]; d += x * this.uv[k + 3];
+        }
+        const o = 4 * di[i];
+        out[o] = a; out[o + 1] = b; out[o + 2] = c; out[o + 3] = d;
+      }
+      return out;
+    }
+
+    // The stations within reach of a point, nearest first, as the tool picks them: the paths
+    // through the water from the mesh node nearest the point, each at least the straight line
+    // from the point itself (floor_km, neighbours).
+    candidates(start, lat, lon) {
+      const out = [];
+      const sc = Math.cos(lat * DEG);
+      for (let k = this.nearAt[start]; k < this.nearAt[start + 1]; k++) {
+        const i = this.nearSt[k], st = this.blend.stations[i];
+        const d = Math.max(this.nearKmPath[k], Math.hypot((st.lon - lon) * sc, st.lat - lat) * 111.2);
+        if (d < this.blend.reach) out.push({ d, i, st });
+      }
+      out.sort((a, b) => a.d - b.d || a.i - b.i);
+      return out.slice(0, this.blend.neighbours);
+    }
+
+    // The mesh's own shoreline, its edges bucketed by 0.02°, for water the mesh does not reach.
     _shoreEdges(data) {
-      this.extendKm = data.extendKm || 0;
+      this.extendKm = this.settings.extendKm || 0;
       this.buckets = new Map();
       if (!data.shoreNodes || !this.extendKm) return;
       const sh = decode(data.shoreNodes, Uint8Array);
@@ -118,7 +415,7 @@
           seen.set(key, seen.has(key) ? -1 : e * 3 + k);
         }
       }
-      for (const [key, v] of seen) {
+      for (const [, v] of seen) {
         if (v < 0) continue;
         const e = Math.floor(v / 3), k = v % 3;
         const a = tri[e + k], b = tri[e + (k + 1) % 3];
@@ -135,9 +432,9 @@
       }
     }
 
-    // For water outside the mesh: the element and weights at the nearest point of the mesh's
-    // shoreline, when it lies within extendKm and the straight line to it crosses no land; null
-    // otherwise, and null on land.
+    // For water outside the mesh, the drawing grid's shortcut: the element and weights at the
+    // nearest point of the mesh's shoreline, when it lies within extendKm and the straight line
+    // to it crosses no land; null otherwise, and null on land.
     edgePoint(lat, lon) {
       if (!this.buckets.size || this.onLand(lon, mercY(lat))) return null;
       const { xy, tri } = this;
@@ -187,63 +484,9 @@
       return ((lo - a) & 1) === 1;
     }
 
-    // km to the nearest station at a point of an element, null where a corner has none in reach
-    nearKm(a, b, c, w1, w2, w3) {
-      if (!this.near) return null;
-      const n = this.near;
-      if (n[a] === 255 || n[b] === 255 || n[c] === 255) return null;
-      return (w1 * n[a] + w2 * n[b] + w3 * n[c]) / 10;
-    }
-
-    // u, v (m/s, east and north, depth-averaged) at every node at a UTC instant in ms
-    computeNodes(ms) {
-      const { s, h, p, n: N, pp, T } = meanLongitudes(ms);
-      const nk = this.cons.length;
-      const fc = new Float64Array(nk), fs = new Float64Array(nk);
-      this.cons.forEach((c, i) => {
-        const [nT, ns, nh, np, npp] = c.doodson;
-        const a = (nT * T + ns * s + nh * h + np * p + npp * pp) * DEG;
-        const [f, u] = nodal(c.nodal, N, c.fRef);
-        const base = a + u * DEG + c.C;
-        fc[i] = f * Math.cos(base) * c.scale;
-        fs[i] = f * Math.sin(base) * c.scale;
-      });
-      const q = this.coeff;
-      for (let j = 0, k = 0; j < this.nodeCount; j++) {
-        let u = 0, v = 0;
-        for (let i = 0; i < nk; i++, k += 4) {
-          u += q[k] * fc[i] + q[k + 1] * fs[i];
-          v += q[k + 2] * fc[i] + q[k + 3] * fs[i];
-        }
-        this.u[j] = u;
-        this.v[j] = v;
-      }
-      this.time = ms;
-    }
-
-    // Reproduce the values the Python tool computed when it wrote the file; any drift means the
-    // browser's astronomy no longer matches the Python tool's, and the overlay must not draw.
-    selfCheck(tolerance = 0.002) {
-      let worst = 0;
-      for (const c of this.data.checks) {
-        this.computeNodes(c.t * 1000);
-        worst = Math.max(worst, Math.hypot(this.u[c.node] - c.u, this.v[c.node] - c.v));
-      }
-      this.time = null;
-      return { ok: worst <= tolerance, worst, count: this.data.checks.length };
-    }
-
-    // The current at a coordinate, interpolated across its element in lon/lat exactly as
-    // `extract` does, or at the nearest point of the mesh's shoreline for water the mesh does not
-    // reach; null elsewhere. Needs computeNodes first.
-    at(lat, lon) {
+    // the element a point falls in, first in the mesh's order: { nodes, w } or null (locate)
+    _inside(lat, lon) {
       const { xy, tri } = this;
-      const value = (a, b, c, w1, w2, w3) => {
-        const u = w1 * this.u[a] + w2 * this.u[b] + w3 * this.u[c];
-        const v = w1 * this.v[a] + w2 * this.v[b] + w3 * this.v[c];
-        return { u, v, speed: Math.hypot(u, v), toward: (Math.atan2(u, v) / DEG + 360) % 360,
-          km: this.nearKm(a, b, c, w1, w2, w3), field: this };
-      };
       for (let e = 0; e < tri.length; e += 3) {
         const a = tri[e], b = tri[e + 1], c = tri[e + 2];
         const x1 = xy[2 * a], y1 = xy[2 * a + 1], x2 = xy[2 * b], y2 = xy[2 * b + 1], x3 = xy[2 * c], y3 = xy[2 * c + 1];
@@ -254,11 +497,160 @@
         const w1 = ((y2 - y3) * (lon - x3) + (x3 - x2) * (lat - y3)) / det;
         const w2 = ((y3 - y1) * (lon - x3) + (x1 - x3) * (lat - y3)) / det;
         const w3 = 1 - w1 - w2;
-        if (w1 < -1e-9 || w2 < -1e-9 || w3 < -1e-9) continue;
-        return value(a, b, c, w1, w2, w3);
+        if (w1 >= -1e-9 && w2 >= -1e-9 && w3 >= -1e-9) return { nodes: [a, b, c], w: [w1, w2, w3] };
       }
-      const q = this.edgePoint(lat, lon);
-      return q ? value(tri[q.e], tri[q.e + 1], tri[q.e + 2], q.w1, q.w2, q.w3) : null;
+      return null;
+    }
+
+    // The nearest point of the mesh, on the edge of its wet area, stepped walkStepM further in
+    // toward the centroid of its element (walk_in): [lat, lon].
+    _walkIn(lat, lon) {
+      const { xy, tri } = this;
+      const sc = Math.cos(lat * DEG), px = lon * sc, py = lat;
+      let cand = [];
+      for (const r of [0.05, 0.2, 1.0, 5.0]) {
+        for (let e = 0; e < tri.length; e += 3) {
+          for (let m = 0; m < 3; m++) {
+            const i = tri[e + m];
+            if (Math.abs(xy[2 * i + 1] - lat) <= r && Math.abs(xy[2 * i] - lon) <= r / sc) { cand.push(e); break; }
+          }
+        }
+        if (cand.length) break;
+      }
+      let best = null;
+      for (const e of cand) {
+        const t3 = [0, 1, 2].map(m => [xy[2 * tri[e + m]] * sc, xy[2 * tri[e + m] + 1]]);
+        for (let k = 0; k < 3; k++) {
+          const [ax, ay] = t3[k], [bx, by] = t3[(k + 2) % 3];
+          const dx = bx - ax, dy = by - ay, L2 = dx * dx + dy * dy;
+          const t = L2 === 0 ? 0 : Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / L2));
+          const cx = ax + t * dx, cy = ay + t * dy;
+          const d = Math.hypot(cx - px, cy - py);
+          if (best === null || d < best.d) best = { d, cx, cy, t3 };
+        }
+      }
+      if (!best) return null;
+      const gx = (best.t3[0][0] + best.t3[1][0] + best.t3[2][0]) / 3, gy = (best.t3[0][1] + best.t3[1][1] + best.t3[2][1]) / 3;
+      const L = Math.hypot(gx - best.cx, gy - best.cy);
+      const step = Math.min(this.settings.walkStepM / 111000, 0.5 * L);
+      const wx = best.cx + (gx - best.cx) * step / L, wy = best.cy + (gy - best.cy) * step / L;
+      return [Math.round(wy * 1e5) / 1e5, Math.round(wx / sc * 1e5) / 1e5];
+    }
+
+    // A point placed as `extract` places a site (place_site): the element it falls in, or, for
+    // water the mesh does not reach, the element at the nearest point of the mesh's edge, when
+    // that lies within extendKm and the straight line to it crosses no land. { nodes, w } or null.
+    place(lat, lon) {
+      if (this.onLand(lon, mercY(lat))) return null;
+      const hit = this._inside(lat, lon);
+      if (hit) return hit;
+      if (!this.extendKm) return null;
+      const walked = this._walkIn(lat, lon);
+      if (!walked) return null;
+      const [elat, elon] = walked;
+      const km = Math.hypot((elon - lon) * Math.cos(lat * DEG), elat - lat) * 111.2;
+      if (km > this.extendKm) return null;
+      const n = Math.max(1, Math.floor(km * 1000 / this.settings.lineStepM));
+      for (let i = 1; i <= n; i++) {
+        const f = i / n;
+        if (this.onLand(lon + (elon - lon) * f, mercY(lat + (elat - lat) * f))) return null;
+      }
+      return this._inside(elat, elon);
+    }
+
+    // The current at a point over a seabed H m deep (MLLW), as `extract` computes it there:
+    // { Z, mean, az, km } with km the nearest station's distance (null beyond reach); null
+    // where the tool does not reach.
+    pointAt(lat, lon, H) {
+      const p = this.place(lat, lon);
+      if (!p) return null;
+      let start = 0;
+      for (let m = 1; m < 3; m++) {
+        if (p.w[m] > p.w[start] || (p.w[m] === p.w[start] && p.nodes[m] > p.nodes[start])) start = m;
+      }
+      const cand = this.candidates(p.nodes[start], lat, lon);
+      const r = this.blend.blendAt(this.nodeUV(p.nodes, p.w), cand, this.frac(H));
+      r.km = cand.length ? cand[0].d : null;
+      return r;
+    }
+
+    // The signed speed along the point's axis at a UTC instant, m/s (current_harmonics.speed),
+    // and the current it makes: { u, v, speed, toward, km }.
+    signedSpeed(r, ms) {
+      const { fc, fs } = this.astro.factors(ms);
+      let s = r.mean;
+      for (let i = 0; i < fc.length; i++) s += r.Z[2 * i] * fc[i] - r.Z[2 * i + 1] * fs[i];
+      return s / 100;
+    }
+
+    currentOf(r, ms) {
+      const s = this.signedSpeed(r, ms);
+      const u = s * Math.sin(r.az * DEG), v = s * Math.cos(r.az * DEG);
+      return { u, v, speed: Math.abs(s), toward: mod(Math.atan2(u, v) / DEG, 360), km: r.km, field: this };
+    }
+
+    at(lat, lon, H, ms) {
+      const r = this.pointAt(lat, lon, H);
+      return r ? this.currentOf(r, ms) : null;
+    }
+
+    // u, v (m/s, east and north) at every node at a UTC instant in ms, for the trails
+    computeNodes(ms) {
+      const { fc, fs } = this.astro.factors(ms);
+      const na = fc.length, Z = this.nodeZ;
+      for (let j = 0, k = 0; j < this.nodeCount; j++) {
+        let s = this.nodeMean[j];
+        for (let i = 0; i < na; i++, k += 2) s += Z[k] * fc[i] - Z[k + 1] * fs[i];
+        s /= 100;
+        this.u[j] = s * this.nodeSin[j];
+        this.v[j] = s * this.nodeCos[j];
+      }
+      this.time = ms;
+    }
+
+    // km to the nearest station at a point of an element, null where a corner has none in reach
+    nearKm(a, b, c, w1, w2, w3) {
+      const n = this.nearest;
+      if (Number.isNaN(n[a]) || Number.isNaN(n[b]) || Number.isNaN(n[c])) return null;
+      return w1 * n[a] + w2 * n[b] + w3 * n[c];
+    }
+
+    // Reproduce the values the Python tool computed when it wrote the file: the trails' current
+    // at sample nodes, and at every dive site the overlay covers, at the site's own seabed, the
+    // signed speed `at` prints and the flood direction it prints to 0.1°. The file holds the
+    // database's constants to 1 part in 32,767 of each node's largest, which in water whose
+    // tidal ellipse is nearly a circle moves the axis by a few hundredths of a degree; the speed
+    // holds to 1 mm/s and the axis to 0.15°, finer than the map prints either. Any wider drift
+    // means the port no longer matches the tool, and the overlay must not draw.
+    selfCheck(tolerance = 0.001, axisDeg = 0.15) {
+      let worst = 0, where = null;
+      const note = (off, what) => { if (!(off <= worst)) { worst = off; where = what; } };
+      for (const c of this.data.checks.nodes) {
+        this.computeNodes(c.t);
+        note(Math.hypot(this.u[c.node] - c.u, this.v[c.node] - c.v), `node ${c.node}`);
+      }
+      for (const s of this.data.checks.sites) {
+        const r = this.pointAt(s.lat, s.lon, s.seabed);
+        if (!r || Math.abs(wrap90(r.az - s.flood)) > axisDeg) {
+          note(Infinity, s.slug);
+          continue;
+        }
+        const sign = Math.cos((r.az - s.flood) * DEG) >= 0 ? 1 : -1;
+        for (const c of s.checks) note(Math.abs(sign * this.signedSpeed(r, c.t) - c.s), s.slug);
+      }
+      this.time = null;
+      const count = this.data.checks.nodes.length + this.data.checks.sites.length;
+      return { ok: worst <= tolerance, worst, where, count };
+    }
+
+    // The trails' own value at a point, interpolated between the nodes as they draw it.
+    drawnAt(lat, lon) {
+      const p = this._inside(lat, lon) || (q => q && { nodes: [this.tri[q.e], this.tri[q.e + 1], this.tri[q.e + 2]], w: [q.w1, q.w2, q.w3] })(this.edgePoint(lat, lon));
+      if (!p) return null;
+      let u = 0, v = 0;
+      p.nodes.forEach((j, m) => { u += p.w[m] * this.u[j]; v += p.w[m] * this.v[j]; });
+      return { u, v, speed: Math.hypot(u, v), toward: mod(Math.atan2(u, v) / DEG, 360),
+        km: this.nearKm(...p.nodes, ...p.w), field: this };
     }
   }
 
@@ -338,7 +730,8 @@
           }
         }
       }
-      // how faint each cell draws: 0 within 2 km of a station, 1 to 6 km, 2 beyond or with none
+      // how faint each cell draws: 0 where a station corrects the field, 1 where none is within
+      // the tool's reach and the field is the database's own
       this.fade = null;
       if (field.near) {
         this.fade = new Uint8Array(size);
@@ -347,7 +740,7 @@
           const e = (this.elem[i] - 1) * 3;
           const x = this.w1[i] / 255, y = this.w2[i] / 255;
           const km = field.nearKm(tri[e], tri[e + 1], tri[e + 2], x, y, Math.max(0, 1 - x - y));
-          this.fade[i] = km === null || km >= 6 ? 2 : km >= 2 ? 1 : 0;
+          this.fade[i] = km === null ? 1 : 0;
         }
       }
     }
@@ -412,8 +805,8 @@
     [2.75, [127, 29, 29]],
   ];
   const STROKES = BANDS.map(([, rgb]) => `rgb(${rgb.join(',')})`);
-  // trail opacity by distance to the nearest station: within 2 km, 2 to 6 km, beyond
-  const FADES = [1, 0.6, 0.35];
+  // trail opacity: where stations correct the field, and where none is within reach
+  const FADES = [1, 0.35];
   const bandOf = sp => {
     let k = 0;
     while (k < BANDS.length - 1 && sp >= BANDS[k + 1][0]) k++;
@@ -433,16 +826,26 @@
         this._particles = [];
       },
 
-      // The current at a coordinate at the layer's moment, exactly as `blend_model.py at`
-      // reads an extract there: { u, v, speed, toward } in m/s and degrees true, null outside
-      // every mesh.
-      readAt(lat, lon) {
+      // The current at a coordinate over a seabed H m deep (below MLLW) at the layer's moment,
+      // exactly as `blend_model.py extract` and `at` give it there: { u, v, speed, toward, km }
+      // in m/s, degrees true and km to the nearest station, null where no overlay reaches.
+      readAt(lat, lon, H) {
+        for (const g of this._grids) {
+          const r = g.field.at(lat, lon, H, this._time);
+          if (r) return r;
+        }
+        return null;
+      },
+
+      // The trails' own value at a coordinate, interpolated between mesh nodes, for when no
+      // seabed depth is at hand.
+      drawnAt(lat, lon) {
         for (const g of this._grids) {
           if (g.field.time !== this._time) {
             g.field.computeNodes(this._time);
             g.update();
           }
-          const r = g.field.at(lat, lon);
+          const r = g.field.drawnAt(lat, lon);
           if (r) return r;
         }
         return null;
@@ -612,7 +1015,7 @@
     });
   }
 
-  const api = { meanLongitudes, nodal, CurrentField, FieldGrid, BANDS, SLOW };
+  const api = { Astronomy, Blend, CurrentField, FieldGrid, BANDS, SLOW };
   if (typeof module === 'object' && module.exports) {
     module.exports = api;
   } else {

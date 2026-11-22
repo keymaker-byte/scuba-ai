@@ -46,7 +46,13 @@ With no station within 16 km the point takes the database scaled by the profile,
 
 ### Toward shore
 
-`Mesh.place_site` stops on land by OpenStreetMap's coastline. A water point outside the mesh takes the element at the nearest point of the mesh's edge (`walk_in`) when that point lies within 1 km (`EXTEND_KM`) and a line sampled every 10 m stays on water. The map applies the same rule in the browser (`_shoreEdges`, `edgePoint` in `map/currents.js`), from the shoreline nodes `export-map` marks. Holding the edge's constants is the defensible extrapolation: the mesh carries no physics inside that strip, and anything fancier would be invented.
+`Mesh.place_site` stops on land by OpenStreetMap's coastline. A water point outside the mesh takes the element at the nearest point of the mesh's edge (`walk_in`) when that point lies within 1 km (`EXTEND_KM`) and a line sampled every 10 m stays on water. The map applies the same rule in the browser (`place` and `_walkIn` in `map/currents.js`), and the drawing grid a shortcut of it (`edgePoint`), from the shoreline nodes `export-map` marks. Holding the edge's constants is the defensible extrapolation: the mesh carries no physics inside that strip, and anything fancier would be invented.
+
+### The map
+
+The browser runs the blend itself. `export-map` ships its inputs: the database's NOAA-form constants at each mesh node as int16 with one scale per node, each node's stations within 16 km through the water, every station's bins as `source_bins` prepares them, the profile table, and per year each constituent's node factor and argument constant. `map/currents.js` ports `blend_at`, `at_frac`, `vprof`, the placing of a point (`place_site`, `walk_in`, `locate`) and the prediction line for line, so a point read on the map is an extract taken there. Two parts are left out because they change no current: `orient` and `by_timing` turn the axis end for end with the sign of every constant. The map's land test is the coastline mask it draws with, not the polygons `place_site` reads, so the two can disagree on a point within a mask cell of the shore.
+
+The trails use the same blend once per node at load, at the node's own seabed, and interpolate between nodes as before. Every site in the boxes rides along as a check, so a port that drifts from the tool refuses to draw. The int16 constants hold each node to 1 part in 32,767 of its largest value; in water whose tidal ellipse is nearly a circle that moves the principal axis by a few hundredths of a degree, which sets the 0.15° the check allows.
 
 ## Why it is this way
 
@@ -78,7 +84,7 @@ The first test case. 1.4 km from PUG1516, the column-mean version missed its bin
 - **Speed near shore.** The same elements can run slower or faster than the water divers describe: at Fox Island East Wall the site reads stronger than the tool, and at Richmond Beach Park research gives moderate where the tool gives gentle. The site file's wording, from research, describes the water; the tool's speed is what the plan uses.
 - **The flood label in weak water.** Under a few cm/s the timing ties a point only loosely to its station, and the label can flip over a few hundred metres (off Point White Dock). A confidence for the label, from the covariance's size against the amplitudes, would let the header say so.
 - **Eddies and back eddies.** Behind pilings, in coves and off points the local water can run against the channel for part of the tide (Titlow, Sunnyside). No tidal database here resolves them; the observed offset and the site's prose carry them.
-- **Beyond reach.** West of Sekiu no station lies within 16 km and the error grows (48 minutes on the two hidden stations past 16 km). A station added near the Strait's entrance would narrow it; `build` takes it in once it is cached.
+- **Beyond reach.** In southern Hood Canal, 40 km or more from Hazel Point, and west of Sekiu no station lies within 16 km and the error grows (48 minutes on the two hidden stations past 16 km). A station surveyed in either would narrow it; `build` takes it in once it is cached.
 
 ## Extending it
 
@@ -124,4 +130,4 @@ A coast covered by two models, or a model refined by a regional one, would build
 
 ### Changing the method
 
-Change one thing, rebuild, and run `verify`. A change to the region file's layout raises `FORMAT`, which makes every command ask for a rebuild. Keep the at-stations test at zero, compare the hidden and legacy medians with the figures above, and update `blend_model.md` and this file with what was tried and what it scored, kept or not. The settings in force are recorded in each region file under `settings`.
+Change one thing, rebuild, and run `verify`. A change to the blend, the profile, the placing of a point or the prediction is mirrored in `map/currents.js`; `export-map` then proves the two agree at every site. A change to the region file's layout raises `FORMAT`, which makes every command ask for a rebuild. Keep the at-stations test at zero, compare the hidden and legacy medians with the figures above, and update `blend_model.md` and this file with what was tried and what it scored, kept or not. The settings in force are recorded in each region file under `settings`.

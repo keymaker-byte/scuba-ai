@@ -1,6 +1,6 @@
 """ADCIRC tidal databases shared by adcirc_current.py and blend_model.py: the databases
 and their download, the astronomy calibrated to each run, the mesh and velocity readers, and the
-map viewer's overlay writer."""
+map viewer's coastline and overlay index."""
 import gzip
 import json
 import math
@@ -408,149 +408,13 @@ def interp_polar(amp1, ph1, amp2, ph2, amp3, ph3, w):
 
 
 # --------------------------------------------------------------------------------------
-# The map viewer's current overlay
+# The map viewer's current overlays
 # --------------------------------------------------------------------------------------
 
-def write_overlay(name, label, boxes, db, lon, lat, nodes, tris, header, vals, max_drop, source,
-                  out, tool, max_speed, extra=None, kind=None):
-    """Write an overlay as a script the map viewer loads: window.MAP_CURRENTS[name] = {...}, and
-    add or replace its entry in the index beside it. `nodes` are mesh node numbers, `tris` triples
-    of them, `header` the (name, freq, f_ref, v0u_deg) of each constituent and `vals` each node's
-    (u_amp, u_phase, v_amp, v_phase) per constituent, in ADCIRC's own convention. The browser
-    reconstructs every node for any moment with the same astronomy as `reconstruct` and
-    interpolates linearly across each triangle. `extra` adds keys to the overlay, `kind` to its
-    index entry."""
-    import array
-    import base64
+def write_index(out, entry):
+    """Add or replace `entry` in map/currents/index.js beside `out`, the list of every overlay
+    the map reads at load, keeping the others."""
     log = lambda m: print(m, file=sys.stderr, flush=True)
-    S, W = min(b[0] for b in boxes), min(b[1] for b in boxes)
-    N, E = max(b[2] for b in boxes), max(b[3] for b in boxes)
-    if len(nodes) > 65535:
-        sys.exit(f"{len(nodes)} nodes: too many for the 16-bit triangle index; split the box.")
-    index = {node: k for k, node in enumerate(nodes)}
-
-    # Keep the constituents that matter here. Each one dropped can add at most its amplitude
-    # to the error at a node; keep adding the largest until no node loses more than max_drop.
-    amp_at = [[max(vals[n][k][0], vals[n][k][2]) for n in nodes] for k in range(len(header))]
-    order = sorted(range(len(header)), key=lambda k: -sum(x * x for x in amp_at[k]))
-    keep = []
-    for cut in range(1, len(order) + 1):
-        keep = order[:cut]
-        dropped = order[cut:]
-        worst = max((sum(amp_at[k][j] for k in dropped) for j in range(len(nodes))), default=0.0)
-        if worst <= max_drop:
-            break
-    keep.sort()
-    log(f"  keeping {len(keep)} of {len(header)} constituents "
-        f"(worst-case dropped amplitude {worst:.3f} m/s): "
-        + ", ".join(header[k][0] for k in keep))
-
-    # Cartesian form per node: u(t) = sum f * (a cos(base) + b sin(base)), a = A cos(phi),
-    # b = A sin(phi). Quantized to int16 with one scale per constituent.
-    # Laid out node by node, then constituent, then (a_u, b_u, a_v, b_v).
-    cons_meta, per_cons = [], []
-    for k in keep:
-        cname, freq, fnf, eqarg = header[k]
-        comps = []
-        for n in nodes:
-            ua, up, va, vp = vals[n][k]
-            comps.append((ua * math.cos(up * DEG), ua * math.sin(up * DEG),
-                          va * math.cos(vp * DEG), va * math.sin(vp * DEG)))
-        peak = max(abs(x) for c in comps for x in c) or 1.0
-        per_cons.append(comps)
-        cons_meta.append({"name": cname, "fRef": fnf, "v0u": eqarg, "scale": peak / 32767.0})
-    coeff = array.array("h")
-    for j in range(len(nodes)):
-        for comps, c in zip(per_cons, cons_meta):
-            coeff.extend(int(round(x / c["scale"])) for x in comps[j])
-    # the browser's astronomy constants come from the same calibration as `reconstruct`
-    C = calibrate([{"name": c["name"], "f_ref": c["fRef"], "v0u_deg": c["v0u"]} for c in cons_meta], db)
-    for c in cons_meta:
-        (nT, ns, nh, np_, npp), key = CONSTITUENTS[c["name"]]
-        c.update({"doodson": [nT, ns, nh, np_, npp], "nodal": key, "C": C[c["name"]]})
-
-    # Quantized constants as `reconstruct` reads them, to build the browser's self-check.
-    nk = len(keep)
-
-    def node_cons(j):
-        res = []
-        for i, c in enumerate(cons_meta):
-            base = (j * nk + i) * 4
-            qa, qb, qc, qd = (coeff[base + m] * c["scale"] for m in range(4))
-            res.append({"name": c["name"], "f_ref": c["fRef"],
-                        "u_amp": math.hypot(qa, qb), "u_phase": math.degrees(math.atan2(qb, qa)),
-                        "v_amp": math.hypot(qc, qd), "v_phase": math.degrees(math.atan2(qd, qc))})
-        return res
-
-    # self-check samples: the fastest node and a spread of others, at a spread of moments
-    # and, over the 40 fastest nodes plus a spread of 40 more, what truncation costs
-    speed = [sum(amp_at[k][j] for k in keep) for j in range(len(nodes))]
-    fastest = sorted(range(len(nodes)), key=lambda j: -speed[j])[:40]
-    picks = sorted(set(fastest[:1]) | set(range(0, len(nodes), max(1, len(nodes) // 5))))
-    probe = sorted(set(fastest) | set(range(0, len(nodes), max(1, len(nodes) // 40))))
-    t0 = datetime.now(UTC).replace(minute=0, second=0, microsecond=0)
-    moments = [t0 + timedelta(hours=h) for h in (0, 7.25, 31.5, 77.75, 166)]
-    checks, trunc_err = [], 0.0
-    for j in probe:
-        qc = node_cons(j)
-        Cq = calibrate([{"name": c["name"], "f_ref": c["f_ref"], "v0u_deg": m["v0u"]}
-                        for c, m in zip(qc, cons_meta)], db)
-        # every constituent, unquantized, at the same node: what truncation costs
-        allc = [{"name": header[k][0], "f_ref": header[k][2], "v0u_deg": header[k][3],
-                 "u_amp": vals[nodes[j]][k][0], "u_phase": vals[nodes[j]][k][1],
-                 "v_amp": vals[nodes[j]][k][2], "v_phase": vals[nodes[j]][k][3]}
-                for k in range(len(header))]
-        Call = calibrate(allc, db)
-        for t in moments:
-            u = reconstruct(qc, Cq, t, "u")
-            v = reconstruct(qc, Cq, t, "v")
-            if j in picks:
-                checks.append({"node": j, "t": int(t.timestamp()), "u": round(u, 5), "v": round(v, 5)})
-            uf, vf = reconstruct(allc, Call, t, "u"), reconstruct(allc, Call, t, "v")
-            trunc_err = max(trunc_err, math.hypot(u - uf, v - vf))
-    log(f"  truncation + quantization error against all {len(header)} constituents, "
-        f"{len(probe)} nodes x {len(moments)} moments: max {trunc_err:.3f} m/s")
-
-    xy = array.array("f")
-    for n in nodes:
-        xy.extend((lon[n], lat[n]))
-    tri = array.array("H")
-    for n in tris:
-        tri.extend(index[i] for i in n)
-    if sys.byteorder != "little":
-        for arr in (xy, tri, coeff):
-            arr.byteswap()
-    b64 = lambda arr: base64.b64encode(arr.tobytes()).decode("ascii")
-    doc = {
-        "name": name,
-        "label": label,
-        "bbox": [S, W, N, E],
-        "boxes": boxes,
-        "source": source,
-        "maxSpeedMs": max_speed,
-        "nodeCount": len(nodes),
-        "triangleCount": len(tris),
-        "constituents": cons_meta,
-        "nodes": b64(xy),
-        "triangles": b64(tri),
-        "coefficients": b64(coeff),
-        "checks": checks,
-    }
-    doc["landMask"] = land_mask(S, W, N, E)
-    doc.update(extra or {})
-    os.makedirs(os.path.dirname(out), exist_ok=True)
-    with open(out, "w") as fh:
-        fh.write(f"// Generated by tools/{tool} export-map; regenerate rather than edit.\n")
-        fh.write(f"// {label}: {len(nodes)} {db} mesh nodes, {len(tris)} elements, "
-                 f"{len(keep)} constituents. Times are reconstructed in the browser.\n")
-        fh.write("window.MAP_CURRENTS = window.MAP_CURRENTS || {};\n")
-        fh.write(f"window.MAP_CURRENTS[{json.dumps(name)}] = ")
-        fh.write(json.dumps(doc, separators=(",", ":")))
-        fh.write(";\n")
-    log(f"  wrote {os.path.relpath(out, WORKSPACE)} ({os.path.getsize(out) / 1e6:.1f} MB)")
-
-    # The index beside it lists every overlay, read by the map at load: this export's entry is
-    # added or replaced, the others kept.
     index_path = os.path.join(os.path.dirname(out), "index.js")
     entries = []
     if os.path.exists(index_path):
@@ -560,15 +424,10 @@ def write_overlay(name, label, boxes, db, lon, lat, nodes, tris, header, vals, m
             entries = json.loads(src[src.index("[", src.index("MAP_CURRENT_INDEX")):src.rindex("]") + 1])
         except ValueError as e:
             sys.exit(f"Could not read {index_path}: {e}. Fix or delete it, then re-run export-map.")
-    entries = [e for e in entries if e["name"] != name]
-    entry = {"name": name, "label": label, "file": os.path.relpath(out, WORKSPACE), "boxes": boxes}
-    if kind:
-        entry["kind"] = kind
-    entries.append(entry)
+    entries = [e for e in entries if e["name"] != entry["name"]] + [entry]
     entries.sort(key=lambda e: e["name"])
     with open(index_path, "w") as fh:
-        fh.write("// Generated by tools/blend_model.py export-map: "
-                 "every tidal current overlay.\n")
+        fh.write("// Generated by tools/blend_model.py export-map: every tidal current overlay.\n")
         fh.write("window.MAP_CURRENT_INDEX = ")
         fh.write(json.dumps(entries, indent=2))
         fh.write(";\n")

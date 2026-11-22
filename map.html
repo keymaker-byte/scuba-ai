@@ -890,10 +890,14 @@ class CurrentsControl {
           const check = field.selfCheck();
           if (!check.ok) {
             throw new Error(`${o.file} failed its self-check against ${this.tool} ` +
-              `(off by up to ${check.worst.toFixed(3)} m/s); regenerate it with export-map`);
+              `(off by up to ${Number.isFinite(check.worst) ? check.worst.toFixed(3) + ' m/s' : 'a missing point'} ` +
+              `at ${check.where}); regenerate it with export-map`);
           }
           fields.push(field);
         }
+        // the dive sites the overlays carry, each with its own coordinate and seabed
+        const names = new Map((window.MAP_DATA.sites || []).map(s => [s.slug, s.name]));
+        this.sites = fields.flatMap(f => f.data.checks.sites.map(s => ({ ...s, name: names.get(s.slug) || s.slug })));
         return new DiveCurrents.CurrentLayer(fields, { pane: 'paneCurrents' });
       })();
       this.loading.catch(() => { this.loading = null; });
@@ -925,18 +929,58 @@ class CurrentsControl {
     }
   }
 
-  // The current under the pointer at the map's moment: its speed, and the direction it sets
-  // toward, as the tool's `at` reads it.
-  showAt(latlng) {
+  // The site whose pin is under the pointer, within a pin's radius of its coordinate.
+  siteAt(latlng) {
+    const p = map.latLngToContainerPoint(latlng);
+    let best = null, bd = 11;
+    for (const s of this.sites || []) {
+      const d = p.distanceTo(map.latLngToContainerPoint([s.lat, s.lon]));
+      if (d < bd) { bd = d; best = s; }
+    }
+    return best;
+  }
+
+  // The seabed below MLLW at a point, from the depth layer's tiles: a depth in metres, null
+  // where they hold none (or the ground dries, or a lake), undefined where the tiles cannot be
+  // read at all.
+  async seabedAt(latlng) {
+    if (!depthSource && !this.noDepth) {
+      try { await loadDepth(); } catch (err) { this.noDepth = true; }
+    }
+    if (!depthSource) return undefined;
+    let r;
+    try {
+      r = await depthSource.readAt(map, latlng, mapTime());
+    } catch (err) {
+      return null;
+    }
+    return r && !r.lake && !r.land && r.mllw > 0 ? r.mllw : null;
+  }
+
+  // The current under the pointer at the map's moment, as the tool's `at` gives it there:
+  // over a site's pin, at the site's own coordinate and seabed; elsewhere, over the seabed the
+  // depth layer reads at the point. Where no seabed depth is at hand, the trails' own value.
+  async showAt(latlng) {
     if (!this.layer || !map.hasLayer(this.layer) || this.status.classList.contains('error')) return;
     this.lastPoint = latlng;
-    const r = this.layer.readAt(latlng.lat, latlng.lng);
+    const asked = {};
+    this.query = asked;
+    const site = this.siteAt(latlng);
+    const H = site ? site.seabed : await this.seabedAt(latlng);
+    if (this.query !== asked || !this.layer || !map.hasLayer(this.layer)) return;
+    const at = site || { lat: latlng.lat, lon: latlng.lng };
+    const r = H ? this.layer.readAt(at.lat, at.lon, H) : this.layer.drawnAt(latlng.lat, latlng.lng);
     if (!r) {
       this.status.textContent = `No ${this.name} model here`;
       return;
     }
     const toward = Math.round(r.toward) % 360;
-    this.status.textContent = `${r.speed.toFixed(2)} m/s toward ${String(toward).padStart(3, '0')}° (${COMPASS[Math.round(toward / 22.5) % 16]})`;
+    const flow = `${r.speed.toFixed(2)} m/s toward ${String(toward).padStart(3, '0')}° (${COMPASS[Math.round(toward / 22.5) % 16]})`;
+    const height = h => `${Math.min(r.field.ab, h).toFixed(1).replace(/\.0$/, '')} m above the ${h.toFixed(1)} m seabed`;
+    if (site) this.status.textContent = `${site.name}: ${flow}, ${height(H)}`;
+    else if (H) this.status.textContent = `${flow}, ${height(H)}`;
+    else if (H === null) this.status.textContent = `${flow} on the trails; no seabed depth here`;
+    else this.status.textContent = `${flow} on the trails; the depth layer gives the exact current from the map's web address`;
   }
 }
 const currents = new CurrentsControl({ kind: 'seafloor', toggle: 'toggle-currents', legend: 'currents-legend',
