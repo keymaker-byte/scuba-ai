@@ -275,7 +275,6 @@
 
     <div class="section">
       <label><input type="checkbox" id="toggle-satellite">Satellite imagery</label>
-      <label><input type="checkbox" id="toggle-depth-contours-noaa">Depth contours (NOAA)</label>
       <label><input type="checkbox" id="toggle-depth-contours-emodnet">Depth contours (EMODnet)</label>
       <label><input type="checkbox" id="toggle-depth-ncei">Depth (NCEI)</label>
       <div class="legend" id="depth-legend"></div>
@@ -431,15 +430,13 @@ const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/
   maxZoom: 19,
 });
 
-// Overlays, not base layers: each opt in separately, since each source only covers part of
-// this workspace's regions. Neither is a substitute for the workspace's own depth tools
-// (ncei_depth, emodnet_depth) in a site file; both are for visual orientation on the map
-// viewer only.
+// An overlay, not a base layer: it opts in separately, since its source covers only part of
+// this workspace's regions. It is for visual orientation on the map viewer only; a site
+// file's depth comes from the workspace's own depth tools (ncei_depth, emodnet_depth).
 
-// Both overlays are WMS: every tile is an image the server renders on demand, so each
-// tile is a real cost. NOAA's server answers a burst of parallel requests (both servers
-// speak HTTP/2, so the browser fires every visible tile at once) by dropping 10 to 20% of
-// them with an HTML "Could not access any server machines" page, which the browser cannot
+// The overlay is WMS: every tile is an image the server renders on demand, so each tile is
+// a real cost. The server speaks HTTP/2, so the browser fires every visible tile at once,
+// and a WMS server can drop part of such a burst with an error page the browser cannot
 // decode as an image, leaving a permanently blank square. Hence:
 //   tileSize 512        a quarter of the requests for the same screen, at the same detail
 //   updateWhenIdle      request tiles when a pan ends, rather than every 200 ms during it
@@ -471,17 +468,6 @@ function retryFailedTiles(layer) {
   });
   return layer;
 }
-
-// NOAA's official chart data, "Depths, currents, etc" layer only (isobaths and soundings),
-// transparent elsewhere. US chart coverage only, blank over foreign waters (e.g. Bonaire).
-const noaaContourLayer = retryFailedTiles(L.tileLayer.wms(
-  'https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/NOAAChartDisplay/MapServer/exts/MaritimeChartService/WMSServer',
-  {
-    ...WMS_OVERLAY_OPTIONS,
-    layers: '2',
-    attribution: 'NOAA Office of Coast Survey',
-  }
-));
 
 // EMODnet Bathymetry's depth contour lines, covering European seas and the wider North
 // Atlantic (roughly 70.5W-43E, 11N-90N), which reaches Bonaire but not the US Pacific
@@ -719,7 +705,6 @@ const toggleBoat = document.getElementById('toggle-boat');
 const toggleEntry = document.getElementById('toggle-entry');
 const toggleParking = document.getElementById('toggle-parking');
 const toggleSatellite = document.getElementById('toggle-satellite');
-const toggleDepthContoursNoaa = document.getElementById('toggle-depth-contours-noaa');
 const toggleDepthContoursEmodnet = document.getElementById('toggle-depth-contours-emodnet');
 const countEl = document.getElementById('count');
 
@@ -730,13 +715,6 @@ function applySatelliteToggle() {
   } else {
     map.removeLayer(satelliteLayer);
     map.addLayer(defaultLayer);
-  }
-}
-function applyNoaaContourToggle() {
-  if (toggleDepthContoursNoaa.checked) {
-    map.addLayer(noaaContourLayer);
-  } else {
-    map.removeLayer(noaaContourLayer);
   }
 }
 function applyEmodnetContourToggle() {
@@ -960,8 +938,7 @@ class CurrentsControl {
     }
     const toward = Math.round(r.toward) % 360;
     const flow = `${r.speed.toFixed(2)} m/s toward ${String(toward).padStart(3, '0')}° (${COMPASS[Math.round(toward / 22.5) % 16]})`;
-    const height = h => `${Math.min(r.field.ab, h).toFixed(1).replace(/\.0$/, '')} m above the ${h.toFixed(1)} m seabed`;
-    if (H) this.status.textContent = `${flow}, ${height(H)}`;
+    if (H) this.status.textContent = flow;
     else if (H === null) this.status.textContent = `${flow} on the trails; no seabed depth here`;
     else this.status.textContent = `${flow} on the trails; the depth layer gives the exact current from the map's web address`;
   }
@@ -1095,8 +1072,8 @@ async function showDepthAt(latlng) {
     depthStatus.textContent = r === null ? 'No NCEI depth here' : 'Above the highest tide';
     return;
   }
-  const total = r.total >= 0 ? metres(r.total) : `dry, ${(-r.total).toFixed(1)} m above the water`;
-  depthStatus.textContent = `MLLW ${metres(r.mllw)} + tide ${signed(r.tide)} = ${total}`;
+  const total = r.total >= 0 ? metres(r.total) : `Dry, ${(-r.total).toFixed(1)} m above the water`;
+  depthStatus.textContent = `${total} (MLLW ${metres(r.mllw)} + tide ${signed(r.tide)})`;
 }
 map.on('mousemove', e => {
   if (depthFrame) return;
@@ -1105,7 +1082,6 @@ map.on('mousemove', e => {
 map.on('click', e => showDepthAt(e.latlng));
 
 toggleSatellite.addEventListener('change', applySatelliteToggle);
-toggleDepthContoursNoaa.addEventListener('change', applyNoaaContourToggle);
 toggleDepthContoursEmodnet.addEventListener('change', applyEmodnetContourToggle);
 
 // Menu state (search, region filter, every toggle) survives a page refresh,
@@ -1119,7 +1095,6 @@ const persistedControls = {
   entry: toggleEntry,
   parking: toggleParking,
   satellite: toggleSatellite,
-  contoursNoaa: toggleDepthContoursNoaa,
   contoursEmodnet: toggleDepthContoursEmodnet,
   currents: currents.toggle,
   depthNcei: toggleDepthNcei,
@@ -1147,13 +1122,11 @@ if (savedMenuState) {
   toggleEntry.checked = !!savedMenuState.entry;
   toggleParking.checked = !!savedMenuState.parking;
   toggleSatellite.checked = !!savedMenuState.satellite;
-  toggleDepthContoursNoaa.checked = !!savedMenuState.contoursNoaa;
   toggleDepthContoursEmodnet.checked = !!savedMenuState.contoursEmodnet;
   currents.toggle.checked = !!savedMenuState.currents;
   toggleDepthNcei.checked = !!savedMenuState.depthNcei;
   // region-filter's own options don't exist yet; restored once they're built, below.
   applySatelliteToggle();
-  applyNoaaContourToggle();
   applyEmodnetContourToggle();
   currents.apply();
   applyDepthToggle();

@@ -716,17 +716,42 @@
         }
       }
       // water the mesh does not reach, within extendKm of its shoreline: the nearest edge point
+      // to the cell centre; then, for a cell beside one that draws whose centre is on land, to
+      // the first of a 4 x 4 set of points inside it that is water, so a cell the coastline
+      // crosses still draws its water
       if (field.buckets.size) {
+        const put = (idx, q) => {
+          this.elem[idx] = q.e / 3 + 1;
+          this.w1[idx] = Math.round(q.w1 * 255);
+          this.w2[idx] = Math.round(q.w2 * 255);
+        };
         for (let r = 0; r < this.rows; r++) {
           const lat = invMercY(this.yN - (r + 0.5) * this.dY);
           for (let c = 0; c < this.cols; c++) {
             const idx = r * this.cols + c;
             if (this.elem[idx] !== 0) continue;
             const q = field.edgePoint(lat, W + (c + 0.5) * this.dLon);
-            if (!q) continue;
-            this.elem[idx] = q.e / 3 + 1;
-            this.w1[idx] = Math.round(q.w1 * 255);
-            this.w2[idx] = Math.round(q.w2 * 255);
+            if (q) put(idx, q);
+          }
+        }
+        const drawn = this.elem.slice();
+        const subs = [];
+        for (const oy of [0.125, 0.375, 0.625, 0.875]) for (const ox of [0.125, 0.375, 0.625, 0.875]) subs.push([ox, oy]);
+        for (let r = 0; r < this.rows; r++) {
+          for (let c = 0; c < this.cols; c++) {
+            const idx = r * this.cols + c;
+            if (drawn[idx] !== 0) continue;
+            let beside = false;
+            for (let rr = Math.max(0, r - 1); rr <= Math.min(this.rows - 1, r + 1) && !beside; rr++) {
+              for (let cc = Math.max(0, c - 1); cc <= Math.min(this.cols - 1, c + 1); cc++) {
+                if (drawn[rr * this.cols + cc] !== 0) { beside = true; break; }
+              }
+            }
+            if (!beside || !field.onLand(W + (c + 0.5) * this.dLon, this.yN - (r + 0.5) * this.dY)) continue;
+            for (const [ox, oy] of subs) {
+              const q = field.edgePoint(invMercY(this.yN - (r + oy) * this.dY), W + (c + ox) * this.dLon);
+              if (q) { put(idx, q); break; }
+            }
           }
         }
       }
@@ -781,29 +806,36 @@
 
   // ---- colour ---------------------------------------------------------------------------------
 
-  // Speed in m/s to a trail colour, in stepped bands so each level stands apart from the next,
-  // in hues the depth layer's blues leave free: white at still water and violet through the slow
-  // bands, a jump to teal at SLOW, the window threshold, then green and yellow to red in the
-  // fastest passes. Each band runs from its own speed up to the next band's; the legend shows
-  // the same bands.
+  // Speed in m/s to a trail colour, in hues the depth layer's blues leave free: white at still
+  // water and deepening greens through the slow water, a jump to a light lime at SLOW, the window
+  // threshold, then lime into yellow and on through orange to dark red in the fastest passes. The anchors below
+  // set the colours; between each two a band halfway in speed takes the colour halfway between
+  // them, so the colour moves in small steps, except across SLOW, which stays a clean jump. Each
+  // band runs from its own speed up to the next band's; the legend shows the same bands.
   const SLOW = 0.25;
-  const BANDS = [
+  const ANCHORS = [
     [0.00, [255, 255, 255]],
-    [0.05, [196, 181, 253]],
-    [0.10, [167, 139, 250]],
-    [0.15, [139, 92, 246]],
-    [0.20, [109, 40, 217]],
-    [0.25, [20, 184, 166]],
-    [0.35, [34, 197, 94]],
-    [0.50, [132, 204, 22]],
-    [0.70, [234, 179, 8]],
-    [0.90, [245, 158, 11]],
+    [0.05, [187, 247, 208]],
+    [0.10, [134, 239, 172]],
+    [0.15, [74, 222, 128]],
+    [0.20, [22, 163, 74]],
+    [0.25, [163, 230, 53]],
+    [0.35, [210, 226, 40]],
+    [0.50, [250, 204, 21]],
+    [0.70, [245, 158, 11]],
+    [0.90, [251, 146, 60]],
     [1.10, [249, 115, 22]],
-    [1.40, [239, 68, 68]],
+    [1.40, [234, 88, 12]],
     [1.80, [220, 38, 38]],
     [2.20, [185, 28, 28]],
     [2.75, [127, 29, 29]],
   ];
+  const BANDS = ANCHORS.flatMap(([from, rgb], i) => {
+    const next = ANCHORS[i + 1];
+    if (!next || next[0] === SLOW) return [[from, rgb]];
+    const mid = Math.round((from + next[0]) / 2 * 1000) / 1000;
+    return [[from, rgb], [mid, rgb.map((c, k) => Math.round((c + next[1][k]) / 2))]];
+  });
   const STROKES = BANDS.map(([, rgb]) => `rgb(${rgb.join(',')})`);
   // trail opacity: where stations correct the field, and where none is within reach
   const FADES = [1, 0.35];
@@ -817,7 +849,7 @@
 
   function makeLayer(L) {
     return L.Layer.extend({
-      options: { pane: 'overlayPane', particleSpeed: 0.75, particleDensity: 1 / 220, maxParticles: 6000 },
+      options: { pane: 'overlayPane', particleSpeed: 0.45, particleDensity: 1 / 220, maxParticles: 6000 },
 
       initialize(fields, options) {
         L.setOptions(this, options);
