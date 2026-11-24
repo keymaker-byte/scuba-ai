@@ -16,7 +16,7 @@ The islands sit at the junction of three open straits, with the exchange between
 
 Alongside the conditions, every plan carries:
 
-- **Depth.** `noaa_tide.md` at the site's tide station, turning the site's MLLW depths into depth below the surface across the dive.
+- **Depth.** `tide.md` at the site's tide station, turning the site's MLLW depths into depth below the surface across the dive.
 - **Past dives.** `subsurface_log.md`, the site's earlier dives: notes, hazards hit, and any timed slacks.
 - **Ferry and gas.** An island dive runs on the Washington State Ferries schedule out of Anacortes, and the islands have no public air fill: the plan carries the sailings there and back, and every cylinder the day needs, filled on the mainland.
 

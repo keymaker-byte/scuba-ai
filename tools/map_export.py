@@ -38,7 +38,8 @@ from lib.ncei import (DATUM, LAKE_MIN, TILE_DEG, _Grid, _join, _lake_record, _Ro
                       _tile_lat, lake_level)
 from lib.seabed import Seabed  # noqa: E402
 from lib.tidal_astronomy import CONS  # noqa: E402
-from lib.tides import RATE, height, prepare, station, station_list  # noqa: E402
+from lib import tide  # noqa: E402
+from lib.tide_harmonics import RATE, height, prepare  # noqa: E402
 
 WORKSPACE = os.path.dirname(HERE)
 ROOT = WORKSPACE
@@ -819,45 +820,50 @@ def datum_grids(boxes):
 
 
 MAP_FILE = os.path.join(ROOT, "map", "tides", "stations.js")
+DATUM_TIDE = "MLLW"  # the datum the depth layer places its depths on, and every exported tide is above
 
 
 def export_tides(boxes):
-    """Write map/tides/stations.js for the map viewer's depth layer: every reference station
-    inside the boxes with constants, MSL and MLLW, its constituents prepared for each year the
+    """Write map/tides/stations.js for the map viewer's depth layer: every station of every tide
+    source inside the boxes predicted from its own harmonic constants with its heights above
+    MLLW, the datum the depth layer is placed on, its constituents prepared for each year the
     map may ask about and its heights at sample moments, which the viewer reproduces before it
     uses them; and NAVD 88's height above MLLW on a grid over the boxes (datum_grids), which
     places the depth layer's NAVD 88 depths on MLLW."""
-    st = station_list()["stations"]
-    inside = lambda lat, lon: any(s <= lat <= n and w <= lon <= ea for s, w, n, ea in boxes)
-    ids = sorted(sid for sid, e in st.items() if e["type"] == "R" and inside(e["lat"], e["lon"]))
     y0 = date.today().year - MAP_YEARS_BACK
     years = list(range(y0, date.today().year + MAP_YEARS_AHEAD + 1))
     rng = random.Random(1)
     out, left_out = [], []
-    for sid in ids:
-        doc = station(sid)
-        if not doc.get("cons") or doc.get("msl") is None or doc.get("mllw") is None:
-            left_out.append(f"{sid} {doc['name']}: no constants or no MSL/MLLW datum")
+    for src, sid, e in tide.in_boxes(boxes):
+        if e["kind"] != "reference":
             continue
-        prep = {y: prepare(doc["cons"], y) for y in years}
+        name = tide.label(src, sid)
+        if src.datum != DATUM_TIDE:
+            left_out.append(f"{name} {e['name']}: heights above {src.datum}, and the map's depths are on {DATUM_TIDE}")
+            continue
+        h, why = tide.Station(src, src.load(sid)).constants()
+        if h is None:
+            left_out.append(f"{name} {e['name']}: {why}")
+            continue
+        prep = {y: prepare(h["cons"], y) for y in years}
         checks = []
         for _ in range(4):
             t = datetime(rng.choice(years), 1, 1, tzinfo=timezone.utc) + timedelta(minutes=rng.randrange(525600))
-            checks.append({"t": int(t.timestamp() * 1000), "h": round(height(doc, t), 5)})
+            checks.append({"t": int(t.timestamp() * 1000), "h": round(height(h, t), 5)})
         # The highest tide of the year, hourly: ground below it is the tide's to cover.
         y = date.today().year
         start = datetime(y, 1, 1, tzinfo=timezone.utc)
-        high = max(height(doc, start + timedelta(hours=k)) for k in range(366 * 24))
+        high = max(height(h, start + timedelta(hours=k)) for k in range(366 * 24))
         out.append({
-            "id": sid, "name": doc["name"], "lat": doc["lat"], "lon": doc["lon"],
-            "msl": round(doc["msl"] - doc["mllw"], 4), "high": round(high, 3),
+            "id": name, "name": e["name"], "lat": e["lat"], "lon": e["lon"],
+            "msl": round(h["z0"], 4), "high": round(high, 3),
             "coef": [list(c) for c, _, _ in prep[years[0]]],
             "years": {str(y): {"arg": [round(k, 5) for _, k, _ in p], "amp": [round(m, 6) for _, _, m in p]}
                       for y, p in prep.items()},
             "checks": checks,
         })
     if not out:
-        sys.exit("No reference station inside the boxes carries constants and an MLLW datum.")
+        sys.exit(f"No tide station inside the boxes carries harmonic constants and a {DATUM_TIDE} datum.")
     datum = datum_grids(boxes)
     data = {"built": date.today().isoformat(), "epoch": astro.EPOCH.isoformat(), "rate": list(RATE),
             "first_year": years[0], "last_year": years[-1], "stations": out, "datum": datum}

@@ -1,5 +1,5 @@
 // Tide heights for the map viewer's depth layer, reproduced from NOAA's harmonic constants
-// exactly as tools/noaa_tide.py predicts them.
+// exactly as tools/tide.py predicts them (tools/lib/tide_harmonics.py).
 //
 // `tools/map_export.py tides` writes map/tides/stations.js (window.MAP_TIDES): each
 // reference station's constituents, prepared for every year the map may ask about (the
@@ -123,7 +123,7 @@
       };
     }
 
-    // Reproduce the heights noaa_tide.py computed at its sample moments.
+    // Reproduce the heights tools/lib/tide_harmonics.py computed at its sample moments.
     selfCheck() {
       let worst = 0;
       this.stations.forEach((st, i) => {

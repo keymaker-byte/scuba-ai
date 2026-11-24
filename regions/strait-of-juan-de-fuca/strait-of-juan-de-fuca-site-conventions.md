@@ -20,7 +20,7 @@ These conventions apply to every site file written in this region.
   ```
 
 - **Tool.** `depth.md`, the seabed depth below MLLW at the dive area coordinate.
-- **Tool.** `noaa_tide.md`, the tide station: its typical range (median daily range, largest daily range, the year's span), and the dive log's maximum depths normalized to MLLW for the depth range.
+- **Tool.** `tide.md`, the tide station: its typical range (median daily range, largest daily range, the year's span), and the dive log's maximum depths normalized to MLLW for the depth range.
 - **Tide station.** A NOAA station in the same body of water as the site, its name and position verified.
 - **Western mouth.** The fine-grained bathymetry gives out around Tatoosh Island and Duncan Rock, falling back to a coarse global grid; a site's depths there are a starting point to verify on the day.
 

@@ -5,7 +5,7 @@
     "file": "~/Library/Application Support/Subsurface/<your-log>.xml"
   },
 
-  "noaa_tide": {},
+  "tide": {},
 
   "current": {
     "max_speed_ms": 0.25

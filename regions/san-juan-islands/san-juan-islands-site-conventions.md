@@ -24,7 +24,7 @@ Read in full for every site file.
   ```
 
 - **Tool.** `depth.md`, the seabed depth below MLLW at the dive area coordinate.
-- **Tool.** `noaa_tide.md`, the tide station: its typical range (median daily range, largest daily range, the year's span), and the dive log's maximum depths normalized to MLLW for the depth range.
+- **Tool.** `tide.md`, the tide station: its typical range (median daily range, largest daily range, the year's span), and the dive log's maximum depths normalized to MLLW for the depth range.
 - **Tide station.** A NOAA station on the same channel or shore as the site, its name and position verified. The islands carry a dense network of subordinate tide stations, so the nearest station often sits across a pass or on another island's shore; where it does, the nearest one on the site's own side of the pass governs.
 
 ## Current

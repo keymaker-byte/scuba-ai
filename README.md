@@ -36,7 +36,7 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 
 | Tool | Source | Does | Script |
 |---|---|---|---|
-| [NOAA CO-OPS water levels](tools/noaa_tide.md) | NOAA CO-OPS | Tide height predictions at a NOAA tide station, computed locally from NOAA's harmonic constants; converts an observed depth to depth below MLLW datum and back (`normalize` / `project`). | `noaa_tide.py` |
+| [Tide](tools/tide.md) | NOAA CO-OPS | Tide height at a station of any tide source the tool reads, computed locally and kept locally; today NOAA's tide stations, from NOAA's harmonic constants, above MLLW. Converts an observed depth to depth below the station's datum and back (`normalize` / `project`). | `tide.py` |
 | [Current](tools/current.md) | ADCIRC ENPAC15 and EC2015, NOAA CO-OPS, CHS | The tidal current at any point and height above the seabed: the ADCIRC field corrected bin by bin by the NOAA and CHS stations around it, exact at the stations; the current tool for sites and plans. Its method and how to extend it: [design](tools/current_design.md). | `current.py` |
 | [Map export](tools/map_export.md) | Current, Depth (NCEI coastal DEM), NOAA CO-OPS | Writes the map viewer's tidal current, depth and tide station layers over the areas in `map/coverage.json`, with the same library functions the tools answer with. | `map_export.py` |
 | [Depth](tools/depth.md) | NOAA NCEI, NOAA VDatum, GSC | Seabed depth at any point below the datum of the water there (MLLW in US water, CHS Chart Datum in Canadian water, the surface in a lake), from whichever bathymetry covers it, kept locally; today the NCEI coastal DEM on the US coasts, with MLLW from VDatum's grids, and the GSC West Coast DEM on Canada's west coast. | `depth.py` |

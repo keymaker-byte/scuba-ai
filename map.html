@@ -983,7 +983,7 @@ function loadDepth() {
       const tides = new DiveTides.TideModel(window.MAP_TIDES);
       const tideCheck = tides.selfCheck();
       if (!tideCheck.ok) {
-        throw new Error('the tide stations failed their self-check against noaa_tide.py ' +
+        throw new Error('the tide stations failed their self-check against tide.py ' +
           `(off by up to ${tideCheck.worst.toFixed(3)} m); regenerate them with map_export.py tides`);
       }
       const datumCheck = tides.datumCheck();
