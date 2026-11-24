@@ -4,7 +4,7 @@ its own datum, or None where it holds nothing; `Seabed` asks them in order and n
 that answered. A new bathymetry joins by adding a class with `name`, `datum` and `elevation`
 to SOURCES."""
 from lib.dcbd import grid as dcbd_grid, utm as dcbd_utm
-from lib import ncei
+from lib import gsc, ncei
 from lib.dem_tiles import Tile
 
 
@@ -25,6 +25,21 @@ class NceiTiles:
         if t is None:
             t = self.open[path] = Tile(path)
         return t.value(*t.pixel(lat, lon))
+
+
+class GscWestCoast:
+    """The GSC Canada West Coast DEM, 10 m, British Columbia and the Salish Sea: `lib/gsc.py`'s one
+    GeoTIFF, taken out of NRCan's zip the first time a point inside its extent is asked for (7.3 GB).
+    Its sea depths are on CHS Chart Datum, a metre or two from NAVD 88, well inside what a
+    station's height above the seabed, as a fraction of the depth, is sensitive to."""
+    name = gsc.NAME
+    datum = "CHS Chart Datum"
+
+    def elevation(self, lat, lon):
+        if not gsc.in_box(lat, lon):
+            return None
+        t = gsc.tile()
+        return t.value(*gsc.pixel(t, lat, lon))
 
 
 class DcbdBonaire:
@@ -48,7 +63,7 @@ class DcbdBonaire:
         return self.grid.value(*p) if p else None
 
 
-SOURCES = (NceiTiles, DcbdBonaire)
+SOURCES = (NceiTiles, GscWestCoast, DcbdBonaire)
 
 
 class Seabed:

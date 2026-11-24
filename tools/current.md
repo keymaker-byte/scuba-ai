@@ -2,15 +2,16 @@
 
 <https://adcirc.org/products/adcirc-tidal-databases/>, <https://api.tidesandcurrents.noaa.gov/mdapi/prod/>, <https://tides.gc.ca/en/web-services-offered-canadian-hydrographic-service>
 
-The tidal current at any point of a built region, 2 m above the seabed and in the fastest water above: an ADCIRC tidal database corrected by the current stations around the point, and exact at a station's own position. A site's constants are extracted once into its JSON, and every slack, speed and window in a plan comes from them. How it works, how accurate it is, and how to extend it is `tools/current_design.md`.
+The tidal current at any point of a built region, 2 m above the seabed and in the fastest water above: an ADCIRC tidal database corrected by the current stations around the point, NOAA's in US water and the Canadian Hydrographic Service's in Canadian water, and equal to a station's own current at its position. Both networks correct the database the same way, so a site reads one tool on either side of the border. A site's constants are extracted once into its JSON, and every slack, speed and window in a plan comes from them. How it works, how accurate it is, and how to extend it is `tools/current_design.md`.
 
 - **Use it for.** Writing a site: `extract --site` once the dive area coordinate and its `seabed_m` hold. Planning a dive: `predict`, `window` and `at` on the site JSON. Timing an observed offset: `predict --raw`. The map's tidal current layer is written by `map_export.md` from the same library, `tools/lib/blend.py`.
 - **A refused extract stops the site.** The tool refuses a point outside its coverage and says why. Report it and wait.
 - **Read the header.** Every prediction names the flood direction and the station that sets it, the stations behind the correction, and the observed offset applied, and warns when no station lies within reach (the prediction is the database's own current) or when the extract is out of date (run `extract --site` again).
 - **Hard places.** A weak, eddying current off a point, in a bay or behind pilings can differ by an hour from a station a km away; the site's prose describes that water, and an observed offset corrects its timing.
 - **Tidal currents only.** Wind drift and river outflow are absent.
+- **A CHS station is a fit to CHS's predictions.** CHS publishes predictions and keeps its constants to itself, so `build` fits each CHS station's constants to this year's predictions. At the station they follow CHS's own slacks within 3 minutes at the median and 9 minutes for 90% of them, and peak speed within 5%; at a few rapids and narrows whose current is far from a sum of tides (Tillicum Bridge, Juan de Fuca East, Sechelt Rapids) a slack can sit 20 to 30 minutes from CHS's. CHS's own Tide and Current Tables are the official word for timing a dive at one of its stations.
 - **Times.** `--tz` is required on every prediction: the site's `tz` from its JSON.
-- **Data downloads on first use.** Each source is downloaded the first time a command needs it and read locally after that, so a first `build` can run long. A failed download stops the run with what failed and the URL; report it and wait.
+- **Data downloads on first use.** Each source is downloaded the first time a command needs it and read locally after that, into `tools/db/`, so a first `build` can run long: a CHS station's year takes about two minutes, at the 30 requests a minute CHS allows. Deleting a source's folder fetches its current data on the next run. A failed download stops the run with what failed and the URL; report it and wait.
 
 ## The site JSON
 
@@ -30,7 +31,8 @@ The minutes between the model's slack and the slack divers time at the site, fro
 
 ## Upkeep
 
-- **Stale station data.** Station networks replace their data from time to time, and the cached copy keeps the old. Run `verify-stations --file` on a site's JSON before a plan that matters more than usual, and at least once a year. A failure is a stop: delete the files the message names, then rebuild.
+- **Stale station data.** Station networks replace their data from time to time, and the cached copy keeps the old. Run `verify-stations --file` on a site's JSON before a plan that matters more than usual, and at least once a year. A failure is a stop: delete the files the message names, then rebuild. A NOAA station passes within 0.02 m/s and 3 minutes of NOAA's live predictions, a CHS station when every cached value and event matches CHS's live API.
+- **A new year.** CHS publishes a year at a time, and `build` fits CHS stations to the current year's predictions, downloading that year when it is missing. Rebuild in January.
 - **Rebuild.** After station data is replaced: `build` and `verify`, each with no `--name` to cover everything built, then `extract --site` on every site JSON, and `map_export.py currents` for the map.
 - **`selftest`.** After any change to `tools/lib/adcirc.py` or `tools/lib/tcd.py`. It checks the astronomy against each database's header, and the legacy tables' reader against slack times NOAA printed in its 2013 Tidal Current Tables.
 

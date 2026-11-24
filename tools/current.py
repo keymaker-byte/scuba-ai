@@ -26,7 +26,7 @@ from lib.adcirc import DATABASES, read_vel_header, read_vel_nodes  # noqa: E402
 from lib.adcirc import selftest as adcirc_selftest  # noqa: E402
 from lib.current_harmonics import events, series  # noqa: E402
 from lib.current_stations import NETWORKS, cx  # noqa: E402
-from lib import noaa_stations  # noqa: E402
+from lib import chs_stations, noaa_stations  # noqa: E402
 from lib.seabed import Seabed  # noqa: E402
 from lib.tcd import legacy as legacy_harmonics, selftest as legacy_selftest, velocity  # noqa: E402
 from lib.blend import (ABOVE_BOTTOM, adcirc_cons, along, built_regions, database_for, DB, DEG, EXACT_KM,
@@ -85,7 +85,7 @@ def build_one(a):
     S, W, N, E = a.bbox
     inbox = lambda la, lo: S <= la <= N and W <= lo <= E
     db = database_for(a.bbox)
-    fit_year = date.today().year  # the year of CHS predictions the Canadian constants are fitted to
+    fit_year = date.today().year  # the year of CHS predictions the CHS stations' constants are fitted to
     networks = [n() for n in NETWORKS]
     kind_of = {n.kind: n for n in networks}
     sources, others = [], []
@@ -469,16 +469,55 @@ def cmd_verify(a):
     each(a, verify_one, built_regions(), "region", lambda bbox: {})
 
 
+def _flip(b):
+    """A bin turned end for end: every constant's phase by half a turn, the steady current's sign."""
+    return {"cons": [[c[0], c[1], (c[2] + 180) % 360, 0, 0] for c in b["cons"]], "mean_major": -(b.get("mean_major") or 0)}
+
+
+def _noaa_bins(s):
+    return [b for b in noaa_stations.station(s["id"])["bins"].values() if b.get("cons") and b.get("depth") is not None]
+
+
+def _truth(s, t0, minutes, ser):
+    """What a station's own network predicts at it, for the tests: (fraction of the depth above the
+    seabed, flood azimuth, events with flood positive). A NOAA station's deepest bin, summed from
+    NOAA's constants; a CHS station's own published slacks and maxima, at mid-depth, where its
+    single bin sits. None for a NOAA station with no bin at a known depth."""
+    if s["kind"] == "chs":
+        st = chs_stations.station(s["code"])
+        return 0.5, s["flood"], chs_stations.signed_events(st, t0, t0 + timedelta(minutes=minutes))
+    bins = _noaa_bins(s)
+    if not bins:
+        return None
+    tb = max(bins, key=lambda b: b["depth"])
+    H = s["seabed_dem"] or s["seabed_mesh"]
+    return max((H - tb["depth"]) / H, 0.02), tb["azimuth"], tb
+
+
+def _nearest_bin(o, frac):
+    """The nearest other station's own current, for the copy-the-nearest-station comparison: a CHS
+    station's fitted constants, a NOAA station's bin closest to the height."""
+    if o["kind"] == "chs":
+        return {"cons": o["cons"], "mean_major": o["mean_major"], "azimuth": o["flood"]}
+    ob = _noaa_bins(o)
+    Ho = o["seabed_dem"] or o["seabed_mesh"]
+    return min(ob, key=lambda b: abs((Ho - b["depth"]) / Ho - frac))
+
+
+NETWORK_NAME = {"noaa": "NOAA", "chs": "CHS"}
+
+
 def verify_one(a):
     reg = load_region(a.name)
     sources = reg["sources"]
-    if not any(s["kind"] == "noaa" for s in sources):
-        # every test predicts a NOAA station's bins; a region without them has nothing to test,
-        # and its predictions are the database's own current scaled to the height
+    kinds = [k for k in NETWORK_NAME if any(s["kind"] == k for s in sources)]
+    if not kinds:
+        # every test predicts a station's own current; a region without stations has nothing to
+        # test, and its predictions are the database's own current scaled to the height
         out = {"verified": date.today().isoformat(), "stations": 0}
         with open(os.path.join(DB, f"{reg['name']}_verify.json"), "w") as f:
             json.dump(out, f, indent=1)
-        print(f"The {reg['name']} region holds no NOAA harmonic station: nothing to verify against. "
+        print(f"The {reg['name']} region holds no current station: nothing to verify against. "
               f"Its predictions are the {reg['db']} database's own current, scaled to the height.")
         return
     days, start = VERIFY_DAYS, date(date.today().year, 12, 1)
@@ -486,18 +525,15 @@ def verify_one(a):
     minutes = days * 1440
     ser = lambda b: series(b, t0, minutes, 6)
     methods = ["nearest station", "ADCIRC, 1/7 power", "current tool"]
-    res = {m: [] for m in methods}
+    res = {k: {m: [] for m in methods} for k in kinds}
     law = lambda f: (8 / 7) * max(f, 0.01) ** (1 / 7)
-    log(f"Hidden stations: each NOAA station's deepest bin, predicted without it, {days} days from {start}...")
-    for i, s in enumerate(sources):
-        if s["kind"] != "noaa":
+    log(f"Hidden stations: each station predicted without it, {days} days from {start}: a NOAA station's "
+        "deepest bin, a CHS station's own published slacks and maxima...")
+    for s in sources:
+        tr = _truth(s, t0, minutes, ser)
+        if tr is None:
             continue
-        bins = [b for b in noaa_stations.station(s["id"])["bins"].values() if b.get("cons") and b.get("depth") is not None]
-        if not bins:
-            continue
-        tb = max(bins, key=lambda b: b["depth"])
-        H = s["seabed_dem"] or s["seabed_mesh"]
-        frac = max((H - tb["depth"]) / H, 0.02)
+        frac, flood_az, tb = tr
         dists = floor_km({int(j): d for j, d in s["water_km"].items()}, s["lat"], s["lon"], sources)
         cand = neighbours(dists, sources, exclude=s["id"])
         prof = profile_table(reg["profile_rows"], exclude=s["id"])
@@ -507,28 +543,23 @@ def verify_one(a):
         preds["ADCIRC, 1/7 power"] = make_bin(raw, 0.0, az)
         near = sorted((d, j) for j, d in dists.items() if sources[j]["id"] != s["id"])
         if near:
-            o = sources[near[0][1]]
-            if o["kind"] == "chs":
-                nb = {"cons": o["cons"], "mean_major": o["mean_major"], "azimuth": o["flood"]}
-            else:
-                ob = [b for b in noaa_stations.station(o["id"])["bins"].values() if b.get("cons") and b.get("depth") is not None]
-                Ho = o["seabed_dem"] or o["seabed_mesh"]
-                nb = min(ob, key=lambda b: abs((Ho - b["depth"]) / Ho - frac))
-            if math.cos((nb["azimuth"] - az) * DEG) < 0:
-                nb = {"cons": [[c[0], c[1], (c[2] + 180) % 360, 0, 0] for c in nb["cons"]],
-                      "mean_major": -(nb.get("mean_major") or 0)}
-            preds["nearest station"] = nb
-        sign = 1 if math.cos((tb["azimuth"] - az) * DEG) >= 0 else -1
-        truth = events(ser(tb if sign > 0 else {"cons": [[c[0], c[1], (c[2] + 180) % 360, 0, 0] for c in tb["cons"]],
-                                                   "mean_major": -(tb.get("mean_major") or 0)}))
+            nb = _nearest_bin(sources[near[0][1]], frac)
+            preds["nearest station"] = _flip(nb) if math.cos((nb["azimuth"] - az) * DEG) < 0 else nb
+        sign = 1 if math.cos((flood_az - az) * DEG) >= 0 else -1
+        if s["kind"] == "chs":
+            truth = [(t, k if sign > 0 or k == "slack" else ("ebb" if k == "flood" else "flood"), sign * v) for t, k, v in tb]
+        else:
+            truth = events(ser(tb if sign > 0 else _flip(tb)))
         km = cand[0][0] if cand else (near[0][0] if near else 99)
         for m in methods:
             sc = score(truth, events(ser(preds[m]))) if m in preds else None
             if sc:
                 sc.update(id=s["id"], km=km)
-            res[m].append(sc)
-    _table(f"Hidden stations, {sum(1 for r in res[methods[-1]] if r)} NOAA stations' deepest bins, "
-           f"by the distance through the water to the nearest other station", res, methods)
+            res[s["kind"]][m].append(sc)
+    for k in kinds:
+        what = "deepest bins" if k == "noaa" else "own published slacks and maxima"
+        _table(f"Hidden stations, {sum(1 for r in res[k][methods[-1]] if r)} {NETWORK_NAME[k]} stations' {what}, "
+               f"by the distance through the water to the nearest other station", res[k], methods)
 
     leg_res = {m: [] for m in ("nearest station", "ADCIRC, surface", "current tool")}
     if reg["legacy"]:
@@ -562,22 +593,13 @@ def verify_one(a):
             cand = neighbours(dists, sources)
             bm_, baz, _ = point_bin(uv, cand, prof, 0.9, dists, sources)
             if math.cos((baz - az) * DEG) < 0:
-                bm_ = {"cons": [[c[0], c[1], (c[2] + 180) % 360, 0, 0] for c in bm_["cons"]],
-                       "mean_major": -bm_["mean_major"], "azimuth": az}
+                bm_ = {**_flip(bm_), "azimuth": az}
             preds = {"current tool": bm_,
                      "ADCIRC, surface": make_bin({k: z * 8 / 7 for k, z in along(uv, az).items()}, 0.0, az)}
             near = sorted((d, j) for j, d in dists.items())
             if near:
-                o = sources[near[0][1]]
-                if o["kind"] == "chs":
-                    nb = {"cons": o["cons"], "mean_major": o["mean_major"], "azimuth": o["flood"]}
-                else:
-                    ob = [b for b in noaa_stations.station(o["id"])["bins"].values() if b.get("cons")]
-                    nb = min(ob, key=lambda b: b.get("depth") or 0)
-                if math.cos((nb["azimuth"] - az) * DEG) < 0:
-                    nb = {"cons": [[c[0], c[1], (c[2] + 180) % 360, 0, 0] for c in nb["cons"]],
-                          "mean_major": -(nb.get("mean_major") or 0)}
-                preds["nearest station"] = nb
+                nb = _nearest_bin(sources[near[0][1]], 0.9)
+                preds["nearest station"] = _flip(nb) if math.cos((nb["azimuth"] - az) * DEG) < 0 else nb
             km = cand[0][0] if cand else (near[0][0] if near else 99)
             for m in leg_res:
                 sc = score(truth, events(ser(preds[m]))) if m in preds else None
@@ -587,47 +609,63 @@ def verify_one(a):
         _table(f"Legacy stations, {sum(1 for r in leg_res['current tool'] if r)} subordinate stations of "
                "the 2010 tables (their reference moved by their own corrections), near the surface", leg_res, list(leg_res))
 
-    # at the stations themselves: each NOAA station's deepest, middle and top bin, predicted at its own
-    # position with the station in place; the per-bin corrections make these the station's own
-    log("At the stations: each NOAA station's deepest, middle and top bins, with the station in place...")
-    at = {"slack": [], "speed": [], "direction": []}
+    # at the stations themselves, each predicted at its own position with the station in place:
+    # every NOAA station's deepest, middle and top bin, which the per-bin corrections make the
+    # station's own constants, and every CHS station's single bin against CHS's own published
+    # slacks and maxima, which measures how closely its fitted constants follow CHS
+    log("At the stations: each station at its own position and height, with the station in place...")
+    at = {k: {"slack": [], "speed": [], "direction": []} for k in kinds}
     prof = profile_table(reg["profile_rows"])
     for i, s in enumerate(sources):
-        if s["kind"] != "noaa" or not s["seabed_dem"]:
-            continue
-        bins = sorted((b for b in noaa_stations.station(s["id"])["bins"].values() if b.get("cons") and b.get("depth") is not None),
-                      key=lambda b: b["depth"])
-        if not bins:
+        if s["kind"] == "chs":
+            truths = [(0.5, s["flood"], _truth(s, t0, minutes, ser)[2])]
+        else:
+            if not s["seabed_dem"]:
+                continue
+            bins = sorted(_noaa_bins(s), key=lambda b: b["depth"])
+            H = s["seabed_dem"]
+            truths = [(min(max((H - tb["depth"]) / H, 0.02), 0.98), tb["azimuth"], events(ser(tb)))
+                      for tb in {id(b): b for b in (bins[-1], bins[len(bins) // 2], bins[0])}.values()] if bins else []
+        if not truths:
             continue
         dists = floor_km({int(j): d for j, d in s["water_km"].items()}, s["lat"], s["lon"], sources) | {i: 0.0}
         cand = neighbours(dists, sources)
-        H = s["seabed_dem"]
-        for tb in {id(b): b for b in (bins[-1], bins[len(bins) // 2], bins[0])}.values():
-            frac = min(max((H - tb["depth"]) / H, 0.02), 0.98)
+        for frac, flood_az, truth in truths:
             pb, az, _ = point_bin(s["uv"], cand, prof, frac, dists, sources)
-            sc = score(events(ser(tb)), events(ser(pb)))
+            sc = score(truth, events(ser(pb)))
             if sc:
-                at["slack"].append(sc["slack"])
+                at[s["kind"]]["slack"].append(sc["slack"])
                 if sc["speed"] is not None:
-                    at["speed"].append(sc["speed"])
-            at["direction"].append(abs(wrap90(az - tb["azimuth"])))
-    at_sum = {"n": len(at["direction"]), "slack_min": round(statistics.median(at["slack"]), 1),
-              "slack_p90": round(_q(at["slack"], 0.9), 1), "speed_pct": round(100 * statistics.median(at["speed"]), 1),
-              "speed_p90": round(100 * _q(at["speed"], 0.9), 1), "direction_deg": round(statistics.median(at["direction"]), 1),
-              "direction_p90": round(_q(at["direction"], 0.9), 1)}
-    print(f"\nAt the stations, {at_sum['n']} bins of NOAA stations, each predicted at its own position and height")
-    print(f"    slack {at_sum['slack_min']:g} min (90% within {at_sum['slack_p90']:g})   peak speed {at_sum['speed_pct']:g}% "
-          f"(90% within {at_sum['speed_p90']:g})   direction {at_sum['direction_deg']:g}° (90% within {at_sum['direction_p90']:g})")
+                    at[s["kind"]]["speed"].append(sc["speed"])
+            at[s["kind"]]["direction"].append(abs(wrap90(az - flood_az)))
+    at_sum = {}
+    for k in kinds:
+        x = at[k]
+        if not x["slack"]:
+            continue
+        at_sum[k] = {"n": len(x["direction"]), "slack_min": round(statistics.median(x["slack"]), 1),
+                     "slack_p90": round(_q(x["slack"], 0.9), 1), "speed_pct": round(100 * statistics.median(x["speed"]), 1),
+                     "speed_p90": round(100 * _q(x["speed"], 0.9), 1), "direction_deg": round(statistics.median(x["direction"]), 1),
+                     "direction_p90": round(_q(x["direction"], 0.9), 1)}
+        a_ = at_sum[k]
+        what = "bins of NOAA stations" if k == "noaa" else "CHS stations against CHS's own published slacks and maxima"
+        print(f"\nAt the stations, {a_['n']} {what}, each predicted at its own position and height")
+        print(f"    slack {a_['slack_min']:g} min (90% within {a_['slack_p90']:g})   peak speed {a_['speed_pct']:g}% "
+              f"(90% within {a_['speed_p90']:g})   direction {a_['direction_deg']:g}° (90% within {a_['direction_p90']:g})")
 
-    by = []
-    for lo, hi in BANDS_KM:
-        s = _summary([r for r in res["current tool"] if r and lo <= r["km"] < (hi if hi is not None else math.inf)])
-        if s:
-            by.append({"from_km": lo, "to_km": hi} | s)
+    def by_distance(r):
+        out = []
+        for lo, hi in BANDS_KM:
+            s = _summary([x for x in r["current tool"] if x and lo <= x["km"] < (hi if hi is not None else math.inf)])
+            if s:
+                out.append({"from_km": lo, "to_km": hi} | s)
+        return out
+
     out = {"verified": date.today().isoformat(), "start": start.isoformat(), "days": days,
-           "by_distance": by,
-           "hidden": {m: _summary(res[m]) for m in methods},
-           "legacy": {m: _summary(leg_res[m]) for m in leg_res}, "at_stations": at_sum}
+           "legacy": {m: _summary(leg_res[m]) for m in leg_res}}
+    for k in kinds:
+        out[k] = {"by_distance": by_distance(res[k]), "hidden": {m: _summary(res[k][m]) for m in methods},
+                  "at_stations": at_sum.get(k)}
     with open(os.path.join(DB, f"{reg['name']}_verify.json"), "w") as f:
         json.dump(out, f, indent=1)
     print(f"\n  wrote tools/db/current/{reg['name']}_verify.json, the figures the tool's documentation quotes")
@@ -705,7 +743,7 @@ def main():
     s.add_argument("--time", required=True, metavar="YYYY-MM-DD HH:MM")
     s.set_defaults(fn=cmd_at)
 
-    s = sub.add_parser("verify", help="accuracy against hidden NOAA stations and the legacy tables")
+    s = sub.add_parser("verify", help="accuracy at the stations, against hidden NOAA and CHS stations, and against the legacy tables")
     s.add_argument("--name", help="the region's name; omitted, every built region")
     s.set_defaults(fn=cmd_verify)
 
