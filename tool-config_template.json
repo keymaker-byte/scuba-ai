@@ -19,10 +19,6 @@
     "max_speed_ms": 0.25
   },
 
-  "adcirc_current": {
-    "max_speed_ms": 0.25
-  },
-
   "blend_model": {
     "max_speed_ms": 0.25
   },

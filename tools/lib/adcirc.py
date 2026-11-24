@@ -1,6 +1,6 @@
-"""ADCIRC tidal databases shared by adcirc_current.py and blend_model.py: the databases
-and their download, the astronomy calibrated to each run, the mesh and velocity readers, and the
-map viewer's coastline and overlay index."""
+"""ADCIRC tidal databases read by blend_model.py: the databases and their download, the
+astronomy calibrated to each run and its self-test, the mesh and velocity readers, and the map
+viewer's coastline and overlay index."""
 import gzip
 import json
 import math
@@ -206,19 +206,44 @@ def calibrate(cons, db):
     return C
 
 
-def reconstruct(cons, C, dt, comp):
-    """Depth-averaged velocity component (m/s) at UTC datetime `dt`. comp = 'u' (east) or
-    'v' (north)."""
-    s, h, p, N, pp, T = mean_longitudes(dt)
-    amp_key, ph_key = (comp + "_amp"), (comp + "_phase")
-    total = 0.0
-    for c in cons:
-        (nT, ns, nh, np_, npp), key = CONSTITUENTS[c["name"]]
-        a = (nT * T + ns * s + nh * h + np_ * p + npp * pp) * DEG
-        f, u = nodal(key, N, c["f_ref"])
-        base = a + u * DEG + C[c["name"]]
-        total += f * c[amp_key] * math.cos(base - c[ph_key] * DEG)
-    return total
+def selftest(dbs=None):
+    """Validate the astronomy against each database's fort.54 header values at its epoch: the
+    frequency implied by each constituent's Doodson coefficients, and its nodal factor f.
+    Prints a table per database and returns True when every database passes."""
+    ok = True
+    for db in (dbs or list(DATABASES)):
+        need_db(db)
+        epoch = nodal_epoch(db)
+        header = read_vel_header(db)
+        s, h, p, N, pp, T = mean_longitudes(epoch)
+        rates = {"T": 15.0, "s": 0.54901653, "h": 0.04106864, "p": 0.00464183, "pp": 0.00000196}
+        print(f"{db} astronomy self-test at mid-run, {epoch:%Y-%m-%d %H:%M} UTC")
+        print("  constituent   freq(mine)   freq(hdr)   dω%     f(mine)  f(hdr)   df")
+        fmax = wmax = 0.0
+        for name, freq, fnf, eqarg in header:
+            if name not in CONSTITUENTS:
+                sys.exit(f"  {db} carries {name}, a constituent this tool does not know.")
+            (nT, ns, nh, np_, npp), key = CONSTITUENTS[name]
+            deg_hr = (nT * rates["T"] + ns * rates["s"] + nh * rates["h"]
+                      + np_ * rates["p"] + npp * rates["pp"])
+            mine = deg_hr * DEG / 3600.0  # rad/s
+            dw = 100 * (mine - freq) / freq if freq else 0.0
+            f, _ = nodal(key, N, fnf)
+            df = f - fnf
+            wmax = max(wmax, abs(dw))
+            if key not in ("fixed",):
+                fmax = max(fmax, abs(df))
+            print(f"  {name:<11} {mine:.6e} {freq:.6e} {dw:+6.2f}  {f:7.4f} {fnf:7.4f} {df:+.4f}")
+        print(f"\n  max |dω| = {wmax:.3f}%   max |df| (computed groups) = {fmax:.4f}")
+        # Frequencies are structural (wrong Doodson coefficients show here); they must be tight.
+        # Nodal f is a series approximation of ADCIRC's exact value at mid-run; it agrees to a
+        # few thousandths, and a larger gap means the epoch or the mid-run convention is off.
+        if wmax < 0.1 and fmax < 0.01:
+            print("  PASS: frequencies match structurally; nodal factors within series tolerance.\n")
+        else:
+            ok = False
+            print("  CHECK: a large frequency deviation means a wrong Doodson coefficient.\n")
+    return ok
 
 # --------------------------------------------------------------------------------------
 # Mesh + fort.54 extraction

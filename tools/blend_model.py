@@ -9,6 +9,7 @@ database corrected by the current stations around the point, NOAA's and CHS's.
   blend_model.py at --file F --time "D HH:MM" --tz Z     current at a moment
   blend_model.py verify --name N                         accuracy against hidden stations
   blend_model.py export-map --bbox S W N E [...] --name N --label L   the map viewer's seafloor overlay
+  blend_model.py selftest [--db ENPAC15|EC2015]          the astronomy against each database's header
 """
 import argparse
 import cmath
@@ -26,6 +27,7 @@ sys.path.insert(0, HERE)
 from lib.adcirc import (CONSTITUENTS, DATABASES, WALK_STEP_M, calibrate, in_domain,  # noqa: E402
                         interp_polar, locate, mean_longitudes, need_db, nodal, read_mesh,
                         read_vel_header, read_vel_nodes, walk_in, land_mask, write_index)
+from lib.adcirc import selftest as adcirc_selftest  # noqa: E402
 from lib.current_harmonics import events, series  # noqa: E402
 from lib import shapes  # noqa: E402
 from lib.current_stations import NETWORKS, NOAA_DB, cx, noaa_arg, noaa_name  # noqa: E402
@@ -1322,6 +1324,11 @@ def cmd_export_map(a):
                       "boxes": boxes, "kind": "seafloor"})
 
 
+def cmd_selftest(a):
+    if not adcirc_selftest(a.db):
+        sys.exit(1)
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -1386,6 +1393,11 @@ def main():
     s.add_argument("--above-bottom", type=float, default=ABOVE_BOTTOM, metavar="M")
     s.add_argument("--out", help="output path (default map/currents/<name>.js)")
     s.set_defaults(fn=cmd_export_map)
+
+    s = sub.add_parser("selftest", help="the astronomy against each database's ADCIRC header")
+    s.add_argument("--db", choices=sorted(DATABASES), action="append",
+                   help="one database (repeatable); default every database")
+    s.set_defaults(fn=cmd_selftest)
 
     a = p.parse_args()
     a.fn(a)

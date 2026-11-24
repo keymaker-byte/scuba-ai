@@ -64,7 +64,7 @@ The trails use the same blend once per node at load, at the node's own seabed, a
 - **Correcting per constituent or per band only, and straight-line distance against distance through the water.** Neither moved the blind scores much; distance through the water stays because it keeps a station across a peninsula from correcting a point on the other side.
 - **The direction.** Turning the database's axis toward the stations' left timing and speed unchanged and brought the map's axis at the stations from 10° to 3° at the median; with per-bin corrections and exactness it is 0°.
 - **The flood label.** Naming the flood by the nearest station's flood bearing alone flipped several sites by about 180°, where the point's axis lies across the station's. Naming it by the timing (`by_timing`) follows the water; a flip that remains is the point really running against the station.
-- **The walk.** `adcirc_current --walk` moved a point outside the mesh to the nearest point 5 m inside it and predicted there. The shore extension replaces it with a cap, a land check and the prediction kept at the site's own coordinate and seabed.
+- **The walk.** The first current tool on the database moved a point outside the mesh to the nearest point 5 m inside it and predicted there. The shore extension replaced it with a cap, a land check and the prediction kept at the site's own coordinate and seabed.
 
 ### Alki Pipeline
 
@@ -130,4 +130,4 @@ A coast covered by two models, or a model refined by a regional one, would build
 
 ### Changing the method
 
-Change one thing, rebuild, and run `verify`. A change to the blend, the profile, the placing of a point or the prediction is mirrored in `map/currents.js`; `export-map` then proves the two agree at every site. A change to the region file's layout raises `FORMAT`, which makes every command ask for a rebuild. Keep the at-stations test at zero, compare the hidden and legacy medians with the figures above, and update `blend_model.md` and this file with what was tried and what it scored, kept or not. The settings in force are recorded in each region file under `settings`.
+Change one thing, rebuild, and run `verify`; a change to the astronomy in `tools/lib/adcirc.py` runs `selftest` first. A change to the blend, the profile, the placing of a point or the prediction is mirrored in `map/currents.js`; `export-map` then proves the two agree at every site. A change to the region file's layout raises `FORMAT`, which makes every command ask for a rebuild. Keep the at-stations test at zero, compare the hidden and legacy medians with the figures above, and update `blend_model.md` and this file with what was tried and what it scored, kept or not. The settings in force are recorded in each region file under `settings`.
