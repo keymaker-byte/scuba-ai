@@ -19,7 +19,7 @@ These conventions apply to every site file written in this region.
   depth below surface     =  datum depth                +  predicted tide height
   ```
 
-- **Tool.** `ncei_depth.md`, the seabed depth below MLLW at the dive area coordinate.
+- **Tool.** `depth.md`, the seabed depth below MLLW at the dive area coordinate.
 - **Tool.** `noaa_tide.md`, the tide station: its typical range (median daily range, largest daily range, the year's span), and the dive log's maximum depths normalized to MLLW for the depth range.
 - **Tide station.** A NOAA station in the same body of water and on the same side of any sill as the site, its name and position verified.
 

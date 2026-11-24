@@ -45,7 +45,7 @@ Planning a new dive is handled by the `create-dive-plan` skill: it holds the pla
 - @tools/chs_current.md
 - @tools/current.md
 - @tools/map_export.md
-- @tools/ncei_depth.md
+- @tools/depth.md
 - @tools/emodnet_depth.md
 - @tools/gebco_depth.md
 - @tools/dcbd_depth.md

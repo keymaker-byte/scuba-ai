@@ -1,0 +1,81 @@
+# Depth (seabed depth at any point)
+
+<https://www.ncei.noaa.gov/products/coastal-elevation-models>, <https://vdatum.noaa.gov>, <https://open.canada.ca/data/en/dataset/e6e11b99-f0cc-44f7-f5eb-3b995fb1637e>
+
+The seabed depth at a point, below the datum of the water it lies in: MLLW in US tidal water, CHS Chart Datum in Canadian tidal water, the lake's own surface in a lake. The tool picks the bathymetry that covers the point and names it in every answer, so a site file and a plan read one tool wherever the site is. Every source keeps its data on this machine: each piece is downloaded once, the first time a point inside it is asked for, and every depth after that is read with no request at all.
+
+- **Use it for.** The water depth at a dive point, which goes in the site file's Coordinates row and in the site JSON's `seabed_m`, the seabed the current tool's height above the bottom is measured from. A spatial current model's own mesh cannot supply it: its elements can span from the beach to the deep basin, so its nearshore depth can be wrong by tens of metres.
+- **Also a sanity check on a coordinate.** Is this point underwater at all, and at a divable depth? It reads the actual bottom where a nautical chart gives scattered soundings between wide contours.
+- **Which source answers.** The first source in the tool's list that covers the point. A point no source covers stops the run with each source's coverage named.
+- **Datum.** MLLW in US water, the datum NOAA's charts and its tide and current predictions use; CHS Chart Datum in Canadian water, the datum Canadian charts and CHS's tide predictions use, Lower Low Water, Large Tide on the Pacific coast, which sits below MLLW; the lake's surface in a lake, which has no tide. The answer names its datum every time. The two tidal datums are different surfaces, so a depth from one is never compared with a depth from the other.
+- **Across the border.** The NCEI tiles along the 49th parallel reach into Canadian water, and wherever they hold data they answer, below MLLW. A point in a border tile with no NCEI data there, and every point north of the tiles, falls to the GSC West Coast DEM, below Chart Datum. The GSC DEM also covers the Washington side of the Salish Sea, where NCEI answers first.
+- **No depth.** A point on land, on the shore, inland of the coastline in water no lake holds, or in a lake whose water level the source cannot find, gives no depth and the reason. Walk the coordinate out and ask again.
+- **A site JSON.** `at --file` reads the JSON's `lat` and `lon` and checks its `seabed_m` against the answer at the 0.1 m it is written to, exiting non-zero on a difference.
+- **A failed download stops the run.** A refusal, a short or unreadable file or an unreachable server ends the run with what failed and the URL asked for, and leaves no partial file behind. A point whose data is already on this machine needs no network.
+
+## Sources
+
+### NCEI coastal DEM
+
+NOAA NCEI's coastal digital elevation model, at about 3 m resolution (1/9 arc-second), on NAVD 88, with MLLW from NOAA VDatum's grids.
+
+- **Coverage.** The ninth arc-second tiles NOAA publishes, about 930 of them along the US coasts: Washington, Oregon, California, the Gulf, the Atlantic seaboard and part of Alaska, with the lakes inside them.
+- **The data.** `tools/db/depth/ncei/` holds NOAA's tile list, one GeoTIFF per quarter-degree tile, and each lake's water level once read (`lake_levels.json`; deleting it reads them again). A tile is about 200 MB, so its first use takes a few minutes on a fast connection and much longer on a slow one. `fetch` downloads a whole area ahead of time. Deleting a tile, or the folder, fetches NOAA's current data on the next run, which is how a re-surveyed tile is picked up.
+- **Shared code.** The tile list, the downloads and the lakes are `tools/lib/ncei.py`, the GeoTIFF reader `tools/lib/dem_tiles.py`, and the MLLW offset `tools/lib/vdatum.py`, shared libraries the map's depth layer and the current tool's seabed read the same way.
+- **The value is the pixel the point falls in.** The tile's own georeferencing places each 3 m pixel, and the tool reads the one containing the coordinate. NCEI's live map service answers with a pixel half a cell to the south-east, 1.7 m away, so the two agree within a few centimetres on a gentle bottom and differ by up to 1.4 m on a steep wall.
+- **MLLW comes from VDatum's grids, on this machine.** The height of NAVD 88 above MLLW runs from a few centimetres in some areas to more than a metre in others. The tool computes it at the exact point from NOAA VDatum's own transformation grids, the chain VDatum's conversion service runs: GEOID18 from NAVD 88 to the NAD83(2011) ellipsoid, HTDP's frame transformation to IGS14 at the epoch 2026.0, xGEOID20B to IGS14's gravimetric geoid, then the sub-region's `tss` grid to mean sea level and its `mllw` grid to MLLW. It reproduces answers VDatum's own service gave within 2 mm. The answer names the offset and the VDatum sub-region it came from.
+- **The sub-region is read from the coordinate.** VDatum divides tidal water into sub-regions, each with its own polygons, and the tool picks the one VDatum itself picks: the highest polygon type holding the point (a priority area over tidal water), the first in VDatum's own order on a tie. A sea point in no sub-region, in a non-tidal area, or on the land side of the grids' shoreline stops the run with the reason.
+- **The grids.** `tools/db/vdatum/` holds VDatum's full package as it downloads (`vdatum_all_<date>.zip`, about 3 GB), its index of sub-regions (`tidal_area.inf` and `tidal_area.dat`), and one folder per sub-region extracted from the package: the `tss` and `mllw` grids, and GEOID18 and xGEOID20B cut to the sub-region's box. A sub-region is extracted the first time a point inside it is asked for, in a second or two; after that it needs neither the package nor the network. The Washington sub-regions are about 250 MB. Deleting a folder extracts it again, which is how a new package is picked up.
+- **The package is downloaded by hand.** VDatum's download page refuses automated clients, so a missing package stops the run with the page to fetch it from: <https://vdatum.noaa.gov/download.php>, the full package, saved unopened into `tools/db/vdatum/`. The newest package there by its date is the one read.
+- **Sub-regions referenced to IGS14.** Every Washington sub-region, and 20 of VDatum's 52, carry their tidal grids on IGS14, the frame the chain is built for. A sub-region on NAD83 or IGS08 stops the run with its frame named.
+- **Lakes.** A lake bed is an elevation above NAVD 88, with no tide and no MLLW. Its depth is the lake's water level minus that elevation. The tool reads the level from the DEM: where the survey never reached the bed, the DEM holds the flat water surface on the day it was flown, so one height repeats along the shore. A level counts when it shows along at least 10 of 12 stretches of the shore and sits within 10 m of HydroLAKES' own rough level; a lake with none, such as one surveyed right up to its walls, gives no depth. The level moves with the seasons, so a depth holds to the survey day's water, usually within a metre.
+- **Where the sea ends.** The sea ends at OpenStreetMap's coastline, and a lake at its HydroLAKES outline, both read through `tools/lib/shapes.py`, a shared library: a point inland of it, behind a lock or a dike, is never seabed. Water joined to a lake belongs to it: inland ground more than 1 m below the lake's level that also looks like water (at or below sea level, inside a lake with no level of its own, or within 100 m of the outline) takes the lake's level when it is reached from the outline without leaving such ground. That brings in the shallow shore the outline misses, a lake with no level of its own, and a canal held at the lake's level up to its lock, and stops at the coastline, at another lake, and at dry ground, such as the valley below a lake on a plateau. A point query traces it on the map's own 6 m grid, so both read the same water.
+- **`--verify`.** Compares the tile with NCEI's live service at the point, passing when the service answers from the same tile and its value matches one of the nine pixels at and around the point within 0.01 m.
+- **`selftest`.** Computes the MLLW offset at a dozen points across the Washington sub-regions and compares each with the answer VDatum's own conversion service gave there in November 2026, passing within 3 mm. Run it after a new VDatum package, or a change to `tools/lib/vdatum.py`.
+
+### GSC West Coast DEM
+
+The Geological Survey of Canada's Canada West Coast topo-bathymetric digital elevation model (Open File 8963), Version 2 of 2025, gridded at 10 m, with its sea depths below CHS Chart Datum.
+
+- **Coverage.** 47.2° to 56.2° N and 134.8° to 120.9° W: the whole British Columbia coast and its continental shelf, the Canadian side of the Salish Sea (the Strait of Georgia, Haro Strait, the north shore of Juan de Fuca Strait, Howe Sound, Burrard Inlet and the Gulf Islands), and the Washington side, where NCEI answers first.
+- **What it is built from.** CHS multibeam surveys from 1997 to 2024 at 1 to 5 m, DFO's coastal elevation model, NRCan's regional bathymetry from CHS contours, Ocean Networks Canada's Lower Mainland DEM and Washington DNR lidar, all resampled to one 10 m grid on BC Albers. Where multibeam covers the bottom the grid follows it closely; between surveys it is interpolated from older soundings and contours.
+- **The data.** `tools/db/depth/gsc/` holds `index.json` (where the GeoTIFF sits inside NRCan's zip, and the zip's date), the GeoTIFF `WestCoastDEM_Version2_Elevation.tif` (7.9 GB, a BigTIFF) and its world file. It is one file, downloaded the first time a point inside its extent is asked for: 7.3 GB of NRCan's 12.2 GB zip, read out of the zip with byte range requests and unpacked as it arrives, with the zip's own size and CRC checked; the relief shading, source map and overviews in the zip stay on the server. A stopped download starts over. Deleting the folder fetches NRCan's current package on the next run.
+- **Shared code.** The download, the projection and the reading are `tools/lib/gsc.py`, the GeoTIFF reader `tools/lib/dem_tiles.py`, the coastline and lakes `tools/lib/shapes.py`.
+- **The value is the pixel the point falls in,** found by projecting the coordinate to BC Albers (EPSG:3005, NAD83 on GRS 80) and placing it on the grid by the world file. The coordinate is taken as NAD83; WGS 84 sits about 1 m from it in British Columbia, a tenth of a pixel.
+- **Datum.** CHS Chart Datum in the sea: the compilers reduced every bathymetric source to it. The land heights keep each land source's own datum, so a value above zero is read only as dry ground.
+- **Drying ground.** A value at or above Chart Datum dries at low water and gives no depth, with the drying height.
+- **Where the sea ends.** OpenStreetMap's coastline, as for NCEI: a point inland of it is never seabed. The DEM carries a lake as land surface, so a point in a HydroLAKES lake gives no depth.
+- **`--verify`.** Reads the pixel value from NRCan's map service, its West Coast DEM Elevations layer, over a window a few metres across so it answers at full resolution, and passes when it matches one of the nine pixels at and around the point within 0.01 m.
+- **`selftest`.** Projects five coordinates to BC Albers and compares each with the figure Esri's geometry service gave for NAD83 to EPSG:3005 in November 2026, passing within 1 mm. Run it after a change to `tools/lib/gsc.py`.
+
+## Before relying on it
+
+- **Data goes stale silently.** A source replaces its data as new surveys arrive, and the copy on this machine keeps the old. `--verify` compares it with the source's live service at the point; run it when a site's depth matters more than usual.
+- **A `--verify` failure is a stop.** Report it and wait. For NCEI, delete the tile and the tile list; for the GSC DEM, delete `tools/db/depth/gsc/`; run it again, and report it if it still fails.
+- **A bathymetry is a model of the bottom.** It blends surveys of different ages and densities, and a narrow wall or a pinnacle smaller than a few pixels is smoothed. Good to a metre or two at most dive sites.
+
+## Adding a source
+
+A source is a class in `tools/lib/depth.py`'s `SOURCES`, with its name and coverage, whether it covers a point, the depth there below the water's datum with the reading behind it, a download of an area ahead of time, a check against its live service, and its own self-test, plus a section above. Its place in the list sets which source answers where two overlap: the more detailed one goes first.
+
+## `tools/depth.py`
+
+Standard library only.
+
+```sh
+python3 tools/depth.py at <lat> <lon>                          # depth below the water's datum, and the source
+python3 tools/depth.py at <lat> <lon> --verify                 # also compare the source's data with its live service
+python3 tools/depth.py at --file <path/to/slug.json>           # the same at a site JSON's coordinate, checked against its seabed_m
+python3 tools/depth.py fetch <S> <W> <N> <E> [<S> <W> <N> <E> ...]   # download every source's data touching the boxes, ahead of time
+python3 tools/depth.py selftest                                # each source's own checks
+```
+
+Each answer prints the depth below the water's datum, the source's own figure and the conversion between them, and the source with its tile or grid.
+
+`fetch` caches data ahead of time, for working with no connection: every source's data touching the boxes of south, west, north and east edges, six downloads at a time (`--workers`). It skips what is already here, so a stopped run picks up where it left off. The US side of the Salish Sea is 45 NCEI tiles and 8.4 GB; any box touching British Columbia also brings the GSC DEM, 7.3 GB:
+
+```sh
+python3 tools/depth.py fetch 47.0 -123.5 49.0 -122.0 48.0 -124.75 48.5 -123.5
+```
+
+`depth.user_agent_email` in `tool-config.json` sets the contact address sent in the User-Agent of a download.

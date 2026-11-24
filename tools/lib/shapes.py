@@ -1,4 +1,4 @@
-"""Shoreline shapes shared by shore_exposure.py and ncei_depth.py: OpenStreetMap's land polygons
+"""Shoreline shapes shared by shore_exposure.py and the depth tool: OpenStreetMap's land polygons
 and HydroLAKES, each one download kept under tools/db/ and fetched again whenever missing, read
 near a point, with a point-in-polygon test."""
 import math

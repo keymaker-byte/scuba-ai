@@ -1,4 +1,4 @@
-"""NOAA NCEI's ninth arc-second coastal DEM, shared by ncei_depth.py, map_export.py and the
+"""NOAA NCEI's ninth arc-second coastal DEM, shared by the depth tool, map_export.py and the
 current tool's seabed: the tile list and each tile, downloaded when missing, the elevation at a
 point, the lakes and their water levels, and the NAVD 88 to MLLW offset, from VDatum's grids
 kept on this machine (lib/vdatum.py)."""
@@ -22,7 +22,7 @@ from lib.dem_tiles import Tile
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-DB = os.path.join(ROOT, "tools", "db", "ncei_depth")
+DB = os.path.join(ROOT, "tools", "db", "depth", "ncei")
 
 
 INDEX = os.path.join(DB, "tiles.json")
@@ -45,13 +45,13 @@ def _cfg(key, default=None):
     """Read this tool's section of tool-config.json; missing file or key -> default."""
     try:
         with open(os.path.join(ROOT, "tool-config.json")) as f:
-            return json.load(f).get("ncei_depth", {}).get(key, default)
+            return json.load(f).get("depth", {}).get(key, default)
     except (OSError, ValueError):
         return default
 
 
 def _user_agent():
-    """Contact email for the User-Agent comes from tool-config.json (ncei_depth.user_agent_email)."""
+    """Contact email for the User-Agent comes from tool-config.json (depth.user_agent_email)."""
     email = _cfg("user_agent_email")
     return f"dive-planning ({email})" if email else "dive-planning"
 
@@ -137,7 +137,7 @@ def tile_for(lat, lon):
     if path is None:
         idx = tile_index()
         sys.exit(f"No ninth arc-second DEM tile covers {lat}, {lon} (NOAA's list as fetched {idx['fetched']}). "
-                 "The point is outside the coastal DEM. Delete tools/db/ncei_depth/tiles.json to list again.")
+                 "The point is outside the coastal DEM. Delete tools/db/depth/ncei/tiles.json to list again.")
     return path
 
 
@@ -194,7 +194,7 @@ def _download(url, path, quiet=False):
     os.replace(part, path)
 
 
-# --- Lakes (tools/ncei_depth.md, Lakes) ----------------------------------------------------
+# --- Lakes (tools/depth.md, Lakes) ----------------------------------------------------
 LEVELS = os.path.join(DB, "lake_levels.json")
 
 
@@ -477,6 +477,64 @@ def dem(lat, lon):
             "res_m": round(t.sy * 111200, 1), "tile": t, "row": row, "col": col}
 
 
+def answer(lat, lon):
+    """The depth at a point, below the datum of the water it lies in: {water, depth, datum,
+    detail, why, dem}. water is "sea" (depth below MLLW, from VDatum's grids), "lake" (depth
+    below the lake's water level read from the DEM), or "none" (no depth: land, shore, or water
+    no lake holds), with why. dem is dem()'s reading, for verify."""
+    r = dem(lat, lon)
+    out = {"dem": r, "depth": None, "datum": None, "detail": None, "why": None}
+    grid = _Grid(download=True)
+    lake, where = lake_at(lat, lon), ""
+    if lake and lake_level(lake[0], lake[2], lake[3], grid)["level"] is None or not lake and inland(lat, lon):
+        joined = lake_joined(lat, lon, grid)
+        if joined:
+            where = f", in {lake[1]} joined to it" if lake else ", in water joined to it outside its outline"
+            lake = joined[1]
+        elif not lake and r["elev"] < 0:
+            return {**out, "water": "none",
+                    "why": f"inland of the coastline and in no lake, at {r['elev']:+.1f} m {r['datum']}: "
+                           f"water no lake outline holds, or diked ground"}
+    if lake:
+        hid, name, rings, info = lake
+        lv = lake_level(hid, rings, info, grid)
+        level = lv["level"]
+        if level is None:
+            return {**out, "water": "none",
+                    "why": f"in {name}, bed or water at {r['elev']:+.1f} m {r['datum']}, and no water "
+                           f"level was found for the lake: {lv['why']}"}
+        if r["elev"] > level - LAKE_MIN:
+            return {**out, "water": "none",
+                    "why": f"in {name}{where}, at or above its water level ({r['elev']:+.1f} m {r['datum']}): "
+                           f"shore, or water the DEM holds no bed for; walk the coordinate out"}
+        return {**out, "water": "lake", "depth": level - r["elev"], "datum": f"the surface of {name}",
+                "detail": f"bed {r['elev']:+.1f} m {r['datum']}{where}; water level {level:+.1f} m, the DEM's "
+                          f"flat water along {lv['spread']} of 12 stretches of its shore on the day it was surveyed"}
+    if r["elev"] >= 0:
+        return {**out, "water": "none",
+                "why": f"above water, +{r['elev']:.1f} m {r['datum']} in the DEM; check the coordinate"}
+    off, sub = mllw_offset(lat, lon)
+    return {**out, "water": "sea", "depth": r["depth"] - off, "datum": "MLLW",
+            "detail": f"{r['depth']:.1f} m below {r['datum']}, which sits {off:.2f} m above MLLW "
+                      f"in VDatum sub-region {sub}"}
+
+
+def has_tile(lat, lon):
+    """Whether NOAA's tile list holds a tile for the point, with nothing downloaded but the list."""
+    key = f"{math.ceil(lat / TILE_DEG) * TILE_DEG:g},{math.floor(lon / TILE_DEG) * TILE_DEG:g}"
+    return key in tile_index()["tiles"]
+
+
+def has_data(lat, lon):
+    """Whether the tile covering a point holds a value at its pixel, downloading the tile when
+    missing; False where NOAA's list holds no tile there."""
+    path = tile_path(lat, lon)
+    if path is None:
+        return False
+    t = Tile(path)
+    return t.value(*t.pixel(lat, lon)) is not None
+
+
 def mllw_offset(lat, lon):
     """(NAVD 88's height above MLLW in m, the VDatum sub-region it came from) at a point, from
     VDatum's grids kept on this machine. A point VDatum gives no answer for stops the run."""
@@ -506,9 +564,9 @@ def verify(lat, lon, r):
     if ok:
         print("  PASS")
     elif not same_tile:
-        print(f"  FAIL: NCEI now answers from {name}. Delete tools/db/ncei_depth/tiles.json and the tile to fetch again.")
+        print(f"  FAIL: NCEI now answers from {name}. Delete tools/db/depth/ncei/tiles.json and the tile to fetch again.")
     else:
-        print(f"  FAIL: NCEI has replaced this tile's data. Delete tools/db/ncei_depth/{t.name}.tif to fetch it again.")
+        print(f"  FAIL: NCEI has replaced this tile's data. Delete tools/db/depth/ncei/{t.name}.tif to fetch it again.")
     return ok
 
 
@@ -526,7 +584,7 @@ class _Grid:
                 n, w = map(float, key.split(","))
                 self.tiles[(n, w)] = Tile(path)
         if not self.tiles and not download:
-            sys.exit(f"No tiles in {DB}; download an area with --fetch first.")
+            sys.exit(f"No tiles in {DB}; download an area with depth.py fetch first.")
         self.cache, self.cap = {}, cap_blocks
 
     def missing(self, lat, lon):

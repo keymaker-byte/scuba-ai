@@ -432,7 +432,7 @@ const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/
 
 // An overlay, not a base layer: it opts in separately, since its source covers only part of
 // this workspace's regions. It is for visual orientation on the map viewer only; a site
-// file's depth comes from the workspace's own depth tools (ncei_depth, emodnet_depth).
+// file's depth comes from the workspace's own depth tool (depth).
 
 // The overlay is WMS: every tile is an image the server renders on demand, so each tile is
 // a real cost. The server speaks HTTP/2, so the browser fires every visible tile at once,
@@ -1005,7 +1005,7 @@ function loadDepth() {
         throw err;
       }
       if (!check.ok) {
-        throw new Error('it failed its self-check against ncei_depth.py ' +
+        throw new Error('it failed its self-check against the depth tool ' +
           `(off by up to ${Number.isFinite(check.worst) ? check.worst.toFixed(2) + ' m' : 'a missing tile'}); ` +
           'regenerate it with map_export.py depth');
       }
