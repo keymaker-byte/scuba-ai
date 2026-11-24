@@ -110,8 +110,6 @@ CONSTITUENTS = {
     "Mm":        ((0, 1, 0, -1, 0),  "Mm"),
     "Sa":        ((0, 0, 1, 0, 0),   "none"),
     "Ssa":       ((0, 0, 2, 0, 0),   "none"),
-    # the steady current, carried as a constituent of zero frequency by a map overlay that has one
-    "Z0":        ((0, 0, 0, 0, 0),   "none"),
 }
 
 
