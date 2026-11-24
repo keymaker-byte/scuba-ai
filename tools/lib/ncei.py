@@ -1,6 +1,7 @@
 """NOAA NCEI's ninth arc-second coastal DEM, shared by ncei_depth.py, map_export.py and the
 Blend Model's seabed: the tile list and each tile, downloaded when missing, the elevation at a
-point, the lakes and their water levels, and the NAVD 88 to MLLW offset from VDatum."""
+point, the lakes and their water levels, and the NAVD 88 to MLLW offset, from VDatum's grids
+kept on this machine (lib/vdatum.py)."""
 import array
 import http.client
 import json
@@ -15,7 +16,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 
-from lib import shapes
+from lib import shapes, vdatum
 from lib.dem_tiles import Tile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -27,9 +28,6 @@ DB = os.path.join(ROOT, "tools", "db", "ncei_depth")
 INDEX = os.path.join(DB, "tiles.json")
 
 
-OFFSETS = os.path.join(DB, "vdatum.json")
-
-
 LIST_URL = ("https://chs.coast.noaa.gov/htdata/raster2/elevation/"
             "NCEI_ninth_Topobathy_2014_8483/urllist8483.txt")
 
@@ -37,16 +35,10 @@ LIST_URL = ("https://chs.coast.noaa.gov/htdata/raster2/elevation/"
 LIVE_URL = "https://gis.ngdc.noaa.gov/arcgis/rest/services/DEM_mosaics/DEM_all/ImageServer/identify"
 
 
-VDATUM_URL = "https://vdatum.noaa.gov/vdatumweb/api/convert"
-
-
 TILE_DEG = 0.25     # a tile's side
 
 
 DATUM = "NAVD 88"   # the ninth arc-second DEM's vertical datum
-
-
-REUSE_M = 200       # an offset VDatum gave within this distance answers for the point
 
 
 def _cfg(key, default=None):
@@ -485,50 +477,13 @@ def dem(lat, lon):
             "res_m": round(t.sy * 111200, 1), "tile": t, "row": row, "col": col}
 
 
-def _metres(lat, lon, s):
-    return math.hypot((s["lat"] - lat) * 111200, (s["lon"] - lon) * 111200 * math.cos(math.radians(lat)))
-
-
-def _vdatum(lat, lon, region):
-    """NAVD88 above MLLW (m) at a point, asked of VDatum."""
-    q = {"s_x": lon, "s_y": lat, "s_z": 0, "s_coor": "geo", "s_h_frame": "NAD83_2011",
-         "s_v_frame": "NAVD88", "s_v_unit": "m", "t_v_frame": "MLLW", "t_v_unit": "m"}
-    if region:
-        q["region"] = region
-    d = _get_json(VDATUM_URL + "?" + urllib.parse.urlencode(q), "VDatum")
-    # Some regions require a specific target horizontal frame for a tidal target datum;
-    # VDatum names the frame it wants in the error, so ask once more with that frame.
-    if d.get("errorCode") is not None:
-        m = re.search(r"Target Horizontal Frame should be (\S+)", d.get("message", ""))
-        if m:
-            d = _get_json(VDATUM_URL + "?" + urllib.parse.urlencode({**q, "t_h_frame": m.group(1)}), "VDatum")
-    for k in ("t_z", "tar_z", "t_z_value"):
-        if d.get(k) not in (None, "", "-999999"):
-            try:
-                return float(d[k])
-            except (ValueError, TypeError):
-                pass
-    sys.exit(f"VDatum gave no NAVD88-to-MLLW height at {lat}, {lon} in region {region or 'contiguous'}: "
-             f"{d.get('message') or d}. Check --region, and that the point is in tidal water.")
-
-
-def mllw_offset(lat, lon, region):
-    """(NAVD88 above MLLW in m, the sample it came from, its distance in m). The nearest
-    offset VDatum already gave within REUSE_M answers; otherwise VDatum is asked once and
-    the answer kept."""
-    doc = {"samples": []}
-    if os.path.exists(OFFSETS):
-        with open(OFFSETS) as f:
-            doc = json.load(f)
-    near = [s for s in doc["samples"] if _metres(lat, lon, s) <= REUSE_M]
-    if near:
-        s = min(near, key=lambda s: _metres(lat, lon, s))
-        return s["navd88_above_mllw"], s, _metres(lat, lon, s)
-    s = {"lat": lat, "lon": lon, "navd88_above_mllw": round(_vdatum(lat, lon, region), 4),
-         "region": region or "contiguous", "fetched": date.today().isoformat()}
-    doc["samples"].append(s)
-    _save(OFFSETS, doc)
-    return s["navd88_above_mllw"], s, 0.0
+def mllw_offset(lat, lon):
+    """(NAVD 88's height above MLLW in m, the VDatum sub-region it came from) at a point, from
+    VDatum's grids kept on this machine. A point VDatum gives no answer for stops the run."""
+    off, where = vdatum.navd88_above_mllw(lat, lon)
+    if off is None:
+        sys.exit(f"VDatum gives no NAVD 88 to MLLW height at {lat}, {lon}: {where}.")
+    return off, where
 
 
 def verify(lat, lon, r):

@@ -22,9 +22,6 @@ DB = os.path.join(ROOT, "tools", "db", "noaa_tide")
 LIST = os.path.join(DB, "stations.json")
 
 
-VDATUM_FILE = os.path.join(ROOT, "tools", "db", "ncei_depth", "vdatum.json")  # ncei_depth --mllw keeps it
-
-
 MD = "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations"
 
 
@@ -115,21 +112,6 @@ def station(sid, quiet=False):
         doc["navd88"] = d.get("NAVD88")
     _save(path, doc)
     return doc
-
-
-def navd88(doc):
-    """NAVD 88's height above MLLW at a reference station, metres, or None where NOAA ties
-    the station to no NAVD 88. A station file cached before this was kept has its datums
-    downloaded again once, and the answer saved with it."""
-    if "navd88" not in doc:
-        dat = get(f"{MD}/{doc['id']}/datums.json?units=metric") or {}
-        if "datums" not in dat:
-            sys.exit(f"NOAA: no datums answer for {doc['id']}. Nothing was changed. Retry later.")
-        doc["navd88"] = {x["name"]: x["value"] for x in dat.get("datums") or []}.get("NAVD88")
-        _save(os.path.join(DB, f"{doc['id']}.json"), doc)
-    if doc["navd88"] is None or doc.get("mllw") is None:
-        return None
-    return doc["navd88"] - doc["mllw"]
 
 
 def reference(doc):

@@ -28,7 +28,7 @@ from datetime import date, datetime, timedelta, timezone
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import lib.tidal_astronomy as astro  # noqa: E402
-from lib import ncei, shapes  # noqa: E402
+from lib import ncei, shapes, vdatum  # noqa: E402
 from lib.adcirc import WALK_STEP_M, read_vel_header, read_vel_nodes  # noqa: E402
 from lib.current_harmonics import prepare as current_prepare, speed  # noqa: E402
 from lib.blend import (ABOVE_BOTTOM, DEG, EXACT_KM, EXTEND_KM, LINE_STEP_M, MIN_AMP, NEIGHBOURS,  # noqa: E402
@@ -38,7 +38,7 @@ from lib.ncei import (DATUM, LAKE_MIN, TILE_DEG, _Grid, _join, _lake_record, _Ro
                       _tile_lat, lake_level)
 from lib.seabed import Seabed  # noqa: E402
 from lib.tidal_astronomy import CONS  # noqa: E402
-from lib.tides import RATE, VDATUM_FILE, height, navd88, prepare, station, station_list  # noqa: E402
+from lib.tides import RATE, height, prepare, station, station_list  # noqa: E402
 
 WORKSPACE = os.path.dirname(HERE)
 ROOT = WORKSPACE
@@ -728,6 +728,96 @@ def _steps(a, b):
 
 # --- the tide stations -----------------------------------------------------------------------
 
+# --- NAVD 88 above MLLW ----------------------------------------------------------------------
+
+DATUM_STEP = 0.005    # degrees between the datum grid's nodes
+DATUM_FILL_KM = 5     # how far past VDatum's shoreline a node takes its nearest water's value
+DATUM_CHECKS = 80     # the sample points the browser reproduces
+DATUM_TOL = 0.01      # m: the most the grid may differ from vdatum.py at a sample point
+
+
+def datum_at(grids, lat, lon):
+    """NAVD 88 above MLLW from the exported grids, as map/tides.js reads them: bilinear between
+    the four nodes around the point, a node with no value left out and the rest reweighted;
+    None where none of the four has one, or outside every grid."""
+    for g in grids:
+        y, x = (lat - g["s"]) / g["step"], (lon - g["w"]) / g["step"]
+        if not (0 <= y <= g["rows"] - 1 and 0 <= x <= g["cols"] - 1):
+            continue
+        r, c = min(g["rows"] - 2, math.floor(y)), min(g["cols"] - 2, math.floor(x))
+        fy, fx = y - r, x - c
+        tot = wt = 0.0
+        for dr, dc, w in ((0, 0, (1 - fx) * (1 - fy)), (0, 1, fx * (1 - fy)), (1, 0, (1 - fx) * fy), (1, 1, fx * fy)):
+            v = g["mm"][(r + dr) * g["cols"] + c + dc]
+            if v is not None:
+                tot, wt = tot + w * v, wt + w
+        return tot / wt / 1000 if wt > 0 else None
+    return None
+
+
+def datum_grids(boxes):
+    """NAVD 88's height above MLLW over each box, every DATUM_STEP degrees, from lib/vdatum.py:
+    the value at each node VDatum answers for, and past VDatum's shoreline the mean of the
+    answered nodes beside it, out to DATUM_FILL_KM, so a depth pixel at the water's edge is
+    interpolated from water. Each grid is trimmed to its nodes with a value, in millimetres. With
+    it, sample points where vdatum.py answers, which map/tides.js reproduces within DATUM_TOL."""
+    step = DATUM_STEP
+    passes = math.ceil(DATUM_FILL_KM / (step * 111.2 * math.cos(math.radians(48))))
+    grids, answered = [], []
+    for S, W, N, E in boxes:
+        rows, cols = int(round((N - S) / step)) + 1, int(round((E - W) / step)) + 1
+        vals = []
+        for i in range(rows):
+            for j in range(cols):
+                v, _ = vdatum.navd88_above_mllw(S + i * step, W + j * step)
+                vals.append(v)
+        known = [v is not None for v in vals]
+        for _ in range(passes):
+            grown = list(vals)
+            for k, v in enumerate(vals):
+                if v is not None:
+                    continue
+                i, j = divmod(k, cols)
+                near = [vals[a * cols + b] for a in (i - 1, i, i + 1) for b in (j - 1, j, j + 1)
+                        if 0 <= a < rows and 0 <= b < cols and vals[a * cols + b] is not None]
+                if near:
+                    grown[k] = sum(near) / len(near)
+            vals = grown
+        have = [k for k, v in enumerate(vals) if v is not None]
+        if not have:
+            log(f"  datum: VDatum answers nowhere in the box {[S, W, N, E]}; it carries no grid")
+            continue
+        r0, r1 = min(k // cols for k in have), max(k // cols for k in have)
+        c0, c1 = min(k % cols for k in have), max(k % cols for k in have)
+        r1, c1 = max(r1, r0 + 1), max(c1, c0 + 1)
+        r1, c1 = min(r1, rows - 1), min(c1, cols - 1)
+        mm = [None if vals[i * cols + j] is None else round(vals[i * cols + j] * 1000)
+              for i in range(r0, r1 + 1) for j in range(c0, c1 + 1)]
+        grids.append({"s": round(S + r0 * step, 6), "w": round(W + c0 * step, 6), "step": step,
+                      "rows": r1 - r0 + 1, "cols": c1 - c0 + 1, "mm": mm})
+        answered.append((S, W, N, E, sum(known)))
+    if not grids:
+        sys.exit("VDatum answers nowhere inside the boxes: the depth layer has no MLLW to place its depths on.")
+    rng = random.Random(2)
+    checks, worst, tries = [], 0.0, 0
+    while len(checks) < DATUM_CHECKS and tries < DATUM_CHECKS * 200:
+        tries += 1
+        S, W, N, E, n = rng.choice([a for a in answered if a[4]])
+        lat, lon = rng.uniform(S, N), rng.uniform(W, E)
+        v, _ = vdatum.navd88_above_mllw(lat, lon)
+        if v is None:
+            continue
+        got = datum_at(grids, lat, lon)
+        worst = max(worst, abs(got - v))
+        checks.append({"lat": round(lat, 6), "lon": round(lon, 6), "navd88": round(v, 4)})
+    if worst > DATUM_TOL:
+        sys.exit(f"The datum grid differs from vdatum.py by up to {worst:.4f} m at its sample points, "
+                 f"more than {DATUM_TOL} m: make DATUM_STEP finer.")
+    log(f"  datum: {len(grids)} grids every {step} degrees, within {worst:.4f} m of vdatum.py "
+        f"at {len(checks)} sample points")
+    return {"source": "VDatum grids, lib/vdatum.py", "tol": DATUM_TOL, "grids": grids, "checks": checks}
+
+
 MAP_FILE = os.path.join(ROOT, "map", "tides", "stations.js")
 
 
@@ -735,25 +825,20 @@ def export_tides(boxes):
     """Write map/tides/stations.js for the map viewer's depth layer: every reference station
     inside the boxes with constants, MSL and MLLW, its constituents prepared for each year the
     map may ask about and its heights at sample moments, which the viewer reproduces before it
-    uses them; and the points where NAVD 88's height above MLLW is known, from the stations
-    NOAA ties to NAVD 88 and the answers VDatum gave ncei_depth, which place the depth layer's
-    NAVD 88 depths on MLLW."""
+    uses them; and NAVD 88's height above MLLW on a grid over the boxes (datum_grids), which
+    places the depth layer's NAVD 88 depths on MLLW."""
     st = station_list()["stations"]
     inside = lambda lat, lon: any(s <= lat <= n and w <= lon <= ea for s, w, n, ea in boxes)
     ids = sorted(sid for sid, e in st.items() if e["type"] == "R" and inside(e["lat"], e["lon"]))
     y0 = date.today().year - MAP_YEARS_BACK
     years = list(range(y0, date.today().year + MAP_YEARS_AHEAD + 1))
     rng = random.Random(1)
-    out, left_out, datum = [], [], []
+    out, left_out = [], []
     for sid in ids:
         doc = station(sid)
         if not doc.get("cons") or doc.get("msl") is None or doc.get("mllw") is None:
             left_out.append(f"{sid} {doc['name']}: no constants or no MSL/MLLW datum")
             continue
-        off = navd88(doc)
-        if off is not None:
-            datum.append({"lat": doc["lat"], "lon": doc["lon"], "navd88": round(off, 4),
-                          "from": f"station {sid}"})
         prep = {y: prepare(doc["cons"], y) for y in years}
         checks = []
         for _ in range(4):
@@ -771,24 +856,17 @@ def export_tides(boxes):
                       for y, p in prep.items()},
             "checks": checks,
         })
-    if os.path.exists(VDATUM_FILE):
-        with open(VDATUM_FILE) as f:
-            for p in json.load(f).get("samples", []):
-                if inside(p["lat"], p["lon"]):
-                    datum.append({"lat": p["lat"], "lon": p["lon"], "navd88": p["navd88_above_mllw"],
-                                  "from": f"VDatum {p['fetched']}"})
     if not out:
         sys.exit("No reference station inside the boxes carries constants and an MLLW datum.")
-    if not datum:
-        sys.exit("No point inside the boxes ties NAVD 88 to MLLW: no station NOAA ties to NAVD 88, "
-                 "and no VDatum answer cached by ncei_depth --mllw.")
+    datum = datum_grids(boxes)
     data = {"built": date.today().isoformat(), "epoch": astro.EPOCH.isoformat(), "rate": list(RATE),
             "first_year": years[0], "last_year": years[-1], "stations": out, "datum": datum}
     os.makedirs(os.path.dirname(MAP_FILE), exist_ok=True)
     with open(MAP_FILE, "w") as f:
         f.write("// Written by tools/map_export.py; regenerate rather than edit.\n")
         f.write(f"window.MAP_TIDES = {json.dumps(data, separators=(',', ':'))};\n")
-    print(f"wrote {len(out)} stations, {years[0]} to {years[-1]}, and {len(datum)} NAVD 88 points "
+    print(f"wrote {len(out)} stations, {years[0]} to {years[-1]}, and NAVD 88 above MLLW on "
+          f"{sum(g['rows'] * g['cols'] for g in datum['grids'])} grid nodes "
           f"to map/tides/stations.js ({os.path.getsize(MAP_FILE) / 1e3:.0f} KB)", file=sys.stderr)
     for line in left_out:
         print(f"  left out {line}", file=sys.stderr)

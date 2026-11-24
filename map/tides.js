@@ -5,15 +5,16 @@
 // reference station's constituents, prepared for every year the map may ask about (the
 // argument constant with its node phase and the amplitude with its node factor, held for the
 // UTC year as NOAA holds them), its mean sea level and highest tide of the year above MLLW,
-// and its heights at sample moments, which selfCheck() reproduces; plus the points where
-// NAVD 88's height above MLLW is known. A height at any other place is blended from the
-// nearest stations, weighted by the inverse square of the distance.
+// and its heights at sample moments, which selfCheck() reproduces; plus NAVD 88's height above
+// MLLW on a grid from VDatum's grids (tools/lib/vdatum.py), in millimetres, with values
+// vdatum.py gave at sample points, which selfCheck() reproduces too. A tide height at any
+// place is blended from the nearest stations, weighted by the inverse square of the distance;
+// NAVD 88's height above MLLW is read bilinearly from the grid.
 (function (root) {
   'use strict';
 
   const RAD = Math.PI / 180;
   const TIDE_NEIGHBOURS = 3;
-  const DATUM_NEIGHBOURS = 4;
 
   function km(lat1, lon1, lat2, lon2) {
     const x = (lon2 - lon1) * Math.cos((lat1 + lat2) / 2 * RAD);
@@ -83,10 +84,30 @@
 
     tideBlend(lat, lon) { return blend(this.stations, lat, lon, TIDE_NEIGHBOURS); }
 
-    // NAVD 88's height above MLLW at a place, and the highest tide of the year there.
+    // NAVD 88's height above MLLW at a place: bilinear between the four grid nodes around it,
+    // a node with no value left out and the rest reweighted; NaN where none of the four has
+    // one, or outside every grid. The same reading as datum_at() in tools/map_export.py.
+    navd88At(lat, lon) {
+      for (const g of this.datum.grids) {
+        const y = (lat - g.s) / g.step, x = (lon - g.w) / g.step;
+        if (y < 0 || x < 0 || y > g.rows - 1 || x > g.cols - 1) continue;
+        const r = Math.min(g.rows - 2, Math.floor(y)), c = Math.min(g.cols - 2, Math.floor(x));
+        const fy = y - r, fx = x - c;
+        let tot = 0, wt = 0;
+        for (const [dr, dc, w] of [[0, 0, (1 - fx) * (1 - fy)], [0, 1, fx * (1 - fy)],
+          [1, 0, (1 - fx) * fy], [1, 1, fx * fy]]) {
+          const v = g.mm[(r + dr) * g.cols + c + dc];
+          if (v !== null) { tot += w * v; wt += w; }
+        }
+        return wt > 0 ? tot / wt / 1000 : NaN;
+      }
+      return NaN;
+    }
+
+    // NAVD 88's height above MLLW at a place (NaN where the grid has none), and the highest
+    // tide of the year there.
     datumAt(lat, lon) {
-      const navd88 = blend(this.datum, lat, lon, DATUM_NEIGHBOURS)
-        .reduce((a, n) => a + n.w * this.datum[n.i].navd88, 0);
+      const navd88 = this.navd88At(lat, lon);
       const high = this.tideBlend(lat, lon)
         .reduce((a, n) => a + n.w * this.stations[n.i].high, 0);
       return { navd88, high };
@@ -109,6 +130,16 @@
         for (const c of st.checks) worst = Math.max(worst, Math.abs(this.height(i, c.t) - c.h));
       });
       return { ok: worst <= 0.002, worst };
+    }
+
+    // Reproduce NAVD 88's height above MLLW that vdatum.py gave at its sample points.
+    datumCheck() {
+      let worst = 0;
+      for (const c of this.datum.checks) {
+        const v = this.navd88At(c.lat, c.lon);
+        worst = Number.isNaN(v) ? Infinity : Math.max(worst, Math.abs(v - c.navd88));
+      }
+      return { ok: this.datum.checks.length > 0 && worst <= this.datum.tol, worst };
     }
   }
 

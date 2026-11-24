@@ -20,8 +20,7 @@
   },
 
   "ncei_depth": {
-    "user_agent_email": "<your-email>@example.com",
-    "default_region": "<VDatum region for your coordinates, e.g. westcoast; see tools/ncei_depth.py --help>"
+    "user_agent_email": "<your-email>@example.com"
   },
 
   "emodnet_depth": {},

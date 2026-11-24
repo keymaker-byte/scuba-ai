@@ -11,8 +11,9 @@
 // A DiveTides.TideModel (map/tides.js) places each depth on MLLW and adds the tide:
 //   depth below MLLW  = depth below NAVD 88 - NAVD 88's height above MLLW
 //   depth at a moment = depth below MLLW + the tide above MLLW at that moment
-// Both are blended from the nearest points that know them, and vary slowly, so a tile works
-// them out on a lattice every 16 pixels and interpolates between. Ground the tide uncovers
+// The tide is blended from the nearest stations and NAVD 88's height read from its grid; both
+// vary slowly, so a tile works them out on a lattice every 16 pixels and interpolates between.
+// A pixel at sea where the grid holds no height for NAVD 88 is left undrawn. Ground the tide uncovers
 // is drawn in sand; ground above the year's highest tide is left transparent.
 (function (root) {
   'use strict';
@@ -172,6 +173,7 @@
       if (px.lake) return { lake: this.meta.lakes[px.lake - 1].name, depth: px.depth };
       const navd = px.depth;
       const { navd88, high } = this.tides.datumAt(latlng.lat, latlng.lng);
+      if (Number.isNaN(navd88)) return null;
       const mllw = navd - navd88;
       if (mllw < -high) return { land: true };
       const tide = this.tides.tideAt(latlng.lat, latlng.lng, ms);
@@ -285,6 +287,7 @@
           const u = ox + (i + 0.5) / k;
           if (!lake && d < lerp(reach, u, v)) continue;  // above the year's highest tide
           const s = lake ? 0 : lerp(shift, u, v);
+          if (Number.isNaN(s)) continue;  // no NAVD 88 to MLLW height here
           const band = bandOf(d + s);
           let [R, G, B] = band < 0 ? DRY : BANDS[band].color;
           // Slope shading. dx is the depth's change eastward, dy southward (down the rows); the

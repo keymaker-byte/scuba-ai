@@ -947,7 +947,7 @@ showMapTime();
 
 // Seabed depth from NCEI's coastal DEM at the map's moment, tide included. The tiles carry
 // the depth below NAVD 88 itself (`tools/map_export.py depth` writes map/depth/ncei/ and
-// map/depth/ncei.js); the tide stations and the points tying NAVD 88 to MLLW come from
+// map/depth/ncei.js); the tide stations and the grid tying NAVD 88 to MLLW come from
 // map/tides/stations.js (`tools/map_export.py tides`). Both load when the checkbox is first
 // ticked, and each reproduces the values its Python tool computed before anything is drawn;
 // a mismatch stops the layer with a message. The colours follow the time slider. While the
@@ -985,6 +985,11 @@ function loadDepth() {
       if (!tideCheck.ok) {
         throw new Error('the tide stations failed their self-check against noaa_tide.py ' +
           `(off by up to ${tideCheck.worst.toFixed(3)} m); regenerate them with map_export.py tides`);
+      }
+      const datumCheck = tides.datumCheck();
+      if (!datumCheck.ok) {
+        throw new Error('the NAVD 88 to MLLW grid failed its self-check against vdatum.py ' +
+          `(off by up to ${datumCheck.worst.toFixed(3)} m); regenerate it with map_export.py tides`);
       }
       await loadScript('map/depth/ncei.js');
       const meta = (window.MAP_DEPTH || {}).ncei;
