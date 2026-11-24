@@ -5,7 +5,6 @@ import json
 import math
 import os
 import sys
-import time as _time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -16,14 +15,12 @@ from lib.current_harmonics import events, series, speed
 TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(TOOLS, "db", "noaa_current")
 LIST = os.path.join(DB, "stations.json")
-REPORT = os.path.join(DB, "_verify.jsonl")
 MD = "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations"
 DG = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
 UTC = timezone.utc
 SPEED_TOL = 0.02    # m/s: a bin passes within this of NOAA's speed and peaks
 TIME_TOL = 3.0      # minutes: and within this of every slack and maximum
-FETCH_PAUSE = 0.3   # seconds between stations downloaded, under NOAA's rate limit
-VERIFY_PAUSE = 0.2  # seconds between bins in verify_all
+FETCH_PAUSE = 0.3   # seconds after each station downloaded, under NOAA's rate limit (current_stations)
 
 
 def get(url, missing_ok=False):
@@ -135,45 +132,12 @@ def station(sid, quiet=False):
     return doc
 
 
-def km_from(s, lat, lon):
-    scale = math.cos(math.radians(lat))
-    return math.hypot((s["lat"] - lat) * 60.0, (s["lon"] - lon) * 60.0 * scale) * 1.852
-
-
-def fetch(ids=(), near=None, km=50.0, every=False):
-    """Cache the stations named, those within `km` of `near`, or every one NOAA lists; skip
-    what is already cached, so a stopped run picks up where it left off."""
-    lst = station_list()["stations"]
-    want = list(ids)
-    for sid in want:
-        entry(sid)
-    if near:
-        want += [sid for sid, s in lst.items() if km_from(s, *near) <= km]
-    if every:
-        want = list(lst)
-    if not want:
-        sys.exit("name stations, or pass --near LAT LON [--km R], or --all.")
-    want = list(dict.fromkeys(want))
-    todo = [s for s in want if not cached(s)]
-    print(f"{len(want) - len(todo)} of {len(want)} already cached; downloading {len(todo)}.")
-    for k, sid in enumerate(todo, 1):
-        station(sid, quiet=True)
-        print(f"  {k}/{len(todo)}  {sid}  {lst[sid]['name']}")
-        _time.sleep(FETCH_PAUSE)
-    print("done.")
-
-
 def harmonic_bins(doc):
-    """The station's published harmonic bins with constants, the ones NOAA's API predicts, or
-    stop with why it has nothing to check."""
-    bins = [(num, b) for num, b in sorted(doc["bins"].items(), key=lambda x: int(x[0]))
+    """The station's published harmonic bins with constants, the ones NOAA's API predicts and so
+    the ones a check can compare."""
+    return [(num, b) for num, b in sorted(doc["bins"].items(), key=lambda x: int(x[0]))
             if b.get("type") == "H" and b.get("cons")]
-    if not bins:
-        sys.exit(f"{doc['id']} has no published harmonic bin with constants; only those are checked.")
-    return bins
 
-
-# --- the check against NOAA's live predictions -------------------------------------------
 
 def _day_span(day, pad=0):
     start = datetime.combine(day, time(0), UTC)
@@ -254,41 +218,3 @@ def report_lines(r):
             f"rms {r['speed_rms']:.3f} m/s",
             f"  events, {r['events_n']} slacks and maxima: worst time difference {r['time_worst']:.1f} min, "
             f"worst peak difference {r['peak_worst']:.3f} m/s, {r['unmatched']} unmatched{note}"]
-
-
-def verify_all(day0, days):
-    """Every published harmonic bin of every cached station, one result per line in the cache
-    folder's _verify.jsonl. A bin already in that file is skipped, so a stopped run picks up
-    where it left off; delete the file to start over."""
-    done = {}
-    if os.path.exists(REPORT):
-        with open(REPORT) as f:
-            for line in f:
-                r = json.loads(line)
-                done[(r["station"], r["bin"])] = r
-    todo = []
-    for sid, e in sorted(station_list()["stations"].items()):
-        if not cached(sid):
-            continue
-        for num, pb in sorted(e["bins"].items(), key=lambda x: int(x[0])):
-            if pb["type"] == "H" and (sid, num) not in done:
-                todo.append((sid, num))
-    print(f"{len(done)} bins already verified; {len(todo)} to go, {days} days from {day0}.", flush=True)
-    for k, (sid, num) in enumerate(todo, 1):
-        doc = station(sid)
-        b = doc["bins"][num]
-        if b.get("cons"):
-            r = compare(doc, num, b, day0, days)
-        else:
-            r = {"station": sid, "bin": num, "type": "H", "ok": False, "error": "no constants published"}
-        r.update(name=doc["name"], date=day0.isoformat(), days=days, bins=len(doc["bins"]))
-        with open(REPORT, "a") as f:
-            f.write(json.dumps(r) + "\n")
-        done[(sid, num)] = r
-        if k % 25 == 0 or not r["ok"]:
-            print(f"  {k}/{len(todo)}  {sid} bin {num}  {'ok' if r['ok'] else 'FAIL'}", flush=True)
-        _time.sleep(VERIFY_PAUSE)
-    rs = [r for r in done.values() if r["type"] == "H"]
-    bad = [r for r in rs if not r["ok"]]
-    print(f"\n  harmonic: {len(rs) - len(bad)} of {len(rs)} bins within {SPEED_TOL} m/s and {TIME_TOL:g} min")
-    print(f"  results: {os.path.relpath(REPORT, os.path.dirname(TOOLS))}")

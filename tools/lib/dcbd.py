@@ -152,11 +152,6 @@ def grid():
     return Grid(TIF)
 
 
-def cached():
-    """The grid when it is already on this machine, with no download; None otherwise."""
-    return Grid(TIF) if os.path.exists(TIF) else None
-
-
 # --- WGS 84 to UTM (Krüger series, sub-millimetre inside a zone) ---------------------------
 
 def utm(lat, lon, zone=UTM_ZONE):

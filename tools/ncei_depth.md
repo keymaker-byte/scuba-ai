@@ -8,7 +8,7 @@ NOAA NCEI's coastal digital elevation model: the seabed depth at a point, at abo
 - **Also a sanity check on a coordinate.** Is this point underwater at all, and at a divable depth? It reads the actual bottom where a nautical chart gives scattered soundings between wide contours.
 - **Coverage.** The ninth arc-second tiles NOAA publishes, about 930 of them along the US coasts: Washington, Oregon, California, the Gulf, the Atlantic seaboard and part of Alaska. A point outside them stops the run with a message.
 - **The data.** `tools/db/ncei_depth/` holds NOAA's tile list, one GeoTIFF per quarter-degree tile, the NAVD 88 to MLLW offsets VDatum has answered, and each lake's water level once read (`lake_levels.json`; deleting it reads them again). A tile is about 200 MB, so its first use takes a few minutes on a fast connection and much longer on a slow one. `--fetch` downloads a whole area ahead of time. Deleting a tile, or the folder, fetches NOAA's current data on the next run, which is how a re-surveyed tile is picked up.
-- **Shared code.** The GeoTIFF reader is `tools/lib/dem_tiles.py`, a shared library.
+- **Shared code.** The tile list, the downloads, the lakes and the VDatum offsets are `tools/lib/ncei.py`, and the GeoTIFF reader `tools/lib/dem_tiles.py`, shared libraries the map's depth layer and the Blend Model's seabed read the same way.
 - **The value is the pixel the point falls in.** The tile's own georeferencing places each 3 m pixel, and the tool reads the one containing the coordinate. NCEI's live map service answers with a pixel half a cell to the south-east, 1.7 m away, so the two agree within a few centimetres on a gentle bottom and differ by up to 1.4 m on a steep wall.
 - **Datum.** NAVD 88 (roughly mean sea level here). A depth normalized to datum is converted to MLLW with `--mllw` before it goes in a site file.
 - **MLLW comes from VDatum, once per place.** The height of NAVD 88 above MLLW runs from a few centimetres in some areas to more than a metre in others. `--mllw` asks NOAA VDatum for it at the point, keeps the answer, and uses a kept answer for any later point within 200 m, so a site's second query needs no network. The output names the offset, where it was asked and when. VDatum publishes its grids behind a terms-of-use page that turns automated clients away, so the tool asks its conversion service point by point.
@@ -34,7 +34,6 @@ python3 tools/ncei_depth.py <lat> <lon> --mllw              # also below MLLW, t
 python3 tools/ncei_depth.py <lat> <lon> --mllw --region R   # pick the VDatum region explicitly
 python3 tools/ncei_depth.py <lat> <lon> --verify            # compare the tile with NCEI's live service
 python3 tools/ncei_depth.py --fetch <S> <W> <N> <E>           # download every tile touching a box, ahead of time
-python3 tools/ncei_depth.py --export-map                    # map viewer: the depth layer, from every cached tile
 ```
 
 Each answer prints the depth, the tile it came from, and with `--mllw` the depth below MLLW with the offset used. `--verify` passes when NCEI's live service answers from the same tile and its value matches one of the nine pixels at and around the point within 0.01 m.
@@ -43,12 +42,6 @@ Each answer prints the depth, the tile it came from, and with `--mllw` the depth
 
 ```sh
 python3 tools/ncei_depth.py --fetch 47.0 -123.5 49.0 -122.0 --fetch 48.0 -124.75 48.5 -123.5
-```
-
-`--export-map` writes the map viewer's depth layer from every tile on this machine: `map/depth/ncei/{z}/{x}/{y}.png` from zoom 9 to zoom 14 (about 6 m a pixel at 48° N, magnified past it), and `map/depth/ncei.js`, which describes the layer. Each pixel carries the depth below NAVD 88 to 0.1 m, from 5 m above the datum down, so the viewer colours the bands, shades the slopes and reads the depth under the pointer itself. A pixel inside a lake with a water level holds the depth below that level instead, marked with the lake's number, from 1 m down; a pixel inside any other lake, or inland of the coastline outside a lake, is left empty. The viewer shows the depth at the map's moment: it places each depth on MLLW and adds the tide from the stations `noaa_tide.py export-map` writes, draws ground the tide uncovers in sand and ground above the year's highest tide not at all, and reads the point under the pointer as the depth below MLLW plus the tide. A zoom 14 pixel holds the value of the DEM pixel at its centre, exactly as a point query reads it, and each lower zoom the mean of the four below it. The layer also carries depths this tool read at sample points, which the viewer reproduces from the tiles before it draws anything; a mismatch stops the layer with a message. It covers the cached tiles only, and is rebuilt whole after `--fetch` adds tiles or a tile is replaced. The 45 Salish Sea tiles take about half an hour and come to about 150 MB. The viewer reads tile pixels, which a browser allows only for a page served from a web address, so the layer works on the published map and stays blank on a `map.html` opened from disk.
-
-```sh
-python3 tools/ncei_depth.py --export-map
 ```
 
 `ncei_depth.user_agent_email` in `tool-config.json` sets the contact address sent in the User-Agent of a download.

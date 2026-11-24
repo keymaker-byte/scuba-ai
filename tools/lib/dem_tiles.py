@@ -1,65 +1,10 @@
 """NCEI coastal DEM tiles shared by ncei_depth.py and blend_model.py: the GeoTIFF reader
-for one tile, and the lookup of the tile on this machine that covers a point."""
-import json
+for one tile."""
 import math
 import os
 import struct
 import sys
 import zlib
-
-TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB = os.path.join(TOOLS, "db", "ncei_depth")
-INDEX = os.path.join(DB, "tiles.json")
-TILE_DEG = 0.25     # a tile's side
-
-
-def tile_key(lat, lon):
-    """A tile's key in NOAA's list: its north and west edges."""
-    return f"{math.ceil(lat / TILE_DEG) * TILE_DEG:g},{math.floor(lon / TILE_DEG) * TILE_DEG:g}"
-
-
-def local_path(url):
-    return os.path.join(DB, url.rsplit("/", 1)[1])
-
-
-def latest(urls):
-    """Of a tile's editions, the newest: (url, local path)."""
-    import re
-
-    def edition(u):
-        m = re.search(r"_(\d{4})v(\d+)\.tif$", u, re.I)
-        return int(m[1]), int(m[2])
-    url = max(urls, key=edition)
-    return url, local_path(url)
-
-
-class CachedTiles:
-    """The tiles already on this machine, read with no download: `elevation` answers None
-    where no cached tile covers a point or the tile holds no value there."""
-
-    def __init__(self):
-        self.idx = {}
-        if os.path.exists(INDEX):
-            with open(INDEX) as f:
-                self.idx = json.load(f)["tiles"]
-        self.open = {}
-
-    def path(self, lat, lon):
-        urls = self.idx.get(tile_key(lat, lon))
-        if not urls:
-            return None
-        path = latest(urls)[1]
-        return path if os.path.exists(path) else None
-
-    def elevation(self, lat, lon):
-        path = self.path(lat, lon)
-        if path is None:
-            return None
-        t = self.open.get(path)
-        if t is None:
-            t = self.open[path] = Tile(path)
-        return t.value(*t.pixel(lat, lon))
-
 
 # --- GeoTIFF reader: one float band in tiles, deflate or LZW ------------------------------
 

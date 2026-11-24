@@ -1,7 +1,7 @@
 // Tide heights for the map viewer's depth layer, reproduced from NOAA's harmonic constants
 // exactly as tools/noaa_tide.py predicts them.
 //
-// `tools/noaa_tide.py export-map` writes map/tides/stations.js (window.MAP_TIDES): each
+// `tools/map_export.py tides` writes map/tides/stations.js (window.MAP_TIDES): each
 // reference station's constituents, prepared for every year the map may ask about (the
 // argument constant with its node phase and the amplitude with its node factor, held for the
 // UTC year as NOAA holds them), its mean sea level and highest tide of the year above MLLW,
@@ -58,7 +58,7 @@
       const y = st.years[year];
       if (!y) {
         throw new Error(`the tide stations cover ${this.data.first_year} to ${this.data.last_year}; ` +
-          'regenerate map/tides/stations.js with noaa_tide.py export-map');
+          'regenerate map/tides/stations.js with map_export.py tides');
       }
       const [s, h, p, p1] = this._longitudes(ms);
       const d = new Date(ms);

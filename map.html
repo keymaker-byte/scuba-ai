@@ -725,7 +725,7 @@ function applyEmodnetContourToggle() {
   }
 }
 // Tidal current overlays, one file per area, listed in map/currents/index.js: the seafloor
-// current `tools/blend_model.py export-map` writes, the ADCIRC database corrected by the current
+// current `tools/map_export.py currents` writes, the ADCIRC database corrected by the current
 // stations and scaled to a height above the seabed (an index entry of kind "seafloor"). The files
 // load only when the checkbox is first ticked.
 const CURRENT_OVERLAYS = window.MAP_CURRENT_INDEX || [];
@@ -869,7 +869,7 @@ class CurrentsControl {
           if (!check.ok) {
             throw new Error(`${o.file} failed its self-check against ${this.tool} ` +
               `(off by up to ${Number.isFinite(check.worst) ? check.worst.toFixed(3) + ' m/s' : 'a missing point'} ` +
-              `at ${check.where}); regenerate it with export-map`);
+              `at ${check.where}); regenerate it with map_export.py currents`);
           }
           fields.push(field);
         }
@@ -904,43 +904,40 @@ class CurrentsControl {
     }
   }
 
-  // The seabed below MLLW at a point, from the depth layer's tiles: a depth in metres, null
-  // where they hold none (or the ground dries, or a lake), undefined where the tiles cannot be
-  // read at all.
+  // The depth layer's reading at the point: { H } with the seabed below MLLW, { land: true } on
+  // land or in a lake, or {} where it gives no seabed (no depth there, or none readable).
   async seabedAt(latlng) {
     if (!depthSource && !this.noDepth) {
       try { await loadDepth(); } catch (err) { this.noDepth = true; }
     }
-    if (!depthSource) return undefined;
+    if (!depthSource) return {};
     let r;
     try {
       r = await depthSource.readAt(map, latlng, mapTime());
     } catch (err) {
-      return null;
+      return {};
     }
-    return r && !r.lake && !r.land && r.mllw > 0 ? r.mllw : null;
+    if (r && (r.lake || r.land)) return { land: true };
+    return r && r.mllw > 0 ? { H: r.mllw } : {};
   }
 
   // The current under the pointer at the map's moment, as the tool's `at` gives it there, over
-  // the seabed the depth layer reads at the point. Where no seabed depth is at hand, the trails'
-  // own value.
+  // the seabed the depth layer reads at the point, or over the layer's own seabed where the depth
+  // layer gives none.
   async showAt(latlng) {
     if (!this.layer || !map.hasLayer(this.layer) || this.status.classList.contains('error')) return;
     this.lastPoint = latlng;
     const asked = {};
     this.query = asked;
-    const H = await this.seabedAt(latlng);
+    const d = await this.seabedAt(latlng);
     if (this.query !== asked || !this.layer || !map.hasLayer(this.layer)) return;
-    const r = H ? this.layer.readAt(latlng.lat, latlng.lng, H) : this.layer.drawnAt(latlng.lat, latlng.lng);
+    const r = d.land ? null : d.H ? this.layer.readAt(latlng.lat, latlng.lng, d.H) : this.layer.drawnAt(latlng.lat, latlng.lng);
     if (!r) {
       this.status.textContent = `No ${this.name} model here`;
       return;
     }
     const toward = Math.round(r.toward) % 360;
-    const flow = `${r.speed.toFixed(2)} m/s toward ${String(toward).padStart(3, '0')}° (${COMPASS[Math.round(toward / 22.5) % 16]})`;
-    if (H) this.status.textContent = flow;
-    else if (H === null) this.status.textContent = `${flow} on the trails; no seabed depth here`;
-    else this.status.textContent = `${flow} on the trails; the depth layer gives the exact current from the map's web address`;
+    this.status.textContent = `${r.speed.toFixed(2)} m/s toward ${String(toward).padStart(3, '0')}° (${COMPASS[Math.round(toward / 22.5) % 16]})`;
   }
 }
 const currents = new CurrentsControl({ kind: 'seafloor', toggle: 'toggle-currents', legend: 'currents-legend',
@@ -949,9 +946,9 @@ const currentControls = [currents];
 showMapTime();
 
 // Seabed depth from NCEI's coastal DEM at the map's moment, tide included. The tiles carry
-// the depth below NAVD 88 itself (`tools/ncei_depth.py --export-map` writes map/depth/ncei/ and
+// the depth below NAVD 88 itself (`tools/map_export.py depth` writes map/depth/ncei/ and
 // map/depth/ncei.js); the tide stations and the points tying NAVD 88 to MLLW come from
-// map/tides/stations.js (`tools/noaa_tide.py export-map`). Both load when the checkbox is first
+// map/tides/stations.js (`tools/map_export.py tides`). Both load when the checkbox is first
 // ticked, and each reproduces the values its Python tool computed before anything is drawn;
 // a mismatch stops the layer with a message. The colours follow the time slider. While the
 // layer is on, the lines under the checkbox read the point under the pointer (or at a tap):
@@ -987,7 +984,7 @@ function loadDepth() {
       const tideCheck = tides.selfCheck();
       if (!tideCheck.ok) {
         throw new Error('the tide stations failed their self-check against noaa_tide.py ' +
-          `(off by up to ${tideCheck.worst.toFixed(3)} m); regenerate them with export-map`);
+          `(off by up to ${tideCheck.worst.toFixed(3)} m); regenerate them with map_export.py tides`);
       }
       await loadScript('map/depth/ncei.js');
       const meta = (window.MAP_DEPTH || {}).ncei;
@@ -1005,7 +1002,7 @@ function loadDepth() {
       if (!check.ok) {
         throw new Error('it failed its self-check against ncei_depth.py ' +
           `(off by up to ${Number.isFinite(check.worst) ? check.worst.toFixed(2) + ' m' : 'a missing tile'}); ` +
-          'regenerate it with --export-map');
+          'regenerate it with map_export.py depth');
       }
       depthSource = source;
       const layer = new DiveDepth.DepthLayer(source, { pane: 'paneDepth' });

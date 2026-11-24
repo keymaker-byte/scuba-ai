@@ -1,6 +1,6 @@
 // Seabed depth layer for the map viewer: the depth at the map's moment, tide included.
 //
-// `tools/ncei_depth.py --export-map` writes the tiles and a description of the layer
+// `tools/map_export.py depth` writes the tiles and a description of the layer
 // (map/depth/<name>.js, window.MAP_DEPTH[name]). Each tile pixel holds a 16-bit value v in its
 // red (high byte) and green (low byte) channels: depth below NAVD 88 = (v - 1) * scale +
 // shallowest; v = 0 is transparent, higher ground or no data. The blue channel names the water:

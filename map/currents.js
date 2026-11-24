@@ -1,5 +1,5 @@
 // Tidal current overlay for map.html: the Blend Model's seafloor current, computed in the
-// browser exactly as `tools/blend_model.py` computes it. `blend_model.py export-map` writes
+// browser exactly as `tools/blend_model.py` computes it. `map_export.py currents` writes
 // map/currents/<name>.js with the tool's inputs: the ADCIRC database's constants at every mesh
 // node, the stations' corrections, the regional vertical profile, each node's distances through
 // the water to the stations, and the astronomy prepared for each year the map may show. The code
@@ -71,7 +71,7 @@
       const y = this.years[d.getUTCFullYear()];
       if (!y) {
         throw new Error(`the current overlay covers ${this.first} to ${this.last}; ` +
-          'regenerate it with blend_model.py export-map');
+          'regenerate it with map_export.py currents');
       }
       const T0 = (ms - this.epoch) / 86400000 / 36525;
       const s = 270.434164 + 481267.8831417 * T0 - 0.0011333 * T0 * T0;

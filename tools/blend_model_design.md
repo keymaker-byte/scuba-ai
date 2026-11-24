@@ -1,6 +1,6 @@
 # Blend Model design
 
-How `blend_model.py` predicts, why it is built this way, what was tried on the way, and how to grow it. `blend_model.md` is the operating manual; this file is for the agent who changes the tool. The goal it serves is one current tool for every water the workspace dives: today it covers the Salish Sea and Bonaire, from two tidal databases and two station networks.
+How `blend_model.py` predicts, why it is built this way, what was tried on the way, and how to grow it. `blend_model.md` is the operating manual; this file is for the agent who changes the tool. The goal it serves is one current tool for every water the workspace dives, from any tidal database and station network that joins it.
 
 ## The problem
 
@@ -42,7 +42,7 @@ With no station within 16 km the point takes the database scaled by the profile,
 
 ### The extract and the prediction
 
-`extract` evaluates `blend_at` at the site's height (2 m above the seabed, as a fraction of `seabed_m`) and at every twentieth of the column above it, keeps the one with the strongest M2 as `upper`, and writes both as NOAA-form constant sets. Prediction is `tools/lib/current_harmonics.py`, the same summation `stations verify` checks against NOAA's own predictions. The observed offset is applied in `curve` as a time shift that moves each slack by its own figure and interpolates between them, so a maximum stays between its two slacks.
+`extract` evaluates `blend_at` at the site's height (2 m above the seabed, as a fraction of `seabed_m`) and at every twentieth of the column above it, keeps the one with the strongest M2 as `upper`, and writes both as NOAA-form constant sets. Prediction is `tools/lib/current_harmonics.py`, the same summation `verify-stations` checks against NOAA's own predictions. The observed offset is applied in `curve` as a time shift that moves each slack by its own figure and interpolates between them, so a maximum stays between its two slacks.
 
 ### Toward shore
 
@@ -50,9 +50,9 @@ With no station within 16 km the point takes the database scaled by the profile,
 
 ### The map
 
-The browser runs the blend itself. `export-map` ships its inputs: the database's NOAA-form constants at each mesh node as int16 with one scale per node, each node's stations within 16 km through the water, every station's bins as `source_bins` prepares them, the profile table, and per year each constituent's node factor and argument constant. `map/currents.js` ports `blend_at`, `at_frac`, `vprof`, the placing of a point (`place_site`, `walk_in`, `locate`) and the prediction line for line, so a point read on the map is an extract taken there. Two parts are left out because they change no current: `orient` and `by_timing` turn the axis end for end with the sign of every constant. The map's land test is the coastline mask it draws with, not the polygons `place_site` reads, so the two can disagree on a point within a mask cell of the shore.
+The browser runs the blend itself. `map_export.py currents` ships its inputs, computed with `tools/lib/blend.py`: the database's NOAA-form constants at each mesh node as int16 with one scale per node, each node's stations within 16 km through the water, every station's bins as `source_bins` prepares them, the profile table, and per year each constituent's node factor and argument constant. `map/currents.js` ports `blend_at`, `at_frac`, `vprof`, the placing of a point (`place_site`, `walk_in`, `locate`) and the prediction line for line, so a point read on the map is an extract taken there. Two parts are left out because they change no current: `orient` and `by_timing` turn the axis end for end with the sign of every constant. The map's land test is the coastline mask it draws with, not the polygons `place_site` reads, so the two can disagree on a point within a mask cell of the shore.
 
-The trails use the same blend once per node at load, at the node's own seabed, and interpolate between nodes as before. Every site in the boxes rides along as a check, so a port that drifts from the tool refuses to draw. The int16 constants hold each node to 1 part in 32,767 of its largest value; in water whose tidal ellipse is nearly a circle that moves the principal axis by a few hundredths of a degree, which sets the 0.15° the check allows.
+The trails use the same blend once per node at load, at the node's own seabed, and interpolate between nodes as before. Sample nodes, and sample points the export picks inside elements and just off the mesh's shoreline, ride along with the tool's own values as a check, so a port that drifts from the tool refuses to draw. The int16 constants hold each node to 1 part in 32,767 of its largest value; in water whose tidal ellipse is nearly a circle that moves the principal axis by a few hundredths of a degree, which sets the 0.15° the check allows.
 
 ## Why it is this way
 
@@ -72,11 +72,22 @@ The first test case. 1.4 km from PUG1516, the column-mean version missed its bin
 
 ## The tests
 
-`verify` is the record of the method; every change to it is judged by all three tests, and the figures in `blend_model.md` come from `<region>_verify.json`.
+`verify` is the record of the method; every change to it is judged by all three tests, run over 30 days from 1 December, and written to `<region>_verify.json`. The figures below are the Salish Sea region's, December 2026.
 
-- **At the stations.** Each NOAA station's deepest, middle and top bin, predicted at its own position and height with the station in place. It must stay at 0 minutes, 0% and 0°: any change that breaks exactness is a regression.
-- **Hidden stations.** Each NOAA station's deepest bin, predicted with the station and its profile rows left out, against copying the nearest other station and the database alone, by distance band.
-- **Legacy tables.** The 2010 subordinate stations, each its reference moved by its own published corrections, near the surface: a test independent of the modern surveys.
+- **At the stations.** Each NOAA station's deepest, middle and top bin, predicted at its own position and height with the station in place: 395 bins at 0 minutes on slack, 0% on peak speed and 0° on direction. It must stay there: any change that breaks exactness is a regression.
+- **Hidden stations.** Each NOAA station's deepest bin, predicted with the station and its profile rows left out, against copying the nearest other station and the database alone, by distance band. Over 135 stations: slack within 34 minutes at the median (80% within 56) and peak speed within 28%, against 45 minutes and 38% for the nearest station and 40 minutes and 30% for the database alone. By the nearest remaining station: within 2 km 24 minutes, 2 to 6 km 33 minutes, 6 to 16 km 36 minutes, beyond 16 km 48 minutes.
+- **Legacy tables.** The 2010 subordinate stations, each its reference moved by its own published corrections, near the surface: a test independent of the modern surveys. Over 117 stations: slack within 25 minutes and peak speed within 25%, against 29 minutes and 26% for the nearest station and 42 minutes and 35% for the database alone.
+
+### Station data
+
+- **NOAA.** `tools/lib/noaa_stations.py` keeps NOAA's station list and one file per station in `tools/db/noaa_current/`: every bin's constants, depth, steady current and azimuth, and each published bin's flood and ebb directions. H stations carry their own constants, S stations only corrections to a reference, W stations no predictions; the build reads every bin with constants, the ones NOAA leaves unpublished included, and lists S and W as others. A retired station is read with `noaa_legacy_current`. The prediction (`tools/lib/current_harmonics.py`, `tools/lib/tidal_astronomy.py`) follows Schureman with NOAA's conventions, node factors held at mid-year; in November 2026 all 2,281 published harmonic bins agreed with NOAA's live API over 30 days within 0.004 m/s every six minutes, and every slack and maximum within 3 minutes and 0.013 m/s on 2,279 (the other two differ by one event on a flat curve).
+- **CHS.** `chs_current` keeps the predictions; `build` fits constants to this year's (`fit_year` in the region file) and takes the series as one bin at mid-depth.
+- **The check.** `verify-stations` gives each ID to the network whose `owns` claims it, and that network's `verify` compares its cache with the live service over the 30 days from today. A NOAA bin passes within 0.02 m/s and 3 minutes on speed and on every slack and maximum, a flat-curve event judged on speed and events in the first hours of a UTC year left out; a station with no published bin has nothing to compare and is reported so. A CHS station passes when every value and event matches exactly.
+- **Downloads.** Every source fetches what it lacks the first time it is asked: the database through `need_db`, NOAA stations through `noaa_stations.station`, CHS stations and years through `chs_current`, the legacy tables through `noaa_legacy_current.index`, NCEI tiles through `ncei_depth.tile_path`, the DCBD grid through `dcbd.grid`.
+
+### Pinned astronomy
+
+The equilibrium arguments are set at each database run's start (ENPAC15 2004-11-16, EC2015 1991-11-17) and the nodal factors and phases at its middle, 205 days later, as ADCIRC sets them. `selftest` checks every constituent's frequency and nodal factor against each database's header.
 
 ## Open problems
 
@@ -84,31 +95,30 @@ The first test case. 1.4 km from PUG1516, the column-mean version missed its bin
 - **Speed near shore.** The same elements can run slower or faster than the water divers describe: at Fox Island East Wall the site reads stronger than the tool, and at Richmond Beach Park research gives moderate where the tool gives gentle. The site file's wording, from research, describes the water; the tool's speed is what the plan uses.
 - **The flood label in weak water.** Under a few cm/s the timing ties a point only loosely to its station, and the label can flip over a few hundred metres (off Point White Dock). A confidence for the label, from the covariance's size against the amplitudes, would let the header say so.
 - **Eddies and back eddies.** Behind pilings, in coves and off points the local water can run against the channel for part of the tide (Titlow, Sunnyside). No tidal database here resolves them; the observed offset and the site's prose carry them.
-- **Beyond reach.** In southern Hood Canal, 40 km or more from Hazel Point, and west of Sekiu no station lies within 16 km and the error grows (48 minutes on the two hidden stations past 16 km). A station surveyed in either would narrow it; `build` takes it in once it is cached.
+- **Beyond reach.** Where no station lies within 16 km the error grows (48 minutes on the hidden stations past 16 km). A station surveyed there narrows it, and the next `build` takes it in.
 
 ## Extending it
 
-`blend_model.py` holds the method; what it reads comes through three seams, each a list a new source joins without touching the correction:
+`tools/lib/blend.py` holds the method, which `blend_model.py` and `map_export.py` both call; what it reads comes through three seams, each a list a new source joins without touching the correction:
 
 - **Tidal databases.** `DATABASES` in `tools/lib/adcirc.py` (ENPAC15, EC2015), picked by `database_for(bbox)` as the one whose domain holds the region's box.
-- **Station networks.** `NETWORKS` in `tools/lib/current_stations.py` (NOAA harmonic, CHS predictions). Each network's `gather` lists its stations in a box from its cache (NOAA's kept by `stations fetch` through `tools/lib/noaa_stations.py`, CHS's by `chs_current`), and its `prepare` turns one into bins and returns its vertical profile rows.
-- **Bathymetries.** `SOURCES` in `tools/lib/seabed.py` (NCEI tiles, DCBD Bonaire), asked in order for the seabed under each station and map node, from data already on this machine. A station no bathymetry covers takes the database's own depth.
+- **Station networks.** `NETWORKS` in `tools/lib/current_stations.py` (NOAA harmonic, CHS predictions). Each network's `gather` lists its stations in a box, downloading through its own code whatever is not yet cached (NOAA's through `tools/lib/noaa_stations.py`, CHS's through `chs_current`), its `prepare` turns one into bins and returns its vertical profile rows, and `owns` and `verify` let `verify-stations` hand a station ID to its network and check its cache against the network's live service. A new network brings all four.
+- **Bathymetries.** `SOURCES` in `tools/lib/seabed.py` (NCEI tiles, DCBD Bonaire), asked in order for the seabed under each station and map node, each downloading what it covers the first time a point there is asked for. A station no bathymetry covers takes the database's own depth.
 
 ### A new region on the same database
 
-1. Cache its stations (`blend_model.py stations fetch --near`, `chs_current.py fetch --near` for the fit year) and the bathymetry where depths are wanted (ask before a download; NCEI tiles are large).
-2. `build --name <region> --bbox S W N E`, then `verify --name <region>`. The at-stations test must read 0, 0, 0; read the hidden and legacy tables against the nearest station and the database alone.
-3. `export-map` for its layer, and `extract --site` on all of its sites in one run.
+1. `build --name <region> --bbox S W N E`, then `verify --name <region>`. The at-stations test must read 0, 0, 0; read the hidden and legacy tables against the nearest station and the database alone.
+2. `extract --site` on all of its sites in one run, and an area for it in `map/coverage.json` when the map should show it.
 
 `load_region` picks the first region whose box holds a point, so boxes should not overlap.
 
 ### A region with no stations
 
-Bonaire is one: EC2015's field around the island, with the nearest current station, in Puerto Rico, about 700 km away. The method degrades in three places, and each is stated in the output:
+A region whose box holds no current station degrades in three places, and each is stated in the output:
 
 - **No correction.** With no station within 16 km a point takes the database's own constants (`blend_at` with no candidates); with none in the region at all, every point does.
-- **No measured profile.** `profile_table` finds no rows, and `vfac` falls back to the 1/7 power law over the whole column, speed alone, with no change in timing. Borrowing another region's profile was rejected: the Salish Sea's comes from a cold, stratified, strongly tidal estuary.
-- **No flood name.** With no station within 300 km, `orient` leaves the axis as `principal_axis` gives it, and the header calls flood and ebb the two ends of the axis. Bonaire's current is wind driven, and its plans read the tidal stream's direction alone.
+- **No measured profile.** `profile_table` finds no rows, and `vfac` falls back to the 1/7 power law over the whole column, speed alone, with no change in timing. Borrowing another region's profile was rejected: a profile belongs to its own water's stratification and tidal strength.
+- **No flood name.** With no station within 300 km, `orient` leaves the axis as `principal_axis` gives it, and the header calls flood and ebb the two ends of the axis.
 
 `verify` reports that it has nothing to test and writes a verify file with no stations. Adding a station network that covers such a region turns it into an ordinary one at the next build.
 
@@ -118,11 +128,11 @@ A different model enters as a `DATABASES` entry with its reader: it needs a mesh
 
 ### A new station network
 
-A class in `NETWORKS` with a `kind`, `gather(inbox, fit_year)` returning (stations, others without constants), and `prepare(station, H, Hdem, fit_year, log)` setting `bins` and returning profile rows. A station is a dict with `id`, `kind`, `name`, `lat`, `lon` and `flood`; each bin is [fraction of the depth, steady current cm/s, azimuth, {constituent: complex amplitude in NOAA's convention}]. NOAA's harmonic stations give these directly. CHS shows the route for a network that publishes predictions only: fit constants to a year of them (`harmonic_fit`) and treat the series as one bin at mid-depth, or at its stated depth where the network gives one. Only a network with several bins over a known seabed adds profile rows.
+A class in `NETWORKS` with a `kind`, `gather(inbox, fit_year)` returning (stations, others without constants) and downloading what is not cached, `prepare(station, H, Hdem, fit_year, log)` setting `bins` and returning profile rows, `owns(id)` claiming its station IDs, and `verify(id)` returning (passed, report lines) from a comparison with its live service. A station is a dict with `id`, `kind`, `name`, `lat`, `lon` and `flood`; each bin is [fraction of the depth, steady current cm/s, azimuth, {constituent: complex amplitude in NOAA's convention}]. NOAA's harmonic stations give these directly. CHS shows the route for a network that publishes predictions only: fit constants to a year of them (`harmonic_fit`) and treat the series as one bin at mid-depth, or at its stated depth where the network gives one. Only a network with several bins over a known seabed adds profile rows.
 
 ### A new bathymetry
 
-A class in `SOURCES` with a `name`, a `datum` and `elevation(lat, lon)`, answering metres, negative under water, from data already on this machine, or None where it holds nothing. It reads its tool's cache and never downloads; the shared reader belongs in `tools/lib/`, as `dem_tiles.py` and `dcbd.py` do for their tools.
+A class in `SOURCES` with a `name`, a `datum` and `elevation(lat, lon)`, answering metres, negative under water, or None where it holds nothing. It downloads through its own tool what covers a point the first time that point is asked for; the shared reader belongs in `tools/lib/`, as `dem_tiles.py` and `dcbd.py` do for their tools.
 
 ### Several databases at once
 
@@ -130,4 +140,4 @@ A coast covered by two models, or a model refined by a regional one, would build
 
 ### Changing the method
 
-Change one thing, rebuild, and run `verify`; a change to the astronomy in `tools/lib/adcirc.py` runs `selftest` first. A change to the blend, the profile, the placing of a point or the prediction is mirrored in `map/currents.js`; `export-map` then proves the two agree at sample nodes and sample points of its own choosing. A change to the region file's layout raises `FORMAT`, which makes every command ask for a rebuild. Keep the at-stations test at zero, compare the hidden and legacy medians with the figures above, and update `blend_model.md` and this file with what was tried and what it scored, kept or not. The settings in force are recorded in each region file under `settings`.
+Change one thing, rebuild, and run `verify`; a change to the astronomy in `tools/lib/adcirc.py` runs `selftest` first. A change to the blend, the profile, the placing of a point or the prediction is mirrored in `map/currents.js`; `map_export.py currents` then proves the two agree at sample nodes and sample points of its own choosing. A change to the region file's layout raises `FORMAT`, which makes every command ask for a rebuild. Keep the at-stations test at zero, compare the hidden and legacy medians with the figures above, and update this file with what was tried and what it scored, kept or not. The settings in force are recorded in each region file under `settings`.

@@ -1,27 +1,35 @@
-"""The seabed at a point from whichever bathymetry covers it, read only from data already on
-this machine. Each source answers a signed elevation in metres, negative under water, against
+"""The seabed at a point from whichever bathymetry covers it, each source downloading through
+its own tool whatever it needs that is not yet on this machine. Each source answers a signed elevation in metres, negative under water, against
 its own datum, or None where it holds nothing; `Seabed` asks them in order and names the one
 that answered. A new bathymetry joins by adding a class with `name`, `datum` and `elevation`
 to SOURCES."""
-from lib.dcbd import cached as dcbd_cached, utm as dcbd_utm
-from lib.dem_tiles import CachedTiles
+from lib.dcbd import grid as dcbd_grid, utm as dcbd_utm
+from lib import ncei
+from lib.dem_tiles import Tile
 
 
 class NceiTiles:
-    """NOAA NCEI's coastal DEM, 1/9 arc-second, the US coasts: the tiles `ncei_depth` cached."""
+    """NOAA NCEI's coastal DEM, 1/9 arc-second, the US coasts: `lib/ncei.py`'s tiles, each one
+    downloaded the first time a point inside it is asked for (about 200 MB a tile)."""
     name = "NCEI coastal DEM"
     datum = "NAVD 88"
 
     def __init__(self):
-        self.tiles = CachedTiles()
+        self.open = {}
 
     def elevation(self, lat, lon):
-        return self.tiles.elevation(lat, lon)
+        path = ncei.tile_path(lat, lon)
+        if path is None:
+            return None
+        t = self.open.get(path)
+        if t is None:
+            t = self.open[path] = Tile(path)
+        return t.value(*t.pixel(lat, lon))
 
 
 class DcbdBonaire:
     """The DCBD coastal bathymetry of Bonaire and Klein Bonaire, 2 m, from the shore to about
-    20 m deep: the grid `dcbd_depth` cached."""
+    20 m deep: `dcbd_depth`'s grid, downloaded on first use."""
     name = "DCBD coastal bathymetry of Bonaire"
     datum = "about sea level"
 
@@ -33,7 +41,7 @@ class DcbdBonaire:
         if not -69.0 <= lon <= -67.9 or not 11.8 <= lat <= 12.5:
             return None
         if not self.tried:
-            self.grid, self.tried = dcbd_cached(), True
+            self.grid, self.tried = dcbd_grid(), True
         if self.grid is None:
             return None
         p = self.grid.pixel(*dcbd_utm(lat, lon))

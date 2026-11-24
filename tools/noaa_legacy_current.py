@@ -103,7 +103,7 @@ def station(sid):
     idx = index()
     if sid not in idx:
         sys.exit(f"{sid} is not a reference current station in the legacy harmonics; "
-                 "list them with `stations --near`. A live station is cached with `blend_model.py stations fetch`.")
+                 "list them with `stations --near`. A live station is read through the Blend Model.")
     h = Harmonics(TCD)
     for k, r in enumerate(h.records()):
         if k == idx[sid]["record"]:

@@ -1,22 +1,22 @@
 """Current station networks as the Blend Model reads them: each network gathers its stations in a
-box from what its own tool cached on this machine, and turns each one into bins, the form every
-correction is made from. A bin is [fraction of the depth above the seabed, steady current cm/s,
+box, downloading through its own tool whatever is not yet on this machine, turns each one into
+bins, the form every correction is made from, and checks a station's cached data against the
+network's live service. A bin is [fraction of the depth above the seabed, steady current cm/s,
 flood azimuth, {constituent: [re, im]}], the constituent a complex amplitude Z = A e^(-ig) in cm/s
-in NOAA's convention, along the flood. A new network joins by adding a class with `kind`, `gather`
-and `prepare` to NETWORKS."""
+in NOAA's convention, along the flood. A new network joins by adding a class to NETWORKS with
+`kind`, `gather(inbox, fit_year)`, `prepare(station, H, Hdem, fit_year, log)`, `owns(id)` and
+`verify(id)`, which returns (passed, report lines)."""
 import cmath
-import json
 import math
-import os
 import sys
-from datetime import datetime, timedelta, timezone
+import time as _time
+from datetime import date, datetime, timedelta, timezone
 
 from lib.tidal_astronomy import ALIAS, CONS, longitudes
-from lib.noaa_stations import DB as NOAA_DB
+from lib import noaa_stations
 from lib.tidal_astronomy import nodal as noaa_nodal
 
-TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CHS_DB = os.path.join(TOOLS, "db", "chs_current")
+VERIFY_DAYS = 30  # days a station is compared with its network's live service, from today
 UTC = timezone.utc
 DEG = math.pi / 180
 KN = 0.514444
@@ -46,28 +46,24 @@ def bin_z(b):
 
 
 class NoaaHarmonic:
-    """NOAA's harmonic current stations, every bin with constants, from the cache `stations fetch` keeps.
-    Its subordinate and weak stations carry no constants and are listed as others. The bins of a
-    station with three or more of them, over a known seabed, give the regional vertical profile."""
+    """NOAA's harmonic current stations, every bin with constants, from `noaa_stations`' cache, each
+    station downloaded on first use. Its subordinate and weak stations carry no constants and are
+    listed as others. The bins of a station with three or more of them, over a known seabed, give
+    the regional vertical profile."""
     kind = "noaa"
 
     def gather(self, inbox, fit_year):
-        if not os.path.exists(os.path.join(NOAA_DB, "stations.json")):
-            sys.exit("NOAA's current station list is not cached. Cache the region's stations with "
-                     "`python3 tools/blend_model.py stations fetch --near <lat> <lon> --km <r>`, then build again.")
-        with open(os.path.join(NOAA_DB, "stations.json")) as f:
-            lst = json.load(f)["stations"]
-        missing = [sid for sid, s in lst.items() if inbox(s["lat"], s["lon"])
-                   and not os.path.exists(os.path.join(NOAA_DB, f"{sid}.json"))]
-        if missing:
-            sys.exit(f"{len(missing)} NOAA stations in the box are not cached ({', '.join(missing[:8])}...). "
-                     f"Cache them with `python3 tools/blend_model.py stations fetch --near <lat> <lon> --km <r>`, then build again.")
+        lst = noaa_stations.station_list()["stations"]
+        ids = [sid for sid, s in sorted(lst.items()) if inbox(s["lat"], s["lon"])]
+        todo = [sid for sid in ids if not noaa_stations.cached(sid)]
+        if todo:
+            print(f"downloading {len(todo)} NOAA current stations in the box ...", file=sys.stderr, flush=True)
         sources, others = [], []
-        for sid, s in sorted(lst.items()):
-            if not inbox(s["lat"], s["lon"]):
-                continue
-            with open(os.path.join(NOAA_DB, f"{sid}.json")) as f:
-                doc = json.load(f)
+        for sid in ids:
+            was = noaa_stations.cached(sid)
+            doc = noaa_stations.station(sid, quiet=True)
+            if not was:
+                _time.sleep(noaa_stations.FETCH_PAUSE)
             bins = [b for b in doc["bins"].values() if b.get("cons")]
             if bins:
                 sources.append({"id": sid, "kind": self.kind, "name": doc["name"], "lat": doc["lat"], "lon": doc["lon"],
@@ -77,6 +73,29 @@ class NoaaHarmonic:
                 others.append({"id": sid, "kind": "noaa subordinate" if "S" in kinds else "noaa weak",
                                "name": doc["name"], "lat": doc["lat"], "lon": doc["lon"]})
         return sources, others
+
+    def owns(self, sid):
+        return sid in noaa_stations.station_list()["stations"]
+
+    def verify(self, sid):
+        """Every published harmonic bin against NOAA's live predictions."""
+        doc = noaa_stations.station(sid)
+        day, ok = date.today(), True
+        lines = [f"{doc['id']}  {doc['name']}  NOAA, {day} for {VERIFY_DAYS} days, constants fetched {doc['fetched']}"]
+        bins = noaa_stations.harmonic_bins(doc)
+        if not bins:
+            lines.append("  no bin NOAA publishes predictions for, so nothing to compare with: its constants "
+                         "stand unchecked")
+        for num, b in bins:
+            r = noaa_stations.compare(doc, num, b, day, VERIFY_DAYS)
+            lines.append(f"  bin {num}" + (f", {b['depth']} m" if b.get("depth") is not None else "")
+                         + ("  PASS" if r["ok"] else "  FAIL"))
+            lines += ["  " + x for x in noaa_stations.report_lines(r)]
+            ok &= r["ok"]
+        if not ok:
+            lines.append(f"  limits are {noaa_stations.SPEED_TOL} m/s and {noaa_stations.TIME_TOL:g} min: NOAA has "
+                         f"replaced the constants. Delete tools/db/noaa_current/{sid}.json, rebuild, and verify again.")
+        return ok, lines
 
     def prepare(self, s, H, Hdem, fit_year, log):
         """Sets s["bins"]; returns the station's vertical profile rows. H is the seabed the bins
@@ -105,21 +124,38 @@ CHS_NAMES = ["M2", "S2", "N2", "K2", "K1", "O1", "P1", "Q1", "2N2", "NU2", "MU2"
 
 
 class ChsPredictions:
-    """CHS's current stations, from `chs_current`'s cache. CHS publishes predictions without
-    constants, so each station's constants are fitted to a year of its predictions, and its one
-    series is taken as a bin at mid-depth."""
+    """CHS's current stations, from `chs_current`'s cache, each station and year downloaded on
+    first use. CHS publishes predictions without constants, so each station's constants are fitted
+    to a year of its predictions, and its one series is taken as a bin at mid-depth."""
     kind = "chs"
 
     def gather(self, inbox, fit_year):
+        import chs_current
         sources = []
-        for fn in sorted(os.listdir(CHS_DB)) if os.path.isdir(CHS_DB) else []:
-            if len(fn) == 10 and fn.endswith(".json"):
-                with open(os.path.join(CHS_DB, fn)) as f:
-                    d = json.load(f)
-                if inbox(float(d["lat"]), float(d["lon"])):
-                    sources.append({"id": "CHS" + d["code"], "kind": self.kind, "name": d["name"], "lat": float(d["lat"]),
-                                    "lon": float(d["lon"]), "code": d["code"], "flood": float(d["flood"])})
+        for code, e in sorted(chs_current.station_list()["stations"].items()):
+            if inbox(float(e["lat"]), float(e["lon"])):
+                d = chs_current.station(code)
+                sources.append({"id": "CHS" + d["code"], "kind": self.kind, "name": d["name"], "lat": float(d["lat"]),
+                                "lon": float(d["lon"]), "code": d["code"], "flood": float(d["flood"])})
         return sources, []
+
+    def owns(self, sid):
+        return sid.startswith("CHS") and len(sid) == 8
+
+    def verify(self, sid):
+        """Every speed value and event of the cached predictions against CHS's live API."""
+        import chs_current
+        st = chs_current.station(sid[3:])
+        day = date.today()
+        r = chs_current.compare(st, day, VERIFY_DAYS)
+        lines = [f"{sid}  {st['name']}  CHS, {day} for {VERIFY_DAYS} days" + ("  PASS" if r["ok"] else "  FAIL"),
+                 f"    speed, {r['speed_n']} values: " + ("worst difference n/a" if r["speed_worst"] is None else
+                 f"worst difference {r['speed_worst']:.3f} m/s") + f", {r['speed_missing']} missing",
+                 f"    events, {r['events_n']} slacks and maxima: {r['events_differ']} differ"]
+        if not r["ok"]:
+            lines.append(f"  CHS has replaced these predictions. Delete tools/db/chs_current/{sid[3:]}*.json, "
+                         "rebuild, and verify again.")
+        return r["ok"], lines
 
     def prepare(self, s, H, Hdem, fit_year, log):
         log(f"  fitting constants to CHS {s['code']} {s['name']}, {fit_year}...")
@@ -136,13 +172,12 @@ NETWORKS = (NoaaHarmonic, ChsPredictions)
 
 def chs_signed(code, year):
     """A CHS station's speed series for one UTC year, every hour, signed flood positive by the
-    flood or ebb event between the slacks around it."""
-    p = os.path.join(CHS_DB, f"{code}_{year}.json")
-    if not os.path.exists(p):
-        sys.exit(f"CHS station {code} has no cached {year}. Cache it with "
-                 f"`python3 tools/chs_current.py fetch {code} --year {year}`, then build again.")
-    with open(p) as f:
-        d = json.load(f)
+    flood or ebb event between the slacks around it. The year is downloaded on first use."""
+    import chs_current
+    d = chs_current.year_file(chs_current.station(code), year)
+    if d is None:
+        sys.exit(f"CHS holds no {year} predictions for station {code}, so its constants cannot be fitted "
+                 "to this year. Stop and report it.")
     t0 = datetime(year, 1, 1, tzinfo=UTC)
     ev = [(t0 + timedelta(minutes=m), k) for m, k, _ in d["events"]]
     ms = d["mins"] if "mins" in d else range(d["start"], d["start"] + d["step"] * len(d["kn"]), d["step"])
