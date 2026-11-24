@@ -20,6 +20,10 @@ REPORT = os.path.join(DB, "_verify.jsonl")
 MD = "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations"
 DG = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
 UTC = timezone.utc
+SPEED_TOL = 0.02    # m/s: a bin passes within this of NOAA's speed and peaks
+TIME_TOL = 3.0      # minutes: and within this of every slack and maximum
+FETCH_PAUSE = 0.3   # seconds between stations downloaded, under NOAA's rate limit
+VERIFY_PAUSE = 0.2  # seconds between bins in verify_all
 
 
 def get(url, missing_ok=False):
@@ -83,7 +87,7 @@ def entry(sid):
     lst = station_list()
     if sid not in lst["stations"]:
         sys.exit(f"{sid} is not in NOAA's current station list (fetched {lst['fetched']}). "
-                 "List stations with `stations near`; a retired reference station is read with "
+                 "A retired reference station is read with "
                  "noaa_legacy_current. Delete tools/db/noaa_current/stations.json to list again.")
     return lst["stations"][sid]
 
@@ -136,7 +140,7 @@ def km_from(s, lat, lon):
     return math.hypot((s["lat"] - lat) * 60.0, (s["lon"] - lon) * 60.0 * scale) * 1.852
 
 
-def fetch(ids=(), near=None, km=50.0, every=False, pause=0.3):
+def fetch(ids=(), near=None, km=50.0, every=False):
     """Cache the stations named, those within `km` of `near`, or every one NOAA lists; skip
     what is already cached, so a stopped run picks up where it left off."""
     lst = station_list()["stations"]
@@ -155,28 +159,18 @@ def fetch(ids=(), near=None, km=50.0, every=False, pause=0.3):
     for k, sid in enumerate(todo, 1):
         station(sid, quiet=True)
         print(f"  {k}/{len(todo)}  {sid}  {lst[sid]['name']}")
-        _time.sleep(pause)
+        _time.sleep(FETCH_PAUSE)
     print("done.")
 
 
-def check_bin(doc, num):
-    """The harmonic bin asked for, or stop with why it has nothing to check."""
-    bins = doc["bins"]
-    if num is None:
-        if len(bins) == 1:
-            num = next(iter(bins))
-        else:
-            sys.exit(f"{doc['id']} has {len(bins)} bins; pass --bin. List them with `stations bins {doc['id']}`.")
-    num = str(num)
-    b = bins.get(num)
-    if b is None:
-        sys.exit(f"{doc['id']} has no bin {num}. List its bins with `stations bins {doc['id']}`.")
-    if b.get("type") != "H" or not b.get("cons"):
-        what = {"S": "is subordinate, with no constants", "W": "is weak and variable, with no predictions",
-                None: "has constants and no NOAA predictions to compare with"}.get(b.get("type"),
-                                                                                  "carries no constants")
-        sys.exit(f"{doc['id']} bin {num} {what}; only a published harmonic bin is checked.")
-    return num, b
+def harmonic_bins(doc):
+    """The station's published harmonic bins with constants, the ones NOAA's API predicts, or
+    stop with why it has nothing to check."""
+    bins = [(num, b) for num, b in sorted(doc["bins"].items(), key=lambda x: int(x[0]))
+            if b.get("type") == "H" and b.get("cons")]
+    if not bins:
+        sys.exit(f"{doc['id']} has no published harmonic bin with constants; only those are checked.")
+    return bins
 
 
 # --- the check against NOAA's live predictions -------------------------------------------
@@ -186,9 +180,10 @@ def _day_span(day, pad=0):
     return start - timedelta(minutes=pad), 1440 + 2 * pad
 
 
-def compare(doc, num, b, day0, days, speed_tol, time_tol):
+def compare(doc, num, b, day0, days):
     """One harmonic bin against NOAA's live API over `days` from `day0`: the speed every six
     minutes, and every slack and maximum. Returns the differences."""
+    speed_tol, time_tol = SPEED_TOL, TIME_TOL
     q = {"product": "currents_predictions", "application": "NOS.COOPS.TAC.CUR", "station": doc["id"],
          "bin": num, "time_zone": "gmt", "units": "metric", "format": "json",
          "begin_date": day0.strftime("%Y%m%d"), "end_date": (day0 + timedelta(days=days - 1)).strftime("%Y%m%d")}
@@ -261,7 +256,7 @@ def report_lines(r):
             f"worst peak difference {r['peak_worst']:.3f} m/s, {r['unmatched']} unmatched{note}"]
 
 
-def verify_all(day0, days, speed_tol, time_tol, pause):
+def verify_all(day0, days):
     """Every published harmonic bin of every cached station, one result per line in the cache
     folder's _verify.jsonl. A bin already in that file is skipped, so a stopped run picks up
     where it left off; delete the file to start over."""
@@ -283,7 +278,7 @@ def verify_all(day0, days, speed_tol, time_tol, pause):
         doc = station(sid)
         b = doc["bins"][num]
         if b.get("cons"):
-            r = compare(doc, num, b, day0, days, speed_tol, time_tol)
+            r = compare(doc, num, b, day0, days)
         else:
             r = {"station": sid, "bin": num, "type": "H", "ok": False, "error": "no constants published"}
         r.update(name=doc["name"], date=day0.isoformat(), days=days, bins=len(doc["bins"]))
@@ -292,8 +287,8 @@ def verify_all(day0, days, speed_tol, time_tol, pause):
         done[(sid, num)] = r
         if k % 25 == 0 or not r["ok"]:
             print(f"  {k}/{len(todo)}  {sid} bin {num}  {'ok' if r['ok'] else 'FAIL'}", flush=True)
-        _time.sleep(pause)
+        _time.sleep(VERIFY_PAUSE)
     rs = [r for r in done.values() if r["type"] == "H"]
     bad = [r for r in rs if not r["ok"]]
-    print(f"\n  harmonic: {len(rs) - len(bad)} of {len(rs)} bins within {speed_tol} m/s and {time_tol} min")
+    print(f"\n  harmonic: {len(rs) - len(bad)} of {len(rs)} bins within {SPEED_TOL} m/s and {TIME_TOL:g} min")
     print(f"  results: {os.path.relpath(REPORT, os.path.dirname(TOOLS))}")

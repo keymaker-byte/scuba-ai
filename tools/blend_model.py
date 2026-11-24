@@ -3,17 +3,15 @@
 database corrected by the current stations around the point, NOAA's and CHS's.
 
   blend_model.py build --name N --bbox S W N E          gather a region's stations, once
-  blend_model.py extract --near LAT LON --seabed D       print a point's constants, once
+  blend_model.py extract --site F [F ...]                write each site's constants into its JSON
   blend_model.py predict --file F --date D --tz Z        slacks and peaks
   blend_model.py window --file F --date D --tz Z         diveable windows under a speed threshold
   blend_model.py at --file F --time "D HH:MM" --tz Z     current at a moment
   blend_model.py verify --name N                         accuracy against hidden stations
   blend_model.py export-map --bbox S W N E [...] --name N --label L   the map viewer's seafloor overlay
   blend_model.py selftest [--db ENPAC15|EC2015]          the astronomy against each database's header
-  blend_model.py stations near LAT LON                   NOAA current stations near a point
-  blend_model.py stations bins STATION                   a NOAA station's bins, their depths and kinds
   blend_model.py stations fetch [STATION ...] [--near LAT LON --km R] [--all]   cache NOAA stations
-  blend_model.py stations verify STATION --bin B | --all  cached constants against NOAA's live API
+  blend_model.py stations verify STATION [...] | --all   cached constants against NOAA's live API
 """
 import argparse
 import cmath
@@ -62,6 +60,8 @@ PRIOR = 0.3
 EXACT_KM = 0.5
 MIN_AMP = 1.0       # cm/s: a station constituent this small in the database keeps its band's correction
 ABOVE_BOTTOM = 2.0  # m: the lowest measured height above the seabed
+VERIFY_DAYS = 30    # days of each verify test, from 1 December this year
+STATION_VERIFY_DAYS = 30  # days each station bin is compared with NOAA's live API, from today
 BANDS_KM = [(0, 2), (2, 6), (6, REACH_KM), (REACH_KM, None)]
 MARGIN = 0.15       # degrees of mesh kept around a region for the paths through the water
 EXTEND_KM = 1.0     # how far toward shore a point outside the wet mesh takes the mesh edge's constants
@@ -485,11 +485,12 @@ def cmd_build(a):
     S, W, N, E = a.bbox
     inbox = lambda la, lo: S <= la <= N and W <= lo <= E
     db = database_for(a.bbox)
+    fit_year = date.today().year  # the year of CHS predictions the Canadian constants are fitted to
     networks = [n() for n in NETWORKS]
     kind_of = {n.kind: n for n in networks}
     sources, others = [], []
     for n in networks:
-        s, o = n.gather(inbox, a.fit_year)
+        s, o = n.gather(inbox, fit_year)
         sources += s
         others += o
     legacy = []
@@ -529,7 +530,7 @@ def cmd_build(a):
     for s in sources:
         # every bin with its height as a fraction of the depth above the seabed, its steady
         # current, its axis and its constants
-        rows += kind_of[s["kind"]].prepare(s, s["seabed_dem"] or s["seabed_mesh"], s["seabed_dem"], a.fit_year, log)
+        rows += kind_of[s["kind"]].prepare(s, s["seabed_dem"] or s["seabed_mesh"], s["seabed_dem"], fit_year, log)
     log(f"  vertical profile from {len({r['id'] for r in rows})} stations, {len(rows)} bins")
 
     log("Paths through the water between stations...")
@@ -543,7 +544,7 @@ def cmd_build(a):
         s["uv"] = {k: [cx(zu), cx(zv)] for k, (zu, zv) in s["uv"].items()}
         for k in ("_nodes", "_w", "_bins"):
             s.pop(k, None)
-    doc = {"format": FORMAT, "name": a.name, "bbox": a.bbox, "db": db, "built": datetime.now(UTC).isoformat(timespec="seconds"), "fit_year": a.fit_year,
+    doc = {"format": FORMAT, "name": a.name, "bbox": a.bbox, "db": db, "built": datetime.now(UTC).isoformat(timespec="seconds"), "fit_year": fit_year,
            "sources": sources, "others": others, "legacy": legacy, "profile_rows": rows,
            "settings": {"neighbours": NEIGHBOURS, "reach_km": REACH_KM, "soften_km": SOFTEN_KM, "prior": PRIOR,
                         "exact_km": EXACT_KM}}
@@ -615,24 +616,16 @@ def extract_point(uv, start, mesh, reg, H, above_bottom, qlat, qlon, say=log):
 
 
 def cmd_extract(a):
-    """One point printed, or every site given, each written into its own JSON. Every site is read
-    and placed before any is written, so a refused one stops the run with nothing changed; the
-    database's constants for all of them are read in one pass."""
-    if a.site:
-        jobs = []
-        refused = []
-        for path in a.site:
-            try:
-                doc, lat, lon, H = read_site(path)
-                jobs.append({"path": path, "doc": doc, "lat": lat, "lon": lon, "H": H})
-            except Refused as e:
-                refused.append(str(e))
-    else:
-        if not a.near or a.seabed is None:
-            sys.exit("Give --site <slug.json> [...], or --near LAT LON with --seabed M.")
-        if a.seabed <= 0:
-            sys.exit("--seabed is the seabed depth below the datum, a positive number of metres.")
-        jobs, refused = [{"path": None, "lat": a.near[0], "lon": a.near[1], "H": a.seabed}], []
+    """Every site given, each written into its own JSON. Every site is read and placed before any
+    is written, so a refused one stops the run with nothing changed; the database's constants for
+    all of them are read in one pass."""
+    jobs, refused = [], []
+    for path in a.site:
+        try:
+            doc, lat, lon, H = read_site(path)
+            jobs.append({"path": path, "doc": doc, "lat": lat, "lon": lon, "H": H})
+        except Refused as e:
+            refused.append(str(e))
     groups = {}
     for j in jobs:
         reg = load_region(lat=j["lat"], lon=j["lon"])
@@ -644,10 +637,10 @@ def cmd_extract(a):
             try:
                 j["nodes"], j["w"], ext = mesh.place_site(j["lat"], j["lon"])
             except Refused as e:
-                refused.append(f"{j['path'] or 'the point'}: {e}")
+                refused.append(f"{j['path']}: {e}")
                 continue
             if ext:
-                log(f"  {j['path'] or 'the point'}: water the mesh does not reach, the mesh edge's constants "
+                log(f"  {j['path']}: water the mesh does not reach, the mesh edge's constants "
                     f"{ext * 1000:.0f} m away across water")
     if refused:
         sys.exit("Nothing was written. Stop and report:\n  " + "\n  ".join(refused))
@@ -658,13 +651,10 @@ def cmd_extract(a):
         log(f"Streaming the {reg['db']} velocity file for {len(js)} point(s), {len(nodes)} nodes (a minute or several)...")
         vals = read_vel_nodes(reg["db"], nodes)
         for j in js:
-            log(j["path"] or f"{j['lat']}, {j['lon']}")
+            log(j["path"])
             uv = to_noaa(adcirc_cons(header, vals, j["nodes"], j["w"]), reg["db"])
             start = max(zip(j["w"], j["nodes"]))[1]
-            cur = extract_point(uv, start, mesh, reg, j["H"], a.above_bottom, j["lat"], j["lon"])
-            if j["path"] is None:
-                print(json.dumps({"blend_model_current": cur}, indent=2))
-                continue
+            cur = extract_point(uv, start, mesh, reg, j["H"], ABOVE_BOTTOM, j["lat"], j["lon"])
             j["doc"]["blend_model_current"] = cur
             with open(j["path"] + ".part", "w") as f:
                 f.write(json.dumps(j["doc"], indent=2) + "\n")
@@ -673,21 +663,15 @@ def cmd_extract(a):
 
 
 def load_doc(a):
-    if a.json is not None:
-        try:
-            doc, src = json.loads(a.json), "--json"
-        except json.JSONDecodeError as e:
-            sys.exit(f"Could not parse --json: {e}")
-    else:
-        try:
-            with open(a.file) as fh:
-                doc, src = json.load(fh), a.file
-        except OSError as e:
-            sys.exit(f"Could not read --file {a.file}: {e}")
-        except json.JSONDecodeError as e:
-            sys.exit(f"Could not parse JSON in {a.file}: {e}")
+    try:
+        with open(a.file) as fh:
+            doc = json.load(fh)
+    except OSError as e:
+        sys.exit(f"Could not read --file {a.file}: {e}")
+    except json.JSONDecodeError as e:
+        sys.exit(f"Could not parse JSON in {a.file}: {e}")
     if "extract_point" not in doc.get("blend_model_current", {}):
-        sys.exit(f"No blend_model_current extract in {src}: run `extract` and attach its output.")
+        sys.exit(f"No blend_model_current extract in {a.file}: run `extract --site {a.file}`.")
     if getattr(a, "raw", False):
         doc.pop("blend_model_observed_offset", None)
     return doc
@@ -933,14 +917,14 @@ def cmd_verify(a):
         print(f"The {reg['name']} region holds no NOAA harmonic station: nothing to verify against. "
               f"Its predictions are the {reg['db']} database's own current, scaled to the height.")
         return
-    days = a.days
-    t0 = datetime(a.start.year, a.start.month, a.start.day, tzinfo=UTC)
+    days, start = VERIFY_DAYS, date(date.today().year, 12, 1)
+    t0 = datetime(start.year, start.month, start.day, tzinfo=UTC)
     minutes = days * 1440
     ser = lambda b: series(b, t0, minutes, 6)
     methods = ["nearest station", "ADCIRC, 1/7 power", "Blend Model"]
     res = {m: [] for m in methods}
     law = lambda f: (8 / 7) * max(f, 0.01) ** (1 / 7)
-    log(f"Hidden stations: each NOAA station's deepest bin, predicted without it, {days} days from {a.start}...")
+    log(f"Hidden stations: each NOAA station's deepest bin, predicted without it, {days} days from {start}...")
     for i, s in enumerate(sources):
         if s["kind"] != "noaa":
             continue
@@ -1080,7 +1064,7 @@ def cmd_verify(a):
         s = _summary([r for r in res["Blend Model"] if r and lo <= r["km"] < (hi if hi is not None else math.inf)])
         if s:
             by.append({"from_km": lo, "to_km": hi} | s)
-    out = {"verified": date.today().isoformat(), "start": a.start.isoformat(), "days": days,
+    out = {"verified": date.today().isoformat(), "start": start.isoformat(), "days": days,
            "by_distance": by,
            "hidden": {m: _summary(res[m]) for m in methods},
            "legacy": {m: _summary(leg_res[m]) for m in leg_res}, "at_stations": at_sum}
@@ -1167,7 +1151,7 @@ def cmd_export_map(a):
     boxes = a.bbox
     S, W = min(b[0] for b in boxes), min(b[1] for b in boxes)
     N, E = max(b[2] for b in boxes), max(b[3] for b in boxes)
-    reg = load_region(a.region) if a.region else load_region(lat=(S + N) / 2, lon=(W + E) / 2)
+    reg = load_region(lat=(S + N) / 2, lon=(W + E) / 2)
     sources = reg["sources"]
     mesh = Mesh(reg["db"], reg["bbox"])
     lon, lat = mesh.lon, mesh.lat
@@ -1195,7 +1179,7 @@ def cmd_export_map(a):
         sys.exit(f"{len(nodes)} nodes: too many for the 16-bit triangle index; split the box.")
     index = {n: j for j, n in enumerate(nodes)}
     log(f"  {len(nodes)} nodes with a seabed depth, {len(tris)} elements")
-    hab = a.above_bottom
+    hab = ABOVE_BOTTOM
     # each node's seabed for the trails: its own, or, at a corner on land or in water shallower
     # than the height, the deepest water at the middle of the elements around it, so the trails
     # along a shore run at the height above the shore's own seabed
@@ -1333,7 +1317,7 @@ def cmd_export_map(a):
         dq = [deq(index[x]) for x in nn]
         uv = {k: (sum(wi * d[k][0] for wi, d in zip(w, dq)), sum(wi * d[k][1] for wi, d in zip(w, dq)))
               for k in keys}
-        cur = extract_point(uv, max(zip(w, nn))[1], mesh, reg, H, a.above_bottom, la, lo, say=lambda m: None)
+        cur = extract_point(uv, max(zip(w, nn))[1], mesh, reg, H, ABOVE_BOTTOM, la, lo, say=lambda m: None)
         mine = {"cons": cur["bottom"]["cons"], "mean_major": cur["bottom"]["mean_major"]}
         n_shore += kind == "shore"
         # what `at` prints: the signed speed along the flood direction, which it gives to 0.1°
@@ -1373,7 +1357,7 @@ def cmd_export_map(a):
         "checks": {"nodes": node_checks, "points": points},
         "landMask": land_mask(S, W, N, E),
     }
-    out = a.out or os.path.join(WORKSPACE, "map", "currents", f"{a.name}.js")
+    out = os.path.join(WORKSPACE, "map", "currents", f"{a.name}.js")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out + ".part", "w") as fh:
         fh.write("// Generated by tools/blend_model.py export-map; regenerate rather than edit.\n")
@@ -1394,51 +1378,33 @@ def cmd_selftest(a):
         sys.exit(1)
 
 
-def cmd_stations_near(a):
-    doc = noaa_stations.station_list()
-    lat, lon = a.near
-    rows = sorted((noaa_stations.km_from(s, lat, lon), sid, s) for sid, s in doc["stations"].items())
-    print(f"NOAA current stations near {lat:.4f}, {lon:.4f} (list fetched {doc['fetched']}):\n")
-    for km, sid, s in rows[: a.n]:
-        types = "".join(sorted({b["type"] or "?" for b in s["bins"].values()}))
-        print(f"  {sid:<10} {types:<3} {km:6.1f} km  {s['name']}  {'cached' if noaa_stations.cached(sid) else ''}")
-    print("\nType: H harmonic (its own constants, usually with depth bins), S subordinate (corrections")
-    print("to a reference station), W weak and variable (no predictions). The Blend Model reads H alone.")
-
-
-def cmd_stations_bins(a):
-    doc = noaa_stations.station(a.station)
-    print(f"{doc['id']}  {doc['name']}   {doc['lat']:.4f}, {doc['lon']:.4f}")
-    if doc.get("project"):
-        print(f"  project: {doc['project']}")
-    print(f"  constants fetched {doc['fetched']}\n")
-    for num, b in sorted(doc["bins"].items(), key=lambda x: int(x[0])):
-        depth = f"{b['depth']} m" if b.get("depth") is not None else "depth unknown"
-        kind = {"H": "harmonic, published by NOAA", "S": "subordinate, no constants",
-                "W": "weak and variable, no predictions", None: "constants only, unpublished"}[b.get("type")]
-        if b.get("type") in ("H", None) and not b.get("cons"):
-            kind = "listed by NOAA with no constants"
-        print(f"    bin {num:<3} {depth:<14} {kind}")
-
-
 def cmd_stations_fetch(a):
-    noaa_stations.fetch(a.station, a.near, a.km, a.all, a.pause)
+    noaa_stations.fetch(a.station, a.near, a.km, a.all)
 
 
 def cmd_stations_verify(a):
+    """Every published harmonic bin of each station named, or of every cached station with --all."""
     if a.all:
-        return noaa_stations.verify_all(a.date, a.days, a.speed_tol, a.time_tol, a.pause)
+        return noaa_stations.verify_all(date.today(), STATION_VERIFY_DAYS)
     if not a.station:
-        sys.exit("name a station, or pass --all.")
-    doc = noaa_stations.station(a.station)
-    num, b = noaa_stations.check_bin(doc, a.bin)
-    print(f"{doc['id']}  {doc['name']}  bin {num}  {a.date} for {a.days} days, against NOAA's API")
-    print(f"  constants fetched {doc['fetched']}\n")
-    r = noaa_stations.compare(doc, num, b, a.date, a.days, a.speed_tol, a.time_tol)
-    print("\n".join(noaa_stations.report_lines(r)))
-    print("\n  PASS" if r["ok"] else f"\n  FAIL: limits are {a.speed_tol} m/s and {a.time_tol} min. The cached "
-          "constants may be older than NOAA's; delete the station's file to fetch them again.")
-    sys.exit(0 if r["ok"] else 1)
+        sys.exit("name one or more stations, or pass --all.")
+    ok = True
+    for sid in a.station:
+        doc = noaa_stations.station(sid)
+        bins = noaa_stations.harmonic_bins(doc)
+        print(f"{doc['id']}  {doc['name']}  {date.today()} for {STATION_VERIFY_DAYS} days, against NOAA's API")
+        print(f"  constants fetched {doc['fetched']}")
+        for num, b in bins:
+            r = noaa_stations.compare(doc, num, b, date.today(), STATION_VERIFY_DAYS)
+            print(f"\n  bin {num}, {b['depth']} m" if b.get("depth") is not None else f"\n  bin {num}")
+            print("\n".join("  " + line for line in noaa_stations.report_lines(r)))
+            print("    PASS" if r["ok"] else "    FAIL")
+            ok &= r["ok"]
+        print()
+    if not ok:
+        print(f"FAIL: limits are {noaa_stations.SPEED_TOL} m/s and {noaa_stations.TIME_TOL:g} min. The cached constants "
+              "may be older than NOAA's; delete the station's file to fetch them again.")
+    sys.exit(0 if ok else 1)
 
 
 def main():
@@ -1448,27 +1414,16 @@ def main():
     s = sub.add_parser("build", help="gather a region's stations and their corrections, once")
     s.add_argument("--name", required=True, help="the region's name")
     s.add_argument("--bbox", nargs=4, type=float, metavar=("S", "W", "N", "E"), required=True)
-    s.add_argument("--fit-year", type=int, default=date.today().year,
-                   help="the year of CHS predictions the Canadian stations' constants are fitted to (default this year)")
     s.set_defaults(fn=cmd_build)
 
-    s = sub.add_parser("extract", help="a site's constants, written into its JSON (or a point's, printed)")
-    g = s.add_mutually_exclusive_group(required=True)
-    g.add_argument("--site", metavar="PATH", nargs="+",
+    s = sub.add_parser("extract", help="each site's constants, written into its JSON")
+    s.add_argument("--site", metavar="PATH", nargs="+", required=True,
                    help="one or more site JSONs: reads each one's lat, lon and seabed_m, and writes the extract into it")
-    g.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), help="a point that is not a site yet: prints the extract")
-    s.add_argument("--seabed", type=float, metavar="M", help="with --near: the seabed depth at the point, m")
-    s.add_argument("--above-bottom", type=float, default=ABOVE_BOTTOM, metavar="M",
-                   help=f"height above the seabed, m (default {ABOVE_BOTTOM:g})")
     s.set_defaults(fn=cmd_extract)
 
-    tz_help = "the site's time zone, the `tz` in its JSON"
-
     def doc_source(sp):
-        g = sp.add_mutually_exclusive_group(required=True)
-        g.add_argument("--json", metavar="JSON", help="the extract's full JSON content, inline")
-        g.add_argument("--file", metavar="PATH", help="path to the site JSON holding the extract")
-        sp.add_argument("--tz", required=True, metavar="IANA_ZONE", help=tz_help)
+        sp.add_argument("--file", metavar="PATH", required=True, help="path to the site JSON holding the extract")
+        sp.add_argument("--tz", required=True, metavar="IANA_ZONE", help="the site's time zone, the `tz` in its JSON")
         sp.add_argument("--raw", action="store_true",
                         help="the model's own prediction, without the site's observed offset: what an offset is measured against")
 
@@ -1491,9 +1446,6 @@ def main():
 
     s = sub.add_parser("verify", help="accuracy against hidden NOAA stations and the legacy tables")
     s.add_argument("--name", required=True, help="the region's name")
-    s.add_argument("--start", type=date.fromisoformat, default=date(date.today().year, 12, 1),
-                   help="first day of the test (default 1 December this year)")
-    s.add_argument("--days", type=int, default=30)
     s.set_defaults(fn=cmd_verify)
 
     s = sub.add_parser("export-map", help="write the map viewer's seafloor current overlay")
@@ -1501,9 +1453,6 @@ def main():
                    help="bounding box; repeat it to cover the union of several boxes")
     s.add_argument("--name", required=True, help="the overlay's key, and its file name under map/currents/")
     s.add_argument("--label", required=True, help="display name of the area it covers")
-    s.add_argument("--region", help="the built region to correct with (default the one holding the boxes' centre)")
-    s.add_argument("--above-bottom", type=float, default=ABOVE_BOTTOM, metavar="M")
-    s.add_argument("--out", help="output path (default map/currents/<name>.js)")
     s.set_defaults(fn=cmd_export_map)
 
     s = sub.add_parser("selftest", help="the astronomy against each database's ADCIRC header")
@@ -1511,31 +1460,17 @@ def main():
                    help="one database (repeatable); default every database")
     s.set_defaults(fn=cmd_selftest)
 
-    s = sub.add_parser("stations", help="NOAA's current stations: find, cache and check them")
+    s = sub.add_parser("stations", help="NOAA's current stations: cache and check them")
     st = s.add_subparsers(dest="action", required=True)
-    t = st.add_parser("near", help="NOAA current stations near a point")
-    t.add_argument("near", nargs=2, type=float, metavar=("LAT", "LON"))
-    t.add_argument("-n", type=int, default=6)
-    t.set_defaults(fn=cmd_stations_near)
-    t = st.add_parser("bins", help="a station's bins, their depths and kinds")
-    t.add_argument("station")
-    t.set_defaults(fn=cmd_stations_bins)
     t = st.add_parser("fetch", help="cache stations ahead of a build")
     t.add_argument("station", nargs="*")
     t.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"))
     t.add_argument("--km", type=float, default=50.0, help="radius for --near, default 50")
     t.add_argument("--all", action="store_true", help="every station NOAA lists")
-    t.add_argument("--pause", type=float, default=0.3, help="seconds between stations, default 0.3")
     t.set_defaults(fn=cmd_stations_fetch)
-    t = st.add_parser("verify", help="cached constants against NOAA's live API")
-    t.add_argument("station", nargs="?")
-    t.add_argument("--bin", type=int)
-    t.add_argument("--all", action="store_true", help="every published harmonic bin of every cached station")
-    t.add_argument("--date", type=date.fromisoformat, default=date.today())
-    t.add_argument("--days", type=int, default=30)
-    t.add_argument("--speed-tol", type=float, default=0.02, help="m/s, default 0.02")
-    t.add_argument("--time-tol", type=float, default=3.0, help="minutes, default 3")
-    t.add_argument("--pause", type=float, default=0.2, help="seconds between bins with --all, default 0.2")
+    t = st.add_parser("verify", help="cached constants against NOAA's live API, every published harmonic bin")
+    t.add_argument("station", nargs="*")
+    t.add_argument("--all", action="store_true", help="every cached station")
     t.set_defaults(fn=cmd_stations_verify)
 
     a = p.parse_args()
