@@ -3,7 +3,7 @@
   "lon": -123.0305,
   "tz": "America/Los_Angeles",
   "seabed_m": 7.5,
-  "blend_model_current": {
+  "current": {
     "extract_point": {
       "lat": 48.4593,
       "lon": -123.0305,

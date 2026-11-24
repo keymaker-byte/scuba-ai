@@ -1,4 +1,4 @@
-"""XTide's harmonics files (libtcd format, major revision 2), read by blend_model.py for the
+"""XTide's harmonics files (libtcd format, major revision 2), read by current.py for the
 2010 legacy tables its `verify` scores against: the download, the reader for its reference and
 subordinate station records, the current at a reference station, and a check against NOAA's
 printed tables."""

@@ -1,4 +1,4 @@
-"""Current station networks as the Blend Model reads them: each network gathers its stations in a
+"""Current station networks as the current tool reads them: each network gathers its stations in a
 box, downloading through its own tool whatever is not yet on this machine, turns each one into
 bins, the form every correction is made from, and checks a station's cached data against the
 network's live service. A bin is [fraction of the depth above the seabed, steady current cm/s,

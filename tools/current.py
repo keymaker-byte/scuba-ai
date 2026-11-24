@@ -2,14 +2,14 @@
 """Tidal currents at any point of a region and any height above the seabed: an ADCIRC tidal
 database corrected by the current stations around the point, NOAA's and CHS's.
 
-  blend_model.py build [--name N [--bbox S W N E]]      build a region, or rebuild every one
-  blend_model.py extract --site F [F ...]                write each site's constants into its JSON
-  blend_model.py predict --file F --date D --tz Z        slacks and peaks
-  blend_model.py window --file F --date D --tz Z         diveable windows under a speed threshold
-  blend_model.py at --file F --time "D HH:MM" --tz Z     current at a moment
-  blend_model.py verify [--name N]                       accuracy against hidden stations
-  blend_model.py selftest [--db ENPAC15|EC2015]          the astronomy against each database's header, the legacy tables against NOAA's 2013 tables
-  blend_model.py verify-stations --file F | --name N | STATION ...   cached station data against each network's live service
+  current.py build [--name N [--bbox S W N E]]      build a region, or rebuild every one
+  current.py extract --site F [F ...]                write each site's constants into its JSON
+  current.py predict --file F --date D --tz Z        slacks and peaks
+  current.py window --file F --date D --tz Z         diveable windows under a speed threshold
+  current.py at --file F --time "D HH:MM" --tz Z     current at a moment
+  current.py verify [--name N]                       accuracy against hidden stations
+  current.py selftest [--db ENPAC15|EC2015]          the astronomy against each database's header, the legacy tables against NOAA's 2013 tables
+  current.py verify-stations --file F | --name N | STATION ...   cached station data against each network's live service
 """
 import argparse
 import json
@@ -44,7 +44,7 @@ def _cfg(key, default):
     """Read this tool's section of tool-config.json; missing file or key -> default."""
     try:
         with open(os.path.join(WORKSPACE, "tool-config.json")) as f:
-            return json.load(f).get("blend_model", {}).get(key, default)
+            return json.load(f).get("current", {}).get(key, default)
     except (OSError, ValueError):
         return default
 
@@ -215,11 +215,11 @@ def cmd_extract(a):
             uv = to_noaa(adcirc_cons(header, vals, j["nodes"], j["w"]), reg["db"])
             start = max(zip(j["w"], j["nodes"]))[1]
             cur = extract_point(uv, start, mesh, reg, j["H"], ABOVE_BOTTOM, j["lat"], j["lon"])
-            j["doc"]["blend_model_current"] = cur
+            j["doc"]["current"] = cur
             with open(j["path"] + ".part", "w") as f:
                 f.write(json.dumps(j["doc"], indent=2) + "\n")
             os.replace(j["path"] + ".part", j["path"])
-            log(f"  wrote blend_model_current into {j['path']}")
+            log(f"  wrote current into {j['path']}")
 
 
 def load_doc(a):
@@ -230,10 +230,10 @@ def load_doc(a):
         sys.exit(f"Could not read --file {a.file}: {e}")
     except json.JSONDecodeError as e:
         sys.exit(f"Could not parse JSON in {a.file}: {e}")
-    if "extract_point" not in doc.get("blend_model_current", {}):
-        sys.exit(f"No blend_model_current extract in {a.file}: run `extract --site {a.file}`.")
+    if "extract_point" not in doc.get("current", {}):
+        sys.exit(f"No current extract in {a.file}: run `extract --site {a.file}`.")
     if getattr(a, "raw", False):
-        doc.pop("blend_model_observed_offset", None)
+        doc.pop("current_observed_offset", None)
     return doc
 
 
@@ -245,7 +245,7 @@ def curve(doc, b, start, minutes):
     observed offset where one is established. Each slack moves by its own offset, slack before
     flood or slack before ebb, and the moments between two slacks move by an offset that runs
     evenly from one to the other."""
-    off = doc.get("blend_model_observed_offset") or {}
+    off = doc.get("current_observed_offset") or {}
     fl, eb = off.get("before_flood_min"), off.get("before_ebb_min")
     if fl is None and eb is None:
         return series(b, start, minutes)
@@ -283,7 +283,7 @@ def day_span(day, tz, pad=0):
 
 
 def print_header(doc, day, tz):
-    c = doc["blend_model_current"]
+    c = doc["current"]
     p = c["extract_point"]
     print(f"{p['lat']:.5f}, {p['lon']:.5f}  {day}  {c['bottom']['above_bottom_m']:g} m above a {p['seabed_m']:g} m seabed  "
           f"({getattr(tz, 'key', None) or tz.tzname(None)})")
@@ -304,7 +304,7 @@ def print_header(doc, day, tz):
     built = _region_built(p["lat"], p["lon"])
     if built and _when(built) > _when(p["extracted"]):
         print(f"  the region was rebuilt on {built[:10]}, after this extract ({p['extracted'][:10]}): extract the site again")
-    off = doc.get("blend_model_observed_offset")
+    off = doc.get("current_observed_offset")
     if off:
         print(f"  observed offset applied: slack before flood {_mins(off.get('before_flood_min'))}, "
               f"slack before ebb {_mins(off.get('before_ebb_min'))}")
@@ -340,7 +340,7 @@ def _mins(m):
 def cmd_predict(a):
     doc = load_doc(a)
     tz = resolve_tz(a.tz)
-    c = doc["blend_model_current"]
+    c = doc["current"]
     print_header(doc, a.date, tz)
     start, minutes = day_span(a.date, tz, pad=5)
     up = {round(t.timestamp() / 60): v for t, kind, v in events(curve(doc, c["upper"], start, minutes)) if kind != "slack"}
@@ -361,7 +361,7 @@ def cmd_predict(a):
 def cmd_window(a):
     doc = load_doc(a)
     tz = resolve_tz(a.tz)
-    c = doc["blend_model_current"]
+    c = doc["current"]
     lim = a.max_speed
     print_header(doc, a.date, tz)
     print(f"  windows with |current| <= {lim:.2f} m/s at the bottom, each with its peak there and in the fastest water above\n")
@@ -395,7 +395,7 @@ def cmd_window(a):
 def cmd_at(a):
     doc = load_doc(a)
     tz = resolve_tz(a.tz)
-    c = doc["blend_model_current"]
+    c = doc["current"]
     t = datetime.strptime(a.time, "%Y-%m-%d %H:%M").replace(tzinfo=tz)
     print_header(doc, t.date(), tz)
     tu = t.astimezone(UTC)
@@ -485,7 +485,7 @@ def verify_one(a):
     t0 = datetime(start.year, start.month, start.day, tzinfo=UTC)
     minutes = days * 1440
     ser = lambda b: series(b, t0, minutes, 6)
-    methods = ["nearest station", "ADCIRC, 1/7 power", "Blend Model"]
+    methods = ["nearest station", "ADCIRC, 1/7 power", "current tool"]
     res = {m: [] for m in methods}
     law = lambda f: (8 / 7) * max(f, 0.01) ** (1 / 7)
     log(f"Hidden stations: each NOAA station's deepest bin, predicted without it, {days} days from {start}...")
@@ -502,7 +502,7 @@ def verify_one(a):
         cand = neighbours(dists, sources, exclude=s["id"])
         prof = profile_table(reg["profile_rows"], exclude=s["id"])
         bm_, az, _ = point_bin(s["uv"], cand, prof, frac, dists, sources, exclude=s["id"])
-        preds = {"Blend Model": bm_}
+        preds = {"current tool": bm_}
         raw = {k: z * law(frac) for k, z in along(s["uv"], az).items()}
         preds["ADCIRC, 1/7 power"] = make_bin(raw, 0.0, az)
         near = sorted((d, j) for j, d in dists.items() if sources[j]["id"] != s["id"])
@@ -530,7 +530,7 @@ def verify_one(a):
     _table(f"Hidden stations, {sum(1 for r in res[methods[-1]] if r)} NOAA stations' deepest bins, "
            f"by the distance through the water to the nearest other station", res, methods)
 
-    leg_res = {m: [] for m in ("nearest station", "ADCIRC, surface", "Blend Model")}
+    leg_res = {m: [] for m in ("nearest station", "ADCIRC, surface", "current tool")}
     if reg["legacy"]:
         log(f"Legacy stations: {len(reg['legacy'])} subordinate stations of the 2010 tables...")
         h = legacy_harmonics()
@@ -564,7 +564,7 @@ def verify_one(a):
             if math.cos((baz - az) * DEG) < 0:
                 bm_ = {"cons": [[c[0], c[1], (c[2] + 180) % 360, 0, 0] for c in bm_["cons"]],
                        "mean_major": -bm_["mean_major"], "azimuth": az}
-            preds = {"Blend Model": bm_,
+            preds = {"current tool": bm_,
                      "ADCIRC, surface": make_bin({k: z * 8 / 7 for k, z in along(uv, az).items()}, 0.0, az)}
             near = sorted((d, j) for j, d in dists.items())
             if near:
@@ -584,7 +584,7 @@ def verify_one(a):
                 if sc:
                     sc.update(id=p["id"], km=km)
                 leg_res[m].append(sc)
-        _table(f"Legacy stations, {sum(1 for r in leg_res['Blend Model'] if r)} subordinate stations of "
+        _table(f"Legacy stations, {sum(1 for r in leg_res['current tool'] if r)} subordinate stations of "
                "the 2010 tables (their reference moved by their own corrections), near the surface", leg_res, list(leg_res))
 
     # at the stations themselves: each NOAA station's deepest, middle and top bin, predicted at its own
@@ -621,7 +621,7 @@ def verify_one(a):
 
     by = []
     for lo, hi in BANDS_KM:
-        s = _summary([r for r in res["Blend Model"] if r and lo <= r["km"] < (hi if hi is not None else math.inf)])
+        s = _summary([r for r in res["current tool"] if r and lo <= r["km"] < (hi if hi is not None else math.inf)])
         if s:
             by.append({"from_km": lo, "to_km": hi} | s)
     out = {"verified": date.today().isoformat(), "start": start.isoformat(), "days": days,
@@ -630,7 +630,7 @@ def verify_one(a):
            "legacy": {m: _summary(leg_res[m]) for m in leg_res}, "at_stations": at_sum}
     with open(os.path.join(DB, f"{reg['name']}_verify.json"), "w") as f:
         json.dump(out, f, indent=1)
-    print(f"\n  wrote tools/db/blend_model/{reg['name']}_verify.json, the figures the tool's documentation quotes")
+    print(f"\n  wrote tools/db/current/{reg['name']}_verify.json, the figures the tool's documentation quotes")
 
 
 def cmd_selftest(a):
@@ -644,7 +644,7 @@ def cmd_verify_stations(a):
     extract names, every station of a built region, or the stations named."""
     if a.file:
         with open(a.file) as f:
-            ids = [s["id"] for s in json.load(f).get("blend_model_current", {}).get("stations", [])]
+            ids = [s["id"] for s in json.load(f).get("current", {}).get("stations", [])]
         if not ids:
             sys.exit(f"{a.file} has no extract with stations: run `extract --site {a.file}`.")
     elif a.name:
@@ -658,7 +658,7 @@ def cmd_verify_stations(a):
     for sid in ids:
         net = next((n for n in networks if n.owns(sid)), None)
         if net is None:
-            sys.exit(f"{sid} belongs to no station network the Blend Model reads ({', '.join(n.kind for n in networks)}).")
+            sys.exit(f"{sid} belongs to no station network the current tool reads ({', '.join(n.kind for n in networks)}).")
         ok, lines = net.verify(sid)
         print("\n".join(lines) + "\n", flush=True)
         if not ok:

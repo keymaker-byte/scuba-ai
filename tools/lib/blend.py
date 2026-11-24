@@ -1,4 +1,4 @@
-"""The Blend Model's method, shared by blend_model.py and map_export.py: an ADCIRC tidal
+"""The current tool's method, shared by current.py and map_export.py: an ADCIRC tidal
 database corrected by the current stations around a point, read from a built region, and the
 extract at a point and a height above the seabed. A point read through this library is the
 same current whichever tool asks for it."""
@@ -20,7 +20,7 @@ from lib.tidal_astronomy import nodal as noaa_nodal
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # tools/
 
 
-DB = os.path.join(HERE, "db", "blend_model")
+DB = os.path.join(HERE, "db", "current")
 
 
 UTC = timezone.utc
@@ -473,7 +473,7 @@ def load_region(name=None, lat=None, lon=None):
 
 
 def extract_point(uv, start, mesh, reg, H, above_bottom, qlat, qlon, say=log):
-    """The blend_model_current object for a point placed in the mesh: its constants at the height
+    """The current object for a point placed in the mesh: its constants at the height
     asked for and at the fastest height above, with the stations behind them; `say` takes the
     progress lines."""
     sources = reg["sources"]

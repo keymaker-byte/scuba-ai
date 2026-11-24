@@ -1,4 +1,4 @@
-"""ADCIRC tidal databases read by blend_model.py: the databases and their download, the
+"""ADCIRC tidal databases read by current.py: the databases and their download, the
 astronomy calibrated to each run and its self-test, and the mesh and velocity readers."""
 import gzip
 import math

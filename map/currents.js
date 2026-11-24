@@ -1,5 +1,5 @@
-// Tidal current overlay for map.html: the Blend Model's seafloor current, computed in the
-// browser exactly as `tools/blend_model.py` computes it. `map_export.py currents` writes
+// Tidal current overlay for map.html: the current tool's seafloor current, computed in the
+// browser exactly as `tools/current.py` computes it. `map_export.py currents` writes
 // map/currents/<name>.js with the tool's inputs: the ADCIRC database's constants at every mesh
 // node, the stations' corrections, the regional vertical profile, each node's distances through
 // the water to the stations, and the astronomy prepared for each year the map may show. The code
@@ -91,7 +91,7 @@
     }
   }
 
-  // ---- the blend (port of tools/blend_model.py) -----------------------------------------------
+  // ---- the blend (port of tools/current.py) -----------------------------------------------
 
   // Constituents are held by their index in the astronomy's list, each as a complex pair in a
   // Float64Array; a constituent a station or a bin does not carry holds NaN.
@@ -860,7 +860,7 @@
       },
 
       // The current at a coordinate over a seabed H m deep (below MLLW) at the layer's moment,
-      // exactly as `blend_model.py extract` and `at` give it there: { u, v, speed, toward, km }
+      // exactly as `current.py extract` and `at` give it there: { u, v, speed, toward, km }
       // in m/s, degrees true and km to the nearest station, null where no overlay reaches.
       readAt(lat, lon, H) {
         for (const g of this._grids) {

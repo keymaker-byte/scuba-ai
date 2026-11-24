@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """The map viewer's data layers, every one cut to the areas in map/coverage.json: the tidal
-current layer from the Blend Model, the depth layer from NOAA NCEI's coastal DEM, and the tide
+current layer from the current tool, the depth layer from NOAA NCEI's coastal DEM, and the tide
 stations the depth layer places its depths on MLLW with. Each layer is computed with the same
 library functions the tools answer with, and carries values those functions gave at sample
 points, which the browser reproduces before it draws anything: a point read on the map is the
@@ -63,10 +63,10 @@ def coverage():
 
 
 def _blend_cfg(key, default):
-    """The Blend Model's own setting in tool-config.json, which the current layer colours by."""
+    """The current tool's own setting in tool-config.json, which the current layer colours by."""
     try:
         with open(os.path.join(WORKSPACE, "tool-config.json")) as f:
-            return json.load(f).get("blend_model", {}).get(key, default)
+            return json.load(f).get("current", {}).get(key, default)
     except (OSError, ValueError):
         return default
 

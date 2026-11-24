@@ -1,5 +1,5 @@
 """NOAA NCEI's ninth arc-second coastal DEM, shared by ncei_depth.py, map_export.py and the
-Blend Model's seabed: the tile list and each tile, downloaded when missing, the elevation at a
+current tool's seabed: the tile list and each tile, downloaded when missing, the elevation at a
 point, the lakes and their water levels, and the NAVD 88 to MLLW offset, from VDatum's grids
 kept on this machine (lib/vdatum.py)."""
 import array

@@ -21,7 +21,7 @@ These conventions apply to every site file written in this region.
 - **Usual set and typical speed.** The research sources' descriptions of the site and the dive log's own dives there, taken as behaviour and cross-checked between sources.
 - **Drivers.** The winds or seasons those same sources tie to a stronger or reversed set.
 - **No source.** A set no source describes is written as not established.
-- **Tool.** `blend_model.md`, the site's extract, attached to the site's `<slug>.json`, for planning. It feeds no bullet of the site file: the tidal stream it models runs a few centimetres a second around the island, from mesh elements about 3.5 km across with no current station within reach, and the usual set comes from the sources above.
+- **Tool.** `current.md`, the site's extract, attached to the site's `<slug>.json`, for planning. It feeds no bullet of the site file: the tidal stream it models runs a few centimetres a second around the island, from mesh elements about 3.5 km across with no current station within reach, and the usual set comes from the sources above.
 - **Extract.** Taken once the dive area coordinate holds, with `extract --site` on the site JSON, at the tool's default height above the seabed. A coordinate the tool refuses, on land or in water outside its coverage, stops the site: report it and wait.
 
 ## Wind

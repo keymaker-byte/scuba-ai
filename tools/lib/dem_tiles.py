@@ -1,4 +1,4 @@
-"""NCEI coastal DEM tiles shared by ncei_depth.py and blend_model.py: the GeoTIFF reader
+"""NCEI coastal DEM tiles shared by ncei_depth.py and current.py: the GeoTIFF reader
 for one tile."""
 import math
 import os

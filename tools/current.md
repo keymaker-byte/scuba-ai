@@ -1,8 +1,8 @@
-# Blend Model (tidal currents at any point and height)
+# Current (tidal currents at any point and height)
 
 <https://adcirc.org/products/adcirc-tidal-databases/>, <https://api.tidesandcurrents.noaa.gov/mdapi/prod/>, <https://tides.gc.ca/en/web-services-offered-canadian-hydrographic-service>
 
-The tidal current at any point of a built region, 2 m above the seabed and in the fastest water above: an ADCIRC tidal database corrected by the current stations around the point, and exact at a station's own position. A site's constants are extracted once into its JSON, and every slack, speed and window in a plan comes from them. How it works, how accurate it is, and how to extend it is `tools/blend_model_design.md`.
+The tidal current at any point of a built region, 2 m above the seabed and in the fastest water above: an ADCIRC tidal database corrected by the current stations around the point, and exact at a station's own position. A site's constants are extracted once into its JSON, and every slack, speed and window in a plan comes from them. How it works, how accurate it is, and how to extend it is `tools/current_design.md`.
 
 - **Use it for.** Writing a site: `extract --site` once the dive area coordinate and its `seabed_m` hold. Planning a dive: `predict`, `window` and `at` on the site JSON. Timing an observed offset: `predict --raw`. The map's tidal current layer is written by `map_export.md` from the same library, `tools/lib/blend.py`.
 - **A refused extract stops the site.** The tool refuses a point outside its coverage and says why. Report it and wait.
@@ -14,9 +14,9 @@ The tidal current at any point of a built region, 2 m above the seabed and in th
 
 ## The site JSON
 
-`extract --site` reads `lat`, `lon` and `seabed_m`, and writes `blend_model_current`: the point it was taken for and when, `flood_dir` and `ebb_dir` in degrees true, the constants at the `bottom` and `upper` heights, and the `stations` behind the correction, each with its `id`. `predict`, `window` and `at` read only that object.
+`extract --site` reads `lat`, `lon` and `seabed_m`, and writes `current`: the point it was taken for and when, `flood_dir` and `ebb_dir` in degrees true, the constants at the `bottom` and `upper` heights, and the `stations` behind the correction, each with its `id`. `predict`, `window` and `at` read only that object.
 
-An established observed offset sits beside it as `blend_model_observed_offset`, with `before_flood_min` and `before_ebb_min`, `null` for a slack not established. The tool applies it and says so in the header.
+An established observed offset sits beside it as `current_observed_offset`, with `before_flood_min` and `before_ebb_min`, `null` for a slack not established. The tool applies it and says so in the header.
 
 ## Observed offset
 
@@ -34,20 +34,20 @@ The minutes between the model's slack and the slack divers time at the site, fro
 - **Rebuild.** After station data is replaced: `build` and `verify`, each with no `--name` to cover everything built, then `extract --site` on every site JSON, and `map_export.py currents` for the map.
 - **`selftest`.** After any change to `tools/lib/adcirc.py` or `tools/lib/tcd.py`. It checks the astronomy against each database's header, and the legacy tables' reader against slack times NOAA printed in its 2013 Tidal Current Tables.
 
-## `tools/blend_model.py`
+## `tools/current.py`
 
 Standard library only.
 
 ```sh
-python3 tools/blend_model.py extract --site <path/to/slug.json> [<path> ...]                        # site file: once, and every site after a rebuild
-python3 tools/blend_model.py predict --date 2026-07-12 --tz <IANA_ZONE> --file <path/to/slug.json>   # planning: slacks and maxima, bottom and above
-python3 tools/blend_model.py window --date 2026-07-12 --tz <IANA_ZONE> --file <path/to/slug.json>    # planning: spans under --max-speed at the bottom
-python3 tools/blend_model.py at --time "2026-07-12 09:18" --tz <IANA_ZONE> --file <path/to/slug.json> # planning: speed and direction at a moment
-python3 tools/blend_model.py predict --raw --date 2026-07-12 --tz <IANA_ZONE> --file <path/to/slug.json>   # observed offset: the model without it
-python3 tools/blend_model.py verify-stations --file <path/to/slug.json>                             # a site's stations against their networks' live services
-python3 tools/blend_model.py build [--name <region> --bbox S W N E]                                 # rebuild every region, or build a new one
-python3 tools/blend_model.py verify [--name <region>]                                               # after each build
-python3 tools/blend_model.py selftest [--db <database>]                                             # after a change to tools/lib/adcirc.py or tools/lib/tcd.py
+python3 tools/current.py extract --site <path/to/slug.json> [<path> ...]                        # site file: once, and every site after a rebuild
+python3 tools/current.py predict --date 2026-07-12 --tz <IANA_ZONE> --file <path/to/slug.json>   # planning: slacks and maxima, bottom and above
+python3 tools/current.py window --date 2026-07-12 --tz <IANA_ZONE> --file <path/to/slug.json>    # planning: spans under --max-speed at the bottom
+python3 tools/current.py at --time "2026-07-12 09:18" --tz <IANA_ZONE> --file <path/to/slug.json> # planning: speed and direction at a moment
+python3 tools/current.py predict --raw --date 2026-07-12 --tz <IANA_ZONE> --file <path/to/slug.json>   # observed offset: the model without it
+python3 tools/current.py verify-stations --file <path/to/slug.json>                             # a site's stations against their networks' live services
+python3 tools/current.py build [--name <region> --bbox S W N E]                                 # rebuild every region, or build a new one
+python3 tools/current.py verify [--name <region>]                                               # after each build
+python3 tools/current.py selftest [--db <database>]                                             # after a change to tools/lib/adcirc.py or tools/lib/tcd.py
 ```
 
-`window`'s threshold defaults to `blend_model.max_speed_ms` in `tool-config.json`. `verify-stations` also takes `--name <region>` for every station of a region, or station IDs as an extract lists them. A built region keeps its box, so naming one alone rebuilds it as it was.
+`window`'s threshold defaults to `current.max_speed_ms` in `tool-config.json`. `verify-stations` also takes `--name <region>` for every station of a region, or station IDs as an extract lists them. A built region keeps its box, so naming one alone rebuilds it as it was.

@@ -1,4 +1,4 @@
-"""Harmonic current prediction shared by blend_model.py and lib/noaa_stations.py: a bin's
+"""Harmonic current prediction shared by current.py and lib/noaa_stations.py: a bin's
 constants prepared for a year, its signed speed along the major axis at any moment, and the
 slacks and maxima of a speed series."""
 import math

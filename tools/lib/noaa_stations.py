@@ -1,4 +1,4 @@
-"""NOAA's current stations as the Blend Model keeps them on this machine: NOAA's station list and
+"""NOAA's current stations as the current tool keeps them on this machine: NOAA's station list and
 one file per station with every bin's harmonic constants, downloaded from NOAA's metadata API
 when missing, and the check of a cached bin against NOAA's own live predictions."""
 import json

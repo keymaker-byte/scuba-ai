@@ -1,6 +1,6 @@
-# Blend Model design
+# Current tool design
 
-How `blend_model.py` predicts, why it is built this way, what was tried on the way, and how to grow it. `blend_model.md` is the operating manual; this file is for the agent who changes the tool. The goal it serves is one current tool for every water the workspace dives, from any tidal database and station network that joins it.
+How `current.py` predicts, why it is built this way, what was tried on the way, and how to grow it. `current.md` is the operating manual; this file is for the agent who changes the tool. The goal it serves is one current tool for every water the workspace dives, from any tidal database and station network that joins it.
 
 ## The problem
 
@@ -9,7 +9,7 @@ A diver needs the current at a dive site, near the bottom, on a given day: when 
 - **Current stations.** NOAA's harmonic stations (ADCP surveys, several depth bins each) and CHS's stations give the current at their own point very well: NOAA's constants reproduce NOAA's predictions to within minutes. A station's current holds only at its point; copying the nearest station to a site 2 to 6 km away misses slack by 45 minutes at the median.
 - **A tidal database.** ADCIRC's ENPAC15 is a continuous field over the whole coast, depth-averaged, on elements from tens of metres in some channels to over a kilometre along much of the Salish Sea's shore. It covers every site, and misses slack by about 40 minutes at the stations, with the wrong strength at many of them.
 
-The Blend Model uses the database for the shape of the field between stations and the stations for its size, timing and direction near them.
+The current tool uses the database for the shape of the field between stations and the stations for its size, timing and direction near them.
 
 ## The method
 
@@ -99,7 +99,7 @@ The equilibrium arguments are set at each database run's start (ENPAC15 2004-11-
 
 ## Extending it
 
-`tools/lib/blend.py` holds the method, which `blend_model.py` and `map_export.py` both call; what it reads comes through three seams, each a list a new source joins without touching the correction:
+`tools/lib/blend.py` holds the method, which `current.py` and `map_export.py` both call; what it reads comes through three seams, each a list a new source joins without touching the correction:
 
 - **Tidal databases.** `DATABASES` in `tools/lib/adcirc.py` (ENPAC15, EC2015), picked by `database_for(bbox)` as the one whose domain holds the region's box.
 - **Station networks.** `NETWORKS` in `tools/lib/current_stations.py` (NOAA harmonic, CHS predictions). Each network's `gather` lists its stations in a box, downloading through its own code whatever is not yet cached (NOAA's through `tools/lib/noaa_stations.py`, CHS's through `chs_current`), its `prepare` turns one into bins and returns its vertical profile rows, and `owns` and `verify` let `verify-stations` hand a station ID to its network and check its cache against the network's live service. A new network brings all four.

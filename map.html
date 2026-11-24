@@ -279,7 +279,7 @@
       <label><input type="checkbox" id="toggle-depth-ncei">Depth (NCEI)</label>
       <div class="legend" id="depth-legend"></div>
       <div class="hint fixed-lines" id="depth-status" data-placeholder="Depth under the pointer"></div>
-      <label><input type="checkbox" id="toggle-currents">Tidal currents (Blend Model)</label>
+      <label><input type="checkbox" id="toggle-currents">Tidal currents (current tool)</label>
       <div class="legend" id="currents-legend"></div>
       <div class="hint fixed-lines" id="currents-status" data-placeholder="Current 2 m above the seabed under the pointer"></div>
     </div>
@@ -941,7 +941,7 @@ class CurrentsControl {
   }
 }
 const currents = new CurrentsControl({ kind: 'seafloor', toggle: 'toggle-currents', legend: 'currents-legend',
-  status: 'currents-status', tool: 'blend_model.py', name: 'tidal current' });
+  status: 'currents-status', tool: 'current.py', name: 'tidal current' });
 const currentControls = [currents];
 showMapTime();
 

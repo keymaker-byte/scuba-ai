@@ -1,4 +1,4 @@
-"""Tidal astronomy shared by the current prediction, the Blend Model and noaa_tide.py: the constituent table, the mean
+"""Tidal astronomy shared by the current prediction, the current tool and noaa_tide.py: the constituent table, the mean
 longitudes of the moon and sun, and the yearly node factors, after Schureman's Manual of
 Harmonic Analysis and Prediction of Tides (1958) with NOAA's own conventions."""
 import math

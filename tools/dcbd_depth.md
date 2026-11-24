@@ -9,7 +9,7 @@ Seabed depth on Bonaire's and Klein Bonaire's shallow reef at 2 m resolution: E.
 - **The shoreline edge.** The grid starts a few metres off the waterline, where the water is already 2 to 5 m deep off a rocky shore, and holds no value on the beach or rock itself. An entry point on the rocks reads the first pixel of water beside it.
 - **Datum.** The dataset states none; its values sit at about sea level, with the shoreline at zero. Bonaire's tidal range of about 30 cm sits inside the grid's own precision, so a depth here is read as a plain observed depth.
 - **Projection.** The grid is in WGS 84 / UTM zone 19N; the tool converts the coordinate it is given.
-- **Shared code.** The grid's download, its GeoTIFF reader and the projection to UTM are `tools/lib/dcbd.py`, a shared library the Blend Model also reads the seabed through.
+- **Shared code.** The grid's download, its GeoTIFF reader and the projection to UTM are `tools/lib/dcbd.py`, a shared library the current tool also reads the seabed through.
 - **The spread around a point.** `at` also gives the shallowest and deepest pixel within `--radius`, the relief right around the point: a narrow spread on the terrace or sand, a wide one on the drop-off.
 
 ## `tools/dcbd_depth.py`

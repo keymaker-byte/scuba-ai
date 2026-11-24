@@ -26,7 +26,7 @@ These conventions apply to every site file written in this region.
 ## Current
 
 - **Current type.** Tidal.
-- **Tool.** `blend_model.md`, the site's extract, attached to the site's `<slug>.json`, and its predictions of slack, set, peak speeds and diveable windows.
+- **Tool.** `current.md`, the site's extract, attached to the site's `<slug>.json`, and its predictions of slack, set, peak speeds and diveable windows.
 - **Tool.** `subsurface_log.md`, the set and strength actually felt at the site, and the timed slacks behind the observed offset.
 - **Extract.** Taken once the dive area coordinate holds, with `extract --site` on the site JSON, at the tool's default height above the seabed. A coordinate the tool refuses, on land or in water outside its coverage, stops the site: report it and wait.
 
