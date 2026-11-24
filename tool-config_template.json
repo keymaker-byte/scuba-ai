@@ -7,10 +7,6 @@
 
   "noaa_tide": {},
 
-  "noaa_legacy_current": {
-    "max_speed_ms": 0.25
-  },
-
   "chs_current": {
     "max_speed_ms": 0.25
   },

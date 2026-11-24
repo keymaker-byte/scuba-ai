@@ -1,9 +1,20 @@
-"""XTide's harmonics files (libtcd format, major revision 2), shared by noaa_legacy_current.py
-and blend_model.py: the reader for its reference and subordinate station records, and the
-current at a reference station."""
+"""XTide's harmonics files (libtcd format, major revision 2), read by blend_model.py for the
+2010 legacy tables its `verify` scores against: the download, the reader for its reference and
+subordinate station records, the current at a reference station, and a check against NOAA's
+printed tables."""
+import io
 import math
+import os
 import sys
-from datetime import datetime, timezone
+import tarfile
+import urllib.request
+from datetime import date, datetime, time, timedelta, timezone
+
+DB = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "db")
+LEGACY = os.path.join(DB, "harmonics-dwf-20100529-free.tcd")
+# XTide's 2010-05-29 harmonics, NOAA's published constants before the re-survey, as archived by
+# Debian (source package xtide-data 20100529).
+LEGACY_URL = "https://snapshot.debian.org/file/7f9edc4c9ea71a5a8f221bbb533943dbbaf9655a"
 
 KN = 0.514444  # m/s per knot
 
@@ -173,3 +184,56 @@ def velocity(h, r, t):
     if r["units"].endswith("^2"):
         v = math.copysign(math.sqrt(abs(v)), v)
     return v * KN
+
+
+def legacy():
+    """The 2010 legacy tables, downloaded into tools/db/ the first time they are asked for."""
+    if not os.path.exists(LEGACY):
+        os.makedirs(DB, exist_ok=True)
+        print(f"downloading {LEGACY_URL} ...", file=sys.stderr)
+        try:
+            with urllib.request.urlopen(LEGACY_URL, timeout=120) as r:
+                data = r.read()
+            with tarfile.open(fileobj=io.BytesIO(data), mode="r:bz2") as t:
+                m = next(x for x in t.getmembers() if x.name.endswith(".tcd"))
+                body = t.extractfile(m).read()
+        except (OSError, tarfile.TarError, StopIteration) as e:
+            sys.exit(f"legacy harmonics: download failed ({e}) from {LEGACY_URL}.")
+        part = LEGACY + ".part"
+        with open(part, "wb") as f:
+            f.write(body)
+        os.replace(part, LEGACY)
+    return Harmonics(LEGACY)
+
+
+# Slack times printed in NOAA's 2013 Tidal Current Tables, Pacific Coast of North America and Asia
+# (local standard time, UTC-8): https://tidesandcurrents.noaa.gov/tidetables/2013/pcct2013book.pdf
+CHECKS = [
+    ("Strait of Juan de Fuca Entrance, Washington Current", "2013-02-01", ["02:36", "07:15", "15:57", "19:48"]),
+    ("Admiralty Inlet (off Bush Point), Washington Current", "2013-01-01", ["01:36", "08:02"]),
+    ("The Narrows, north end (midstream), Washington Current", "2013-01-01", ["01:56", "08:45", "14:59", "19:45"]),
+]
+
+
+def selftest():
+    """The reader and the reference prediction against slacks NOAA printed in its 2013 tables.
+    Prints each slack and returns True when every one is within 2 minutes."""
+    h = legacy()
+    recs = {r["name"]: r for r in h.records() if r["type"] == 1}
+    pst = timezone(timedelta(hours=-8))
+    print("Legacy tables self-test against NOAA's printed 2013 Tidal Current Tables")
+    worst = 0.0
+    for name, day, printed in CHECKS:
+        r = recs[name]
+        d = date.fromisoformat(day)
+        t0 = datetime.combine(d, time(0), pst).astimezone(timezone.utc)
+        ser = [(t0 + timedelta(minutes=m), velocity(h, r, t0 + timedelta(minutes=m))) for m in range(1441)]
+        slacks = [a + (b - a) * (va / (va - vb)) for (a, va), (b, vb) in zip(ser, ser[1:]) if (va < 0) != (vb < 0)]
+        for p in printed:
+            ref = datetime.combine(d, time.fromisoformat(p), pst)
+            err = min(abs((g - ref).total_seconds()) / 60 for g in slacks)
+            worst = max(worst, err)
+            print(f"  {name[:-len(' Current')]:<55} {day} printed {p}  predicted within {err:.0f} min")
+    ok = worst <= 2
+    print("  PASS\n" if ok else f"  FAIL: worst {worst:.0f} min\n")
+    return ok

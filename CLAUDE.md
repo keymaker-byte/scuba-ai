@@ -42,7 +42,6 @@ Planning a new dive is handled by the `create-dive-plan` skill: it holds the pla
 
 - @tool-config.json
 - @tools/noaa_tide.md
-- @tools/noaa_legacy_current.md
 - @tools/chs_current.md
 - @tools/blend_model.md
 - @tools/map_export.md

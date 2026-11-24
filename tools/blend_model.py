@@ -8,7 +8,7 @@ database corrected by the current stations around the point, NOAA's and CHS's.
   blend_model.py window --file F --date D --tz Z         diveable windows under a speed threshold
   blend_model.py at --file F --time "D HH:MM" --tz Z     current at a moment
   blend_model.py verify [--name N]                       accuracy against hidden stations
-  blend_model.py selftest [--db ENPAC15|EC2015]          the astronomy against each database's header
+  blend_model.py selftest [--db ENPAC15|EC2015]          the astronomy against each database's header, the legacy tables against NOAA's 2013 tables
   blend_model.py verify-stations --file F | --name N | STATION ...   cached station data against each network's live service
 """
 import argparse
@@ -28,7 +28,7 @@ from lib.current_harmonics import events, series  # noqa: E402
 from lib.current_stations import NETWORKS, cx  # noqa: E402
 from lib import noaa_stations  # noqa: E402
 from lib.seabed import Seabed  # noqa: E402
-from lib.tcd import Harmonics, velocity  # noqa: E402
+from lib.tcd import legacy as legacy_harmonics, selftest as legacy_selftest, velocity  # noqa: E402
 from lib.blend import (ABOVE_BOTTOM, adcirc_cons, along, built_regions, database_for, DB, DEG, EXACT_KM,
                        extract_point, floor_km, FORMAT, load_region, log, make_bin, Mesh, NEIGHBOURS,
                        neighbours, point_bin, PRIOR, profile_table, REACH_KM, Refused, region_path,
@@ -75,13 +75,6 @@ def each(a, fn, known, what, fill):
     if missing:
         sys.exit(f"{a.name} is a new {what}: give " + " and ".join(f"--{k}" for k in missing) + ".")
     fn(a)
-
-
-def legacy_harmonics():
-    """The 2010 legacy tables, downloaded by noaa_legacy_current on first use."""
-    import noaa_legacy_current
-    noaa_legacy_current.index()
-    return Harmonics(noaa_legacy_current.TCD)
 
 
 def cmd_build(a):
@@ -641,7 +634,8 @@ def verify_one(a):
 
 
 def cmd_selftest(a):
-    if not adcirc_selftest(a.db):
+    ok = legacy_selftest()
+    if not adcirc_selftest(a.db) or not ok:
         sys.exit(1)
 
 
@@ -715,7 +709,7 @@ def main():
     s.add_argument("--name", help="the region's name; omitted, every built region")
     s.set_defaults(fn=cmd_verify)
 
-    s = sub.add_parser("selftest", help="the astronomy against each database's ADCIRC header")
+    s = sub.add_parser("selftest", help="the astronomy against each database's ADCIRC header, and the legacy tables against NOAA's printed 2013 tables")
     s.add_argument("--db", choices=sorted(DATABASES), action="append",
                    help="one database (repeatable); default every database")
     s.set_defaults(fn=cmd_selftest)

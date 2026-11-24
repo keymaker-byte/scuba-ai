@@ -32,7 +32,7 @@ The minutes between the model's slack and the slack divers time at the site, fro
 
 - **Stale station data.** Station networks replace their data from time to time, and the cached copy keeps the old. Run `verify-stations --file` on a site's JSON before a plan that matters more than usual, and at least once a year. A failure is a stop: delete the files the message names, then rebuild.
 - **Rebuild.** After station data is replaced: `build` and `verify`, each with no `--name` to cover everything built, then `extract --site` on every site JSON, and `map_export.py currents` for the map.
-- **`selftest`.** After any change to `tools/lib/adcirc.py`.
+- **`selftest`.** After any change to `tools/lib/adcirc.py` or `tools/lib/tcd.py`. It checks the astronomy against each database's header, and the legacy tables' reader against slack times NOAA printed in its 2013 Tidal Current Tables.
 
 ## `tools/blend_model.py`
 
@@ -47,7 +47,7 @@ python3 tools/blend_model.py predict --raw --date 2026-07-12 --tz <IANA_ZONE> --
 python3 tools/blend_model.py verify-stations --file <path/to/slug.json>                             # a site's stations against their networks' live services
 python3 tools/blend_model.py build [--name <region> --bbox S W N E]                                 # rebuild every region, or build a new one
 python3 tools/blend_model.py verify [--name <region>]                                               # after each build
-python3 tools/blend_model.py selftest [--db <database>]                                             # after a change to tools/lib/adcirc.py
+python3 tools/blend_model.py selftest [--db <database>]                                             # after a change to tools/lib/adcirc.py or tools/lib/tcd.py
 ```
 
 `window`'s threshold defaults to `blend_model.max_speed_ms` in `tool-config.json`. `verify-stations` also takes `--name <region>` for every station of a region, or station IDs as an extract lists them. A built region keeps its box, so naming one alone rebuilds it as it was.

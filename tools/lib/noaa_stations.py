@@ -84,8 +84,7 @@ def entry(sid):
     lst = station_list()
     if sid not in lst["stations"]:
         sys.exit(f"{sid} is not in NOAA's current station list (fetched {lst['fetched']}). "
-                 "A retired reference station is read with "
-                 "noaa_legacy_current. Delete tools/db/noaa_current/stations.json to list again.")
+                 "Delete tools/db/noaa_current/stations.json to list again.")
     return lst["stations"][sid]
 
 
