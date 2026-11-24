@@ -6,8 +6,8 @@
 // below is a line-for-line port of the tool's blend_at, at_frac, vprof and its prediction, and of
 // `extract`'s placing of a point in the mesh, so the current read at a point and a seabed depth is
 // the current `extract` and `at` give there. Each overlay file carries values the tool computed at
-// sample nodes and at every dive site it covers, which `selfCheck` reproduces before the overlay
-// is allowed to draw.
+// sample nodes and at sample points it picked in the overlay, which `selfCheck` reproduces before
+// the overlay is allowed to draw.
 //
 // Particles drift along the flow, each trail coloured by its speed, over whatever lies beneath
 // (the depth layer among it). The trails run along each mesh node's own blended axis, the flood
@@ -616,7 +616,7 @@
     }
 
     // Reproduce the values the Python tool computed when it wrote the file: the trails' current
-    // at sample nodes, and at every dive site the overlay covers, at the site's own seabed, the
+    // at sample nodes, and at sample points over their own seabed, read as the map reads any point: the
     // signed speed `at` prints and the flood direction it prints to 0.1°. The file holds the
     // database's constants to 1 part in 32,767 of each node's largest, which in water whose
     // tidal ellipse is nearly a circle moves the axis by a few hundredths of a degree; the speed
@@ -629,17 +629,18 @@
         this.computeNodes(c.t);
         note(Math.hypot(this.u[c.node] - c.u, this.v[c.node] - c.v), `node ${c.node}`);
       }
-      for (const s of this.data.checks.sites) {
+      for (const s of this.data.checks.points) {
+        const label = `point ${s.lat}, ${s.lon}`;
         const r = this.pointAt(s.lat, s.lon, s.seabed);
         if (!r || Math.abs(wrap90(r.az - s.flood)) > axisDeg) {
-          note(Infinity, s.slug);
+          note(Infinity, label);
           continue;
         }
         const sign = Math.cos((r.az - s.flood) * DEG) >= 0 ? 1 : -1;
-        for (const c of s.checks) note(Math.abs(sign * this.signedSpeed(r, c.t) - c.s), s.slug);
+        for (const c of s.checks) note(Math.abs(sign * this.signedSpeed(r, c.t) - c.s), label);
       }
       this.time = null;
-      const count = this.data.checks.nodes.length + this.data.checks.sites.length;
+      const count = this.data.checks.nodes.length + this.data.checks.points.length;
       return { ok: worst <= tolerance, worst, where, count };
     }
 

@@ -1092,27 +1092,7 @@ def cmd_verify(a):
 # --- map --------------------------------------------------------------------------------------
 
 MAP_YEARS_BACK, MAP_YEARS_AHEAD = 1, 10  # the years the map's astronomy is prepared for
-
-
-def site_jsons(boxes):
-    """Every site JSON in the workspace whose dive area lies inside the boxes and holds a Blend
-    Model extract: (slug, path, doc)."""
-    root = os.path.join(WORKSPACE, "regions")
-    out = []
-    for region in sorted(os.listdir(root)):
-        d = os.path.join(root, region, "sites")
-        if not os.path.isdir(d):
-            continue
-        for fn in sorted(os.listdir(d)):
-            if not fn.endswith(".json"):
-                continue
-            with open(os.path.join(d, fn)) as f:
-                doc = json.load(f)
-            la, lo = doc.get("lat"), doc.get("lon")
-            if "blend_model_current" in doc and isinstance(la, (int, float)) and isinstance(lo, (int, float)) \
-                    and any(bs <= la <= bn and bw <= lo <= be for bs, bw, bn, be in boxes):
-                out.append((fn[:-5], os.path.join(d, fn), doc))
-    return out
+MAP_POINT_CHECKS, MAP_SHORE_CHECKS = 60, 20  # the sample points the browser reproduces
 
 
 def cmd_export_map(a):
@@ -1121,8 +1101,9 @@ def cmd_export_map(a):
     corrections, the vertical profile and each node's distances through the water to the
     stations, with the astronomy prepared for each year the map may show. The browser computes
     the current at a point exactly as `extract` and `at` do there; the trails it draws run along
-    each node's own blended axis. Values the tool computed at sample nodes and at every site in
-    the boxes ride along, and the browser reproduces them before it draws anything."""
+    each node's own blended axis. Values the tool computed at sample nodes and at sample points
+    it picks in the boxes ride along, and the browser reproduces them before it draws anything.
+    It reads only the region and the data cached on this machine, never a site file."""
     import array
     import base64
     import random
@@ -1253,35 +1234,59 @@ def cmd_export_map(a):
         for t in moments:
             u, v = bottom_uv(b, az, t)
             node_checks.append({"node": j, "t": int(t.timestamp() * 1000), "u": round(u, 6), "v": round(v, 6)})
-    # every site in the boxes, extracted here as `extract` does, so the browser proves it gives
-    # each site's own numbers; a site whose JSON holds a different extract is named
-    sites, stale = [], []
-    for slug, path, doc in site_jsons(boxes):
+    # sample points the export picks itself, each placed and extracted as `extract` does at any
+    # coordinate, so the browser proves the readout it gives at a point: points inside elements
+    # spread across the boxes, and points just off the mesh's shoreline, where the constants come from
+    # the mesh edge
+    def inner(t):
+        # a point inside the element, one corner's weight clear of the others: the start node of
+        # the paths through the water is the corner with the largest weight, which a near tie
+        # leaves to rounding
+        while True:
+            w = sorted((rng.random(), rng.random(), rng.random()), reverse=True)
+            if w[0] - w[1] > 0.1:
+                break
+        w = [x / sum(w) for x in w]
+        rng.shuffle(w)
+        return sum(wi * lat[i] for wi, i in zip(w, t)), sum(wi * lon[i] for wi, i in zip(w, t))
+    cands = [("inner", *inner(t)) for t in tris[::max(1, len(tris) // MAP_POINT_CHECKS)]]
+    shore_nodes = sorted(n for n in nodes if n in shore)
+    for _ in range(MAP_SHORE_CHECKS * 10 if shore_nodes else 0):
+        n = rng.choice(shore_nodes)
+        r, brg = rng.uniform(50, 1000 * EXTEND_KM), rng.uniform(0, 360) * DEG
+        cands.append(("shore", lat[n] + r * math.cos(brg) / 111200,
+                      lon[n] + r * math.sin(brg) / (111200 * math.cos(math.radians(lat[n])))))
+    points, n_shore = [], 0
+    for kind, la, lo in cands:
+        if kind == "shore" and n_shore >= MAP_SHORE_CHECKS:
+            continue
+        la, lo = round(la, 5), round(lo, 5)
+        if not any(bs <= la <= bn and bw <= lo <= be for bs, bw, bn, be in boxes):
+            continue
+        e, _ = seabed.elevation(la, lo)
+        if e is None or -e <= hab:
+            continue
         try:
-            _, la, lo, H = read_site(path)
-            nn, w, _ = mesh.place_site(la, lo)
-        except Refused as e:
-            log(f"  {slug}: left out of the site checks, {e}")
+            nn, w, ext = mesh.place_site(la, lo)
+        except Refused:
             continue
-        if any(x not in index for x in nn):
-            log(f"  {slug}: left out of the site checks, its element is outside the overlay")
+        if any(x not in index for x in nn) or (kind == "shore" and not ext):
             continue
-        uv = to_noaa(adcirc_cons(header, vals, nn, w), reg["db"])
+        H = round(-e, 1)
+        # interpolated from the same int16 constants the browser reads, as the node checks are,
+        # so the check proves the port and leaves the file's rounding out of it
+        dq = [deq(index[x]) for x in nn]
+        uv = {k: (sum(wi * d[k][0] for wi, d in zip(w, dq)), sum(wi * d[k][1] for wi, d in zip(w, dq)))
+              for k in keys}
         cur = extract_point(uv, max(zip(w, nn))[1], mesh, reg, H, a.above_bottom, la, lo, say=lambda m: None)
         mine = {"cons": cur["bottom"]["cons"], "mean_major": cur["bottom"]["mean_major"]}
-        held = doc["blend_model_current"]
-        theirs = {"cons": held["bottom"]["cons"], "mean_major": held["bottom"]["mean_major"]}
-        span = [moments[0] + timedelta(minutes=10 * k) for k in range(150)]
-        off = max(abs(speed(mine, t) - speed(theirs, t)) for t in span)
-        if off > 0.001 or abs(held["flood_dir"] - cur["flood_dir"]) > 0.1 or held["extract_point"]["seabed_m"] != H:
-            stale.append(f"{slug} ({off:.3f} m/s)")
+        n_shore += kind == "shore"
         # what `at` prints: the signed speed along the flood direction, which it gives to 0.1°
-        sites.append({"slug": slug, "lat": la, "lon": lo, "seabed": H, "flood": cur["flood_dir"],
-                      "checks": [{"t": int(t.timestamp() * 1000), "s": round(speed(mine, t), 6)} for t in moments]})
-    log(f"  {len(sites)} sites in the boxes carried as checks")
-    if stale:
-        log(f"  {len(stale)} site JSON(s) hold an extract that differs from the region as built; re-extract them: "
-            + ", ".join(stale))
+        points.append({"lat": la, "lon": lo, "seabed": H, "flood": cur["flood_dir"],
+                       "checks": [{"t": int(t.timestamp() * 1000), "s": round(speed(mine, t), 6)} for t in moments]})
+    log(f"  {len(points)} sample points carried as checks, {n_shore} of them off the mesh's shoreline")
+    if not points:
+        sys.exit("No sample point in the boxes could be placed and extracted: the overlay would carry no point check.")
 
     xy, tri, dep = array.array("f"), array.array("H"), array.array("f")
     for n in nodes:
@@ -1310,7 +1315,7 @@ def cmd_export_map(a):
         "settings": {"aboveBottomM": hab, "neighbours": NEIGHBOURS, "reachKm": REACH_KM, "softenKm": SOFTEN_KM,
                      "prior": PRIOR, "exactKm": EXACT_KM, "minAmp": MIN_AMP, "extendKm": EXTEND_KM,
                      "walkStepM": WALK_STEP_M, "lineStepM": LINE_STEP_M},
-        "checks": {"nodes": node_checks, "sites": sites},
+        "checks": {"nodes": node_checks, "points": points},
         "landMask": land_mask(S, W, N, E),
     }
     out = a.out or os.path.join(WORKSPACE, "map", "currents", f"{a.name}.js")
@@ -1318,7 +1323,7 @@ def cmd_export_map(a):
     with open(out + ".part", "w") as fh:
         fh.write("// Generated by tools/blend_model.py export-map; regenerate rather than edit.\n")
         fh.write(f"// {a.label}: {len(nodes)} {reg['db']} mesh nodes, {len(tris)} elements, {len(sources)} stations, "
-                 f"{len(sites)} sites. The browser runs the tool's blend.\n")
+                 f"{len(points)} sample points. The browser runs the tool's blend.\n")
         fh.write("window.MAP_CURRENTS = window.MAP_CURRENTS || {};\n")
         fh.write(f"window.MAP_CURRENTS[{json.dumps(a.name)}] = ")
         fh.write(json.dumps(out_doc, separators=(",", ":")))
