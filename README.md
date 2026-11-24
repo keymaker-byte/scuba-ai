@@ -36,7 +36,6 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 
 | Tool | Source | Does | Script |
 |---|---|---|---|
-| [NOAA CO-OPS currents](tools/noaa_current.md) | NOAA CO-OPS | Current predictions at a NOAA current station, computed locally from NOAA's harmonic constants: slack, max flood/ebb, and diveable windows under a speed threshold, at a chosen depth bin. | `noaa_current.py` |
 | [NOAA CO-OPS water levels](tools/noaa_tide.md) | NOAA CO-OPS | Tide height predictions at a NOAA tide station, computed locally from NOAA's harmonic constants; converts an observed depth to depth below MLLW datum and back (`normalize` / `project`). | `noaa_tide.py` |
 | [Blend Model](tools/blend_model.md) | ADCIRC ENPAC15 and EC2015, NOAA CO-OPS, CHS | The tidal current at any point and height above the seabed: the ADCIRC field corrected bin by bin by the NOAA and CHS stations around it, exact at the stations; the current tool for the Salish Sea regions' and Bonaire's sites and plans, and the map's tidal current layer. Its method and how to extend it: [design](tools/blend_model_design.md). | `blend_model.py` |
 | [NCEI coastal DEM](tools/ncei_depth.md) | NOAA NCEI | Seabed depth at a coordinate, read from NOAA's DEM tiles kept locally, with conversion to depth below MLLW via NOAA VDatum. US only. | `ncei_depth.py` |

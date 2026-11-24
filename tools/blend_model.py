@@ -10,6 +10,10 @@ database corrected by the current stations around the point, NOAA's and CHS's.
   blend_model.py verify --name N                         accuracy against hidden stations
   blend_model.py export-map --bbox S W N E [...] --name N --label L   the map viewer's seafloor overlay
   blend_model.py selftest [--db ENPAC15|EC2015]          the astronomy against each database's header
+  blend_model.py stations near LAT LON                   NOAA current stations near a point
+  blend_model.py stations bins STATION                   a NOAA station's bins, their depths and kinds
+  blend_model.py stations fetch [STATION ...] [--near LAT LON --km R] [--all]   cache NOAA stations
+  blend_model.py stations verify STATION --bin B | --all  cached constants against NOAA's live API
 """
 import argparse
 import cmath
@@ -31,6 +35,7 @@ from lib.adcirc import selftest as adcirc_selftest  # noqa: E402
 from lib.current_harmonics import events, series  # noqa: E402
 from lib import shapes  # noqa: E402
 from lib.current_stations import NETWORKS, NOAA_DB, cx, noaa_arg, noaa_name  # noqa: E402
+from lib import noaa_stations  # noqa: E402
 from lib.seabed import Seabed  # noqa: E402
 from lib.tcd import Harmonics, velocity  # noqa: E402
 from lib.tidal_astronomy import CONS  # noqa: E402
@@ -1329,6 +1334,53 @@ def cmd_selftest(a):
         sys.exit(1)
 
 
+def cmd_stations_near(a):
+    doc = noaa_stations.station_list()
+    lat, lon = a.near
+    rows = sorted((noaa_stations.km_from(s, lat, lon), sid, s) for sid, s in doc["stations"].items())
+    print(f"NOAA current stations near {lat:.4f}, {lon:.4f} (list fetched {doc['fetched']}):\n")
+    for km, sid, s in rows[: a.n]:
+        types = "".join(sorted({b["type"] or "?" for b in s["bins"].values()}))
+        print(f"  {sid:<10} {types:<3} {km:6.1f} km  {s['name']}  {'cached' if noaa_stations.cached(sid) else ''}")
+    print("\nType: H harmonic (its own constants, usually with depth bins), S subordinate (corrections")
+    print("to a reference station), W weak and variable (no predictions). The Blend Model reads H alone.")
+
+
+def cmd_stations_bins(a):
+    doc = noaa_stations.station(a.station)
+    print(f"{doc['id']}  {doc['name']}   {doc['lat']:.4f}, {doc['lon']:.4f}")
+    if doc.get("project"):
+        print(f"  project: {doc['project']}")
+    print(f"  constants fetched {doc['fetched']}\n")
+    for num, b in sorted(doc["bins"].items(), key=lambda x: int(x[0])):
+        depth = f"{b['depth']} m" if b.get("depth") is not None else "depth unknown"
+        kind = {"H": "harmonic, published by NOAA", "S": "subordinate, no constants",
+                "W": "weak and variable, no predictions", None: "constants only, unpublished"}[b.get("type")]
+        if b.get("type") in ("H", None) and not b.get("cons"):
+            kind = "listed by NOAA with no constants"
+        print(f"    bin {num:<3} {depth:<14} {kind}")
+
+
+def cmd_stations_fetch(a):
+    noaa_stations.fetch(a.station, a.near, a.km, a.all, a.pause)
+
+
+def cmd_stations_verify(a):
+    if a.all:
+        return noaa_stations.verify_all(a.date, a.days, a.speed_tol, a.time_tol, a.pause)
+    if not a.station:
+        sys.exit("name a station, or pass --all.")
+    doc = noaa_stations.station(a.station)
+    num, b = noaa_stations.check_bin(doc, a.bin)
+    print(f"{doc['id']}  {doc['name']}  bin {num}  {a.date} for {a.days} days, against NOAA's API")
+    print(f"  constants fetched {doc['fetched']}\n")
+    r = noaa_stations.compare(doc, num, b, a.date, a.days, a.speed_tol, a.time_tol)
+    print("\n".join(noaa_stations.report_lines(r)))
+    print("\n  PASS" if r["ok"] else f"\n  FAIL: limits are {a.speed_tol} m/s and {a.time_tol} min. The cached "
+          "constants may be older than NOAA's; delete the station's file to fetch them again.")
+    sys.exit(0 if r["ok"] else 1)
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -1398,6 +1450,33 @@ def main():
     s.add_argument("--db", choices=sorted(DATABASES), action="append",
                    help="one database (repeatable); default every database")
     s.set_defaults(fn=cmd_selftest)
+
+    s = sub.add_parser("stations", help="NOAA's current stations: find, cache and check them")
+    st = s.add_subparsers(dest="action", required=True)
+    t = st.add_parser("near", help="NOAA current stations near a point")
+    t.add_argument("near", nargs=2, type=float, metavar=("LAT", "LON"))
+    t.add_argument("-n", type=int, default=6)
+    t.set_defaults(fn=cmd_stations_near)
+    t = st.add_parser("bins", help="a station's bins, their depths and kinds")
+    t.add_argument("station")
+    t.set_defaults(fn=cmd_stations_bins)
+    t = st.add_parser("fetch", help="cache stations ahead of a build")
+    t.add_argument("station", nargs="*")
+    t.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"))
+    t.add_argument("--km", type=float, default=50.0, help="radius for --near, default 50")
+    t.add_argument("--all", action="store_true", help="every station NOAA lists")
+    t.add_argument("--pause", type=float, default=0.3, help="seconds between stations, default 0.3")
+    t.set_defaults(fn=cmd_stations_fetch)
+    t = st.add_parser("verify", help="cached constants against NOAA's live API")
+    t.add_argument("station", nargs="?")
+    t.add_argument("--bin", type=int)
+    t.add_argument("--all", action="store_true", help="every published harmonic bin of every cached station")
+    t.add_argument("--date", type=date.fromisoformat, default=date.today())
+    t.add_argument("--days", type=int, default=30)
+    t.add_argument("--speed-tol", type=float, default=0.02, help="m/s, default 0.02")
+    t.add_argument("--time-tol", type=float, default=3.0, help="minutes, default 3")
+    t.add_argument("--pause", type=float, default=0.2, help="seconds between bins with --all, default 0.2")
+    t.set_defaults(fn=cmd_stations_verify)
 
     a = p.parse_args()
     a.fn(a)

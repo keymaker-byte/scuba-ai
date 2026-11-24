@@ -12,10 +12,10 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 from lib.tidal_astronomy import ALIAS, CONS, longitudes
+from lib.noaa_stations import DB as NOAA_DB
 from lib.tidal_astronomy import nodal as noaa_nodal
 
 TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NOAA_DB = os.path.join(TOOLS, "db", "noaa_current")
 CHS_DB = os.path.join(TOOLS, "db", "chs_current")
 UTC = timezone.utc
 DEG = math.pi / 180
@@ -46,19 +46,22 @@ def bin_z(b):
 
 
 class NoaaHarmonic:
-    """NOAA's harmonic current stations, every bin with constants, from `noaa_current`'s cache.
+    """NOAA's harmonic current stations, every bin with constants, from the cache `stations fetch` keeps.
     Its subordinate and weak stations carry no constants and are listed as others. The bins of a
     station with three or more of them, over a known seabed, give the regional vertical profile."""
     kind = "noaa"
 
     def gather(self, inbox, fit_year):
+        if not os.path.exists(os.path.join(NOAA_DB, "stations.json")):
+            sys.exit("NOAA's current station list is not cached. Cache the region's stations with "
+                     "`python3 tools/blend_model.py stations fetch --near <lat> <lon> --km <r>`, then build again.")
         with open(os.path.join(NOAA_DB, "stations.json")) as f:
             lst = json.load(f)["stations"]
         missing = [sid for sid, s in lst.items() if inbox(s["lat"], s["lon"])
                    and not os.path.exists(os.path.join(NOAA_DB, f"{sid}.json"))]
         if missing:
             sys.exit(f"{len(missing)} NOAA stations in the box are not cached ({', '.join(missing[:8])}...). "
-                     f"Cache them with `python3 tools/noaa_current.py fetch --near <lat> <lon> --km <r>`, then build again.")
+                     f"Cache them with `python3 tools/blend_model.py stations fetch --near <lat> <lon> --km <r>`, then build again.")
         sources, others = [], []
         for sid, s in sorted(lst.items()):
             if not inbox(s["lat"], s["lon"]):

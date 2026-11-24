@@ -1,6 +1,6 @@
 # Blend Model design
 
-How `blend_model.py` predicts, why it is built this way, what was tried on the way, and how to grow it. `blend_model.md` is the operating manual; this file is for the agent who changes the tool. The goal it serves is one current tool for every water the workspace dives: today it covers the Salish Sea, from one tidal database and two station networks.
+How `blend_model.py` predicts, why it is built this way, what was tried on the way, and how to grow it. `blend_model.md` is the operating manual; this file is for the agent who changes the tool. The goal it serves is one current tool for every water the workspace dives: today it covers the Salish Sea and Bonaire, from two tidal databases and two station networks.
 
 ## The problem
 
@@ -42,7 +42,7 @@ With no station within 16 km the point takes the database scaled by the profile,
 
 ### The extract and the prediction
 
-`extract` evaluates `blend_at` at the site's height (2 m above the seabed, as a fraction of `seabed_m`) and at every twentieth of the column above it, keeps the one with the strongest M2 as `upper`, and writes both as NOAA-form constant sets. Prediction is `tools/lib/current_harmonics.py`, the same summation `noaa_current` uses. The observed offset is applied in `curve` as a time shift that moves each slack by its own figure and interpolates between them, so a maximum stays between its two slacks.
+`extract` evaluates `blend_at` at the site's height (2 m above the seabed, as a fraction of `seabed_m`) and at every twentieth of the column above it, keeps the one with the strongest M2 as `upper`, and writes both as NOAA-form constant sets. Prediction is `tools/lib/current_harmonics.py`, the same summation `stations verify` checks against NOAA's own predictions. The observed offset is applied in `curve` as a time shift that moves each slack by its own figure and interpolates between them, so a maximum stays between its two slacks.
 
 ### Toward shore
 
@@ -91,12 +91,12 @@ The first test case. 1.4 km from PUG1516, the column-mean version missed its bin
 `blend_model.py` holds the method; what it reads comes through three seams, each a list a new source joins without touching the correction:
 
 - **Tidal databases.** `DATABASES` in `tools/lib/adcirc.py` (ENPAC15, EC2015), picked by `database_for(bbox)` as the one whose domain holds the region's box.
-- **Station networks.** `NETWORKS` in `tools/lib/current_stations.py` (NOAA harmonic, CHS predictions). Each network's `gather` lists its stations in a box from its own tool's cache, and its `prepare` turns one into bins and returns its vertical profile rows.
+- **Station networks.** `NETWORKS` in `tools/lib/current_stations.py` (NOAA harmonic, CHS predictions). Each network's `gather` lists its stations in a box from its cache (NOAA's kept by `stations fetch` through `tools/lib/noaa_stations.py`, CHS's by `chs_current`), and its `prepare` turns one into bins and returns its vertical profile rows.
 - **Bathymetries.** `SOURCES` in `tools/lib/seabed.py` (NCEI tiles, DCBD Bonaire), asked in order for the seabed under each station and map node, from data already on this machine. A station no bathymetry covers takes the database's own depth.
 
 ### A new region on the same database
 
-1. Cache its stations (`noaa_current.py fetch --near`, `chs_current.py fetch --near` for the fit year) and the bathymetry where depths are wanted (ask before a download; NCEI tiles are large).
+1. Cache its stations (`blend_model.py stations fetch --near`, `chs_current.py fetch --near` for the fit year) and the bathymetry where depths are wanted (ask before a download; NCEI tiles are large).
 2. `build --name <region> --bbox S W N E`, then `verify --name <region>`. The at-stations test must read 0, 0, 0; read the hidden and legacy tables against the nearest station and the database alone.
 3. `export-map` for its layer, and `extract --site` on all of its sites in one run.
 
