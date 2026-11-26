@@ -3,5 +3,25 @@
   "lon": -123.744945,
   "tz": "America/Los_Angeles",
   "seabed_m": 26.3,
-  "seabed_datum": "LAKE"
+  "seabed_datum": "LAKE",
+  "current": {
+    "extract_point": {
+      "lat": 48.085275,
+      "lon": -123.744945,
+      "seabed_m": 26.3,
+      "extracted": "2026-11-26T01:49:04+00:00"
+    },
+    "datum": "LAKE",
+    "flood_dir": null,
+    "ebb_dir": null,
+    "bottom": {
+      "above_bottom_m": 2.0,
+      "cons": []
+    },
+    "upper": {
+      "above_bottom_m": 2.0,
+      "cons": []
+    },
+    "stations": []
+  }
 }

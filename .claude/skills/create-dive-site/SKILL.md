@@ -106,10 +106,10 @@ Produce every depth figure on the region's datum, the one the site conventions' 
 
 Produce every current figure by the current type the site conventions' Current section names, the rules below, and any reach the Current section describes.
 
-- **Extract.** Tidal and wind driven: once the dive area coordinate holds, `current.md`'s `extract --site` on the site JSON, at the tool's default height above the seabed, attaches the site's constants. A coordinate the tool refuses, on land or in water outside its coverage, stops the site: report it and wait. A current type of none takes no extract.
+- **Extract.** Every site, whatever its current type: once the dive area coordinate holds, `current.md`'s `extract --site` on the site JSON, at the tool's default height above the seabed, attaches the site's constants. On `LAKE` the extract holds no tidal current, and every prediction from it is 0 m/s. A coordinate the tool refuses, on land or in water outside its coverage, stops the site: report it and wait.
 - **Tidal.** The extract's predictions give the Flood, Ebb and Diveable window bullets: slack, set, peak speeds and the windows under the threshold. `subsurface_log.md` gives the set and strength actually felt at the site, and the timed slacks behind the observed offset, worked out by `current.md`'s own method.
 - **No station within reach.** Where `current.md`'s header reports no current station within reach, the prediction is the tidal database's own, and the prose states its timing as a starting point to verify on the day.
-- **Wind driven.** The extract goes with the site JSON for planning. The Usual set and Drivers bullets come from the research sources' descriptions of the site and the log's own dives there, taken as behaviour and cross-checked between sources; a set no source describes is written as not established.
+- **Wind driven.** The extract goes with the site JSON for planning, its tidal set a data point beside the wind. The Usual set and Drivers bullets come from the research sources' descriptions of the site and the log's own dives there, taken as behaviour and cross-checked between sources; a set no source describes is written as not established.
 
 - **Type.** As the region sets it, unless a specific site water behaves differently.
 - **In words.** The Current section describes the water from the research and the log: where it pushes, in compass points, and how it feels, in terms like ripping, steady or gentle.
@@ -163,7 +163,7 @@ Write the figures from steps 5 to 7 and the research from step 4 into the templa
   }
   ```
 
-- **Site JSON.** The file step 3 wrote, with the current extract from step 6 where the current type takes one. Its `lat`, `lon` and `seabed_m` read exactly as the Coordinates row states them, and its `seabed_datum` names the region's datum.
+- **Site JSON.** The file step 3 wrote, with the current extract from step 6. Its `lat`, `lon` and `seabed_m` read exactly as the Coordinates row states them, and its `seabed_datum` names the region's datum.
 
 Keep the row, the map entry and the site JSON current whenever the site's coordinates, seabed depth, name, type, parking or entry change.
 

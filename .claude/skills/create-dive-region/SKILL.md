@@ -123,7 +123,7 @@ Read in full for every site file.
 
 ## Current
 
-- **Current type.** Tidal, wind driven, or none, with the reason for none.
+- **Current type.** Tidal, wind driven, or none, with the reason for none. None is a lake, on `LAKE`, whose extract answers 0 m/s.
 - **Topic.** Optional, one bullet per reach that behaves differently from the rest of the region, or region-specific fact about how the current tool reads here.
 
 ## Wind

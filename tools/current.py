@@ -27,6 +27,7 @@ from lib.adcirc import selftest as adcirc_selftest  # noqa: E402
 from lib.current_harmonics import events, series  # noqa: E402
 from lib.current_stations import NETWORKS, cx  # noqa: E402
 from lib import chs_stations, noaa_stations  # noqa: E402
+from lib.datums import LAKE  # noqa: E402
 from lib.seabed import Seabed  # noqa: E402
 from lib.tcd import legacy as legacy_harmonics, selftest as legacy_selftest, velocity  # noqa: E402
 from lib.blend import (ABOVE_BOTTOM, adcirc_cons, along, built_regions, database_for, DB, DEG, EXACT_KM,
@@ -179,11 +180,12 @@ def cmd_extract(a):
     """Every site given, each written into its own JSON. Every site is read and placed before any
     is written, so a refused one stops the run with nothing changed; the database's constants for
     all of them are read in one pass."""
-    jobs, refused = [], []
+    jobs, lakes, refused = [], [], []
     for path in a.site:
         try:
             doc, lat, lon, H = read_site(path)
-            jobs.append({"path": path, "doc": doc, "lat": lat, "lon": lon, "H": H})
+            j = {"path": path, "doc": doc, "lat": lat, "lon": lon, "H": H}
+            (lakes if doc.get("seabed_datum") == LAKE else jobs).append(j)
         except Refused as e:
             refused.append(str(e))
     groups = {}
@@ -204,6 +206,10 @@ def cmd_extract(a):
                     f"{ext * 1000:.0f} m away across water")
     if refused:
         sys.exit("Nothing was written. Stop and report:\n  " + "\n  ".join(refused))
+    for j in lakes:
+        j["doc"]["current"] = lake_extract(j["lat"], j["lon"], j["H"])
+        write_site(j["path"], j["doc"])
+        log(f"  wrote current into {j['path']}: on LAKE, no tidal current, 0 m/s at every moment")
     for name, (reg, js) in groups.items():
         mesh = meshes[name]
         header = read_vel_header(reg["db"])
@@ -216,10 +222,30 @@ def cmd_extract(a):
             start = max(zip(j["w"], j["nodes"]))[1]
             cur = extract_point(uv, start, mesh, reg, j["H"], ABOVE_BOTTOM, j["lat"], j["lon"])
             j["doc"]["current"] = cur
-            with open(j["path"] + ".part", "w") as f:
-                f.write(json.dumps(j["doc"], indent=2) + "\n")
-            os.replace(j["path"] + ".part", j["path"])
+            write_site(j["path"], j["doc"])
             log(f"  wrote current into {j['path']}")
+
+
+def write_site(path, doc):
+    with open(path + ".part", "w") as f:
+        f.write(json.dumps(doc, indent=2) + "\n")
+    os.replace(path + ".part", path)
+
+
+def lake_extract(lat, lon, H):
+    """The extract of a site on LAKE: a lake has no tide, so it has no tidal current, and every
+    prediction from this extract is 0 m/s. It has the shape of any other extract, with no
+    constants, no axis and no station behind it."""
+    return {"extract_point": {"lat": lat, "lon": lon, "seabed_m": H,
+                              "extracted": datetime.now(UTC).isoformat(timespec="seconds")},
+            "datum": LAKE, "flood_dir": None, "ebb_dir": None,
+            "bottom": {"above_bottom_m": ABOVE_BOTTOM, "cons": []},
+            "upper": {"above_bottom_m": ABOVE_BOTTOM, "cons": []},
+            "stations": []}
+
+
+def is_lake(doc):
+    return doc["current"].get("datum") == LAKE
 
 
 def load_doc(a):
@@ -285,6 +311,14 @@ def day_span(day, tz, pad=0):
 def print_header(doc, day, tz):
     c = doc["current"]
     p = c["extract_point"]
+    if is_lake(doc):
+        print(f"No tidal current on LAKE  {p['lat']:.5f}, {p['lon']:.5f}  {day}  a {p['seabed_m']:g} m seabed  "
+              f"({getattr(tz, 'key', None) or tz.tzname(None)})")
+        print("  LAKE: the lake's own surface, with no tide, so no tidal current: 0 m/s at every moment and height.")
+        print("  A lake's water moves only with the wind's surface drift, which no prediction here holds.")
+        _stale(doc, p)
+        print()
+        return
     print(f"{p['lat']:.5f}, {p['lon']:.5f}  {day}  {c['bottom']['above_bottom_m']:g} m above a {p['seabed_m']:g} m seabed  "
           f"({getattr(tz, 'key', None) or tz.tzname(None)})")
     fs = next((s for s in c["stations"] if s.get("sets_flood_ebb_direction")), None)
@@ -296,11 +330,7 @@ def print_header(doc, day, tz):
         print("  corrected by " + ", ".join(f"{s['id']} {s['km']:.1f} km" for s in corr))
     else:
         print(f"  no station within {REACH_KM:.0f} km through the water: the database's own current")
-    if "lat" in doc and (abs(doc["lat"] - p["lat"]) > 1e-6 or abs(doc["lon"] - p["lon"]) > 1e-6):
-        print(f"  the site's coordinate ({doc['lat']}, {doc['lon']}) is not where this extract was taken: extract the site again")
-    sb = doc.get("seabed_m")
-    if sb is not None and abs(sb - p["seabed_m"]) > 0.005:
-        print(f"  the site's seabed is {sb:g} m, and this extract was made for {p['seabed_m']:g} m: extract the site again")
+    _stale(doc, p)
     built = _region_built(p["lat"], p["lon"])
     if built and _when(built) > _when(p["extracted"]):
         print(f"  the region was rebuilt on {built[:10]}, after this extract ({p['extracted'][:10]}): extract the site again")
@@ -309,6 +339,18 @@ def print_header(doc, day, tz):
         print(f"  observed offset applied: slack before flood {_mins(off.get('before_flood_min'))}, "
               f"slack before ebb {_mins(off.get('before_ebb_min'))}")
     print()
+
+
+def _stale(doc, p):
+    if "lat" in doc and (abs(doc["lat"] - p["lat"]) > 1e-6 or abs(doc["lon"] - p["lon"]) > 1e-6):
+        print(f"  the site's coordinate ({doc['lat']}, {doc['lon']}) is not where this extract was taken: extract the site again")
+    sb = doc.get("seabed_m")
+    if sb is not None and abs(sb - p["seabed_m"]) > 0.005:
+        print(f"  the site's seabed is {sb:g} m, and this extract was made for {p['seabed_m']:g} m: extract the site again")
+    if doc.get("seabed_datum") == LAKE and not is_lake(doc):
+        print("  the site is on LAKE, and this extract was taken for tidal water: extract the site again")
+    elif is_lake(doc) and doc.get("seabed_datum") != LAKE:
+        print(f"  this extract was taken on LAKE, and the site is on {doc.get('seabed_datum')}: extract the site again")
 
 
 def _region_built(lat, lon):
@@ -342,6 +384,9 @@ def cmd_predict(a):
     tz = resolve_tz(a.tz)
     c = doc["current"]
     print_header(doc, a.date, tz)
+    if is_lake(doc):
+        print("  no slack and no maximum: 0.00 m/s all day, at the bottom and above")
+        return
     start, minutes = day_span(a.date, tz, pad=5)
     up = {round(t.timestamp() / 60): v for t, kind, v in events(curve(doc, c["upper"], start, minutes)) if kind != "slack"}
     print(f"            bottom      fastest above ({c['upper']['above_bottom_m']:g} m off the bottom)")
@@ -365,6 +410,9 @@ def cmd_window(a):
     lim = a.max_speed
     print_header(doc, a.date, tz)
     print(f"  windows with |current| <= {lim:.2f} m/s at the bottom, each with its peak there and in the fastest water above\n")
+    if is_lake(doc):
+        print("  all day          peak 0.00 m/s, above 0.00 m/s")
+        return
     start, minutes = day_span(a.date, tz)
     bot = curve(doc, c["bottom"], start, minutes)[:-1]
     upv = [v for _, v in curve(doc, c["upper"], start, minutes)[:-1]]
@@ -398,6 +446,10 @@ def cmd_at(a):
     c = doc["current"]
     t = datetime.strptime(a.time, "%Y-%m-%d %H:%M").replace(tzinfo=tz)
     print_header(doc, t.date(), tz)
+    if is_lake(doc):
+        print(f"  {t:%H:%M}  {'bottom':<22} 0.00 m/s, no set")
+        print(f"  {t:%H:%M}  {'above':<22} 0.00 m/s, no set")
+        return
     tu = t.astimezone(UTC)
     for lbl, b in (("bottom", c["bottom"]), (f"{c['upper']['above_bottom_m']:g} m off the bottom", c["upper"])):
         v = curve(doc, b, tu, 0)[0][1]
@@ -682,9 +734,14 @@ def cmd_verify_stations(a):
     extract names, every station of a built region, or the stations named."""
     if a.file:
         with open(a.file) as f:
-            ids = [s["id"] for s in json.load(f).get("current", {}).get("stations", [])]
+            cur = json.load(f).get("current", {})
+        if "extract_point" not in cur:
+            sys.exit(f"No current extract in {a.file}: run `extract --site {a.file}`.")
+        ids = [s["id"] for s in cur.get("stations", [])]
         if not ids:
-            sys.exit(f"{a.file} has no extract with stations: run `extract --site {a.file}`.")
+            why = "on LAKE, with no tidal current" if cur.get("datum") == LAKE else "the tidal database's own current"
+            print(f"{a.file}: no station behind this extract ({why}), so there is nothing to verify.")
+            return
     elif a.name:
         ids = [s["id"] for s in load_region(a.name)["sources"]]
     elif a.station:
