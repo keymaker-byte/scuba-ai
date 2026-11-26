@@ -9,9 +9,8 @@
       "lat": 48.085275,
       "lon": -123.744945,
       "seabed_m": 26.3,
-      "extracted": "2026-11-26T01:49:04+00:00"
+      "extracted": "2026-11-26T01:51:30+00:00"
     },
-    "datum": "LAKE",
     "flood_dir": null,
     "ebb_dir": null,
     "bottom": {

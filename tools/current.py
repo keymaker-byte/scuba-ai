@@ -235,17 +235,18 @@ def write_site(path, doc):
 def lake_extract(lat, lon, H):
     """The extract of a site on LAKE: a lake has no tide, so it has no tidal current, and every
     prediction from this extract is 0 m/s. It has the shape of any other extract, with no
-    constants, no axis and no station behind it."""
+    constants, no axis and no station behind it; the site's own seabed_datum says it is a lake's."""
     return {"extract_point": {"lat": lat, "lon": lon, "seabed_m": H,
                               "extracted": datetime.now(UTC).isoformat(timespec="seconds")},
-            "datum": LAKE, "flood_dir": None, "ebb_dir": None,
+            "flood_dir": None, "ebb_dir": None,
             "bottom": {"above_bottom_m": ABOVE_BOTTOM, "cons": []},
             "upper": {"above_bottom_m": ABOVE_BOTTOM, "cons": []},
             "stations": []}
 
 
 def is_lake(doc):
-    return doc["current"].get("datum") == LAKE
+    """A site on LAKE, read from its own seabed_datum."""
+    return doc.get("seabed_datum") == LAKE
 
 
 def load_doc(a):
@@ -258,6 +259,10 @@ def load_doc(a):
         sys.exit(f"Could not parse JSON in {a.file}: {e}")
     if "extract_point" not in doc.get("current", {}):
         sys.exit(f"No current extract in {a.file}: run `extract --site {a.file}`.")
+    lake_shaped = doc["current"].get("flood_dir") is None
+    if is_lake(doc) != lake_shaped:
+        sys.exit(f"{a.file}: the site is on {doc.get('seabed_datum')}, and its extract was taken for "
+                 f"{'a lake' if lake_shaped else 'tidal water'}: run `extract --site {a.file}` again.")
     if getattr(a, "raw", False):
         doc.pop("current_observed_offset", None)
     return doc
@@ -347,10 +352,6 @@ def _stale(doc, p):
     sb = doc.get("seabed_m")
     if sb is not None and abs(sb - p["seabed_m"]) > 0.005:
         print(f"  the site's seabed is {sb:g} m, and this extract was made for {p['seabed_m']:g} m: extract the site again")
-    if doc.get("seabed_datum") == LAKE and not is_lake(doc):
-        print("  the site is on LAKE, and this extract was taken for tidal water: extract the site again")
-    elif is_lake(doc) and doc.get("seabed_datum") != LAKE:
-        print(f"  this extract was taken on LAKE, and the site is on {doc.get('seabed_datum')}: extract the site again")
 
 
 def _region_built(lat, lon):
@@ -734,12 +735,13 @@ def cmd_verify_stations(a):
     extract names, every station of a built region, or the stations named."""
     if a.file:
         with open(a.file) as f:
-            cur = json.load(f).get("current", {})
+            site = json.load(f)
+        cur = site.get("current", {})
         if "extract_point" not in cur:
             sys.exit(f"No current extract in {a.file}: run `extract --site {a.file}`.")
         ids = [s["id"] for s in cur.get("stations", [])]
         if not ids:
-            why = "on LAKE, with no tidal current" if cur.get("datum") == LAKE else "the tidal database's own current"
+            why = "on LAKE, with no tidal current" if is_lake(site) else "the tidal database's own current"
             print(f"{a.file}: no station behind this extract ({why}), so there is nothing to verify.")
             return
     elif a.name:
