@@ -13,7 +13,7 @@ These conventions apply to every site file written in this region.
 ## Depth
 
 - **Datum.** None: depth is a plain observed figure, since Bonaire's tidal range runs about 30 cm, too small to normalize against. Its name in the tools and in a site JSON's `seabed_datum` is `NONE`, on which the tide tool's height is 0.
-- **Tool.** `dcbd_depth.md`, the seabed depth at the dive area coordinate.
+- **Tool.** `depth.md`, the seabed depth at the dive area coordinate on `NONE` (`depth.py at <lat> <lon> --datum NONE`), from its DCBD coastal bathymetry source, with `transect` to walk a coordinate across the terrace.
 
 ## Current
 

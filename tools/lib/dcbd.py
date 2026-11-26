@@ -1,155 +1,60 @@
-"""The DCBD coastal bathymetry of Bonaire (Meesters 2020), shared by dcbd_depth.py and the
-seabed sources: the grid's download, its GeoTIFF reader and the projection to its UTM zone."""
+"""The DCBD coastal bathymetry of Bonaire (Meesters 2020), for the depth tool and the current
+tool's seabed: the one 2 m GeoTIFF taken out of DCBD's zip and kept on this machine, the UTM zone
+19N projection it is gridded on, and the depth at a point, a plain observed depth (datum NONE)."""
+import json
 import math
 import os
 import struct
 import sys
+import urllib.error
 import urllib.request
 import zipfile
+from datetime import date
 
-TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB = os.path.join(TOOLS, "db")
-TIF = os.path.join(DB, "dcbd_bonaire_depth.tif")
+from lib import ncei
+from lib.dem_tiles import Tile
+
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+DB = os.path.join(ROOT, "tools", "db", "depth", "dcbd")
+
+
+INDEX = os.path.join(DB, "index.json")
+
+
 # Meesters, E. (2020), "Coastal bathymetry Bonaire", Dutch Caribbean Biodiversity Database resource 2869.
+PAGE_URL = "https://www.dcbd.nl/resource/2869"
+
+
 ZIP_URL = "https://www.dcbd.nl/reposerver/api/file/3421"
-ZIP_MEMBER = "bonaire_depth_hires2.tif"
-UTM_ZONE = 19  # the grid's own projection: WGS 84 / UTM zone 19N (EPSG 32619)
 
 
-# --- download -----------------------------------------------------------------------------
-
-def _ensure():
-    if os.path.exists(TIF):
-        return
-    os.makedirs(DB, exist_ok=True)
-    part = TIF + ".zip.part"
-    print(f"downloading {ZIP_URL} (about 34 MB) ...", file=sys.stderr)
-    req = urllib.request.Request(ZIP_URL, headers={"User-Agent": "Mozilla/5.0 (dcbd_depth.py)"})
-    try:
-        with urllib.request.urlopen(req, timeout=300) as r, open(part, "wb") as f:
-            while chunk := r.read(1 << 20):
-                f.write(chunk)
-        with zipfile.ZipFile(part) as z, z.open(ZIP_MEMBER) as src, open(TIF + ".part", "wb") as dst:
-            while chunk := src.read(1 << 20):
-                dst.write(chunk)
-    except (OSError, zipfile.BadZipFile, KeyError) as e:
-        for p in (part, TIF + ".part"):
-            if os.path.exists(p):
-                os.remove(p)
-        sys.exit(f"download failed ({e}); the Bonaire bathymetry grid is needed before any depth.")
-    os.replace(TIF + ".part", TIF)
-    os.remove(part)
+MEMBER = "bonaire_depth_hires2.tif"   # the depth grid inside the zip
 
 
-# --- GeoTIFF reader: one float band, uncompressed or LZW, strip layout --------------------
-
-def _lzw(data):
-    """Decode one TIFF LZW strip (MSB-first codes, early change)."""
-    bits = int.from_bytes(data, "big")
-    total = len(data) * 8
-    table = [bytes([i]) for i in range(256)] + [b"", b""]
-    out = bytearray()
-    pos, width, prev = 0, 9, None
-    while pos + width <= total:
-        code = (bits >> (total - pos - width)) & ((1 << width) - 1)
-        pos += width
-        if code == 257:
-            break
-        if code == 256:
-            table, width, prev = table[:258], 9, None
-            continue
-        if prev is None:
-            entry = table[code]
-        else:
-            entry = table[code] if code < len(table) else prev + prev[:1]
-            table.append(prev + entry[:1])
-        out += entry
-        prev = entry
-        if len(table) >= (1 << width) - 1 and width < 12:
-            width += 1
-    return bytes(out)
+TIF = os.path.join(DB, MEMBER)
 
 
-class Grid:
-    TYPES = {1: ("B", 1), 2: ("s", 1), 3: ("H", 2), 4: ("I", 4), 11: ("f", 4), 12: ("d", 8), 16: ("Q", 8)}
-
-    def __init__(self, path):
-        self.f = open(path, "rb")
-        head = self.f.read(8)
-        if head[:4] not in (b"II*\0", b"MM\0*"):
-            sys.exit(f"{path} is not a TIFF; delete it to fetch the grid again.")
-        self.bo = "<" if head[:2] == b"II" else ">"
-        (off,) = struct.unpack(self.bo + "I", head[4:])
-        tags = self._ifd(off)
-        self.width, self.height = tags[256][0], tags[257][0]
-        compression = tags.get(259, (1,))[0]
-        if tags.get(258, (0,))[0] != 32 or tags.get(339, (0,))[0] != 3 or tags.get(277, (1,))[0] != 1:
-            sys.exit("unexpected TIFF layout: expected a single 32-bit float band.")
-        if compression not in (1, 5) or tags.get(317, (1,))[0] != 1 or 322 in tags:
-            sys.exit("unexpected TIFF layout: expected strips, uncompressed or LZW, no predictor.")
-        self.lzw = compression == 5
-        self.rps = tags.get(278, (self.height,))[0]
-        self.offsets, self.counts = tags[273], tags[279]
-        sx, sy = tags[33550][:2]
-        _, _, _, x0, y0, _ = tags[33922]
-        self.x0, self.y0, self.sx, self.sy = x0, y0, sx, sy
-        self.nodata = float(tags[42113].rstrip(b"\0")) if 42113 in tags else None
-        self.fmt = self.bo + f"{self.width}f"
-        self.rows = {}
-
-    def _ifd(self, off):
-        self.f.seek(off)
-        (n,) = struct.unpack(self.bo + "H", self.f.read(2))
-        raw = self.f.read(12 * n)
-        tags = {}
-        for i in range(n):
-            tag, typ, cnt = struct.unpack(self.bo + "HHI", raw[12 * i:12 * i + 8])
-            if typ not in self.TYPES:
-                continue
-            ch, size = self.TYPES[typ]
-            val = raw[12 * i + 8:12 * i + 12]
-            if size * cnt > 4:
-                (ptr,) = struct.unpack(self.bo + "I", val)
-                here = self.f.tell()
-                self.f.seek(ptr)
-                val = self.f.read(size * cnt)
-                self.f.seek(here)
-            tags[tag] = val[:cnt] if typ == 2 else struct.unpack(self.bo + ch * cnt, val[:size * cnt])
-        return tags
-
-    def row(self, r):
-        if r not in self.rows:
-            s = r // self.rps
-            self.f.seek(self.offsets[s])
-            data = self.f.read(self.counts[s])
-            if self.lzw:
-                data = _lzw(data)
-            n = self.width * 4
-            k = r - s * self.rps
-            self.rows[r] = struct.unpack(self.fmt, data[k * n:(k + 1) * n])
-        return self.rows[r]
-
-    def pixel(self, x, y):
-        """Pixel (row, col) holding UTM x, y, or None when it falls outside the grid."""
-        c, r = math.floor((x - self.x0) / self.sx), math.floor((self.y0 - y) / self.sy)
-        if 0 <= r < self.height and 0 <= c < self.width:
-            return r, c
-        return None
-
-    def value(self, r, c):
-        """Signed elevation in metres (negative under water), or None where there is no data."""
-        v = self.row(r)[c]
-        if v != v or (self.nodata is not None and abs(v - self.nodata) <= abs(self.nodata) * 1e-6) or v < -1e30:
-            return None
-        return v
-
-    def centre(self, r, c):
-        return self.x0 + (c + 0.5) * self.sx, self.y0 - (r + 0.5) * self.sy
+UTM_ZONE = 19   # the grid's own projection: WGS 84 / UTM zone 19N (EPSG:32619)
 
 
-def grid():
-    _ensure()
-    return Grid(TIF)
+BOX = (12.0098, -68.4360, 12.3354, -68.1869)   # the grid's extent, S W N E, from its corners
+
+
+DATUM = "the sea surface"   # the grid's zero: about sea level, the shoreline at zero
+
+
+NAME = "DCBD coastal bathymetry of Bonaire"
+
+
+SPREAD_M = 10    # the spread of depths reported around a point
+
+
+SEARCH_M = 100   # how far a point with no data searches for the nearest pixel that has some
+
+
+UA = ncei.UA
 
 
 # --- WGS 84 to UTM (Krüger series, sub-millimetre inside a zone) ---------------------------
@@ -171,25 +76,248 @@ def utm(lat, lon, zone=UTM_ZONE):
     return 500000 + k0 * A * x, k0 * A * y
 
 
-def nearest_data(g, x, y, r, c, limit_m):
+# --- The zip on DCBD's server, and the grid taken out of it ---------------------------------
+
+def _zip_member(data, total):
+    """(size, crc) of MEMBER from a zip's central directory, given the zip's last bytes and its
+    whole size."""
+    end = data.rfind(b"PK\x05\x06")
+    if end < 0:
+        raise OSError("no zip directory at the end of the file")
+    cd_size, cd_off = struct.unpack("<II", data[end + 12:end + 20])
+    p = cd_off - (total - len(data))
+    if p < 0:
+        raise OSError("the zip's directory is larger than the bytes read")
+    while data[p:p + 4] == b"PK\x01\x02":
+        crc, _, usize, nl, el, cl = struct.unpack("<IIIHHH", data[p + 16:p + 34])
+        if data[p + 46:p + 46 + nl].decode("utf8", "replace") == MEMBER:
+            return usize, crc
+        p += 46 + nl + el + cl
+    raise OSError(f"the zip no longer holds {MEMBER}")
+
+
+def _download():
+    """The zip, its grid taken out and checked against the zip's own size and CRC, and the index
+    of what was taken. A failure leaves no partial file."""
+    os.makedirs(DB, exist_ok=True)
+    part, tif_part = os.path.join(DB, "download.zip.part"), TIF + ".part"
+    quiet = not sys.stderr.isatty()
+    if not quiet:
+        print(f"downloading the {NAME} from DCBD, about 34 MB ...", file=sys.stderr, flush=True)
+    try:
+        req = urllib.request.Request(ZIP_URL, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=300) as r, open(part, "wb") as f:
+            size = int(r.headers.get("Content-Length") or 0)
+            while chunk := r.read(1 << 20):
+                f.write(chunk)
+        got = os.path.getsize(part)
+        if size and got != size:
+            raise OSError(f"{got} of {size} bytes arrived")
+        with zipfile.ZipFile(part) as z:
+            info = z.getinfo(MEMBER)
+            with z.open(info) as src, open(tif_part, "wb") as dst:   # zipfile checks the CRC as it reads
+                while chunk := src.read(1 << 20):
+                    dst.write(chunk)
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError, zipfile.BadZipFile, KeyError) as e:
+        for p in (part, tif_part):
+            if os.path.exists(p):
+                os.remove(p)
+        sys.exit(f"{NAME}: download failed ({getattr(e, 'reason', e)}) from {ZIP_URL}. Nothing was cached.")
+    doc = {"fetched": date.today().isoformat(), "url": ZIP_URL, "zip_size": got,
+           "member": {"name": MEMBER, "size": info.file_size, "crc": info.CRC}}
+    os.replace(tif_part, TIF)
+    with open(INDEX + ".part", "w") as f:
+        json.dump(doc, f, indent=1)
+    os.replace(INDEX + ".part", INDEX)
+    os.remove(part)
+
+
+def tif_path():
+    """The local GeoTIFF, downloaded with its index when either is missing."""
+    if not (os.path.exists(TIF) and os.path.exists(INDEX)):
+        _download()
+    return TIF
+
+
+def index():
+    tif_path()
+    with open(INDEX) as f:
+        return json.load(f)
+
+
+_tile = None
+
+
+def tile():
+    """The GeoTIFF opened; its own tags georeference it in UTM metres."""
+    global _tile
+    if _tile is None:
+        _tile = Tile(tif_path())
+    return _tile
+
+
+def in_box(lat, lon):
+    s, w, n, e = BOX
+    return s <= lat <= n and w <= lon <= e
+
+
+def pixel(t, lat, lon):
+    x, y = utm(lat, lon)
+    return math.floor((t.y0 - y) / t.sy), math.floor((x - t.x0) / t.sx)
+
+
+def centre(t, row, col):
+    return t.x0 + (col + 0.5) * t.sx, t.y0 - (row + 0.5) * t.sy
+
+
+def covers(lat, lon):
+    """Whether the point lies on the grid, downloading it the first time a point inside its
+    extent is asked for. A pixel on the grid with no data still answers, with the reason."""
+    if not in_box(lat, lon):
+        return False
+    t = tile()
+    row, col = pixel(t, lat, lon)
+    return 0 <= row < t.h and 0 <= col < t.w
+
+
+def elevation(lat, lon):
+    """Signed elevation in metres, negative under water, or None off the grid or where it holds
+    no data: the current tool's seabed."""
+    if not in_box(lat, lon):
+        return None
+    t = tile()
+    return t.value(*pixel(t, lat, lon))
+
+
+COMPASS = "N NNE NE ENE E ESE SE SSE S SSW SW WSW W WNW NW NNW".split()
+
+
+def _bearing(dx, dy):
+    b = math.degrees(math.atan2(dx, dy)) % 360
+    return f"{b:.0f}° ({COMPASS[round(b / 22.5) % 16]})"
+
+
+def nearest_data(t, x, y, row, col, limit_m):
     """Nearest pixel with data within limit_m of (x, y): (distance, dx, dy, value) or None."""
     best = None
-    steps = int(limit_m / g.sx) + 1
-    for ring in range(1, steps + 1):
-        if best and (ring - 1) * g.sx > best[0]:
+    for ring in range(1, int(limit_m / t.sx) + 2):
+        if best and (ring - 1) * t.sx > best[0]:
             break
-        for rr in range(r - ring, r + ring + 1):
-            if not 0 <= rr < g.height:
-                continue
-            edge = rr in (r - ring, r + ring)
-            for cc in (range(c - ring, c + ring + 1) if edge else (c - ring, c + ring)):
-                if not 0 <= cc < g.width:
-                    continue
-                v = g.value(rr, cc)
+        for rr in range(row - ring, row + ring + 1):
+            edge = rr in (row - ring, row + ring)
+            for cc in (range(col - ring, col + ring + 1) if edge else (col - ring, col + ring)):
+                v = t.value(rr, cc)
                 if v is None:
                     continue
-                px, py = g.centre(rr, cc)
+                px, py = centre(t, rr, cc)
                 d = math.hypot(px - x, py - y)
                 if d <= limit_m and (best is None or d < best[0]):
                     best = (d, px - x, py - y, v)
     return best
+
+
+def spread(t, x, y, row, col, radius_m):
+    """(shallowest, deepest, share without data) of the pixels within radius_m, depths in metres
+    below the surface; None where none holds data."""
+    k = int(radius_m / t.sx)
+    vals = [t.value(rr, cc) for rr in range(row - k, row + k + 1) for cc in range(col - k, col + k + 1)
+            if math.hypot(centre(t, rr, cc)[0] - x, centre(t, rr, cc)[1] - y) <= radius_m]
+    have = [v for v in vals if v is not None]
+    if not have:
+        return None
+    return -max(have), -min(have), (len(vals) - len(have)) / len(vals)
+
+
+def answer(lat, lon):
+    """The depth at a point below the sea surface, a plain observed depth: {water, depth, datum,
+    detail, why, dem}. water is "sea", or "none" with why: a pixel with no data (land, water
+    deeper than the survey reached, or unsurveyed), with the nearest pixel that has some, or ground
+    at or above the surface."""
+    t = tile()
+    x, y = utm(lat, lon)
+    row, col = pixel(t, lat, lon)
+    elev = t.value(row, col)
+    r = {"elev": elev, "source": "2 m grid", "res_m": t.sx, "tile": t, "row": row, "col": col}
+    out = {"dem": r, "depth": None, "datum": None, "detail": None, "why": None}
+    if elev is None:
+        near = nearest_data(t, x, y, row, col, SEARCH_M)
+        where = (f"; the nearest data is {near[0]:.0f} m toward {_bearing(near[1], near[2])}, "
+                 + (f"seabed {-near[3]:.1f} m" if near[3] < 0 else f"{near[3]:+.1f} m, above water")
+                 if near else f"; none within {SEARCH_M} m")
+        return {**out, "water": "none",
+                "why": f"no survey data at this pixel (land, deeper than the survey reached, or unsurveyed){where}"}
+    if elev >= 0:
+        return {**out, "water": "none", "why": f"above water, {elev:+.1f} m in the grid; walk the coordinate out"}
+    s = spread(t, x, y, row, col, SPREAD_M)
+    around = f"; within {SPREAD_M} m, {s[0]:.1f} to {s[1]:.1f} m"
+    if s[2]:
+        around += f", {s[2]:.0%} of it without data (land, deeper, or unsurveyed)"
+    return {**out, "water": "sea", "depth": -elev, "datum": DATUM,
+            "detail": f"elevation {elev:.1f} m in the grid, whose zero is about sea level with the shoreline "
+                      f"at zero{around}"}
+
+
+def fetch(boxes, workers):
+    """The grid, when any box touches its extent; the number that failed. It is one file, so
+    workers has nothing to share out."""
+    if not any(bs < BOX[2] and bn > BOX[0] and bw < BOX[3] and be > BOX[1] for bs, bw, bn, be in boxes):
+        print("no box touches the grid's extent; nothing to download")
+        return 0
+    if os.path.exists(TIF) and os.path.exists(INDEX):
+        print("the grid touches the boxes and is already here")
+        return 0
+    try:
+        tif_path()
+    except SystemExit as e:
+        print(f"  {e}")
+        return 1
+    print(f"done; {MEMBER}, {os.path.getsize(TIF) / 1e6:.0f} MB")
+    return 0
+
+
+def verify(lat, lon, r):
+    """DCBD publishes the grid as a file and serves no depth at a point, so the check is on the
+    file: the zip DCBD serves now, its size and the grid's size and CRC from its directory, read
+    with one byte range request, against the copy on this machine."""
+    have = index()
+    try:
+        req = urllib.request.Request(ZIP_URL, headers={"User-Agent": UA, "Range": "bytes=-65536"})
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            if resp.status != 206:
+                raise OSError(f"the server answered {resp.status} to a byte range request")
+            total = int(resp.headers["Content-Range"].rsplit("/", 1)[1])
+            size, crc = _zip_member(resp.read(), total)
+    except (urllib.error.URLError, TimeoutError, OSError, KeyError, ValueError, IndexError) as e:
+        sys.exit(f"{NAME}: reading the zip's directory failed ({getattr(e, 'reason', e)}) for {ZIP_URL}")
+    m = have["member"]
+    ok = (total, size, crc) == (have["zip_size"], m["size"], m["crc"])
+    print(f"  DCBD's zip now: {total} bytes, {MEMBER} {size} bytes, CRC {crc:08x}")
+    print(f"  this copy, fetched {have['fetched']}: {have['zip_size']} bytes, {MEMBER} {m['size']} bytes, "
+          f"CRC {m['crc']:08x}")
+    if ok:
+        print("  PASS")
+    else:
+        print(f"  FAIL: DCBD has replaced the grid. Delete tools/db/depth/dcbd/ to fetch it again.")
+    return ok
+
+
+# UTM zone 19N coordinates from Esri's geometry service, WGS 84 (EPSG:4326) to EPSG:32619, November 2026
+_REFERENCE = [
+    ((12.15, -68.4), (565280.213, 1343212.374)),
+    ((12.03, -68.28), (578371.763, 1329973.618)),
+    ((12.3, -68.24), (582642.512, 1359844.174)),
+    ((12.38, -68.3), (576094.693, 1368673.528)),
+    ((0.0, -69.0), (500000.000, 0.000)),
+]
+
+
+def selftest():
+    """The projection against the reference coordinates, passing within 1 mm."""
+    ok = True
+    for (lat, lon), (rx, ry) in _REFERENCE:
+        x, y = utm(lat, lon)
+        gap = math.hypot(x - rx, y - ry)
+        ok = ok and gap <= 0.001
+        print(f"  {lat}, {lon}: {x:.3f}, {y:.3f}; reference {rx:.3f}, {ry:.3f}; {gap * 1000:.2f} mm")
+    print("  PASS" if ok else "  FAIL")
+    return ok

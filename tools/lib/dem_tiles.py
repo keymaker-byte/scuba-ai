@@ -68,7 +68,8 @@ class Tile:
             tie = t[33922]
             self.x0, self.y0 = tie[3] - tie[0] * self.sx, tie[4] + tie[1] * self.sy  # the grid's north-west corner
         nodata = t.get(42113)
-        self.nodata = float(nodata[0].split(b"\0")[0]) if nodata else None
+        # the tag is text; the pixels are float32, so the value is compared as the float32 it stores as
+        self.nodata = struct.unpack("f", struct.pack("f", float(nodata[0].split(b"\0")[0])))[0] if nodata else None
         self.cite = (t.get(34737) or [b""])[0].split(b"\0")[0].decode("ascii", "replace").strip("| ")
         self._blocks = {}
 
@@ -136,6 +137,6 @@ class Tile:
             v = struct.unpack("<f", struct.pack("<I", acc))[0]
         else:
             v = struct.unpack(self.bo + "f", line[c * 4:c * 4 + 4])[0]
-        if self.nodata is not None and abs(v - self.nodata) < 1e-3:
+        if v != v or self.nodata is not None and abs(v - self.nodata) < 1e-3:
             return None
         return v

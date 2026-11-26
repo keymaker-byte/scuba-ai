@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """Seabed depth at any point the workspace dives, from whichever bathymetry covers it, below the
-datum of the water there: MLLW in US tidal water, CHS Chart Datum in Canadian, a lake's own surface in a lake.
+datum of the water there: MLLW in US tidal water, CHS Chart Datum in Canadian, a lake's own surface in a lake,
+and none on Bonaire's reef, where it is a plain observed depth.
 
   depth.py at LAT LON [--datum K] [--verify]   the depth at a point, and the source and datum that gave it
   depth.py at --file F [--verify]              the same at a site JSON's lat and lon, on its seabed_datum,
                                                checked against its seabed_m and seabed_datum
+  depth.py transect LAT1 LON1 LAT2 LON2 [--step M] [--datum K]   the depth every few metres along a line
   depth.py fetch S W N E [S W N E ...]    download every source's data touching the boxes, ahead of time
   depth.py selftest                       each source's own checks
 """
 import argparse
 import json
+import math
 import os
 import sys
 
@@ -40,8 +43,6 @@ def cmd_at(a):
         if datum and a.datum != datum:
             sys.exit(f"--datum {a.datum} disagrees with {a.file}'s seabed_datum, {datum}.")
         datum = a.datum
-    if datum == datums.NONE:
-        return no_datum(lat, lon, a.file)
     try:
         src, r = answer_on(lat, lon, datum)
     except Refused as e:
@@ -75,19 +76,33 @@ def cmd_at(a):
     sys.exit(0 if ok else 1)
 
 
-def no_datum(lat, lon, path):
-    """A depth on NONE, a plain observed depth: right only where no source here gives a depth on a
-    tidal or lake datum. The figure itself comes from the region's own depth tool."""
-    print(f"{lat}, {lon}")
-    for s in sources():
-        if s.covers(lat, lon):
-            r = s.answer(lat, lon)
-            if r["key"]:
-                sys.exit(f"  {path or 'the point'} is on NONE, but {s.name} answers here on {r['key']} "
-                         f"({r['depth']:.1f} m below it): this water has a datum. Use {r['key']}.")
-    print(f"  datum NONE ({datums.MEANING[datums.NONE]}): no source here gives a depth on a datum at this point, as NONE "
-          "requires. The figure comes from the region's own depth tool, named in its site conventions.")
-    sys.exit(0)
+def cmd_transect(a):
+    """The depth every --step metres along a straight line, each point answered as `at` answers it."""
+    if a.datum:
+        datums.check(a.datum)
+    dy = (a.lat2 - a.lat1) * 111320
+    dx = (a.lon2 - a.lon1) * 111320 * math.cos(math.radians((a.lat1 + a.lat2) / 2))
+    length = math.hypot(dx, dy)
+    n = max(1, round(length / a.step))
+    print(f"{a.lat1}, {a.lon1} to {a.lat2}, {a.lon2}: {length:.0f} m toward {math.degrees(math.atan2(dx, dy)) % 360:.0f}°")
+    sources_seen = []
+    for i in range(n + 1):
+        t = i / n
+        lat, lon = round(a.lat1 + t * (a.lat2 - a.lat1), 6), round(a.lon1 + t * (a.lon2 - a.lon1), 6)
+        try:
+            src, r = answer_on(lat, lon, a.datum)
+        except Refused as e:
+            shown = f"no depth: {e}"
+        else:
+            if r["depth"] is None:
+                shown = f"no depth: {r['why']}"
+            else:
+                shown = f"{r['depth']:5.1f} m below {r['datum']}  [datum {r['key']}]"
+            if r["source"] not in sources_seen:
+                sources_seen.append(r["source"])
+        print(f"  {t * length:5.0f} m  {lat:10.6f}  {lon:11.6f}  {shown}")
+    for s in sources_seen:
+        print(f"  source {s}, read from this machine")
 
 
 def cmd_fetch(a):
@@ -118,6 +133,12 @@ def main():
     at.add_argument("--datum", metavar="K", help="answer only on this datum: " + ", ".join(datums.MEANING))
     at.add_argument("--verify", action="store_true", help="compare the source's data with its live service")
     at.set_defaults(fn=cmd_at)
+    tr = sub.add_parser("transect", help="the depth every few metres along a straight line")
+    for k in ("lat1", "lon1", "lat2", "lon2"):
+        tr.add_argument(k, type=float)
+    tr.add_argument("--step", type=float, default=10, help="metres between points, default 10")
+    tr.add_argument("--datum", metavar="K", help="answer only on this datum: " + ", ".join(datums.MEANING))
+    tr.set_defaults(fn=cmd_transect)
     fe = sub.add_parser("fetch", help="download every source's data touching one or more boxes")
     fe.add_argument("box", type=float, nargs="+", metavar="S W N E")
     fe.add_argument("--workers", type=int, default=6, help="downloads at once, default 6")

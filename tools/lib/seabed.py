@@ -3,8 +3,7 @@ its own tool whatever it needs that is not yet on this machine. Each source answ
 its own datum, or None where it holds nothing; `Seabed` asks them in order and names the one
 that answered. A new bathymetry joins by adding a class with `name`, `datum` and `elevation`
 to SOURCES."""
-from lib.dcbd import grid as dcbd_grid, utm as dcbd_utm
-from lib import gsc, ncei
+from lib import dcbd, gsc, ncei
 from lib.dem_tiles import Tile
 
 
@@ -44,23 +43,13 @@ class GscWestCoast:
 
 class DcbdBonaire:
     """The DCBD coastal bathymetry of Bonaire and Klein Bonaire, 2 m, from the shore to about
-    20 m deep: `dcbd_depth`'s grid, downloaded on first use."""
-    name = "DCBD coastal bathymetry of Bonaire"
+    20 m deep: `lib/dcbd.py`'s one GeoTIFF, downloaded the first time a point inside its extent
+    is asked for (48 MB)."""
+    name = dcbd.NAME
     datum = "about sea level"
 
-    def __init__(self):
-        self.grid = None
-        self.tried = False
-
     def elevation(self, lat, lon):
-        if not -69.0 <= lon <= -67.9 or not 11.8 <= lat <= 12.5:
-            return None
-        if not self.tried:
-            self.grid, self.tried = dcbd_grid(), True
-        if self.grid is None:
-            return None
-        p = self.grid.pixel(*dcbd_utm(lat, lon))
-        return self.grid.value(*p) if p else None
+        return dcbd.elevation(lat, lon)
 
 
 SOURCES = (NceiTiles, GscWestCoast, DcbdBonaire)

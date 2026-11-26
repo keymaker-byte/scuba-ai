@@ -47,7 +47,6 @@ Planning a new dive is handled by the `create-dive-plan` skill: it holds the pla
 - @tools/depth.md
 - @tools/emodnet_depth.md
 - @tools/gebco_depth.md
-- @tools/dcbd_depth.md
 - @tools/shore_exposure.md
 - @tools/nws_forecast.md
 - @tools/open_meteo_wind.md

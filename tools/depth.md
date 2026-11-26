@@ -1,16 +1,16 @@
 # Depth (seabed depth at any point)
 
-<https://www.ncei.noaa.gov/products/coastal-elevation-models>, <https://vdatum.noaa.gov>, <https://open.canada.ca/data/en/dataset/e6e11b99-f0cc-44f7-f5eb-3b995fb1637e>
+<https://www.ncei.noaa.gov/products/coastal-elevation-models>, <https://vdatum.noaa.gov>, <https://open.canada.ca/data/en/dataset/e6e11b99-f0cc-44f7-f5eb-3b995fb1637e>, <https://www.dcbd.nl/resource/2869>
 
-The seabed depth at a point, below the datum of the water it lies in: MLLW in US tidal water, CHS Chart Datum in Canadian tidal water, the lake's own surface in a lake. The tool picks the bathymetry that covers the point and names it in every answer, so a site file and a plan read one tool wherever the site is. Every source keeps its data on this machine: each piece is downloaded once, the first time a point inside it is asked for, and every depth after that is read with no request at all.
+The seabed depth at a point, below the datum of the water it lies in: MLLW in US tidal water, CHS Chart Datum in Canadian tidal water, the lake's own surface in a lake, and a plain observed depth on Bonaire's reef. The tool picks the bathymetry that covers the point and names it in every answer, so a site file and a plan read one tool wherever the site is. Every source keeps its data on this machine: each piece is downloaded once, the first time a point inside it is asked for, and every depth after that is read with no request at all.
 
 - **Use it for.** The water depth at a dive point, which goes in the site file's Coordinates row and in the site JSON's `seabed_m`, with the datum it is on in `seabed_datum`, the seabed the current tool's height above the bottom is measured from. A spatial current model's own mesh cannot supply it: its elements can span from the beach to the deep basin, so its nearshore depth can be wrong by tens of metres.
 - **Also a sanity check on a coordinate.** Is this point underwater at all, and at a divable depth? It reads the actual bottom where a nautical chart gives scattered soundings between wide contours.
 - **Which source answers.** The first source in the tool's list that covers the point, or with `--datum K` the first one whose answer is on that datum. A point no source covers, or none on the datum asked for, stops the run naming what each source gave.
-- **Datum.** MLLW in US water, the datum NOAA's charts and its tide and current predictions use; CHS Chart Datum in Canadian water, the datum Canadian charts and CHS's tide predictions use, Lower Low Water, Large Tide on the Pacific coast, which sits 0.8 to 1.3 m below MLLW in the Salish Sea; the lake's surface in a lake, which has no tide. Every answer names its datum by its name from `tools/lib/datums.py`, `[datum MLLW]`, `[datum CHS]` or `[datum LAKE]`, the name a site JSON's `seabed_datum` and the tide tool use. The two tidal datums are different surfaces, so a depth from one is never compared with a depth from the other, nor added to a tide above the other.
+- **Datum.** MLLW in US water, the datum NOAA's charts and its tide and current predictions use; CHS Chart Datum in Canadian water, the datum Canadian charts and CHS's tide predictions use, Lower Low Water, Large Tide on the Pacific coast, which sits 0.8 to 1.3 m below MLLW in the Salish Sea; the lake's surface in a lake, which has no tide; none on Bonaire's reef, whose tide of about 30 cm sits inside the grid's own precision. Every answer names its datum by its name from `tools/lib/datums.py`, `[datum MLLW]`, `[datum CHS]`, `[datum LAKE]` or `[datum NONE]`, the name a site JSON's `seabed_datum` and the tide tool use. The two tidal datums are different surfaces, so a depth from one is never compared with a depth from the other, nor added to a tide above the other.
 - **Across the border.** The NCEI tiles along the 49th parallel reach into Canadian water, and wherever they hold data they answer first, below MLLW: around the south Gulf Islands from Saturna to the Pender Islands, the NCEI DEM answers. A Canadian site's depth is read with `--datum CHS` (or `--file`, whose `seabed_datum` is `CHS`), which skips NCEI and answers from the GSC DEM, so the depth sits on the datum of the CHS tide station it is planned with. In that water the NCEI DEM is also the weaker reading: across Boundary Pass and Haro Strait, against CHS's own Chart Datum bathymetry (NONNA-10), the GSC DEM reads 0.33 m deeper at the median and the NCEI DEM 1.45 m deeper, where a true MLLW depth would read about 0.9 m shallower. A point in a border tile with no NCEI data there, and every point north of the tiles, falls to the GSC West Coast DEM, below Chart Datum. The GSC DEM also covers the Washington side of the Salish Sea, where NCEI answers first.
 - **No depth.** A point on land, on the shore, inland of the coastline in water no lake holds, or in a lake whose water level the source cannot find, gives no depth and the reason. Walk the coordinate out and ask again.
-- **A site JSON.** `at --file` reads the JSON's `lat`, `lon` and `seabed_datum`, answers on that datum, and checks its `seabed_m` against the answer at the 0.1 m it is written to, exiting non-zero on a difference or on a missing `seabed_datum`, with the datum to add. A site on `NONE`, a plain observed depth such as Bonaire's, takes its figure from the region's own depth tool; `at --file` then checks only that no source here answers on a tidal or lake datum at the point, which would mean the water has one.
+- **A site JSON.** `at --file` reads the JSON's `lat`, `lon` and `seabed_datum`, answers on that datum, and checks its `seabed_m` against the answer at the 0.1 m it is written to, exiting non-zero on a difference or on a missing `seabed_datum`, with the datum to add. A site on `NONE`, a plain observed depth such as Bonaire's, is checked the same way, against the DCBD grid.
 - **A failed download stops the run.** A refusal, a short or unreadable file or an unreachable server ends the run with what failed and the URL asked for, and leaves no partial file behind. A point whose data is already on this machine needs no network.
 
 ## Sources
@@ -48,10 +48,24 @@ The Geological Survey of Canada's Canada West Coast topo-bathymetric digital ele
 - **`--verify`.** Reads the pixel value from NRCan's map service, its West Coast DEM Elevations layer, over a window a few metres across so it answers at full resolution, and passes when it matches one of the nine pixels at and around the point within 0.01 m.
 - **`selftest`.** Projects five coordinates to BC Albers and compares each with the figure Esri's geometry service gave for NAD83 to EPSG:3005 in November 2026, passing within 1 mm. Run it after a change to `tools/lib/gsc.py`.
 
+### DCBD coastal bathymetry of Bonaire
+
+E. Meesters' 2020 coastal bathymetry of Bonaire and Klein Bonaire, published on the Dutch Caribbean Biodiversity Database, gridded at 2 m, a plain observed depth (`NONE`).
+
+- **Coverage.** Both islands from the shoreline out as deep as the survey reached: 20 m at most, often about 10 to 12 m. The grid's extent runs 12.01° to 12.34° N and 68.44° to 68.19° W. Land, water deeper than the survey and anything unsurveyed hold no data. At 2 m it resolves the terrace, the sand and the reef crest a coarse grid averages into one figure.
+- **The data.** `tools/db/depth/dcbd/` holds the GeoTIFF `bonaire_depth_hires2.tif` (48 MB) and `index.json`: the date it was fetched, and the zip's size and the grid's size and CRC as DCBD served them. It is one file, taken out of DCBD's 34 MB zip the first time a point inside the extent is asked for, its CRC checked against the zip's own. Deleting the folder fetches DCBD's current package on the next run.
+- **Shared code.** The download, the projection and the reading are `tools/lib/dcbd.py`, the GeoTIFF reader `tools/lib/dem_tiles.py`. The current tool's seabed reads the same grid.
+- **The value is the pixel the point falls in,** found by projecting the coordinate to WGS 84 / UTM zone 19N (EPSG:32619), the grid's own projection, and placing it by the GeoTIFF's tags.
+- **Datum.** The dataset states none; its values sit at about sea level, with the shoreline at zero. Bonaire's tidal range of about 30 cm sits inside the grid's precision, so the depth is a plain observed one, on `NONE`.
+- **The spread around a point.** Each depth also gives the shallowest and deepest pixel within 10 m, the relief right around the point: a narrow spread on the terrace or sand, a wide one on the drop-off.
+- **No data at a pixel.** The answer gives no depth and names the nearest pixel with data within 100 m, with its distance, bearing and depth, so the edge of the survey shows where the reef keeps going deeper. The grid starts a few metres off the waterline, where the water is already 2 to 5 m deep off a rocky shore, so an entry point on the rocks reads no data, with the first water beside it. A depth past the survey's edge comes from `emodnet_depth`, on LAT.
+- **`--verify`.** DCBD serves the grid as a file, with no depth at a point, so the check is on the file: one byte range request reads the directory of the zip DCBD serves now, and passes when the zip's size and the grid's size and CRC match the ones in `index.json`.
+- **`selftest`.** Projects five coordinates to UTM zone 19N and compares each with the figure Esri's geometry service gave for WGS 84 to EPSG:32619 in November 2026, passing within 1 mm. Run it after a change to `tools/lib/dcbd.py`.
+
 ## Before relying on it
 
 - **Data goes stale silently.** A source replaces its data as new surveys arrive, and the copy on this machine keeps the old. `--verify` compares it with the source's live service at the point; run it when a site's depth matters more than usual.
-- **A `--verify` failure is a stop.** Report it and wait. For NCEI, delete the tile and the tile list; for the GSC DEM, delete `tools/db/depth/gsc/`; run it again, and report it if it still fails.
+- **A `--verify` failure is a stop.** Report it and wait. For NCEI, delete the tile and the tile list; for the GSC DEM, delete `tools/db/depth/gsc/`; for DCBD, delete `tools/db/depth/dcbd/`; run it again, and report it if it still fails.
 - **A bathymetry is a model of the bottom.** It blends surveys of different ages and densities, and a narrow wall or a pinnacle smaller than a few pixels is smoothed. Good to a metre or two at most dive sites.
 
 ## Adding a source
@@ -67,13 +81,16 @@ python3 tools/depth.py at <lat> <lon>                          # depth below the
 python3 tools/depth.py at <lat> <lon> --datum CHS              # the depth on one datum: a Canadian site inside the NCEI border tiles
 python3 tools/depth.py at <lat> <lon> --verify                 # also compare the source's data with its live service
 python3 tools/depth.py at --file <path/to/slug.json>           # the same at a site JSON's coordinate, on its seabed_datum, checked against its seabed_m
+python3 tools/depth.py transect <lat1> <lon1> <lat2> <lon2> --step 10   # the depth every 10 m from entry to dive area
 python3 tools/depth.py fetch <S> <W> <N> <E> [<S> <W> <N> <E> ...]   # download every source's data touching the boxes, ahead of time
 python3 tools/depth.py selftest                                # each source's own checks
 ```
 
 Each answer prints the depth below the water's datum with the datum's name, the source's own figure and the conversion between them, and the source with its tile or grid.
 
-`fetch` caches data ahead of time, for working with no connection: every source's data touching the boxes of south, west, north and east edges, six downloads at a time (`--workers`). It skips what is already here, so a stopped run picks up where it left off. The US side of the Salish Sea is 45 NCEI tiles and 8.4 GB; any box touching British Columbia also brings the GSC DEM, 7.3 GB:
+`transect` answers each point along the line as `at` does, every `--step` metres (default 10), and takes `--datum` the same way: walking a coordinate across the terrace to the drop-off.
+
+`fetch` caches data ahead of time, for working with no connection: every source's data touching the boxes of south, west, north and east edges, six downloads at a time (`--workers`). It skips what is already here, so a stopped run picks up where it left off. The US side of the Salish Sea is 45 NCEI tiles and 8.4 GB; any box touching British Columbia also brings the GSC DEM, 7.3 GB, and one touching Bonaire the DCBD grid, 34 MB:
 
 ```sh
 python3 tools/depth.py fetch 47.0 -123.5 49.0 -122.0 48.0 -124.75 48.5 -123.5
