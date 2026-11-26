@@ -27,7 +27,7 @@ from lib.adcirc import selftest as adcirc_selftest  # noqa: E402
 from lib.current_harmonics import events, series  # noqa: E402
 from lib.current_stations import NETWORKS, cx  # noqa: E402
 from lib import chs_stations, noaa_stations  # noqa: E402
-from lib.datums import LAKE  # noqa: E402
+from lib.datums import LAKE, MEANING as DATUMS  # noqa: E402
 from lib.seabed import Seabed  # noqa: E402
 from lib.tcd import legacy as legacy_harmonics, selftest as legacy_selftest, velocity  # noqa: E402
 from lib.blend import (ABOVE_BOTTOM, adcirc_cons, along, built_regions, database_for, DB, DEG, EXACT_KM,
@@ -173,6 +173,9 @@ def read_site(path):
                       f"its seabed depth below the datum, written when the site is created.")
     if doc["seabed_m"] <= 0:
         raise Refused(f"{path}: seabed_m is the seabed depth below the datum, a positive number of metres.")
+    if doc.get("seabed_datum") not in DATUMS:
+        raise Refused(f"{path}: seabed_datum is {doc.get('seabed_datum')!r}; it names the datum seabed_m is below, "
+                      f"one of {', '.join(DATUMS)} (`depth.py at --file` prints it).")
     return doc, doc["lat"], doc["lon"], doc["seabed_m"]
 
 
@@ -207,7 +210,7 @@ def cmd_extract(a):
     if refused:
         sys.exit("Nothing was written. Stop and report:\n  " + "\n  ".join(refused))
     for j in lakes:
-        j["doc"]["current"] = lake_extract(j["lat"], j["lon"], j["H"])
+        j["doc"]["current"] = lake_extract(j["lat"], j["lon"], j["H"], j["doc"]["seabed_datum"])
         write_site(j["path"], j["doc"])
         log(f"  wrote current into {j['path']}: on LAKE, no tidal current, 0 m/s at every moment")
     for name, (reg, js) in groups.items():
@@ -221,6 +224,9 @@ def cmd_extract(a):
             uv = to_noaa(adcirc_cons(header, vals, j["nodes"], j["w"]), reg["db"])
             start = max(zip(j["w"], j["nodes"]))[1]
             cur = extract_point(uv, start, mesh, reg, j["H"], ABOVE_BOTTOM, j["lat"], j["lon"])
+            p = cur["extract_point"]
+            cur["extract_point"] = {"lat": p["lat"], "lon": p["lon"], "seabed_m": p["seabed_m"],
+                                    "seabed_datum": j["doc"]["seabed_datum"], "extracted": p["extracted"]}
             j["doc"]["current"] = cur
             write_site(j["path"], j["doc"])
             log(f"  wrote current into {j['path']}")
@@ -232,11 +238,11 @@ def write_site(path, doc):
     os.replace(path + ".part", path)
 
 
-def lake_extract(lat, lon, H):
+def lake_extract(lat, lon, H, datum):
     """The extract of a site on LAKE: a lake has no tide, so it has no tidal current, and every
     prediction from this extract is 0 m/s. It has the shape of any other extract, with no
     constants, no axis and no station behind it; the site's own seabed_datum says it is a lake's."""
-    return {"extract_point": {"lat": lat, "lon": lon, "seabed_m": H,
+    return {"extract_point": {"lat": lat, "lon": lon, "seabed_m": H, "seabed_datum": datum,
                               "extracted": datetime.now(UTC).isoformat(timespec="seconds")},
             "flood_dir": None, "ebb_dir": None,
             "bottom": {"above_bottom_m": ABOVE_BOTTOM, "cons": []},
@@ -259,10 +265,10 @@ def load_doc(a):
         sys.exit(f"Could not parse JSON in {a.file}: {e}")
     if "extract_point" not in doc.get("current", {}):
         sys.exit(f"No current extract in {a.file}: run `extract --site {a.file}`.")
-    lake_shaped = doc["current"].get("flood_dir") is None
-    if is_lake(doc) != lake_shaped:
-        sys.exit(f"{a.file}: the site is on {doc.get('seabed_datum')}, and its extract was taken for "
-                 f"{'a lake' if lake_shaped else 'tidal water'}: run `extract --site {a.file}` again.")
+    taken = doc["current"]["extract_point"].get("seabed_datum")
+    if taken != doc.get("seabed_datum"):
+        sys.exit(f"{a.file}: the site's seabed_m is below {doc.get('seabed_datum')}, and its extract was taken for a "
+                 f"seabed below {taken or 'no named datum'}: run `extract --site {a.file}` again.")
     if getattr(a, "raw", False):
         doc.pop("current_observed_offset", None)
     return doc

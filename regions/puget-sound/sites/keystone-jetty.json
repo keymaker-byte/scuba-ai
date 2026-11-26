@@ -9,7 +9,8 @@
       "lat": 48.15683,
       "lon": -122.67062,
       "seabed_m": 12.0,
-      "extracted": "2026-11-24T20:18:54+00:00"
+      "seabed_datum": "MLLW",
+      "extracted": "2026-11-26T01:56:11+00:00"
     },
     "flood_dir": 70.8,
     "ebb_dir": 250.8,

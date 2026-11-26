@@ -16,7 +16,7 @@ The tidal current at any point of a built region, 2 m above the seabed and in th
 
 ## The site JSON
 
-`extract --site` reads `lat`, `lon`, `seabed_m` and `seabed_datum`, and writes `current`: the point it was taken for and when, `flood_dir` and `ebb_dir` in degrees true, the constants at the `bottom` and `upper` heights, and the `stations` behind the correction, each with its `id`. On `LAKE`, read from the site's own `seabed_datum`, both directions are `null`, both heights' constants empty and no station. `predict`, `window` and `at` read that object and the site's `seabed_datum`: the header says to extract again when the site's coordinate or seabed no longer matches the extract, and a site whose datum no longer matches it, a lake's extract on tidal water or the reverse, stops the run until it is extracted again.
+`extract --site` reads `lat`, `lon`, `seabed_m` and `seabed_datum`, and writes `current`: the point it was taken for (its `lat`, `lon`, `seabed_m` and `seabed_datum`) and when, `flood_dir` and `ebb_dir` in degrees true, the constants at the `bottom` and `upper` heights, and the `stations` behind the correction, each with its `id`. On `LAKE` both directions are `null`, both heights' constants empty and no station. `predict`, `window` and `at` read that object: the header says to extract again when the site's coordinate or seabed no longer matches the point the extract was taken for, and a site whose `seabed_datum` no longer matches the extract's stops the run until it is extracted again.
 
 An established observed offset sits beside it as `current_observed_offset`, with `before_flood_min` and `before_ebb_min`, `null` for a slack not established. The tool applies it and says so in the header.
 
