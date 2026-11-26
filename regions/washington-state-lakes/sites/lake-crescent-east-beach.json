@@ -2,5 +2,6 @@
   "lat": 48.085275,
   "lon": -123.744945,
   "tz": "America/Los_Angeles",
+  "seabed_m": 26.3,
   "seabed_datum": "LAKE"
 }
