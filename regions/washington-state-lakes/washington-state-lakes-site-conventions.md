@@ -12,7 +12,7 @@ These conventions apply to every site file written in this region.
 
 ## Depth
 
-- **Datum.** None: fresh water has no tide, so an observed depth is simply true.
+- **Datum.** The lake's own surface: fresh water has no tide, so an observed depth is simply true. Its name in the tools and in a site JSON's `seabed_datum` is `LAKE`, the datum the depth tool gives a lake bed on, and the tide tool's height on it is 0.
 - **Tool.** `depth.md`, the lake bed's depth below the lake's surface at the dive area coordinate. Where the tool gives no depth, the Coordinates row carries none and the gap is reported in chat.
 - **Depth range.** The dive log's maximum depths and the research sources.
 

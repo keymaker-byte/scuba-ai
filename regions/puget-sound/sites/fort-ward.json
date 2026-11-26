@@ -3,6 +3,7 @@
   "lon": -122.533532,
   "tz": "America/Los_Angeles",
   "seabed_m": 17.7,
+  "seabed_datum": "MLLW",
   "current": {
     "extract_point": {
       "lat": 47.58597,

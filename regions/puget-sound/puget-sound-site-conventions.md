@@ -12,7 +12,7 @@ These conventions apply to every site file written in this region.
 
 ## Depth
 
-- **Datum.** Every depth is normalized to MLLW, mean lower low water, the datum NOAA's charts and its tide and current predictions use for this coast. The seabed is fixed and the surface is not, so a raw depth reading holds only at the tide it was taken; every depth worth keeping is converted to depth below MLLW and never mixed with another datum. Tide height is signed, negative on a minus tide, so subtracting a negative tide height makes the datum depth the deeper number:
+- **Datum.** Every depth is normalized to MLLW, mean lower low water, the datum NOAA's charts and its tide and current predictions use for this coast. The seabed is fixed and the surface is not, so a raw depth reading holds only at the tide it was taken; every depth worth keeping is converted to depth below MLLW and never mixed with another datum. Tide height is signed, negative on a minus tide, so subtracting a negative tide height makes the datum depth the deeper number: Its name in the tools and in a site JSON's `seabed_datum` is `MLLW`, and every depth is read with `depth.py --datum MLLW`.
 
   ```
   depth below MLLW datum  =  observed depth (computer)  -  tide height at that moment

@@ -118,7 +118,7 @@ Read in full for every site file.
 
 ## Depth
 
-- **Datum.** The fixed datum depth is normalized to here and why, with the arithmetic for converting an observed depth to it and back; or "None", with the reason a plain observed depth is true here.
+- **Datum.** The fixed datum depth is normalized to here and why, with the arithmetic for converting an observed depth to it and back; or "None", with the reason a plain observed depth is true here. It names the datum's name from `tools/lib/datums.py` (`MLLW`, `CHS`, `LAKE` or `NONE`), the one every site JSON's `seabed_datum` in the region carries and its tide stations are on.
 - **Tool.** One bullet per tool behind a depth figure, with what it gives: the seabed depth at the dive area, the tide station and its typical range, the normalization of logged depths. Where no tool covers the region, the bullet that replaces it names where the depth range comes from.
 - **Topic.** Optional, one bullet per region-specific rule: how a tide station is chosen, a reach where the bathymetry thins out.
 

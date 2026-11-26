@@ -3,6 +3,7 @@
   "lon": -68.3418,
   "tz": "America/Kralendijk",
   "seabed_m": 6.6,
+  "seabed_datum": "NONE",
   "current": {
     "extract_point": {
       "lat": 12.2155,

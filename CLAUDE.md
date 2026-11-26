@@ -77,6 +77,7 @@ If a tool errors out, an API is unreachable, or a site is down, stop and report 
 
 - **Depth is not a property of a site.** Where the water has a tide, the seabed is fixed but the surface is not, so an un-normalized depth is not comparable to any other dive at any other tide. Every depth worth keeping in a tidal region is normalized to a fixed datum, and never mixed with another. Which datum applies, and the arithmetic for it, is specific to whichever source produces that region's tide and current predictions, not a workspace-wide constant. That convention lives in the region's own site conventions file.
 - **Not every region has a tide to normalize against at all.** A region may have no datum, in which case a plain observed depth is simply true.
+- **Every datum has one name.** `MLLW`, `CHS` (CHS Chart Datum), `LAKE` (a lake's own surface) and `NONE` (a plain observed depth), defined in `tools/lib/datums.py`. A region's site conventions name its datum, every site JSON carries it as `seabed_datum` beside `seabed_m`, the depth tool answers on it (`--datum`), and the tide tool refuses a station on any other (`--file`). On `LAKE` and `NONE` the tide height is 0, so depth below the surface is the datum depth plus the tide height everywhere.
 
 ## Diving conventions: NDL and EAN32
 

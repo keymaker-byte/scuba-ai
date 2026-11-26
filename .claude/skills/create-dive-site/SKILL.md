@@ -47,15 +47,16 @@ Read both of these region files in full before anything else.
 
 ## 3. Verify the coordinate and write the site JSON
 
-- **Depth.** Check the seabed depth at the coordinate with the site conventions' Depth tool. If it is too deep or off the divable slope, walk it toward shore and re-check until its depth matches what the sources describe as dived.
-- **Site JSON.** Once the coordinate holds, write `<slug>.json` beside where the site file will go, for every site in every region: `lat` and `lon` are the coordinate, `tz` is the site's IANA time zone, and `seabed_m` is the seabed depth there in metres, read with the Depth tool and expressed as the site conventions' Depth section sets it (below the region's datum, or a plain observed depth where it has none). The Coordinates row later states these same figures; the tools read them from the JSON.
+- **Depth.** Check the seabed depth at the coordinate with the site conventions' Depth tool, on the region's datum (`depth.py at <lat> <lon> --datum <K>`, with the datum name the site conventions' Depth section gives). If it is too deep or off the divable slope, walk it toward shore and re-check until its depth matches what the sources describe as dived.
+- **Site JSON.** Once the coordinate holds, write `<slug>.json` beside where the site file will go, for every site in every region: `lat` and `lon` are the coordinate, `tz` is the site's IANA time zone, `seabed_m` is the seabed depth there in metres, read with the Depth tool and expressed as the site conventions' Depth section sets it (below the region's datum, or a plain observed depth where it has none), and `seabed_datum` is that datum's name from `tools/lib/datums.py` (`MLLW`, `CHS`, `LAKE` or `NONE`), the one the Depth tool printed with the depth. The tide tool reads `seabed_datum` to refuse a station on another datum. The Coordinates row later states these same figures; the tools read them from the JSON. `depth.py at --file` checks `seabed_m` and `seabed_datum` together.
 
   ```json
   {
     "lat": <lat>,
     "lon": <lon>,
     "tz": "<IANA zone>",
-    "seabed_m": <depth>
+    "seabed_m": <depth>,
+    "seabed_datum": "<MLLW, CHS, LAKE or NONE>"
   }
   ```
   
@@ -143,7 +144,7 @@ Write the figures from steps 5 to 7 and the research from step 4 into the templa
   }
   ```
 
-- **Site JSON.** The file step 3 wrote, with every attachment the site conventions name. Its `lat`, `lon` and `seabed_m` read exactly as the Coordinates row states them.
+- **Site JSON.** The file step 3 wrote, with every attachment the site conventions name. Its `lat`, `lon` and `seabed_m` read exactly as the Coordinates row states them, and its `seabed_datum` names the region's datum.
 
 Keep the row, the map entry and the site JSON current whenever the site's coordinates, seabed depth, name, type, parking or entry change.
 

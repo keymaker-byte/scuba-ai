@@ -1,12 +1,15 @@
 """The depth tool's sources: every bathymetry the depth tool reads, and which one answers at a
 point. Each source names what it is, says whether it covers a point, and answers the depth below
 the datum of the water there (MLLW in US tidal water, CHS Chart Datum in Canadian, a lake's own surface in a lake), with the
-reading behind it. `source_for` gives the first source in SOURCES that covers the point, so a
-more detailed source listed ahead of a broader one wins where both cover it.
+reading behind it. `answer_on` gives the first source in SOURCES that covers the point, so a
+more detailed source listed ahead of a broader one wins where both cover it. Every answer carries
+`key`, the name of its datum from lib/datums.py (MLLW, CHS or LAKE), and `answer_on` picks the
+first source that answers on a given datum, so a site's depth always comes on the datum its tide
+is predicted above.
 
 A new bathymetry joins by adding a class with `name`, `coverage`, `covers`, `answer`, `fetch`,
 `verify` and `selftest` to SOURCES, and a section for it under Sources in tools/depth.md."""
-from lib import gsc, ncei, vdatum
+from lib import datums, gsc, ncei, vdatum
 
 
 class Refused(Exception):
@@ -27,7 +30,8 @@ class Ncei:
     def answer(self, lat, lon):
         a = ncei.answer(lat, lon)
         r = a.pop("dem")
-        return {**a, "source": f"{self.name}, tile {r['source']} (~{r['res_m']:.0f} m)", "reading": r}
+        key = {"sea": datums.MLLW, "lake": datums.LAKE}.get(a["water"])
+        return {**a, "key": key, "source": f"{self.name}, tile {r['source']} (~{r['res_m']:.0f} m)", "reading": r}
 
     def fetch(self, boxes, workers):
         """Every tile touching the boxes; the number that failed."""
@@ -54,7 +58,8 @@ class Gsc:
     def answer(self, lat, lon):
         a = gsc.answer(lat, lon)
         r = a.pop("dem")
-        return {**a, "source": f"{self.name}, {r['source']} (~{r['res_m']:.0f} m)", "reading": r}
+        key = datums.CHS if a["water"] == "sea" else None
+        return {**a, "key": key, "source": f"{self.name}, {r['source']} (~{r['res_m']:.0f} m)", "reading": r}
 
     def fetch(self, boxes, workers):
         """The DEM, when any box touches it; the number that failed."""
@@ -75,11 +80,18 @@ def sources():
     return [s() for s in SOURCES]
 
 
-def source_for(lat, lon):
-    """The first source covering the point; Refused when none does."""
+def answer_on(lat, lon, datum=None):
+    """(source, answer) at a point: the first covering source's answer, or with a datum the first
+    covering source whose answer is on it; Refused when none is, naming what each one gave."""
     every = sources()
-    for s in every:
-        if s.covers(lat, lon):
-            return s
-    raise Refused(f"No depth source covers {lat}, {lon}. The sources are: "
-                  + "; ".join(f"{s.name}, {s.coverage}" for s in every) + ".")
+    covering = [s for s in every if s.covers(lat, lon)]
+    if not covering:
+        raise Refused(f"No depth source covers {lat}, {lon}. The sources are: "
+                      + "; ".join(f"{s.name}, {s.coverage}" for s in every) + ".")
+    gave = []
+    for s in covering:
+        r = s.answer(lat, lon)
+        if datum is None or r["key"] == datum:
+            return s, r
+        gave.append(f"{s.name} " + (f"answers {r['depth']:.1f} m below {r['key']}" if r["key"] else f"gives no depth ({r['why']})"))
+    raise Refused(f"No depth source answers on {datum} ({datums.MEANING[datum]}) at {lat}, {lon}: " + "; ".join(gave) + ".")

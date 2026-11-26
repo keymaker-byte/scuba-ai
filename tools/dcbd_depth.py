@@ -50,7 +50,7 @@ def cmd_at(a):
     r, c = p
     v = g.value(r, c)
     if v is not None:
-        print(f"  seabed {_depth(v)}  [DCBD coastal bathymetry, 2 m grid]")
+        print(f"  seabed {_depth(v)}  [DCBD coastal bathymetry, 2 m grid; datum NONE, a plain observed depth]")
     else:
         print("  no data at this pixel: land, water deeper than the survey reached, or unsurveyed")
         near = nearest_data(g, x, y, r, c, a.search)

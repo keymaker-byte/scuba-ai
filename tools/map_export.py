@@ -835,15 +835,19 @@ def export_tides(boxes):
     rng = random.Random(1)
     out, left_out = [], []
     for src, sid, e in tide.in_boxes(boxes):
-        if e["kind"] != "reference":
-            continue
         name = tide.label(src, sid)
         if src.datum != DATUM_TIDE:
             left_out.append(f"{name} {e['name']}: heights above {src.datum}, and the map's depths are on {DATUM_TIDE}")
             continue
+        if e["kind"] != "reference":
+            continue
         h, why = tide.Station(src, src.load(sid)).constants()
         if h is None:
             left_out.append(f"{name} {e['name']}: {why}")
+            continue
+        if h.get("method") == "foreman":
+            left_out.append(f"{name} {e['name']}: constants in Foreman's form, with node factors that move through the "
+                            "year, where the map sums constants with node factors held for each year")
             continue
         prep = {y: prepare(h["cons"], y) for y in years}
         checks = []

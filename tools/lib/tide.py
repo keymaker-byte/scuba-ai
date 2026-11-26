@@ -4,21 +4,29 @@ named by its network's own ID, or as <key>:<id> where two networks share an ID; 
 the source that owns it, and `near` lists every source's stations around a point.
 
 A source is a class in SOURCES with:
-  key, name, datum, db              its short name, full name, the datum its heights are above,
-                                    and the folder it caches into
+  key, name, datum, db              its short name, full name, the datum its heights are above
+                                    (a name from lib/datums.py), and the folder it caches into
   failed                            the start of the message a failed download stops the run with,
                                     which stops `verify --all` too, to be resumed later
   listing()                         {"fetched", "stations": {id: {name, lat, lon, kind, ref}}},
-                                    kind "reference" or "subordinate", ref the reference's ID or None;
-                                    downloaded when missing
+                                    kind "reference" (predicted from its own constants), "subordinate"
+                                    (from a reference's highs and lows, ref its ID) or "fitted"
+                                    (from constants the tool fitted to the network's own predictions); ref None
+                                    unless subordinate; downloaded when missing
   owns(sid), cached(sid)            whether the ID is one of its stations, and whether it is on this machine
+                                    in full, ready to answer with no connection;
+                                    owns answers from the ID's shape alone where it can, so naming one
+                                    source's station never downloads another's list
   load(sid, quiet)                  the station's file, downloaded when missing
+  offline(doc)                      optional: whatever else the station needs to answer offline, for
+                                    `fetch`; returns why the station answers nothing, or None
   provenance(doc)                   the line naming what a prediction was computed from, and when it was fetched
   height(doc, t), extremes(doc, start, end)
                                     metres above the datum at UTC datetime t, and the highs and lows
                                     between two UTC datetimes as [(utc datetime, "H" or "L", metres)]
-  constants(doc)                    (constants, None) for a station predicted from its own harmonic
-                                    constants, in lib/tide_harmonics.py's form, or (None, why not)
+  constants(doc)                    (constants, None) for a station with harmonic constants, in
+                                    lib/tide_harmonics.py's form or, with "method": "foreman", in
+                                    lib/foreman.py's; or (None, why not)
   compare(doc, day0, days, height_tol, time_tol)
                                     the station against the network's live predictions: a dict with
                                     "ok", saved as one line of the source's _verify.jsonl
@@ -26,7 +34,7 @@ A source is a class in SOURCES with:
 plus a section for it under Sources in tools/tide.md."""
 import math
 
-from lib import noaa_tides
+from lib import chs_tides, datums, noaa_tides
 
 
 class Refused(Exception):
@@ -39,7 +47,7 @@ class Noaa:
     reference moved by NOAA's corrections. Heights above MLLW."""
     key = "noaa"
     name = "NOAA CO-OPS"
-    datum = "MLLW"
+    datum = datums.MLLW
     db = noaa_tides.DB
     failed = "NOAA:"
 
@@ -52,7 +60,7 @@ class Noaa:
                              for sid, s in raw["stations"].items()}}
 
     def owns(self, sid):
-        return sid in noaa_tides.station_list()["stations"]
+        return not chs_tides.is_code(sid) and sid in noaa_tides.station_list()["stations"]
 
     def cached(self, sid):
         return noaa_tides.cached(sid)
@@ -97,7 +105,61 @@ class Noaa:
         return out
 
 
-SOURCES = (Noaa,)
+class Chs:
+    """The Canadian Hydrographic Service's water level prediction stations: about 1,150 on every
+    Canadian coast, each predicted from constants fitted by Foreman's method to CHS's newest two
+    years of predictions and tested on the predictions after them; a station whose constants fall
+    short stops the run. Heights above CHS Chart Datum."""
+    key = "chs"
+    name = "Canadian Hydrographic Service"
+    datum = datums.CHS
+    db = chs_tides.DB
+    failed = "CHS:"
+
+    def listing(self):
+        raw = chs_tides.station_list()
+        return {"fetched": raw["fetched"],
+                "stations": {sid: {"name": s["name"], "lat": s["lat"], "lon": s["lon"], "kind": "fitted", "ref": None}
+                             for sid, s in raw["stations"].items()}}
+
+    def owns(self, sid):
+        return chs_tides.is_code(sid) and sid in chs_tides.station_list()["stations"]
+
+    def cached(self, sid):
+        """On this machine in full: the station and its fit."""
+        return chs_tides.ready(sid)
+
+    def offline(self, doc):
+        """The station's fit, all it needs to answer with no connection; why it answers nothing, or None."""
+        return chs_tides.make_ready(doc)
+
+    def load(self, sid, quiet=False):
+        return chs_tides.station(sid, quiet)
+
+    def provenance(self, doc):
+        return chs_tides.provenance(doc)
+
+    def height(self, doc, t):
+        return chs_tides.height(doc, t)
+
+    def extremes(self, doc, start, end):
+        return chs_tides.extremes(doc, start, end)
+
+    def constants(self, doc):
+        """Constants fitted by Foreman's method to CHS's newest two years of predictions, in
+        lib/foreman.py's form (method "foreman"), fitted when missing; why not, for a station
+        whose constants fall short."""
+        why = chs_tides.refusal(doc)
+        return (None, why) if why else (chs_tides.fit_file(doc)["constants"], None)
+
+    def compare(self, doc, day0, days, height_tol, time_tol):
+        return chs_tides.compare(doc, day0, days, height_tol, time_tol)
+
+    def report(self, r):
+        return chs_tides.report(r)
+
+
+SOURCES = (Noaa, Chs)
 
 
 def sources(key=None):
@@ -191,5 +253,7 @@ def in_boxes(boxes, key=None):
 
 
 def label(src, sid):
-    """A station's name as the tool prints it: the bare ID with one source, <key>:<id> with several."""
-    return sid if len(SOURCES) == 1 else f"{src.key}:{sid}"
+    """A station's name as the tool prints it: the bare ID, or <key>:<id> where another source
+    owns the same ID."""
+    shared = any(s.owns(sid) for s in sources() if s.key != src.key)
+    return f"{src.key}:{sid}" if shared else sid

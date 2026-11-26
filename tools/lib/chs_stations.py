@@ -53,6 +53,8 @@ def get(path, **q):
             last = f"unreachable ({getattr(e, 'reason', e)})"
         except ValueError:
             last = "an answer that is not JSON"
+        if attempt < 2:  # a slow or refusing CHS shows itself instead of a silent wait
+            print(f"CHS: {last}; trying again ({attempt + 2} of 3)", file=sys.stderr, flush=True)
         _time.sleep(2 + 4 * attempt)
     sys.exit(f"CHS: {last} for {url}. Nothing was cached. Retry later.")
 
