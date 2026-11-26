@@ -5,7 +5,7 @@ A boat dive on the north coast of Klein Bonaire, the islet's northernmost site a
 | | |
 |---|---|
 | **Location** | North coast of Klein Bonaire, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.168960, -68.310059 (about 7 m, on the terrace about 70 m off the shore) |
+| **Coordinates** | 12.168960, -68.310059 (6.8 m, on the terrace about 70 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
 

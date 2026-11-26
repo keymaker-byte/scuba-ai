@@ -5,7 +5,7 @@ Bonaire's northernmost dive site, a remote rocky bay inside Washington Slagbaai 
 | | |
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.304343, -68.399822 (sandy floor below the terrace, 12 m) |
+| **Coordinates** | 12.304343, -68.399822 (sandy floor below the terrace, 12.1 m) |
 | **Parking coordinates** | 12.303096, -68.398304, coral gravel beside the park road at the bay |
 | **Entry point coordinates** | 12.303201, -68.398433, the rocks on the south side of the bay |
 | **Type** | Shore |

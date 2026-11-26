@@ -5,7 +5,7 @@ Red Slave is a shore site on EEG Boulevard at the southern tip of Bonaire, the s
 | | |
 |---|---|
 | **Location** | EEG Boulevard, about 14 km south of Kralendijk, at the southern tip, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.025816, -68.252081 (on the outer sand shelf, about 10 m) |
+| **Coordinates** | 12.025816, -68.252081 (on the outer sand shelf, 9.7 m) |
 | **Parking coordinates** | 12.026535, -68.251045, the coral gravel beside the southernmost slave huts |
 | **Entry point coordinates** | 12.026288, -68.251255, the water's edge just south of the southernmost huts |
 | **Type** | Shore |

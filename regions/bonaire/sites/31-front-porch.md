@@ -5,7 +5,7 @@ A stretch of fringing reef on Bonaire's west coast north of Kralendijk, entered 
 | | |
 |---|---|
 | **Location** | In front of Eden Beach Resort, about 2 km north of Kralendijk, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.164235, -68.287770 (the reef edge at the top of the slope, about 9 m) |
+| **Coordinates** | 12.164235, -68.287770 (the reef edge at the top of the slope, 8.7 m) |
 | **Parking coordinates** | 12.164754, -68.286692, the gravel lot across from La Balandra at Eden Beach |
 | **Entry point coordinates** | 12.164487, -68.287164, the beach in front of the steel pipe |
 | **Type** | Shore |

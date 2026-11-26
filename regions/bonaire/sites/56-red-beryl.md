@@ -5,7 +5,7 @@ Red Beryl is a shore site on EEG Boulevard, about 11.5 km south of Kralendijk on
 | | |
 |---|---|
 | **Location** | EEG Boulevard, about 11.5 km south of Kralendijk at the north end of Atlantis Beach, southwest coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.046550, -68.268957 (the terrace, about 10 m) |
+| **Coordinates** | 12.046550, -68.268957 (the terrace, 9.6 m) |
 | **Parking coordinates** | 12.047054, -68.268083, the roadside beside EEG Boulevard by the yellow-painted stone |
 | **Entry point coordinates** | 12.046954, -68.268287, the narrow beach at the large grey rock |
 | **Type** | Shore |

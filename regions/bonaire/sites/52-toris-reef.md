@@ -5,7 +5,7 @@ A shore dive on EEG Boulevard below the Cargill salt works, entered through the 
 | | |
 |---|---|
 | **Location** | EEG Boulevard, opposite the Cargill salt works, about 8.6 km south of Kralendijk and 1.4 km south of Salt Pier, southwest coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.070949, -68.281955 (the inner edge of the reef, 10 m) |
+| **Coordinates** | 12.070949, -68.281955 (the inner edge of the reef, 10.4 m) |
 | **Parking coordinates** | 12.070540, -68.280330, roadside just south of the bridge |
 | **Entry point coordinates** | 12.070587, -68.280512, the drainage channel's seaward bank beside the bridge |
 | **Type** | Shore |

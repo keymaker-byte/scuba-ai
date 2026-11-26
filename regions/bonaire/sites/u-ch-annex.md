@@ -5,7 +5,7 @@ A boat dive on the west side of Klein Bonaire toward its northwest tip, marked s
 | | |
 |---|---|
 | **Location** | West side of Klein Bonaire, toward its northwest tip, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.163097, -68.324103 (about 9 m, on the terrace about 100 m off the shore) |
+| **Coordinates** | 12.163097, -68.324103 (9.3 m, on the terrace about 100 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | Not established |
 

@@ -5,7 +5,7 @@ The Cargill salt works loading pier on EEG Boulevard south of Kralendijk, where 
 | | |
 |---|---|
 | **Location** | EEG Boulevard, at the Cargill salt works, south of Kralendijk, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.083135, -68.283200 (among the pilings, about 7 m) |
+| **Coordinates** | 12.083135, -68.283200 (among the pilings, 7.3 m) |
 | **Parking coordinates** | 12.083581, -68.281869, the coral rubble lot beside EEG Boulevard on the north side of the pier |
 | **Entry point coordinates** | 12.083413, -68.282025, the break in the shoreline rock on the north side of the pier |
 | **Type** | Shore |

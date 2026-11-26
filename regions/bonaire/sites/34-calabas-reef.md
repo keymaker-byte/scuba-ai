@@ -5,7 +5,7 @@ The house reef of Divi Flamingo Beach Resort on J.A. Abraham Boulevard, just sou
 | | |
 |---|---|
 | **Location** | Divi Flamingo Beach Resort, J.A. Abraham Boulevard, Kralendijk, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.144853, -68.277041 (the outer edge of the terrace, about 11 m) |
+| **Coordinates** | 12.144853, -68.277041 (the outer edge of the terrace, 10.8 m) |
 | **Parking coordinates** | 12.145309, -68.276054, on Kaya C.E.B. Hellmund at the north side of the resort |
 | **Entry point coordinates** | 12.144905, -68.276419, the end of the Divi Flamingo dive pier |
 | **Type** | Shore |

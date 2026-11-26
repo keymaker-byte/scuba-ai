@@ -5,7 +5,7 @@ A boat dive on the west side of Klein Bonaire, marked site P of Bonaire National
 | | |
 |---|---|
 | **Location** | West side of Klein Bonaire, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.151560, -68.330208 (about 7 m, on the terrace about 140 m off the shore) |
+| **Coordinates** | 12.151560, -68.330208 (6.9 m, on the terrace about 140 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
 

@@ -5,7 +5,7 @@ A remote site on Bonaire's northwest coast, between the BOPEC oil terminal and N
 | | |
 |---|---|
 | **Location** | Northwest coast, Bonaire, between the BOPEC oil terminal and Nukove, Caribbean Sea |
-| **Coordinates** | 12.230752, -68.412943 (edge of the reef terrace, 9 m) |
+| **Coordinates** | 12.230752, -68.412943 (edge of the reef terrace, 9.4 m) |
 | **Parking coordinates** | 12.230914, -68.412174, a small pull-off beside the dirt road |
 | **Entry point coordinates** | 12.231072, -68.412294, the north side of the pebble beach |
 | **Type** | Shore |
@@ -22,7 +22,7 @@ A remote site on Bonaire's northwest coast, between the BOPEC oil terminal and N
 
 * **Pebble beach.** A small beach of pebbles and stones below the road, facing west-southwest, with a large rock just off it.
 * **Shallow shelf.** Sand at 4.5 to 6 m for about 60 m from the beach, a good area for the safety stop.
-* **Reef edge.** Between 60 and 80 m out the bottom drops to the reef terrace at 9 m, where the dive area coordinate sits 79 m from the entry.
+* **Reef edge.** Between 60 and 80 m out the bottom drops to the reef terrace at 9.4 m, where the dive area coordinate sits 79 m from the entry.
 * **Terrace.** Coral at 9 to 12 m for about 70 m further out, before the slope.
 * **Slope.** Past the terrace the reef drops toward 30 m and beyond, with the black coral deeper down.
 * **Return.** Swim back east-northeast, 63°, across the terrace and shelf to the north side of the beach; the entry sits 79 m from the dive area.

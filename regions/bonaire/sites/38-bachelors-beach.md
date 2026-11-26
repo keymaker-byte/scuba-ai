@@ -5,7 +5,7 @@ A small sand beach in Belnem, on EEG Boulevard about 3 km south of Kralendijk on
 | | |
 |---|---|
 | **Location** | Belnem, EEG Boulevard, south of Flamingo Airport's runway, about 3 km south of Kralendijk, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.125972, -68.288264 (the terrace, about 8 m) |
+| **Coordinates** | 12.125972, -68.288264 (the terrace, 8.4 m) |
 | **Parking coordinates** | 12.125443, -68.287218, the roadside on EEG Boulevard beside the top of the stairway |
 | **Entry point coordinates** | 12.125500, -68.287336, the bottom of the seven step stairway |
 | **Type** | Shore |

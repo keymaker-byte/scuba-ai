@@ -5,7 +5,7 @@ The southernmost of Bonaire's double reef sites, a shore dive on the coast road 
 | | |
 |---|---|
 | **Location** | Coast road, opposite the Cargill salt works, about 650 m south of Salt Pier, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.077486, -68.281606 (the top of the first reef, about 11 m) |
+| **Coordinates** | 12.077486, -68.281606 (the top of the first reef, 10.6 m) |
 | **Parking coordinates** | 12.077695, -68.280147, roadside at the yellow stone |
 | **Entry point coordinates** | 12.077659, -68.280271, the rocky beach below the parking |
 | **Type** | Shore |

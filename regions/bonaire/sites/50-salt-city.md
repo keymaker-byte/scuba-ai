@@ -5,7 +5,7 @@ Salt City is a double reef shore site on EEG Boulevard, about 250 m south of Sal
 | | |
 |---|---|
 | **Location** | EEG Boulevard, about 7.5 km south of Kralendijk and 250 m south of Salt Pier, southwest coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.081420, -68.283130 (the terrace, about 9 m) |
+| **Coordinates** | 12.081420, -68.283130 (the terrace, 9.2 m) |
 | **Parking coordinates** | 12.082233, -68.281446, the small parking area beside EEG Boulevard |
 | **Entry point coordinates** | 12.081829, -68.281515, the worn ironshore slope below the road |
 | **Type** | Shore |
@@ -21,7 +21,7 @@ Salt City is a double reef shore site on EEG Boulevard, about 250 m south of Sal
 ## Navigation and landmarks
 
 * **The entry.** The worn slope lies between the site's mooring to the south and Salt Pier to the north. Note the shore around it on the way out; the ironshore either side is rougher.
-* **The terrace.** Sand and coral shelving from the waterline to about 4 m within a few metres of shore, holding there for the first 50 m, then gently to about 6 m at 70 m out, 8 m at 140 m and 9 m at the dive area, 181 m out. Beyond the dive area it levels at 10 to 12 m for another 120 m. Elkhorn grows in the shallows near the entry. The terrace serves as the safety stop on the way back.
+* **The terrace.** Sand and coral shelving from the waterline to about 4 m within a few metres of shore, holding there for the first 50 m, then gently to about 6 m at 70 m out, 8 m at 140 m and 9.2 m at the dive area, 181 m out. Beyond the dive area it levels at 10 to 12 m for another 120 m. Elkhorn grows in the shallows near the entry. The terrace serves as the safety stop on the way back.
 * **The first reef.** Begins at the edge of the terrace, about 300 m west-southwest of the entry and roughly even with the end of Salt Pier, and slopes gently down to the sand channel. To the south it runs on some way before breaking up; to the north it runs deeper.
 * **The sand channel.** At about 21 to 25 m between the two reefs, where stingrays live and garden eels hold in the sand. Crossing it needs a compass heading out and back.
 * **The second reef.** Rises beyond the channel, older hard coral and orange sponges, with the deepest diving at about 30 m.

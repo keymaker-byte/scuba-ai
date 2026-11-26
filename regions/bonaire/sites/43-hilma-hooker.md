@@ -5,7 +5,7 @@ Bonaire's best known wreck, a 72 m cargo ship lying on her starboard side on the
 | | |
 |---|---|
 | **Location** | EEG Boulevard, south of Kralendijk and Flamingo Airport, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.103923, -68.289095 (the terrace above the wreck, about 9 m) |
+| **Coordinates** | 12.103923, -68.289095 (the terrace above the wreck, 8.7 m) |
 | **Parking coordinates** | 12.104568, -68.288071, the coral rubble lot beside EEG Boulevard |
 | **Entry point coordinates** | 12.104510, -68.288146, the shore at the yellow stones by the lot |
 | **Type** | Shore |

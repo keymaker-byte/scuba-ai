@@ -5,7 +5,7 @@ A boat dive on the south coast of Klein Bonaire, named for Don Stewart, Bonaire'
 | | |
 |---|---|
 | **Location** | South coast of Klein Bonaire, facing open water to the south, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.149714, -68.317387 (about 11 m, just over the drop-off edge about 100 m off the shore) |
+| **Coordinates** | 12.149714, -68.317387 (10.8 m, just over the drop-off edge about 100 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
 

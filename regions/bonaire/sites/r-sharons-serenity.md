@@ -5,7 +5,7 @@ A boat dive at Klein Bonaire's southwest corner, named for Sharon, who once work
 | | |
 |---|---|
 | **Location** | Southwest corner of Klein Bonaire, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.155074, -68.329146 (about 9 m, on the terrace about 110 m off the shore) |
+| **Coordinates** | 12.155074, -68.329146 (9.1 m, on the terrace about 110 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 6 to 30 m |
 

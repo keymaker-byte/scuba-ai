@@ -5,7 +5,7 @@ The house reef of Plaza Resort on Bonaire's west coast south of Kralendijk, name
 | | |
 |---|---|
 | **Location** | In front of Plaza Resort, J.A. Abraham Boulevard 80, south of Kralendijk and just north of Flamingo Airport, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.138517, -68.277052 (the terrace inside the reef edge, about 7 m) |
+| **Coordinates** | 12.138517, -68.277052 (the terrace inside the reef edge, 6.6 m) |
 | **Parking coordinates** | 12.139089, -68.275807, the parking area at Plaza Resort |
 | **Entry point coordinates** | 12.138323, -68.276306, the sandy beach at Plaza Resort's northwest end |
 | **Type** | Shore |

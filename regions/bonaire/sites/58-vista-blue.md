@@ -5,7 +5,7 @@ Vista Blue is a shore site on EEG Boulevard, about 13 km south of Kralendijk on 
 | | |
 |---|---|
 | **Location** | EEG Boulevard, about 13 km south of Kralendijk, southwest coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.035379, -68.263958 (outer terrace near the reef edge, about 9 m) |
+| **Coordinates** | 12.035379, -68.263958 (outer terrace near the reef edge, 8.6 m) |
 | **Parking coordinates** | 12.036246, -68.262836, the roadside beside EEG Boulevard at the yellow-painted stone numbered 58 |
 | **Entry point coordinates** | 12.036078, -68.263088, the small sandy beach below the parking |
 | **Type** | Shore |

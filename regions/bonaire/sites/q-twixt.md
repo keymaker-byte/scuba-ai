@@ -5,7 +5,7 @@ A boat dive on the west side of Klein Bonaire, facing open sea away from Bonaire
 | | |
 |---|---|
 | **Location** | West side of Klein Bonaire, facing west-northwest across the open Caribbean Sea, Bonaire National Marine Park |
-| **Coordinates** | 12.153658, -68.330133 (about 9 m, on the terrace about 160 m off the shore) |
+| **Coordinates** | 12.153658, -68.330133 (8.8 m, on the terrace about 160 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | Not established; the terrace sits at about 8 to 10 m |
 

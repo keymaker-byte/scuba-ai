@@ -5,7 +5,7 @@ A small cove in Washington Slagbaai National Park, the old landing of the Washin
 | | |
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.282449, -68.415336 (reef terrace west of the cove, 13 m) |
+| **Coordinates** | 12.282449, -68.415336 (reef terrace west of the cove, 13.2 m) |
 | **Parking coordinates** | 12.282340, -68.413770, unpaved ground at beach level behind the cove |
 | **Entry point coordinates** | 12.282301, -68.413995, the cove beach |
 | **Type** | Shore |

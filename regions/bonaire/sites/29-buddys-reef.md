@@ -5,7 +5,7 @@ Buddy Dive Resort's house reef on Bonaire's west coast north of Kralendijk, ente
 | | |
 |---|---|
 | **Location** | Buddy Dive Resort, about 2.5 km north of Kralendijk, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.170465, -68.288945 (at the top of the drop-off, about 8 m) |
+| **Coordinates** | 12.170465, -68.288945 (at the top of the drop-off, 8.4 m) |
 | **Parking coordinates** | 12.171482, -68.287738, the Buddy Dive Resort lot |
 | **Entry point coordinates** | 12.17075, -68.28843, the Buddy Dive Resort pier, with its ladders |
 | **Type** | Shore |

@@ -5,7 +5,7 @@ A boat dive on Bonaire's west coast north of Kralendijk, directly opposite the h
 | | |
 |---|---|
 | **Location** | Barcadera, west coast north of Kralendijk, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.197542, -68.304702 (7 m, on the terrace about 40 m off the shore) |
+| **Coordinates** | 12.197542, -68.304702 (7.2 m, on the terrace about 40 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m, with the slope continuing to 40 m |
 

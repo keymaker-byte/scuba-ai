@@ -5,7 +5,7 @@ A public beach on EEG Boulevard opposite the seaward end of Flamingo Airport's r
 | | |
 |---|---|
 | **Location** | Windsock beach, EEG Boulevard, opposite Flamingo Airport, south of Kralendijk, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.132879, -68.283334 (the outer edge of the terrace, about 11 m) |
+| **Coordinates** | 12.132879, -68.283334 (the outer edge of the terrace, 10.6 m) |
 | **Parking coordinates** | 12.132255, -68.282658, at the roadside on EEG Boulevard behind the beach |
 | **Entry point coordinates** | 12.132360, -68.282931, the sandy beach at the yellow marker stone |
 | **Type** | Shore |

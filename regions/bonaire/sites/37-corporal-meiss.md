@@ -5,7 +5,7 @@ A narrow public beach on EEG Boulevard just south of Flamingo Airport's runway, 
 | | |
 |---|---|
 | **Location** | Donkey Beach, EEG Boulevard, just south of Flamingo Airport's runway, south of Kralendijk, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.131925, -68.284508 (the outer terrace, about 6 m) |
+| **Coordinates** | 12.131925, -68.284508 (the outer terrace, 5.6 m) |
 | **Parking coordinates** | 12.131264, -68.283725, at the roadside on EEG Boulevard behind the beach |
 | **Entry point coordinates** | 12.131406, -68.283886, the beach below the yellow marker stone |
 | **Type** | Shore |

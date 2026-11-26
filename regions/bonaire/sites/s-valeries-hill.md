@@ -5,7 +5,7 @@ A boat dive on the west side of Klein Bonaire, south of the islet's middle, faci
 | | |
 |---|---|
 | **Location** | West side of Klein Bonaire, south of the islet's middle, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.157276, -68.327483 (about 9 m, on the outer terrace about 115 m off the shore) |
+| **Coordinates** | 12.157276, -68.327483 (9.4 m, on the outer terrace about 115 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
 

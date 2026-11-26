@@ -5,7 +5,7 @@ A small rubble beach between low limestone cliffs on the northwest coast of Wash
 | | |
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.29085, -68.413067 (reef terrace below the step, 14 m) |
+| **Coordinates** | 12.29085, -68.413067 (reef terrace below the step, 14.1 m) |
 | **Parking coordinates** | 12.289956, -68.411946, the small parking area at the barrier at the end of the track |
 | **Entry point coordinates** | 12.290169, -68.411502, the rubble beach at the foot of the path down from the parking area |
 | **Type** | Shore |

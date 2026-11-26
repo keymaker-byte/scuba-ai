@@ -5,7 +5,7 @@ Pink Beach is a shore site on EEG Boulevard, about 1.9 km south of Salt Pier on 
 | | |
 |---|---|
 | **Location** | EEG Boulevard, about 9.5 km south of Kralendijk and 1.9 km south of Salt Pier, southwest coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.066149, -68.283141 (on the terrace, about 10 m) |
+| **Coordinates** | 12.066149, -68.283141 (on the terrace, 9.9 m) |
 | **Parking coordinates** | 12.065908, -68.281478, the coral rubble beside EEG Boulevard at the north end of the beach |
 | **Entry point coordinates** | 12.065934, -68.281692, the north end of the beach, by the northernmost palm trees |
 | **Type** | Shore |

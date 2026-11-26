@@ -5,7 +5,7 @@ Willemstoren Lighthouse is a shore site at Bonaire's southern tip, below the isl
 | | |
 |---|---|
 | **Location** | EEG Boulevard, about 14 km south of Kralendijk, southern tip, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.026996, -68.236674 (on the outer terrace, about 5 m) |
+| **Coordinates** | 12.026996, -68.236674 (on the outer terrace, 4.6 m) |
 | **Parking coordinates** | 12.028287, -68.237489, the coral gravel parking beside the lighthouse |
 | **Entry point coordinates** | 12.027999, -68.237291, the rocky shore below the parking |
 | **Type** | Shore |

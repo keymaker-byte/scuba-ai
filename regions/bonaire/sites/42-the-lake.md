@@ -5,7 +5,7 @@ The Lake is a shore site on the southern coast road about 5 km south of Kralendi
 | | |
 |---|---|
 | **Location** | On the southern coast road, about 5 km south of Kralendijk, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.106561, -68.290919 (the terrace, about 6 m) |
+| **Coordinates** | 12.106561, -68.290919 (the terrace, 6.4 m) |
 | **Parking coordinates** | 12.107206, -68.290066, roadside at the site |
 | **Entry point coordinates** | 12.107075, -68.290184, the small sandy beach below the road |
 | **Type** | Shore |

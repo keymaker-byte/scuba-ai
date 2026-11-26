@@ -5,7 +5,7 @@ A boat dive on the south side of Klein Bonaire, named for the lone divi divi tre
 | | |
 |---|---|
 | **Location** | South side of Klein Bonaire, facing open water to the south-southwest, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.14565, -68.30855 (about 6 m, on the terrace near its outer edge, where the reef slope begins) |
+| **Coordinates** | 12.14565, -68.30855 (6.2 m, on the terrace near its outer edge, where the reef slope begins) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
 

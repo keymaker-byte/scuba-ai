@@ -5,7 +5,7 @@ A remote site in Washington Slagbaai National Park, on the park's northwest coas
 | | |
 |---|---|
 | **Location** | Washington Slagbaai National Park, northwest coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.279854, -68.415068 (reef terrace west of the beach, 12 m) |
+| **Coordinates** | 12.279854, -68.415068 (reef terrace west of the beach, 11.9 m) |
 | **Parking coordinates** | 12.279677, -68.414000, beside the park road at the site's yellow marker stone |
 | **Entry point coordinates** | 12.279661, -68.414086, the pebble beach below the cliff |
 | **Type** | Shore |

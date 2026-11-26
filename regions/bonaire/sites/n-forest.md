@@ -5,7 +5,7 @@ A boat dive off a small rocky peninsula on the south side of Klein Bonaire, towa
 | | |
 |---|---|
 | **Location** | South side of Klein Bonaire near its west end, facing southeast across the channel toward Bonaire's southwest coast, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.14903, -68.32651 (about 9 m, on the terrace at the mooring, about 60 m off the shore) |
+| **Coordinates** | 12.14903, -68.32651 (9.3 m, on the terrace at the mooring, about 60 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 5 to 30 m |
 

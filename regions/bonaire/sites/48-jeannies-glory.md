@@ -5,7 +5,7 @@ Jeannie's Glory is a shore site on EEG Boulevard, about 400 m north of Salt Pier
 | | |
 |---|---|
 | **Location** | EEG Boulevard, about 7 km south of Kralendijk and 400 m north of Salt Pier, southwest coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.086414, -68.284283 (the reef edge at the outer end of the terrace, about 7 m) |
+| **Coordinates** | 12.086414, -68.284283 (the reef edge at the outer end of the terrace, 7.2 m) |
 | **Parking coordinates** | 12.086665, -68.282540, the roadside shoulder of EEG Boulevard at the yellow rocks |
 | **Entry point coordinates** | 12.086629, -68.282787, the rocky step-in below the road |
 | **Type** | Shore |

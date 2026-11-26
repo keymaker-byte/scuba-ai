@@ -5,7 +5,7 @@ A boat dive on the north shore of Klein Bonaire toward its west end, also known 
 | | |
 |---|---|
 | **Location** | North shore of Klein Bonaire, toward its west end, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.165887, -68.319308 (about 7 m, on the sand terrace about 56 m off the shore) |
+| **Coordinates** | 12.165887, -68.319308 (7.3 m, on the sand terrace about 56 m off the shore) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
 

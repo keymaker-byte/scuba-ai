@@ -5,7 +5,7 @@ Cai is a shore dive on Bonaire's east coast at Lac Cai, where the deep channel t
 | | |
 |---|---|
 | **Location** | Lac Cai, at the mouth of Lac Bay on the east coast, about 8 km southeast of Kralendijk, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.101903, -68.221643 (in the channel, about 6 m) |
+| **Coordinates** | 12.101903, -68.221643 (in the channel, 6.4 m) |
 | **Parking coordinates** | 12.102942, -68.222018, the coral gravel beside the conch shell piles |
 | **Entry point coordinates** | 12.102627, -68.221675, the sandy beach on the seaward side of the shell piles |
 | **Type** | Shore |
