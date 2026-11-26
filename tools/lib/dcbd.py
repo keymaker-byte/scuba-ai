@@ -76,6 +76,22 @@ def utm(lat, lon, zone=UTM_ZONE):
     return 500000 + k0 * A * x, k0 * A * y
 
 
+def from_utm(x, y, zone=UTM_ZONE):
+    """(lat, lon) of UTM (x, y), by Newton's method on utm(), to well under a millimetre."""
+    lat, lon = y / 110600, zone * 6 - 183 + (x - 500000) / 111000
+    for _ in range(6):
+        x1, y1 = utm(lat, lon, zone)
+        h = 1e-6
+        xa, ya = utm(lat + h, lon, zone)
+        xb, yb = utm(lat, lon + h, zone)
+        a, b, c, d = (xa - x1) / h, (xb - x1) / h, (ya - y1) / h, (yb - y1) / h
+        det = a * d - b * c
+        ex, ey = x - x1, y - y1
+        lat += (d * ex - b * ey) / det
+        lon += (a * ey - c * ex) / det
+    return lat, lon
+
+
 # --- The zip on DCBD's server, and the grid taken out of it ---------------------------------
 
 def _zip_member(data, total):
@@ -162,7 +178,11 @@ def in_box(lat, lon):
 
 
 def pixel(t, lat, lon):
-    x, y = utm(lat, lon)
+    return pixel_utm(t, *utm(lat, lon))
+
+
+def pixel_utm(t, x, y):
+    """(row, col) of the pixel holding UTM zone 19N (x, y)."""
     return math.floor((t.y0 - y) / t.sy), math.floor((x - t.x0) / t.sx)
 
 
@@ -197,8 +217,9 @@ def _bearing(dx, dy):
     return f"{b:.0f}° ({COMPASS[round(b / 22.5) % 16]})"
 
 
-def nearest_data(t, x, y, row, col, limit_m):
-    """Nearest pixel with data within limit_m of (x, y): (distance, dx, dy, value) or None."""
+def nearest_data(t, x, y, row, col, limit_m, wet=False):
+    """Nearest pixel with data within limit_m of (x, y), or with wet the nearest under water:
+    (distance, dx, dy, value) or None."""
     best = None
     for ring in range(1, int(limit_m / t.sx) + 2):
         if best and (ring - 1) * t.sx > best[0]:
@@ -207,7 +228,7 @@ def nearest_data(t, x, y, row, col, limit_m):
             edge = rr in (row - ring, row + ring)
             for cc in (range(col - ring, col + ring + 1) if edge else (col - ring, col + ring)):
                 v = t.value(rr, cc)
-                if v is None:
+                if v is None or wet and v >= 0:
                     continue
                 px, py = centre(t, rr, cc)
                 d = math.hypot(px - x, py - y)
@@ -244,7 +265,7 @@ def answer(lat, lon):
         where = (f"; the nearest data is {near[0]:.0f} m toward {_bearing(near[1], near[2])}, "
                  + (f"seabed {-near[3]:.1f} m" if near[3] < 0 else f"{near[3]:+.1f} m, above water")
                  if near else f"; none within {SEARCH_M} m")
-        return {**out, "water": "none",
+        return {**out, "water": "none", "nodata": True,
                 "why": f"no survey data at this pixel (land, deeper than the survey reached, or unsurveyed){where}"}
     if elev >= 0:
         return {**out, "water": "none", "why": f"above water, {elev:+.1f} m in the grid; walk the coordinate out"}
