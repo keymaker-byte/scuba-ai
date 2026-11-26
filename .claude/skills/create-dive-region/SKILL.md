@@ -30,7 +30,7 @@ Research should find at minimun:
 - What actually decides a dive here, for this region's own hydrography. For each factor that can end a dive, the value it ends it at, with enough research behind it to set its go, marginal and no go limits.
 - The wind climate where the region is compact enough to have one, what blows, when, and which entries it blows offshore at, and where swell comes from. 
 - The region's current type (tidal, wind driven, or none), the stations and model behind a tidal current, the local sources. 
-- Which tools in `tools/` actually apply here, and to what: research, depth, current or wind for a site file, or a numbered condition in planning. And which websites (a regional forum, a site catalog, an archived guide, a park authority) belong in its research sources.
+- The region's datum, and which of the region-only tools in `tools/` apply here, and to what: the wind forecast, visibility reports, or a numbered condition in planning. And which websites (a regional forum, a site catalog, an archived guide, a park authority) belong in its research sources. The workspace-wide tools (`depth.md`, `tide.md`, `current.md`, `shore_exposure.md`, `subsurface_log.md` and `diversatlas.md`) run in every region, so the research checks only that the region falls inside their coverage and finds anything specific about how they read here.
 - Local dive shops and air fills.
 - The local emergency number and every operating hyperbaric recompression chamber that could plausibly serve this region.
 
@@ -38,7 +38,7 @@ If a search turns up a page that looks relevant but won't load, an archived copy
 
 ## 3. Write the files
 
-Follow each file's template at the bottom of this skill for structure and section order. Omit a section the template marks optional only when the region genuinely has nothing for it. Name a tool by its file, `tool_name.md`, wherever it is used, never by its script or a command; the tool's own file holds how to run it. Every tool and source lives in the convention that uses it: each tool in its own **Tool** bullet, and the sources under a **Sources** bullet, one sub-bullet each. Leave the "Sites currently covered" table with its header row only; the `create-dive-site` skill adds a row there the first time a site is written into this region.
+Follow each file's template at the bottom of this skill for structure and section order. Omit a section the template marks optional only when the region genuinely has nothing for it. Name a tool by its file, `tool_name.md`, wherever it is used, never by its script or a command; the tool's own file holds how to run it. The conventions files hold only what is specific to the region: the workspace-wide tools, and how they are run, live in the `create-dive-site` and `create-dive-plan` skills, and a region names one only for a region-specific rule about how it reads there. Every region-only tool and source lives in the convention that uses it: each tool in its own **Tool** bullet, and the sources under a **Sources** bullet, one sub-bullet each. Leave the "Sites currently covered" table with its header row only; the `create-dive-site` skill adds a row there the first time a site is written into this region.
 
 ## 4. Bookkeeping, once the files exist
 
@@ -112,26 +112,25 @@ These conventions apply to every site file written in this region.
 
 Read in full for every site file.
 
-- **Tool.** `tool_name.md`, how the site is found in it, and what it gives a site file. One bullet per tool.
+- **Tool.** Optional, a region-only research tool, how the site is found in it, and what it gives a site file. One bullet per tool.
 - **Sources.** Optional; omit when the region has no websites of its own.
   - [Source name](url), what it is and holds, and how to read it (a pinned archive snapshot, a Wayback Machine lookup).
 
 ## Depth
 
-- **Datum.** The fixed datum depth is normalized to here and why, with the arithmetic for converting an observed depth to it and back; or "None", with the reason a plain observed depth is true here. It names the datum's name from `tools/lib/datums.py` (`MLLW`, `CHS`, `LAKE` or `NONE`), the one every site JSON's `seabed_datum` in the region carries and its tide stations are on.
-- **Tool.** One bullet per tool behind a depth figure, with what it gives: the seabed depth at the dive area, the tide station and its typical range, the normalization of logged depths. Where no tool covers the region, the bullet that replaces it names where the depth range comes from.
-- **Topic.** Optional, one bullet per region-specific rule: how a tide station is chosen, a reach where the bathymetry thins out.
+- **Datum.** The fixed datum depth is normalized to here and why; or the lake's surface, or none, with the reason a plain observed depth is true here. It names the datum's name from `tools/lib/datums.py` (`MLLW`, `CHS`, `LAKE` or `NONE`), the one every site JSON's `seabed_datum` in the region carries and its tide stations are on.
+- **Topic.** Optional, one bullet per region-specific rule: how a tide station is chosen in this water, a reach where the bathymetry thins out, a region-only depth tool.
 
 ## Current
 
 - **Current type.** Tidal, wind driven, or none, with the reason for none.
-- **Tool.** One bullet per tool behind a current figure, with what it gives: the model's extract and its sets, peak speeds and windows, timed observations.
-- **Figure.** One bullet per figure the site needs from a tool, naming how it is produced: how the extract is taken, and what stops a site the model doesn't cover.
-- **Topic.** Optional, one bullet per reach that behaves differently from the rest of the region.
+- **Topic.** Optional, one bullet per reach that behaves differently from the rest of the region, or region-specific fact about how the current tool reads here.
 
 ## Wind
 
-- **Tool.** `shore_exposure.md`, and anything region-specific about how it reads here.
+Optional; omit when nothing about the wind reading is specific to the region.
+
+- **Topic.** One bullet per region-specific rule about how `shore_exposure.md` reads here: swell from beyond any measured fetch, a capped fetch along a strait.
 ```
 
 ### `<slug>-planning-conventions.md`, read when planning a dive
@@ -144,7 +143,7 @@ These conventions apply to every dive planned in this region.
 The factors that decide whether a dive goes well in this region, most important first, each with the limits a plan is checked against on the day. This ordering is specific to the region's own hydrography, an open, ocean-facing coast plans differently from a narrow, sill-bound inlet, and should be reasoned through for this region.
 
 1. **Factor** (primary). Why it matters most here, and what any limit applies to (the working depth bin, the entry itself, the turn depth).
-   - **Tool.** `tool_name.md`, what it reads for the plan, at both the entry and the exit time.
+   - **Tool.** Optional, a region-only tool, `tool_name.md`, and what it reads for the plan, at both the entry and the exit time. A factor read by a workspace-wide tool, such as a tidal current, carries no Tool bullet: the `create-dive-plan` skill holds how it is read.
    - **Cross-check.** Optional, a second tool and how the two are reconciled.
    - **Go.** Under a stated value, and what the water is like there.
    - **Marginal.** The band between, and what it takes to dive it.
@@ -153,9 +152,9 @@ The factors that decide whether a dive goes well in this region, most important 
 2. **Factor** (secondary).
 3. **Factor** (informational). Sets expectations and gear.
 
-Alongside the conditions, every plan carries:
+Optional, alongside the conditions, every plan carries:
 
-- **Topic.** One bullet per tool a plan uses outside the numbered factors, with what it gives: depth below the surface across the dive, the site's past dives.
+- **Topic.** One bullet per region-specific item a plan carries outside the numbered factors: a ferry schedule, where gas is filled.
 
 Optional, local rules that bind every dive here, after the list: permits and fees, marine park conduct and gear rules, areas closed to diving, required gear hygiene.
 ```

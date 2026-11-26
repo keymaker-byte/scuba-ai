@@ -20,11 +20,19 @@ Ask and wait if either is missing; never guess.
 
 ## 2. Load the site and region
 
-Read the site file, its `<slug>.json` companion beside it in `sites/`, `<region>-planning-conventions.md` and `<region>.md` in full before planning anything.
+Read the site file, its `<slug>.json` companion beside it in `sites/`, and the region's three steering files, `<region>.md`, `<region>-site-conventions.md` and `<region>-planning-conventions.md`, in full before planning anything. The site conventions name the region's datum and current type, which set the checks below.
 
 ## 3. Build the plan
 
-Follow the region's planning conventions in their own order: each factor and the tool that reads it. Beyond them:
+Follow the region's planning conventions in their own order: each factor, its limits, and the region-only tool that reads it, such as the wind forecast and the visibility reports. The workspace-wide tools are read the same way in every region, each run with the site JSON as `--file` and the site's `tz` as `--tz`:
+
+- **Current, tidal.** `current.md`: the day's slacks, sets and diveable windows at the bottom with `predict` and `window`, the fastest water above for the descent and ascent, and `at` at the entry and the exit time. The tool applies the site's observed offset where one is established. A current prediction sets the slack; a tide station never does. Where the header reports no current station within reach, the plan states the slack as a starting point to confirm from the beach. This is the region's current factor, at the rank its planning conventions give it.
+- **Current, wind driven.** `current.md`'s `at` at the entry and the exit time gives the tidal set, a data point beside the wind outside the go / no go call. The plan gives its direction and notes whether it runs with the wind's drift, downwind, or against it.
+- **Current, none.** No current check.
+- **Depth.** On a tidal datum (`MLLW`, `CHS`), `tide.md`'s `project` at the site's tide station, the one its Depth and tide section names, turns the site's datum depths into depth below the surface across the dive, and `predict` gives the day's highs and lows; the tool refuses a station off the site's datum. On `LAKE` and `NONE` the datum depth is the depth below the surface.
+- **Past dives.** `subsurface_log.md`, the site's earlier dives: depths reached, notes, hazards hit, how the current ran, and any timed slacks.
+
+Beyond them:
 
 - **Both ends of the dive.** Every factor at the entry time and again at the exit time. Current builds, wind rises or shifts, and fog moves in while the diver is underwater.
 - **Never return against the current.** Order the route so the leg back to the entry runs with the current or through slack. Where the current sets a known direction after slack, work the far leg first, up-current of the entry, and turn for home before the current builds against the return.

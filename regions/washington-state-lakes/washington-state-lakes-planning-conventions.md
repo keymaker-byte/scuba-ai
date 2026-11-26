@@ -9,7 +9,3 @@ Ordered by what actually decides whether a lake dive goes well:
    - **Tool.** `nws_forecast.md`, the wind call at the entry and the exit time against the site's Wind section sectors.
 3. **Cold, stratified water** (secondary). Fresh water still runs cold at depth. In summer a lake stratifies: a warmer surface layer sits over a sharp thermocline, below which the water runs far colder than the surface even at the height of summer. After fall turnover a lake mixes and reads close to isothermal top to bottom. Drysuit protocol applies year round.
 4. **Surface traffic** (informational). Motorboats, kayaks and swimmers share the water on lakes open to them. Surface with a dive flag or marker buoy deployed, and listen for engines before ascending.
-
-Alongside the conditions, every plan carries:
-
-- **Past dives.** `subsurface_log.md`, the site's earlier dives: depths reached, notes and hazards hit.

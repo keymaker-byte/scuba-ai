@@ -22,7 +22,7 @@ This folder covers the US shore, from the Dungeness spit to Cape Flattery, along
 
 Sekiu, Neah Bay, Cape Flattery, Tatoosh Island and Duncan Rock are a different tier of diving from the rest of this folder. Duncan Rock in particular is regarded as one of the best sites on the peninsula and also one of the most dangerous: strong current, surge, depth and fog together mean it is genuinely diveable only a handful of days a year, boat access only, with a live-boat procedure. The same caution applies in a milder form to Tatoosh Island and the other boat sites out toward the cape. Treat any site in this reach as requiring its own careful go, no go call on the day, not just a slack time pulled off a station, and remember the point above: a bad outcome out here is a long way from help.
 
-No current station has measured the shore out here, so the current prediction is the tidal database's own, and the fine-grained depth data gives out entirely around Tatoosh Island and Duncan Rock, falling back to a coarse global grid. Treat current predictions and quoted depths out here as a starting point to verify on the day, not a settled number.
+No current station has measured the shore out here, so the current prediction is the tidal database's own. Treat current predictions out here as a starting point to verify on the day, not a settled number.
 
 ### Shipping
 

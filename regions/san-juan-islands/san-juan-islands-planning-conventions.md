@@ -5,7 +5,6 @@ These conventions apply to every dive planned in this region.
 The islands sit at the junction of three open straits, with the exchange between them forced through a web of channels and passes. Ordered by what actually kills a dive plan here:
 
 1. **Current** (primary). Nearly everything is a slack-tide dive, and the window, not the site, is the plan. The tide is strongly mixed, so the windows are uneven: the weak exchange gives long, easy slacks, while the slacks either side of a big spring ebb are short and turn hard, with the main passes running past 2 m/s within the hour.
-   - **Tool.** `current.md`, the day's slacks, sets and diveable windows at the bottom, with the fastest water above for the descent and ascent, read by passing the site's `sites/<slug>.json` as `--file`. The tool applies the site's observed offset where one is established. A current prediction sets the slack; a tide station never does.
    - **Exchange.** The plan names which exchange the window sits on, weak or strong, with the peak speeds either side, since a window before a large ebb closes far faster than one on the weak exchange.
 2. **Wind and swell** (secondary). Wind decides whether the entry is diveable at all: chop on the entry, surf on a cobble beach, a surface swim into a fetch. Summer westerlies run in down the Strait of Juan de Fuca and build through the afternoon, so the exit reading is usually the one that decides; winter brings south to southeast gales, and cold northeast outflow down the Fraser Valley reaches the northern islands.
    - **Tool.** `nws_forecast.md`, the wind call at the entry and the exit time against the site's Wind section sectors.
@@ -16,8 +15,6 @@ The islands sit at the junction of three open straits, with the exchange between
 
 Alongside the conditions, every plan carries:
 
-- **Depth.** `tide.md` at the site's tide station, run with the site JSON as `--file`, turning the site's MLLW depths into depth below the surface across the dive; the tool refuses a station off MLLW.
-- **Past dives.** `subsurface_log.md`, the site's earlier dives: notes, hazards hit, and any timed slacks.
 - **Ferry and gas.** An island dive runs on the Washington State Ferries schedule out of Anacortes, and the islands have no public air fill: the plan carries the sailings there and back, and every cylinder the day needs, filled on the mainland.
 
 Local rules that bind every dive here:

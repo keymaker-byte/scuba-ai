@@ -7,7 +7,7 @@ description: This skill should be used when the user asks to create a new dive s
 
 Produce `regions/<region>/sites/<slug>.md` from the template at the bottom and its `<slug>.json` beside it, plus its bookkeeping, then have a fresh agent audit the prose. Most of the work is pinning numbers down against live sources; the writing comes last.
 
-The region's site conventions file names the tools and sources for this region and how each is used. This skill holds what applies in every region: the order of the work, the rules that turn tool output into the file, and the template.
+This skill holds what applies in every region: the order of the work, the workspace-wide tools and how each is used, the rules that turn tool output into the file, and the template. The workspace-wide tools are `depth.md`, `tide.md`, `current.md`, `shore_exposure.md`, `subsurface_log.md` and `diversatlas.md`, run in every region as the steps below say. The region's site conventions file holds only what is specific to the region: its datum, its current type, its own research sources and any tool used only there, how a tide station is chosen in its water, and the reaches that behave differently.
 
 ## Ground rules, for every step
 
@@ -42,13 +42,13 @@ Ask and wait if any is missing; never guess.
 
 Read both of these region files in full before anything else.
 
-- **`<region>-site-conventions.md`.** Use only the tools and sources it names, the way it says to use them.
+- **`<region>-site-conventions.md`.** The region's datum, current type, research sources, region-only tools and local rules. Use the workspace-wide tools as this skill says, and the region's own tools and sources the way the conventions say.
 - **`<region>.md`.** The hydrography and any subarea that behaves differently.
 
 ## 3. Verify the coordinate and write the site JSON
 
-- **Depth.** Check the seabed depth at the coordinate with the site conventions' Depth tool, on the region's datum (`depth.py at <lat> <lon> --datum <K>`, with the datum name the site conventions' Depth section gives). If it is too deep or off the divable slope, walk it toward shore and re-check until its depth matches what the sources describe as dived.
-- **Site JSON.** Once the coordinate holds, write `<slug>.json` beside where the site file will go, for every site in every region: `lat` and `lon` are the coordinate, `tz` is the site's IANA time zone, `seabed_m` is the seabed depth there in metres, read with the Depth tool and expressed as the site conventions' Depth section sets it (below the region's datum, or a plain observed depth where it has none), and `seabed_datum` is that datum's name from `tools/lib/datums.py` (`MLLW`, `CHS`, `LAKE` or `NONE`), the one the Depth tool printed with the depth. The tide tool reads `seabed_datum` to refuse a station on another datum. The Coordinates row later states these same figures; the tools read them from the JSON. `depth.py at --file` checks `seabed_m` and `seabed_datum` together.
+- **Depth.** Check the seabed depth at the coordinate with `depth.md`, on the region's datum (`depth.py at <lat> <lon> --datum <K>`, with the datum name the site conventions' Depth section gives). If it is too deep or off the divable slope, walk it toward shore and re-check until its depth matches what the sources describe as dived; `transect` walks a line from the entry out to the dive area.
+- **Site JSON.** Once the coordinate holds, write `<slug>.json` beside where the site file will go, for every site in every region: `lat` and `lon` are the coordinate, `tz` is the site's IANA time zone, `seabed_m` is the seabed depth there in metres, read with `depth.md` and expressed as the site conventions' Depth section sets it (below the region's datum, or a plain observed depth where it has none), and `seabed_datum` is that datum's name from `tools/lib/datums.py` (`MLLW`, `CHS`, `LAKE` or `NONE`), the one `depth.md` printed with the depth. The tide tool reads `seabed_datum` to refuse a station on another datum. The Coordinates row later states these same figures; the tools read them from the JSON. `depth.py at --file` checks `seabed_m` and `seabed_datum` together.
 
   ```json
   {
@@ -66,7 +66,10 @@ Three passes, each finished before the next starts.
 
 ### 4.1 Research tools
 
-Run every tool the site conventions' Region Specific Research section names. Done when each has produced its result or been reported as failed.
+Run each of these, then every tool the site conventions' Region Specific Research section names. Done when each has produced its result or been reported as failed.
+
+- **`subsurface_log.md`.** The site's dives, matched by name and logged position; a dive matching only one is checked, and confirmed with the user when unclear. Their depths, times, temperatures, visibility, current felt and notes feed every section.
+- **`diversatlas.md`.** Found by the dive area coordinate: a second pin, entry, parking, landmarks, access, life and hazards.
 
 ### 4.2 Research sources
 
@@ -86,11 +89,27 @@ Done when searches stop producing new pages, every relevant page is read or repo
 
 ## 5. Depth
 
-Produce every depth figure by the site conventions' Depth section: the seabed depth at the dive area, the depth range, and, where the region has a tide station, the station and its typical range.
+Produce every depth figure on the region's datum, the one the site conventions' Depth section names, by the rules below and any region-specific rule the Depth section adds.
+
+- **Seabed depth.** `depth.md` at the dive area coordinate, on the region's datum: the `seabed_m` step 3 wrote, stated in the Coordinates row.
+- **Tide station.** On a tidal datum (`MLLW`, `CHS`), a `tide.md` station on that datum in the same body of water as the site, found with `stations --near --datum <K>`, its name and position verified; the site conventions add how a station is chosen in the region's own water. `LAKE` and `NONE` take no station, and the site file has no Depth and tide section.
+- **Typical range.** `tide.md`'s `range` at the station for the current year: the median and the largest daily range, and the year's span.
+- **Depth range.** The dive log's maximum depths and the research sources. On a tidal datum each logged maximum is normalized to the datum with `tide.md`'s `normalize` at the moment it was reached, taken from the dive's profile; on `LAKE` and `NONE` the logged depth stands as it is.
+- **The arithmetic.** Tide height is signed, negative on a minus tide, and the same on every datum:
+
+  ```
+  depth below datum   =  observed depth (computer)  -  tide height at that moment
+  depth below surface =  datum depth                +  predicted tide height
+  ```
 
 ## 6. Current
 
-Produce every current figure by the site conventions' Current section.
+Produce every current figure by the current type the site conventions' Current section names, the rules below, and any reach the Current section describes.
+
+- **Extract.** Tidal and wind driven: once the dive area coordinate holds, `current.md`'s `extract --site` on the site JSON, at the tool's default height above the seabed, attaches the site's constants. A coordinate the tool refuses, on land or in water outside its coverage, stops the site: report it and wait. A current type of none takes no extract.
+- **Tidal.** The extract's predictions give the Flood, Ebb and Diveable window bullets: slack, set, peak speeds and the windows under the threshold. `subsurface_log.md` gives the set and strength actually felt at the site, and the timed slacks behind the observed offset, worked out by `current.md`'s own method.
+- **No station within reach.** Where `current.md`'s header reports no current station within reach, the prediction is the tidal database's own, and the prose states its timing as a starting point to verify on the day.
+- **Wind driven.** The extract goes with the site JSON for planning. The Usual set and Drivers bullets come from the research sources' descriptions of the site and the log's own dives there, taken as behaviour and cross-checked between sources; a set no source describes is written as not established.
 
 - **Type.** As the region sets it, unless a specific site water behaves differently.
 - **In words.** The Current section describes the water from the research and the log: where it pushes, in compass points, and how it feels, in terms like ripping, steady or gentle.
@@ -100,7 +119,7 @@ Produce every current figure by the site conventions' Current section.
 
 ## 7. Wind
 
-Run the site conventions' Wind tool on the dive area coordinate, the one the Coordinates row will carry, and for a shore site also on the entry point, the one the Entry point coordinates row will carry; a boat site runs on the dive area alone. It gives the entry and dive area shore facings and the fetch from each of the 16 compass directions. A dive area coordinate it reads as on land goes back to step 3. The entry point is read against its nearest shore, so one on the beach is expected. Classify each of the 16 directions by the shore relation and fetch it prints:
+Run `shore_exposure.md` on the dive area coordinate, the one the Coordinates row will carry, and for a shore site also on the entry point, the one the Entry point coordinates row will carry; a boat site runs on the dive area alone. It gives the entry and dive area shore facings and the fetch from each of the 16 compass directions. A dive area coordinate it reads as on land goes back to step 3. The entry point is read against its nearest shore, so one on the beach is expected. Inside a lake it reads the lake's own shoreline. Any region-specific reading is in the site conventions' Wind section. Classify each of the 16 directions by the shore relation and fetch it prints:
 
 | Relation | Fetch | Class |
 |---|---|---|
@@ -144,7 +163,7 @@ Write the figures from steps 5 to 7 and the research from step 4 into the templa
   }
   ```
 
-- **Site JSON.** The file step 3 wrote, with every attachment the site conventions name. Its `lat`, `lon` and `seabed_m` read exactly as the Coordinates row states them, and its `seabed_datum` names the region's datum.
+- **Site JSON.** The file step 3 wrote, with the current extract from step 6 where the current type takes one. Its `lat`, `lon` and `seabed_m` read exactly as the Coordinates row states them, and its `seabed_datum` names the region's datum.
 
 Keep the row, the map entry and the site JSON current whenever the site's coordinates, seabed depth, name, type, parking or entry change.
 
