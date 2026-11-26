@@ -275,7 +275,6 @@
 
     <div class="section">
       <label><input type="checkbox" id="toggle-satellite">Satellite imagery</label>
-      <label><input type="checkbox" id="toggle-depth-contours-emodnet">Depth contours (EMODnet)</label>
       <label><input type="checkbox" id="toggle-depth-ncei">Depth (NCEI)</label>
       <div class="legend" id="depth-legend"></div>
       <div class="hint fixed-lines" id="depth-status" data-placeholder="Depth under the pointer"></div>
@@ -429,93 +428,6 @@ const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community',
   maxZoom: 19,
 });
-
-// An overlay, not a base layer: it opts in separately, since its source covers only part of
-// this workspace's regions. It is for visual orientation on the map viewer only; a site
-// file's depth comes from the workspace's own depth tool (depth).
-
-// The overlay is WMS: every tile is an image the server renders on demand, so each tile is
-// a real cost. The server speaks HTTP/2, so the browser fires every visible tile at once,
-// and a WMS server can drop part of such a burst with an error page the browser cannot
-// decode as an image, leaving a permanently blank square. Hence:
-//   tileSize 512        a quarter of the requests for the same screen, at the same detail
-//   updateWhenIdle      request tiles when a pan ends, rather than every 200 ms during it
-//   updateWhenZooming   no requests for the intermediate levels of a zoom animation
-//   keepBuffer          keep more off-screen tiles, so panning back shows them instantly
-const WMS_OVERLAY_OPTIONS = {
-  format: 'image/png',
-  transparent: true,
-  version: '1.3.0',
-  tileSize: 512,
-  updateWhenIdle: true,
-  updateWhenZooming: false,
-  keepBuffer: 4,
-};
-
-// A tile that fails is retried with backoff (1, 2, 4, 8 s), with a retry parameter on the
-// URL so the browser never serves the failed answer back from its cache. A tile already
-// scrolled off and pruned is left alone.
-const WMS_MAX_RETRIES = 4;
-function retryFailedTiles(layer) {
-  layer.on('tileerror', ({ tile, coords }) => {
-    const attempt = Number(tile.dataset.retry || 0) + 1;
-    if (attempt > WMS_MAX_RETRIES) return;
-    tile.dataset.retry = attempt;
-    setTimeout(() => {
-      if (!layer._map || !layer._tiles[layer._tileCoordsToKey(coords)]) return;
-      tile.src = `${layer.getTileUrl(coords)}&retry=${attempt}`;
-    }, 1000 * 2 ** (attempt - 1));
-  });
-  return layer;
-}
-
-// EMODnet Bathymetry's depth contour lines, covering European seas and the wider North
-// Atlantic (roughly 70.5W-43E, 11N-90N), which reaches Bonaire but not the US Pacific
-// coast. Its default style renders the line invisible (a known quirk of this WMS, the
-// GetLegendGraphic preview shows the same gap), so an inline SLD_BODY forces a visible
-// stroke and labels the line with its own "elevation" attribute (depth in metres).
-const EMODNET_CONTOUR_SLD = `<?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor version="1.0.0" xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc">
-  <NamedLayer>
-    <Name>emodnet:contours</Name>
-    <UserStyle>
-      <FeatureTypeStyle>
-        <Rule>
-          <LineSymbolizer>
-            <Stroke>
-              <CssParameter name="stroke">#0033cc</CssParameter>
-              <CssParameter name="stroke-width">1.2</CssParameter>
-            </Stroke>
-          </LineSymbolizer>
-          <TextSymbolizer>
-            <Label><ogc:PropertyName>elevation</ogc:PropertyName></Label>
-            <Font>
-              <CssParameter name="font-family">Arial</CssParameter>
-              <CssParameter name="font-size">11</CssParameter>
-              <CssParameter name="font-weight">bold</CssParameter>
-            </Font>
-            <LabelPlacement>
-              <LinePlacement/>
-            </LabelPlacement>
-            <Halo>
-              <Radius>1.5</Radius>
-              <Fill><CssParameter name="fill">#ffffff</CssParameter></Fill>
-            </Halo>
-            <Fill><CssParameter name="fill">#0033cc</CssParameter></Fill>
-            <VendorOption name="repeat">150</VendorOption>
-            <VendorOption name="maxDisplacement">50</VendorOption>
-          </TextSymbolizer>
-        </Rule>
-      </FeatureTypeStyle>
-    </UserStyle>
-  </NamedLayer>
-</StyledLayerDescriptor>`;
-const emodnetContourLayer = retryFailedTiles(L.tileLayer.wms('https://ows.emodnet-bathymetry.eu/wms', {
-  ...WMS_OVERLAY_OPTIONS,
-  layers: 'emodnet:contours',
-  SLD_BODY: EMODNET_CONTOUR_SLD,
-  attribution: 'EMODnet Bathymetry',
-}));
 
 
 function regionInfo(slug) {
@@ -705,7 +617,6 @@ const toggleBoat = document.getElementById('toggle-boat');
 const toggleEntry = document.getElementById('toggle-entry');
 const toggleParking = document.getElementById('toggle-parking');
 const toggleSatellite = document.getElementById('toggle-satellite');
-const toggleDepthContoursEmodnet = document.getElementById('toggle-depth-contours-emodnet');
 const countEl = document.getElementById('count');
 
 function applySatelliteToggle() {
@@ -715,13 +626,6 @@ function applySatelliteToggle() {
   } else {
     map.removeLayer(satelliteLayer);
     map.addLayer(defaultLayer);
-  }
-}
-function applyEmodnetContourToggle() {
-  if (toggleDepthContoursEmodnet.checked) {
-    map.addLayer(emodnetContourLayer);
-  } else {
-    map.removeLayer(emodnetContourLayer);
   }
 }
 // Tidal current overlays, one file per area, listed in map/currents/index.js: the seafloor
@@ -1084,7 +988,6 @@ map.on('mousemove', e => {
 map.on('click', e => showDepthAt(e.latlng));
 
 toggleSatellite.addEventListener('change', applySatelliteToggle);
-toggleDepthContoursEmodnet.addEventListener('change', applyEmodnetContourToggle);
 
 // Menu state (search, region filter, every toggle) survives a page refresh,
 // the same way the map's own position and zoom already do.
@@ -1097,7 +1000,6 @@ const persistedControls = {
   entry: toggleEntry,
   parking: toggleParking,
   satellite: toggleSatellite,
-  contoursEmodnet: toggleDepthContoursEmodnet,
   currents: currents.toggle,
   depthNcei: toggleDepthNcei,
 };
@@ -1124,12 +1026,10 @@ if (savedMenuState) {
   toggleEntry.checked = !!savedMenuState.entry;
   toggleParking.checked = !!savedMenuState.parking;
   toggleSatellite.checked = !!savedMenuState.satellite;
-  toggleDepthContoursEmodnet.checked = !!savedMenuState.contoursEmodnet;
   currents.toggle.checked = !!savedMenuState.currents;
   toggleDepthNcei.checked = !!savedMenuState.depthNcei;
   // region-filter's own options don't exist yet; restored once they're built, below.
   applySatelliteToggle();
-  applyEmodnetContourToggle();
   currents.apply();
   applyDepthToggle();
 }
