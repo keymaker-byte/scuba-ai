@@ -5,7 +5,7 @@ A boat dive on the south shore of Klein Bonaire, facing the open Caribbean Sea. 
 | | |
 |---|---|
 | **Location** | South shore of Klein Bonaire, off Kralendijk, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.144931, -68.304373 (top of the drop-off, just past the reef lip at about 9 m) |
+| **Coordinates** | 12.145025, -68.304348 (the terrace just inside the reef lip, 8.0 m) |
 | **Type** | Boat |
 | **Depth range** | 5 to 30 m |
 

@@ -5,7 +5,7 @@ A boat dive on Bonaire's northwest coast below a high limestone cliff, where thr
 | | |
 |---|---|
 | **Location** | Northwest coast, Bonaire, north of Kralendijk, Caribbean Sea |
-| **Coordinates** | 12.213389, -68.3346 (below 9 m, the top of the drop-off just past the reef crest) |
+| **Coordinates** | 12.213498, -68.334488 (the reef crest at the top of the drop-off, 9.2 m) |
 | **Type** | Boat |
 | **Depth range** | 6 to 25 m, with the slope continuing past 40 m |
 
@@ -19,7 +19,7 @@ A boat dive on Bonaire's northwest coast below a high limestone cliff, where thr
 ## Navigation and landmarks
 
 * **Cliff and terrace.** A high limestone cliff runs along the shore, and a narrow terrace at 4 to 6 m runs along its foot.
-* **Reef crest.** The bottom steps down from the terrace to a reef crest at about 9 to 10 m, roughly 60 m off the cliff. The dive area coordinate sits just past the crest, at the top of the drop-off.
+* **Reef crest.** The bottom steps down from the terrace to a reef crest at about 9 to 10 m, roughly 60 m off the cliff. The dive area coordinate sits on the crest, at the top of the drop-off.
 * **The three pillars.** Large blocks of limestone broken from the cliff, lying near the crest at about 7 to 13 m, the site's defining feature.
 * **Drop-off.** Past the crest the reef falls away steeply, below 25 m and on past 40 m.
 * **Along the reef.** To the west-northwest the reef runs at 8.5 to 10 m for about 380 m toward a long coral rubble beach.
@@ -45,7 +45,7 @@ The shore here runs northwest to southeast below the cliff.
 
 * **Bad.** South-southeast through west (SSE-W), onshore over 5.6 km to more than 30 km, along the coast from the south-southeast or across open sea from the south and west. Wind from this quarter raises chop and swell at the mooring below the cliff.
 * **Mixed.** Southeast (SE), cross-shore over 7.3 km down the coast, running a swell along the shore past the mooring.
-* **Fine.** West-northwest clockwise through east-southeast: offshore from north-northwest through east, off the cliff, and cross-shore over 290 m to 2.3 km from the west-northwest, northwest and east-southeast. The prevailing east trades blow off the land and leave the site calm at their usual strength; trades veering southeast fall in the Mixed sector.
+* **Fine.** West-northwest clockwise through east-southeast: offshore from north-northwest through east, off the cliff, and cross-shore over 250 m to 2.2 km from the west-northwest, northwest and east-southeast. The prevailing east trades blow off the land and leave the site calm at their usual strength; trades veering southeast fall in the Mixed sector.
 
 ## Visibility
 

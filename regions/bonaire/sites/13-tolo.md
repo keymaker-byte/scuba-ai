@@ -5,7 +5,7 @@ A shore site on Bonaire's northwest coast off a long stretch of coral beach, bel
 | | |
 |---|---|
 | **Location** | Northwest coast, Bonaire, about 7 km north of Kralendijk, Caribbean Sea |
-| **Coordinates** | 12.21441, -68.33752 (the drop-off below the reef crest, deeper than 12 m) |
+| **Coordinates** | 12.2145, -68.337427 (the reef crest at the top of the drop-off, 9.3 m) |
 | **Parking coordinates** | 12.215411, -68.337364, a hard-packed coral and sand lot above the cliff |
 | **Entry point coordinates** | 12.215317, -68.337520, the coral rubble beach at the foot of the steps |
 | **Type** | Shore |
@@ -43,13 +43,13 @@ A shore site on Bonaire's northwest coast off a long stretch of coral beach, bel
 | | |
 |---|---|
 | **Entry shore facing** | south, 187° |
-| **Dive area shore facing** | south, 185° |
+| **Dive area shore facing** | south, 187° |
 
-The shore here runs west to east, and the swim out runs 101 m south, 180°, from the entry to the dive area.
+The shore here runs west to east, and the swim out runs 91 m south, 174°, from the entry to the dive area.
 
 * **Bad.** Southeast through west-southwest (SE-WSW), onshore over 5.8 km to more than 30 km, along the coast from the southeast or across open sea from the south and southwest. Wind from this quarter puts waves on the rubble beach and makes the entry and exit difficult.
 * **Mixed.** West (W), cross-shore over more than 30 km, running a swell along the shore past the entry.
-* **Fine.** West-northwest clockwise through east-southeast: offshore from northwest through east-northeast, off the land, and cross-shore over 170 m to 2.8 km from the west-northwest, east and east-southeast. The prevailing east trades blow along the shore over a short fetch and leave the entry calm at their usual strength; trades veering southeast fall in the Bad sector and put surf on the beach.
+* **Fine.** West-northwest clockwise through east-southeast: offshore from northwest through east-northeast, off the land, and cross-shore over 160 m to 2.7 km from the west-northwest, east and east-southeast. The prevailing east trades blow along the shore over a short fetch and leave the entry calm at their usual strength; trades veering southeast fall in the Bad sector and put surf on the beach.
 
 ## Visibility
 

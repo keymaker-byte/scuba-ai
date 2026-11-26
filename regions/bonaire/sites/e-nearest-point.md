@@ -5,7 +5,7 @@ A boat dive off the southeast point of Klein Bonaire, also called Piedra Kolet, 
 | | |
 |---|---|
 | **Location** | Southeast point of Klein Bonaire, on the channel facing Bonaire's coast south of Kralendijk, Bonaire National Marine Park, Caribbean Sea |
-| **Coordinates** | 12.148885, -68.295929 (top of the drop-off, about 15 m past the reef lip at 8 m) |
+| **Coordinates** | 12.148983, -68.29603 (the reef lip at the top of the drop-off, 8.0 m) |
 | **Type** | Boat |
 | **Depth range** | 4 to 30 m |
 
@@ -42,7 +42,7 @@ A boat dive off the southeast point of Klein Bonaire, also called Piedra Kolet, 
 * **Bad.** South through south-southwest (S-SSW), onshore over more than 30 km of open water, raising swell at the mooring and surge over the terrace.
 * **Short fetch.** East through south-southeast (E-SSE), onshore over 2 to 2.6 km across the channel from Bonaire, enough to build a chop at the mooring. An easterly trade blows into this sector and builds through the day, which is why the site dives best in the morning.
 * **Mixed.** Southwest (SW), cross-shore over more than 30 km, running a swell along the reef.
-* **Fine.** West-southwest clockwise through east-northeast: offshore from west through north-northeast, blowing off the islet itself, and cross-shore over 340 m from the west-southwest and 1.9 to 2 km from the northeast and east-northeast.
+* **Fine.** West-southwest clockwise through east-northeast: offshore from west through north-northeast, blowing off the islet itself, and cross-shore over 220 m from the west-southwest and 1.9 to 2 km from the northeast and east-northeast.
 
 ## Visibility
 

@@ -331,8 +331,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/15-bon-bini-na-kas.md",
       "site": {
-        "lat": 12.211018,
-        "lon": -68.327998
+        "lat": 12.211095,
+        "lon": -68.327949
       },
       "entry": null,
       "parking": null
@@ -344,8 +344,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/g-bonaventure.md",
       "site": {
-        "lat": 12.144931,
-        "lon": -68.304373
+        "lat": 12.145025,
+        "lon": -68.304348
       },
       "entry": null,
       "parking": null
@@ -523,8 +523,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/14-country-garden.md",
       "site": {
-        "lat": 12.213389,
-        "lon": -68.3346
+        "lat": 12.213498,
+        "lon": -68.334488
       },
       "entry": null,
       "parking": null
@@ -799,8 +799,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/27-la-machaca.md",
       "site": {
-        "lat": 12.171891,
-        "lon": -68.289758
+        "lat": 12.171971,
+        "lon": -68.289645
       },
       "entry": {
         "lat": 12.172321,
@@ -927,8 +927,8 @@ window.MAP_DATA = {
       "type": "boat",
       "file": "regions/bonaire/sites/e-nearest-point.md",
       "site": {
-        "lat": 12.148885,
-        "lon": -68.295929
+        "lat": 12.148983,
+        "lon": -68.29603
       },
       "entry": null,
       "parking": null
@@ -1131,8 +1131,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/28-reef-scientifico.md",
       "site": {
-        "lat": 12.171257,
-        "lon": -68.289455
+        "lat": 12.171193,
+        "lon": -68.289335
       },
       "entry": {
         "lat": 12.170737,
@@ -1240,8 +1240,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/32-something-special.md",
       "site": {
-        "lat": 12.160711,
-        "lon": -68.283978
+        "lat": 12.160798,
+        "lon": -68.28394
       },
       "entry": {
         "lat": 12.161377,
@@ -1323,8 +1323,8 @@ window.MAP_DATA = {
       "type": "shore",
       "file": "regions/bonaire/sites/13-tolo.md",
       "site": {
-        "lat": 12.21441,
-        "lon": -68.33752
+        "lat": 12.2145,
+        "lon": -68.337427
       },
       "entry": {
         "lat": 12.215317,

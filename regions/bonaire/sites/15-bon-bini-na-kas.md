@@ -5,7 +5,7 @@ A boat dive on Bonaire's northwest coast below a large overhanging cliff, its na
 | | |
 |---|---|
 | **Location** | Northwest coast, Bonaire, north of Kralendijk, opposite the former Radio Nederland relay station, Caribbean Sea |
-| **Coordinates** | 12.211018, -68.327998 (below 11 m, just past the outer edge of the shallow terrace, about 60 m off the cliff) |
+| **Coordinates** | 12.211095, -68.327949 (the outer edge of the shallow terrace, about 50 m off the cliff, 10.5 m) |
 | **Type** | Boat |
 | **Depth range** | 6 to 30 m, with the slope continuing past 35 m |
 
@@ -39,11 +39,11 @@ A boat dive on Bonaire's northwest coast below a large overhanging cliff, its na
 |---|---|
 | **Dive area shore facing** | south-southwest, 193° |
 
-The shore here runs west-northwest to east-southeast below the cliff, with the nearest shore 61 m north-northeast of the dive area.
+The shore here runs west-northwest to east-southeast below the cliff, with the nearest shore 51 m north-northeast of the dive area.
 
 * **Bad.** Southeast through west-southwest (SE-WSW), onshore over 5.1 km to more than 30 km, along the coast from the southeast and south-southeast or across open sea from the south through west-southwest. Wind from this quarter raises chop and swell at the mooring and against the cliff.
 * **Mixed.** West (W), cross-shore over more than 30 km of open sea, running a swell along the shore past the mooring.
-* **Fine.** West-northwest clockwise through east-southeast: offshore from northwest through east-northeast, off the cliff, and cross-shore over 630 m to 1.4 km from the west-northwest, east and east-southeast. The prevailing east trades run along the shore over a short fetch and leave the site calm at their usual strength; trades veering southeast fall in the Bad sector.
+* **Fine.** West-northwest clockwise through east-southeast: offshore from northwest through east-northeast, off the cliff, and cross-shore over 240 m to 1.3 km from the west-northwest, east and east-southeast. The prevailing east trades run along the shore over a short fetch and leave the site calm at their usual strength; trades veering southeast fall in the Bad sector.
 
 ## Visibility
 

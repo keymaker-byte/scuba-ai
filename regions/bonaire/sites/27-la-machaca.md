@@ -5,7 +5,7 @@ The house reef of Captain Don's Habitat on Bonaire's west coast north of Kralend
 | | |
 |---|---|
 | **Location** | Captain Don's Habitat (Habitat Bonaire), about 2.5 km north of Kralendijk, west coast, Bonaire, Caribbean Sea |
-| **Coordinates** | 12.171891, -68.289758 (below 11 m, just past the edge of the terrace, about 85 m southwest of the pier) |
+| **Coordinates** | 12.171971, -68.289645 (the edge of the terrace, about 70 m southwest of the pier, 10.9 m) |
 | **Parking coordinates** | 12.172232, -68.288451, the Captain Don's Habitat lot |
 | **Entry point coordinates** | 12.172321, -68.289111, the end of Captain Don's Habitat's divers-only pier, with its ladders |
 | **Type** | Shore |
@@ -45,12 +45,12 @@ The house reef of Captain Don's Habitat on Bonaire's west coast north of Kralend
 | **Entry shore facing** | west-southwest, 249° |
 | **Dive area shore facing** | west-southwest, 249° |
 
-The swim out runs 85 m southwest from the pier, slightly south of straight off the shore, to the dive area.
+The swim out runs 70 m southwest from the pier, slightly south of straight off the shore, to the dive area.
 
 * **Bad.** West through northwest (W-NW), onshore over 6.5 km to more than 30 km of open sea. Wind from these quarters raises waves at the pier and stirs up the shallows.
-* **Short fetch.** South-southwest through west-southwest (SSW-WSW), onshore over 1.1 to 1.4 km from Klein Bonaire, enough to build a chop at the pier.
+* **Short fetch.** South-southwest through west-southwest (SSW-WSW), onshore over 1.2 to 1.4 km from Klein Bonaire, enough to build a chop at the pier.
 * **Mixed.** South (S), cross-shore over 5.5 km down the coast, running a swell along the shore past the pier.
-* **Fine.** North-northwest clockwise through south-southeast: offshore from north-northeast through southeast, off the land, and cross-shore over 190 to 750 m from the north-northwest, north and south-southeast. The prevailing east trades blow off the land and leave the pier calm at their usual strength.
+* **Fine.** North-northwest clockwise through south-southeast: offshore from north-northeast through southeast, off the land, and cross-shore over 160 to 720 m from the north-northwest, north and south-southeast. The prevailing east trades blow off the land and leave the pier calm at their usual strength.
 
 ## Visibility
 
