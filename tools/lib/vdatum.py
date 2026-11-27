@@ -305,8 +305,70 @@ class _Grid:
         fy, fx = y - r, x - c
         return (q[0] * (1 - fx) + q[1] * fx) * (1 - fy) + (q[2] * (1 - fx) + q[3] * fx) * fy
 
+    def corners(self, lat, lon):
+        """The four nodes around a point as [(lat, lon, value or None, weight)], or None outside."""
+        y = (lat - self.lat0) / self.dlat
+        x = ((lon % 360) - self.lon0) / self.dlon
+        r, c = math.floor(y), math.floor(x)
+        if not (0 <= r < self.rows - 1 and 0 <= c < self.cols - 1):
+            return None
+        fy, fx = y - r, x - c
+        out = []
+        for dr, dc, w in ((0, 0, (1 - fx) * (1 - fy)), (0, 1, fx * (1 - fy)), (1, 0, (1 - fx) * fy), (1, 1, fx * fy)):
+            v = self.v[(r + dr) * self.cols + c + dc]
+            out.append((self.lat0 + (r + dr) * self.dlat, self.lon0 + (c + dc) * self.dlon,
+                        None if v <= NULL else v, w))
+        return out
+
+    def near(self, lat, lon):
+        """The bilinear value over the nodes around a point that hold one, weights renormalized;
+        None where none of the four does."""
+        q = self.corners(lat, lon)
+        if q is None:
+            return None
+        got = [(v, w) for _, _, v, w in q if v is not None]
+        tot = sum(w for _, w in got)
+        if not got:
+            return None
+        if tot <= 0:
+            return sum(v for v, _ in got) / len(got)
+        return sum(v * w for v, w in got) / tot
+
 
 _grids = {}
+
+
+def _tidal(g, key, lat, lon):
+    """A tidal grid's value at a point. Two sub-regions meet along a stairstep of whole cells, each
+    cell holding a value in one grid alone, so along the join neither grid has all four nodes
+    around a point. A node empty in the sub-region's own grid takes the value a neighbouring
+    sub-region's grid gives at that node; where no grid holds the node, the shoreline, the point
+    has no value."""
+    G = _load(g)[key]
+    v = G.at(lat, lon)
+    if v is not None:
+        return v
+    q = G.corners(lat, lon)
+    if q is None:
+        return None
+    total = 0.0
+    for nlat, nlon, nv, w in q:
+        if nv is None:
+            if w == 0:
+                continue
+            for o in index():
+                if o is g:
+                    continue
+                S, W, N, E = o["box"]
+                if not (S <= nlat <= N and W <= nlon % 360 <= E):
+                    continue
+                nv = _load(o)[key].near(nlat, nlon)
+                if nv is not None:
+                    break
+            if nv is None:
+                return None
+        total += nv * w
+    return total
 
 
 def _files(name):
@@ -393,7 +455,8 @@ def navd88_above_mllw(lat, lon):
     if kind == 1:
         return None, f"in a non-tidal area of {g['name']}"
     gr = _load(g)
-    vals = {k: gr[k].at(lat, lon) for k in ("tss", "mllw", "geoid", "grav")}
+    vals = {k: gr[k].at(lat, lon) for k in ("geoid", "grav")}
+    vals.update({k: _tidal(g, k, lat, lon) for k in ("tss", "mllw")})
     if vals["tss"] is None or vals["mllw"] is None:
         return None, f"{g['name']}'s tidal grids hold no value here: the land side of their shoreline"
     if vals["geoid"] is None or vals["grav"] is None:
