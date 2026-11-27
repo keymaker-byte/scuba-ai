@@ -137,10 +137,11 @@ LEGACY_ENCLOSED_M = 300.0  # how far around a point the finer surveys' data show
 def _legacy_domain(lat, lon):
     """Where the 1970s soundings answer: DCBD silent, no cell of the 2019 grid, at sea, and seaward
     of the finer surveys. A point within LEGACY_SEAWARD_M of their nearest data answers only when
-    it lies farther from the coastline than that data does, or inside the finer surveys, their data
-    within LEGACY_ENCLOSED_M in three of the four quadrants around it (a patch they left
-    unsurveyed), so the strip between the shore and DCBD's first pixel, which the soundings never
-    resolved, takes no depth from them."""
+    the finer surveys lie between it and the shore (_seaward), when it lies farther from the
+    coastline than that data does, or inside the finer surveys, their data within
+    LEGACY_ENCLOSED_M in three of the four quadrants around it (a patch they left unsurveyed), so
+    the strip between the shore and DCBD's first pixel, which the soundings never resolved, takes
+    no depth from them."""
     if not nlhs_1970.in_box(lat, lon) or _dcbd_state(lat, lon) != "none":
         return False
     x, y = dcbd.utm(lat, lon)
@@ -152,7 +153,40 @@ def _legacy_domain(lat, lon):
     if not found:
         return nlhs_1970.coast_m(x, y) >= LEGACY_SEAWARD_M
     _, ex, ey, _ = min(found)
-    return nlhs_1970.coast_m(x, y) > nlhs_1970.coast_m(ex, ey) or nlhs.enclosed(x, y, LEGACY_ENCLOSED_M)
+    return (nlhs_1970.coast_m(x, y) > nlhs_1970.coast_m(ex, ey) or _seaward(x, y)
+            or nlhs.enclosed(x, y, LEGACY_ENCLOSED_M))
+
+
+SEAWARD_REACH_M = 1000.0   # past this far from the coastline a point lies seaward of anything along it
+SEAWARD_STEP_M = 5.0       # the steps the line to the coast is read at, a quarter of the 2019 grid's cell
+
+
+def _seaward(x, y):
+    """Whether the finer surveys' water lies between UTM (x, y) and the shore: the straight line to
+    the nearest point of the coastline crosses a DCBD pixel under water or a cell of the 2019 grid,
+    or the coastline lies farther than SEAWARD_REACH_M; never within LEGACY_SEAWARD_M of the
+    coastline, whose water a lagoon's own survey can lie between. A notch in the finer surveys' deep edge
+    is seaward of them wherever it sits along that edge; the strip between the shore and their
+    first pixel is crossed by nothing on its way to the shore."""
+    c = nlhs_1970.coast_point(x, y, SEAWARD_REACH_M)
+    if c is None:
+        return True
+    d, cx, cy = c
+    if d < LEGACY_SEAWARD_M:
+        return False
+    t = dcbd.tile()
+    cells = nlhs.grid()["cells"]
+    n = int(d // SEAWARD_STEP_M)
+    for k in range(1, n):
+        px, py = x + (cx - x) * k / n, y + (cy - y) * k / n
+        if (round(px / nlhs.CELL), round(py / nlhs.CELL)) in cells:
+            return True
+        row, col = dcbd.pixel_utm(t, px, py)
+        if 0 <= row < t.h and 0 <= col < t.w:
+            v = t.fast(row, col)
+            if v is not None and v < 0:
+                return True
+    return False
 
 
 def _navy_edge_raw(x, y, limit_m):
