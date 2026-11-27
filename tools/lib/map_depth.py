@@ -174,7 +174,8 @@ class Lakes:
     gives it: a lake with a level by its place in the table (LAKE0, LAKE0 + 1, ...), any other EMPTY;
     and the water joined to each lake with a level, by JOIN_ZOOM pixel."""
 
-    def __init__(self, boxes):
+    def __init__(self, boxes, taken=()):
+        """taken: places in the table that stay another area's, skipped by this run's lakes."""
         grid = _Grid()
         found, seen = [], set()
         for S, W, N, E in boxes:
@@ -191,12 +192,21 @@ class Lakes:
                 lvl = lake_level(hid, rings, info, grid)["level"]
                 found.append((min(xs), min(ys), max(xs), max(ys), rings, hid, name, lvl))
         levelled = sorted((L for L in found if L[7] is not None), key=lambda L: L[5])
-        if LAKE0 + len(levelled) >= EMPTY:
-            sys.exit(f"{len(levelled)} lakes with a level: a pixel's water is a byte, which holds {EMPTY - LAKE0 - 1}.")
-        self.table = [{"name": L[6].split(" (HydroLAKES")[0] if "(" in L[6] else "Lake", "level": round(L[7], 2)}
-                      for L in levelled]
-        self.level = {LAKE0 + i: L[7] for i, L in enumerate(levelled)}
-        kind = {L[5]: LAKE0 + i for i, L in enumerate(levelled)}
+        taken = set(taken)
+        places, k = [], 0
+        while len(places) < len(levelled):
+            if k not in taken:
+                places.append(k)
+            k += 1
+        if LAKE0 + max(places + list(taken) + [-1]) >= EMPTY:
+            sys.exit(f"{len(levelled) + len(taken)} lakes with a level: a pixel's water is a byte, which holds "
+                     f"{EMPTY - LAKE0 - 1}.")
+        # the table by place, each lake with its outline's middle, which decides the area it belongs to
+        self.table = {pl: {"name": L[6].split(" (HydroLAKES")[0] if "(" in L[6] else "Lake", "level": round(L[7], 2),
+                           "at": ((L[1] + L[3]) / 2, (L[0] + L[2]) / 2)}
+                      for pl, L in zip(places, levelled)}
+        self.level = {LAKE0 + pl: L[7] for pl, L in zip(places, levelled)}
+        kind = {L[5]: LAKE0 + pl for pl, L in zip(places, levelled)}
         self.outlines = []
         # Lakes with no level first, so a lake with one wins where two outlines overlap.
         for x0, y0, x1, y1, rings, hid, _, lvl in sorted(found, key=lambda L: L[7] is not None):
@@ -511,6 +521,19 @@ def render_tree(job):
         raise RuntimeError(str(e.code)) from None
 
 
+def _child_cover(covered, vals, dx, dy):
+    """For the child (dx, dy) of a tile, which of its pixels this tile or an ancestor shows."""
+    out = bytearray(65536)
+    for py in range(256):
+        ry = (dy * 256 + py) // 2 * 256
+        o = py * 256
+        for px in range(256):
+            r = ry + (dx * 256 + px) // 2
+            if vals[r] or (covered is not None and covered[r]):
+                out[o + px] = 1
+    return out
+
+
 def render_one(job):
     """Render a base tile and, where a finer source answers inside it, its children, down to each
     source's zoom. (written [(z, x, y)], check candidates, leaf count)."""
@@ -522,7 +545,7 @@ def render_one(job):
     written, cands = [], {}
     rng = random.Random(x * 100003 + y)
 
-    def one(z, tx, ty):
+    def one(z, tx, ty, covered=None):
         lats, lons = centres(z, tx, ty)
         inside = clip(boxes, lats, lons)
         if inside is None:
@@ -536,8 +559,10 @@ def render_one(job):
         else:
             vals, kinds, zooms, srcs = rd.rows(z, tx, ty, lats, lons, inside, onland)
         if z > BASE_ZOOM:
-            # a pixel of a coarser source is its ancestor's to show
-            for i in [i for i, zz in enumerate(zooms) if vals[i] and zz < z]:
+            # a pixel of a coarser source is its ancestor's to show, where an ancestor shows
+            # anything there; where none does (its own pixel centre fell where the depth tool gives
+            # no depth), this tile keeps it, so the viewer draws no hole
+            for i in [i for i, zz in enumerate(zooms) if vals[i] and zz < z and covered[i]]:
                 vals[i], kinds[i], zooms[i] = 0, 0, 0
                 srcs.pop(i, None)
         if not any(vals):
@@ -547,7 +572,7 @@ def render_one(job):
         if max(zooms) > z:
             for dx in (0, 1):
                 for dy in (0, 1):
-                    one(z + 1, 2 * tx + dx, 2 * ty + dy)
+                    one(z + 1, 2 * tx + dx, 2 * ty + dy, _child_cover(covered, vals, dx, dy))
         # sample pixels of the sources kept at this zoom; prove() keeps those the viewer reads here
         for i, name in srcs.items():
             if zooms[i] != z and not (z == BASE_ZOOM and zooms[i] < z):
@@ -602,16 +627,123 @@ def fetch(areas):
             vdatum.navd88_above_mllw(lat, lon)
 
 
-def export(areas, workers=None):
-    t0 = time.time()
-    fetch(areas)
-    ncei_boxes = []
+def _bbox(area):
+    bs = area["boxes"]
+    return (min(b[0] for b in bs) - FETCH_PAD, min(b[1] for b in bs) - FETCH_PAD,
+            max(b[2] for b in bs) + FETCH_PAD, max(b[3] for b in bs) + FETCH_PAD)
+
+
+def _tile_range(bbox, z):
+    """(x0, x1, y0, y1): the tiles of zoom z a box touches."""
+    S, W, N, E = bbox
+    n = 2 ** z
+    tx = lambda lon: int((lon + 180) / 360 * n)  # noqa: E731
+    ty = lambda lat: int((1 - math.asinh(math.tan(math.radians(lat))) / math.pi) / 2 * n)  # noqa: E731
+    return tx(W), tx(E), ty(N), ty(S)
+
+
+def _owns(area, z, x, y):
+    """Whether a tile lies within an area's own tiles: inside the box around its boxes."""
+    x0, x1, y0, y1 = _tile_range(_bbox(area), z)
+    return x0 <= x <= x1 and y0 <= y <= y1
+
+
+def _apart(areas):
+    """The pairs of areas that share a tile at MIN_ZOOM, and so at some zoom, as names."""
+    out = []
+    for i, a in enumerate(areas):
+        for b in areas[i + 1:]:
+            ax0, ax1, ay0, ay1 = _tile_range(_bbox(a), MIN_ZOOM)
+            bx0, bx1, by0, by1 = _tile_range(_bbox(b), MIN_ZOOM)
+            if ax0 <= bx1 and bx0 <= ax1 and ay0 <= by1 and by0 <= ay1:
+                out.append(f"{a['name']} and {b['name']}")
+    return out
+
+
+def _area_of(areas, lat, lon):
+    for a in areas:
+        S, W, N, E = _bbox(a)
+        if S <= lat <= N and W <= lon <= E:
+            return a["name"]
+    return None
+
+
+def _ncei_boxes(areas):
+    """The NCEI tiles' parts inside the areas' padded boxes, where the lakes are read."""
+    out = []
     for S, W, N, E in padded(areas):
         for key in ncei.tile_index()["tiles"]:
             n, w = map(float, key.split(","))
             if n - TILE_DEG < N and n > S and w < E and w + TILE_DEG > W:
-                ncei_boxes.append([max(S, n - TILE_DEG), max(W, w), min(N, n), min(E, w + TILE_DEG)])
-    lakes = Lakes(ncei_boxes) if ncei_boxes else None
+                out.append([max(S, n - TILE_DEG), max(W, w), min(N, n), min(E, w + TILE_DEG)])
+    return out
+
+
+def _previous(areas, kept):
+    """What a partial export keeps from the layer on disk: {present: {z: {(x, y)}}, checks, lakes:
+    {place: entry}}, for the areas in `kept`. Stops the run where the layer on disk cannot be split."""
+    import json
+    if not os.path.exists(META):
+        sys.exit("map/depth/depth.js is missing: run map_export.py depth over every area once before --area.")
+    with open(META) as f:
+        text = f.read()
+    try:
+        old = json.loads(text[text.index("=") + 1:].strip().rstrip(";"))
+    except ValueError as e:
+        sys.exit(f"map/depth/depth.js cannot be read ({e}): run map_export.py depth over every area.")
+    if old.get("lake0") != LAKE0 or old.get("scale") != SCALE or old.get("shallowest") != SHALLOWEST:
+        sys.exit("map/depth/depth.js was written in another form: run map_export.py depth over every area.")
+    names = {a["name"] for a in kept}
+    keep_areas = [a for a in areas if a["name"] in names]
+    present = {}
+    for z, lst in old.get("present", {}).items():
+        for t in filter(None, lst.split(",")):
+            x, y = map(int, t.split("/"))
+            if any(_owns(a, int(z), x, y) for a in keep_areas):
+                present.setdefault(int(z), set()).add((x, y))
+    for a in keep_areas:
+        if not any(_owns(a, z, x, y) for z, ts in present.items() for x, y in ts):
+            sys.exit(f"map/depth/depth.js holds no tile of {a['name']}: run map_export.py depth over every area.")
+    checks = [c for c in old.get("checks", []) if _area_of(keep_areas, c["lat"], c["lon"])]
+    lakes, wet = {}, None
+    for i, e in enumerate(old.get("lakes", [])):
+        if e is None:
+            continue
+        if "area" not in e:
+            # a layer written before --area: its lakes are the one area's that holds NCEI water
+            if wet is None:
+                wet = [a["name"] for a in areas if _ncei_boxes([a])]
+            if len(wet) != 1:
+                sys.exit("map/depth/depth.js names no area for its lakes, written before --area: run "
+                         "map_export.py depth over every area once.")
+            e = {**e, "area": wet[0]}
+        if e["area"] in names:
+            lakes[i] = e
+    return {"present": present, "checks": checks, "lakes": lakes}
+
+
+def export(areas, workers=None, only=None):
+    """Write the depth layer over the coverage `areas`, or with `only` (area names) over those
+    areas alone, keeping every other area's tiles, checks and lakes from the layer on disk."""
+    t0 = time.time()
+    all_areas = areas
+    prev = None
+    if only:
+        unknown = sorted(set(only) - {a["name"] for a in areas})
+        if unknown:
+            sys.exit(f"No area {', '.join(unknown)} in map/coverage.json; the areas are "
+                     f"{', '.join(a['name'] for a in areas)}.")
+        shared = _apart(areas)
+        if shared:
+            sys.exit(f"--area needs areas that share no tile, and {'; '.join(shared)} do: run map_export.py depth "
+                     "over every area.")
+        areas = [a for a in all_areas if a["name"] in only]
+        kept = [a for a in all_areas if a["name"] not in only]
+        prev = _previous(all_areas, kept)
+        log(f"  over {', '.join(a['name'] for a in areas)}; keeping {', '.join(a['name'] for a in kept) or 'nothing'}")
+    fetch(areas)
+    ncei_boxes = _ncei_boxes(areas)
+    lakes = Lakes(ncei_boxes, prev["lakes"] if prev else ()) if ncei_boxes else None
     # the CHS stations the NCEI to GSC seam takes MLLW from, read here so no worker downloads one
     for S, W, N, E in ncei_boxes:
         for i in range(int((N - S) / SEAM_STEP) + 2):
@@ -620,9 +752,25 @@ def export(areas, workers=None):
     jobs = base_tiles(areas)
     log(f"  {len(jobs)} base tiles at zoom {BASE_ZOOM} over {len(areas)} areas; rendering with "
         f"{workers or os.cpu_count()} workers...")
-    if os.path.isdir(TILES):
-        shutil.rmtree(TILES)
-    if os.path.exists(META):
+    if prev is None:
+        if os.path.isdir(TILES):
+            shutil.rmtree(TILES)
+    else:
+        # this run's areas' tiles alone; every other area's stay as they are
+        gone = 0
+        for d, _, files in os.walk(TILES):
+            parts = os.path.relpath(d, TILES).split(os.sep)
+            if len(parts) != 2:
+                continue
+            z, x = map(int, parts)
+            for fn in files:
+                if fn.endswith(".png") and any(_owns(a, z, x, int(fn[:-4])) for a in areas):
+                    os.remove(os.path.join(d, fn))
+                    gone += 1
+        log(f"  removed {gone} tiles of {', '.join(a['name'] for a in areas)}")
+    if prev is None and os.path.exists(META):
+        # a partial run keeps the description on disk until the new one replaces it, so a stopped
+        # run never loses the other areas' part of it
         os.remove(META)
     written, cands = set(), {}
     ctx = multiprocessing.get_context("fork")
@@ -670,7 +818,14 @@ def export(areas, workers=None):
                 by_zoom[z].add((cx, cy))
         log(f"  zoom {z}: {len(by_zoom[z])} tiles, {time.time() - t0:.0f} s")
     checks = prove(cands, lakes, {z: t for z, t in by_zoom.items() if z >= BASE_ZOOM})
-    describe(areas, by_zoom, lakes, checks, t0)
+    table = {pl: {"name": e["name"], "level": e["level"], "area": _area_of(areas, *e["at"])}
+             for pl, e in (lakes.table.items() if lakes else [])}
+    if prev:
+        for z, ts in prev["present"].items():
+            by_zoom.setdefault(z, set()).update(ts)
+        checks = prev["checks"] + checks
+        table.update(prev["lakes"])
+    describe(all_areas, by_zoom, table, checks, t0)
 
 
 READ_AT = 0.3   # across a sample pixel, where it is read back: never on a pixel's edge at a finer zoom
@@ -757,7 +912,8 @@ def prove(cands, lakes, present):
     return checks
 
 
-def describe(areas, by_zoom, lakes, checks, t0):
+def describe(areas, by_zoom, table, checks, t0):
+    """table: {place: lake entry}; a place no lake holds is written as null."""
     boxes = [b for ar in areas for b in ar["boxes"]]
     S, W = min(b[0] for b in boxes), min(b[1] for b in boxes)
     N, E = max(b[2] for b in boxes), max(b[3] for b in boxes)
@@ -773,7 +929,7 @@ def describe(areas, by_zoom, lakes, checks, t0):
         "areas": [{"name": a["name"], "label": a["label"], "boxes": a["boxes"]} for a in areas],
         "built": date.today().isoformat(),
         "waters": [{"tide": t} for t in WATER_TIDES],
-        "lakes": lakes.table if lakes else [],
+        "lakes": [table.get(i) for i in range(max(table) + 1)] if table else [],
         "lake0": LAKE0,
         "present": {str(z): ",".join(f"{x}/{y}" for x, y in sorted(s)) for z, s in sorted(by_zoom.items())},
         "checks": checks,

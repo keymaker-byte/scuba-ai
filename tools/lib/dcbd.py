@@ -173,6 +173,77 @@ def tile():
     return _tile
 
 
+WET_BLOCK = 10   # pixels a side of a wet_mask() block: 20 m
+
+
+_wet = None
+
+
+def wet_mask():
+    """(mask, rows, cols): one byte per WET_BLOCK x WET_BLOCK block of the grid, 1 where any of its
+    pixels lies under water. Read once from the whole grid, about a minute, and kept in
+    wet_mask.bin beside it, read again whenever the grid changes."""
+    global _wet
+    if _wet is not None:
+        return _wet
+    t = tile()
+    rows, cols = -(-t.h // WET_BLOCK), -(-t.w // WET_BLOCK)
+    path = os.path.join(DB, "wet_mask.bin")
+    stamp = json.dumps({k: index().get(k) for k in ("fetched", "zip_size", "member")}, sort_keys=True).encode()
+    if os.path.exists(path):
+        with open(path, "rb") as f:
+            data = f.read()
+        head = data[:data.index(b"\n")] if b"\n" in data else b""
+        body = data[len(head) + 1:]
+        if head == stamp and len(body) == rows * cols:
+            _wet = (bytearray(body), rows, cols)
+            return _wet
+    if sys.stderr.isatty():
+        print(f"reading where the {NAME} holds water, once, about a minute ...", file=sys.stderr, flush=True)
+    mask = bytearray(rows * cols)
+    nd = t.nodata
+    per_row = (t.w + t.tw - 1) // t.tw
+    for row in range(t.h):
+        base = (row // WET_BLOCK) * cols
+        for b in range(per_row):
+            arr = t.floats((row // t.th) * per_row + b)
+            line = arr[(row % t.th) * t.tw:(row % t.th + 1) * t.tw]
+            for k, v in enumerate(line):
+                # under water: below zero, and neither nodata nor NaN
+                if v < 0 and (nd is None or abs(v - nd) >= 1e-3):
+                    col = b * t.tw + k
+                    if col < t.w:
+                        mask[base + col // WET_BLOCK] = 1
+    with open(path + ".part", "wb") as f:
+        f.write(stamp + b"\n" + bytes(mask))
+    os.replace(path + ".part", path)
+    _wet = (mask, rows, cols)
+    return _wet
+
+
+def wet_near(x, y, radius_m):
+    """The quadrants around UTM (x, y), 0 north-east counter-clockwise to 3 south-east, holding a
+    wet_mask() block whose centre lies within radius_m."""
+    t = tile()
+    mask, rows, cols = wet_mask()
+    bm = WET_BLOCK * t.sx
+    row, col = pixel_utm(t, x, y)
+    br, bc = row // WET_BLOCK, col // WET_BLOCK
+    k = int(radius_m / bm) + 1
+    out = set()
+    for r in range(max(0, br - k), min(rows, br + k + 1)):
+        for c in range(max(0, bc - k), min(cols, bc + k + 1)):
+            if not mask[r * cols + c]:
+                continue
+            cx, cy = t.x0 + (c + 0.5) * bm, t.y0 - (r + 0.5) * WET_BLOCK * t.sy
+            dx, dy = cx - x, cy - y
+            if dx * dx + dy * dy <= radius_m * radius_m:
+                out.add((0 if dx >= 0 else 1) if dy >= 0 else (3 if dx >= 0 else 2))
+                if len(out) == 4:
+                    return out
+    return out
+
+
 def in_box(lat, lon):
     s, w, n, e = BOX
     return s <= lat <= n and w <= lon <= e

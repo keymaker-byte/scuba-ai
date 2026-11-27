@@ -131,13 +131,16 @@ def _navy_domain(lat, lon):
 
 
 LEGACY_SEAWARD_M = 100.0   # how near the finer surveys a 1970s answer must lie seaward of them
+LEGACY_ENCLOSED_M = 300.0  # how far around a point the finer surveys' data shows it lies inside them
 
 
 def _legacy_domain(lat, lon):
     """Where the 1970s soundings answer: DCBD silent, no cell of the 2019 grid, at sea, and seaward
     of the finer surveys. A point within LEGACY_SEAWARD_M of their nearest data answers only when
-    it lies farther from the coastline than that data does, so the strip between the shore and
-    DCBD's first pixel, which the soundings never resolved, takes no depth from them."""
+    it lies farther from the coastline than that data does, or inside the finer surveys, their data
+    within LEGACY_ENCLOSED_M in three of the four quadrants around it (a patch they left
+    unsurveyed), so the strip between the shore and DCBD's first pixel, which the soundings never
+    resolved, takes no depth from them."""
     if not nlhs_1970.in_box(lat, lon) or _dcbd_state(lat, lon) != "none":
         return False
     x, y = dcbd.utm(lat, lon)
@@ -149,7 +152,7 @@ def _legacy_domain(lat, lon):
     if not found:
         return nlhs_1970.coast_m(x, y) >= LEGACY_SEAWARD_M
     _, ex, ey, _ = min(found)
-    return nlhs_1970.coast_m(x, y) > nlhs_1970.coast_m(ex, ey)
+    return nlhs_1970.coast_m(x, y) > nlhs_1970.coast_m(ex, ey) or nlhs.enclosed(x, y, LEGACY_ENCLOSED_M)
 
 
 def _navy_edge_raw(x, y, limit_m):

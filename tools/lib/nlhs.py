@@ -56,6 +56,14 @@ SEARCH_M = 100   # how far a point with no data searches for the nearest cell th
 SPREAD_M = 20    # the spread of depths reported around a point: the cells within it
 
 
+# A gap inside the survey: a point with no cell, the finer surveys' data (this survey's cells, or
+# DCBD's pixels under water) within GAP_M of it in at least GAP_QUADRANTS of the four quadrants
+# around it. The strips between the multibeam swaths read so; the strip between the shore and the
+# survey, with only land on its landward side, does not.
+GAP_M = 100.0
+GAP_QUADRANTS = 3
+
+
 # The cells the offset to DCBD is measured on: bottom flat in both surveys, where a few metres of
 # position cannot move the depth. A Navy cell and its 8 neighbours within NAVY_RELIEF_M of each other,
 # no deeper than MAX_DEPTH_M, and DCBD's 2 m pixels over the 40 m square around it holding at least
@@ -165,8 +173,8 @@ def in_box(lat, lon):
 
 def raw(x, y):
     """Depth below LAT at UTM (x, y), interpolated between the four cell centres around it, or the
-    cell the point falls in where one of the four is missing at the survey's edge; None where that
-    cell has no data either."""
+    cell the point falls in where one of the four is missing at the survey's edge; where that cell
+    has no data either, the gap() fill between the swaths, or None."""
     cells = grid()["cells"]
     i0, j0 = math.floor(x / CELL), math.floor(y / CELL)
     fx, fy = x / CELL - i0, y / CELL - j0
@@ -174,7 +182,52 @@ def raw(x, y):
     if None not in corners:
         z00, z10, z01, z11 = corners
         return (z00 * (1 - fx) + z10 * fx) * (1 - fy) + (z01 * (1 - fx) + z11 * fx) * fy
-    return cells.get((round(x / CELL), round(y / CELL)))
+    z = cells.get((round(x / CELL), round(y / CELL)))
+    return z if z is not None else gap(x, y)
+
+
+def _quadrant(dx, dy):
+    return (0 if dx >= 0 else 1) if dy >= 0 else (3 if dx >= 0 else 2)
+
+
+def _quads(x, y, radius_m):
+    """The survey's cells within radius_m of UTM (x, y) as [(distance, depth below LAT)], and the
+    quadrants around the point holding the finer surveys' data within it: those cells, and where
+    they fill fewer than GAP_QUADRANTS, DCBD's water by its 20 m blocks."""
+    cells = grid()["cells"]
+    k = int(radius_m / CELL) + 1
+    i0, j0 = round(x / CELL), round(y / CELL)
+    near, quads = [], set()
+    for i in range(i0 - k, i0 + k + 1):
+        for j in range(j0 - k, j0 + k + 1):
+            z = cells.get((i, j))
+            if z is None:
+                continue
+            dx, dy = i * CELL - x, j * CELL - y
+            d = math.hypot(dx, dy)
+            if d <= radius_m:
+                near.append((max(d, 0.01), z))
+                quads.add(_quadrant(dx, dy))
+    if len(quads) < GAP_QUADRANTS:
+        quads |= dcbd.wet_near(x, y, radius_m)
+    return near, quads
+
+
+def enclosed(x, y, radius_m):
+    """Whether the finer surveys' data lies within radius_m of UTM (x, y) in at least
+    GAP_QUADRANTS of the four quadrants around it: a point inside them, never one between them and
+    the shore, whose landward side holds only land."""
+    return len(_quads(x, y, radius_m)[1]) >= GAP_QUADRANTS
+
+
+def gap(x, y):
+    """Depth below LAT at UTM (x, y) inside a gap of the survey, by the inverse square of the
+    distance from its cells within GAP_M, or None where the point is not in a gap."""
+    near, quads = _quads(x, y, GAP_M)
+    if not near or len(quads) < GAP_QUADRANTS:
+        return None
+    w = [(1 / d ** 2, z) for d, z in near]
+    return sum(a * z for a, z in w) / sum(a for a, _ in w)
 
 
 # --- The offset to DCBD ----------------------------------------------------------------------
@@ -296,9 +349,14 @@ def answer(lat, lon):
                 "why": f"no cell of the {NAME} at this point (unsurveyed, or outside the survey){where}"}
     s = _spread(x, y)
     around = f"; cells within {SPREAD_M} m, {s[0] + o:.1f} to {s[1] + o:.1f} m" if s else ""
+    if grid()["cells"].get((round(x / CELL), round(y / CELL))) is None and gap(x, y) is not None:
+        near = _nearest(x, y, GAP_M)
+        how = (f"in a gap of the survey between its swaths, interpolated from its cells within {GAP_M:.0f} m "
+               f"by the inverse square of the distance, the nearest {near[0]:.0f} m away")
+    else:
+        how = "interpolated between its cell centres"
     return {**out, "water": "sea", "depth": z + o, "datum": dcbd.DATUM,
-            "detail": f"{z:.1f} m below LAT in the survey, interpolated between its cell centres, "
-                      f"{offset_note()}{around}"}
+            "detail": f"{z:.1f} m below LAT in the survey, {how}, {offset_note()}{around}"}
 
 
 def fetch(boxes, workers):

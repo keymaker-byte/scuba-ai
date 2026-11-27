@@ -10,6 +10,7 @@ The map names no datum: it shows the total depth, the seabed plus the tide.
   map_export.py tides           map/tides/stations.js
   map_export.py currents        map/currents/<area>-seafloor.js and map/currents/index.js
   map_export.py publish         every layer zipped into a GitHub release, which deploys the map
+  map_export.py depth --area bonaire    one area's depth tiles alone, keeping every other area's
 
 Every source is downloaded first, the first time a layer needs it, so a first export runs long:
 a CHS tide station is fitted in about three minutes. Every run after reads them locally."""
@@ -596,9 +597,11 @@ def export_tides(areas):
 
 # --- commands -------------------------------------------------------------------------------
 
-def cmd_currents(areas):
+def cmd_currents(areas, only=None):
     names = {ar["name"] + "-seafloor" for ar in areas}
     for ar in areas:
+        if only and ar["name"] not in only:
+            continue
         log(f"== currents: {ar['label']}")
         export_currents(ar)
     # an overlay whose area left the coverage leaves the map with it
@@ -613,12 +616,14 @@ def cmd_currents(areas):
             log(f"  removed {e.get('dir') or e['file']}: its area is no longer in the coverage")
 
 
-def cmd_depth(areas):
+def cmd_depth(areas, only=None):
     log("== depth")
-    map_depth.export(areas)
+    map_depth.export(areas, only=only)
 
 
-def cmd_tides(areas):
+def cmd_tides(areas, only=None):
+    # every area's stations, whatever --area names: the file is one, and quick to write once the
+    # CHS stations are fitted
     log("== tides")
     export_tides(areas)
 
@@ -650,6 +655,22 @@ def cmd_publish(keep):
     for name, desc in RELEASE_LAYERS.items():
         if not os.path.exists(os.path.join(WORKSPACE, desc)):
             sys.exit(f"{desc} is missing: run map_export.py {name} before publishing.")
+    # every area of the coverage in every per-area layer, so an export of one area never publishes
+    # a map missing the others
+    missing = []
+    with open(os.path.join(WORKSPACE, RELEASE_LAYERS["depth"])) as f:
+        text = f.read()
+    meta = json.loads(text[text.index("=") + 1:].strip().rstrip(";"))
+    overlays = {e["name"] for e in map_overlays()}
+    for ar in coverage():
+        if not any(map_depth._owns(ar, int(z), *map(int, t.split("/")))
+                   for z, lst in meta.get("present", {}).items() for t in filter(None, lst.split(","))):
+            missing.append(f"map_export.py depth --area {ar['name']}")
+        if ar["name"] + "-seafloor" not in overlays:
+            missing.append(f"map_export.py currents --area {ar['name']}")
+    if missing:
+        sys.exit("Some areas of map/coverage.json are missing from the layers on disk; run "
+                 + "; ".join(missing) + " before publishing.")
     tag = RELEASE_PREFIX + datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
     with tempfile.TemporaryDirectory() as tmp:
         zips = []
@@ -686,17 +707,25 @@ def main():
     p.add_argument("layer", nargs="*", choices=sorted(LAYERS) + ["publish"],
                    help="the layers to write, omitted for every one; or publish, alone")
     p.add_argument("--keep", type=int, default=RELEASE_KEEP, help="publish: map releases to keep, newest first")
+    p.add_argument("--area", action="append", metavar="NAME",
+                   help="an area of map/coverage.json to write alone, repeatable; the depth and current layers keep "
+                        "every other area's as they are on disk, and tides always writes every area")
     a = p.parse_args()
     if "publish" in a.layer:
-        if len(a.layer) > 1:
-            sys.exit("publish runs alone, after the layers are written.")
+        if len(a.layer) > 1 or a.area:
+            sys.exit("publish runs alone, after the layers are written, and publishes every area.")
         if a.keep < 1:
             sys.exit("--keep is at least 1.")
         cmd_publish(a.keep)
         return
     areas = coverage()
+    if a.area:
+        unknown = sorted(set(a.area) - {ar["name"] for ar in areas})
+        if unknown:
+            sys.exit(f"No area {', '.join(unknown)} in map/coverage.json; the areas are "
+                     f"{', '.join(ar['name'] for ar in areas)}.")
     for name in a.layer or list(LAYERS):
-        LAYERS[name](areas)
+        LAYERS[name](areas, a.area)
 
 
 if __name__ == "__main__":
