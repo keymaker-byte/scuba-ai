@@ -1,0 +1,54 @@
+# The published map: the repository as it stands on main, with the map layers from the newest
+# map-* release (tools/map_export.py publish) unzipped beside map.html. The layers live outside git.
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Map layers from the newest map release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag=$(gh release list --limit 200 --exclude-drafts --json tagName,createdAt \
+                --jq '[.[] | select(.tagName | startswith("map-"))] | sort_by(.createdAt) | last | .tagName // empty')
+          if [ -z "$tag" ]; then echo "::error::No map-* release: run tools/map_export.py publish"; exit 1; fi
+          echo "Map layers from release $tag"
+          gh release download "$tag" --pattern 'map-*.zip' --dir "$RUNNER_TEMP/layers"
+          for z in "$RUNNER_TEMP"/layers/map-*.zip; do unzip -q -o "$z" -d .; done
+          for f in map/depth/depth.js map/currents/index.js map/tides/stations.js; do
+            test -f "$f" || { echo "::error::$f missing from release $tag"; exit 1; }
+          done
+          du -sh map
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -9,6 +9,7 @@ The map names no datum: it shows the total depth, the seabed plus the tide.
   map_export.py depth           map/depth/tiles/ and map/depth/depth.js
   map_export.py tides           map/tides/stations.js
   map_export.py currents        map/currents/<area>-seafloor.js and map/currents/index.js
+  map_export.py publish         every layer zipped into a GitHub release, which deploys the map
 
 Every source is downloaded first, the first time a layer needs it, so a first export runs long:
 a CHS tide station is fitted in about three minutes. Every run after reads them locally."""
@@ -624,11 +625,75 @@ def cmd_tides(areas):
 
 LAYERS = {"tides": cmd_tides, "currents": cmd_currents, "depth": cmd_depth}
 
+# The layers live outside git: each is zipped into a GitHub release, and the Pages workflow
+# (.github/workflows/pages.yml) unzips the newest one beside map.html before it deploys.
+RELEASE_PREFIX = "map-"
+RELEASE_LAYERS = {"depth": "map/depth/depth.js", "currents": "map/currents/index.js", "tides": "map/tides/stations.js"}
+RELEASE_KEEP = 2
+
+
+def _gh(*args, capture=False):
+    import subprocess
+    if not shutil.which("gh"):
+        sys.exit("publish needs the GitHub CLI: brew install gh, then gh auth login.")
+    r = subprocess.run(["gh", *args], cwd=WORKSPACE, text=True, capture_output=capture)
+    if r.returncode:
+        sys.exit(f"gh {' '.join(args[:2])} failed" + (f": {r.stderr.strip()}" if capture else "") + ".")
+    return r.stdout if capture else None
+
+
+def cmd_publish(keep):
+    """Zip every layer into a new release, tagged map-<UTC time>, and keep only the newest `keep`
+    map releases. Publishing the release starts the Pages workflow."""
+    import tempfile
+    import zipfile
+    for name, desc in RELEASE_LAYERS.items():
+        if not os.path.exists(os.path.join(WORKSPACE, desc)):
+            sys.exit(f"{desc} is missing: run map_export.py {name} before publishing.")
+    tag = RELEASE_PREFIX + datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+    with tempfile.TemporaryDirectory() as tmp:
+        zips = []
+        for name in RELEASE_LAYERS:
+            root = os.path.join(WORKSPACE, "map", name)
+            path = os.path.join(tmp, f"{RELEASE_PREFIX}{name}.zip")
+            n = 0
+            with zipfile.ZipFile(path, "w") as z:
+                for d, _, files in os.walk(root):
+                    for fn in sorted(files):
+                        if fn.startswith("."):
+                            continue
+                        full = os.path.join(d, fn)
+                        # PNG tiles are compressed already; the scripts shrink well
+                        z.write(full, os.path.relpath(full, WORKSPACE),
+                                zipfile.ZIP_STORED if fn.endswith(".png") else zipfile.ZIP_DEFLATED)
+                        n += 1
+            log(f"  {os.path.basename(path)}: {n} files, {os.path.getsize(path) / 1e6:.0f} MB")
+            zips.append(path)
+        log(f"== publish: release {tag}")
+        _gh("release", "create", tag, *zips, "--title", f"Map layers {tag[len(RELEASE_PREFIX):]}",
+            "--notes", "Map layers written by tools/map_export.py, unzipped beside map.html by the Pages workflow.",
+            "--latest")
+    rels = json.loads(_gh("release", "list", "--limit", "200", "--json", "tagName,createdAt", capture=True))
+    old = sorted((r for r in rels if r["tagName"].startswith(RELEASE_PREFIX)),
+                 key=lambda r: r["createdAt"], reverse=True)[keep:]
+    for r in old:
+        _gh("release", "delete", r["tagName"], "--yes", "--cleanup-tag")
+        log(f"  removed release {r['tagName']}")
+
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("layer", nargs="*", choices=sorted(LAYERS), help="the layers to write; omitted, every one")
+    p.add_argument("layer", nargs="*", choices=sorted(LAYERS) + ["publish"],
+                   help="the layers to write, omitted for every one; or publish, alone")
+    p.add_argument("--keep", type=int, default=RELEASE_KEEP, help="publish: map releases to keep, newest first")
     a = p.parse_args()
+    if "publish" in a.layer:
+        if len(a.layer) > 1:
+            sys.exit("publish runs alone, after the layers are written.")
+        if a.keep < 1:
+            sys.exit("--keep is at least 1.")
+        cmd_publish(a.keep)
+        return
     areas = coverage()
     for name in a.layer or list(LAYERS):
         LAYERS[name](areas)
