@@ -41,7 +41,9 @@ BUCKET_M = 500.0   # the spatial index's cell
 REACH_M = 1500.0   # how far a point looks for soundings around it
 
 
-QUADRANTS = 3      # of the four quadrants around a point, how many must hold a sounding within REACH_M
+OPEN_DEG = 180.0   # the widest empty angle around a point, between the soundings within REACH_M, it answers under
+FINER_M = 500.0    # how far the finer surveys' water, read as soundings' directions, is looked for around a point
+BESIDE_M = 500.0   # a point this near a sounding lies beside its track, and answers whatever the angle
 
 
 NEAREST = 8        # the soundings a depth is interpolated from, by inverse distance squared
@@ -177,16 +179,52 @@ def _around(x, y):
     return sorted(o for o in out if o[0] <= REACH_M)
 
 
+def _widest(bearings):
+    """The widest empty angle, in degrees, between bearings around a point."""
+    b = sorted(set(round(v, 1) % 360 for v in bearings))
+    if not b:
+        return 360.0
+    return max([b[0] + 360 - b[-1]] + [b2 - b1 for b1, b2 in zip(b, b[1:])])
+
+
+def _finer_bearings(x, y):
+    """Bearings from UTM (x, y) to the finer surveys' water within FINER_M: DCBD's 20 m blocks of
+    water and the 2019 survey's cells."""
+    out = []
+    t = dcbd.tile()
+    mask, rows, cols = dcbd.wet_mask()
+    bm = dcbd.WET_BLOCK * t.sx
+    row, col = dcbd.pixel_utm(t, x, y)
+    br, bc, k = row // dcbd.WET_BLOCK, col // dcbd.WET_BLOCK, int(FINER_M / bm) + 1
+    for r in range(max(0, br - k), min(rows, br + k + 1)):
+        for c in range(max(0, bc - k), min(cols, bc + k + 1)):
+            if mask[r * cols + c]:
+                dx, dy = t.x0 + (c + 0.5) * bm - x, t.y0 - (r + 0.5) * bm - y
+                if dx * dx + dy * dy <= FINER_M * FINER_M:
+                    out.append(math.degrees(math.atan2(dy, dx)))
+    cells, kc = nlhs.grid()["cells"], int(FINER_M / nlhs.CELL) + 1
+    i0, j0 = round(x / nlhs.CELL), round(y / nlhs.CELL)
+    for i in range(i0 - kc, i0 + kc + 1):
+        for j in range(j0 - kc, j0 + kc + 1):
+            if (i, j) in cells:
+                dx, dy = i * nlhs.CELL - x, j * nlhs.CELL - y
+                if dx * dx + dy * dy <= FINER_M * FINER_M:
+                    out.append(math.degrees(math.atan2(dy, dx)))
+    return out
+
+
 def estimate(x, y):
-    """(depth, nearest sounding's distance) at UTM (x, y), or None where fewer than QUADRANTS of
-    the four quadrants around the point hold a sounding within REACH_M: past the last track."""
+    """(depth, nearest sounding's distance) at UTM (x, y), or None past the last track: farther than
+    BESIDE_M from every sounding, and where the soundings within REACH_M, with the finer surveys'
+    water within FINER_M as more directions, leave an empty angle of OPEN_DEG or more around it."""
     near = _around(x, y)
     if not near:
         return None
     if near[0][0] < 0.5:
         return near[0][1][2], near[0][0]
-    quads = {(q[0] >= x, q[1] >= y) for _, q in near}
-    if len(quads) < QUADRANTS:
+    bearings = [math.degrees(math.atan2(q[1] - y, q[0] - x)) for _, q in near]
+    if near[0][0] > BESIDE_M and _widest(bearings) >= OPEN_DEG and \
+            _widest(bearings + _finer_bearings(x, y)) >= OPEN_DEG:
         return None
     use = near[:NEAREST]
     w = [1 / d ** 2 for d, _ in use]
@@ -217,7 +255,10 @@ def answer(lat, lon):
         where = (f"; the nearest sounding is {near[0][0]:.0f} m away, {near[0][1][2]:.0f} m deep"
                  if near else f"; none within {REACH_M:.0f} m")
         return {**out, "water": "none", "nodata": True,
-                "why": f"no soundings of the {NAME} on {QUADRANTS} sides of the point within {REACH_M:.0f} m{where}"}
+                "why": f"past the last track of the {NAME}: no sounding within {BESIDE_M:.0f} m, and the "
+                       f"soundings within {REACH_M:.0f} m, with the finer "
+                       f"surveys' water within {FINER_M:.0f} m, leave an empty angle of {OPEN_DEG:.0f}° or more around "
+                       f"the point{where}"}
     z, d = e
     return {**out, "water": "sea", "depth": z, "datum": dcbd.DATUM,
             "detail": f"interpolated from the {min(NEAREST, len(_around(x, y)))} nearest soundings, the nearest "
