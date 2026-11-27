@@ -2642,6 +2642,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "twin-spit",
+      "name": "Twin Spit",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/twin-spit.md",
+      "site": {
+        "lat": 47.92729,
+        "lon": -122.617043
+      },
+      "parking": {
+        "lat": 47.926697,
+        "lon": -122.615643
+      },
+      "entry": {
+        "lat": 47.926785,
+        "lon": -122.615828
+      }
+    },
+    {
       "slug": "union-wharf",
       "name": "Union Wharf",
       "region": "puget-sound",
