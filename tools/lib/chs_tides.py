@@ -42,6 +42,7 @@ PASS_RMS = 0.002  # and its rms: CHS's own series is reproduced to 0.3 mm where 
 FLAT = 0.003  # m: a high or low whose fitted height at CHS's moment is this close is on a flat stand
 LISTING_OFF = 0.01  # m: CHS's listed high or low this far from its own series at the moment is CHS's listing at odds
 PAD = timedelta(days=1)  # read either side of a span of highs and lows, to tell each one's neighbours
+SIDE = timedelta(hours=1)  # either side of a listed high or low, where CHS's own heights tell which it is
 
 
 def _save(path, doc):
@@ -152,6 +153,12 @@ def _inside(doc, t0, t1):
     return a <= t0 and t1 <= b
 
 
+class SeriesGap(SystemExit):
+    """CHS's predicted series for a station has a hole inside the span CHS says it holds, so no fit
+    can be made from it: the run stops with the message, as sys.exit does, and a caller that can go
+    on without the station (the map's tide layer) catches it and names the station."""
+
+
 # --- CHS's predictions, read into memory ---------------------------------------------------
 
 def _span(doc, kind, t0, t1, resolution=None):
@@ -184,21 +191,29 @@ def _grid(doc, t0, t1, what):
             h[k] = v
     if None in h:
         miss = t0 + STEP * h.index(None)
-        sys.exit(f"CHS: {doc['id']}'s predicted heights for {what} have a gap at {miss:%Y-%m-%d %H:%M} UTC, inside the "
+        raise SeriesGap(f"CHS: {doc['id']}'s predicted heights for {what} have a gap at {miss:%Y-%m-%d %H:%M} UTC, inside the "
                  f"span CHS says it holds. Nothing was cached. Retry later, and report it if it persists.")
     return h
 
 
-def _events(doc, t0, t1):
-    """CHS's highs and lows from t0 to t1, [(utc, "H" or "L", metres)]: each a high when it
-    stands above the extremes either side of it, read a day past each end to find them."""
+def _events(doc, t0, t1, series_at):
+    """CHS's highs and lows from t0 to t1, [(utc, "H" or "L", metres)]. Each is a high when it
+    stands above CHS's own predicted heights an hour either side of it (`series_at`), so a gap in
+    CHS's listing leaves every event it does list read correctly; where the series has no value
+    there, a high when it stands above the listed extremes either side of it, read a day past each
+    end to find them."""
     a, b = held(doc)
     ev = sorted(_span(doc, HILO, max(a, t0 - PAD), min(b, t1 + PAD)))
     out = []
     for i, (t, v) in enumerate(ev):
         if t0 <= t < t1:
-            nb = [ev[j][1] for j in (i - 1, i + 1) if 0 <= j < len(ev)]
-            out.append((t, "H" if all(v > w for w in nb) else "L", v))
+            nb = [series_at(t + d) for d in (-SIDE, SIDE)]
+            if None in nb:
+                nb = [ev[j][1] for j in (i - 1, i + 1) if 0 <= j < len(ev)]
+                high = all(v > w for w in nb)
+            else:
+                high = v > sum(nb) / 2
+            out.append((t, "H" if high else "L", v))
     return out
 
 
@@ -227,7 +242,7 @@ class _Period:
         print(f"downloading CHS {doc['id']} {doc['name']}'s predictions, {what} ...", file=sys.stderr, flush=True)
         self.t0, self.t1 = t0, t1
         self.h = _grid(doc, t0, t1, what)
-        self.events = _events(doc, t0, t1)
+        self.events = _events(doc, t0, t1, lambda t: _between(self.at, t))
         if not self.events:
             sys.exit(f"CHS: no highs and lows for {doc['id']} in {what}. Nothing was cached. Retry later.")
 
@@ -437,7 +452,8 @@ def compare(doc, day0, days, height_tol, time_tol):
     h = fit_file(doc)["constants"]
     live = dict(_span(doc, SERIES, t0, t1, "FIFTEEN_MINUTES"))
     worst = max(abs(foreman.height(h, t) - v) for t, v in live.items())
-    ev = _match_events(h, _events(doc, t0, t1), lambda t: _between(live.get, t), t0, t1)
+    ev = _match_events(h, _events(doc, t0, t1, lambda t: _between(live.get, t)),
+                       lambda t: _between(live.get, t), t0, t1)
     r.update(series_n=len(live), fit_worst=round(worst, 4), **ev)
     r["ok"] = worst <= height_tol and ev["time_worst"] <= time_tol and ev["event_worst"] <= height_tol and not ev["unmatched"]
     return r

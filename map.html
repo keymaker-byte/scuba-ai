@@ -275,7 +275,7 @@
 
     <div class="section">
       <label><input type="checkbox" id="toggle-satellite">Satellite imagery</label>
-      <label><input type="checkbox" id="toggle-depth-ncei">Depth (NCEI)</label>
+      <label><input type="checkbox" id="toggle-depth">Depth</label>
       <div class="legend" id="depth-legend"></div>
       <div class="hint fixed-lines" id="depth-status" data-placeholder="Depth under the pointer"></div>
       <label><input type="checkbox" id="toggle-currents">Tidal currents (current tool)</label>
@@ -628,11 +628,13 @@ function applySatelliteToggle() {
     map.addLayer(defaultLayer);
   }
 }
-// Tidal current overlays, one file per area, listed in map/currents/index.js: the seafloor
-// current `tools/map_export.py currents` writes, the ADCIRC database corrected by the current
-// stations and scaled to a height above the seabed (an index entry of kind "seafloor"). The files
-// load only when the checkbox is first ticked.
+// Tidal current overlays, one per area, listed in map/currents/index.js: the seafloor current
+// `tools/map_export.py currents` writes, the ADCIRC database corrected by the current stations
+// and scaled to a height above the seabed (an index entry of kind "seafloor"). Each is cut into
+// cells: its shared file loads when the checkbox is first ticked, and each cell as it comes into
+// view, from the overlay's own zoom in, or when the pointer reads a point inside it.
 const CURRENT_OVERLAYS = window.MAP_CURRENT_INDEX || [];
+const CURRENT_CELLS_HELD = 40;   // cells kept loaded before those far from view let go
 const timeSlider = document.getElementById('time-slider');
 const timeLabel = document.getElementById('time-label');
 
@@ -759,29 +761,103 @@ class CurrentsControl {
     map.on('click', e => this.showAt(e.latlng));
   }
 
+  // The overlay's shared files (common.js), loaded when the checkbox is first ticked; the layer
+  // starts empty and takes each cell as it loads.
   load() {
     if (!this.loading) {
       this.loading = (async () => {
-        const fields = [];
         if (!this.overlays.length) throw new Error(`map/currents/index.js lists no ${this.name} overlay`);
+        this.sets = [];
         for (const o of this.overlays) {
-          await loadScript(o.file);
-          const data = (window.MAP_CURRENTS || {})[o.name];
-          if (!data) throw new Error(`${o.file} did not define MAP_CURRENTS["${o.name}"]`);
-          const field = new DiveCurrents.CurrentField(data);
-          const check = field.selfCheck();
-          if (!check.ok) {
-            throw new Error(`${o.file} failed its self-check against ${this.tool} ` +
-              `(off by up to ${Number.isFinite(check.worst) ? check.worst.toFixed(3) + ' m/s' : 'a missing point'} ` +
-              `at ${check.where}); regenerate it with map_export.py currents`);
-          }
-          fields.push(field);
+          if (!o.cells) throw new Error(`map/currents/index.js lists ${o.name} in an older form; regenerate it with map_export.py currents`);
+          await loadScript(`${o.common}?b=${o.version}`);
+          const common = (window.MAP_CURRENTS || {})[o.name];
+          if (!common) throw new Error(`${o.common} did not define MAP_CURRENTS["${o.name}"]`);
+          this.sets.push({ o, shared: new DiveCurrents.Shared(common), cells: new Map() });
         }
-        return new DiveCurrents.CurrentLayer(fields, { pane: 'paneCurrents' });
+        this.minZoom = Math.min(...this.overlays.map(o => o.minZoom || 0));
+        map.on('moveend', () => this.fill());
+        return new DiveCurrents.CurrentLayer([], { pane: 'paneCurrents' });
       })();
       this.loading.catch(() => { this.loading = null; });
     }
     return this.loading;
+  }
+
+  // One cell, loaded once: its file, decoded over its overlay's shared files, and its own
+  // checks reproduced before it draws. A cell that fails stops the layer with a message.
+  cell(set, c) {
+    let got = set.cells.get(c.id);
+    if (!got) {
+      got = (async () => {
+        await loadScript(`${c.file}?b=${set.o.version}`);
+        const key = `${set.o.name}/${c.id}`;
+        const data = window.MAP_CURRENTS[key];
+        if (!data) throw new Error(`${c.file} did not define MAP_CURRENTS["${key}"]`);
+        delete window.MAP_CURRENTS[key];
+        const field = set.shared.field(data);
+        const check = field.selfCheck();
+        if (!check.ok) {
+          throw new Error(`${c.file} failed its self-check against ${this.tool} ` +
+            `(off by up to ${Number.isFinite(check.worst) ? check.worst.toFixed(3) + ' m/s' : 'a missing point'} ` +
+            `at ${check.where}); regenerate it with map_export.py currents`);
+        }
+        this.layer.addFields([field]);
+        return field;
+      })();
+      got.catch(err => this.fail(err));
+      set.cells.set(c.id, got);
+    }
+    return got;
+  }
+
+  // The cells in view, from the overlay's zoom in; the cells far from view let go when many are held.
+  async fill() {
+    if (!this.layer || !map.hasLayer(this.layer) || this.status.classList.contains('error')) return;
+    if (map.getZoom() < this.minZoom) {
+      this.status.textContent = `Zoom in to draw the ${this.name}`;
+      return;
+    }
+    const view = map.getBounds().pad(0.25);
+    const hits = c => view.intersects(L.latLngBounds([c.box[0], c.box[1]], [c.box[2], c.box[3]]));
+    const want = [];
+    for (const set of this.sets) for (const c of set.o.cells) if (hits(c)) want.push(this.cell(set, c));
+    if (want.length && !this.lastPoint) this.status.textContent = `Loading ${this.name}…`;
+    try {
+      await Promise.all(want);
+    } catch (err) {
+      return;
+    }
+    if (!this.status.classList.contains('error') && !this.lastPoint) this.status.textContent = 'Point at the water for its current';
+    const held = this.sets.reduce((n, s) => n + s.cells.size, 0);
+    if (held > CURRENT_CELLS_HELD) {
+      const far = [];
+      for (const set of this.sets) {
+        for (const c of set.o.cells) {
+          if (hits(c) || !set.cells.has(c.id)) continue;
+          const p = set.cells.get(c.id);
+          set.cells.delete(c.id);
+          far.push(p.then(f => f, () => null));
+        }
+      }
+      this.layer.removeFields((await Promise.all(far)).filter(Boolean));
+    }
+  }
+
+  fail(err) {
+    this.status.classList.add('error');
+    this.status.textContent = `Currents unavailable: ${err.message}`;
+  }
+
+  // the cell answering for a point, loaded: null where no cell covers it
+  cellAt(latlng) {
+    for (const set of this.sets || []) {
+      for (const c of set.o.cells) {
+        const [S, W, N, E] = c.box;
+        if (latlng.lat >= S && latlng.lat < N && latlng.lng >= W && latlng.lng < E) return this.cell(set, c);
+      }
+    }
+    return null;
   }
 
   async apply() {
@@ -801,15 +877,15 @@ class CurrentsControl {
         layer.setTime(mapTime());
         map.addLayer(layer);
         this.legend.classList.add('on');
+        this.fill();
       }
     } catch (err) {
-      this.status.classList.add('error');
-      this.status.textContent = `Currents unavailable: ${err.message}`;
+      this.fail(err);
     }
   }
 
-  // The depth layer's reading at the point: { H } with the seabed below MLLW, { land: true } on
-  // land or in a lake, or {} where it gives no seabed (no depth there, or none readable).
+  // The depth layer's reading at the point: { H } with its seabed, the depth the depth tool
+  // answers there, { land: true } on land or in a lake, or {} where it gives no seabed.
   async seabedAt(latlng) {
     if (!depthSource && !this.noDepth) {
       try { await loadDepth(); } catch (err) { this.noDepth = true; }
@@ -822,7 +898,7 @@ class CurrentsControl {
       return {};
     }
     if (r && (r.lake || r.land)) return { land: true };
-    return r && r.mllw > 0 ? { H: r.mllw } : {};
+    return r && r.seabed > 0 ? { H: r.seabed } : {};
   }
 
   // The current under the pointer at the map's moment, as the tool's `at` gives it there, over
@@ -834,6 +910,10 @@ class CurrentsControl {
     const asked = {};
     this.query = asked;
     const d = await this.seabedAt(latlng);
+    const cell = this.cellAt(latlng);
+    if (cell) {
+      try { await cell; } catch (err) { return; }
+    }
     if (this.query !== asked || !this.layer || !map.hasLayer(this.layer)) return;
     const r = d.land ? null : d.H ? this.layer.readAt(latlng.lat, latlng.lng, d.H) : this.layer.drawnAt(latlng.lat, latlng.lng);
     if (!r) {
@@ -849,15 +929,14 @@ const currents = new CurrentsControl({ kind: 'seafloor', toggle: 'toggle-current
 const currentControls = [currents];
 showMapTime();
 
-// Seabed depth from NCEI's coastal DEM at the map's moment, tide included. The tiles carry
-// the depth below NAVD 88 itself (`tools/map_export.py depth` writes map/depth/ncei/ and
-// map/depth/ncei.js); the tide stations and the grid tying NAVD 88 to MLLW come from
-// map/tides/stations.js (`tools/map_export.py tides`). Both load when the checkbox is first
-// ticked, and each reproduces the values its Python tool computed before anything is drawn;
-// a mismatch stops the layer with a message. The colours follow the time slider. While the
-// layer is on, the lines under the checkbox read the point under the pointer (or at a tap):
-// depth below MLLW + the tide = the depth at the map's moment.
-const toggleDepthNcei = document.getElementById('toggle-depth-ncei');
+// The total depth at the map's moment: the seabed the depth tool answers at each pixel, plus the
+// tide there. The tiles and their description come from `tools/map_export.py depth`
+// (map/depth/tiles/ and map/depth/depth.js), the tide stations from `tools/map_export.py tides`
+// (map/tides/stations.js). Both load when the checkbox is first ticked, and each reproduces the
+// values its Python tool computed before anything is drawn; a mismatch stops the layer with a
+// message. The colours follow the time slider. While the layer is on, the lines under the
+// checkbox read the point under the pointer (or at a tap): total = seabed + tide.
+const toggleDepth = document.getElementById('toggle-depth');
 const depthStatus = document.getElementById('depth-status');
 const depthLegend = document.getElementById('depth-legend');
 const DEPTH_HINT = 'Point at the water for its depth';
@@ -882,22 +961,18 @@ let depthLoading = null;
 function loadDepth() {
   if (!depthLoading) {
     depthLoading = (async () => {
-      await loadScript('map/tides/stations.js');
+      await loadScript('map/tides/stations.js?_=' + Date.now());
       if (!window.MAP_TIDES) throw new Error('map/tides/stations.js did not define MAP_TIDES');
       const tides = new DiveTides.TideModel(window.MAP_TIDES);
       const tideCheck = tides.selfCheck();
       if (!tideCheck.ok) {
         throw new Error('the tide stations failed their self-check against tide.py ' +
-          `(off by up to ${tideCheck.worst.toFixed(3)} m); regenerate them with map_export.py tides`);
+          `(off by up to ${Number.isFinite(tideCheck.worst) ? tideCheck.worst.toFixed(3) + ' m' : 'a missing value'} ` +
+          `at ${tideCheck.where}); regenerate them with map_export.py tides`);
       }
-      const datumCheck = tides.datumCheck();
-      if (!datumCheck.ok) {
-        throw new Error('the NAVD 88 to MLLW grid failed its self-check against vdatum.py ' +
-          `(off by up to ${datumCheck.worst.toFixed(3)} m); regenerate it with map_export.py tides`);
-      }
-      await loadScript('map/depth/ncei.js');
-      const meta = (window.MAP_DEPTH || {}).ncei;
-      if (!meta) throw new Error('map/depth/ncei.js did not define MAP_DEPTH.ncei');
+      await loadScript('map/depth/depth.js?_=' + Date.now());
+      const meta = window.MAP_DEPTH;
+      if (!meta) throw new Error('map/depth/depth.js did not define MAP_DEPTH');
       const source = new DiveDepth.DepthSource(meta, tides);
       let check;
       try {
@@ -927,7 +1002,7 @@ function loadDepth() {
 }
 
 async function applyDepthToggle() {
-  if (!toggleDepthNcei.checked) {
+  if (!toggleDepth.checked) {
     if (depthLayer) map.removeLayer(depthLayer);
     depthLegend.classList.remove('on');
     if (!depthStatus.classList.contains('error')) depthStatus.textContent = '';
@@ -939,7 +1014,7 @@ async function applyDepthToggle() {
     const layer = await loadDepth();
     depthLayer = layer;
     depthStatus.textContent = DEPTH_HINT;
-    if (toggleDepthNcei.checked) {
+    if (toggleDepth.checked) {
       layer.setTime(mapTime());
       map.addLayer(layer);
       depthLegend.classList.add('on');
@@ -949,7 +1024,7 @@ async function applyDepthToggle() {
     depthStatus.textContent = `Depth unavailable: ${err.message}`;
   }
 }
-toggleDepthNcei.addEventListener('change', applyDepthToggle);
+toggleDepth.addEventListener('change', applyDepthToggle);
 
 // The point under the pointer, one lookup per animation frame at most, read again when the
 // slider moves.
@@ -970,16 +1045,12 @@ async function showDepthAt(latlng) {
     return;
   }
   if (depthQuery !== asked || !map.hasLayer(depthLayer) || depthStatus.classList.contains('error')) return;
-  if (r && r.lake) {
-    depthStatus.textContent = `${r.lake}: ${metres(r.depth)} below the surface`;
-    return;
-  }
   if (r === null || r.land) {
-    depthStatus.textContent = r === null ? 'No NCEI depth here' : 'Above the highest tide';
+    depthStatus.textContent = r === null ? 'No depth here' : 'Above the highest tide';
     return;
   }
   const total = r.total >= 0 ? metres(r.total) : `Dry, ${(-r.total).toFixed(1)} m above the water`;
-  depthStatus.textContent = `${total} (MLLW ${metres(r.mllw)} + tide ${signed(r.tide)})`;
+  depthStatus.textContent = `${r.lake ? r.lake + ': ' : ''}${total} (seabed ${metres(r.seabed)} + tide ${signed(r.tide)})`;
 }
 map.on('mousemove', e => {
   if (depthFrame) return;
@@ -1001,7 +1072,7 @@ const persistedControls = {
   parking: toggleParking,
   satellite: toggleSatellite,
   currents: currents.toggle,
-  depthNcei: toggleDepthNcei,
+  depth: toggleDepth,
 };
 
 function saveMenuState() {
@@ -1027,7 +1098,7 @@ if (savedMenuState) {
   toggleParking.checked = !!savedMenuState.parking;
   toggleSatellite.checked = !!savedMenuState.satellite;
   currents.toggle.checked = !!savedMenuState.currents;
-  toggleDepthNcei.checked = !!savedMenuState.depthNcei;
+  toggleDepth.checked = !!(savedMenuState.depth ?? savedMenuState.depthNcei);
   // region-filter's own options don't exist yet; restored once they're built, below.
   applySatelliteToggle();
   currents.apply();

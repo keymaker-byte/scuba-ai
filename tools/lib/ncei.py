@@ -85,12 +85,18 @@ def _save(path, doc):
     os.replace(path + ".part", path)
 
 
+_INDEX_DOC = []
+
+
 def tile_index():
     """NOAA's list of ninth arc-second tiles: {"N,W": [url, ...]} keyed by a tile's north
-    and west edges. Downloaded once."""
+    and west edges. Downloaded once, and read once per process."""
+    if _INDEX_DOC:
+        return _INDEX_DOC[0]
     if os.path.exists(INDEX):
         with open(INDEX) as f:
-            return json.load(f)
+            _INDEX_DOC.append(json.load(f))
+        return _INDEX_DOC[0]
     try:
         with _open(LIST_URL) as r:
             text = r.read().decode()
@@ -106,6 +112,7 @@ def tile_index():
         sys.exit(f"NOAA tile list: no tiles in the answer from {LIST_URL}. Nothing was cached.")
     doc = {"fetched": date.today().isoformat(), "tiles": tiles}
     _save(INDEX, doc)
+    _INDEX_DOC.append(doc)
     return doc
 
 
@@ -531,8 +538,141 @@ def has_data(lat, lon):
     path = tile_path(lat, lon)
     if path is None:
         return False
-    t = Tile(path)
-    return t.value(*t.pixel(lat, lon)) is not None
+    t = _open_tile(path)
+    return t.fast(*t.pixel(lat, lon)) is not None
+
+
+_TILES = {}      # path -> Tile, kept open for the edge search
+_SUMMARY = {}    # (tile name, block) -> 0 no data, 1 data at every pixel, 2 some
+
+
+def _open_tile(path):
+    t = _TILES.get(path)
+    if t is None:
+        t = _TILES[path] = Tile(path)
+    return t
+
+
+def _summary(t, bi):
+    """Whether a block holds no data (0), data at every pixel it holds (1), or some (2)."""
+    key = (t.name, bi)
+    if key not in _SUMMARY:
+        arr = t.floats(bi)
+        bpr = (t.w + t.tw - 1) // t.tw
+        br, bc = divmod(bi, bpr)
+        rows, cols = min(t.th, t.h - br * t.th), min(t.tw, t.w - bc * t.tw)
+        n = sum(1 for r in range(rows) for v in arr[r * t.tw:r * t.tw + cols] if t.is_nodata(v))
+        _SUMMARY[key] = 1 if n == 0 else 0 if n == rows * cols else 2
+    return _SUMMARY[key]
+
+
+def nearest_data(lat, lon, limit_m, keep_row=None):
+    """(metres, lat, lon, elevation) of the nearest pixel centre within limit_m where the tile the
+    tool reads holds data, each tile searched over the pixels whose centres lie in its own quarter
+    degree cell, as tile_path() picks it; None where there is none. Distances are metres on the
+    local plane at the point. keep_row, when given, takes a pixel row's latitude and gives the
+    [west, east] longitudes where its pixels count. Missing tiles touching the search are
+    downloaded, as has_data() downloads them."""
+    ky, kx = 111200.0, 111200.0 * math.cos(math.radians(lat))
+    lim2 = limit_m * limit_m
+    dlat, dlon = limit_m / ky, limit_m / kx
+    idx = tile_index()["tiles"]
+    best = None
+    for ni in range(math.ceil((lat - dlat) / TILE_DEG), math.ceil((lat + dlat) / TILE_DEG) + 1):
+        for wi in range(math.floor((lon - dlon) / TILE_DEG), math.floor((lon + dlon) / TILE_DEG) + 1):
+            n, w = ni * TILE_DEG, wi * TILE_DEG
+            if f"{n:g},{w:g}" not in idx:
+                continue
+            t = _open_tile(tile_path(n - TILE_DEG / 2, w + TILE_DEG / 2))
+            lo_lat, hi_lat = max(n - TILE_DEG, lat - dlat), min(n, lat + dlat)
+            lo_lon, hi_lon = max(w, lon - dlon), min(w + TILE_DEG, lon + dlon)
+            if lo_lat >= hi_lat or lo_lon >= hi_lon:
+                continue
+            r0 = max(0, math.floor((t.y0 - hi_lat) / t.sy - 0.5) - 1)
+            r1 = min(t.h - 1, math.ceil((t.y0 - lo_lat) / t.sy - 0.5) + 1)
+            c0 = max(0, math.floor((lo_lon - t.x0) / t.sx - 0.5) - 1)
+            c1 = min(t.w - 1, math.ceil((hi_lon - t.x0) / t.sx - 0.5) + 1)
+            # only the centres in this tile's own cell
+            while c0 <= c1 and math.floor((t.x0 + (c0 + 0.5) * t.sx) / TILE_DEG) * TILE_DEG != w:
+                c0 += 1
+            while c1 >= c0 and math.floor((t.x0 + (c1 + 0.5) * t.sx) / TILE_DEG) * TILE_DEG != w:
+                c1 -= 1
+            rs = (t.y0 - lat) / t.sy - 0.5     # the point's own fractional row and column
+            cs = (lon - t.x0) / t.sx - 0.5
+            bpr = (t.w + t.tw - 1) // t.tw
+            for r in range(r0, r1 + 1):
+                clat = t.y0 - (r + 0.5) * t.sy
+                if math.ceil(clat / TILE_DEG) * TILE_DEG != n:
+                    continue
+                dy = (r - rs) * t.sy * ky
+                cap = best[0] if best is not None else lim2
+                if dy * dy >= cap:
+                    continue
+                spans = [(c0, c1)]
+                if keep_row is not None:
+                    spans = []
+                    for a, b in keep_row(clat):
+                        ca = max(c0, math.ceil((a - t.x0) / t.sx - 0.5))
+                        cb = min(c1, math.floor((b - t.x0) / t.sx - 0.5))
+                        if ca <= cb:
+                            spans.append((ca, cb))
+                br = r // t.th
+                for ca, cb in spans:
+                    for bc in range(ca // t.tw, cb // t.tw + 1):
+                        a0, a1 = max(ca, bc * t.tw), min(cb, bc * t.tw + t.tw - 1)
+                        bi = br * bpr + bc
+                        kind = _summary(t, bi)
+                        if kind == 0:
+                            continue
+                        cc = min(a1, max(a0, round(cs)))
+                        dx = (cc - cs) * t.sx * kx
+                        cap = best[0] if best is not None else lim2
+                        if dx * dx + dy * dy >= cap:
+                            continue
+                        arr = t.floats(bi)
+                        base = (r - br * t.th) * t.tw - bc * t.tw
+                        if kind == 1:
+                            found = cc
+                        else:
+                            # the row's columns in order of distance from the point: the first
+                            # with data is the row's nearest, unless it is past the best so far
+                            found, c, L, R = None, cc, cc - 1, cc + 1
+                            while True:
+                                if not t.is_nodata(arr[base + c]):
+                                    found = c
+                                    break
+                                if L < a0 and R > a1:
+                                    break
+                                if R > a1 or (L >= a0 and abs(L - cs) <= abs(R - cs)):
+                                    c, L = L, L - 1
+                                else:
+                                    c, R = R, R + 1
+                                ex = (c - cs) * t.sx * kx
+                                if ex * ex + dy * dy >= cap:
+                                    break
+                            if found is None:
+                                continue
+                        ex = (found - cs) * t.sx * kx
+                        d2 = ex * ex + dy * dy
+                        if d2 < cap:
+                            best = (d2, clat, t.x0 + (found + 0.5) * t.sx, arr[base + found])
+    if best is None:
+        return None
+    return math.sqrt(best[0]), best[1], best[2], best[3]
+
+
+def in_vdatum(lat, lon):
+    """Whether a point lies inside one of VDatum's sub-regions, where the tiles' NAVD 88 can be
+    placed on MLLW."""
+    return vdatum.region_at(lat, lon)[0] is not None
+
+
+def covered(lat, lon):
+    """Whether the NCEI DEM answers at a point: its tile holds data there, and the point lies in a
+    VDatum sub-region or inland of the coastline. At sea the depth is placed on MLLW by VDatum, so
+    NCEI's border tiles pass the Canadian water VDatum leaves out to the next source; a lake is
+    read below its own level, with no VDatum."""
+    return has_tile(lat, lon) and has_data(lat, lon) and (inland(lat, lon) or in_vdatum(lat, lon))
 
 
 def mllw_offset(lat, lon):

@@ -195,7 +195,7 @@ def _measure():
         for dx in range(-DCBD_HALF_M, DCBD_HALF_M + 1, 2):
             for dy in range(-DCBD_HALF_M, DCBD_HALF_M + 1, 2):
                 row, col = dcbd.pixel_utm(t, x + dx, y + dy)
-                v = t.value(row, col)
+                v = t.fast(row, col)
                 if v is not None and v < 0:
                     vals.append(-v)
         if len(vals) < DCBD_MIN_PIXELS or max(vals) - min(vals) > DCBD_RELIEF_M:

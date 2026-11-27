@@ -2,6 +2,7 @@
 tool's seabed: the one 2 m GeoTIFF taken out of DCBD's zip and kept on this machine, the UTM zone
 19N projection it is gridded on, and the depth at a point, a plain observed depth (datum NONE)."""
 import json
+import bisect
 import math
 import os
 import struct
@@ -206,7 +207,7 @@ def elevation(lat, lon):
     if not in_box(lat, lon):
         return None
     t = tile()
-    return t.value(*pixel(t, lat, lon))
+    return t.fast(*pixel(t, lat, lon))
 
 
 COMPASS = "N NNE NE ENE E ESE SE SSE S SSW SW WSW W WNW NW NNW".split()
@@ -217,23 +218,61 @@ def _bearing(dx, dy):
     return f"{b:.0f}° ({COMPASS[round(b / 22.5) % 16]})"
 
 
+_COLS = {}        # (row, wet) -> sorted columns of the row holding data (under water, with wet)
+COLS_CAP = 20000
+
+
+def _cols(t, row, wet):
+    key = (row, wet)
+    got = _COLS.get(key)
+    if got is None:
+        got = []
+        if 0 <= row < t.h and t.th == 1:
+            arr = t.floats(row)[:t.w]
+            nd = t.nodata
+            got = [c for c, v in enumerate(arr)
+                   if v == v and (nd is None or abs(v - nd) >= 1e-3) and not (wet and v >= 0)]
+        elif 0 <= row < t.h:
+            got = [c for c in range(t.w) if (v := t.fast(row, c)) is not None and not (wet and v >= 0)]
+        if len(_COLS) >= COLS_CAP:
+            del _COLS[next(iter(_COLS))]
+        _COLS[key] = got
+    return got
+
+
 def nearest_data(t, x, y, row, col, limit_m, wet=False):
     """Nearest pixel with data within limit_m of (x, y), or with wet the nearest under water:
-    (distance, dx, dy, value) or None."""
+    (distance, dx, dy, value) or None. Searched over the square of rows and columns within
+    limit_m of the pixel (row, col), that pixel itself left out, a row at a time: each row's
+    nearest column with data, from the row's sorted columns."""
+    k = int(limit_m / t.sx) + 1
     best = None
-    for ring in range(1, int(limit_m / t.sx) + 2):
-        if best and (ring - 1) * t.sx > best[0]:
-            break
-        for rr in range(row - ring, row + ring + 1):
-            edge = rr in (row - ring, row + ring)
-            for cc in (range(col - ring, col + ring + 1) if edge else (col - ring, col + ring)):
-                v = t.value(rr, cc)
-                if v is None or wet and v >= 0:
-                    continue
-                px, py = centre(t, rr, cc)
-                d = math.hypot(px - x, py - y)
+    for rr in range(row - k, row + k + 1):
+        cy = t.y0 - (rr + 0.5) * t.sy
+        dy = cy - y
+        if abs(dy) > limit_m or best is not None and abs(dy) >= best[0]:
+            continue
+        cols = _cols(t, rr, wet)
+        if not cols:
+            continue
+        cx = (x - t.x0) / t.sx - 0.5          # the point's fractional column
+        i = bisect.bisect_left(cols, cx)
+        for j in (i - 2, i - 1, i, i + 1):
+            if 0 <= j < len(cols) and col - k <= cols[j] <= col + k and not (rr == row and cols[j] == col):
+                cc = cols[j]
+                px = t.x0 + (cc + 0.5) * t.sx
+                d = math.hypot(px - x, dy)
                 if d <= limit_m and (best is None or d < best[0]):
-                    best = (d, px - x, py - y, v)
+                    best = (d, px - x, dy, t.fast(rr, cc))
+        # the nearest column may sit outside the square's columns on one side: the square's edge
+        # column nearest the point is then the row's best within the square
+        for edge in (col - k, col + k):
+            j = bisect.bisect_left(cols, edge)
+            if 0 <= j < len(cols) and cols[j] == edge:
+                px = t.x0 + (edge + 0.5) * t.sx
+                d = math.hypot(px - x, dy)
+                if d <= limit_m and (best is None or d < best[0]):
+                    best = (d, px - x, dy, t.fast(rr, edge))
     return best
 
 
@@ -241,7 +280,7 @@ def spread(t, x, y, row, col, radius_m):
     """(shallowest, deepest, share without data) of the pixels within radius_m, depths in metres
     below the surface; None where none holds data."""
     k = int(radius_m / t.sx)
-    vals = [t.value(rr, cc) for rr in range(row - k, row + k + 1) for cc in range(col - k, col + k + 1)
+    vals = [t.fast(rr, cc) for rr in range(row - k, row + k + 1) for cc in range(col - k, col + k + 1)
             if math.hypot(centre(t, rr, cc)[0] - x, centre(t, rr, cc)[1] - y) <= radius_m]
     have = [v for v in vals if v is not None]
     if not have:
@@ -257,7 +296,7 @@ def answer(lat, lon):
     t = tile()
     x, y = utm(lat, lon)
     row, col = pixel(t, lat, lon)
-    elev = t.value(row, col)
+    elev = t.fast(row, col)
     r = {"elev": elev, "source": "2 m grid", "res_m": t.sx, "tile": t, "row": row, "col": col}
     out = {"dem": r, "depth": None, "datum": None, "detail": None, "why": None}
     if elev is None:

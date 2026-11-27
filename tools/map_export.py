@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""The map viewer's data layers, every one cut to the areas in map/coverage.json: the tidal
-current layer from the current tool, the depth layer from NOAA NCEI's coastal DEM, and the tide
-stations the depth layer places its depths on MLLW with. Each layer is computed with the same
-library functions the tools answer with, and carries values those functions gave at sample
-points, which the browser reproduces before it draws anything: a point read on the map is the
-answer the tool gives there.
+"""The map viewer's data layers, over the areas in map/coverage.json: the tidal current, the
+depth, and the tides the depth layer adds to it. Each layer is computed with the library functions
+the tools answer with, and carries values those functions gave at sample points, which the browser
+reproduces before it draws anything: a point read on the map is the answer the tools give there.
+The map names no datum: it shows the total depth, the seabed plus the tide.
 
   map_export.py                 every layer
-  map_export.py depth           map/depth/ncei/ and map/depth/ncei.js
+  map_export.py depth           map/depth/tiles/ and map/depth/depth.js
   map_export.py tides           map/tides/stations.js
   map_export.py currents        map/currents/<area>-seafloor.js and map/currents/index.js
-"""
+
+Every source is downloaded first, the first time a layer needs it, so a first export runs long:
+a CHS tide station is fitted in about three minutes. Every run after reads them locally."""
 import argparse
 import array
 import base64
@@ -19,36 +20,32 @@ import math
 import os
 import random
 import shutil
-import struct
 import sys
 import time
-import zlib
 from datetime import date, datetime, timedelta, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import lib.tidal_astronomy as astro  # noqa: E402
-from lib import ncei, shapes, vdatum  # noqa: E402
+from lib import chs_tides, foreman, map_depth, shapes, tide  # noqa: E402
 from lib.adcirc import WALK_STEP_M, read_vel_header, read_vel_nodes  # noqa: E402
-from lib.current_harmonics import prepare as current_prepare, speed  # noqa: E402
 from lib.blend import (ABOVE_BOTTOM, DEG, EXACT_KM, EXTEND_KM, LINE_STEP_M, MIN_AMP, NEIGHBOURS,  # noqa: E402
                        PRIOR, REACH_KM, SOFTEN_KM, UTC, Mesh, Refused, blend_at, extract_point, floor_km,
                        load_region, log, make_bin, neighbours, profile_table, source_bins, to_noaa)
-from lib.ncei import (DATUM, LAKE_MIN, TILE_DEG, _Grid, _join, _lake_record, _Rows,  # noqa: E402
-                      _tile_lat, lake_level)
+from lib.current_harmonics import prepare as current_prepare, speed  # noqa: E402
+from lib.datums import CHS, MLLW  # noqa: E402
 from lib.seabed import Seabed  # noqa: E402
 from lib.tidal_astronomy import CONS  # noqa: E402
-from lib import tide  # noqa: E402
 from lib.tide_harmonics import RATE, height, prepare  # noqa: E402
 
 WORKSPACE = os.path.dirname(HERE)
-ROOT = WORKSPACE
 COVERAGE = os.path.join(WORKSPACE, "map", "coverage.json")
 MAP_YEARS_BACK, MAP_YEARS_AHEAD = 1, 10  # the years the map's astronomy is prepared for
 
 
 def coverage():
-    """The areas the map covers: [{name, label, boxes: [[S, W, N, E], ...]}]."""
+    """The areas the map covers: [{name, label, boxes: [[S, W, N, E], ...]}]. These are the map's
+    own areas, set for the water its layers draw, apart from the regions sites are written in."""
     try:
         with open(COVERAGE) as f:
             areas = json.load(f)["areas"]
@@ -74,7 +71,20 @@ def _blend_cfg(key, default):
 
 # --- the tidal current layer -----------------------------------------------------------------
 
-MAP_POINT_CHECKS, MAP_SHORE_CHECKS = 60, 20  # the sample points the browser reproduces
+MAP_SHORE_CHECKS = 20     # sample points just off the mesh's shoreline the browser reproduces, over the area
+CELL_POINT_CHECKS = 3     # sample points inside its own elements each cell carries
+CHUNK_NODES = 4000        # a cell is split in four while it owns more nodes than this
+CHUNK_MIN_DEG = 0.05      # and while it is taller than this
+HALO_KM = EXTEND_KM + 1.0  # the mesh a cell carries past its own box: as far as a point in it reaches, and a margin
+CURRENT_MIN_ZOOM = 9      # the viewer loads cells from this zoom in, those in view
+
+
+def b64(arr):
+    """A typed array as little-endian base64, as the browser decodes it."""
+    if sys.byteorder != "little":
+        arr = array.array(arr.typecode, arr)
+        arr.byteswap()
+    return base64.b64encode(arr.tobytes()).decode("ascii")
 
 
 def map_overlays():
@@ -90,10 +100,10 @@ def map_overlays():
         sys.exit(f"Could not read {path}: {e}. Delete it and run map_export.py currents again.")
 
 
-def write_index(out, entry):
-    """Add or replace `entry` in map/currents/index.js beside `out`, the list of every overlay
-    the map reads at load, keeping the others."""
-    index_path = os.path.join(os.path.dirname(out), "index.js")
+def write_index(entry):
+    """Add or replace `entry` in map/currents/index.js, the list of every overlay the map reads at
+    load, keeping the others."""
+    index_path = os.path.join(WORKSPACE, "map", "currents", "index.js")
     entries = map_overlays()
     entries = [e for e in entries if e["name"] != entry["name"]] + [entry]
     entries.sort(key=lambda e: e["name"])
@@ -153,14 +163,21 @@ def export_currents(area):
     corrections, the vertical profile and each node's distances through the water to the
     stations, with the astronomy prepared for each year the map may show. The browser computes
     the current at a point exactly as `extract` and `at` do there; the trails it draws run along
-    each node's own blended axis. Values the tool computed at sample nodes and at sample points
-    it picks in the boxes ride along, and the browser reproduces them before it draws anything.
-    The area's boxes cut it; within them, every mesh element whose corners all have a seabed
-    depth. It reads the region and its sources, never a site file."""
+    each node's own blended axis. The area's boxes cut it; within them, every mesh element whose
+    corners all have a seabed depth. It is written as cells the viewer loads as they come into
+    view (map/currents/<area>-seafloor/<cell>.js), beside one file every cell shares (common.js):
+    the stations, the astronomy and the coastline. Each cell carries values the tool computed at
+    its own sample nodes and points, which the browser reproduces before the cell draws. It reads
+    the region and its sources, never a site file."""
     name, label, boxes = area["name"] + "-seafloor", area["label"] + " seafloor", area["boxes"]
     S, W = min(b[0] for b in boxes), min(b[1] for b in boxes)
     N, E = max(b[2] for b in boxes), max(b[3] for b in boxes)
     reg = load_region(lat=(S + N) / 2, lon=(W + E) / 2)
+    rS, rW, rN, rE = reg["bbox"]
+    if not (rS <= S and rW <= W and rN >= N and rE >= E):
+        sys.exit(f"{area['name']}: its boxes reach past the current tool's {reg['name']} region "
+                 f"({rS}, {rW}, {rN}, {rE}); rebuild that region over them with current.py build --name "
+                 f"{reg['name']} --bbox S W N E, then run the export again.")
     sources = reg["sources"]
     mesh = Mesh(reg["db"], reg["bbox"])
     lon, lat = mesh.lon, mesh.lat
@@ -184,8 +201,7 @@ def export_currents(area):
     nodes = sorted({i for t in tris for i in t})
     if not nodes:
         sys.exit(f"{area['name']}: no mesh node in its boxes has a seabed depth from a bathymetry.")
-    if len(nodes) > 65535:
-        sys.exit(f"{len(nodes)} nodes: too many for the 16-bit triangle index; split the box.")
+    wide = len(nodes) > 65535   # the triangles' node index: 16 bits, or 32 for a large mesh
     index = {n: j for j, n in enumerate(nodes)}
     log(f"  {len(nodes)} nodes with a seabed depth, {len(tris)} elements")
     hab = ABOVE_BOTTOM
@@ -250,42 +266,76 @@ def export_currents(area):
                  {c: jc(z) for c, z in Z.items()}, az]
                 for frac, Lc, Lb, mean, turn, Z, az in source_bins(s)]
         stations.append({"id": s["id"], "lat": s["lat"], "lon": s["lon"], "bins": bins})
-    # each node's stations within reach through the water: how many, which and how far
-    cnt, src, km = array.array("B"), array.array("H"), array.array("f")
-    for n in nodes:
-        lst = sorted((i, d) for d, i in near[n])
-        if len(lst) > 255:
-            sys.exit("a node with more than 255 stations within reach: the count is a byte.")
-        cnt.append(len(lst))
-        for i, d in lst:
-            src.append(i)
-            km.append(d)
+    rng = random.Random(1)
+    moments = [datetime(rng.choice(years), 1, 1, tzinfo=UTC) + timedelta(minutes=rng.randrange(525600)) for _ in range(5)]
+    settings = {"aboveBottomM": hab, "neighbours": NEIGHBOURS, "reachKm": REACH_KM, "softenKm": SOFTEN_KM,
+                "prior": PRIOR, "exactKm": EXACT_KM, "minAmp": MIN_AMP, "extendKm": EXTEND_KM,
+                "walkStepM": WALK_STEP_M, "lineStepM": LINE_STEP_M}
+
+    # The cells: the area's box cut by a quadtree on the elements' centroids, split while a cell
+    # owns more than CHUNK_NODES nodes. A cell owns the elements whose centroid falls in it, and
+    # carries as well every element reaching into its box, which a point inside it can fall in,
+    # and every element on the mesh's edge within HALO_KM of its box, where a point inside it off
+    # the mesh takes the edge's constants (EXTEND_KM, and the walk in). The nearest point of the
+    # mesh to a point off it lies on the mesh's edge, so a point anywhere in the cell is placed and
+    # blended on the cell alone exactly as on the whole mesh.
+    cent = [(sum(lat[i] for i in t) / 3, sum(lon[i] for i in t) / 3) for t in tris]
+    tbox = [(min(lat[i] for i in t), min(lon[i] for i in t), max(lat[i] for i in t), max(lon[i] for i in t))
+            for t in tris]
+    eps = 1e-6
+    root = (min([S] + [c[0] for c in cent]) - eps, min([W] + [c[1] for c in cent]) - eps,
+            max([N] + [c[0] for c in cent]) + eps, max([E] + [c[1] for c in cent]) + eps)
+    edges = {}
+    for t in tris:
+        for x, y in ((t[0], t[1]), (t[1], t[2]), (t[2], t[0])):
+            k = (x, y) if x < y else (y, x)
+            edges[k] = edges.get(k, 0) + 1
+    on_edge = [any(edges[(x, y) if x < y else (y, x)] == 1 for x, y in ((t[0], t[1]), (t[1], t[2]), (t[2], t[0])))
+               for t in tris]
+
+    def halo_of(box):
+        s, w, n, e = box
+        dl = HALO_KM / 111.2
+        dw = HALO_KM / (111.2 * math.cos(math.radians(max(abs(s), abs(n)))))
+        return [k for k, (a, b, c, d) in enumerate(tbox)
+                if (a <= n and c >= s and b <= e and d >= w)
+                or (on_edge[k] and a <= n + dl and c >= s - dl and b <= e + dw and d >= w - dw)]
+
+    def split(box, ids):
+        s, w, n, e = box
+        if ids and len({i for k in ids for i in tris[k]}) > CHUNK_NODES and n - s > CHUNK_MIN_DEG:
+            ms, mw = (s + n) / 2, (w + e) / 2
+            out = []
+            for b in ((s, w, ms, mw), (s, mw, ms, e), (ms, w, n, mw), (ms, mw, n, e)):
+                out += split(b, [k for k in ids if b[0] <= cent[k][0] < b[2] and b[1] <= cent[k][1] < b[3]])
+            return out
+        return [(box, ids)]
+
+    leaves = []
+    for box, ids in split(root, list(range(len(tris)))):
+        near_tris = halo_of(box)
+        if near_tris:   # a cell owning nothing still answers the water within reach of its neighbours' mesh
+            leaves.append((box, set(ids), sorted(set(near_tris) | set(ids))))
+    log(f"  {len(leaves)} cells, at most {CHUNK_NODES} nodes owned by each")
+    leaf_of = lambda la, lo: next((k for k, (b, _, _) in enumerate(leaves)
+                                   if b[0] <= la < b[2] and b[1] <= lo < b[3]), None)
 
     def bottom_uv(Zb, az, t):
         sp = speed(Zb, t)
         return sp * math.sin(az * DEG), sp * math.cos(az * DEG)
 
-    rng = random.Random(1)
-    moments = [datetime(rng.choice(years), 1, 1, tzinfo=UTC) + timedelta(minutes=rng.randrange(525600)) for _ in range(5)]
-    # the browser's port of the blend, proved at sample nodes: each one blended here from the
-    # same int16 constants the browser reads, with the trails' seabed
     m2 = {n: abs(node_uv[n]["M2"][0]) + abs(node_uv[n]["M2"][1]) for n in nodes}
-    picks = sorted(set(sorted(nodes, key=lambda n: -m2[n])[:3]) | set(nodes[::max(1, len(nodes) // 12)]))
-    node_checks = []
-    for n in picks:
-        j = index[n]
+
+    def node_check(n):
+        # the browser's port of the blend at a node, blended here from the same int16 constants
+        # the browser reads, with the trails' seabed
         fl = floor_km({i: d for d, i in near[n]}, lat[n], lon[n], sources)
         H = depth[n]
         frac = max(min(hab, H) / H, 0.01) if H > 0 else 1.0
-        Zn, mean, az, _ = blend_at(deq(j), neighbours(fl, sources), prof, frac, fl, sources)
+        Zn, mean, az, _ = blend_at(deq(index[n]), neighbours(fl, sources), prof, frac, fl, sources)
         b = make_bin(Zn, mean, az)
-        for t in moments:
-            u, v = bottom_uv(b, az, t)
-            node_checks.append({"node": j, "t": int(t.timestamp() * 1000), "u": round(u, 6), "v": round(v, 6)})
-    # sample points the export picks itself, each placed and extracted as `extract` does at any
-    # coordinate, so the browser proves the readout it gives at a point: points inside elements
-    # spread across the boxes, and points just off the mesh's shoreline, where the constants come from
-    # the mesh edge
+        return [(t, *bottom_uv(b, az, t)) for t in moments]
+
     def inner(t):
         # a point inside the element, one corner's weight clear of the others: the start node of
         # the paths through the water is the corner with the largest weight, which a near tie
@@ -297,29 +347,22 @@ def export_currents(area):
         w = [x / sum(w) for x in w]
         rng.shuffle(w)
         return sum(wi * lat[i] for wi, i in zip(w, t)), sum(wi * lon[i] for wi, i in zip(w, t))
-    cands = [("inner", *inner(t)) for t in tris[::max(1, len(tris) // MAP_POINT_CHECKS)]]
-    shore_nodes = sorted(n for n in nodes if n in shore)
-    for _ in range(MAP_SHORE_CHECKS * 10 if shore_nodes else 0):
-        n = rng.choice(shore_nodes)
-        r, brg = rng.uniform(50, 1000 * EXTEND_KM), rng.uniform(0, 360) * DEG
-        cands.append(("shore", lat[n] + r * math.cos(brg) / 111200,
-                      lon[n] + r * math.sin(brg) / (111200 * math.cos(math.radians(lat[n])))))
-    points, n_shore = [], 0
-    for kind, la, lo in cands:
-        if kind == "shore" and n_shore >= MAP_SHORE_CHECKS:
-            continue
+
+    def point_check(kind, la, lo):
+        # a point placed and extracted as `extract` does at any coordinate, or None where the
+        # tool gives nothing to prove there
         la, lo = round(la, 5), round(lo, 5)
         if not any(bs <= la <= bn and bw <= lo <= be for bs, bw, bn, be in boxes):
-            continue
+            return None
         e, _ = seabed.elevation(la, lo)
         if e is None or -e <= hab:
-            continue
+            return None
         try:
             nn, w, ext = mesh.place_site(la, lo)
         except Refused:
-            continue
+            return None
         if any(x not in index for x in nn) or (kind == "shore" and not ext):
-            continue
+            return None
         H = round(-e, 1)
         # interpolated from the same int16 constants the browser reads, as the node checks are,
         # so the check proves the port and leaves the file's rounding out of it
@@ -328,558 +371,226 @@ def export_currents(area):
               for k in keys}
         cur = extract_point(uv, max(zip(w, nn))[1], mesh, reg, H, ABOVE_BOTTOM, la, lo, say=lambda m: None)
         mine = {"cons": cur["bottom"]["cons"], "mean_major": cur["bottom"]["mean_major"]}
-        n_shore += kind == "shore"
         # what `at` prints: the signed speed along the flood direction, which it gives to 0.1°
-        points.append({"lat": la, "lon": lo, "seabed": H, "flood": cur["flood_dir"],
-                       "checks": [{"t": int(t.timestamp() * 1000), "s": round(speed(mine, t), 6)} for t in moments]})
-    log(f"  {len(points)} sample points carried as checks, {n_shore} of them off the mesh's shoreline")
-    if not points:
+        return {"lat": la, "lon": lo, "seabed": H, "flood": cur["flood_dir"],
+                "checks": [{"t": int(t.timestamp() * 1000), "s": round(speed(mine, t), 6)} for t in moments]}
+
+    # every cell's checks: its strongest node and one more, points inside its own elements, and
+    # points just off the mesh's shoreline, where the constants come from the mesh edge
+    checks = [{"nodes": [], "points": []} for _ in leaves]
+    for k, (box, owned, _) in enumerate(leaves):
+        own_nodes = sorted({i for j in owned for i in tris[j]})
+        if own_nodes:
+            for n in sorted({max(own_nodes, key=lambda n: m2[n]), rng.choice(own_nodes)}):
+                checks[k]["nodes"] += [{"node": n, "t": int(t.timestamp() * 1000), "u": round(u, 6), "v": round(v, 6)}
+                                       for t, u, v in node_check(n)]
+        own_list = sorted(owned)
+        for j in own_list[::max(1, len(own_list) // (4 * CELL_POINT_CHECKS))]:
+            if len(checks[k]["points"]) >= CELL_POINT_CHECKS:
+                break
+            p = point_check("inner", *inner(tris[j]))
+            if p and leaf_of(p["lat"], p["lon"]) == k:
+                checks[k]["points"].append(p)
+    shore_nodes = sorted(n for n in nodes if n in shore)
+    n_shore = 0
+    for _ in range(MAP_SHORE_CHECKS * 100 if shore_nodes else 0):
+        if n_shore >= MAP_SHORE_CHECKS:
+            break
+        n = rng.choice(shore_nodes)
+        r, brg = rng.uniform(50, 1000 * EXTEND_KM), rng.uniform(0, 360) * DEG
+        p = point_check("shore", lat[n] + r * math.cos(brg) / 111200,
+                        lon[n] + r * math.sin(brg) / (111200 * math.cos(math.radians(lat[n]))))
+        k = p and leaf_of(p["lat"], p["lon"])
+        if p and k is not None:
+            checks[k]["points"].append(p)
+            n_shore += 1
+    n_points = sum(len(c["points"]) for c in checks)
+    log(f"  {n_points} sample points carried as checks, {n_shore} of them off the mesh's shoreline")
+    if not n_points:
         sys.exit("No sample point in the boxes could be placed and extracted: the overlay would carry no point check.")
 
-    xy, tri, dep = array.array("f"), array.array("H"), array.array("f")
-    for n in nodes:
-        xy.extend((lon[n], lat[n]))
-        dep.append(depth[n])
-    for t in tris:
-        tri.extend(index[i] for i in t)
-    sh = array.array("B", [1 if n in shore else 0 for n in nodes])
-    arrays = (xy, tri, dep, scale, q, cnt, src, km, sh)
-    if sys.byteorder != "little":
-        for arr in arrays:
-            arr.byteswap()
-    b64 = lambda arr: base64.b64encode(arr.tobytes()).decode("ascii")
-    out_doc = {
+    common = {
         "name": name, "label": label, "bbox": [S, W, N, E], "boxes": boxes,
         "source": f"{reg['db']} ADCIRC tidal database corrected by NOAA and CHS current stations, "
                   f"{hab:g} m above the seabed",
         "maxSpeedMs": _blend_cfg("max_speed_ms", 0.25),
-        "nodeCount": len(nodes), "triangleCount": len(tris),
-        "nodes": b64(xy), "triangles": b64(tri), "depth": b64(dep), "shoreNodes": b64(sh),
-        "database": {"names": keys, "scale": b64(scale), "uv": b64(q)},
-        "near": {"count": b64(cnt), "station": b64(src), "km": b64(km)},
+        "database": {"names": keys},
         "stations": stations,
         "profile": {str(b): [[f, z.real, z.imag] for f, z in prof[b]] for b in (1, 2)},
         "astronomy": astronomy,
-        "settings": {"aboveBottomM": hab, "neighbours": NEIGHBOURS, "reachKm": REACH_KM, "softenKm": SOFTEN_KM,
-                     "prior": PRIOR, "exactKm": EXACT_KM, "minAmp": MIN_AMP, "extendKm": EXTEND_KM,
-                     "walkStepM": WALK_STEP_M, "lineStepM": LINE_STEP_M},
-        "checks": {"nodes": node_checks, "points": points},
+        "settings": settings,
         "landMask": land_mask(S, W, N, E),
     }
-    out = os.path.join(WORKSPACE, "map", "currents", f"{name}.js")
-    os.makedirs(os.path.dirname(out), exist_ok=True)
-    with open(out + ".part", "w") as fh:
-        fh.write("// Generated by tools/map_export.py; regenerate rather than edit.\n")
-        fh.write(f"// {label}: {len(nodes)} {reg['db']} mesh nodes, {len(tris)} elements, {len(sources)} stations, "
-                 f"{len(points)} sample points. The browser runs the tool's blend.\n")
-        fh.write("window.MAP_CURRENTS = window.MAP_CURRENTS || {};\n")
-        fh.write(f"window.MAP_CURRENTS[{json.dumps(name)}] = ")
-        fh.write(json.dumps(out_doc, separators=(",", ":")))
-        fh.write(";\n")
-    os.replace(out + ".part", out)
-    log(f"  wrote {os.path.relpath(out, WORKSPACE)} ({os.path.getsize(out) / 1e6:.1f} MB)")
-    write_index(out, {"name": name, "label": label, "file": os.path.relpath(out, WORKSPACE),
-                      "boxes": boxes, "kind": "seafloor"})
+    out_dir = os.path.join(WORKSPACE, "map", "currents", name)
+    part = out_dir + ".part"
+    shutil.rmtree(part, ignore_errors=True)
+    os.makedirs(part)
 
-# --- the depth layer ------------------------------------------------------------------------
-#
-# Each map tile is a 256 x 256 RGB PNG whose pixels hold a 16-bit value v (R high byte, G low
-# byte, B the pixel's kind): depth below NAVD 88 = (v - 1) * MAP_SCALE + MAP_SHALLOWEST, so it runs from
-# MAP_SHALLOWEST (5 m above the datum, room for the tide on a drying flat) to the deepest
-# water. v = 0, made transparent through the PNG's tRNS chunk, is higher ground, no data, or outside
-# the coverage. The map viewer colours the depths itself, so one set of tiles serves every style.
+    def write_js(path, key, doc, note):
+        with open(path, "w") as fh:
+            fh.write("// Generated by tools/map_export.py; regenerate rather than edit.\n")
+            fh.write(f"// {note}\n")
+            fh.write("window.MAP_CURRENTS = window.MAP_CURRENTS || {};\n")
+            fh.write(f"window.MAP_CURRENTS[{json.dumps(key)}] = ")
+            fh.write(json.dumps(doc, separators=(",", ":")))
+            fh.write(";\n")
 
-MAP_DIR = os.path.join(ROOT, "map", "depth")
+    write_js(os.path.join(part, "common.js"), name, common,
+             f"{label}: the stations, astronomy and coastline every cell of the overlay shares.")
+    rel = lambda p: os.path.relpath(p, WORKSPACE).replace(os.sep, "/").replace(".part/", "/", 1)
+    cells = []
+    for k, (box, owned, cell_tris) in enumerate(leaves):
+        cn = sorted({i for j in cell_tris for i in tris[j]})
+        ci = {n: m for m, n in enumerate(cn)}
+        wide = len(cn) > 65535   # the triangles' node index: 16 bits, or 32 for a large cell
+        xy, tri, dep = array.array("f"), array.array("I" if wide else "H"), array.array("f")
+        own, sh, sc, qq = array.array("B"), array.array("B"), array.array("f"), array.array("h")
+        cnt, src, km = array.array("B"), array.array("H"), array.array("f")
+        nk4 = 4 * len(keys)
+        for n in cn:
+            j = index[n]
+            xy.extend((lon[n], lat[n]))
+            dep.append(depth[n])
+            sh.append(1 if n in shore else 0)
+            sc.append(scale[j])
+            qq.extend(q[j * nk4:(j + 1) * nk4])
+            lst = sorted((i, d) for d, i in near[n])
+            if len(lst) > 255:
+                sys.exit("a node with more than 255 stations within reach: the count is a byte.")
+            cnt.append(len(lst))
+            for i, d in lst:
+                src.append(i)
+                km.append(d)
+        for j in cell_tris:
+            tri.extend(ci[i] for i in tris[j])
+            own.append(1 if j in owned else 0)
+        cid = f"{k:03d}"
+        doc = {
+            "name": f"{name}/{cid}", "bbox": list(box),
+            "nodeCount": len(cn), "triangleCount": len(cell_tris), "triangleIndex": "u32" if wide else "u16",
+            "nodes": b64(xy), "triangles": b64(tri), "own": b64(own), "depth": b64(dep), "shoreNodes": b64(sh),
+            "database": {"scale": b64(sc), "uv": b64(qq)},
+            "near": {"count": b64(cnt), "station": b64(src), "km": b64(km)},
+            "checks": {"nodes": [{**c, "node": ci[c["node"]]} for c in checks[k]["nodes"]], "points": checks[k]["points"]},
+        }
+        path = os.path.join(part, f"{cid}.js")
+        write_js(path, f"{name}/{cid}", doc,
+                 f"{label}, cell {cid}: {len(cn)} {reg['db']} mesh nodes, {len(cell_tris)} elements "
+                 f"({len(owned)} its own). The browser runs the tool's blend.")
+        cells.append({"id": cid, "box": [round(x, 7) for x in box], "file": rel(path),
+                      "bytes": os.path.getsize(path)})
+    shutil.rmtree(out_dir, ignore_errors=True)
+    os.replace(part, out_dir)
+    old = os.path.join(WORKSPACE, "map", "currents", f"{name}.js")   # the single-file form an earlier export wrote
+    if os.path.exists(old):
+        os.remove(old)
+    size = sum(c["bytes"] for c in cells) + os.path.getsize(os.path.join(out_dir, "common.js"))
+    log(f"  wrote {rel(out_dir)}/: common.js and {len(cells)} cells, {size / 1e6:.1f} MB in all, "
+        f"the largest cell {max(c['bytes'] for c in cells) / 1e6:.1f} MB")
+    write_index({
+        "name": name, "label": label, "kind": "seafloor", "boxes": boxes, "version": int(time.time()),
+        "dir": rel(out_dir), "common": rel(os.path.join(out_dir, "common.js")), "minZoom": CURRENT_MIN_ZOOM,
+        "cells": [{k: c[k] for k in ("id", "box", "file")} for c in cells]})
 
+# --- the tides --------------------------------------------------------------------------------
 
-MAP_LAYER = "ncei"
-
-
-MAP_SCALE = 0.1
-
-
-MAP_SHALLOWEST = -5.0
-
-
-MAP_CHECKS = 24
-
-
-def _png(vals, kinds=None):
-    """256 x 256 RGB PNG of 16-bit values (R high, G low) and a kind in B (0 sea, k the k-th
-    listed lake); value 0 with kind 0 is transparent. Rows Up-filtered."""
-    rgb = bytearray(3 * 65536)
-    rgb[0::3] = bytes(v >> 8 for v in vals)
-    rgb[1::3] = bytes(v & 255 for v in vals)
-    if kinds is not None:
-        rgb[2::3] = bytes(kinds)
-    rows, prev = bytearray(), bytes(768)
-    for y in range(256):
-        line = rgb[y * 768:(y + 1) * 768]
-        rows += b"\x02" + bytes((a - b) & 255 for a, b in zip(line, prev))
-        prev = line
-
-    def chunk(k, d):
-        return struct.pack(">I", len(d)) + k + d + struct.pack(">I", zlib.crc32(k + d))
-    return (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", 256, 256, 8, 2, 0, 0, 0))
-            + chunk(b"tRNS", bytes(6)) + chunk(b"IDAT", zlib.compress(bytes(rows), 9)) + chunk(b"IEND", b""))
-
-
-def _unpng(path):
-    """Values of a tile _png() wrote."""
-    with open(path, "rb") as f:
-        data = f.read()
-    pos, idat = 8, b""
-    while pos < len(data):
-        n = struct.unpack(">I", data[pos:pos + 4])[0]
-        if data[pos + 4:pos + 8] == b"IDAT":
-            idat += data[pos + 8:pos + 8 + n]
-        pos += 12 + n
-    raw, prev, vals, kinds = zlib.decompress(idat), bytes(768), [], []
-    for y in range(256):
-        line = bytes((a + b) & 255 for a, b in zip(raw[y * 769 + 1:(y + 1) * 769], prev))
-        prev = line
-        vals.extend((line[i] << 8) | line[i + 1] for i in range(0, 768, 3))
-        kinds.extend(line[2::3])
-    return vals, kinds
-
-
-def _write(z, x, y, vals, kinds):
-    d = os.path.join(MAP_DIR, MAP_LAYER, str(z), str(x))
-    os.makedirs(d, exist_ok=True)
-    with open(os.path.join(d, f"{y}.png"), "wb") as f:
-        f.write(_png(vals, kinds))
+TIDES_FILE = os.path.join(WORKSPACE, "map", "tides", "stations.js")
+TIDE_MARGIN_DEG = 0.3   # stations this far past the boxes join the blend at their edges
+TIDE_CHECKS = 4         # sample moments per station the browser reproduces
 
 
-class _Lakes:
-    """Every HydroLAKES outline touching the area, to mark map pixels as lake: a lake with a
-    level by its place in the table (1, 2, ...), any other lake EMPTY, never drawn."""
-    EMPTY = 255
-
-    def __init__(self, S, W, N, E, grid):
-        km = math.hypot((N - S) * 111.2, (E - W) * 111.2 * math.cos(math.radians((S + N) / 2))) / 2
-        found = []
-        for rec, rings in shapes.polygons("lakes", (S + N) / 2, (W + E) / 2, km):
-            xs = [x for r in rings for x, _ in r]
-            ys = [y for r in rings for _, y in r]
-            if max(ys) < S or min(ys) > N or max(xs) < W or min(xs) > E:
-                continue
-            hid, name, info = _lake_record(rec)
-            lvl = lake_level(hid, rings, info, grid)["level"]
-            found.append((min(xs), min(ys), max(xs), max(ys), rings, hid, name, lvl))
-        with_level = sorted((L for L in found if L[7] is not None), key=lambda L: L[5])
-        if len(with_level) >= self.EMPTY:
-            sys.exit(f"{len(with_level)} lakes with a level; a map pixel's kind holds at most {self.EMPTY - 1}.")
-        self._table = [{"id": L[5], "name": L[6].split(" (HydroLAKES")[0] if "(" in L[6] else "Lake",
-                        "level": L[7]} for L in with_level]
-        self.level = [None] + [L[7] for L in with_level]
-        kind = {L[5]: i + 1 for i, L in enumerate(with_level)}
-        self.levelled = [(i + 1, L[4], L[7]) for i, L in enumerate(with_level)]
-        self.levelled_rows = _Rows([L[4] for L in with_level])
-        self.unlevelled_rows = _Rows([L[4] for L in found if L[7] is None])
-        self.lakes = []
-        # Lakes with no level first, so a lake with one wins where two outlines overlap.
-        for x0, y0, x1, y1, rings, hid, _, lvl in sorted(found, key=lambda L: L[7] is not None):
-            edges = [(a[0], a[1], b[0], b[1]) for r in rings for a, b in zip(r, r[1:] + r[:1]) if a[1] != b[1]]
-            self.lakes.append((x0, y0, x1, y1, edges, kind.get(hid, self.EMPTY)))
-        print(f"{len(found)} lakes, {len(with_level)} with a level read from the DEM", file=sys.stderr, flush=True)
-
-    def table(self):
-        return self._table
-
-    def kinds(self, lats, lons):
-        """The kind of each pixel of a tile (pixel-centre latitudes and longitudes), as a list of
-        65536, or None where no lake reaches the tile."""
-        lo0, lo1, la0, la1 = lons[0], lons[-1], lats[-1], lats[0]
-        near = [L for L in self.lakes if L[2] >= lo0 and L[0] <= lo1 and L[3] >= la0 and L[1] <= la1]
-        if not near:
-            return None
-        out, dl = [0] * 65536, (lons[-1] - lons[0]) / 255
-        for x0, y0, x1, y1, edges, kind in near:
-            rows = [e for e in edges if max(e[1], e[3]) >= la0 and min(e[1], e[3]) <= la1]
-            for py, lat in enumerate(lats):
-                if not y0 <= lat <= y1:
-                    continue
-                xs = sorted(ax + (lat - ay) * (bx - ax) / (by - ay)
-                            for ax, ay, bx, by in rows if (ay > lat) != (by > lat))
-                for a, b in zip(xs[0::2], xs[1::2]):
-                    c0 = max(0, math.ceil((a - lons[0]) / dl))
-                    c1 = min(255, math.floor((b - lons[0]) / dl))
-                    for c in range(c0, c1 + 1):
-                        out[py * 256 + c] = kind
-        return out
+def _moments(rng, years):
+    return [datetime(rng.choice(years), 1, 1, tzinfo=timezone.utc) + timedelta(minutes=rng.randrange(525600))
+            for _ in range(TIDE_CHECKS)]
 
 
-def _encode(e, kind, levels):
-    """The stored value of one pixel from its elevation and kind, 0 for nothing drawn: depth
-    below NAVD 88 at sea, depth below the lake's level in a lake with one."""
-    if e is None or kind == _Lakes.EMPTY:
-        return 0
-    if kind:
-        d = levels[kind] - e
-        return 0 if d < LAKE_MIN else min(65535, round((d - MAP_SHALLOWEST) / MAP_SCALE) + 1)
-    return 0 if -e < MAP_SHALLOWEST else min(65535, round((-e - MAP_SHALLOWEST) / MAP_SCALE) + 1)
+def _highest(fn, year):
+    """The highest tide of the year, hourly: ground below it is the tide's to cover."""
+    start = datetime(year, 1, 1, tzinfo=timezone.utc)
+    return max(fn(start + timedelta(hours=k)) for k in range(366 * 24))
 
 
-MAP_MAX_ZOOM, MAP_MIN_ZOOM = 14, 9  # zoom 14 is about 6 m a pixel at 48° N, and JOIN_ZOOM's lattice
-
-
-def _clip(boxes, lats, lons):
-    """Which pixels of a map tile (pixel-centre latitudes and longitudes) lie inside the boxes:
-    None for none, True for all, else a list of 65536 flags."""
-    spans = []
-    for s, w, n, e in boxes:
-        rows = [i for i, la in enumerate(lats) if s <= la <= n]
-        cols = [i for i, lo in enumerate(lons) if w <= lo <= e]
-        if rows and cols:
-            spans.append((rows[0], rows[-1], cols[0], cols[-1]))
-    if not spans:
-        return None
-    if any(r0 == 0 and r1 == 255 and c0 == 0 and c1 == 255 for r0, r1, c0, c1 in spans):
-        return True
-    mask = [False] * 65536
-    for r0, r1, c0, c1 in spans:
-        for r in range(r0, r1 + 1):
-            mask[r * 256 + c0:r * 256 + c1 + 1] = [True] * (c1 - c0 + 1)
-    return mask
-
-
-def export_depth(areas):
-    """Write map/depth/ncei/{z}/{x}/{y}.png over the coverage, and map/depth/ncei.js, the layer's
-    description with check values the viewer reproduces before drawing. Every NCEI tile touching
-    the coverage is downloaded first; each area is read with its own lakes and coastline, and its
-    pixels outside the area's boxes are left empty."""
-    boxes_all = [b for ar in areas for b in ar["boxes"]]
-    if ncei.fetch(boxes_all, 6):
-        sys.exit("Some NCEI tiles failed to download; the depth layer was left as it was.")
-    grid = _Grid()
-    t0 = time.time()
-    out = os.path.join(MAP_DIR, MAP_LAYER)
-    if os.path.isdir(out):
-        shutil.rmtree(out)
-    max_zoom, min_zoom = MAP_MAX_ZOOM, MAP_MIN_ZOOM
-    n = 2 ** max_zoom
-    ty = lambda lat: int((1 - math.asinh(math.tan(math.radians(lat))) / math.pi) / 2 * n)
-    tx = lambda lon: int((lon + 180) / 360 * n)
-    written = {max_zoom: set()}
-    levels, table = [None], []   # every area's lakes with a level, numbered across the layer
-    # Check points: a lattice of pixels in each tile, kept by reservoir sampling per kind, at
-    # sea outside the coastline and in a lake inside its own outline, as a point query reads.
-    rng, want = random.Random(1), {0: MAP_CHECKS}
-    seen, picks = {}, {}
-    for ar in areas:
-        boxes = ar["boxes"]
-        S, W = min(b[0] for b in boxes), min(b[1] for b in boxes)
-        N, E = max(b[2] for b in boxes), max(b[3] for b in boxes)
-        lakes = _Lakes(S, W, N, E, grid)
-        base = len(table)
-        if base + len(lakes.table()) >= _Lakes.EMPTY:
-            sys.exit(f"more than {_Lakes.EMPTY - 1} lakes with a level across the coverage: a pixel's kind is a byte.")
-        table += lakes.table()
-        levels += lakes.level[1:]
-        glob = lambda k: k + base if 0 < k < _Lakes.EMPTY else k
-        km = math.hypot((N - S) * 111.2, (E - W) * 111.2 * math.cos(math.radians((S + N) / 2))) / 2 + 5
-        land = _Rows([r for _, r in shapes.polygons("land", (S + N) / 2, (W + E) / 2, km)], S, N)
-        # Water joined to each lake with a level, by map tile: a pixel two lakes reach is the one
-        # nearer through the water.
-        best = {}
-        for kind, rings, level in lakes.levelled:
-            for p, d in _join(rings, level, grid, land, lakes.levelled_rows, lakes.unlevelled_rows).items():
-                if p not in best or d < best[p][0]:
-                    best[p] = (d, kind)
-        joined = {}
-        for (X, Y), (_, kind) in best.items():
-            joined.setdefault((X // 256, Y // 256), []).append(((Y % 256) * 256 + X % 256, kind))
-        log(f"  {ar['label']}: lakes, coastline and {len(best)} pixels of joined water read, {time.time() - t0:.0f} s")
-        tiles = sorted({(x, y) for s_, w_, n_, e_ in boxes
-                        for y in range(ty(n_), ty(s_) + 1) for x in range(tx(w_), tx(e_) + 1)},
-                       key=lambda t: (t[1], t[0]))
-        log(f"  {ar['label']}: rendering zoom {max_zoom} over {len(tiles)} map tiles...")
-        lats_of, rows_of = {}, {}
-        for k, (x, y) in enumerate(tiles, 1):
-            if y not in lats_of:
-                lats_of[y] = [_tile_lat(y + (p + 0.5) / 256, n) for p in range(256)]
-            lats = lats_of[y]
-            lx = [(x + (p + 0.5) / 256) / n * 360 - 180 for p in range(256)]
-            inside = _clip(boxes, lats, lx)
-            if inside is None:
-                continue
-            cells = {(math.ceil(la / TILE_DEG) * TILE_DEG, math.floor(lo / TILE_DEG) * TILE_DEG)
-                     for la in (lats[0], lats[-1]) for lo in (lx[0], lx[-1])}
-            if not any(c in grid.tiles for c in cells):
-                continue
-            if y not in rows_of:
-                rows_of[y] = land.crossings(lats)
-            es = [grid.elev(lat, lon) for lat in lats for lon in lx]
-            outline = lakes.kinds(lats, lx) or [0] * 65536
-            kinds = list(outline)
-            for i, kind in joined.get((x, y), ()):
-                kinds[i] = kind
-            onland = land.mask(rows_of[y], lx)
-            # Inland of the coastline and in no lake: never sea.
-            for i in range(65536):
-                if onland[i] and not kinds[i]:
-                    kinds[i] = _Lakes.EMPTY
-            vals = [_encode(e, kd, lakes.level) for e, kd in zip(es, kinds)]
-            if inside is not True:
-                vals = [v if m else 0 for v, m in zip(vals, inside)]
-            if not any(vals):
-                continue
-            for py in range(16, 256, 32):
-                for px in range(16, 256, 32):
-                    i = py * 256 + px
-                    kd = kinds[i]
-                    if not vals[i] or kd != outline[i] or (kd == 0 and onland[i]):
-                        continue
-                    g = glob(kd)
-                    seen[g] = seen.get(g, 0) + 1
-                    got, cap, pt = picks.setdefault(g, []), want.get(g, 2), (lats[py], lx[px])
-                    if len(got) < cap:
-                        got.append(pt)
-                    elif (j := rng.randrange(seen[g])) < cap:
-                        got[j] = pt
-            ks = [glob(kd) if v else 0 for v, kd in zip(vals, kinds)]
-            if (x, y) in written[max_zoom]:
-                # a tile two areas share: keep what the first wrote where this one draws nothing
-                pv, pk = _unpng(os.path.join(out, str(max_zoom), str(x), f"{y}.png"))
-                vals = [v or q for v, q in zip(vals, pv)]
-                ks = [kd if v else q for v, kd, q in zip(vals, ks, pk)]
-            _write(max_zoom, x, y, vals, ks if any(ks) else None)
-            written[max_zoom].add((x, y))
-            if k % 500 == 0:
-                log(f"    {k}/{len(tiles)} map tiles, {len(written[max_zoom])} written, {time.time() - t0:.0f} s")
-    if not written[max_zoom]:
-        sys.exit("No depth inside the coverage: no NCEI tile holds data inside its boxes.")
-    # Lower zooms: each pixel the mean of the 2 x 2 below it of the kind most of them hold,
-    # kept where at least two hold data of that kind.
-    for z in range(max_zoom - 1, min_zoom - 1, -1):
-        written[z] = set()
-        for (cx, cy) in {(x // 2, y // 2) for x, y in written[z + 1]}:
-            vals, kinds = [0] * 65536, [0] * 65536
-            for dx in (0, 1):
-                for dy in (0, 1):
-                    if (2 * cx + dx, 2 * cy + dy) not in written[z + 1]:
-                        continue
-                    cv, ck = _unpng(os.path.join(out, str(z + 1), str(2 * cx + dx), f"{2 * cy + dy}.png"))
-                    for py in range(128):
-                        for px in range(128):
-                            q = [((2 * py + a) * 256 + 2 * px + b) for a in (0, 1) for b in (0, 1)]
-                            q = [(cv[i], ck[i]) for i in q if cv[i]]
-                            if len(q) < 2:
-                                continue
-                            kind = max({k for _, k in q}, key=lambda kk: sum(1 for _, k in q if k == kk))
-                            same = [v for v, k in q if k == kind]
-                            if len(same) >= 2:
-                                o = (dy * 128 + py) * 256 + dx * 128 + px
-                                vals[o], kinds[o] = round(sum(same) / len(same)), kind
-            if any(vals):
-                _write(z, cx, cy, vals, kinds)
-                written[z].add((cx, cy))
-        log(f"  zoom {z}: {len(written[z])} tiles, {time.time() - t0:.0f} s")
-    _describe(grid, boxes_all, levels, table, picks, written, max_zoom, min_zoom, out, t0)
-
-
-def _describe(grid, boxes, levels, table, picks, written, max_zoom, min_zoom, out, t0):
-    """Write map/depth/ncei.js for the tiles written: the layer's description, with check
-    values read at the picked points the way a point query reads them."""
-    S, W = min(b[0] for b in boxes), min(b[1] for b in boxes)
-    N, E = max(b[2] for b in boxes), max(b[3] for b in boxes)
-    checks = []
-    for kind in sorted(picks):
-        for lat, lon in picks[kind]:
-            # The cached tile tile_for() would pick, read with Tile.value as dem() reads it.
-            t = grid.tiles[(math.ceil(lat / TILE_DEG) * TILE_DEG, math.floor(lon / TILE_DEG) * TILE_DEG)]
-            r, c = t.pixel(lat, lon)
-            v = t.value(r, c)
-            t._blocks.clear()
-            depth = levels[kind] - v if kind else -v
-            checks.append({"lat": round(lat, 7), "lon": round(lon, 7), "depth": round(depth, 2), "lake": kind})
-    if len(picks.get(0, ())) < MAP_CHECKS:
-        sys.exit(f"found only {len(picks.get(0, ()))} sea check points of {MAP_CHECKS}")
-    total_bytes = sum(os.path.getsize(os.path.join(out, str(z), str(x), f"{y}.png"))
-                      for z, s in written.items() for x, y in s)
-    used = {(math.ceil(la / TILE_DEG) * TILE_DEG, math.floor(lo / TILE_DEG) * TILE_DEG)
-            for s, w, n, e in boxes for la in _steps(s, n) for lo in _steps(w, e)}
-    layer = {
-        "name": MAP_LAYER, "label": "Depth (NCEI)", "datum": DATUM,
-        "tiles": f"map/depth/{MAP_LAYER}/{{z}}/{{x}}/{{y}}.png",
-        "scale": MAP_SCALE, "shallowest": MAP_SHALLOWEST,
-        "minZoom": min_zoom, "maxZoom": max_zoom,
-        "bounds": [[S, W], [N, E]],
-        "boxes": boxes,
-        "built": date.today().isoformat(),
-        "sources": sorted(t.name for key, t in grid.tiles.items() if key in used),
-        "lakes": table,
-        "present": {str(z): ",".join(f"{x}/{y}" for x, y in sorted(s)) for z, s in written.items()},
-        "checks": checks,
-    }
-    with open(os.path.join(MAP_DIR, f"{MAP_LAYER}.js"), "w") as f:
-        f.write("// Written by tools/map_export.py; regenerate rather than edit.\n")
-        f.write("window.MAP_DEPTH = window.MAP_DEPTH || {};\n")
-        f.write(f"window.MAP_DEPTH[{json.dumps(MAP_LAYER)}] = {json.dumps(layer, separators=(',', ':'))};\n")
-    count = sum(len(s) for s in written.values())
-    log(f"  wrote {count} tiles ({total_bytes / 1e6:.0f} MB) to map/depth/{MAP_LAYER}/ and "
-        f"map/depth/{MAP_LAYER}.js, {len(checks)} checks, in {time.time() - t0:.0f} s")
-
-
-def _steps(a, b):
-    """Points every half tile from a to b, ends included, to list the NCEI tiles a box touches."""
-    k = max(1, math.ceil((b - a) / (TILE_DEG / 2)))
-    return [a + (b - a) * i / k for i in range(k + 1)]
-
-
-# --- the tide stations -----------------------------------------------------------------------
-
-# --- NAVD 88 above MLLW ----------------------------------------------------------------------
-
-DATUM_STEP = 0.005    # degrees between the datum grid's nodes
-DATUM_FILL_KM = 5     # how far past VDatum's shoreline a node takes its nearest water's value
-DATUM_CHECKS = 80     # the sample points the browser reproduces
-DATUM_TOL = 0.01      # m: the most the grid may differ from vdatum.py at a sample point
-
-
-def datum_at(grids, lat, lon):
-    """NAVD 88 above MLLW from the exported grids, as map/tides.js reads them: bilinear between
-    the four nodes around the point, a node with no value left out and the rest reweighted;
-    None where none of the four has one, or outside every grid."""
-    for g in grids:
-        y, x = (lat - g["s"]) / g["step"], (lon - g["w"]) / g["step"]
-        if not (0 <= y <= g["rows"] - 1 and 0 <= x <= g["cols"] - 1):
-            continue
-        r, c = min(g["rows"] - 2, math.floor(y)), min(g["cols"] - 2, math.floor(x))
-        fy, fx = y - r, x - c
-        tot = wt = 0.0
-        for dr, dc, w in ((0, 0, (1 - fx) * (1 - fy)), (0, 1, fx * (1 - fy)), (1, 0, (1 - fx) * fy), (1, 1, fx * fy)):
-            v = g["mm"][(r + dr) * g["cols"] + c + dc]
-            if v is not None:
-                tot, wt = tot + w * v, wt + w
-        return tot / wt / 1000 if wt > 0 else None
-    return None
-
-
-def datum_grids(boxes):
-    """NAVD 88's height above MLLW over each box, every DATUM_STEP degrees, from lib/vdatum.py:
-    the value at each node VDatum answers for, and past VDatum's shoreline the mean of the
-    answered nodes beside it, out to DATUM_FILL_KM, so a depth pixel at the water's edge is
-    interpolated from water. Each grid is trimmed to its nodes with a value, in millimetres. With
-    it, sample points where vdatum.py answers, which map/tides.js reproduces within DATUM_TOL."""
-    step = DATUM_STEP
-    passes = math.ceil(DATUM_FILL_KM / (step * 111.2 * math.cos(math.radians(48))))
-    grids, answered = [], []
-    for S, W, N, E in boxes:
-        rows, cols = int(round((N - S) / step)) + 1, int(round((E - W) / step)) + 1
-        vals = []
-        for i in range(rows):
-            for j in range(cols):
-                v, _ = vdatum.navd88_above_mllw(S + i * step, W + j * step)
-                vals.append(v)
-        known = [v is not None for v in vals]
-        for _ in range(passes):
-            grown = list(vals)
-            for k, v in enumerate(vals):
-                if v is not None:
-                    continue
-                i, j = divmod(k, cols)
-                near = [vals[a * cols + b] for a in (i - 1, i, i + 1) for b in (j - 1, j, j + 1)
-                        if 0 <= a < rows and 0 <= b < cols and vals[a * cols + b] is not None]
-                if near:
-                    grown[k] = sum(near) / len(near)
-            vals = grown
-        have = [k for k, v in enumerate(vals) if v is not None]
-        if not have:
-            log(f"  datum: VDatum answers nowhere in the box {[S, W, N, E]}; it carries no grid")
-            continue
-        r0, r1 = min(k // cols for k in have), max(k // cols for k in have)
-        c0, c1 = min(k % cols for k in have), max(k % cols for k in have)
-        r1, c1 = max(r1, r0 + 1), max(c1, c0 + 1)
-        r1, c1 = min(r1, rows - 1), min(c1, cols - 1)
-        mm = [None if vals[i * cols + j] is None else round(vals[i * cols + j] * 1000)
-              for i in range(r0, r1 + 1) for j in range(c0, c1 + 1)]
-        grids.append({"s": round(S + r0 * step, 6), "w": round(W + c0 * step, 6), "step": step,
-                      "rows": r1 - r0 + 1, "cols": c1 - c0 + 1, "mm": mm})
-        answered.append((S, W, N, E, sum(known)))
-    if not grids:
-        sys.exit("VDatum answers nowhere inside the boxes: the depth layer has no MLLW to place its depths on.")
-    rng = random.Random(2)
-    checks, worst, tries = [], 0.0, 0
-    while len(checks) < DATUM_CHECKS and tries < DATUM_CHECKS * 200:
-        tries += 1
-        S, W, N, E, n = rng.choice([a for a in answered if a[4]])
-        lat, lon = rng.uniform(S, N), rng.uniform(W, E)
-        v, _ = vdatum.navd88_above_mllw(lat, lon)
-        if v is None:
-            continue
-        got = datum_at(grids, lat, lon)
-        worst = max(worst, abs(got - v))
-        checks.append({"lat": round(lat, 6), "lon": round(lon, 6), "navd88": round(v, 4)})
-    if worst > DATUM_TOL:
-        sys.exit(f"The datum grid differs from vdatum.py by up to {worst:.4f} m at its sample points, "
-                 f"more than {DATUM_TOL} m: make DATUM_STEP finer.")
-    log(f"  datum: {len(grids)} grids every {step} degrees, within {worst:.4f} m of vdatum.py "
-        f"at {len(checks)} sample points")
-    return {"source": "VDatum grids, lib/vdatum.py", "tol": DATUM_TOL, "grids": grids, "checks": checks}
-
-
-MAP_FILE = os.path.join(ROOT, "map", "tides", "stations.js")
-DATUM_TIDE = "MLLW"  # the datum the depth layer places its depths on, and every exported tide is above
-
-
-def export_tides(boxes):
-    """Write map/tides/stations.js for the map viewer's depth layer: every station of every tide
-    source inside the boxes predicted from its own harmonic constants with its heights above
-    MLLW, the datum the depth layer is placed on, its constituents prepared for each year the
-    map may ask about and its heights at sample moments, which the viewer reproduces before it
-    uses them; and NAVD 88's height above MLLW on a grid over the boxes (datum_grids), which
-    places the depth layer's NAVD 88 depths on MLLW."""
+def export_tides(areas):
+    """Write map/tides/stations.js: every tide station of every source near the boxes that carries
+    harmonic constants, grouped by the datum its heights are above, which is the family the depth
+    layer adds to the seabed on that datum. NOAA's stations carry their constituents prepared for
+    each year the map may ask about, as lib/tide_harmonics.py holds them; CHS's stations their
+    constants fitted by Foreman's method, with the satellites of Foreman's table their node factors
+    come from, as lib/foreman.py moves them day by day. Each station carries its heights at sample
+    moments, which the browser reproduces before it uses them, and its highest tide of the year. A
+    CHS station not yet fitted is fitted here, as the tide tool fits it."""
     y0 = date.today().year - MAP_YEARS_BACK
     years = list(range(y0, date.today().year + MAP_YEARS_AHEAD + 1))
+    m = TIDE_MARGIN_DEG
+    boxes = [[s - m, w - m, n + m, e + m] for ar in areas for s, w, n, e in ar["boxes"]]
     rng = random.Random(1)
-    out, left_out = [], []
-    for src, sid, e in tide.in_boxes(boxes):
+    noaa, chs, left_out, used = [], [], [], set()
+    rows = tide.in_boxes(boxes)
+    for k, (src, sid, e) in enumerate(rows, 1):
         name = tide.label(src, sid)
-        if src.datum != DATUM_TIDE:
-            left_out.append(f"{name} {e['name']}: heights above {src.datum}, and the map's depths are on {DATUM_TIDE}")
-            continue
-        if e["kind"] != "reference":
-            continue
-        h, why = tide.Station(src, src.load(sid)).constants()
+        if e["kind"] == "subordinate":
+            continue   # defined by its highs and lows alone; the reference station it follows is in the blend
+        st = tide.Station(src, src.load(sid, quiet=True))
+        try:
+            h, why = st.constants()
+        except chs_tides.SeriesGap as gap:
+            h, why = None, f"no fit can be made: {gap.code}"
         if h is None:
             left_out.append(f"{name} {e['name']}: {why}")
             continue
-        if h.get("method") == "foreman":
-            left_out.append(f"{name} {e['name']}: constants in Foreman's form, with node factors that move through the "
-                            "year, where the map sums constants with node factors held for each year")
-            continue
-        prep = {y: prepare(h["cons"], y) for y in years}
-        checks = []
-        for _ in range(4):
-            t = datetime(rng.choice(years), 1, 1, tzinfo=timezone.utc) + timedelta(minutes=rng.randrange(525600))
-            checks.append({"t": int(t.timestamp() * 1000), "h": round(height(h, t), 5)})
-        # The highest tide of the year, hourly: ground below it is the tide's to cover.
-        y = date.today().year
-        start = datetime(y, 1, 1, tzinfo=timezone.utc)
-        high = max(height(h, start + timedelta(hours=k)) for k in range(366 * 24))
-        out.append({
-            "id": name, "name": e["name"], "lat": e["lat"], "lon": e["lon"],
-            "msl": round(h["z0"], 4), "high": round(high, 3),
-            "coef": [list(c) for c, _, _ in prep[years[0]]],
-            "years": {str(y): {"arg": [round(k, 5) for _, k, _ in p], "amp": [round(m, 6) for _, _, m in p]}
-                      for y, p in prep.items()},
-            "checks": checks,
-        })
-    if not out:
-        sys.exit(f"No tide station inside the boxes carries harmonic constants and a {DATUM_TIDE} datum.")
-    datum = datum_grids(boxes)
-    data = {"built": date.today().isoformat(), "epoch": astro.EPOCH.isoformat(), "rate": list(RATE),
-            "first_year": years[0], "last_year": years[-1], "stations": out, "datum": datum}
-    os.makedirs(os.path.dirname(MAP_FILE), exist_ok=True)
-    with open(MAP_FILE, "w") as f:
+        if src.datum == MLLW and h.get("method") != "foreman":
+            prep = {y: prepare(h["cons"], y) for y in years}
+            noaa.append({
+                "id": name, "name": e["name"], "lat": e["lat"], "lon": e["lon"],
+                "msl": round(h["z0"], 4), "high": round(_highest(lambda t: height(h, t), date.today().year), 3),
+                "coef": [list(c) for c, _, _ in prep[years[0]]],
+                "years": {str(y): {"arg": [round(a, 5) for _, a, _ in p], "amp": [round(f, 6) for _, _, f in p]}
+                          for y, p in prep.items()},
+                "checks": [{"t": int(t.timestamp() * 1000), "h": round(height(h, t), 5)} for t in _moments(rng, years)],
+            })
+        elif src.datum == CHS and h.get("method") == "foreman":
+            names = list(h["cons"])
+            used.update(names)
+            chs.append({
+                "id": name, "name": e["name"], "lat": e["lat"], "lon": e["lon"], "fitLat": h["lat"],
+                "z0": round(h["z0"], 6), "names": names,
+                "ab": [[round(a, 7), round(b, 7)] for a, b in h["cons"].values()],
+                "high": round(_highest(lambda t: foreman.height(h, t), date.today().year), 3),
+                "checks": [{"t": int(t.timestamp() * 1000), "h": round(foreman.height(h, t), 5)}
+                           for t in _moments(rng, years)],
+            })
+        else:
+            left_out.append(f"{name} {e['name']}: heights above {src.datum} in a form the map does not sum")
+        if k % 25 == 0:
+            log(f"  tides: {k}/{len(rows)} stations read")
+    # Foreman's table, for the constituents the CHS stations carry and the ones their compounds are made of
+    const = foreman.table()
+    table = {}
+    for n in sorted(used):
+        c = const[n]
+        if c["shallow"]:
+            table[n] = {"shallow": [[k, mm] for k, mm in c["shallow"]]}
+            for _, mm in c["shallow"]:
+                used_main = const[mm]
+                table.setdefault(mm, {"dood": used_main["dood"], "semi": used_main["semi"],
+                                      "sats": [list(x) for x in used_main["sats"]]})
+        else:
+            table[n] = {"dood": c["dood"], "semi": c["semi"], "sats": [list(x) for x in c["sats"]]}
+    data = {"built": date.today().isoformat(), "first_year": years[0], "last_year": years[-1],
+            "families": {
+                MLLW: {"model": "noaa", "epoch": astro.EPOCH.isoformat(), "rate": list(RATE), "stations": noaa},
+                CHS: {"model": "foreman", "epoch": foreman.EPOCH.isoformat(), "table": table, "stations": chs},
+            },
+            "left_out": left_out}
+    os.makedirs(os.path.dirname(TIDES_FILE), exist_ok=True)
+    with open(TIDES_FILE + ".part", "w") as f:
         f.write("// Written by tools/map_export.py; regenerate rather than edit.\n")
         f.write(f"window.MAP_TIDES = {json.dumps(data, separators=(',', ':'))};\n")
-    print(f"wrote {len(out)} stations, {years[0]} to {years[-1]}, and NAVD 88 above MLLW on "
-          f"{sum(g['rows'] * g['cols'] for g in datum['grids'])} grid nodes "
-          f"to map/tides/stations.js ({os.path.getsize(MAP_FILE) / 1e3:.0f} KB)", file=sys.stderr)
+    os.replace(TIDES_FILE + ".part", TIDES_FILE)
+    log(f"wrote {len(noaa)} NOAA and {len(chs)} CHS stations, {years[0]} to {years[-1]}, to "
+        f"map/tides/stations.js ({os.path.getsize(TIDES_FILE) / 1e3:.0f} KB)")
     for line in left_out:
-        print(f"  left out {line}", file=sys.stderr)
+        log(f"  left out {line}")
 
 
 # --- commands -------------------------------------------------------------------------------
@@ -892,24 +603,26 @@ def cmd_currents(areas):
     # an overlay whose area left the coverage leaves the map with it
     for e in map_overlays():
         if e.get("kind") == "seafloor" and e["name"] not in names:
-            path = os.path.join(WORKSPACE, e["file"])
-            if os.path.exists(path):
+            path = os.path.join(WORKSPACE, e.get("dir") or e["file"])
+            if os.path.isdir(path):
+                shutil.rmtree(path)
+            elif os.path.exists(path):
                 os.remove(path)
             drop_index(e["name"])
-            log(f"  removed {e['file']}: its area is no longer in the coverage")
+            log(f"  removed {e.get('dir') or e['file']}: its area is no longer in the coverage")
 
 
 def cmd_depth(areas):
     log("== depth")
-    export_depth(areas)
+    map_depth.export(areas)
 
 
 def cmd_tides(areas):
     log("== tides")
-    export_tides([b for ar in areas for b in ar["boxes"]])
+    export_tides(areas)
 
 
-LAYERS = {"depth": cmd_depth, "tides": cmd_tides, "currents": cmd_currents}
+LAYERS = {"tides": cmd_tides, "currents": cmd_currents, "depth": cmd_depth}
 
 
 def main():

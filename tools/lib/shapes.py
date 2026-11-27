@@ -65,37 +65,69 @@ def ensure(name):
         sys.exit(f"the {name} archive held no {', '.join(missing)}; its layout may have changed")
 
 
+_INDEX = {}         # name -> (mmap, file, boxes by record, records by 1-degree latitude band)
+_RINGS = {}         # (name, record) -> rings, the most recent ones read
+RING_CAP = 4000
+
+
+def _index(name):
+    """Every record's bounding box, read once per process from the shapefile, with the records
+    bucketed by each degree of latitude their box spans."""
+    if name not in _INDEX:
+        ensure(name)
+        shp_path, shx_path = _files(name)[:2]
+        with open(shx_path, "rb") as fx:
+            idx = fx.read()[100:]
+        fs = open(shp_path, "rb")
+        shp = mmap.mmap(fs.fileno(), 0, access=mmap.ACCESS_READ)
+        boxes, bands = [], {}
+        for rec, (off, _) in enumerate(struct.iter_unpack(">ii", idx)):
+            pos = off * 2 + 8
+            typ, x0, y0, x1, y1 = struct.unpack_from("<i4d", shp, pos)
+            boxes.append((pos, typ, x0, y0, x1, y1))
+            if typ == 5:
+                for k in range(math.floor(y0), math.floor(y1) + 1):
+                    bands.setdefault(k, []).append(rec)
+        _INDEX[name] = (shp, fs, boxes, bands)
+    return _INDEX[name]
+
+
+def _rings(name, rec, shp, pos):
+    key = (name, rec)
+    got = _RINGS.get(key)
+    if got is None:
+        nparts, npts = struct.unpack_from("<2i", shp, pos + 36)
+        parts = struct.unpack_from(f"<{nparts}i", shp, pos + 44)
+        xy = struct.unpack_from(f"<{2 * npts}d", shp, pos + 44 + 4 * nparts)
+        bounds = list(parts) + [npts]
+        got = [[(xy[2 * i], xy[2 * i + 1]) for i in range(bounds[j], bounds[j + 1])] for j in range(nparts)]
+        if len(_RINGS) >= RING_CAP:
+            del _RINGS[next(iter(_RINGS))]
+        _RINGS[key] = got
+    return got
+
+
 def polygons(name, lat, lon, km):
     """Every polygon in the dataset whose bounding box reaches within km of the point, as
-    (record number, rings), each ring a list of (lon, lat). Longitudes are shifted by 360 where
-    the search crosses the antimeridian, so every ring sits on the same side as the point."""
-    ensure(name)
-    shp_path, shx_path = _files(name)[:2]
+    (record number, rings), each ring a list of (lon, lat), in record order. Longitudes are shifted
+    by 360 where the search crosses the antimeridian, so every ring sits on the same side as the
+    point."""
+    shp, _, boxes, bands = _index(name)
     dlat = km / 111.32
     dlon = min(180.0, km / (111.32 * max(0.01, math.cos(math.radians(lat)))))
     s, n, w, e = lat - dlat, lat + dlat, lon - dlon, lon + dlon
     shifts = [0.0] + ([360.0] if w < -180 else []) + ([-360.0] if e > 180 else [])
+    recs = sorted({r for k in range(math.floor(s), math.floor(n) + 1) for r in bands.get(k, ())})
     found = []
-    with open(shx_path, "rb") as fx, open(shp_path, "rb") as fs:
-        idx = fx.read()[100:]
-        shp = mmap.mmap(fs.fileno(), 0, access=mmap.ACCESS_READ)
-        try:
-            for rec, (off, _) in enumerate(struct.iter_unpack(">ii", idx)):
-                pos = off * 2 + 8
-                typ, x0, y0, x1, y1 = struct.unpack_from("<i4d", shp, pos)
-                if typ != 5 or y1 < s or y0 > n:
-                    continue
-                shift = next((k for k in shifts if x1 + k >= w and x0 + k <= e), None)
-                if shift is None:
-                    continue
-                nparts, npts = struct.unpack_from("<2i", shp, pos + 36)
-                parts = struct.unpack_from(f"<{nparts}i", shp, pos + 44)
-                xy = struct.unpack_from(f"<{2 * npts}d", shp, pos + 44 + 4 * nparts)
-                bounds = list(parts) + [npts]
-                found.append((rec, [[(xy[2 * i] + shift, xy[2 * i + 1]) for i in range(bounds[j], bounds[j + 1])]
-                                    for j in range(nparts)]))
-        finally:
-            shp.close()
+    for rec in recs:
+        pos, typ, x0, y0, x1, y1 = boxes[rec]
+        if typ != 5 or y1 < s or y0 > n:
+            continue
+        shift = next((k for k in shifts if x1 + k >= w and x0 + k <= e), None)
+        if shift is None:
+            continue
+        rings = _rings(name, rec, shp, pos)
+        found.append((rec, rings if shift == 0.0 else [[(x + shift, y) for x, y in r] for r in rings]))
     return found
 
 

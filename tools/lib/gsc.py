@@ -250,7 +250,7 @@ def has_data(lat, lon):
     if not in_box(lat, lon):
         return False
     t = tile()
-    return t.value(*pixel(t, lat, lon)) is not None
+    return t.fast(*pixel(t, lat, lon)) is not None
 
 
 def dem(lat, lon):
@@ -258,7 +258,7 @@ def dem(lat, lon):
     falls in, signed, on CHS Chart Datum."""
     t = tile()
     row, col = pixel(t, lat, lon)
-    elev = t.value(row, col)
+    elev = t.fast(row, col)
     if elev is None:
         sys.exit(f"No {NAME} data at {lat}, {lon}: the grid holds no value there.")
     return {"elev": elev, "depth": -elev, "datum": DATUM, "source": t.name, "res_m": t.sx,

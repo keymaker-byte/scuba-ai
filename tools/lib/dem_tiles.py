@@ -1,5 +1,6 @@
 """DEM tiles shared by the depth tool and current.py: the GeoTIFF reader for one file, classic
 TIFF or BigTIFF, in tiles or strips."""
+import array
 import math
 import os
 import struct
@@ -9,29 +10,33 @@ import zlib
 # --- GeoTIFF reader: one float band in tiles, deflate or LZW ------------------------------
 
 def _lzw(data):
-    """Decode one TIFF LZW block (MSB-first codes, early change)."""
-    bits = int.from_bytes(data, "big")
-    total = len(data) * 8
+    """Decode one TIFF LZW block (MSB-first codes, early change), reading the codes through a
+    small bit buffer, so a block decodes in time proportional to its length."""
     table = [bytes([i]) for i in range(256)] + [b"", b""]
     out = bytearray()
-    pos, width, prev = 0, 9, None
-    while pos + width <= total:
-        code = (bits >> (total - pos - width)) & ((1 << width) - 1)
-        pos += width
-        if code == 257:
-            break
-        if code == 256:
-            table, width, prev = table[:258], 9, None
-            continue
-        if prev is None:
-            entry = table[code]
-        else:
-            entry = table[code] if code < len(table) else prev + prev[:1]
-            table.append(prev + entry[:1])
-        out += entry
-        prev = entry
-        if len(table) >= (1 << width) - 1 and width < 12:
-            width += 1
+    width, prev = 9, None
+    acc = nacc = 0
+    for byte in data:
+        acc = ((acc << 8) | byte) & 0xFFFFFF
+        nacc += 8
+        while nacc >= width:
+            nacc -= width
+            code = (acc >> nacc) & ((1 << width) - 1)
+            if code == 257:
+                return bytes(out)
+            if code == 256:
+                del table[258:]
+                width, prev = 9, None
+                continue
+            if prev is None:
+                entry = table[code]
+            else:
+                entry = table[code] if code < len(table) else prev + prev[:1]
+                table.append(prev + entry[:1])
+            out += entry
+            prev = entry
+            if len(table) >= (1 << width) - 1 and width < 12:
+                width += 1
     return bytes(out)
 
 
@@ -110,6 +115,59 @@ class Tile:
             except zlib.error as e:
                 self._bad(f"a block does not decompress ({e})")
         return self._blocks[i]
+
+    FLOAT_BLOCKS = 256   # decoded blocks kept per tile by floats()
+
+    def floats(self, i):
+        """Block i's values as an array of float32, row by row (tw x th), decoded once and kept
+        among the FLOAT_BLOCKS most recent; nodata and padding left as stored."""
+        cache = self.__dict__.setdefault("_floats", {})
+        arr = cache.pop(i, None)
+        if arr is None:
+            raw = self._block(i)
+            self._blocks.pop(i, None)
+            tw = self.tw
+            arr = array.array("f")
+            if self.pred == 1:
+                arr.frombytes(raw[:tw * self.th * 4])
+                if (self.bo == "<") != (sys.byteorder == "little"):
+                    arr.byteswap()
+            else:
+                for r in range(self.th):
+                    line = raw[r * tw * 4:(r + 1) * tw * 4]
+                    if self.pred == 3:
+                        b, acc = bytearray(line), 0
+                        for k in range(len(b)):
+                            acc = (acc + b[k]) & 255
+                            b[k] = acc
+                        inter = bytearray(4 * tw)
+                        for k in range(4):
+                            inter[k::4] = b[k * tw:(k + 1) * tw]
+                        arr.extend(struct.unpack(f">{tw}f", bytes(inter)))
+                    else:
+                        vals = struct.unpack(f"{self.bo}{tw}I", line)
+                        out, acc = [], 0
+                        for v in vals:
+                            acc = (acc + v) & 0xFFFFFFFF
+                            out.append(acc)
+                        arr.extend(struct.unpack(f"<{tw}f", struct.pack(f"<{tw}I", *out)))
+            if len(cache) >= self.FLOAT_BLOCKS:
+                del cache[next(iter(cache))]
+        cache[i] = arr
+        return arr
+
+    def is_nodata(self, v):
+        """Whether a stored value is no data, as value() reads it."""
+        return v != v or self.nodata is not None and abs(v - self.nodata) < 1e-3
+
+    def fast(self, row, col):
+        """value() through the decoded blocks: the same elevation, read faster when many pixels
+        of one block are wanted."""
+        if not (0 <= row < self.h and 0 <= col < self.w):
+            return None
+        v = self.floats((row // self.th) * ((self.w + self.tw - 1) // self.tw) + col // self.tw)[
+            (row % self.th) * self.tw + col % self.tw]
+        return None if self.is_nodata(v) else v
 
     def pixel(self, lat, lon):
         """(row, col) of the pixel a point falls in, for a tile georeferenced in degrees by its own

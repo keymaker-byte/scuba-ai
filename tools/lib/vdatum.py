@@ -226,6 +226,56 @@ def region_at(lat, lon):
     return (best, score) if best else (None, None)
 
 
+_ROWS = []          # [(sub-region box, S, N, polygon edges bucketed by latitude)]
+_ROW_CACHE = {}
+
+
+def _edges():
+    if not _ROWS:
+        for g in index():
+            for _, la, lo in g["polygons"]:
+                buckets, edges = {}, []
+                for i in range(len(la)):
+                    j = i - 1
+                    if la[i] == la[j]:
+                        continue
+                    edges.append((lo[i], la[i], lo[j], la[j]))
+                    for k in range(int(min(la[i], la[j]) // 0.01), int(max(la[i], la[j]) // 0.01) + 1):
+                        buckets.setdefault(k, []).append(len(edges) - 1)
+                _ROWS.append((g["box"], min(la), max(la), edges, buckets))
+    return _ROWS
+
+
+def row_intervals(lat):
+    """The longitudes, as sorted [west, east] pairs from -180 to 180, where a point at this latitude
+    lies inside one of VDatum's sub-region polygons as region_at() tests it (inside the sub-region's
+    box and the polygon), whatever the polygon's type: where region_at() names a sub-region."""
+    got = _ROW_CACHE.get(lat)
+    if got is not None:
+        return got
+    spans = []
+    for (gS, gW, gN, gE), pS, pN, edges, buckets in _edges():
+        if not (gS <= lat <= gN and pS <= lat <= pN):
+            continue
+        xs = sorted((edges[i][2] - edges[i][0]) * (lat - edges[i][1]) / (edges[i][3] - edges[i][1]) + edges[i][0]
+                    for i in set(buckets.get(int(lat // 0.01), ()))
+                    if (edges[i][1] > lat) != (edges[i][3] > lat))
+        for a, b in zip(xs[0::2], xs[1::2]):
+            a, b = max(a, gW), min(b, gE)
+            if a < b:
+                spans.append((a, b))
+    out = []
+    for a, b in sorted((a - 360 if a > 180 else a, b - 360 if b > 180 else b) for a, b in spans):
+        if out and a <= out[-1][1]:
+            out[-1][1] = max(out[-1][1], b)
+        else:
+            out.append([a, b])
+    if len(_ROW_CACHE) > 100000:
+        _ROW_CACHE.clear()
+    _ROW_CACHE[lat] = out
+    return out
+
+
 # --- the grids -----------------------------------------------------------------------------
 
 class _Grid:

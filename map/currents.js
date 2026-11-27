@@ -304,13 +304,31 @@
 
   // ---- the field ----------------------------------------------------------------------------
 
+  // What every cell of one overlay shares, built once from its common.js: the blend's stations and
+  // settings, the astronomy and the coastline.
+  class Shared {
+    constructor(common) {
+      this.common = common;
+      this.blend = new Blend(common);
+      this.astro = new Astronomy(common.astronomy);
+      const m = common.landMask;
+      this.mask = m ? { ...m, dY: m.dLon * DEG, off: decode(m.offsets, Uint32Array), cr: decode(m.crossings, Uint16Array) } : null;
+    }
+
+    // one cell's field: its own mesh, constants and checks, over what the overlay shares
+    field(cell) {
+      const c = this.common;
+      return new CurrentField({ ...c, ...cell, database: { ...cell.database, names: c.database.names } }, this);
+    }
+  }
+
   class CurrentField {
-    constructor(data) {
+    constructor(data, shared = null) {
       this.data = data;
       this.nodeCount = data.nodeCount;
       const n = this.nodeCount;
       this.xy = decode(data.nodes, Float32Array);         // lon, lat per node
-      this.tri = decode(data.triangles, Uint16Array);     // three node indices per element
+      this.tri = decode(data.triangles, data.triangleIndex === 'u32' ? Uint32Array : Uint16Array);  // three node indices per element
       this.depth = decode(data.depth, Float32Array);      // the trails' seabed per node, m
       const db = data.database;
       this.dbNames = db.names;
@@ -334,13 +352,14 @@
       }
       this.nearAt = new Uint32Array(n + 1);
       for (let j = 0; j < n; j++) this.nearAt[j + 1] = this.nearAt[j] + cnt[j];
-      this.blend = new Blend(data);
-      this.astro = new Astronomy(data.astronomy);
+      this.blend = shared ? shared.blend : new Blend(data);
+      this.astro = shared ? shared.astro : new Astronomy(data.astronomy);
       this.settings = data.settings;
       this.ab = data.settings.aboveBottomM;
       // the coastline, as each mask row's crossings: land where an odd number lie west of a point
       const m = data.landMask;
-      this.mask = m ? { ...m, dY: m.dLon * DEG, off: decode(m.offsets, Uint32Array), cr: decode(m.crossings, Uint16Array) } : null;
+      this.mask = shared ? shared.mask
+        : m ? { ...m, dY: m.dLon * DEG, off: decode(m.offsets, Uint32Array), cr: decode(m.crossings, Uint16Array) } : null;
       this._shoreEdges(data);
       // the trails: every node blended once, at its own seabed
       const na = this.astro.names.length;
@@ -362,6 +381,12 @@
       this.u = new Float32Array(n);
       this.v = new Float32Array(n);
       this.time = null;
+    }
+
+    // whether the field answers for a point: inside its cell's box, the water its mesh is cut for
+    holds(lat, lon) {
+      const [S, W, N, E] = this.data.bbox;
+      return lat >= S && lat < N && lon >= W && lon < E;
     }
 
     // the fraction of the depth the height above the seabed sits at, as `extract` takes it
@@ -857,31 +882,52 @@
         this._grids = fields.map(f => new FieldGrid(f));
         this._time = Date.now();
         this._particles = [];
+        this._views = [];
+      },
+
+      // Cells as they load: each drawn at the layer's moment, the particles kept where they are.
+      addFields(fields) {
+        for (const f of fields) {
+          const g = new FieldGrid(f);
+          this._grids.push(g);
+          if (this._map) {
+            f.computeNodes(this._time);
+            g.update();
+          }
+        }
+        if (this._map) this._layout();
+      },
+
+      removeFields(fields) {
+        const gone = new Set(fields);
+        this._grids = this._grids.filter(g => !gone.has(g.field));
+        for (const p of this._particles) if (p.view && gone.has(p.view.g.field)) p.age = -1;
+        if (this._map) this._layout();
+      },
+
+      // the grid whose cell answers for a point
+      _gridAt(lat, lon) {
+        return this._grids.find(g => g.field.holds(lat, lon)) || null;
       },
 
       // The current at a coordinate over a seabed H m deep (below MLLW) at the layer's moment,
       // exactly as `current.py extract` and `at` give it there: { u, v, speed, toward, km }
       // in m/s, degrees true and km to the nearest station, null where no overlay reaches.
       readAt(lat, lon, H) {
-        for (const g of this._grids) {
-          const r = g.field.at(lat, lon, H, this._time);
-          if (r) return r;
-        }
-        return null;
+        const g = this._gridAt(lat, lon);
+        return g ? g.field.at(lat, lon, H, this._time) : null;
       },
 
       // The trails' own value at a coordinate, interpolated between mesh nodes, for when no
       // seabed depth is at hand.
       drawnAt(lat, lon) {
-        for (const g of this._grids) {
-          if (g.field.time !== this._time) {
-            g.field.computeNodes(this._time);
-            g.update();
-          }
-          const r = g.field.drawnAt(lat, lon);
-          if (r) return r;
+        const g = this._gridAt(lat, lon);
+        if (!g) return null;
+        if (g.field.time !== this._time) {
+          g.field.computeNodes(this._time);
+          g.update();
         }
-        return null;
+        return g.field.drawnAt(lat, lon);
       },
 
       setTime(ms) {
@@ -941,18 +987,36 @@
           c.getContext('2d').setTransform(ratio, 0, 0, ratio, 0, 0);
         }
         this._size = size;
-        // grid -> screen: the grid is even in Mercator, so its corners fix a scale and offset
+        this._layout();
+        this._seedParticles();
+        this._pause();
+        this._animate();
+      },
+
+      // grid -> screen: each grid is even in Mercator, so its corners fix a scale and offset
+      _layout() {
+        const map = this._map, size = this._size;
+        if (!map || !size) return;
+        const old = new Map(this._views.map(v => [v.g, v]));
         this._views = this._grids.map(g => {
           const nw = map.latLngToContainerPoint([g.north, g.W]);
           const se = map.latLngToContainerPoint([g.south, g.east]);
           const sx = (se.x - nw.x) / g.cols, sy = (se.y - nw.y) / g.rows;
           const c0 = Math.max(0, Math.floor(-nw.x / sx)), c1 = Math.min(g.cols, Math.ceil((size.x - nw.x) / sx));
           const r0 = Math.max(0, Math.floor(-nw.y / sy)), r1 = Math.min(g.rows, Math.ceil((size.y - nw.y) / sy));
-          return { g, nw, sx, sy, visible: c1 > c0 && r1 > r0 };
+          const view = old.get(g) || { g };
+          return Object.assign(view, { nw, sx, sy, visible: c1 > c0 && r1 > r0 });
         });
-        this._seedParticles();
-        this._pause();
-        this._animate();
+      },
+
+      // the visible view whose grid holds a screen point, other than `not`
+      _viewAt(x, y, not) {
+        for (const view of this._views) {
+          if (view === not || !view.visible) continue;
+          const uv = view.g.sample((x - view.nw.x) / view.sx, (y - view.nw.y) / view.sy);
+          if (uv) return { view, uv };
+        }
+        return null;
       },
 
       // whether a screen point lies on land, by its field's coastline
@@ -964,7 +1028,11 @@
       // a random point on screen that sits inside a field's mesh and off land, or null after a few tries
       _spawn(p) {
         const views = this._views.filter(v => v.visible);
-        if (!views.length) return false;
+        if (!views.length) {
+          p.live = false;
+          p.age = Math.floor(Math.random() * 90);
+          return false;
+        }
         for (let tries = 0; tries < 20; tries++) {
           const x = Math.random() * this._size.x, y = Math.random() * this._size.y;
           for (const view of views) {
@@ -1009,9 +1077,15 @@
               if (p.age < 0) this._spawn(p);
               continue;
             }
-            const view = p.view;
-            const uv = view.g.sample((p.x - view.nw.x) / view.sx, (p.y - view.nw.y) / view.sy);
-            if (!uv) { p.age = -1; continue; }
+            let view = p.view;
+            let uv = view.g.sample((p.x - view.nw.x) / view.sx, (p.y - view.nw.y) / view.sy);
+            if (!uv) {
+              // across a cell's edge, the trail carries on in the next cell's grid
+              const next = this._viewAt(p.x, p.y, view);
+              if (!next) { p.age = -1; continue; }
+              ({ view, uv } = next);
+              p.view = view;
+            }
             // On screen a trail moves with the square root of the speed, so slow water still
             // visibly drifts while the fastest passes stay readable; 1 m/s is unchanged.
             const sp = Math.hypot(uv[0], uv[1]);
@@ -1048,7 +1122,7 @@
     });
   }
 
-  const api = { Astronomy, Blend, CurrentField, FieldGrid, BANDS, SLOW };
+  const api = { Astronomy, Blend, Shared, CurrentField, FieldGrid, BANDS, SLOW };
   if (typeof module === 'object' && module.exports) {
     module.exports = api;
   } else {

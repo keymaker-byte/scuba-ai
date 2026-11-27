@@ -11,7 +11,7 @@ A new bathymetry joins by adding a class with `name`, `coverage`, `covers`, `ans
 `verify` and `selftest` to SOURCES, and a section for it under Sources in tools/depth.md."""
 import math
 
-from lib import datums, dcbd, gsc, ncei, nlhs, nlhs_1970, vdatum
+from lib import chs_tides, datums, dcbd, gsc, ncei, nlhs, nlhs_1970, vdatum
 
 
 class Refused(Exception):
@@ -25,9 +25,9 @@ class Ncei:
     coverage = "the US coasts and their lakes, from NOAA NCEI's ninth arc-second tiles"
 
     def covers(self, lat, lon):
-        """A tile on NOAA's list holding data at the point. A tile on the border holds none on the
-        Canadian side, which falls to the next source."""
-        return ncei.has_tile(lat, lon) and ncei.has_data(lat, lon)
+        """A tile on NOAA's list holding data at the point, inside a VDatum sub-region. Canadian
+        water a border tile holds no data for, or VDatum leaves out, falls to the next source."""
+        return ncei.covered(lat, lon)
 
     def answer(self, lat, lon):
         a = ncei.answer(lat, lon)
@@ -121,7 +121,7 @@ def _dcbd_state(lat, lon):
     row, col = dcbd.pixel(t, lat, lon)
     if not (0 <= row < t.h and 0 <= col < t.w):
         return "none"
-    v = t.value(row, col)
+    v = t.fast(row, col)
     return "none" if v is None else ("data" if v < 0 else "dry")
 
 
@@ -357,7 +357,166 @@ class Nlhs1970:
         return nlhs_1970.selftest()
 
 
-SOURCES = (Dcbd, lambda: DCBD_NAVY, Nlhs, lambda: LEGACY_SEAM, Nlhs1970, Ncei, Gsc)
+# --- NCEI to the GSC DEM: the seam where NCEI's data ends --------------------------------------
+#
+# NCEI's tiles answer first, on MLLW, as far as their data reaches, into Canadian water along the
+# border; past that edge the GSC DEM answers, on CHS Chart Datum. Chart Datum sits below MLLW, so
+# the two are compared on one surface: NCEI's depth at the edge less MLLW's height above Chart
+# Datum there, CHS's own MLLW figure at its nearest stations. Over a band past the edge the GSC
+# DEM's depth takes the two DEMs' difference at the nearest edge point, in full at the edge and
+# fading to none across the band, so the depth runs on from one DEM to the other with no step.
+
+CHS_MLLW_STATIONS = 3       # CHS stations whose MLLW figure gives MLLW's height above Chart Datum
+
+
+def mllw_above_cd(lat, lon):
+    """(MLLW's height above CHS Chart Datum in m, the stations it came from) at a point: CHS's own
+    MLLW figure at the nearest CHS stations that carry one, weighted by the inverse square of the
+    distance. Each station's file is downloaded the first time it is needed."""
+    rows = []
+    for code, e in sorted(chs_tides.station_list()["stations"].items(),
+                          key=lambda kv: (kv[1]["lat"] - lat) ** 2 + ((kv[1]["lon"] - lon) * math.cos(math.radians(lat))) ** 2):
+        doc = chs_tides.station(code, quiet=True)
+        z = (doc.get("heights") or {}).get("MLLW")
+        if z is None:
+            continue
+        d = math.hypot((doc["lat"] - lat) * 111.2, (doc["lon"] - lon) * 111.2 * math.cos(math.radians(lat)))
+        rows.append((max(d, 0.01), z, doc["name"]))
+        if len(rows) == CHS_MLLW_STATIONS:
+            break
+    if not rows:
+        raise Refused(f"No CHS station carries an MLLW figure near {lat}, {lon}.")
+    w = [1 / (d * d) for d, _, _ in rows]
+    return sum(wi * z for wi, (_, z, _) in zip(w, rows)) / sum(w), [n for _, _, n in rows]
+
+
+_MLLW_CD = {}
+
+
+def _mllw_cd_cached(lat, lon):
+    key = (round(lat, 3), round(lon, 3))   # about 100 m: the figure varies over tens of km
+    if key not in _MLLW_CD:
+        _MLLW_CD[key] = mllw_above_cd(*key)
+    return _MLLW_CD[key]
+
+
+class NceiGscSeam:
+    """The first BAND_M past the edge of the water the NCEI DEM answers in (its data, inside a VDatum
+    sub-region), where the GSC DEM answers: the GSC DEM's depth below Chart Datum plus the two DEMs'
+    difference at the nearest NCEI pixel the NCEI DEM answers from,
+    NCEI's depth there placed on Chart Datum, applied in full at the edge and fading to none at
+    BAND_M. It answers on CHS, as the GSC DEM does, wherever the GSC DEM answers sea."""
+    name = "NCEI to GSC seam"
+    coverage = "the first 100 m past the edge of the NCEI DEM's data, where the GSC West Coast DEM answers"
+    BAND_M = 100.0
+    STEP_M = 10.0     # selftest: the step a GSC pixel past the edge
+    DROP_M = 1.0      # selftest: the most a sloping bottom drops over STEP_M at the median
+
+    def edge(self, lat, lon):
+        """(d, edge lat, edge lon, NCEI depth below Chart Datum there, MLLW above Chart Datum there)
+        of the nearest NCEI data within the band, or None: outside the band, inside NCEI's own data,
+        off the GSC DEM, or where VDatum gives no MLLW at the edge."""
+        if not gsc.has_data(lat, lon) or Ncei().covers(lat, lon):
+            return None
+        return self.finish(ncei.nearest_data(lat, lon, self.BAND_M, keep_row=vdatum.row_intervals))
+
+    def finish(self, e):
+        """edge()'s answer from ncei.nearest_data()'s, for a point already known to lie off NCEI's
+        own water and on the GSC DEM's data."""
+        if e is None or e[0] >= self.BAND_M:
+            return None
+        d, elat, elon, elev = e
+        off, _ = vdatum.navd88_above_mllw(elat, elon)
+        if off is None:
+            return None
+        z, _ = _mllw_cd_cached(elat, elon)
+        return d, elat, elon, -elev - off - z, z
+
+    def blend(self, lat, lon, e, here=None):
+        """(depth, share, gap, GSC under the edge point) at a point in the band, from GSC's depth
+        below Chart Datum there (read when not given)."""
+        d, elat, elon, inner, _ = e
+        if here is None:
+            here = -gsc.dem(lat, lon)["elev"]
+        t = gsc.tile()
+        ev = t.fast(*gsc.pixel(t, elat, elon))
+        there = here if ev is None else -ev
+        gap = inner - there
+        w = 1 - d / self.BAND_M
+        return here + w * gap, w, gap, there
+
+    def covers(self, lat, lon):
+        return self.edge(lat, lon) is not None
+
+    def answer(self, lat, lon):
+        e = self.edge(lat, lon)
+        g = gsc.answer(lat, lon)
+        r = g.pop("dem")
+        if g["water"] != "sea":
+            return {**g, "key": None, "source": f"{self.name}, over {gsc.NAME}", "reading": r}
+        z, w, gap, there = self.blend(lat, lon, e, g["depth"])
+        d, _, _, inner, mz = e
+        return {"water": "sea", "depth": z, "datum": gsc.DATUM, "key": datums.CHS, "why": None,
+                "detail": f"{d:.0f} m past the edge of the NCEI DEM, which reads {inner:.1f} m below Chart Datum "
+                          f"there (MLLW sits {mz:.2f} m above Chart Datum, CHS's MLLW figure at its nearest stations); "
+                          f"the GSC DEM reads {g['depth']:.1f} m here and {there:.1f} m under that edge point, so "
+                          f"{w:.0%} of the {gap:+.1f} m difference between them is added",
+                "source": f"{self.name}, over {gsc.NAME} ({r['source']})", "reading": r}
+
+    def fetch(self, boxes, workers):
+        return 0   # it reads the NCEI tiles and the GSC DEM, each fetched as its own source
+
+    def verify(self, lat, lon, a):
+        return gsc.verify(lat, lon, a["reading"])
+
+    SAMPLE_BOXES = ((48.76, -123.30, 49.003, -122.75), (48.20, -124.05, 48.55, -123.20))
+
+    def selftest(self):
+        """The step left where NCEI's data ends: the seam's depth STEP_M past the nearest edge
+        point, toward points in the band near the border, against the edge point's own depth on
+        Chart Datum, and the same step had the GSC DEM answered there alone. It passes when the
+        seam leaves no more than DROP_M at the median, and less than the GSC DEM alone at the
+        median and at p90."""
+        import random
+        print(f"{self.name}: the step where NCEI's data ends, against the GSC DEM alone")
+        rng = random.Random(7)
+        seam, alone, tries = [], [], 0
+        while len(seam) < 60 and tries < 40000:
+            tries += 1
+            S, W, N, E = rng.choice(self.SAMPLE_BOXES)
+            lat, lon = rng.uniform(S, N), rng.uniform(W, E)
+            e = self.edge(lat, lon)
+            if e is None or e[0] <= self.STEP_M:
+                continue
+            d, elat, elon, inner, _ = e
+            f = self.STEP_M / d
+            plat, plon = elat + (lat - elat) * f, elon + (lon - elon) * f
+            pe = self.edge(plat, plon)
+            if pe is None:
+                continue
+            ev = gsc.tile().fast(*gsc.pixel(gsc.tile(), plat, plon))
+            if ev is None:
+                continue
+            seam.append(abs(self.blend(plat, plon, pe, -ev)[0] - inner))
+            alone.append(abs(-ev - inner))
+        if len(seam) < 30:
+            print(f"  only {len(seam)} points in the band")
+            print("  FAIL")
+            return False
+        seam.sort()
+        alone.sort()
+        med, p90 = (lambda a: a[len(a) // 2]), (lambda a: a[9 * len(a) // 10])
+        ok = med(seam) <= self.DROP_M and med(seam) < med(alone) and p90(seam) < p90(alone)
+        print(f"  {len(seam)} points; step {self.STEP_M:.0f} m past the edge: seam median {med(seam):.2f} m, "
+              f"p90 {p90(seam):.2f} m; GSC DEM alone median {med(alone):.2f} m, p90 {p90(alone):.2f} m "
+              f"(passing within {self.DROP_M:.1f} m at the median)")
+        print("  PASS" if ok else "  FAIL")
+        return ok
+
+
+NCEI_GSC = NceiGscSeam()
+
+SOURCES = (Dcbd, lambda: DCBD_NAVY, Nlhs, lambda: LEGACY_SEAM, Nlhs1970, Ncei, lambda: NCEI_GSC, Gsc)
 
 
 def sources():
