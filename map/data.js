@@ -2091,6 +2091,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "mukilteo-edgewater-beach-park",
+      "name": "Mukilteo Edgewater Beach Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/mukilteo-edgewater-beach-park.md",
+      "site": {
+        "lat": 47.954108,
+        "lon": -122.288743
+      },
+      "entry": {
+        "lat": 47.952161,
+        "lon": -122.289376
+      },
+      "parking": {
+        "lat": 47.952096,
+        "lon": -122.290031
+      }
+    },
+    {
       "slug": "mukilteo-lighthouse-park",
       "name": "Mukilteo Lighthouse Park (Clay Wall)",
       "region": "puget-sound",
