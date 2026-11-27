@@ -522,7 +522,10 @@ def export_currents(area):
         cn = sorted({i for j in cell_tris for i in tris[j]})
         ci = {n: m for m, n in enumerate(cn)}
         wide = len(cn) > 65535   # the triangles' node index: 16 bits, or 32 for a large cell
-        xy, tri, dep = array.array("f"), array.array("I" if wide else "H"), array.array("f")
+        # node positions in double precision, as the tool holds them: in single precision a
+        # longitude near 125° W moves by up to 0.5 m, enough to shift a point's weights in a small
+        # element near shore and its current past the check's 1 mm/s
+        xy, tri, dep = array.array("d"), array.array("I" if wide else "H"), array.array("f")
         own, sh, sc, qq = array.array("B"), array.array("B"), array.array("f"), array.array("h")
         cnt, src, km = array.array("B"), array.array("H"), array.array("f")
         nk4 = 4 * len(keys)

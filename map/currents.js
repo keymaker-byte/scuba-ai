@@ -327,7 +327,10 @@
       this.data = data;
       this.nodeCount = data.nodeCount;
       const n = this.nodeCount;
-      this.xy = decode(data.nodes, Float32Array);         // lon, lat per node
+      this.xy = decode(data.nodes, Float64Array);         // lon, lat per node, in double precision as the tool holds them
+      if (this.xy.length !== 2 * n && decode(data.nodes, Float32Array).length === 2 * n) {
+        throw new Error('the overlay holds its node positions in single precision, an older form; regenerate it with map_export.py currents');
+      }
       this.tri = decode(data.triangles, data.triangleIndex === 'u32' ? Uint32Array : Uint16Array);  // three node indices per element
       this.depth = decode(data.depth, Float32Array);      // the trails' seabed per node, m
       const db = data.database;
