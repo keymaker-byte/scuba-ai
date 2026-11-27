@@ -1901,6 +1901,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "golden-gardens-park",
+      "name": "Golden Gardens Park",
+      "region": "puget-sound",
+      "type": "shore",
+      "file": "regions/puget-sound/sites/golden-gardens-park.md",
+      "site": {
+        "lat": 47.691804,
+        "lon": -122.406353
+      },
+      "entry": {
+        "lat": 47.691797,
+        "lon": -122.404743
+      },
+      "parking": {
+        "lat": 47.692346,
+        "lon": -122.403316
+      }
+    },
+    {
       "slug": "green-point",
       "name": "Green Point",
       "region": "san-juan-islands",
