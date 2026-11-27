@@ -141,13 +141,14 @@ def _legacy_domain(lat, lon):
     coastline than that data does, or inside the finer surveys, their data within
     LEGACY_ENCLOSED_M in three of the four quadrants around it (a patch they left unsurveyed), so
     the strip between the shore and DCBD's first pixel, which the soundings never resolved, takes
-    no depth from them."""
+    no depth from them. Water behind the finer surveys, a lagoon or wetland the open sea reaches
+    only through their water or over land (nlhs_1970.behind), takes none either."""
     if not nlhs_1970.in_box(lat, lon) or _dcbd_state(lat, lon) != "none":
         return False
     x, y = dcbd.utm(lat, lon)
     if nlhs.in_box(lat, lon) and nlhs.raw(x, y) is not None:
         return False
-    if ncei.inland(lat, lon):
+    if ncei.inland(lat, lon) or nlhs_1970.behind(x, y):
         return False
     found = [e for f in (_dcbd_edge, _navy_edge_raw) if (e := f(x, y, LEGACY_SEAWARD_M))]
     if not found:

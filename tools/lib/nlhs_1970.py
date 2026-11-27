@@ -351,6 +351,123 @@ def _enclosure():
     return _enc
 
 
+# --- Behind the finer surveys ----------------------------------------------------------------
+#
+# The soundings were taken at sea, and the finer surveys reach the shore all around both islands,
+# so the soundings say nothing of water the open sea reaches only through the finer surveys' water
+# or over land: a lagoon or a mangrove wetland behind a reef the finer surveys cover, such as the
+# north and east of Lac Bay. On a grid of BEHIND_CELL_M over the DCBD grid's extent, the open sea
+# is flooded from the extent's edge through water holding neither the finer surveys' water nor
+# land; a patch of water it never reaches that touches land lies behind them. A patch it never
+# reaches with no land beside it, a hole in the finer surveys out on the reef, keeps its depth.
+
+BEHIND_CELL_M = 25.0   # under the 20 m spacing of DCBD's wet blocks and the 2019 grid's cells,
+BEHIND_PAD = 0.01      # so a cell all under their water holds one; the extent's margin, degrees
+
+_beh = None
+
+
+def _behind():
+    """(state, x0, y0, cols, rows): one byte per BEHIND_CELL_M cell over the DCBD grid's extent and
+    BEHIND_PAD around it, 0 the open sea, 1 behind the finer surveys, 2 the finer surveys' water,
+    land, or a hole in the finer surveys away from land. Worked out once, a few seconds, and kept in
+    behind.bin beside the surveys, worked out again whenever a survey, the DCBD grid or the
+    coastline changes."""
+    global _beh
+    if _beh is not None:
+        return _beh
+    cell = BEHIND_CELL_M
+    s, w, n_, e = dcbd.BOX
+    corners = [dcbd.utm(la, lo) for la in (s - BEHIND_PAD, n_ + BEHIND_PAD) for lo in (w - BEHIND_PAD, e + BEHIND_PAD)]
+    x0, y0 = min(c[0] for c in corners), min(c[1] for c in corners)
+    cols = int((max(c[0] for c in corners) - x0) // cell) + 1
+    rows = int((max(c[1] for c in corners) - y0) // cell) + 1
+    stamp = json.dumps({"nlhs": nlhs.grid()["id"],
+                        "dcbd": {k: dcbd.index().get(k) for k in ("fetched", "zip_size", "member")},
+                        "coast": sum(len(v) for v in _coastline().values()),
+                        "cell": cell, "pad": BEHIND_PAD}, sort_keys=True).encode()
+    path = os.path.join(DB, "behind.bin")
+    n = cols * rows
+    if os.path.exists(path):
+        with open(path, "rb") as f:
+            raw = f.read()
+        head = raw[:raw.index(b"\n")] if b"\n" in raw else b""
+        body = raw[len(head) + 1:]
+        if head == stamp and len(body) == n:
+            _beh = (bytearray(body), x0, y0, cols, rows)
+            return _beh
+    land = _land_rows(x0, y0, cols, rows, cell)
+    finer = bytearray(n)
+
+    def mark(x, y):
+        i, j = int((x - x0) // cell), int((y - y0) // cell)
+        if 0 <= i < cols and 0 <= j < rows:
+            finer[j * cols + i] = 1
+    t = dcbd.tile()
+    mask, mrows, mcols = dcbd.wet_mask()
+    bm = dcbd.WET_BLOCK * t.sx
+    for r in range(mrows):
+        for c in range(mcols):
+            if mask[r * mcols + c]:
+                mark(t.x0 + (c + 0.5) * bm, t.y0 - (r + 0.5) * dcbd.WET_BLOCK * t.sy)
+    for (i, j) in nlhs.grid()["cells"]:
+        mark(i * nlhs.CELL, j * nlhs.CELL)
+    state = bytearray([2]) * n
+    water = lambda q: not land[q] and not finer[q]  # noqa: E731
+
+    def four(p):
+        i = p % cols
+        return [q for q in ((p - 1) if i else -1, (p + 1) if i < cols - 1 else -1, p - cols, p + cols) if 0 <= q < n]
+    stack = [p for p in set(range(cols)) | set(range(n - cols, n)) | set(range(0, n, cols)) | set(range(cols - 1, n, cols))
+             if water(p)]
+    for p in stack:
+        state[p] = 0
+    while stack:
+        p = stack.pop()
+        for q in four(p):
+            if state[q] == 2 and water(q):
+                state[q] = 0
+                stack.append(q)
+    seen = bytearray(n)
+    for p0 in range(n):
+        if seen[p0] or state[p0] != 2 or not water(p0):
+            continue
+        comp, k, touches = [p0], 0, False
+        seen[p0] = 1
+        while k < len(comp):
+            for q in four(comp[k]):
+                if land[q]:
+                    touches = True
+                elif water(q) and not seen[q] and state[q] == 2:
+                    seen[q] = 1
+                    comp.append(q)
+            k += 1
+        if touches:
+            for p in comp:
+                state[p] = 1
+    with open(path + ".part", "wb") as f:
+        f.write(stamp + b"\n" + bytes(state))
+    os.replace(path + ".part", path)
+    _beh = (state, x0, y0, cols, rows)
+    return _beh
+
+
+def behind(x, y):
+    """Whether UTM (x, y) lies behind the finer surveys: in a cell behind them, or in a cell of
+    their water or of land beside such a cell and beside no cell of the open sea, so a point at
+    the patch's rim, outside the finer surveys' own pixels, counts with the patch."""
+    st, x0, y0, cols, rows = _behind()
+    ci, cj = int((x - x0) // BEHIND_CELL_M), int((y - y0) // BEHIND_CELL_M)
+    if not (0 <= ci < cols and 0 <= cj < rows):
+        return False
+    here = st[cj * cols + ci]
+    if here != 2:
+        return here == 1
+    around = [st[j * cols + i] for i in range(max(0, ci - 1), min(cols, ci + 2))
+              for j in range(max(0, cj - 1), min(rows, cj + 2))]
+    return 1 in around and 0 not in around
+
+
 def enclosed(x, y):
     """Whether UTM (x, y) lies inside the soundings' coverage: in a patch of sea the covered cells
     ring on every side, or a strip of it narrower than twice NARROW_CELLS between them."""
