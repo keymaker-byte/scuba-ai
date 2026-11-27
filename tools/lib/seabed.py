@@ -3,7 +3,7 @@ its own tool whatever it needs that is not yet on this machine. Each source answ
 its own datum, or None where it holds nothing; `Seabed` asks them in order and names the one
 that answered. A new bathymetry joins by adding a class with `name`, `datum` and `elevation`
 to SOURCES."""
-from lib import dcbd, gsc, ncei
+from lib import gsc, ncei
 from lib.dem_tiles import Tile
 
 
@@ -41,18 +41,35 @@ class GscWestCoast:
         return t.value(*gsc.pixel(t, lat, lon))
 
 
-class DcbdBonaire:
-    """The DCBD coastal bathymetry of Bonaire and Klein Bonaire, 2 m, from the shore to about
-    20 m deep: `lib/dcbd.py`'s one GeoTIFF, downloaded the first time a point inside its extent
-    is asked for (48 MB)."""
-    name = dcbd.NAME
-    datum = "about sea level"
+class BonaireSurveys:
+    """Bonaire's and Klein Bonaire's surveys, read through the depth tool's own chain in
+    `lib/depth.py`: the DCBD 2 m grid from the shore to about 20 m, the Navy's 2019 20 m grid on
+    the leeward wall and slope, the Navy's 1970 to 1972 soundings beyond them, and the seams that
+    join each to the next. Each is downloaded, or ordered by hand, as the depth tool says. A plain
+    observed depth, so the seabed here is the one the depth tool and the map's depth layer read."""
+    name = "Bonaire surveys"
+    datum = "none (a plain observed depth)"
+
+    def __init__(self):
+        from lib import depth
+        self.chain = [depth.Dcbd(), depth.DCBD_NAVY, depth.Nlhs(), depth.LEGACY_SEAM, depth.Nlhs1970()]
+        self.names = {id(s): s.name for s in self.chain}
 
     def elevation(self, lat, lon):
-        return dcbd.elevation(lat, lon)
+        for s in self.chain:
+            if not s.covers(lat, lon):
+                continue
+            r = s.answer(lat, lon)
+            if r["depth"] is None and r.get("nodata"):
+                continue
+            if r["depth"] is None:
+                return None
+            self.name = s.name
+            return -r["depth"]
+        return None
 
 
-SOURCES = (NceiTiles, GscWestCoast, DcbdBonaire)
+SOURCES = (NceiTiles, GscWestCoast, BonaireSurveys)
 
 
 class Seabed:
