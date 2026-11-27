@@ -269,48 +269,7 @@ def load_doc(a):
     if taken != doc.get("seabed_datum"):
         sys.exit(f"{a.file}: the site's seabed_m is below {doc.get('seabed_datum')}, and its extract was taken for a "
                  f"seabed below {taken or 'no named datum'}: run `extract --site {a.file}` again.")
-    if getattr(a, "raw", False):
-        doc.pop("current_observed_offset", None)
     return doc
-
-
-PAD_MIN = 180  # minutes of model curve either side of a day, for the offset's time shift
-
-
-def curve(doc, b, start, minutes):
-    """[(utc datetime, speed)] every minute at the site: the model's curve, moved by the site's
-    observed offset where one is established. Each slack moves by its own offset, slack before
-    flood or slack before ebb, and the moments between two slacks move by an offset that runs
-    evenly from one to the other."""
-    off = doc.get("current_observed_offset") or {}
-    fl, eb = off.get("before_flood_min"), off.get("before_ebb_min")
-    if fl is None and eb is None:
-        return series(b, start, minutes)
-    m0 = start - timedelta(minutes=PAD_MIN)
-    model = series(b, m0, minutes + 2 * PAD_MIN)
-    slacks = []
-    for k, (t, kind, _) in enumerate(ev := events(model)):
-        if kind == "slack":
-            nxt = next((v for _, kd, v in ev[k + 1:] if kd != "slack"), None)
-            o = (fl if nxt is not None and nxt > 0 else eb) or 0
-            slacks.append((t + timedelta(minutes=o), o))
-    out, k = [], 0
-    for m in range(minutes + 1):
-        t = start + timedelta(minutes=m)
-        while k + 1 < len(slacks) and slacks[k + 1][0] <= t:
-            k += 1
-        if not slacks:
-            o = 0
-        elif t <= slacks[0][0] or k + 1 == len(slacks):
-            o = slacks[k][1]
-        else:
-            (ta, oa), (tb, ob) = slacks[k], slacks[k + 1]
-            o = oa + (ob - oa) * (t - ta).total_seconds() / (tb - ta).total_seconds()
-        x = (t - m0).total_seconds() / 60 - o
-        i = max(0, min(len(model) - 2, int(x)))
-        fr = min(max(x - i, 0.0), 1.0)
-        out.append((t, model[i][1] + (model[i + 1][1] - model[i][1]) * fr))
-    return out
 
 
 def day_span(day, tz, pad=0):
@@ -345,10 +304,6 @@ def print_header(doc, day, tz):
     built = _region_built(p["lat"], p["lon"])
     if built and _when(built) > _when(p["extracted"]):
         print(f"  the region was rebuilt on {built[:10]}, after this extract ({p['extracted'][:10]}): extract the site again")
-    off = doc.get("current_observed_offset")
-    if off:
-        print(f"  observed offset applied: slack before flood {_mins(off.get('before_flood_min'))}, "
-              f"slack before ebb {_mins(off.get('before_ebb_min'))}")
     print()
 
 
@@ -382,10 +337,6 @@ def _when(stamp):
     return t if t.tzinfo else t.replace(tzinfo=UTC)
 
 
-def _mins(m):
-    return "none" if m is None else f"{abs(m):g} min {'after' if m >= 0 else 'before'} the model"
-
-
 def cmd_predict(a):
     doc = load_doc(a)
     tz = resolve_tz(a.tz)
@@ -395,9 +346,9 @@ def cmd_predict(a):
         print("  no slack and no maximum: 0.00 m/s all day, at the bottom and above")
         return
     start, minutes = day_span(a.date, tz, pad=5)
-    up = {round(t.timestamp() / 60): v for t, kind, v in events(curve(doc, c["upper"], start, minutes)) if kind != "slack"}
+    up = {round(t.timestamp() / 60): v for t, kind, v in events(series(c["upper"], start, minutes)) if kind != "slack"}
     print(f"            bottom      fastest above ({c['upper']['above_bottom_m']:g} m off the bottom)")
-    for t, kind, v in events(curve(doc, c["bottom"], start, minutes)):
+    for t, kind, v in events(series(c["bottom"], start, minutes)):
         tl = (t + timedelta(seconds=30)).astimezone(tz)
         if tl.date() != a.date:
             continue
@@ -421,8 +372,8 @@ def cmd_window(a):
         print("  all day          peak 0.00 m/s, above 0.00 m/s")
         return
     start, minutes = day_span(a.date, tz)
-    bot = curve(doc, c["bottom"], start, minutes)[:-1]
-    upv = [v for _, v in curve(doc, c["upper"], start, minutes)[:-1]]
+    bot = series(c["bottom"], start, minutes)[:-1]
+    upv = [v for _, v in series(c["upper"], start, minutes)[:-1]]
     runs, cur = [], []
     for k, (t, v) in enumerate(bot):
         if abs(v) <= lim:
@@ -459,7 +410,7 @@ def cmd_at(a):
         return
     tu = t.astimezone(UTC)
     for lbl, b in (("bottom", c["bottom"]), (f"{c['upper']['above_bottom_m']:g} m off the bottom", c["upper"])):
-        v = curve(doc, b, tu, 0)[0][1]
+        v = series(b, tu, 0)[0][1]
         print(f"  {t:%H:%M}  {lbl:<22} {abs(v):.2f} m/s toward {c['flood_dir'] if v >= 0 else c['ebb_dir']:.0f}° "
               f"({'flood' if v >= 0 else 'ebb'})")
 
@@ -788,8 +739,6 @@ def main():
     def doc_source(sp):
         sp.add_argument("--file", metavar="PATH", required=True, help="path to the site JSON holding the extract")
         sp.add_argument("--tz", required=True, metavar="IANA_ZONE", help="the site's time zone, the `tz` in its JSON")
-        sp.add_argument("--raw", action="store_true",
-                        help="the model's own prediction, without the site's observed offset: what an offset is measured against")
 
     s = sub.add_parser("predict", help="slack / max flood / max ebb")
     doc_source(s)

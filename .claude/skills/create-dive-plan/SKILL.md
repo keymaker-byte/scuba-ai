@@ -27,11 +27,11 @@ Read the site file, its `<slug>.json` companion beside it in `sites/`, and the r
 Follow the region's planning conventions in their own order: each factor, its limits, and the region-only tool that reads it, such as the wind forecast and the visibility reports. The workspace-wide tools are read the same way in every region, each run with the site JSON as `--file` and the site's `tz` as `--tz`:
 
 - **Current.** `current.md` on every site, read the same way at every site whatever its current type; how the plan uses the answer follows the type the region's site conventions name.
-- **Current, tidal.** The day's slacks, sets and diveable windows at the bottom with `predict` and `window`, the fastest water above for the descent and ascent, and `at` at the entry and the exit time. The tool applies the site's observed offset where one is established. A current prediction sets the slack; a tide station never does. Where the header reports no current station within reach, the plan states the slack as a starting point to confirm from the beach. This is the region's current factor, at the rank its planning conventions give it.
+- **Current, tidal.** The day's slacks, sets and diveable windows at the bottom with `predict` and `window`, the fastest water above for the descent and ascent, and `at` at the entry and the exit time. A current prediction sets the slack; a tide station never does. Where the header reports no current station within reach, the plan states the slack as a starting point to confirm from the beach. This is the region's current factor, at the rank its planning conventions give it.
 - **Current, wind driven.** `at` at the entry and the exit time gives the tidal set, a data point beside the wind outside the go / no go call. The plan gives its direction and notes whether it runs with the wind's drift, downwind, or against it.
 - **Current, none.** A lake, on `LAKE`: `at` at the entry and the exit time answers 0 m/s, and the plan's Current rows state no tidal current.
 - **Depth.** `tide.md`'s `project` on every site turns the site's datum depths into depth below the surface across the dive: depth below the surface is the datum depth plus the tide height. On a tidal datum (`MLLW`, `CHS`) it runs at the site's tide station, the one its Depth and tide section names, and `predict` gives the day's highs and lows; the tool refuses a station off the site's datum. On `LAKE` and `NONE` it runs with no station, and the tide height is 0.
-- **Past dives.** `subsurface_log.md`, the site's earlier dives: depths reached, notes, hazards hit, how the current ran, and any timed slacks.
+- **Past dives.** `subsurface_log.md`, the site's earlier dives: depths reached, notes, hazards hit, and how the current ran.
 
 Beyond them:
 
@@ -63,7 +63,7 @@ Beyond them:
 | **Diveable window** | The window from the factors' overlap and its padding |
 | **Verdict** | Go, marginal or no go, and the factor that decides it |
 | **Time** | Time for meet, entry time, exit time, dive runtime |
-| **Current** | Predicted slack closest to the dive, its set either side, and the observed offset where the site carries one |
+| **Current** | Predicted slack closest to the dive and its set either side |
 | **Tide** | Predicted tide slack closer to the dive, size of the tide exchange comparable to the month |
 | **Weather** | Wind conditions, air temperature, sky, rain and fog |
 | **Visibility and temperature** | Recent visibility reports and the expected water temperature |

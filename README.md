@@ -72,4 +72,3 @@ Each tool reads parameters from its own subsection of `tool-config.json` (a miss
 - "What's viz and water temperature been like at [site] recently?"
 - "Check the wind forecast for [beach] this weekend, is the entry going to be blown out?"
 - "Pull my last few dives at [site] from the logbook and summarize gas consumption and conditions."
-- "Based on my last dive there, how should I offset the current station's prediction for this site?"

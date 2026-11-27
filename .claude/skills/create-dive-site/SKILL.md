@@ -13,7 +13,7 @@ This skill holds what applies in every region: the order of the work, the worksp
 
 - **Stop on a failed source.** A tool error, an unreachable API, a page that won't load or has only a broken archived copy: stop, tell the user what failed and what it was meant to provide, and wait. Never write the file around the gap or present it as complete.
 - **Behaviour, never numbers, from community sources.** Their depths sit at an unrecorded tide and their slack times carry no station nor normalization.
-- **Reasoning in chat, facts in the file.** Station checks, offset reasoning, how sure a figure is, and conflicts between sources all go in chat. The file carries only the best figure produced.
+- **Reasoning in chat, facts in the file.** Station checks, how sure a figure is, and conflicts between sources all go in chat. The file carries only the best figure produced.
 
 ## 0. Open a worktree
 
@@ -107,7 +107,7 @@ Produce every depth figure on the region's datum, the one the site conventions' 
 Produce every current figure by the current type the site conventions' Current section names, the rules below, and any reach the Current section describes.
 
 - **Extract.** Every site, whatever its current type: once the dive area coordinate holds, `current.md`'s `extract --site` on the site JSON, at the tool's default height above the seabed, attaches the site's constants. On `LAKE` the extract holds no tidal current, and every prediction from it is 0 m/s. A coordinate the tool refuses, on land or in water outside its coverage, stops the site: report it and wait.
-- **Tidal.** The extract's predictions give the Flood, Ebb and Diveable window bullets: slack, set, peak speeds and the windows under the threshold. `subsurface_log.md` gives the set and strength actually felt at the site, and the timed slacks behind the observed offset, worked out by `current.md`'s own method.
+- **Tidal.** The extract's predictions give the Flood, Ebb and Diveable window bullets: slack, set, peak speeds and the windows under the threshold. `subsurface_log.md` gives the set and strength actually felt at the site.
 - **No station within reach.** Where `current.md`'s header reports no current station within reach, the prediction is the tidal database's own, and the prose states its timing as a starting point to verify on the day.
 - **Wind driven.** The extract goes with the site JSON for planning, its tidal set a data point beside the wind. The Usual set and Drivers bullets come from the research sources' descriptions of the site and the log's own dives there, taken as behaviour and cross-checked between sources; a set no source describes is written as not established.
 
@@ -143,7 +143,7 @@ Write the figures from steps 5 to 7 and the research from step 4 into the templa
 - **Type** is exactly Shore or Boat. Shore is anything reachable from land, however long the swim; Boat is only for no shore access at all. Swim distance, restrictions and guided-only rules go in Getting there.
 - **Skill level** is the diver's own call, made from the depth, current, entry and hazards the file describes; the file carries no rating of it. Prose may still note what a stretch of the site asks of a diver, as a hint.
 - **Air fills and dive shops** go in the region file. Facilities names only what is physically at the site.
-- **Every fact belongs**, whether from public data or repeated dives: coordinates, depths, current sets and speeds, an observed offset, current behaviour, entry, hazards, temperatures, life.
+- **Every fact belongs**, whether from public data or repeated dives: coordinates, depths, current sets and speeds, current behaviour, entry, hazards, temperatures, life.
 
 ## 9. Bookkeeping
 
@@ -238,7 +238,6 @@ Optional sentence on what dominates the current. Tidal and wind driven only.
 * **Flood.** Tidal: where it sets locally and how strongly it runs.
 * **Ebb.** Tidal: the same, for the ebb.
 * **Diveable window.** Tidal: which slack, how long it holds, and what narrows it.
-* **Observed offset.** Tidal, only once established by the current tool's own method: minutes before or after the prediction, for slack before flood and slack before ebb.
 * **Usual set.** Wind driven: where it sets and how strongly it runs.
 * **Drivers.** Wind driven: the winds or seasons that strengthen or reverse the set.
 * **Topic.** Further local behaviour, each led by a bold topic.
