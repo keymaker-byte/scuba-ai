@@ -43,18 +43,6 @@
   #panel .swatch { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 6px; border: 1px solid rgba(0,0,0,0.3); vertical-align: middle; }
   #panel .swatch.swatch-icon { width: 19px; height: 19px; margin-right: 4px; border-radius: 0; border: none; }
   #panel .hint { color: #555; font-size: 12px; margin-bottom: 2px; }
-  #coord-readout { font-family: SFMono-Regular, Consolas, monospace; cursor: text; }
-  #coord-copy {
-    width: 100%; box-sizing: border-box; margin-top: 4px; padding: 5px 6px;
-    border: 1px solid #ccc; border-radius: 4px; font-size: 12px; background: #f3f4f6; cursor: pointer;
-  }
-  #coord-copy:hover { background: #e5e7eb; }
-  #data-refresh {
-    width: 100%; box-sizing: border-box; padding: 5px 6px;
-    border: 1px solid #ccc; border-radius: 4px; font-size: 12px; background: #f3f4f6; cursor: pointer;
-  }
-  #data-refresh:hover { background: #e5e7eb; }
-  #count { color: #555; font-size: 12px; margin-top: 6px; }
   /* The layer readouts keep a fixed number of lines whatever they hold, so the panel never
      changes size: a reading wraps inside its lines, and an empty line shows its placeholder. */
   .fixed-lines {
@@ -66,6 +54,20 @@
   #currents-status.error { color: #7f1d1d; }
   #depth-status { font-variant-numeric: tabular-nums; line-height: 16px; height: 48px; -webkit-line-clamp: 3; }
   #depth-status.error { color: #7f1d1d; }
+  #coord-status { font-variant-numeric: tabular-nums; line-height: 16px; height: 16px; -webkit-line-clamp: 1; }
+  .readout-title { margin: 4px 0; }
+  /* A reading as labelled lines, each with its value and a copy button at the right. */
+  .fixed-lines:has(.readout-row) { display: block; }
+  .readout-row { display: flex; align-items: center; gap: 6px; height: 16px; }
+  .readout-label { flex: none; width: 46px; color: #555; }
+  .readout-value { flex: 1; min-width: 0; color: #1a1a1a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .readout-note { color: #6b7280; }
+  .readout-copy {
+    flex: none; display: flex; align-items: center; justify-content: center;
+    width: 16px; height: 16px; padding: 0; border: none; background: none; color: #6b7280; cursor: pointer;
+  }
+  .readout-copy:hover { color: #2563eb; }
+  .readout-copy.done { color: #16a34a; }
   /* Depth tiles one pixel larger than their 256 px slot, so neighbours overlap; at the
      fractional positions a high-density screen gives them, exact fits leave hairline gaps. */
   .leaflet-paneDepth-pane canvas.leaflet-tile { width: 257px !important; height: 257px !important; }
@@ -79,9 +81,9 @@
   /* Centred under the map, starting right of the open panel (12 px in, 240 px plus padding
      wide) when the window is too narrow for both. */
   #time-bar {
-    --bar-left: max(280px, calc((100% - 720px) / 2));
+    --bar-left: max(280px, calc((100% - 1080px) / 2));
     position: absolute; bottom: 28px; left: var(--bar-left); z-index: 1000;
-    width: min(720px, calc(100% - var(--bar-left) - 16px)); box-sizing: border-box;
+    width: min(1080px, calc(100% - var(--bar-left) - 16px)); box-sizing: border-box;
     background: rgba(255,255,255,0.96); border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.25); padding: 10px 18px 8px; color: #1a1a1a;
   }
@@ -256,21 +258,6 @@
         <span class="swatch" style="background:#ea580c"></span>Boat dive sites</label>
       <label><input type="checkbox" id="toggle-shore" checked>
         <span class="swatch" style="background:#2563eb"></span>Shore dive sites</label>
-      <label><input type="checkbox" id="toggle-entry" checked>
-        <svg class="swatch swatch-icon" width="19" height="19" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="11" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
-          <path d="M12 5v7" stroke="#1e3a8a" stroke-width="1.8" stroke-linecap="round"/>
-          <path d="M8.7 9.3L12 12.6l3.3-3.3" fill="none" stroke="#1e3a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M4 14.3c1.4-1.3 2.9-1.3 4.3 0s2.9 1.3 4.3 0 2.9-1.3 4.3 0 2.9 1.3 4.3 0" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M4 17.8c1.4-1.3 2.9-1.3 4.3 0s2.9 1.3 4.3 0 2.9-1.3 4.3 0 2.9 1.3 4.3 0" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>Entry points (shore dives)</label>
-      <label><input type="checkbox" id="toggle-parking" checked>
-        <svg class="swatch swatch-icon" width="19" height="19" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="11" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
-          <path d="M5.5 12.5l1.1-3.3A2 2 0 0 1 8.5 7.8h7a2 2 0 0 1 1.9 1.4l1.1 3.3h.5a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1h-.6a1.8 1.8 0 1 1-3.6 0H9.2a1.8 1.8 0 1 1-3.6 0H5a1 1 0 0 1-1-1v-2.5a1 1 0 0 1 1-1h.5z" fill="#0284c7"/>
-          <circle cx="8.4" cy="15.8" r="1.3" fill="#1e293b"/>
-          <circle cx="15.6" cy="15.8" r="1.3" fill="#1e293b"/>
-        </svg>Parking (shore dives)</label>
     </div>
 
     <div class="section">
@@ -278,22 +265,15 @@
       <label><input type="checkbox" id="toggle-depth">Depth</label>
       <div class="legend" id="depth-legend"></div>
       <div class="hint fixed-lines" id="depth-status" data-placeholder="Depth under the pointer"></div>
-      <label><input type="checkbox" id="toggle-currents">Tidal currents (current tool)</label>
+      <label><input type="checkbox" id="toggle-currents">Tidal currents</label>
       <div class="legend" id="currents-legend"></div>
       <div class="hint fixed-lines" id="currents-status" data-placeholder="Current 2 m above the seabed under the pointer"></div>
     </div>
 
     <div class="section">
-      <div class="hint">Click the map to grab coordinates</div>
-      <input type="text" id="coord-readout" readonly placeholder="lat, lon">
-      <button type="button" id="coord-copy">Copy</button>
+      <div class="readout-title">Coordinates</div>
+      <div class="hint fixed-lines" id="coord-status" data-placeholder="Click the map to grab coordinates"></div>
     </div>
-
-    <div class="section">
-      <button type="button" id="data-refresh">Refresh site data</button>
-    </div>
-
-    <div id="count"></div>
 
     <div id="panel-footer">
       <a href="https://github.com/keymaker-byte/scuba-ai" target="_blank" rel="noopener">
@@ -384,7 +364,11 @@ try {
 setPanelCollapsed(initialPanelCollapsed);
 panelToggleBtn.addEventListener('click', () => setPanelCollapsed(!panelEl.classList.contains('collapsed')));
 
-const map = L.map('map', { worldCopyJump: true, zoomControl: false }).setView([20, -60], 3);
+// The map zooms out no further than the zoom the depth and current layers draw from, so every
+// view it shows has both; the region filter moves between regions.
+const MAP_MIN_ZOOM = 9;
+const FIRST_VIEW_REGION = 'puget-sound';   // the region a first visit opens on, selected in the filter
+const map = L.map('map', { worldCopyJump: true, zoomControl: false, minZoom: MAP_MIN_ZOOM }).setView([47.6, -122.4], MAP_MIN_ZOOM);
 L.control.zoom({ position: 'topright' }).addTo(map);
 
 // Stacking order where pins overlap on screen: parking lowest, then entry,
@@ -614,10 +598,7 @@ const searchInput = document.getElementById('search');
 const regionSelect = document.getElementById('region-filter');
 const toggleShore = document.getElementById('toggle-shore');
 const toggleBoat = document.getElementById('toggle-boat');
-const toggleEntry = document.getElementById('toggle-entry');
-const toggleParking = document.getElementById('toggle-parking');
 const toggleSatellite = document.getElementById('toggle-satellite');
-const countEl = document.getElementById('count');
 
 function applySatelliteToggle() {
   if (toggleSatellite.checked) {
@@ -755,7 +736,7 @@ class CurrentsControl {
     this.legend.innerHTML = legendHtml();
     this.toggle.addEventListener('change', () => this.apply());
     map.on('mousemove', e => {
-      if (this.frame) return;
+      if (this.frame || readoutPinned) return;
       this.frame = requestAnimationFrame(() => { this.frame = 0; this.showAt(e.latlng); });
     });
     map.on('click', e => this.showAt(e.latlng));
@@ -831,10 +812,14 @@ class CurrentsControl {
     if (!this.status.classList.contains('error') && !this.lastPoint) this.status.textContent = 'Point at the water for its current';
     const held = this.sets.reduce((n, s) => n + s.cells.size, 0);
     if (held > CURRENT_CELLS_HELD) {
+      // far from the view as it is now: the map may have moved while the cells loaded, and a
+      // cell the newer view holds stays
+      const now = map.getBounds().pad(0.25);
+      const near = c => now.intersects(L.latLngBounds([c.box[0], c.box[1]], [c.box[2], c.box[3]]));
       const far = [];
       for (const set of this.sets) {
         for (const c of set.o.cells) {
-          if (hits(c) || !set.cells.has(c.id)) continue;
+          if (near(c) || !set.cells.has(c.id)) continue;
           const p = set.cells.get(c.id);
           set.cells.delete(c.id);
           far.push(p.then(f => f, () => null));
@@ -921,7 +906,10 @@ class CurrentsControl {
       return;
     }
     const toward = Math.round(r.toward) % 360;
-    this.status.textContent = `${r.speed.toFixed(2)} m/s toward ${String(toward).padStart(3, '0')}° (${COMPASS[Math.round(toward / 22.5) % 16]})`;
+    showReadout(this.status, [
+      ['Speed', `${r.speed.toFixed(2)} m/s`],
+      ['Toward', `${String(toward).padStart(3, '0')}°`, `(${COMPASS[Math.round(toward / 22.5) % 16]})`],
+    ]);
   }
 }
 const currents = new CurrentsControl({ kind: 'seafloor', toggle: 'toggle-currents', legend: 'currents-legend',
@@ -942,7 +930,7 @@ const depthLegend = document.getElementById('depth-legend');
 const DEPTH_HINT = 'Point at the water for its depth';
 // A readout longer than its fixed lines is cut there; hovering shows it whole.
 for (const el of document.querySelectorAll('.fixed-lines')) {
-  new MutationObserver(() => { el.title = el.textContent; }).observe(el, { childList: true, characterData: true, subtree: true });
+  new MutationObserver(() => { el.title = el.querySelector('.readout-row') ? '' : el.textContent; }).observe(el, { childList: true, characterData: true, subtree: true });
 }
 let depthSource = null;
 var depthLayer = null;  // var: showMapTime, above, reads it before this line runs
@@ -950,7 +938,7 @@ let depthLoading = null;
 
 (function buildDepthLegend() {
   const bands = DiveDepth.BANDS;
-  const LABELS = new Set([0, 5, 10, 20, 40, 100]);
+  const LABELS = new Set([5, 10, 20, 40, 100]);   // 0 left off: it sits right after "dry"
   const swatch = c => `<span style="background:rgb(${c.join(',')})"></span>`;
   const bar = swatch(DiveDepth.DRY) + bands.map(b => swatch(b.color)).join('');
   const ticks = ['dry', 0, ...bands.slice(0, -1).map(b => b.to)]
@@ -1026,6 +1014,51 @@ async function applyDepthToggle() {
 }
 toggleDepth.addEventListener('change', applyDepthToggle);
 
+// A reading shown as lines of [label, value, note]: the value is what its copy button copies,
+// the note a plain addition after it.
+const COPY_ICON = '<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 3.5v-.5a1.5 1.5 0 0 0-1.5-1.5H4a1.5 1.5 0 0 0-1.5 1.5v5A1.5 1.5 0 0 0 4 9.5h.5"/></svg>';
+const COPIED_ICON = '<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>';
+function showReadout(el, rows) {
+  el.replaceChildren(...rows.map(([label, value, note]) => {
+    const row = document.createElement('div');
+    row.className = 'readout-row';
+    const l = document.createElement('span');
+    l.className = 'readout-label';
+    l.textContent = label;
+    const v = document.createElement('span');
+    v.className = 'readout-value';
+    v.textContent = value;
+    if (note) {
+      const n = document.createElement('span');
+      n.className = 'readout-note';
+      n.textContent = ` ${note}`;
+      v.appendChild(n);
+    }
+    v.title = v.textContent;
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'readout-copy';
+    b.title = `Copy ${value}`;
+    b.innerHTML = COPY_ICON;
+    b.addEventListener('click', async () => {
+      if (!(await copyCoordText(value))) return;
+      b.classList.add('done');
+      b.innerHTML = COPIED_ICON;
+      setTimeout(() => { b.classList.remove('done'); b.innerHTML = COPY_ICON; }, 1200);
+    });
+    row.append(l, v, b);
+    return row;
+  }));
+}
+
+// A click on the map pins the depth and current readings to that point, so the pointer can
+// cross the map to the panel's copy buttons; hovering takes over again once the pointer has
+// left the panel, or on Escape.
+let readoutPinned = false;
+map.on('click', () => { readoutPinned = true; });
+document.getElementById('panel').addEventListener('mouseleave', () => { readoutPinned = false; });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') readoutPinned = false; });
+
 // The point under the pointer, one lookup per animation frame at most, read again when the
 // slider moves.
 let depthQuery = null;
@@ -1049,11 +1082,16 @@ async function showDepthAt(latlng) {
     depthStatus.textContent = r === null ? 'No depth here' : 'Above the highest tide';
     return;
   }
-  const total = r.total >= 0 ? metres(r.total) : `Dry, ${(-r.total).toFixed(1)} m above the water`;
-  depthStatus.textContent = `${r.lake ? r.lake + ': ' : ''}${total} (seabed ${metres(r.seabed)} + tide ${signed(r.tide)})`;
+  // Every line signed the same way: a negative total is ground standing above the water, a
+  // negative seabed ground above the datum.
+  showReadout(depthStatus, [
+    ['Total', metres(r.total), r.total < 0 ? 'dry' : r.lake ? `in ${r.lake}` : ''],
+    ['Seabed', metres(r.seabed)],
+    ['Tide', signed(r.tide)],
+  ]);
 }
 map.on('mousemove', e => {
-  if (depthFrame) return;
+  if (depthFrame || readoutPinned) return;
   depthFrame = requestAnimationFrame(() => { depthFrame = 0; showDepthAt(e.latlng); });
 });
 map.on('click', e => showDepthAt(e.latlng));
@@ -1068,8 +1106,6 @@ const persistedControls = {
   region: regionSelect,
   shore: toggleShore,
   boat: toggleBoat,
-  entry: toggleEntry,
-  parking: toggleParking,
   satellite: toggleSatellite,
   currents: currents.toggle,
   depth: toggleDepth,
@@ -1094,8 +1130,6 @@ if (savedMenuState) {
   searchInput.value = savedMenuState.search || '';
   toggleShore.checked = !!savedMenuState.shore;
   toggleBoat.checked = !!savedMenuState.boat;
-  toggleEntry.checked = !!savedMenuState.entry;
-  toggleParking.checked = !!savedMenuState.parking;
   toggleSatellite.checked = !!savedMenuState.satellite;
   currents.toggle.checked = !!savedMenuState.currents;
   toggleDepth.checked = !!(savedMenuState.depth ?? savedMenuState.depthNcei);
@@ -1109,8 +1143,7 @@ for (const [key, el] of Object.entries(persistedControls)) {
   el.addEventListener(key === 'search' ? 'input' : 'change', saveMenuState);
 }
 
-const coordReadout = document.getElementById('coord-readout');
-const coordCopyBtn = document.getElementById('coord-copy');
+const coordStatus = document.getElementById('coord-status');
 let coordPickMarker = null;
 
 async function copyCoordText(text) {
@@ -1122,29 +1155,18 @@ async function copyCoordText(text) {
   }
 }
 
-map.on('click', async (e) => {
+// A click drops a marker, shows the point's coordinate and copies it straight away.
+map.on('click', (e) => {
   const coordText = `${e.latlng.lat.toFixed(6)}, ${e.latlng.lng.toFixed(6)}`;
-  coordReadout.value = coordText;
+  showReadout(coordStatus, [['Lat, lon', coordText]]);
 
   if (coordPickMarker) map.removeLayer(coordPickMarker);
   coordPickMarker = L.circleMarker(e.latlng, {
     radius: 5, color: '#fff', weight: 1.5, fillColor: '#16a34a', fillOpacity: 1,
   }).addTo(map);
 
-  const copied = await copyCoordText(coordText);
-  coordCopyBtn.textContent = copied ? 'Copied' : 'Copy';
-  setTimeout(() => { coordCopyBtn.textContent = 'Copy'; }, 1500);
+  coordStatus.querySelector('.readout-copy').click();
 });
-
-coordCopyBtn.addEventListener('click', async () => {
-  if (!coordReadout.value) return;
-  coordReadout.select();
-  const copied = await copyCoordText(coordReadout.value);
-  coordCopyBtn.textContent = copied ? 'Copied' : 'Copy';
-  setTimeout(() => { coordCopyBtn.textContent = 'Copy'; }, 1500);
-});
-
-coordReadout.addEventListener('click', () => coordReadout.select());
 
 function rebuild() {
   shoreLayer.clearLayers();
@@ -1154,81 +1176,36 @@ function rebuild() {
 
   const query = searchInput.value.trim().toLowerCase();
   const region = regionSelect.value;
-  let shownSites = 0, shownEntries = 0, shownParking = 0;
 
   for (const site of allSites) {
     if (region && site.region !== region) continue;
     if (query && !site.name.toLowerCase().includes(query)) continue;
 
     if (site.type === 'shore' && toggleShore.checked) {
+      // a shore site's entry point and parking show with it
       siteMarker(site).addTo(shoreLayer);
-      shownSites++;
+      if (site.entry) entryMarker(site).addTo(entryLayer);
+      if (site.parking) parkingMarker(site).addTo(parkingLayer);
     } else if (site.type === 'boat' && toggleBoat.checked) {
       siteMarker(site).addTo(boatLayer);
-      shownSites++;
-    }
-    if (site.entry && toggleEntry.checked) {
-      entryMarker(site).addTo(entryLayer);
-      shownEntries++;
-    }
-    if (site.parking && toggleParking.checked) {
-      parkingMarker(site).addTo(parkingLayer);
-      shownParking++;
     }
   }
-  countEl.textContent = `${shownSites} site${shownSites === 1 ? '' : 's'} shown` +
-    (shownParking ? `, ${shownParking} parking spot${shownParking === 1 ? '' : 's'}` : '') +
-    (shownEntries ? `, ${shownEntries} entry point${shownEntries === 1 ? '' : 's'}` : '');
 }
 
 [searchInput].forEach(el => el.addEventListener('input', rebuild));
-[regionSelect, toggleShore, toggleBoat, toggleEntry, toggleParking].forEach(el => el.addEventListener('change', rebuild));
-
-function refreshRegionOptions() {
-  const previous = regionSelect.value;
-  while (regionSelect.options.length > 1) regionSelect.remove(1);
-  const regionSlugs = [...new Set(allSites.map(s => s.region))]
-    .sort((a, b) => regionInfo(a).name.localeCompare(regionInfo(b).name));
-  for (const slug of regionSlugs) {
-    const opt = document.createElement('option');
-    opt.value = slug;
-    opt.textContent = regionInfo(slug).name;
-    regionSelect.appendChild(opt);
+[regionSelect, toggleShore, toggleBoat].forEach(el => el.addEventListener('change', rebuild));
+// Picking a region centres the map on its sites, as close as fits them all from the map's
+// lowest zoom; "All regions" leaves the view where it is.
+regionSelect.addEventListener('change', () => {
+  const region = regionSelect.value;
+  if (!region) return;
+  const points = [];
+  for (const s of allSites) {
+    if (s.region !== region) continue;
+    points.push([s.site.lat, s.site.lon]);
+    if (s.entry) points.push([s.entry.lat, s.entry.lon]);
   }
-  if (regionSlugs.includes(previous)) regionSelect.value = previous;
-}
-
-const dataRefreshBtn = document.getElementById('data-refresh');
-dataRefreshBtn.addEventListener('click', () => {
-  dataRefreshBtn.textContent = 'Refreshing...';
-  dataRefreshBtn.disabled = true;
-
-  const old = document.getElementById('data-reload-script');
-  if (old) old.remove();
-
-  const s = document.createElement('script');
-  s.id = 'data-reload-script';
-  s.src = 'map/data.js?_=' + Date.now();
-  s.onload = () => {
-    try {
-      if (!window.MAP_DATA) throw new Error('window.MAP_DATA is not defined');
-      allSites = window.MAP_DATA.sites || [];
-      refreshRegionOptions();
-      rebuild();
-      dataRefreshBtn.textContent = 'Refreshed';
-    } catch (err) {
-      showError(`<strong>Could not reload map/data.js</strong> (${escapeHtml(err.message)}).`);
-      dataRefreshBtn.textContent = 'Refresh site data';
-    }
-    dataRefreshBtn.disabled = false;
-    setTimeout(() => { dataRefreshBtn.textContent = 'Refresh site data'; }, 1500);
-  };
-  s.onerror = () => {
-    showError('<strong>Could not reload map/data.js</strong> (script failed to load).');
-    dataRefreshBtn.textContent = 'Refresh site data';
-    dataRefreshBtn.disabled = false;
-  };
-  document.body.appendChild(s);
+  if (points.length) map.fitBounds(L.latLngBounds(points), { padding: [30, 30], maxZoom: 13 });
 });
 
 try {
@@ -1245,18 +1222,24 @@ try {
   }
   if (savedMenuState && savedMenuState.region && regionSlugs.includes(savedMenuState.region)) {
     regionSelect.value = savedMenuState.region;
+  } else if (!savedMenuState && regionSlugs.includes(FIRST_VIEW_REGION)) {
+    regionSelect.value = FIRST_VIEW_REGION;
   }
 
   rebuild();
 
+  // A first visit opens centred on the selected region, Puget Sound unless the menu remembers
+  // another: the map's lowest zoom shows one region at a time.
   if (!restoredView) {
+    const region = regionSelect.value || FIRST_VIEW_REGION;
     const allLatLngs = [];
     for (const s of allSites) {
+      if (s.region !== region) continue;
       allLatLngs.push([s.site.lat, s.site.lon]);
       if (s.entry) allLatLngs.push([s.entry.lat, s.entry.lon]);
     }
     if (allLatLngs.length) {
-      map.fitBounds(L.latLngBounds(allLatLngs), { padding: [30, 30] });
+      map.fitBounds(L.latLngBounds(allLatLngs), { padding: [30, 30], maxZoom: 13, animate: false });
     }
   }
 } catch (err) {
