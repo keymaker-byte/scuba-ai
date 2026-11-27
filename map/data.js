@@ -2870,6 +2870,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "sledgehammer-point",
+      "name": "Sledgehammer Point",
+      "region": "washington-state-lakes",
+      "type": "shore",
+      "file": "regions/washington-state-lakes/sites/sledgehammer-point.md",
+      "site": {
+        "lat": 48.071896,
+        "lon": -123.774735
+      },
+      "entry": {
+        "lat": 48.071892,
+        "lon": -123.774306
+      },
+      "parking": {
+        "lat": 48.071918,
+        "lon": -123.774151
+      }
+    },
+    {
       "slug": "titlow-beach",
       "name": "Titlow Beach",
       "region": "puget-sound",
