@@ -39,8 +39,8 @@ One overlay per area, from the built current tool region holding it, 2 m above t
 The layers are kept out of git: `map/depth/`, `map/currents/` and `map/tides/` are gitignored, and the map online reads them from a GitHub release.
 
 - **`publish`.** Zips each layer folder (`map-depth.zip`, `map-currents.zip`, `map-tides.zip`) into a new release tagged `map-<UTC time>`, then keeps the newest two map releases and deletes the rest with their tags (`--keep` sets how many). It needs the GitHub CLI, installed and logged in (`gh auth login`), and sends nothing until every layer's description file is on disk and the depth and current layers hold every area of `map/coverage.json`, so a run with `--area` on a fresh clone never publishes a map missing the other areas.
-- **The deploy.** `.github/workflows/pages.yml` runs on every push to `main`, on every published release, and by hand. It checks out `main`, unzips the newest `map-*` release's layers beside `map.html`, and deploys the whole to GitHub Pages, so every file the map reads is served from the one address.
-- **When to run it.** After every export whose layers should go online. An export alone changes only this machine; the map online keeps the last published layers.
+- **The deploy.** `.github/workflows/pages.yml` runs on every push to `main`, and by hand; a new release goes online with the next push. It checks out `main`, unzips the newest `map-*` release's layers beside `map.html`, and deploys the whole to GitHub Pages, so every file the map reads is served from the one address.
+- **When to run it.** After every export whose layers should go online, then push `main`. An export alone changes only this machine, and a release alone changes nothing online until the next push; the map online keeps the layers it was last deployed with.
 - **A fresh clone.** Has no layers until they are written with an export or unzipped from the newest release (`gh release download <tag> --pattern 'map-*.zip'`, each unzipped at the workspace root).
 
 ## Before relying on it
@@ -59,5 +59,5 @@ python3 tools/map_export.py tides            # map/tides/stations.js
 python3 tools/map_export.py currents         # map/currents/<area>-seafloor/ and map/currents/index.js
 python3 tools/map_export.py depth            # map/depth/tiles/ and map/depth/depth.js
 python3 tools/map_export.py depth --area bonaire   # one area's depth tiles, keeping every other area's
-python3 tools/map_export.py publish          # every layer zipped into a GitHub release, which deploys the map
+python3 tools/map_export.py publish          # every layer zipped into a GitHub release, online with the next push to main
 ```

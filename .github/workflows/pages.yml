@@ -1,12 +1,11 @@
 # The published map: the repository as it stands on main, with the map layers from the newest
 # map-* release (tools/map_export.py publish) unzipped beside map.html. The layers live outside git.
+# It runs on a push to main, and by hand: a new release goes online with the next push.
 name: Pages
 
 on:
   push:
     branches: [main]
-  release:
-    types: [published]
   workflow_dispatch:
 
 permissions:

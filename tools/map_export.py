@@ -9,7 +9,7 @@ The map names no datum: it shows the total depth, the seabed plus the tide.
   map_export.py depth           map/depth/tiles/ and map/depth/depth.js
   map_export.py tides           map/tides/stations.js
   map_export.py currents        map/currents/<area>-seafloor.js and map/currents/index.js
-  map_export.py publish         every layer zipped into a GitHub release, which deploys the map
+  map_export.py publish         every layer zipped into a GitHub release, online with the next push to main
   map_export.py depth --area bonaire    one area's depth tiles alone, keeping every other area's
 
 Every source is downloaded first, the first time a layer needs it, so a first export runs long:
@@ -649,7 +649,7 @@ def _gh(*args, capture=False):
 
 def cmd_publish(keep):
     """Zip every layer into a new release, tagged map-<UTC time>, and keep only the newest `keep`
-    map releases. Publishing the release starts the Pages workflow."""
+    map releases. The release goes online with the next push to main, which runs the Pages workflow."""
     import tempfile
     import zipfile
     for name, desc in RELEASE_LAYERS.items():
