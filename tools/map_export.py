@@ -159,6 +159,25 @@ def land_mask(S, W, N, E):
             "offsets": b64(offsets), "crossings": b64(cross)}
 
 
+def mask_reader(mask):
+    """on_land(lat, lon) as the viewer's onLand reads the land mask: the same decoded rows and
+    crossings, so a check point is placed only where the browser's coastline agrees."""
+    merc = lambda lat: math.log(math.tan(math.pi / 4 + math.radians(lat) / 2))
+    off = array.array("I", base64.b64decode(mask["offsets"]))
+    cr = array.array("H", base64.b64decode(mask["crossings"]))
+    if sys.byteorder != "little":
+        off.byteswap()
+        cr.byteswap()
+
+    def on_land(lat, lon):
+        r = math.floor((mask["yN"] - merc(lat)) / mask["dLon"] / (math.pi / 180))
+        if r < 0 or r >= mask["rows"]:
+            return False
+        c = (lon - mask["W"]) / mask["dLon"]
+        return sum(1 for x in cr[off[r]:off[r + 1]] if x <= c) % 2 == 1
+    return on_land
+
+
 def export_currents(area):
     """The map viewer's seafloor overlay: everything the browser needs to run the tool's own
     blend at any point, the database's constants at every mesh node in the boxes, the stations'
@@ -199,13 +218,15 @@ def export_currents(area):
         e, _ = seabed.elevation(lat[n], lon[n])
         if e is not None:
             elev[n] = e
-    tris = [t for t in tris if all(i in elev for i in t)]
+    # an element is kept while any corner has a seabed: a corner with none (a node of the mesh's
+    # coarse coastline on land, or water no survey answers) takes the water around it below
+    tris = [t for t in tris if any(i in elev for i in t)]
     nodes = sorted({i for t in tris for i in t})
     if not nodes:
         sys.exit(f"{area['name']}: no mesh node in its boxes has a seabed depth from a bathymetry.")
     wide = len(nodes) > 65535   # the triangles' node index: 16 bits, or 32 for a large mesh
     index = {n: j for j, n in enumerate(nodes)}
-    log(f"  {len(nodes)} nodes with a seabed depth, {len(tris)} elements")
+    log(f"  {len(nodes)} nodes, {len(tris)} elements with a seabed at a corner or more")
     hab = ABOVE_BOTTOM
     # each node's seabed for the trails: its own, or, at a corner on land or in water shallower
     # than the height, the deepest water at the middle of the elements around it, so the trails
@@ -216,6 +237,8 @@ def export_currents(area):
         for i in t:
             around.setdefault(i, []).append(t)
     for n in nodes:
+        if n not in elev:
+            continue
         d = -elev[n]
         if d <= hab:
             mids = []
@@ -225,6 +248,32 @@ def export_currents(area):
                     mids.append(-e)
             d = max(mids) if mids else d
         depth[n] = d
+    # a corner with no seabed of its own: the deepest water at the middle of the elements around
+    # it, or, with none there, the mean of its neighbours' seabeds, spread out ring by ring
+    nbrs = {}
+    for t in tris:
+        for i in t:
+            nbrs.setdefault(i, set()).update(x for x in t if x != i)
+    for n in nodes:
+        if n in depth:
+            continue
+        mids = []
+        for t in around[n]:
+            e, _ = seabed.elevation(sum(lat[i] for i in t) / 3, sum(lon[i] for i in t) / 3)
+            if e is not None and -e > hab:
+                mids.append(-e)
+        if mids:
+            depth[n] = max(mids)
+    while len(depth) < len(nodes):
+        ring = {n: [depth[x] for x in nbrs[n] if x in depth] for n in nodes if n not in depth}
+        ring = {n: sum(v) / len(v) for n, v in ring.items() if v}
+        if not ring:
+            break
+        depth.update(ring)
+    lone = [n for n in nodes if n not in depth]
+    if lone:
+        sys.exit(f"{area['name']}: {len(lone)} mesh nodes have no seabed and no neighbour with one.")
+    log(f"  {len(nodes) - len(elev)} corners with no seabed of their own take the water around them")
     log("Paths through the water from every station...")
     near = {n: [] for n in nodes}
     for i, s in enumerate(sources):
@@ -350,6 +399,34 @@ def export_currents(area):
         rng.shuffle(w)
         return sum(wi * lat[i] for wi, i in zip(w, t)), sum(wi * lon[i] for wi, i in zip(w, t))
 
+    mask = land_mask(S, W, N, E)
+    on_mask = mask_reader(mask)
+    # the mesh's shoreline as the viewer holds it: an edge of a single exported element with
+    # both ends on the mesh's own shore
+    shore_edges = [k for k, c in edges.items() if c == 1 and k[0] in shore and k[1] in shore]
+
+    def browser_reaches(la, lo):
+        """Whether the viewer reaches the mesh from a point off it as its edgePoint does: the point
+        off its land mask, the nearest shoreline edge within EXTEND_KM, and the straight line to
+        it clear of the mask. The mask's 37.5 m cells can call land the water just off a shore
+        the coastline calls sea; a check there would test the mask's resolution, not the blend."""
+        if on_mask(la, lo):
+            return False
+        sc = math.cos(math.radians(la))
+        best = None
+        for a, b in shore_edges:
+            ax, ay, bx, by = lon[a] * sc, lat[a], lon[b] * sc, lat[b]
+            dx, dy = bx - ax, by - ay
+            L2 = dx * dx + dy * dy
+            t = max(0.0, min(1.0, ((lo * sc - ax) * dx + (la - ay) * dy) / L2)) if L2 else 0.0
+            d = math.hypot(ax + t * dx - lo * sc, ay + t * dy - la) * 111.2
+            if best is None or d < best[0]:
+                best = (d, ay + t * dy, (ax + t * dx) / sc)
+        if best is None or best[0] > EXTEND_KM:
+            return False
+        n = max(1, math.ceil(best[0] * 100))
+        return not any(on_mask(la + (best[1] - la) * i / n, lo + (best[2] - lo) * i / n) for i in range(1, n))
+
     def point_check(kind, la, lo):
         # a point placed and extracted as `extract` does at any coordinate, or None where the
         # tool gives nothing to prove there
@@ -363,7 +440,7 @@ def export_currents(area):
             nn, w, ext = mesh.place_site(la, lo)
         except Refused:
             return None
-        if any(x not in index for x in nn) or (kind == "shore" and not ext):
+        if any(x not in index for x in nn) or (kind == "shore" and not (ext and browser_reaches(la, lo))):
             return None
         H = round(-e, 1)
         # interpolated from the same int16 constants the browser reads, as the node checks are,
@@ -421,7 +498,7 @@ def export_currents(area):
         "profile": {str(b): [[f, z.real, z.imag] for f, z in prof[b]] for b in (1, 2)},
         "astronomy": astronomy,
         "settings": settings,
-        "landMask": land_mask(S, W, N, E),
+        "landMask": mask,
     }
     out_dir = os.path.join(WORKSPACE, "map", "currents", name)
     part = out_dir + ".part"
