@@ -15,6 +15,7 @@ Freshwater lakes in Washington State deep and clear enough to be worth diving.
 | Site | Description |
 |---|---|
 | [Lake Crescent East Beach](sites/lake-crescent-east-beach.md) | South shore near the east end of Lake Crescent in Olympic National Park, a deep, exceptionally clear glacial lake where a narrow shelf breaks into a steep slope past a house-sized boulder garden, a sunken wooden barge and a submerged forest, home to the lake's endemic trout. |
+| [Denny Blaine Park](sites/denny-blaine-park.md) | West shore of Lake Washington in Seattle, below an Olmsted park's old stone seawall, where a gentle pebble beach and silty slope give way to a wall from about 14 to 26 m and a steep slope down to the lake floor, home to signal crayfish, sculpin and bass. |
 | [Sledgehammer Point](sites/sledgehammer-point.md) | A sheer wall off US 101 at the east end of Lake Crescent, entered from the welcome sign pullout, with ledges to one side and a cliff to the other dropping past 90 m through some of the clearest fresh water in the region, home to sculpin, crayfish and the lake's endemic trout. |
 
 ## Dive shops and air fills
