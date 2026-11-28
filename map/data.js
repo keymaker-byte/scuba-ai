@@ -2946,6 +2946,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "denny-blaine-park",
+      "name": "Denny Blaine Park",
+      "region": "washington-state-lakes",
+      "type": "shore",
+      "file": "regions/washington-state-lakes/sites/denny-blaine-park.md",
+      "site": {
+        "lat": 47.620165,
+        "lon": -122.278433
+      },
+      "entry": {
+        "lat": 47.620231,
+        "lon": -122.27997
+      },
+      "parking": {
+        "lat": 47.62014,
+        "lon": -122.280568
+      }
+    },
+    {
       "slug": "titlow-beach",
       "name": "Titlow Beach",
       "region": "puget-sound",
