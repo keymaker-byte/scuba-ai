@@ -34,11 +34,6 @@ The house reef of Plaza Resort on Bonaire's west coast south of Kralendijk, name
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 300° |
-| **Dive area shore facing** | west-northwest, 301° |
-
 The swim out runs 84 m west-northwest from the beach, close to straight out from the shore, to the dive area.
 
 * **Bad.** West-southwest through west (WSW-W), onshore over more than 30 km of open sea, and north-northwest (NNW), onshore over 6.9 km down the coast. Wind from these quarters raises waves on the beach and stirs up the terrace.

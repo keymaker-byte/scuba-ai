@@ -35,11 +35,6 @@ The house reef of Captain Don's Habitat on Bonaire's west coast north of Kralend
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 249° |
-| **Dive area shore facing** | west-southwest, 249° |
-
 The swim out runs 70 m southwest from the pier, slightly south of straight off the shore, to the dive area.
 
 * **Bad.** West through northwest (W-NW), onshore over 6.5 km to more than 30 km of open sea. Wind from these quarters raises waves at the pier and stirs up the shallows.

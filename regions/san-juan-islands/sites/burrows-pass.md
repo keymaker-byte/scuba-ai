@@ -62,11 +62,6 @@ Diveable on the slack before the ebb only. Do not dive on a flood exchange or at
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south-southwest, 192° |
-| **Dive area shore facing** | south-southeast, 156° |
-
 The entry beach is on the north shore of the pass, facing south-southwest toward Burrows Island.
 
 * **Bad.** West-southwest (WSW), onshore over 10.1 km, straight up the axis of the pass from its Rosario Strait opening.

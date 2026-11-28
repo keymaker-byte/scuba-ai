@@ -51,11 +51,6 @@ The reef is spread across a broad area and is easy to miss piecemeal, so most di
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north-northwest, 337° |
-| **Dive area shore facing** | north-northwest, 328° |
-
 The beach faces north to northwest across East Passage.
 
 * **Bad.** West-northwest through north (WNW-N), onshore over 5.1 to 21.6 km up the passage, which puts chop on the entry.

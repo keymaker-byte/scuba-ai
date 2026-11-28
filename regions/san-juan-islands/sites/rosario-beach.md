@@ -43,11 +43,6 @@ Dive at slack, and on a low exchange. The strait runs fast, and the offshore leg
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 292° |
-| **Dive area shore facing** | northwest, 310° |
-
 The bay opens west to northwest onto Rosario Strait, sheltered by Rosario Head to the south and the rock cliffs to the north.
 
 * **Bad.** Southwest through west-northwest (SW-WNW), onshore over 12.2 km to more than 30 km, straight into the bay off the strait, building chop on the entry and a head sea on the surface swim.

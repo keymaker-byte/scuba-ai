@@ -31,10 +31,6 @@ A boat dive on the north side of Klein Bonaire, named for its knife-like coral f
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | north-northwest, 344° |
-
 * **Bad.** West-northwest through north-northwest (WNW-NNW), onshore over 5.4 to more than 30 km of open water, putting chop at the mooring and surge over the terrace.
 * **Short fetch.** North through northeast (N-NE), onshore over 2.6 to 4 km across the channel from Bonaire, enough to build a chop at the mooring.
 * **Mixed.** West-southwest through west (WSW-W), cross-shore over more than 30 km of open water, running a swell along the reef.

@@ -46,11 +46,6 @@ The point is current sensitive: missing the window by even a little brings on cu
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north-northwest, 347° |
-| **Dive area shore facing** | north, 350° |
-
 Green Point faces open water to the north and northwest, toward Burrows Bay and Rosario Strait.
 
 * **Bad.** West-northwest through north-northwest (WNW-NNW), onshore over 6.8 to 16.3 km, and north-northeast through northeast (NNE-NE), onshore over 5.1 to 9.6 km, a direct fetch off Burrows Bay and Rosario Strait.

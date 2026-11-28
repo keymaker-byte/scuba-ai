@@ -51,11 +51,6 @@ Possession Sound's tidal exchange: weak over the flat, stronger at the pier's ou
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north-northwest, 342° |
-| **Dive area shore facing** | north-northwest, 339° |
-
 * **Bad.** Northwest through northeast (NW-NE), onshore over 6.3 to 10.9 km of open water up Possession Sound, building chop onto the beach and across the long swim out.
 * **Short fetch.** West-northwest (WNW), onshore over 4.96 km, enough for a short chop on the entry.
 * **Mixed.** West-southwest (WSW), cross-shore over 6.4 km, running a chop along the beach past the entry.

@@ -48,11 +48,6 @@ The site sits inside the Hood Canal entrance, out of the strongest water off Fou
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north-northwest, 336° |
-| **Dive area shore facing** | north-northwest, 336° |
-
 The beach faces north-northwest, with land closing it in within about 500 m from north-northwest through northeast, and open water across the canal entrance to the west and northwest.
 
 * **Bad.** West-northwest through northwest (WNW-NW), onshore over 5.4 to 6.7 km of open water across the canal entrance, building chop straight onto the beach.

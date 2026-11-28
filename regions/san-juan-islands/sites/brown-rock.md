@@ -51,12 +51,7 @@ The rock sits in the cove off the main channel of Obstruction Pass, and the chan
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southeast, 142° |
-| **Dive area shore facing** | southwest, 223° |
-
-The entry shore faces the cove and Obstruction Island across the pass; the dive area facing is the rock's own southwest face.
+The entry shore faces the cove and Obstruction Island across the pass; the dive area lies along the rock's own southwest face.
 
 * **Bad.** East-southeast through southeast (ESE-SE), onshore over 5.7 to 9.4 km of open water down the east entrance of the pass, building chop on the beach and across the swim out.
 * **Mixed.** Southwest (SW), cross-shore over 7.3 km down the west entrance of the pass, running swell past the entry.

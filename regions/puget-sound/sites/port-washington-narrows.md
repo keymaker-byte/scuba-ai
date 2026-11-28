@@ -42,11 +42,6 @@ Port Washington Narrows is the tidal cut through Bremerton joining Dyes Inlet to
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 240° |
-| **Dive area shore facing** | west-southwest, 237° |
-
 A narrow inland cut through residential Bremerton, with land close on both sides. The entry beach faces west-southwest across the narrows and the exit beach faces southwest.
 
 * **Short fetch.** South through south-southwest (S-SSW), onshore over 2.5 to 3.3 km up Sinclair Inlet, the one direction with any fetch to the Manette entry.

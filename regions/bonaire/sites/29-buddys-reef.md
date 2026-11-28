@@ -35,11 +35,6 @@ Buddy Dive Resort's house reef on Bonaire's west coast north of Kralendijk, ente
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 247° |
-| **Dive area shore facing** | west-southwest, 246° |
-
 The swim out runs 64 m west-southwest from the pier, straight out from the shore, to the dive area.
 
 * **Bad.** South (S), onshore over 5.2 km down the coast, and west through west-northwest (W-WNW), onshore over more than 30 km of open sea. Wind from these quarters raises waves at the pier and stirs up the terrace.

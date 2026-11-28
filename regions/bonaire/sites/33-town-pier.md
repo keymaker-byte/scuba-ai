@@ -34,11 +34,6 @@ Kralendijk's town pier, a working cargo and cruise pier running out from the wat
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 261° |
-| **Dive area shore facing** | west, 262° |
-
 The swim out runs 55 m northwest from the entry along the pier to the dive area, 48° off the shore's facing.
 
 * **Bad.** Southwest through west-southwest (SW-WSW), onshore over more than 30 km of open sea through the gap south of Klein Bonaire, and northwest (NW), onshore over 10.7 km down the coast. Wind from these quarters raises waves on the shore protection and a surge through the pilings.

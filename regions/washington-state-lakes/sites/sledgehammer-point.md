@@ -32,11 +32,6 @@ A wall dive straight off US 101 at the east end of Lake Crescent in Olympic Nati
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 283° |
-| **Dive area shore facing** | west-northwest, 283° |
-
 * **Bad.** West-southwest (WSW), onshore over 6.5 km of open water, the longest run of water in reach of the entry. A sustained wind from here builds chop onto the shore, which makes the scramble out over rock below the guardrail awkward.
 * **Short fetch.** Southwest (SW), and west through north-northwest (W-NNW), onshore over 1.2 to 2.6 km. A sustained wind from here puts a chop on the entry, enough to make the exit uncomfortable in a stiff breeze.
 * **Fine.** North clockwise through south-southwest (N-SSW): offshore from northeast through south-southeast, and cross-shore from north, north-northeast, south and south-southwest, running along the shore over 2.4 km or less.

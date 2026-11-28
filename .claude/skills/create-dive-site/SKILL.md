@@ -119,22 +119,12 @@ Produce every current figure by the current type the site conventions' Current s
 
 ## 7. Wind
 
-Run `shore_exposure.md` on the dive area coordinate, the one the Coordinates row will carry, and for a shore site also on the entry point, the one the Entry point coordinates row will carry; a boat site runs on the dive area alone. It gives the entry and dive area shore facings and the fetch from each of the 16 compass directions. A dive area coordinate it reads as on land goes back to step 3. The entry point is read against its nearest shore, so one on the beach is expected. Inside a lake it reads the lake's own shoreline. Any region-specific reading is in the site conventions' Wind section. Classify each of the 16 directions by the shore relation and fetch it prints:
+Run `shore_exposure.md`'s `extract --site` on the site JSON, with `--entry` at the entry point the Entry point coordinates row will carry for a shore site, or `--boat` for a boat site. It reads the dive area from the JSON's `lat` and `lon` and writes the JSON's `wind` section: the entry and dive area shore facings, the swim out, the fetch, shore relation and class of each of the 16 compass directions, and the Bad, Short fetch, Mixed and Fine sectors. A dive area coordinate it reads as on land goes back to step 3. The entry point is read against its nearest shore, so one on the beach is expected. Inside a lake it reads the lake's own shoreline. Any region-specific reading is in the site conventions' Wind section.
 
-| Relation | Fetch | Class |
-|---|---|---|
-| Onshore | 5 km or more | Bad |
-| Onshore | 1 to 5 km | Short fetch |
-| Onshore | Under 1 km | Fine |
-| Cross-shore | 5 km or more | Mixed |
-| Cross-shore | Under 5 km | Fine |
-| Offshore | Any | Fine |
-
-The thresholds come from fetch-limited wind wave growth (JONSWAP): at the wind tools' no-go speed, 1 km of fetch builds ripples and 5 km real chop. Swell is outside the table.
-
-- **Sectors.** Adjacent directions in the same class form one sector, named clockwise end to end.
-- **Calm only.** A site research shows dives only in calm whatever the direction (an exposed windward coast, a kite beach) classes every direction Bad, with the reason.
-- **Local knowledge.** Research can move a direction up a class (Fine to Short fetch or Bad, Short fetch to Bad), never down, with the reason and a source: funnelling along a narrows or valley lake, swell wrapping a point. A wind note the existing file carries from observation stays in its bullet even where the class doesn't move.
+- **Classes.** The tool classes each direction by its shore relation and fetch, by the table in `shore_exposure.md`, and joins adjacent directions of one class into sectors named clockwise end to end. A plan reads those sectors from the JSON, so the JSON is where a class is decided.
+- **Calm only.** A site research shows dives only in calm whatever the direction (an exposed windward coast, a kite beach) is extracted again with `--calm-only`, which classes every direction Bad; the Bad bullet carries the reason.
+- **Local knowledge.** Research can move a direction up a class (Fine to Short fetch, Mixed or Bad, Short fetch or Mixed to Bad), never down: funnelling along a narrows or valley lake, swell wrapping a point. Extract again with `--raise SECTOR=CLASS` for each, all in one call, and give the reason and its source in the bullet. A wind note the existing file carries from observation stays in its bullet even where the class doesn't move.
+- **The bullets follow the JSON.** The Bad, Short fetch and Mixed bullets name exactly the sectors in `wind.sectors`, each with its fetch range from `wind.fetch`, and the Fine bullet the rest.
 
 ## 8. Write the file
 
@@ -163,9 +153,9 @@ Write the figures from steps 5 to 7 and the research from step 4 into the templa
   }
   ```
 
-- **Site JSON.** The file step 3 wrote, with the current extract from step 6. Its `lat`, `lon` and `seabed_m` read exactly as the Coordinates row states them, and its `seabed_datum` names the region's datum.
+- **Site JSON.** The file step 3 wrote, with the current extract from step 6 and the wind extract from step 7. Its `lat`, `lon` and `seabed_m` read exactly as the Coordinates row states them, its `seabed_datum` names the region's datum, its `wind.extract_point.entry` reads exactly as the Entry point coordinates row, `null` for a boat site, and its `wind.sectors` are the sectors the Wind bullets name.
 
-Keep the row, the map entry and the site JSON current whenever the site's coordinates, seabed depth, name, type, parking or entry change.
+Keep the row, the map entry and the site JSON current whenever the site's coordinates, seabed depth, name, type, parking or entry change. A changed coordinate or seabed takes `current.md`'s `extract --site` again, and a changed coordinate, entry or type takes `shore_exposure.md`'s, with `--entry` or `--boat` when the entry or type changed; its recorded raises carry over, and a class research moves is extracted again with `--raise` or `--calm-only`.
 
 ## 10. Independent audit
 
@@ -199,7 +189,7 @@ Close the run with a short summary in chat, after the merge, as bold-led bullets
 
 ## Template
 
-Placeholder text says what each row or bullet holds. A required row with no figure takes the conservative figure the bathymetry or research supports; an optional row or bullet with nothing to say is dropped. "Compass and degrees" means the compass point spelled out in lowercase and the bearing ("west-southwest, 247°"). A sector is spelled out with its shorthand in parentheses ("south through west (S-W)"). Depths are below the region's datum where it has one, otherwise observed.
+Placeholder text says what each row or bullet holds. A required row with no figure takes the conservative figure the bathymetry or research supports; an optional row or bullet with nothing to say is dropped. A sector is spelled out with its shorthand in parentheses ("south through west (S-W)"). Depths are below the region's datum where it has one, otherwise observed.
 
 ```markdown
 # Site Name
@@ -256,12 +246,7 @@ Optional sentence on what dominates the current. Tidal and wind driven only.
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | Shore only: compass and degrees |
-| **Dive area shore facing** | Compass and degrees |
-
-Optional prose on the shoreline's shape where the bearing alone doesn't carry it, from the tool output only.
+Optional prose on the shoreline's shape where the facings in the site JSON's `wind` section don't carry it, from the tool output only.
 
 * **Bad.** Each Bad sector, its fetch range ("over 8 to 19 km of open water"), and why it spoils the entry. Calm only: "all directions (N-NNW), calm only", with the reason.
 * **Short fetch.** Each Short fetch sector, its fetch range, and why it spoils the entry.

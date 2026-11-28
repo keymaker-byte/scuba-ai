@@ -38,11 +38,6 @@ The southernmost of Bonaire's double reef sites, a shore dive on the coast road 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 260° |
-| **Dive area shore facing** | west, 259° |
-
 The swim out runs 147 m west from the entry, 2° off the shore's facing, to the dive area.
 
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over more than 30 km of open sea. Wind from this quarter drives waves onto the rocky beach and hides the holes in the shallows, making the entry and exit rough.

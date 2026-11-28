@@ -55,11 +55,6 @@ The inner bay is sheltered, and the Rosario Strait exchange sets past the points
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south-southeast, 154° |
-| **Dive area shore facing** | south, 171° |
-
 * **Bad.** East through south (E-S), onshore over 5.7 to 22.1 km of open water across Rosario Strait, building wind swell on the beach and the swim out.
 * **Short fetch.** South-southwest (SSW), onshore over 4.1 km, enough to raise chop in the bay.
 * **Fine.** Southwest clockwise through east-northeast (SW-ENE), blocked by the bay's own shores and Orcas Island, with 480 m of fetch at most.

@@ -35,11 +35,6 @@ Something Special, also known as Pali Grandi, is a shore site on the Kralendijk 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south-southwest, 210° |
-| **Dive area shore facing** | south-southwest, 207° |
-
 The swim out runs 83 m southwest, 219°, from the entry, straight out from the shore, to the dive area.
 
 * **Bad.** South-southwest through southwest (SSW-SW), onshore over more than 30 km of open water south of Klein Bonaire. Wind from this quarter puts waves on the entry rocks and stirs up the terrace.

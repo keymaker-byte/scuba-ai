@@ -30,10 +30,6 @@ A boat dive on the west side of Klein Bonaire, also listed as Johanna's Revenge;
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | west-northwest, 300° |
-
 * **Bad.** West-southwest through north (WSW-N), onshore over 5.7 to more than 30 km of open water, raising waves at the mooring and surge over the terrace.
 * **Mixed.** South-southwest through southwest (SSW-SW), cross-shore over more than 30 km, running a swell along the reef.
 * **Fine.** North-northeast clockwise through south: offshore from east-northeast through south, blowing off the islet itself, and cross-shore over 410 m to 4.9 km from the north-northeast and northeast.

@@ -52,11 +52,6 @@ Shore dive at Titlow Park in Tacoma, on the east shore of the Tacoma Narrows sou
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 301° |
-| **Dive area shore facing** | west-northwest, 303° |
-
 The beach faces west across the Narrows toward the Gig Harbor peninsula, about 1.5 km away.
 
 * **Bad.** South through southwest (S-SW), which come up from the South Sound past Day Island and Fox Island and push chop onto the beach, and north (N), the strong northerlies funnelled down the Narrows.

@@ -34,11 +34,6 @@ A small rubble beach between low limestone cliffs on the northwest coast of Wash
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 289° |
-| **Dive area shore facing** | west-northwest, 297° |
-
 The beach faces west-northwest onto open sea, and the swim out runs 186 m west-northwest, 294°, nearly straight off the beach.
 
 * **Bad.** Southwest through north-northwest (SW-NNW), onshore over more than 30 km of open sea, building surf on the loose rubble entry and rip currents through the shallows.

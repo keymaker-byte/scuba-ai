@@ -46,11 +46,6 @@ Shore dive off the Port of Bremerton's public fishing pier at Harper, on Yukon H
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-northeast, 59° |
-| **Dive area shore facing** | east-northeast, 59° |
-
 The beach faces east-northeast across Yukon Harbor toward Blake Island, with the harbor opening northeast onto the main channel.
 
 * **Bad.** North (N), onshore over 5.7 km, and east (E), onshore over 9.3 km, blow straight in across the harbor and the open channel past Blake Island, building chop on the float entry and the rocky exit.

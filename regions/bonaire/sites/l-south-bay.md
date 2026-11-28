@@ -29,10 +29,6 @@ A boat dive in the middle of Klein Bonaire's south shore, in the lee of the isle
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | south, 181° |
-
 * **Bad.** South-southeast through west-southwest (SSE-WSW), onshore over more than 30 km of open water, raising waves at the mooring and surge over the terrace.
 * **Short fetch.** Southeast (SE), onshore over 4.5 km from the southern half of Bonaire, enough to build a chop at the mooring.
 * **Fine.** West clockwise through east-southeast: offshore from northwest through east-northeast, blowing off the islet itself, and cross-shore over 290 to 790 m from the west, west-northwest and east, and 4.6 km from the east-southeast.

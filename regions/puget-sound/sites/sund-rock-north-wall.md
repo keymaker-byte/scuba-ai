@@ -52,11 +52,6 @@ Sund Rock is dived independently of the tide. The current in the channel stays g
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-northeast, 73° |
-| **Dive area shore facing** | east-northeast, 75° |
-
 The bay opens east and northeast onto Hood Canal, backed by the steep ground of the Olympic foothills. The canal is only about 2 km wide here, so cross-canal fetch is short, but it runs a long way northeast to southwest.
 
 * **Bad.** Northeast (NE), onshore over 9.2 km, both onshore into the bay and carrying the full down-canal fetch.

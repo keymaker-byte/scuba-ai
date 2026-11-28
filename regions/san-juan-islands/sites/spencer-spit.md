@@ -49,12 +49,7 @@ The channel between the spit and Frost Island carries the exchange between Lopez
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north, 4° |
-| **Dive area shore facing** | northwest, 312° |
-
-The entry is the point of the spit, with water on three sides; the dive area facing is the Frost Island wall's own, across the channel.
+The entry is the point of the spit, with water on three sides; the dive area lies along the Frost Island wall, across the channel.
 
 * **Bad.** North (N), onshore over 9.4 km of open water up the channel and beyond it, building chop on the point and across the crossing.
 * **Short fetch.** North-northeast (NNE), onshore over 3.8 km, and northwest (NW), onshore over 2.2 km, raising chop on the point.

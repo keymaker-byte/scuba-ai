@@ -44,11 +44,6 @@ All of Hood Canal fills and drains through the channel beneath the bridge.
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southeast, 127° |
-| **Dive area shore facing** | southeast, 146° |
-
 The swim out runs 50° off the entry shore's facing, along the shore toward the bridge.
 
 * **Short fetch.** East-northeast through south (ENE-S), onshore over 2.2 to 4.7 km across the canal entrance, enough to raise a chop on the beach.

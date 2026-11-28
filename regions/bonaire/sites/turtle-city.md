@@ -34,10 +34,6 @@ A broad, shallow reef plateau of sea fans and soft coral on Bonaire's east coast
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | east-northeast, 78° |
-
 The nearest shore lies 400 m to the west-southwest, 246°, and the plateau opens onto more than 30 km of ocean from east-northeast through south-southeast.
 
 * **Bad.** East-northeast through southeast (ENE-SE), onshore over more than 30 km of open ocean. The trades blow from this quarter most of the year, building waves that break across the shallow plateau and make the boat entry and exit and the descent rough.

@@ -38,11 +38,6 @@ Picnic Point is a shore dive on the east shore of Possession Sound, on the mainl
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 267° |
-| **Dive area shore facing** | west, 267° |
-
 The beach faces west across Possession Sound and the main basin toward Whidbey Island.
 
 * **Bad.** South-southwest through west-northwest (SSW-WNW), onshore over 7.0 km to more than 30 km, with open fetch across the sound onto the entry.

@@ -36,11 +36,6 @@ A shore dive on Bonaire's west coast about 5 km north-northwest of Kralendijk, a
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 257° |
-| **Dive area shore facing** | west-southwest, 257° |
-
 The dive area lies 83 m west of the entry, straight out from the entry shore.
 
 * **Bad.** West-southwest through west-northwest (WSW-WNW), onshore over 9.3 km to more than 30 km of open sea. Wind from these quarters raises chop and swell on the rocky entry.

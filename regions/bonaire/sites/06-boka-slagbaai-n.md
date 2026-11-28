@@ -33,11 +33,6 @@ The northern of two routes at Boka Slagbaai, a sheltered bay in Washington Slagb
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 297° |
-| **Dive area shore facing** | west-northwest, 294° |
-
 The bay opens west-northwest onto open sea, and the swim out runs 153 m west-northwest, 301°, from the entry to the dive area, straight off the beach.
 
 * **Bad.** West-southwest through north-northwest (WSW-NNW), onshore over more than 30 km of open sea, straight into the mouth of the bay, building a swell at the entry. Winter north swell reaches the beach under a light breeze too.

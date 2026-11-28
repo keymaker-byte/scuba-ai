@@ -30,10 +30,6 @@ A boat dive off the southeast point of Klein Bonaire, also called Piedra Kolet, 
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | southeast, 138° |
-
 * **Bad.** South through south-southwest (S-SSW), onshore over more than 30 km of open water, raising swell at the mooring and surge over the terrace.
 * **Short fetch.** East through south-southeast (E-SSE), onshore over 2 to 2.6 km across the channel from Bonaire, enough to build a chop at the mooring. An easterly trade blows into this sector and builds through the day, which is why the site dives best in the morning.
 * **Mixed.** Southwest (SW), cross-shore over more than 30 km, running a swell along the reef.

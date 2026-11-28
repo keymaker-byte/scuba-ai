@@ -57,11 +57,6 @@ The beach sits out of the main stream between the Tacoma Narrows and Carr Inlet,
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 240° |
-| **Dive area shore facing** | west-southwest, 242° |
-
 The beach faces west-southwest across the mouth of Carr Inlet toward McNeil Island, with the open South Sound to the south and Carr Inlet running away to the northwest.
 
 * **Bad.** South (S), onshore over 8.1 km of open water from the South Sound, and west through west-northwest (W-WNW), onshore over 6.8 to 9.4 km across Carr Inlet. Both push chop and small breakers onto the cobble beach, which stirs up the shallows and makes the entry and exit rough.

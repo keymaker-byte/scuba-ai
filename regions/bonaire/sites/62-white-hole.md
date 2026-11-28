@@ -33,10 +33,6 @@ A sand-floored hole in the shallow reef plateau off Bonaire's east coast, just s
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | east-northeast, 65° |
-
 The nearest shore lies 490 m to the southwest, 222°, and the plateau around the hole opens onto more than 30 km of ocean from east-northeast through south-southeast.
 
 * **Bad.** East-northeast through east-southeast (ENE-ESE), onshore over more than 30 km of open ocean. The trades blow from this quarter most of the year, building waves that break across the shallow plateau and make the boat entry and exit and the reef crossing rough.

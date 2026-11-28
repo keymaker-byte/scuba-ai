@@ -53,11 +53,6 @@ Haro Strait's tidal stream runs along the point, setting north-northwest on the 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 247° |
-| **Dive area shore facing** | west-southwest, 241° |
-
 * **Bad.** South through west-northwest (S-WNW), onshore over 11.6 to more than 30 km of open water across Haro Strait and up from the Strait of Juan de Fuca, driving wind waves straight onto the cleft and the rocks of the entry.
 * **Mixed.** South-southeast (SSE), along the shore over more than 30 km, and northwest (NW), along the shore over 12.1 km, each running swell past the entry.
 * **Fine.** North-northwest clockwise through southeast (NNW-SE), blocked by the island itself, with 690 m of fetch at most.

@@ -39,11 +39,6 @@ Kayak Point County Park sits on the east shore of Port Susan, a bay of Puget Sou
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northwest, 318° |
-| **Dive area shore facing** | northwest, 320° |
-
 The beach faces west to northwest across Port Susan, toward Camano Island.
 
 * **Bad.** West through north-northwest (W-NNW), onshore over 5.7 to 12.1 km, with open fetch across the bay to Camano Island and up Port Susan.

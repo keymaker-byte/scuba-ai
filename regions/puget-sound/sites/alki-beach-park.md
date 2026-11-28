@@ -91,11 +91,6 @@ Currents are usually mild here and the site dives as a benign training beach, bu
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north-northwest, 336° |
-| **Dive area shore facing** | north-northwest, 335° |
-
 The beach faces north-northwest across Elliott Bay.
 
 * **Bad.** West clockwise through north-northeast (W-NNE), onshore over 6.0 to 19.9 km of open fetch across Elliott Bay and up the main basin past the point, which builds chop on the entry.

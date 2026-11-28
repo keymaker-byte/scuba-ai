@@ -49,11 +49,6 @@ Freshwater Bay opens north onto the Strait of Juan de Fuca between Angeles Point
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northeast, 54° |
-| **Dive area shore facing** | east, 92° |
-
 The bay opens roughly north onto the strait, between Angeles Point to the east and Observatory Point to the west. The inner crossing is sheltered by the bay's own curve; the outer wall at Bachelor Rock faces the open strait.
 
 * **Bad.** North through east (N-E), onshore over 19 km to more than 30 km of open strait, straight down the strait's own axis or across it, building surf on the outer wall and on the crossing.

@@ -34,11 +34,6 @@ One of the best known shore dives on Bonaire's west coast, about 7 km north of K
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south-southwest, 211° |
-| **Dive area shore facing** | south-southwest, 211° |
-
 The dive area lies about 30 m south-southwest of the ladder, straight out from the entry shore.
 
 * **Bad.** South-southeast (SSE), onshore over 7.9 km down the coast, and south-southwest through west (SSW-W), onshore over 5.3 km to more than 30 km of open sea. Wind from these quarters raises a sea against the cliff and the ladder.

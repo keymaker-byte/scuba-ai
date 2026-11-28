@@ -46,11 +46,6 @@ Current here is negligible at every stage of the tide, at the surface and depth-
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northeast, 53° |
-| **Dive area shore facing** | northeast, 53° |
-
 The site faces northeast, across the Port Orchard reach toward Bainbridge Island.
 
 * **Short fetch.** North through east-southeast (N-ESE), onshore over 1.3 to 3.1 km, the open fetch down the reach from Agate Passage and across the water to Bainbridge Island.

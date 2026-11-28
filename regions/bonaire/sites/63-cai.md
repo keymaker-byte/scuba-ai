@@ -37,11 +37,6 @@ Cai is a shore dive on Bonaire's east coast at Lac Cai, where the deep channel t
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south, 184° |
-| **Dive area shore facing** | south, 184° |
-
 The swim out runs 81 m south from the entry to the dive area, 6° off the shore's facing, straight down the channel.
 
 * **Bad.** Southeast through south (SE-S), onshore over more than 30 km of open sea. Wind from this quarter drives waves straight into the channel mouth and onto the beach, builds surge at the entry, and stands up a steep chop against the seaward outflow.

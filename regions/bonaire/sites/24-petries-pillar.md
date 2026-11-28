@@ -31,10 +31,6 @@ A boat dive on Bonaire's west coast north of Kralendijk, named by Captain Don St
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | west-southwest, 255° |
-
 * **Bad.** West-southwest through west-northwest (WSW-WNW), onshore over 10 to more than 30 km of open sea. Wind from this quarter raises chop and swell at the mooring.
 * **Short fetch.** South-southwest through southwest (SSW-SW), onshore over 2.2 to 3.2 km from Klein Bonaire, and northwest (NW), onshore over 3.9 km from the coast to the north, each enough to build a chop over the terrace.
 * **Mixed.** South-southeast (SSE), cross-shore over 5.8 km down the coast, running a swell along the shore past the mooring.

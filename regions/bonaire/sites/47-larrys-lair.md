@@ -35,11 +35,6 @@ Larry's Lair is a double reef shore site on EEG Boulevard, about 780 m north of 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 260° |
-| **Dive area shore facing** | west, 260° |
-
 The swim out runs 165 m west from the entry, 4° off the shore's facing, close to straight out.
 
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over more than 30 km of open sea. Wind from this quarter drives waves onto the ironshore, stirs up the shallows and puts surge on the entry and exit.

@@ -32,10 +32,6 @@ The reef directly in front of No Name Beach, the long white sand beach on the no
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | north, 6° |
-
 * **Bad.** Northwest through north-northwest (NW-NNW), onshore over 5.1 to 8.1 km of open water, building waves on the beach and over the shelf.
 * **Short fetch.** North through east-northeast (N-ENE), onshore over 1.7 to 3.3 km across the channel from Bonaire, enough to build a chop over the site.
 * **Mixed.** West through west-northwest (W-WNW), cross-shore over more than 30 km, running a swell along the beach.

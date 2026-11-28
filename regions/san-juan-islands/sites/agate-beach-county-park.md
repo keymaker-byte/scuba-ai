@@ -53,11 +53,6 @@ Outer Bay sits off the tidal stream of the eastern Strait of Juan de Fuca, which
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 280° |
-| **Dive area shore facing** | southwest, 214° |
-
 The beach faces west out of the bay's mouth, past Iceberg Island to the open strait. The dive area's nearest shore is the bay's north side, which faces southwest across the mouth.
 
 * **Bad.** Southwest through west (SW-W), onshore over 27 to more than 30 km of open water across the Strait of Juan de Fuca, driving wind waves and swell into the bay and surge onto the cobble beach.

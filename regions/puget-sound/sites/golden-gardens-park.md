@@ -41,11 +41,6 @@ The beach lies off the main tidal stream of the Sound, and the current here is g
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 232° |
-| **Dive area shore facing** | southwest, 214° |
-
 The beach faces southwest across Puget Sound toward Bainbridge Island, with Meadow Point just north of the dive area and the marina breakwater to the south.
 
 * **Bad.** Southwest through west-northwest (SW-WNW), onshore over 7.4 to 11.6 km of open water across the Sound, building chop straight onto the beach.

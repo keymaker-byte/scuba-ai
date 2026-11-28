@@ -33,10 +33,6 @@ A short, near-vertical wall on Bonaire's west coast north of Kralendijk, directl
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | west-southwest, 248° |
-
 * **Bad.** West-southwest through northwest (WSW-NW), onshore over 5 to more than 30 km of open sea. Wind from this quarter raises chop and swell at the mooring.
 * **Short fetch.** South-southwest through southwest (SSW-SW), onshore over 1.6 to 1.8 km from Klein Bonaire, enough to build a chop on the surface.
 * **Fine.** North-northwest clockwise through south: offshore from north-northeast through southeast, off the land, and cross-shore over 170 m to 2.2 km from the north-northwest, north, south-southeast and south. The prevailing east trades blow off the land and leave the surface calm at their usual strength.

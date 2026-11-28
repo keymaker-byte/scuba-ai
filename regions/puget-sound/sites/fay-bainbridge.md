@@ -42,11 +42,6 @@ Sand and eelgrass shore dive at the northeast tip of Bainbridge Island, facing o
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-northeast, 73° |
-| **Dive area shore facing** | east-northeast, 69° |
-
 The beach faces roughly east-northeast, open across the main basin toward Possession Sound and Whidbey Island.
 
 * **Bad.** North-northeast through southeast (NNE-SE), onshore over 5.1 to 11.6 km, which runs a long fetch up the main basin onto this beach.

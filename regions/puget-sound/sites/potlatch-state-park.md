@@ -53,11 +53,6 @@ Potlatch is dived independently of the tide. The water here barely moves on any 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east, 92° |
-| **Dive area shore facing** | east, 93° |
-
 The beach is a straight east-facing shore. The water opens east across the canal toward Union, and the long reach of the canal opens up to the north-northeast.
 
 * **Bad.** East (E), onshore over 8.1 km across the canal from Union, builds chop straight onto the beach and the surface swim to the buoys.

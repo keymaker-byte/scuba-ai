@@ -36,11 +36,6 @@ White Slave is a shore site on EEG Boulevard on Bonaire's southwest coast, oppos
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 240° |
-| **Dive area shore facing** | west-southwest, 238° |
-
 The swim out runs 190 m west-southwest from the entry, 5° off the shore's facing, straight out.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves onto the ironshore, puts surf and surge on the entry ledge and stirs up the sand plain.

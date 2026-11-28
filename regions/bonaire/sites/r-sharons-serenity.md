@@ -29,10 +29,6 @@ A boat dive at Klein Bonaire's southwest corner, named for Sharon, who once work
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | west-northwest, 296° |
-
 * **Bad.** West-southwest through north (WSW-N), onshore over 6.4 to more than 30 km of open water, raising waves at the mooring and surge over the terrace.
 * **Mixed.** North-northeast (NNE), cross-shore over 5.5 km, and south-southwest through southwest (SSW-SW), cross-shore over more than 30 km, each running a swell along the reef.
 * **Fine.** Northeast clockwise through south: offshore from east-northeast through south, blowing off the islet itself, and cross-shore over 540 m from the northeast.

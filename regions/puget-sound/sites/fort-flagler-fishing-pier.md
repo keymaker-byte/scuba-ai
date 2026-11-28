@@ -40,11 +40,6 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east, 95° |
-| **Dive area shore facing** | east, 94° |
-
 The beach faces east across Admiralty Inlet toward Whidbey Island.
 
 * **Bad.** Northeast through south-southeast (NE-SSE), onshore over 6.2 to 20.6 km, with open fetch running the length of the inlet in both directions.

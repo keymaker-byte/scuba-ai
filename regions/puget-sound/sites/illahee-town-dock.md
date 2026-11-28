@@ -45,11 +45,6 @@ Current here is negligible at every stage of the tide, at the surface and depth-
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east, 86° |
-| **Dive area shore facing** | east, 86° |
-
 The site faces east, across the Port Orchard reach toward Bainbridge Island.
 
 * **Short fetch.** North-northeast through southeast (NNE-SE), onshore over 1.5 to 2.9 km, the open fetch across the reach to Bainbridge Island.

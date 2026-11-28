@@ -30,10 +30,6 @@ A popular stretch of reef on Bonaire's northwest coast north of Kralendijk, name
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | southwest, 236° |
-
 * **Bad.** South-southwest through west-northwest (SSW-WNW), onshore over 5.5 km to more than 30 km of open sea. Any wind from this quarter raises a sea at the mooring and on the reef top.
 * **Short fetch.** South (S), onshore over 3.7 km from Klein Bonaire, enough to build a chop on the surface.
 * **Mixed.** South-southeast (SSE), cross-shore over 8.2 km down the coast, running a swell along the shore.

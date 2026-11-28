@@ -37,11 +37,6 @@ A popular shore site on Bonaire's northwest coast at the end of the coastal road
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south-southwest, 205° |
-| **Dive area shore facing** | south-southwest, 206° |
-
 The coast here runs west-northwest to east-southeast, and the swim out runs 48 m south-southwest, 205°, straight out from the platform.
 
 * **Bad.** South-southeast through west (SSE-W), onshore over 7.4 km to more than 30 km of open sea. Wind from this quarter drives waves onto the platform and rocky shallows and makes the entry and exit hazardous.

@@ -35,11 +35,6 @@ Salt City is a double reef shore site on EEG Boulevard, about 250 m south of Sal
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 253° |
-| **Dive area shore facing** | west-southwest, 254° |
-
 The swim out runs 181 m west-southwest from the entry, 2° off the shore's facing, straight out.
 
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over more than 30 km of open sea. Wind from this quarter drives waves onto the ironshore, stirs up the shallows and puts surge on the entry and exit.

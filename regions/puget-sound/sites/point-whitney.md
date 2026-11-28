@@ -51,11 +51,6 @@ Current here is negligible at every stage of the tide, at the surface and depth-
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north, 357° |
-| **Dive area shore facing** | north, 357° |
-
 The beach faces north, out across the mouth of Dabob Bay into Hood Canal.
 
 * **Bad.** Northeast (NE), onshore over 6.7 km, the open fetch up the canal and across the bay mouth.

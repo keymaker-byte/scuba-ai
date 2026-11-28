@@ -35,11 +35,6 @@ The Lake is a shore site on the southern coast road about 5 km south of Kralendi
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 230° |
-| **Dive area shore facing** | southwest, 230° |
-
 The swim out runs 98 m southwest from the entry, straight out from the shore, to the dive area.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves and surge straight onto the beach and makes the step over the rocks at the entry and exit hard work.

@@ -31,11 +31,6 @@ A deep, glacially carved lake in Olympic National Park on the Olympic Peninsula,
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 271° |
-| **Dive area shore facing** | west, 271° |
-
 East Beach sits at the eastern end of a lake that runs roughly east to west for about 19 km and bends along its length, so a westerly follows a longer run down the lake than the straight-line fetch below shows.
 
 * **Short fetch.** Southwest through west-northwest (SW-WNW), onshore over 1.2 to 3.7 km of straight-line fetch. A sustained westerly kicks up chop at the east end that makes the entry and exit less comfortable, without the go, no go weight it carries on open tidal water, and the entry stays diveable even in a strong westerly. Check the entry on the day under any west wind.

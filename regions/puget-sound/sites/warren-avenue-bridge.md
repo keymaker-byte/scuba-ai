@@ -38,11 +38,6 @@ Warren Avenue Bridge crosses Port Washington Narrows in Bremerton, the tidal cut
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north-northeast, 17° |
-| **Dive area shore facing** | north-northeast, 17° |
-
 A narrow inland cut through residential Bremerton, with land close on both sides.
 
 * **Fine.** All directions (N-NNW). The surrounding shore leaves little open water for wind to build a fetch across, no more than 1.5 km from any direction.

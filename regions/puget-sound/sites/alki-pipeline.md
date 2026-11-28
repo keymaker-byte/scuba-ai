@@ -97,11 +97,6 @@ Currents here are light to moderate, and the site dives easily inside the point,
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 218° |
-| **Dive area shore facing** | southwest, 222° |
-
 The beach faces southwest into the open main basin.
 
 * **Bad.** South through west (S-W), onshore over 7.8 to 18.8 km of open fetch down the Sound, which builds surf on the entry. A strong southerly is the classic dive-killer here.

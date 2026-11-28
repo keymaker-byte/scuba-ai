@@ -49,11 +49,6 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south-southeast, 153° |
-| **Dive area shore facing** | south-southeast, 151° |
-
 The beach faces south-southeast, out across Port Townsend Bay.
 
 * **Bad.** Northeast through south-southwest (NE-SSW), with several kilometres of open fetch across the bay toward Indian Island and Marrowstone Island, 2.9 to 11.6 km.

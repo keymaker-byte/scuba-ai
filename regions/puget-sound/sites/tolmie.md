@@ -59,11 +59,6 @@ The barges lie in a shallow bay off the main stream of Nisqually Reach, and the 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northeast, 050° |
-| **Dive area shore facing** | north, 005° |
-
 The beach faces northeast across Nisqually Reach toward Anderson Island and the Key Peninsula. The swim out runs straight off the beach along its facing.
 
 * **Bad.** North-northeast (NNE), onshore over 9.4 km of open water, and east through east-southeast (E-ESE), onshore over 7.2 to 8.3 km along Nisqually Reach. Either one builds chop on the beach and on the long surface swim.

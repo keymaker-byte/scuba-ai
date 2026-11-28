@@ -38,11 +38,6 @@ Red Slave is a shore site on EEG Boulevard at the southern tip of Bonaire, the s
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 235° |
-| **Dive area shore facing** | southwest, 235° |
-
 The swim out runs 104 m west-southwest from the entry, 5° off the shore's facing, straight out. The shore turns east at the island's southern point, about 300 m southeast of the entry.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves onto the rubble edge, puts surf and surge on the entry and exit, and stirs sand off the shelf.

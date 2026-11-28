@@ -34,11 +34,6 @@ Willemstoren Lighthouse is a shore site at Bonaire's southern tip, below the isl
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south-southeast, 151° |
-| **Dive area shore facing** | south-southeast, 151° |
-
 The swim out runs 130 m south-southeast from the entry, straight out from the shore. The shore lies open to more than 30 km of sea from northeast clockwise through west-southwest, onshore from east through south-southwest, and offshore from west through north-northeast.
 
 * **Bad.** All directions (N-NNW), calm only. At this exposed tip an onshore wind of any strength raises waves on the rocky entry, any wind stacks onto a current that already builds and shifts without warning, and the prevailing east to southeast trades blow straight onshore over open sea. The site is dived only on a calm day with low waves.

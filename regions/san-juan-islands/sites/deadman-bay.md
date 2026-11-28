@@ -58,11 +58,6 @@ Haro Strait's tidal stream runs past the mouth of the bay, and inside it the flo
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 224° |
-| **Dive area shore facing** | south-southwest, 197° |
-
 The bay opens south-southwest between its two rock shores.
 
 * **Bad.** South-southeast through west (SSE-W), onshore over 11 to more than 30 km of open water across Haro Strait, driving wind waves and surge straight into the bay and onto the beach.

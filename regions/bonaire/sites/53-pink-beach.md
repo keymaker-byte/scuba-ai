@@ -34,11 +34,6 @@ Pink Beach is a shore site on EEG Boulevard, about 1.9 km south of Salt Pier on 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 279° |
-| **Dive area shore facing** | west, 279° |
-
 The swim out runs 159 m west from the entry, 1° off the shore's facing, straight out.
 
 * **Bad.** Southwest through north-northwest (SW-NNW), onshore over 10.2 km to more than 30 km of open sea. Wind from this quarter drives waves onto the rubble shore, stirs up the shallows and puts surf on the entry and exit.

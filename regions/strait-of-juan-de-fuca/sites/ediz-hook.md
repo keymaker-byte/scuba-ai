@@ -46,11 +46,6 @@ Ediz Hook is the long sand spit that curls out from the base of Port Angeles and
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south, 185° |
-| **Dive area shore facing** | south, 185° |
-
 The inside shore looks into Port Angeles Harbor, sheltered from the open strait by the spit itself, and the harbor's own size limits every onshore fetch.
 
 * **Short fetch.** Southeast through west-southwest (SE-WSW), onshore over 2.0 to 4.1 km of harbor water, enough to put chop on the entry.

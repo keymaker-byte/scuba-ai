@@ -30,10 +30,6 @@ A boat dive on Klein Bonaire's north shore, facing Bonaire across the channel, n
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | northeast, 42° |
-
 The nearest shore lies 130 m to the southwest, 223°, and the reef looks out across the channel toward Bonaire.
 
 * **Short fetch.** North-northwest through east (NNW-E), onshore over 1.0 to 4.7 km across the channel from Bonaire. The trades blow from the east and east-northeast end of this sector most of the year over about 1 km of water, enough to put a chop on the surface over the mooring and the swim to the reef.

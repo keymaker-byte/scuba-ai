@@ -52,11 +52,6 @@ Current is the defining constraint, strong and erratic, and it does not behave s
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southeast, 126° |
-| **Dive area shore facing** | southeast, 126° |
-
 The park faces Admiralty Bay, open to the south and southeast down Admiralty Inlet. The dived east face of the jetty is partly sheltered by the boulder pile.
 
 * **Bad.** East-southeast through south (ESE-S), onshore over 5.5 to 14.2 km, southeast above all, which blows surf straight onto the exposed beach and ruins the entry. Do not dive it.

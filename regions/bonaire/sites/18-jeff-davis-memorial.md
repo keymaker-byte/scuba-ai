@@ -35,11 +35,6 @@ A shore dive on Bonaire's northwest coast road north of Kralendijk, named for Je
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 214° |
-| **Dive area shore facing** | southwest, 214° |
-
 The swim out runs 87 m southwest from the entry, 2° off the entry shore's facing, straight out from the beach.
 
 * **Bad.** South-southwest through west (SSW-W), onshore over more than 30 km of open sea. Wind from this quarter raises swell on the beach and breaks it against the coral edge, which makes the step up and down dangerous.

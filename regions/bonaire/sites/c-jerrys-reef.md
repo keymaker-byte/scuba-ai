@@ -32,10 +32,6 @@ A sponge garden on Klein Bonaire's north side, also known as Jerry's Sponges and
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | northeast, 48° |
-
 The nearest shore lies 164 m to the southwest, 221°, and the reef faces Bonaire across a channel 850 m to 1 km wide.
 
 * **Short fetch.** North through northeast (N-NE), onshore over 1 to 2.1 km, and east-southeast (ESE), onshore over 1.7 km, across the channel from Bonaire, enough to build a chop at the mooring and over the swim to the reef.

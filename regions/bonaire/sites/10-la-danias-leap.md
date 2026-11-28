@@ -36,11 +36,6 @@ One of Bonaire's few true vertical walls, on the northwest coast east of Karpata
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south, 181° |
-| **Dive area shore facing** | south, 178° |
-
 The coast here runs east to west, and the swim out runs 70 m south, 190°, straight out from the ledge.
 
 * **Bad.** Southeast through west-southwest (SE-WSW), onshore over 6.8 km to more than 30 km of open sea. Wind from this quarter drives waves against the ledge, making the stride off it hazardous, and onto the Karpata platform at the exit.

@@ -46,11 +46,6 @@ Shore dive at Saltwater State Park in Des Moines, on the mainland shore of East 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 262° |
-| **Dive area shore facing** | west, 264° |
-
 The beach faces west across East Passage toward Vashon Island.
 
 * **Bad.** Southwest through west (SW-W), onshore over 6.9 to 16.6 km, and northwest (NW), onshore over 11.9 km, putting fetch and chop on the swim; southwest also drives a stronger and rougher ebb.

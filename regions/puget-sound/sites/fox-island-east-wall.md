@@ -50,11 +50,6 @@ Shore dive off the Fox Island Fishing Pier at Toy Point, the eastern tip of Fox 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-southeast, 116° |
-| **Dive area shore facing** | east-southeast, 113° |
-
 The beach faces east-southeast across the south end of the Narrows toward Day Island, about 2 km away.
 
 * **Bad.** South (S), onshore over 5.5 km, running up from Nisqually Reach and the Steilacoom shore and pushing chop onto the beach; and north (N), where strong northerlies funnel down the Narrows.

@@ -32,11 +32,6 @@ The broken wreck of a US Navy FG-1D Corsair fighter on the bed of Lake Washingto
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northeast, 50° |
-| **Dive area shore facing** | northeast, 50° |
-
 The swim out runs 63° off the entry shore's facing, to the right of straight out from the beach.
 
 * **Bad.** North-northeast through northeast (NNE-NE), onshore over 5.3 to 6.6 km of open water. A sustained wind from here builds chop straight onto the beach, which makes the entry and the long surface swim back rough.

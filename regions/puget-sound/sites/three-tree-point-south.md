@@ -59,11 +59,6 @@ The current runs strong along this shore, and the shoreline set runs west toward
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south, 180° |
-| **Dive area shore facing** | south, 180° |
-
 The beach faces due south across East Passage toward Vashon Island, with the point itself running out to the west.
 
 * **Bad.** South-southeast through southwest (SSE-SW), onshore over 5.9 to 10.8 km of open water down East Passage and across to Vashon, which builds chop on the entry.

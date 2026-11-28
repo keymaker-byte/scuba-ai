@@ -33,11 +33,6 @@ A small, remote sandy cove on Bonaire's northwest coast, also called Doblet, rea
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 266° |
-| **Dive area shore facing** | west, 270° |
-
 The swim out runs 113 m west, 265°, from the entry straight out across the shelf to the terrace.
 
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over more than 30 km of open sea. Wind from this quarter puts surf on the beach, and on the stones and rubble of the entry and exit.

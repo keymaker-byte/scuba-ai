@@ -44,11 +44,6 @@ North Beach County Park sits on the Quimper Peninsula between McCurdy Point and 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north, 356° |
-| **Dive area shore facing** | north, 354° |
-
 The beach faces north into the mouth of Admiralty Inlet, open to the Strait of Juan de Fuca.
 
 * **Bad.** West-northwest through northeast (WNW-NE), onshore over 7.5 km to more than 30 km, either a long fetch up the open strait or across the mouth of the inlet.

@@ -48,11 +48,6 @@ Current is not a planning factor here. The cove sits deep inside Elliott Bay, aw
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-northeast, 57° |
-| **Dive area shore facing** | northeast, 52° |
-
 The beach faces northeast across Elliott Bay. With almost no tidal stream, the roughest the entry gets is a north wind stacked on the wakes of harbor traffic; time the walk out between them.
 
 * **Short fetch.** North through east-southeast (N-ESE), onshore over 1.7 to 4.8 km across the bay onto the entry, which builds chop on the beach; a northerly has the longest fetch, in through the bay mouth.

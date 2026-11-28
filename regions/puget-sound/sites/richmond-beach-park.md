@@ -50,11 +50,6 @@ Shore dive on the main basin of Puget Sound at Shoreline, just north of Seattle,
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 215° |
-| **Dive area shore facing** | southwest, 221° |
-
 The beach faces generally west-southwest across the main basin, open enough for a sightline to the Olympics on a clear day.
 
 * **Bad.** South through west (S-W), onshore over 6.2 to 20.9 km, brings fetch straight up the main basin and chops the entry.

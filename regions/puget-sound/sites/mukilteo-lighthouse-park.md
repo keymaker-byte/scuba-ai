@@ -46,11 +46,6 @@ Shore dive on the Mukilteo waterfront, on the shoreline south of Elliott Point i
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 281° |
-| **Dive area shore facing** | west, 281° |
-
 The beach faces west across Possession Sound toward Whidbey Island.
 
 * **Bad.** Southwest through west-southwest (SW-WSW), onshore over 5.0 to 19.6 km, and north-northwest (NNW), onshore over 13.6 km, with open fetch across the sound.

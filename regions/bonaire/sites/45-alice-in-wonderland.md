@@ -35,11 +35,6 @@ Alice in Wonderland is a shore site on EEG Boulevard south of Kralendijk, entere
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 247° |
-| **Dive area shore facing** | west-southwest, 247° |
-
 The swim out runs 145 m west-southwest from the entry, straight out from the shore, to the dive area.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves and surge straight onto the rocky entry and makes getting in and out hard work.

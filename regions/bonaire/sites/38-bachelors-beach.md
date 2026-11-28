@@ -35,11 +35,6 @@ A small sand beach in Belnem, on EEG Boulevard about 3 km south of Kralendijk on
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 299° |
-| **Dive area shore facing** | west-northwest, 299° |
-
 The swim out runs 114 m west-northwest from the entry, straight out from the shore, to the dive area.
 
 * **Bad.** West-southwest through west-northwest (WSW-WNW), onshore over more than 30 km of open sea, and north (N), onshore over 5 km across the bay off Kralendijk. Wind from these quarters puts waves on the small beach and the rocks at the foot of the stairway.

@@ -31,10 +31,6 @@ A boat dive on the south-southwest shore of Klein Bonaire whose name means Joann
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | south-southwest, 194° |
-
 * **Bad.** South-southeast through west-southwest (SSE-WSW), onshore over 9.7 to more than 30 km of open water, raising waves at the mooring and surge over the shallow plateau.
 * **Short fetch.** Southeast (SE), onshore over 4 km from the south end of Bonaire, enough to build a chop at the mooring.
 * **Fine.** West clockwise through east-southeast: offshore from northwest through east-northeast, blowing off the islet itself, and cross-shore over 290 m to 1.3 km from the west, west-northwest, east and east-southeast.

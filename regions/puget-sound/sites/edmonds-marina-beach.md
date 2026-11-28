@@ -44,11 +44,6 @@ Shore dive at Marina Beach Park in Edmonds, at the southwest end of the Port of 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 266° |
-| **Dive area shore facing** | west-southwest, 247° |
-
 The beach faces roughly west, across the main basin toward the south end of Whidbey Island and Kingston.
 
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over 6.5 to 20.0 km across the main basin, builds chop on the long surface swim.

@@ -42,11 +42,6 @@ Shore dive on the Mukilteo waterfront, on the south shore of Possession Sound at
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north-northwest, 347° |
-| **Dive area shore facing** | north-northwest, 347° |
-
 The beach faces north to northwest, into Possession Sound.
 
 * **Bad.** Northwest through northeast (NW-NE), onshore over 6.2 to 12.7 km, with open fetch up the Sound onto the entry.

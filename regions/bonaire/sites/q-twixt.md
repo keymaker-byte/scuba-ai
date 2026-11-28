@@ -28,10 +28,6 @@ A boat dive on the west side of Klein Bonaire, facing open sea away from Bonaire
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | west-northwest, 288° |
-
 * **Bad.** Southwest through north-northwest (SW-NNW), onshore over 8 to more than 30 km of open water, raising waves at the mooring and surge over the terrace.
 * **Mixed.** North through north-northeast (N-NNE), cross-shore over 5.7 to 6.6 km, and south through south-southwest (S-SSW), cross-shore over more than 30 km of open water, each running a swell along the reef.
 * **Fine.** Northeast clockwise through south-southeast: offshore, blowing off the islet itself over 160 to 610 m.

@@ -47,11 +47,6 @@ Shore dive beside a former oil dock turned public fishing pier on the east side 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-northeast, 73° |
-| **Dive area shore facing** | east-northeast, 71° |
-
 The beach faces east-northeast across Tramp Harbor into East Passage, with the island and Maury Island sheltering it from the west and south.
 
 * **Bad.** North through east-southeast (N-ESE). North winds blow down the length of East Passage straight into the harbor over the longest fetch, building chop on the entry and the surface swim; northeast through east-southeast cross East Passage from the Des Moines shore, onshore over 5.8 to 8.9 km.

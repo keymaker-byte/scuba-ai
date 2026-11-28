@@ -5,7 +5,7 @@
 The wind source for US sites, and the go / no go call on it. National Weather Service, no key, no rate limit worth worrying about. Wind decides whether the entry is diveable at all, and it is per-site: the wind on that beach, read against that beach's own exposure.
 
 - **Use it for.** The plan's wind verdict at the entry and the exit time: the tool reads the forecast and calls it go, marginal or no go against the site's own sectors. Plus wave height, air temperature and rain, which set what the surface interval feels like.
-- **The site's sectors.** Each bullet of the site file's Wind section maps to one option: the Bad bullet's sectors go in as `--bad`, and the Short fetch and Mixed bullets' sectors as `--short`. Each sector is the compass shorthand in parentheses after it, written `SW-WNW` or `N`, several comma separated or repeated. The Fine bullet stays out: every direction left out of both options counts as fine. The worked examples below show the mapping.
+- **The site's sectors.** `--file` with the site JSON reads them from its `wind` section, written by `shore_exposure.md`: the Bad sectors as `--bad`, the Short fetch and Mixed sectors as `--short`, the forecast point as the entry point (the dive area at a boat site), and the zone as the site's `tz`. By hand, `--bad` and `--short` take each sector as compass shorthand, written `SW-WNW` or `N`, several comma separated or repeated, the same shorthand the site file's Wind bullets carry in parentheses. Every direction left out of both options counts as fine. The worked examples below show the mapping.
 - **The call.** Each reading gets go, marginal or no go, with the sector kind it fell in:
   - **Bad.** Go under `go_below_ms` (5 m/s), marginal from there to `nogo_above_ms` (8 m/s), no go above it.
   - **Short.** The same bands, each moved up by `short_fetch_shift_ms` (3 m/s).
@@ -22,12 +22,14 @@ The wind source for US sites, and the go / no go call on it. National Weather Se
 Standard library only.
 
 ```sh
-python3 tools/nws_forecast.py at --near <lat> <lon> --time "2026-07-12 09:30" --tz <IANA_ZONE> --bad WSW-W --short SW,WNW-NW,S    # planning: the call at the entry or exit time
-python3 tools/nws_forecast.py forecast --near <lat> <lon> --date 2026-07-12 --tz <IANA_ZONE> --bad WSW-W --short SW,WNW-NW,S      # planning: the call for every hour of the day
+python3 tools/nws_forecast.py at --file <path/to/slug.json> --time "2026-07-12 09:30"        # planning: the call at the entry or exit time
+python3 tools/nws_forecast.py forecast --file <path/to/slug.json> --date 2026-07-12          # planning: the call for every hour of the day
+python3 tools/nws_forecast.py at --near <lat> <lon> --time "2026-07-12 09:30" --tz <IANA_ZONE> --bad WSW-W --short SW,WNW-NW,S    # by hand: the call at a moment
+python3 tools/nws_forecast.py forecast --near <lat> <lon> --date 2026-07-12 --tz <IANA_ZONE> --bad WSW-W --short SW,WNW-NW,S      # by hand: the call for every hour
 python3 tools/nws_forecast.py forecast --near <lat> <lon> --date 2026-07-12 --tz <IANA_ZONE>                              # conditions alone, no call
 ```
 
-Give it the entry point's coordinate. Both commands print the gridpoint, the site's time zone and the forecast's last update, then wind speed, direction, gust, wave height, air temperature, chance of rain and sky, with the call added whenever `--bad` or `--short` is given. `--tz` is required: the site's own IANA zone, the `tz` in its JSON, and every time is read and printed in it. Speeds are m/s; direction is degrees true, the direction the wind comes from. NWS holds each value constant over a span of one or more hours, so `at` reports the span containing the moment asked for. A malformed sector stops the run before any request.
+Give it the site JSON with `--file`, or the entry point's coordinate with `--near` and the zone with `--tz`. With `--file` it first prints the point and the sectors it read; a site JSON with no `wind` section, or one taken at another coordinate, stops the run with the extract to run, and `--near`, `--bad` or `--short` beside it stops the run too. Both commands print the gridpoint, the site's time zone and the forecast's last update, then wind speed, direction, gust, wave height, air temperature, chance of rain and sky, with the call added whenever `--bad` or `--short` is given. The zone is the site's own IANA zone, the `tz` in its JSON, which `--file` reads and a `--tz` beside it must match, and every time is read and printed in it. Speeds are m/s; direction is degrees true, the direction the wind comes from. NWS holds each value constant over a span of one or more hours, so `at` reports the span containing the moment asked for. A malformed sector stops the run before any request.
 
 ### Worked examples
 

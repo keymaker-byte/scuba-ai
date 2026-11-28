@@ -34,11 +34,6 @@ Vista Blue is a shore site on EEG Boulevard, about 13 km south of Kralendijk on 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 236° |
-| **Dive area shore facing** | southwest, 235° |
-
 The swim out runs 122 m southwest from the entry, 5° off the shore's facing, straight out.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves onto the beach, puts surge on the entry and exit and stirs sand into the shallows.

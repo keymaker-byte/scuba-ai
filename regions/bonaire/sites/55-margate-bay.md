@@ -35,11 +35,6 @@ A shore dive on Bonaire's southwest coast, reached across a small salina beside 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 226° |
-| **Dive area shore facing** | southwest, 226° |
-
 The swim out runs 107 m southwest from the entry, 7° off the shore's facing, to the dive area.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves onto the ironshore, making the step down and the exit rough.

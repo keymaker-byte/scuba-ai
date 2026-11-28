@@ -30,10 +30,6 @@ A relaxed boat dive off Klein Bonaire's east point, facing Kralendijk across the
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | east, 87° |
-
 * **Short fetch.** North-northeast through southeast (NNE-SE), onshore over 1.1 to 2.5 km across the channel from Bonaire, enough to build a chop at the mooring. The prevailing trades blow from this quarter, which is why the site dives best in the morning.
 * **Mixed.** North-northwest (NNW), cross-shore over 5.6 km, running a chop along the reef.
 * **Fine.** North, and south-southeast clockwise through northwest: offshore from south-southwest through northwest, off the islet, and cross-shore over 2.2 to 4.1 km from the north, south-southeast and south.

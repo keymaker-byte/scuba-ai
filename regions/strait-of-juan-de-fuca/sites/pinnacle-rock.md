@@ -45,11 +45,6 @@ Pinnacle Rock is a shore dive on the Strait of Juan de Fuca between Sekiu and Ne
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northeast, 39° |
-| **Dive area shore facing** | northeast, 45° |
-
 The beach faces northeast into the open strait, with a long, unbroken fetch to the Pacific.
 
 * **Bad.** North-northwest clockwise through east (NNW-E), onshore over 22 km to more than 30 km of open strait.

@@ -582,5 +582,177 @@
         "sets_flood_ebb_direction": false
       }
     ]
+  },
+  "wind": {
+    "extract_point": {
+      "lat": 47.347656,
+      "lon": -122.5556,
+      "entry": {
+        "lat": 47.349331,
+        "lon": -122.55602
+      },
+      "shore_span_m": 250,
+      "max_fetch_km": 30,
+      "extracted": "2026-11-27"
+    },
+    "shoreline": "OpenStreetMap land polygons, 33 pieces within 30 km",
+    "dive_area_faces": 111,
+    "entry_faces": 109,
+    "swim_out": {
+      "bearing": 170,
+      "distance_m": 189,
+      "off_entry_faces": 62
+    },
+    "calm_only": false,
+    "raised": {
+      "N": "bad",
+      "NNE": "bad",
+      "S": "bad"
+    },
+    "fetch": [
+      {
+        "from": "N",
+        "bearing": 0.0,
+        "fetch_km": 0.26,
+        "capped": false,
+        "relation": "cross-shore",
+        "class": "bad"
+      },
+      {
+        "from": "NNE",
+        "bearing": 22.5,
+        "fetch_km": 5.61,
+        "capped": false,
+        "relation": "cross-shore",
+        "class": "bad"
+      },
+      {
+        "from": "NE",
+        "bearing": 45.0,
+        "fetch_km": 4.19,
+        "capped": false,
+        "relation": "onshore",
+        "class": "short"
+      },
+      {
+        "from": "ENE",
+        "bearing": 67.5,
+        "fetch_km": 2.35,
+        "capped": false,
+        "relation": "onshore",
+        "class": "short"
+      },
+      {
+        "from": "E",
+        "bearing": 90.0,
+        "fetch_km": 2.09,
+        "capped": false,
+        "relation": "onshore",
+        "class": "short"
+      },
+      {
+        "from": "ESE",
+        "bearing": 112.5,
+        "fetch_km": 2.59,
+        "capped": false,
+        "relation": "onshore",
+        "class": "short"
+      },
+      {
+        "from": "SE",
+        "bearing": 135.0,
+        "fetch_km": 13.22,
+        "capped": false,
+        "relation": "onshore",
+        "class": "bad"
+      },
+      {
+        "from": "SSE",
+        "bearing": 157.5,
+        "fetch_km": 3.55,
+        "capped": false,
+        "relation": "onshore",
+        "class": "short"
+      },
+      {
+        "from": "S",
+        "bearing": 180.0,
+        "fetch_km": 5.69,
+        "capped": false,
+        "relation": "cross-shore",
+        "class": "bad"
+      },
+      {
+        "from": "SSW",
+        "bearing": 202.5,
+        "fetch_km": 3.53,
+        "capped": false,
+        "relation": "cross-shore",
+        "class": "fine"
+      },
+      {
+        "from": "SW",
+        "bearing": 225.0,
+        "fetch_km": 0.23,
+        "capped": false,
+        "relation": "offshore",
+        "class": "fine"
+      },
+      {
+        "from": "WSW",
+        "bearing": 247.5,
+        "fetch_km": 0.08,
+        "capped": false,
+        "relation": "offshore",
+        "class": "fine"
+      },
+      {
+        "from": "W",
+        "bearing": 270.0,
+        "fetch_km": 0.06,
+        "capped": false,
+        "relation": "offshore",
+        "class": "fine"
+      },
+      {
+        "from": "WNW",
+        "bearing": 292.5,
+        "fetch_km": 0.05,
+        "capped": false,
+        "relation": "offshore",
+        "class": "fine"
+      },
+      {
+        "from": "NW",
+        "bearing": 315.0,
+        "fetch_km": 0.06,
+        "capped": false,
+        "relation": "offshore",
+        "class": "fine"
+      },
+      {
+        "from": "NNW",
+        "bearing": 337.5,
+        "fetch_km": 0.11,
+        "capped": false,
+        "relation": "offshore",
+        "class": "fine"
+      }
+    ],
+    "sectors": {
+      "fine": [
+        "SSW-NNW"
+      ],
+      "mixed": [],
+      "short": [
+        "NE-ESE",
+        "SSE"
+      ],
+      "bad": [
+        "N-NNE",
+        "SE",
+        "S"
+      ]
+    }
   }
 }

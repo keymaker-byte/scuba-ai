@@ -49,11 +49,6 @@ Shore dive off the long sand and cobble beach of Ed Munro Seahurst Park in Burie
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 298° |
-| **Dive area shore facing** | west-northwest, 299° |
-
 The beach faces west-northwest across the main basin toward Vashon Island.
 
 * **Bad.** West-southwest through northwest (WSW-NW), onshore over 5.9 to 15.0 km down the main basin, put chop on the entry.

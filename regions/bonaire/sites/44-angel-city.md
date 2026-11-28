@@ -36,11 +36,6 @@ A double reef shore site on EEG Boulevard about 5 km south of Kralendijk, opposi
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 240° |
-| **Dive area shore facing** | west-southwest, 240° |
-
 The swim out runs 128 m southwest from the entry, 7° off the shore's facing, to the dive area.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves and surge straight onto the rock and rubble at the entry and makes the exit dangerous.

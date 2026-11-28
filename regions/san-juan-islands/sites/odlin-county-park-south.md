@@ -52,12 +52,7 @@ The bay opens onto the east shore of Upright Channel, which joins Harney Channel
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northwest, 311° |
-| **Dive area shore facing** | north, 350° |
-
-The beach faces out of the bay across Upright Channel toward Shaw Island; the dive area facing is the south shoreline of the bay.
+The beach faces out of the bay across Upright Channel toward Shaw Island; the dive area lies off the south shoreline of the bay.
 
 * **Bad.** West-southwest (WSW), onshore over 6.8 km of open water down Upright Channel, building chop and small surf on the beach.
 * **Short fetch.** West through north (W-N), onshore over 1.7 to 3.6 km across Upright Channel, raising chop on the beach and across the swim out.

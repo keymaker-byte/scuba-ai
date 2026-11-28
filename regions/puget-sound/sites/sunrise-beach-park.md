@@ -49,11 +49,6 @@ Shore dive at Sunrise Beach Park, north of Gig Harbor on the west shore of Colvo
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-southeast, 109° |
-| **Dive area shore facing** | east-southeast, 111° |
-
 The beach faces east-southeast across Colvos Passage toward Vashon Island, about 2 km away.
 
 * **Bad.** North through north-northeast (N-NNE), down the length of Colvos Passage, which builds a short steep chop against the beach; southeast (SE), onshore over 13.2 km; and south (S), which comes up Colvos Passage from Dalco Passage over 5.7 km and puts chop on the surface swim.

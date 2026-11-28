@@ -131,11 +131,6 @@ Current is a secondary factor here and the site is genuinely mild for the Sound,
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northwest, 321° |
-| **Dive area shore facing** | northwest, 321° |
-
 The beach faces roughly west to northwest, onto the open main basin of Puget Sound.
 
 * **Bad.** West clockwise through north-northeast (W-NNE), onshore over 7.3 to 20.9 km, with open fetch across the basin, builds chop and surge on the entry and swell over the shallow structures. A strong onshore wind is felt as surge close to shore even when the deeper water is calmer. A rock breakwater just north of the entry gives the beach some shelter from a north wind, but not from northwest.

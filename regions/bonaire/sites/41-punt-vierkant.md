@@ -34,11 +34,6 @@ Punt Vierkant, Dutch for square point, is a shore site on EEG Boulevard about 5 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 228° |
-| **Dive area shore facing** | southwest, 228° |
-
 The swim out runs 112 m southwest from the entry, straight out from the shore, to the dive area.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves and surge straight onto the shore and makes the entry and exit at the rock hard work.

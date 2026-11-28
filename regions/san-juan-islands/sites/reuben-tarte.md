@@ -55,11 +55,6 @@ Three channels converge at this corner of the island and drive the flow around t
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north-northeast, 24° |
-| **Dive area shore facing** | northeast, 35° |
-
 * **Bad.** North through east-northeast (N-ENE), onshore over 5.9 to 16.8 km of open water, building wind swell on the beach and the swim out.
 * **Short fetch.** East (E), onshore over 3.4 km, enough to raise chop in the cove.
 * **Mixed.** East-southeast through southeast (ESE-SE), cross-shore over 6.7 to 8.2 km, running swell past the entry.

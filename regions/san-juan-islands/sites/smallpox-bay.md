@@ -53,11 +53,6 @@ Haro Strait's tidal stream runs along this shore, setting northeast on the flood
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 250° |
-| **Dive area shore facing** | west, 272° |
-
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over 8.2 to 21.9 km of open water across Haro Strait, driving wind waves into the mouth of the bay and onto the ramp.
 * **Fine.** North-northwest clockwise through south (NNW-S), blocked by the island itself and the bay's two points, with 1.3 km of fetch at most.
 

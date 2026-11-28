@@ -36,11 +36,6 @@ Jeannie's Glory is a shore site on EEG Boulevard, about 400 m north of Salt Pier
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 258° |
-| **Dive area shore facing** | west-southwest, 258° |
-
 The swim out runs 165 m west from the entry, 3° off the shore's facing, close to straight out.
 
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over more than 30 km of open sea. Wind from this quarter drives waves onto the shore, stirs up the terrace and puts surge on the rocky entry and exit.

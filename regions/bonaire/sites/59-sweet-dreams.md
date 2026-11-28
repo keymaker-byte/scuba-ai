@@ -35,11 +35,6 @@ Sweet Dreams is a shore site on EEG Boulevard on Bonaire's south coast, off a sm
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 219° |
-| **Dive area shore facing** | southwest, 220° |
-
 The swim out runs 109 m southwest from the entry, 8° off the shore's facing, straight out.
 
 * **Bad.** South-southeast through west (SSE-W), onshore over more than 30 km of open sea. Wind from this quarter drives waves onto the coral shelf, puts surf and surge on the entry and exit and stirs up the terrace.

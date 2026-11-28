@@ -5,7 +5,7 @@ These conventions apply to every dive planned in this region.
 Ordered by what actually decides whether a Bonaire dive goes well:
 
 1. **Coast and wind exposure** (primary). The west coast around town sits in the lee of the island itself and is calm on all but the roughest days; the north (inside and above Washington Slagbaai) and the far southern tip face open water and the prevailing trade winds directly, and can run real current and swell that call for real experience, not just a stronger kick. Confirm the forecast's call from the shore, the current sock or the surface chop before entering.
-   - **Tool.** `open_meteo_wind.md`, the wind call at the entry and the exit time against the site's Wind section sectors.
+   - **Tool.** `open_meteo_wind.md`, the wind call at the entry and the exit time, run with the site JSON as `--file` against its `wind` sectors.
    - **Trade winds.** The east to southeast trades blow offshore along the west coast and the lee sides of Klein Bonaire, and leave those entries flat at their usual strength. Strong trades drive a stronger current at the exposed north and south sites.
    - **Tidal set.** The tidal stream here runs a few centimetres a second under the wind-driven current.
    - **Swell.** Northern swell in winter, and swell from passing tropical systems in the hurricane season (June to November), can put surf on the west coast under a light breeze. Swell is judged at the entry rocks before kitting up.

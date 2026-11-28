@@ -44,11 +44,6 @@ One Mile Beach is a shore dive on the Strait of Juan de Fuca about 1.6 km west o
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north, 8° |
-| **Dive area shore facing** | north, 7° |
-
 The beach faces north into the open strait.
 
 * **Bad.** Northwest clockwise through east-northeast (NW-ENE), onshore over 22 km to more than 30 km, straight up the open strait with a long, unbroken fetch to the Pacific, or across it.

@@ -30,10 +30,6 @@ A boat dive on the north coast of Klein Bonaire, the islet's northernmost site a
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | north, 355° |
-
 * **Bad.** West-northwest through north-northwest (WNW-NNW), onshore over 5.1 to more than 30 km of open water, putting chop at the site and surge over the terrace.
 * **Short fetch.** North through northeast (N-NE), onshore over 2.3 to 3.6 km across the channel from Bonaire, enough to build a chop over the site.
 * **Mixed.** West (W), cross-shore over more than 30 km of open water, running a swell along the reef.

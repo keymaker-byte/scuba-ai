@@ -15,6 +15,9 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib import site_wind  # noqa: E402
+
 BASE = "https://api.open-meteo.com/v1/forecast"
 DISAGREE_SPEED_MS = 3.0
 DISAGREE_DIR_DEG = 30.0
@@ -234,6 +237,8 @@ def cmd_at(a):
 
 
 def _call_args(s):
+    s.add_argument("--file", metavar="SLUG.JSON",
+                   help="the site JSON: the entry point, the sectors and the zone from its wind section and tz")
     s.add_argument("--bad", action="append", metavar="SECTOR",
                    help="the site's Bad sector(s), compass points clockwise, e.g. SW-WNW")
     s.add_argument("--short", action="append", metavar="SECTOR",
@@ -249,24 +254,25 @@ def main():
                     f"(default: {PRIMARY_MODEL},{CHECK_MODEL})")
 
     s = sub.add_parser("forecast", help="hourly wind for one local calendar day")
-    s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True)
+    s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), help="the entry point; --file gives it")
     s.add_argument("--date", required=True, metavar="YYYY-MM-DD")
-    s.add_argument("--tz", required=True, metavar="IANA_ZONE",
+    s.add_argument("--tz", metavar="IANA_ZONE",
                    help="the dive site's own timezone, e.g. Continent/City")
     s.add_argument("--models", help=models_help)
     _call_args(s)
     s.set_defaults(fn=cmd_forecast)
 
     s = sub.add_parser("at", help="wind at one local moment, interpolated between hours")
-    s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), required=True)
+    s.add_argument("--near", nargs=2, type=float, metavar=("LAT", "LON"), help="the entry point; --file gives it")
     s.add_argument("--time", required=True, metavar="YYYY-MM-DD HH:MM")
-    s.add_argument("--tz", required=True, metavar="IANA_ZONE",
+    s.add_argument("--tz", metavar="IANA_ZONE",
                    help="the dive site's own timezone, e.g. Continent/City")
     s.add_argument("--models", help=models_help)
     _call_args(s)
     s.set_defaults(fn=cmd_at)
 
     a = p.parse_args()
+    site_wind.apply_file(a)
     sectors(a.bad), sectors(a.short)  # reject a malformed sector before any request
     a.fn(a)
 

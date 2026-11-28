@@ -36,11 +36,6 @@ A shore dive on EEG Boulevard below the Cargill salt works, entered through the 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 280° |
-| **Dive area shore facing** | west, 280° |
-
 The swim out runs 162 m west-northwest from the entry, 5° off the shore's facing, to the dive area.
 
 * **Bad.** Southwest through north-northwest (SW-NNW), onshore over 9.6 km to more than 30 km of open sea. Wind from this quarter raises surf and surge at the channel mouth, makes the step in off the rocks awkward and stirs the sand terrace.

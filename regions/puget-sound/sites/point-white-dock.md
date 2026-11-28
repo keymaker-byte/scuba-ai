@@ -45,11 +45,6 @@ Shore dive off a historic Mosquito Fleet steamer dock on the southwest shore of 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 251° |
-| **Dive area shore facing** | west-southwest, 251° |
-
 The beach faces west-southwest across Port Orchard toward Bremerton, with Port Orchard running north and Rich Passage opening to the south and east.
 
 * **Bad.** South-southwest (SSW), onshore over 6.3 km.

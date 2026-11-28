@@ -30,10 +30,6 @@ A boat dive on Bonaire's northwest coast below the low rock shore of the coastal
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | south-southwest, 208° |
-
 * **Bad.** South-southeast through west (SSE-W), onshore over 6.1 km to more than 30 km, down the coast from the south-southeast and across open sea from the south and west. Wind from this quarter drives waves onto the rock shore, surges the shallow terrace, sets the boat rocking at its mooring and makes reboarding rough.
 * **Mixed.** Southeast (SE), cross-shore over 9.8 km down the coast, running a swell along the shore.
 * **Fine.** West-northwest clockwise through east-southeast: cross-shore over 760 m from the west-northwest and 310 m from the northwest, offshore from north-northwest through east over 50 to 110 m, off the land, and cross-shore over 3.5 km from the east-southeast. Trades from the east blow off the land and leave the mooring sheltered; as they swing southeast they run a swell along the shore. Swell in winter and from passing tropical systems still surges the terrace under a light wind.

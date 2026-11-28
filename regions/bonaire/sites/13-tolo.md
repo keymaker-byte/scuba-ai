@@ -35,11 +35,6 @@ A shore site on Bonaire's northwest coast off a long stretch of coral beach, bel
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south, 187° |
-| **Dive area shore facing** | south, 187° |
-
 The shore here runs west to east, and the swim out runs 91 m south, 174°, from the entry to the dive area.
 
 * **Bad.** Southeast through west-southwest (SE-WSW), onshore over 5.8 km to more than 30 km, along the coast from the southeast or across open sea from the south and southwest. Wind from this quarter puts waves on the rubble beach and makes the entry and exit difficult.

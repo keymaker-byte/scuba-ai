@@ -37,11 +37,6 @@ The house reef of Sand Dollar and Den Laman on Bonaire's west coast north of Kra
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 259° |
-| **Dive area shore facing** | west-southwest, 256° |
-
 The swim out runs 77 m west from the ramp, straight out from the shore, to the dive area.
 
 * **Bad.** West-northwest through northwest (WNW-NW), onshore over 7.6 km to more than 30 km of open sea. Wind from this quarter raises waves on the ramp and stirs up the terrace.

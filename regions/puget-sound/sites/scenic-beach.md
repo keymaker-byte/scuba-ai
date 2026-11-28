@@ -48,11 +48,6 @@ The current here is weak at every stage of the tide, running parallel to the bea
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north-northwest, 336° |
-| **Dive area shore facing** | north-northwest, 336° |
-
 The beach faces north-northwest across Hood Canal toward the Toandos Peninsula and the mouth of Dabob Bay. The canal is 3 to 4 km wide here, so cross-canal fetch is short, but the canal axis runs a long way northeast to southwest.
 
 * **Bad.** Northwest through north (NW-N), onshore over 5.1 to 11.1 km. A northerly funnels down the canal from the entrance with the longest fetch and lands onshore here; northwest comes across from Dabob Bay straight onto the beach.

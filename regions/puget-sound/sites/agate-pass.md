@@ -40,11 +40,6 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 300° |
-| **Dive area shore facing** | southeast, 131° |
-
 The pass runs roughly north to south between wooded, steep shores, about 270 m wide.
 
 * **Mixed.** Northeast (NE), over 5.2 km, and south-southwest (SSW), over 8.0 km, cross-shore at the entry along the channel's own axis. Wind blowing along the length of the channel is the one direction that can raise chop.

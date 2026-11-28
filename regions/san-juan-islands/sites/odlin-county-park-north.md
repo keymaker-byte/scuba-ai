@@ -49,11 +49,6 @@ The site sits on the east shore of Upright Channel, which joins Harney Channel t
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 278° |
-| **Dive area shore facing** | west, 262° |
-
 The shoreline faces straight across Upright Channel toward Shaw Island, with Upright Head and the body of Lopez Island at its back.
 
 * **Bad.** West-southwest (WSW), onshore over 7.4 km of open water down Upright Channel, building chop on the entry and along the shoreline.

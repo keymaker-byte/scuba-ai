@@ -57,11 +57,6 @@ Haro Strait's tidal stream runs past the island, setting northeast on the flood 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 275° |
-| **Dive area shore facing** | southwest, 214° |
-
 Low Island stands between the dive coordinate and the open strait to the west, so the fetch measured right behind it reads very short from west-southwest and west. Only the water in the island's lee is sheltered: just off the beach, west-southwest runs 13.6 km of open water past the island's south end.
 
 * **Bad.** Southwest through west-southwest (SW-WSW), onshore over 12.2 to 13.6 km of open water, and west-northwest through northwest (WNW-NW), onshore over 14.2 to 20.1 km, driving wind waves across the channel onto the beach.

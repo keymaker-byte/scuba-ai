@@ -35,11 +35,6 @@ A remote site in Washington Slagbaai National Park, on the park's northwest coas
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 255° |
-| **Dive area shore facing** | west, 261° |
-
 The beach opens west-southwest onto open sea, and the swim out runs 129 m west-southwest, 248°, from the entry across the plateau to the dive area, nearly straight off the beach.
 
 * **Bad.** Southwest through northwest (SW-NW), onshore over more than 30 km of open sea, onto the beach, building surf on the sand and the rocks either side of it.

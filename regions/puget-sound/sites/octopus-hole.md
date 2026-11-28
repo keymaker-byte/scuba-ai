@@ -54,11 +54,6 @@ Octopus Hole is dived independently of the tide. The water here moves gently thr
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-southeast, 110° |
-| **Dive area shore facing** | east-southeast, 109° |
-
 The beach faces east-southeast across Hood Canal, here about 2 km wide, backed by the steep slope of the Olympic foothills and the highway.
 
 * **Bad.** Northeast (NE), onshore over 8.7 km, blows down the long reach of the canal and quickly builds chop on the entry. Surface chop can build during a dive, so watch it for the exit.

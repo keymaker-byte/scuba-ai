@@ -37,11 +37,6 @@ A stretch of fringing reef on Bonaire's west coast north of Kralendijk, entered 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 299° |
-| **Dive area shore facing** | west-northwest, 300° |
-
 The swim out runs 72 m west-southwest from the beach, angled south along the shore, to the dive area.
 
 * **Bad.** West-northwest through northwest (WNW-NW), onshore over 8 km to more than 30 km of open sea. Wind from this quarter raises waves on the beach and stirs up the terrace.

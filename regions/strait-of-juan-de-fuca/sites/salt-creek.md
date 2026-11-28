@@ -47,11 +47,6 @@ Shore dive off Tongue Point, inside the Tongue Point Marine Life Sanctuary at Sa
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north, 2° |
-| **Dive area shore facing** | north, 2° |
-
 Tongue Point faces north into the open strait, with Crescent Bay opening to the west of the point.
 
 * **Bad.** Northwest clockwise through east-northeast (NW-ENE), onshore over 18.8 km to more than 30 km, straight across the strait or along it.

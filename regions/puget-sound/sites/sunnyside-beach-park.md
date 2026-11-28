@@ -53,11 +53,6 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 303° |
-| **Dive area shore facing** | west-northwest, 303° |
-
 The beach faces west-northwest across the South Sound toward Fox Island and Ketron Island. Chop stirs up the shallow flat and cuts the visibility at the entry.
 
 * **Bad.** Southwest through north (SW-N), onshore over 5.1 to 17.2 km from west through north, the strong northerlies coming down out of the Narrows. Southwesterlies come up Nisqually Reach over a long fetch and push chop onto the beach.

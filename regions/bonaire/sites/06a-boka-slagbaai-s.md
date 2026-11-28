@@ -33,11 +33,6 @@ The southern of two routes at Boka Slagbaai and the southernmost dive site insid
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 293° |
-| **Dive area shore facing** | northwest, 319° |
-
 The bay opens west-northwest onto open sea. The dive area sits about 90 m off the bay's southern shore, which turns the facing there toward northwest, and the swim out runs 180 m west, 280°, from the entry.
 
 * **Bad.** West-southwest through north-northwest (WSW-NNW), onshore over 30 km or more of open sea, straight into the mouth of the bay, building waves and chop at the entry. Winter north swell reaches the beach under a light breeze too.

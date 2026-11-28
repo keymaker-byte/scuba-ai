@@ -35,11 +35,6 @@ A small cove in Washington Slagbaai National Park, the old landing of the Washin
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 260° |
-| **Dive area shore facing** | west-southwest, 253° |
-
 The cove opens west onto open sea, and the swim out runs 147 m west, 276°, from the entry across the terrace to the dive area.
 
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over more than 30 km of open sea, straight into the mouth of the cove, building surf on the rocks and blocks of the entry. West and northwest winds quickly build surf on the entry.

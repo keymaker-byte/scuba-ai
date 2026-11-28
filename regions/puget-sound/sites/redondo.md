@@ -54,11 +54,6 @@ The water on the slope moves far less than in East Passage offshore, and the cur
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-northwest, 285° |
-| **Dive area shore facing** | west-northwest, 283° |
-
 The beach faces west-northwest across East Passage toward Vashon Island, with open water up the passage to the north-northwest.
 
 * **Bad.** West-southwest through north-northwest (WSW-NNW), onshore over 5.6 to more than 30 km of open water. Wind waves on the long, flat approach to the pier make the main stairs entry and exit hard work; the shore south of the boat launch deepens faster and handles waves better.

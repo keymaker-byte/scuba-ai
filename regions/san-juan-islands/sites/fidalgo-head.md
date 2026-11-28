@@ -45,11 +45,6 @@ Fidalgo Head sits where the flow through Burrows Pass meets the open water off t
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south, 183° |
-| **Dive area shore facing** | west-northwest, 294° |
-
 The entry is on the sheltered bay; Fidalgo Head sits on the north side of Burrows Pass's west mouth, facing west and southwest into open Rosario Strait, more exposed than the bay behind it.
 
 * **Bad.** Southwest through west-southwest (SW-WSW), onshore over 9.3 to 12.1 km, a direct fetch off Rosario Strait.

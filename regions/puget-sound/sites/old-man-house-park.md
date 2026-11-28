@@ -38,11 +38,6 @@ Old Man House Park is a small Suquamish Tribe park on the Kitsap Peninsula shore
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southeast, 143° |
-| **Dive area shore facing** | southeast, 132° |
-
 The beach faces southeast across the north mouth of Agate Passage into Port Madison.
 
 * **Bad.** East through east-southeast (E-ESE), onshore over 11.8 to 13.4 km across Port Madison.

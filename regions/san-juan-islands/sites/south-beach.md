@@ -53,11 +53,6 @@ The flow along the beach is weak on the shelf, and the strong tidal stream runs 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south, 173° |
-| **Dive area shore facing** | south, 173° |
-
 * **Bad.** East-southeast through southwest (ESE-SW), onshore over 9.2 to more than 30 km of open water across the eastern Strait of Juan de Fuca, driving wind waves straight onto the beach and building surf on the entry and exit.
 * **Mixed.** West-southwest through west (WSW-W), along the shore over 19.1 to more than 30 km, running swell along the beach past the entry.
 * **Fine.** West-northwest clockwise through east (WNW-E), blocked by the island itself, with 1.5 km of fetch at most.

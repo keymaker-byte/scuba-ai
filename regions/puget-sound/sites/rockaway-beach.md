@@ -45,11 +45,6 @@ Natural rock reef shore dive on the southeast shore of Bainbridge Island, at the
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-northeast, 66° |
-| **Dive area shore facing** | northeast, 50° |
-
 The beach faces east-northeast across the main basin toward Alki Point and West Seattle, tucked into a small cove.
 
 * **Bad.** North-northeast through east (NNE-E), onshore over 8.2 to 20.5 km of the main basin, landing as surf directly on this beach.

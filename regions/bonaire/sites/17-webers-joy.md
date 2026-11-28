@@ -36,11 +36,6 @@ A shore dive on Bonaire's northwest coast road south of the Radio Nederland towe
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 215° |
-| **Dive area shore facing** | southwest, 215° |
-
 The swim out runs 43 m southwest from the entry, 5° off the entry shore's facing, straight out from the beach.
 
 * **Bad.** South-southwest through west (SSW-W), onshore over more than 30 km of open sea. Wind from this quarter raises swell and surge on the rubble entry and stirs the shallows.

@@ -30,10 +30,6 @@ A boat dive on the south coast of Klein Bonaire, named for Don Stewart, Bonaire'
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | south, 181° |
-
 * **Bad.** South-southeast through west-southwest (SSE-WSW), onshore over 10.1 to more than 30 km of open water, raising waves at the mooring and surge over the terrace.
 * **Short fetch.** Southeast (SE), onshore over 4.3 km across the channel from Bonaire, enough to build a chop at the mooring.
 * **Fine.** West clockwise through east-southeast: offshore from northwest through east-northeast, blowing off the islet itself, and cross-shore over 220 to 980 m from the west, west-northwest and east, and 4.4 km from the east-southeast.

@@ -36,11 +36,6 @@ Bonaire's best known wreck, a 72 m cargo ship lying on her starboard side on the
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 234° |
-| **Dive area shore facing** | southwest, 234° |
-
 The swim out runs 122 m west-southwest from the entry, straight out from the shore, to the dive area.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves and surge straight onto the ledge and makes the entry and exit hard work.

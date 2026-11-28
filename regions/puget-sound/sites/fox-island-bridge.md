@@ -53,11 +53,6 @@ The passage narrows to its shallowest at the bridge, and the exchange between Ca
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north, 354° |
-| **Dive area shore facing** | north-northwest, 331° |
-
 The site faces across the narrow west end of Hale Passage, about 550 m to the mainland shore, with Fox Island behind it.
 
 * **Short fetch.** West-northwest through northwest (WNW-NW), onshore over 1.3 to 2.6 km from the mouth of Carr Inlet. Wind from these directions raises chop on the entry beach and the surface swim along the jetty.

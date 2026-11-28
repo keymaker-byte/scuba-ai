@@ -30,10 +30,6 @@ A boat dive on the northwest tip of Klein Bonaire, also known as Punt P'abou, na
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | northwest, 310° |
-
 * **Bad.** West-southwest through north (WSW-N), onshore over 5.2 to more than 30 km of open water, putting chop at the mooring and surge over the terrace.
 * **Mixed.** Southwest (SW), cross-shore over more than 30 km of open water, running a swell along the wall.
 * **Fine.** North-northeast clockwise through south-southwest: cross-shore over 4 to 4.2 km from the north-northeast and northeast, offshore from east-northeast through south, blowing off the islet itself, and cross-shore over 660 m from the south-southwest.

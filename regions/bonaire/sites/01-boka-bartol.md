@@ -34,11 +34,6 @@ Bonaire's northernmost dive site, a remote rocky bay inside Washington Slagbaai 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northwest, 320° |
-| **Dive area shore facing** | northwest, 321° |
-
 The bay opens northwest onto open sea, and the swim out runs 197 m northwest, 310°, from the entry across the terrace to the sandy floor.
 
 * **Bad.** West through northeast (W-NE), over more than 30 km of open sea. From west through north-northeast, onshore, straight into the mouth of the bay, building surf on the rock and rubble entry. From the northeast, cross-shore, a wind that drives swell around the island's northern tip and onto the entry, making the site unsafe.

@@ -49,11 +49,6 @@ The cove sits deep inside Elliott Bay, away from the main tidal streams, and sta
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-northeast, 61° |
-| **Dive area shore facing** | east-northeast, 58° |
-
 The beach faces east-northeast across Elliott Bay, and the swim out runs straight off it.
 
 * **Short fetch.** North through east-southeast (N-ESE), onshore over 1.9 to 4.6 km across the bay onto the entry, which builds chop on the beach; north has the longest fetch of these, in through the bay mouth.

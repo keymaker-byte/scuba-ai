@@ -31,11 +31,7 @@ A boat dive off Klein Bonaire's southwest tip, where the islet's south and west 
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | west-northwest, 304° |
-
-The facing averages the curve of the tip; the nearest shore lies about 100 m to the east-northeast of the mooring.
+The mooring lies off the curve of the tip, with the nearest shore about 100 m to the east-northeast.
 
 * **Bad.** West-southwest through north (WSW-N), onshore over 7 to more than 30 km of open water, raising waves at the mooring and surge over the terrace.
 * **Mixed.** South-southwest through southwest (SSW-SW), cross-shore over more than 30 km of open water, running a swell along the reef.

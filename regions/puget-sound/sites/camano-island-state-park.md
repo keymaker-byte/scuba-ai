@@ -39,11 +39,6 @@ Camano Island State Park sits at the southwest tip of Camano Island, facing Sara
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south-southwest, 195° |
-| **Dive area shore facing** | south-southwest, 196° |
-
 The beach faces across Saratoga Passage toward Whidbey Island.
 
 * **Bad.** Southeast through south-southeast (SE-SSE), onshore over 6.5 to 25.1 km up Possession Sound, and west-southwest (WSW), onshore over 6.2 km across to Whidbey, building chop on the beach.

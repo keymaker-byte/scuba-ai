@@ -34,11 +34,6 @@ A public beach on EEG Boulevard opposite the seaward end of Flamingo Airport's r
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northwest, 319° |
-| **Dive area shore facing** | northwest, 319° |
-
 The swim out runs 72 m northwest from the entry, straight out from the shore, to the dive area.
 
 * **Bad.** West (W), onshore over more than 30 km of open sea past the south end of Klein Bonaire. Wind from this direction puts waves on the beach and makes the swim out across the shallows hard work.

@@ -36,11 +36,6 @@ Red Beryl is a shore site on EEG Boulevard, about 11.5 km south of Kralendijk on
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 235° |
-| **Dive area shore facing** | southwest, 233° |
-
 The swim out runs 86 m west-southwest from the entry, 3° off the shore's facing, straight out.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter drives waves onto the beach, puts surge on the rock shelf at the entry and stirs up the shallows.

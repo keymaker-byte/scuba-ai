@@ -37,11 +37,6 @@ Atlantis is a shore site on EEG Boulevard, about 12 km south of Kralendijk on Bo
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 245° |
-| **Dive area shore facing** | west-southwest, 245° |
-
 The swim out runs 124 m west-southwest from the entry, 6° off the shore's facing, straight out. The shore lies open to more than 30 km of sea from south-southeast through northwest, cross-shore over 300 m from the southeast and 590 m from the north-northwest, and offshore from north through east-southeast.
 
 * **Bad.** All directions (N-NNW), calm only. The east trades blow offshore here, the reason the beach is the island's kitesurfing site: any wind strong enough to kite fills the water over the site with kites, foilers and rescue boats, and onshore wind from the south through west-northwest (S-WNW) drives waves onto the beach and the ledge at the entry. The site is dived only when there is no wind.

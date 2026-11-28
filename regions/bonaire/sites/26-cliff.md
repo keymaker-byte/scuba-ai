@@ -36,11 +36,6 @@ A short vertical wall on Bonaire's west coast north of Kralendijk, the house ree
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | southwest, 236° |
-| **Dive area shore facing** | southwest, 236° |
-
 The swim out runs 64 m west-southwest from the entry, straight off the shore, to the dive area.
 
 * **Bad.** South (S), onshore over 5.8 km down the coast, and west through west-northwest (W-WNW), onshore over more than 30 km of open sea. Wind from these quarters raises waves at the entry and stirs up the shallows.

@@ -31,10 +31,6 @@ One of Bonaire's most popular boat dives, below a sheer cliff on the northwest c
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | south-southwest, 206° |
-
 The dive area lies hard under the cliff, about 40 m off the shore.
 
 * **Bad.** South-southeast through west (SSE-W), onshore over 6.3 km to more than 30 km of open sea. Wind from this quarter drives waves against the cliff, sets the boat rocking at its mooring, makes reboarding rough, and puts surge through the undercut and the shallows.

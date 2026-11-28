@@ -30,10 +30,6 @@ A boat dive on the southwest shore of Klein Bonaire, named for the pile of rocks
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | southwest, 214° |
-
 * **Bad.** South-southeast through west (SSE-W), onshore over 8.8 to more than 30 km of open water, raising waves at the mooring and surge over the terrace.
 * **Fine.** West-northwest clockwise through southeast: offshore from north-northwest through east, blowing off the islet itself, and cross-shore over 290 to 780 m from the west-northwest, northwest and east-southeast, and 3.6 km from the southeast.
 

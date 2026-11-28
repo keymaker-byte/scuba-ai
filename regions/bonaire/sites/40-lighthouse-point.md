@@ -38,11 +38,6 @@ The point concentrates the current running along this stretch of coast, and it s
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west, 263° |
-| **Dive area shore facing** | west, 263° |
-
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over more than 30 km of open water. Wind from this quarter drives waves straight onto the rocky entry and builds surge on the terrace.
 * **Mixed.** South (S), cross-shore over more than 30 km, running a swell along the shore past the entry.
 * **Fine.** North-northwest clockwise through south-southeast. North-northeast through southeast blows offshore across 130 m to 4.9 km, off the land; north-northwest, north and south-southeast blow cross-shore over 3.9 to 4.5 km. The prevailing east to southeast trades blow off the land here and leave the entry sheltered from wind waves.

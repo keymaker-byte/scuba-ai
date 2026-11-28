@@ -32,11 +32,6 @@ A shore dive off a small Olmsted park on the west shore of Lake Washington in Se
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-northeast, 78° |
-| **Dive area shore facing** | east-northeast, 78° |
-
 * **Bad.** North-northeast (NNE), onshore over 9.3 km of open water up the lake, and east-southeast (ESE), onshore over 5.1 km. A sustained wind from either builds chop onto the pebble beach and makes the exit rough.
 * **Short fetch.** Northeast through east (NE-E), onshore over 2.7 to 4.1 km, and southeast (SE), onshore over 3.8 km. A sustained wind from here puts a chop on the beach, enough to make the exit uncomfortable in a stiff breeze.
 * **Mixed.** South-southeast through south (SSE-S), along the shore over 5.3 to 8.4 km. South is the lake's prevailing wind, and it strengthens through fall and winter; it runs chop along the beach and past the entry.

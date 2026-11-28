@@ -31,10 +31,6 @@ A boat dive on the north shore of Klein Bonaire toward its west end, also known 
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | north, 350° |
-
 * **Bad.** West-northwest through north-northwest (WNW-NNW), onshore over 5.9 to more than 30 km of open water, putting chop at the mooring and surge over the terrace.
 * **Short fetch.** North through northeast (N-NE), onshore over 3.5 to 4.8 km across the channel from Bonaire, enough to build a chop at the mooring.
 * **Mixed.** West (W), cross-shore over more than 30 km of open water, running a swell along the reef.

@@ -31,10 +31,6 @@ A boat dive off a small rocky peninsula on the south side of Klein Bonaire, towa
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | southeast, 135° |
-
 * **Bad.** East-southeast through south-southwest (ESE-SSW), onshore over 5 to more than 30 km of open water, raising waves at the mooring and surge over the terrace.
 * **Short fetch.** East (E), onshore over 1.6 km across the channel from Bonaire, enough to build a chop at the mooring.
 * **Mixed.** Southwest through west-southwest (SW-WSW), cross-shore over more than 30 km of open water, running a swell along the reef.

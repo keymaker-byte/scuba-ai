@@ -52,11 +52,6 @@ Current is negligible here. The cove sits deep inside Elliott Bay, sheltered fro
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | northeast, 49° |
-| **Dive area shore facing** | northeast, 46° |
-
 The beach faces northeast across Elliott Bay toward downtown Seattle.
 
 * **Short fetch.** North through east-southeast (N-ESE), onshore over 1.1 to 4.3 km across the bay onto the entry, which builds chop on the rocks; a northerly has the longest fetch, in through the bay mouth.

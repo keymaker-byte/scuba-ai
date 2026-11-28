@@ -32,10 +32,6 @@ A boat dive off the villas of South Belnem, the name the site also goes by, abou
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | west-northwest, 299° |
-
 * **Bad.** West-southwest through west-northwest (WSW-WNW), onshore over more than 30 km of open sea. Wind from this quarter raises a swell on the shallow plateau and makes the boat entry and pickup rough.
 * **Short fetch.** Northwest through north (NW-N), onshore over 3.2 to 4.9 km across the channel to Klein Bonaire and the bay off Kralendijk, enough to build a chop on the surface.
 * **Mixed.** South-southwest through southwest (SSW-SW), cross-shore over more than 30 km, running a swell along the shore.

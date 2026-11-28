@@ -34,11 +34,6 @@ A remote site on Bonaire's northwest coast, between the BOPEC oil terminal and N
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 242° |
-| **Dive area shore facing** | west-southwest, 244° |
-
 The swim out runs 79 m west-southwest, 243°, from the entry straight out across the shelf to the reef edge.
 
 * **Bad.** South through west-northwest (S-WNW), onshore over more than 30 km of open sea. Wind from this quarter puts surf on the pebble beach and makes the entry and exit hazardous.

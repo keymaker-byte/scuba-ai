@@ -41,11 +41,6 @@ A shore dive at the Port Townsend Marine Science Center pier, inside Fort Worden
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-southeast, 104° |
-| **Dive area shore facing** | east-southeast, 102° |
-
 The beach faces east-southeast across the entrance to Port Townsend Bay and Admiralty Inlet.
 
 * **Bad.** Northeast through south-southeast (NE-SSE), onshore over 5.5 to 12.3 km across Admiralty Inlet.

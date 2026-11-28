@@ -54,11 +54,6 @@ Twanoh is dived independently of the tidal current. The water here barely moves 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | north-northeast, 28° |
-| **Dive area shore facing** | north-northeast, 28° |
-
 The beach is a straight shore facing across the arm of the canal toward the Kitsap Peninsula, 1.8 to 2.4 km away. The arm runs east-northeast to west-southwest, so the longest reach of water opens up toward Lynch Cove.
 
 * **Bad.** East-northeast (ENE), onshore over 6.0 km down the arm from Lynch Cove, and builds chop straight onto the beach and the surface swim.

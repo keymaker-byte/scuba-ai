@@ -30,10 +30,6 @@ A boat dive on the south shore of Klein Bonaire, facing the open Caribbean Sea. 
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | south, 176° |
-
 * **Bad.** South through southwest (S-SW), onshore over more than 30 km of open water, raising swell at the mooring and surge over the terrace.
 * **Short fetch.** East-southeast through south-southeast (ESE-SSE), onshore over 2.7 to 3.2 km across the channel from Bonaire, enough to build a chop at the mooring. An east-southeast trade blows into this sector.
 * **Mixed.** West-southwest through west (WSW-W), cross-shore over more than 30 km, running a swell along the reef.

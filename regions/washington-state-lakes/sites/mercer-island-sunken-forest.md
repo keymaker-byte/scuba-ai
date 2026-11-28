@@ -34,11 +34,6 @@ The water at depth is still; wind moves the surface alone.
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south, 185° |
-| **Dive area shore facing** | south, 185° |
-
 The entry sits on the island's southeast shore, facing down the south end of the lake toward Renton, with the island close behind it to the north and west.
 
 * **Short fetch.** South-southeast through south-southwest (SSE-SSW), onshore over 1.1 to 3.6 km of open water. A sustained southerly runs chop straight onto the stairs and the pier ladder, which makes both the entry and the exit rough.

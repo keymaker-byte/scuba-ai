@@ -34,11 +34,6 @@ The Cargill salt works loading pier on EEG Boulevard south of Kralendijk, where 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 255° |
-| **Dive area shore facing** | west-southwest, 255° |
-
 The swim out runs 131 m west-southwest from the entry, 1° off the shore's facing, to the dive area.
 
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over more than 30 km of open sea. Wind from this quarter drives waves straight onto the rock and rubble at the entry and makes the exit hard.

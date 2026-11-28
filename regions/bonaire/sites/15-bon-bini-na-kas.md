@@ -30,10 +30,6 @@ A boat dive on Bonaire's northwest coast below a large overhanging cliff, its na
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | south-southwest, 193° |
-
 The shore here runs west-northwest to east-southeast below the cliff, with the nearest shore 51 m north-northeast of the dive area.
 
 * **Bad.** Southeast through west-southwest (SE-WSW), onshore over 5.1 km to more than 30 km, along the coast from the southeast and south-southeast or across open sea from the south through west-southwest. Wind from this quarter raises chop and swell at the mooring and against the cliff.

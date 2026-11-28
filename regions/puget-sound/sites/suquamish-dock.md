@@ -37,11 +37,6 @@ Negligible at every stage of the tide. This stretch of Port Madison sits off to 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-southeast, 120° |
-| **Dive area shore facing** | east-southeast, 115° |
-
 * **Bad.** East through east-southeast (E-ESE), onshore over 11.8 to 13.2 km down the length of Port Madison.
 * **Short fetch.** East-northeast (ENE), and southeast through south-southeast (SE-SSE), onshore over 2.7 to 4.5 km.
 * **Fine.** South clockwise through northeast (S-NE), offshore off the waterfront, cross-shore over 2.8 km or less, or onshore under 1 km.

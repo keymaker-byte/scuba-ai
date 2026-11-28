@@ -32,10 +32,6 @@ A boat dive on Bonaire's west coast north of Kralendijk, directly opposite the h
 
 ## Wind
 
-| | |
-|---|---|
-| **Dive area shore facing** | south-southwest, 206° |
-
 * **Bad.** South-southeast (SSE), onshore over 7.5 km down the coast, and southwest through west (SW-W), onshore over 30 km or more of open sea. Wind from these quarters raises chop and swell at the mooring.
 * **Short fetch.** South through south-southwest (S-SSW), onshore over 3.2 to 3.8 km from Klein Bonaire, enough to build a chop over the terrace.
 * **Mixed.** West-northwest (WNW), cross-shore over 6.6 km, running a swell along the shore past the mooring.

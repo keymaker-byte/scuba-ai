@@ -44,11 +44,6 @@ Sekiu Jetty is a shore dive in the town of Sekiu, on the western reach of the St
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | east-northeast, 65° |
-| **Dive area shore facing** | northeast, 39° |
-
 The entry faces into Clallam Bay, with the open strait beyond it.
 
 * **Bad.** North clockwise through east (N-E), onshore over 22 km to more than 30 km of open strait.

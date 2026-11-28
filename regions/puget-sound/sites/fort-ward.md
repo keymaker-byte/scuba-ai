@@ -43,11 +43,6 @@ Shore dive on the southwest shore of Bainbridge Island, on Rich Passage between 
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 245° |
-| **Dive area shore facing** | west-southwest, 248° |
-
 The beach faces west-southwest across Rich Passage toward the Kitsap Peninsula shore, with the passage itself running northwest to Sinclair Inlet and Bremerton and southeast out to the main basin past Rockaway Beach and Alki Point.
 
 * **Short fetch.** South through west-northwest (S-WNW), onshore over 1.1 to 2.3 km across the passage, builds meaningful chop here.

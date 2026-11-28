@@ -55,11 +55,6 @@ The cove sits beside the tidal stream of Haro Strait and the eastern Strait of J
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | south-southeast, 166° |
-| **Dive area shore facing** | west-southwest, 254° |
-
 The beach faces south-southeast out of the cove's mouth, while the dive area's nearest shore is the cove's east side, which faces west-southwest across the cove toward Eagle Point.
 
 * **Bad.** Southeast through southwest (SE-SW), onshore over 21.5 km to more than 30 km of open water across the Strait of Juan de Fuca, driving wind waves and swell into the mouth of the cove and onto the beach.

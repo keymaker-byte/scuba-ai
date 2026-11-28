@@ -35,11 +35,6 @@ The house reef of Divi Flamingo Beach Resort on J.A. Abraham Boulevard, just sou
 
 ## Wind
 
-| | |
-|---|---|
-| **Entry shore facing** | west-southwest, 257° |
-| **Dive area shore facing** | west-southwest, 257° |
-
 The swim out runs 68 m west from the pier end, straight out from the shore, to the dive area.
 
 * **Bad.** Southwest through west (SW-W), onshore over more than 30 km of open sea past the south end of Klein Bonaire. Wind from this quarter puts waves on the pier steps and the beach and stirs up the sand terrace.
