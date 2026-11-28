@@ -109,13 +109,13 @@ Produce every current figure by the current type the site conventions' Current s
 - **Extract.** Every site, whatever its current type: once the dive area coordinate holds, `current.md`'s `extract --site` on the site JSON, at the tool's default height above the seabed, attaches the site's constants. On `LAKE` the extract holds no tidal current, and every prediction from it is 0 m/s. A coordinate the tool refuses, on land or in water outside its coverage, stops the site: report it and wait.
 - **Tidal.** The extract's predictions give the Flood, Ebb and Diveable window bullets: slack, set, peak speeds and the windows under the threshold. `subsurface_log.md` gives the set and strength actually felt at the site.
 - **No station within reach.** Where `current.md`'s header reports no current station within reach, the prediction is the tidal database's own, and the prose states its timing as a starting point to verify on the day.
-- **Wind driven.** The extract goes with the site JSON for planning, its tidal set a data point beside the wind. The Usual set and Drivers bullets come from the research sources' descriptions of the site and the log's own dives there, taken as behaviour and cross-checked between sources; a set no source describes is written as not established.
+- **Wind driven.** The extract goes with the site JSON for planning, its tidal set a data point beside the wind. The Usual set and Drivers bullets come from the research sources' descriptions of the site and the log's own dives there, taken as behaviour and cross-checked between sources. A set no source pins to one direction is written in general terms (it runs either way along the reef, varying with the day); a bullet with nothing to say is dropped.
 
 - **Type.** As the region sets it, unless a specific site water behaves differently.
 - **In words.** The Current section describes the water from the research and the log: where it pushes, in compass points, and how it feels, in terms like ripping, steady or gentle.
 - **Local behaviour.** An eddy, a set along a wall, a turn in the shallows, described in words.
 - **Observation outranks the model.** A behaviour the existing file or the research describes from the water (a drift that ignores the tide, a set no tool shows) stays in the prose even where a tool disagrees. Report the disagreement in chat; never resolve it by dropping the observation.
-- **Missing figure.** Written as not established, and reported in chat.
+- **Missing figure.** Left out of the file, or stated conservatively from what is known, and reported in chat under Gaps.
 
 ## 7. Wind
 
@@ -173,7 +173,7 @@ Launch a fresh `general-purpose` agent with the Agent tool. Give it the site fil
 
 - **Conventions.** `CLAUDE.md`'s Writing style, Units, Time and Depth, line by line over the site file.
 - **Structure.** The site file against the template: every section in order, every required row and bullet present, each in its placeholder's format. Type reads exactly Shore or Boat, and Facilities names only what is physically at the site.
-- **Depth, current and wind.** A figure the file lacks reads as not established. Every Bad, Short fetch and Mixed sector is named clockwise with its shorthand in parentheses and its fetch range.
+- **Depth, current and wind.** The file carries no gap phrasing ("not established", "unknown", "not confirmed" or alike): a figure it lacks is left out or stated conservatively. Every Bad, Short fetch and Mixed sector is named clockwise with its shorthand in parentheses and its fetch range.
 - **Consistency.** A fact stated twice (a depth, a distance, a bearing, a current strength) reads the same everywhere in the site file.
 - **Claims to check.** A sentence that reads as one anecdote stated as fact, or a fact that looks carried over from a neighbouring site.
 
@@ -199,7 +199,7 @@ Close the run with a short summary in chat, after the merge, as bold-led bullets
 
 ## Template
 
-Placeholder text says what each row or bullet holds. "Compass and degrees" means the compass point spelled out in lowercase and the bearing ("west-southwest, 247°"). A sector is spelled out with its shorthand in parentheses ("south through west (S-W)"). Depths are below the region's datum where it has one, otherwise observed.
+Placeholder text says what each row or bullet holds. A required row with no figure takes the conservative figure the bathymetry or research supports; an optional row or bullet with nothing to say is dropped. "Compass and degrees" means the compass point spelled out in lowercase and the bearing ("west-southwest, 247°"). A sector is spelled out with its shorthand in parentheses ("south through west (S-W)"). Depths are below the region's datum where it has one, otherwise observed.
 
 ```markdown
 # Site Name
