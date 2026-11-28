@@ -3077,6 +3077,25 @@ window.MAP_DATA = {
         "lat": 48.557338,
         "lon": -122.891666
       }
+    },
+    {
+      "slug": "mercer-island-sunken-forest",
+      "name": "Mercer Island Sunken Forest",
+      "region": "washington-state-lakes",
+      "type": "shore",
+      "file": "regions/washington-state-lakes/sites/mercer-island-sunken-forest.md",
+      "site": {
+        "lat": 47.533165,
+        "lon": -122.213904
+      },
+      "entry": {
+        "lat": 47.533371,
+        "lon": -122.214543
+      },
+      "parking": {
+        "lat": 47.533386,
+        "lon": -122.216313
+      }
     }
   ]
 };
