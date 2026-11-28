@@ -17,6 +17,12 @@ Dive sites fall into four areas, each with its own character:
 
 This folder covers Bonaire and Klein Bonaire only.
 
+### Marine park rules
+
+Every diver in the water needs a current STINAPA Nature Fee e-tag (Bonaire National Marine Park and Washington Slagbaai National Park), paid online and carried on the day, not bought as a physical tag at a dive shop. A mandatory orientation dive is required on arrival, usually arranged through the first dive shop used. Marine park rules ban gloves and knee pads (a medical exception can be requested from STINAPA at info@stinapa.org), ban touching, moving, collecting or feeding marine life, ban disposable chemical light sticks and pointer sticks, and ban anchoring anywhere in the park, requiring boats to use one of the roughly 100 public moorings STINAPA maintains instead; a shore entry is made at one of the numbered, yellow-painted rocks marking each site. A surface marker buoy is recommended, especially in shallow water. Sunscreen must be reef safe, free of oxybenzone and octinoxate.
+
+Diving is banned outright, independent of the SCTLD closures, in two marine reserves: the King Willem-Alexander Reserve, the stretch of coast from the Karpata landhouse west to the levee at the entrance to Gotomeer, beginning just north of the Karpata dive site, and the Queen Máxima Reserve, the Boka and Saliña Slagbaai lagoon inland of the Wayaka and Boka Slagbaai dive sites, which does not overlap any numbered dive site.
+
 ## Conditions
 
 - **Water temperature.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. No thermocline worth planning around at recreational depths.

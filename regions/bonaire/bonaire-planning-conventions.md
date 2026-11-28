@@ -9,16 +9,10 @@ Ordered by what actually decides whether a Bonaire dive goes well:
    - **Trade winds.** The east to southeast trades blow offshore along the west coast and the lee sides of Klein Bonaire, and leave those entries flat at their usual strength. Strong trades drive a stronger current at the exposed north and south sites.
    - **Tidal set.** The tidal stream here runs a few centimetres a second under the wind-driven current.
    - **Swell.** Northern swell in winter, and swell from passing tropical systems in the hurricane season (June to November), can put surf on the west coast under a light breeze. Swell is judged at the entry rocks before kitting up.
-2. **Marine park compliance** (secondary). No gloves, no touching, buoyancy clear of the reef, entry at a marked rock or a maintained mooring, current e-tag in hand. This is a legal requirement here, not just good practice, and citations are enforced. The park rules are set out below.
-3. **Gas and NDL discipline** (secondary). Warm water and an easy, comfortable reef slope make it easy to run long; plan a turn on gas or NDL reserve the same as anywhere else and don't let comfort extend the profile past it.
-4. **Viz** (informational). Reliably good on the west coast; won't stop a dive, but check a recent report before a north or south site where wind can stir the shallows.
-
-Every diver in the water needs a current STINAPA Nature Fee e-tag (Bonaire National Marine Park and Washington Slagbaai National Park), paid online and carried on the day, not bought as a physical tag at a dive shop. A mandatory orientation dive is required on arrival, usually arranged through the first dive shop used. Marine park rules ban gloves and knee pads (a medical exception can be requested from STINAPA at info@stinapa.org), ban touching, moving, collecting or feeding marine life, ban disposable chemical light sticks and pointer sticks, and ban anchoring anywhere in the park, requiring boats to use one of the roughly 100 public moorings STINAPA maintains instead; a shore entry is made at one of the numbered, yellow-painted rocks marking each site. A surface marker buoy is recommended, especially in shallow water. Sunscreen must be reef safe, free of oxybenzone and octinoxate.
-
-Diving is banned outright, independent of the SCTLD closures listed under Sites currently covered in [bonaire.md](bonaire.md), in two marine reserves: the King Willem-Alexander Reserve, the stretch of coast from the Karpata landhouse west to the levee at the entrance to Gotomeer, beginning just north of the Karpata dive site, and the Queen Máxima Reserve, the Boka and Saliña Slagbaai lagoon inland of the Wayaka and Boka Slagbaai dive sites, which does not overlap any numbered dive site.
-
-Disinfect all gear before the first dive of a trip, between every dive, and again after the last one, a standing STINAPA measure against spreading Stony Coral Tissue Loss Disease (SCTLD) between reefs, then let it dry completely before packing it away:
-
-- **Non-sensitive gear.** Soak 5 minutes in a 10% bleach solution, then rinse in fresh water.
-- **Sensitive gear.** Soak 5 minutes in a 7% Lysol solution, then rinse in fresh water.
-- **Extra sensitive gear.** Rinse in soap, then fresh water.
+2. **Marine park compliance** (secondary). No gloves, no touching, buoyancy clear of the reef, entry at a marked rock or a maintained mooring, current e-tag in hand. This is a legal requirement here, not just good practice, and citations are enforced. The park rules are set out under Marine park rules in [bonaire.md](bonaire.md#marine-park-rules).
+3. **Gear disinfection** (secondary). Disinfect all gear before the first dive of a trip, between every dive, and again after the last one, a standing STINAPA measure against spreading Stony Coral Tissue Loss Disease (SCTLD) between reefs, then let it dry completely before packing it away.
+   - **Non-sensitive gear.** Soak 5 minutes in a 10% bleach solution, then rinse in fresh water.
+   - **Sensitive gear.** Soak 5 minutes in a 7% Lysol solution, then rinse in fresh water.
+   - **Extra sensitive gear.** Rinse in soap, then fresh water.
+4. **Gas and NDL discipline** (secondary). Warm water and an easy, comfortable reef slope make it easy to run long; plan a turn on gas or NDL reserve the same as anywhere else and don't let comfort extend the profile past it.
+5. **Viz** (informational). Reliably good on the west coast; won't stop a dive, but check a recent report before a north or south site where wind can stir the shallows.
