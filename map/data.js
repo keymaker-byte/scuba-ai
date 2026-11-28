@@ -2927,6 +2927,25 @@ window.MAP_DATA = {
       }
     },
     {
+      "slug": "madison-park-corsair",
+      "name": "Madison Park Corsair",
+      "region": "washington-state-lakes",
+      "type": "shore",
+      "file": "regions/washington-state-lakes/sites/madison-park-corsair.md",
+      "site": {
+        "lat": 47.634781,
+        "lon": -122.274523
+      },
+      "entry": {
+        "lat": 47.635375,
+        "lon": -122.276518
+      },
+      "parking": {
+        "lat": 47.635382,
+        "lon": -122.277124
+      }
+    },
+    {
       "slug": "titlow-beach",
       "name": "Titlow Beach",
       "region": "puget-sound",
