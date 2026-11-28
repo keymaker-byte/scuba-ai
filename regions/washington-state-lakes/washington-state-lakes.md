@@ -20,10 +20,6 @@ Freshwater lakes in Washington State deep and clear enough to be worth diving.
 | [Sledgehammer Point](sites/sledgehammer-point.md) | A sheer wall off US 101 at the east end of Lake Crescent, entered from the welcome sign pullout, with ledges to one side and a cliff to the other dropping past 90 m through some of the clearest fresh water in the region, home to sculpin, crayfish and the lake's endemic trout. |
 | [Madison Park Corsair](sites/madison-park-corsair.md) | Off the swimming beach at Madison Park in Seattle, on the west shore of Lake Washington, where the broken wreck of a US Navy Corsair fighter lost in a 1950 midair collision lies scattered down a silty slope at 21 to 27 m, among sculpin and signal crayfish. |
 
-## Dive shops and air fills
-
-Air fills for Lake Crescent are in Port Angeles, Joyce and Sekiu.
-
 ## Emergency
 
 - **Local emergency.** 911. Call EMS first, then DAN once the diver is stabilized and transport is underway.
