@@ -31,14 +31,9 @@ The southernmost of Bonaire's double reef sites, a shore dive on the coast road 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | south, 180° |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** South, 180°. Usually mild, at times moderate. Check its direction before entering and start the dive into it, heading north when it sets south as usual.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually mild, at times moderate. Check its direction before entering and start the dive into it, heading north when it sets south as usual.
 * **Eddies.** When the current builds, it turns into eddies and downwellings around the second reef's islands and sand chutes.
 
 ## Wind

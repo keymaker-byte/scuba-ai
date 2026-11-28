@@ -29,14 +29,9 @@ A shore dive on Bonaire's west coast about 5 km north-northwest of Kralendijk, a
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | south-southeast, 167°, along the shore |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trade winds. The current runs stronger when the trades strengthen and sits near still on calm days. What reverses it is not established.
-* **Character.** Usually light, and strong at times. It runs along the shore, most often toward the south-southeast, and can carry a diver well along the coast from the entry.
+* **Type.** Wind driven.
+* **Usual set.** South-southeast, 167°, along the shore. Usually light, and strong at times, enough to carry a diver well along the coast from the entry.
+* **Drivers.** The east to southeast trade winds. The current runs stronger when the trades strengthen and sits near still on calm days.
 * **On the day.** The mooring buoy and the surface show any set right after entry. Start the dive into the current so the return to the yellow rock runs with it, and surface within sight of the beach.
 
 ## Wind

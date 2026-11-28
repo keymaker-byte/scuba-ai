@@ -24,14 +24,9 @@ A boat dive off the southeast point of Klein Bonaire, also called Piedra Kolet, 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually slight, and it can change direction during a dive. It builds when a strong easterly blows.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually slight, and it can change direction during a dive. It builds when a strong easterly blows.
 
 ## Wind
 

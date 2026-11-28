@@ -28,14 +28,9 @@ A remote site in Washington Slagbaai National Park, on the park's northwest coas
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually limited, picking up in strong wind, and strongest along the drop-off.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
-* **Character.** Usually limited, picking up in strong wind, and strongest along the drop-off.
 * **Exits.** The shore either side of the bay is rock; a diver carried past the beach faces a swim back to it or a climb out over rock.
 
 ## Wind

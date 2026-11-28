@@ -31,14 +31,9 @@ The house reef of Sand Dollar and Den Laman on Bonaire's west coast north of Kra
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established; it runs north on some days and south on others |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift. What sets its direction on a given day is not established.
-* **Character.** Usually slight or absent. At times a current runs along the reef, north or south, and it can run strong enough to stop a diver swimming against it. Check its direction before entering, start the dive into it, and let it carry you back toward the ramp.
+* **Type.** Wind driven.
+* **Usual set.** Usually slight or absent. At times a current runs along the reef, north or south, and it can run strong enough to stop a diver swimming against it. Check its direction before entering, start the dive into it, and let it carry you back toward the ramp.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

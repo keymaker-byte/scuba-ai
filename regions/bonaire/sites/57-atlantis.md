@@ -29,12 +29,8 @@ Atlantis is a shore site on EEG Boulevard, about 12 km south of Kralendijk on Bo
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | north-northwest, 335°, along the shore |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** North-northwest, 335°, along the shore.
 * **Drivers.** The east to southeast trade winds. The site sits toward the south end of the leeward coast and runs more current than most of it, though it is usually moderate, and the set can reverse to run south along the shore.
 * **Depth.** The current often runs in a different direction on the deeper slope than on the terrace, and stronger there at times. Check it at the reef edge before descending the slope.
 * **The return.** With the usual set, a dive that starts south against the current comes back with it, and the return along the edge can turn into a drift.

@@ -25,12 +25,7 @@ A popular stretch of reef on Bonaire's northwest coast north of Kralendijk, name
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind

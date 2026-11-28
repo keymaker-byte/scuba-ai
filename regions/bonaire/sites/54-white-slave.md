@@ -28,12 +28,7 @@ White Slave is a shore site on EEG Boulevard on Bonaire's southwest coast, oppos
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
 * **Drivers.** The east to southeast trade winds. The site sits on a bend in the coast, where the current changes direction from day to day and runs strong at times.
 * **Change during the dive.** The current can build or turn while divers are down.
 * **A southerly set.** A current running south sets away from the entry toward the island's southern tip; choose another site when it sets south at the entry.

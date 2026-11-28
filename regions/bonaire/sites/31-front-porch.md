@@ -31,14 +31,9 @@ A stretch of fringing reef on Bonaire's west coast north of Kralendijk, entered 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established; it runs north on some days and south on others |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift. What sets its direction on a given day is not established.
-* **Character.** Usually mild, and at times strong, more so in the deeper water. Check its direction before entering, start the dive into it, and let it carry you back toward the pipe.
+* **Type.** Wind driven.
+* **Usual set.** Usually mild, and at times strong, more so in the deeper water. Check its direction before entering, start the dive into it, and let it carry you back toward the pipe.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

@@ -29,14 +29,9 @@ Buddy Dive Resort's house reef on Bonaire's west coast north of Kralendijk, ente
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift. What sets its direction is not established.
-* **Character.** Usually slight or absent. At times a light to moderate current runs along the reef, north or south, and is stronger along the drop-off than on the terrace. Start the dive into whatever current is running and let it carry you back toward the pier.
+* **Type.** Wind driven.
+* **Usual set.** Usually slight or absent. At times a light to moderate current runs along the reef, north or south, and is stronger along the drop-off than on the terrace. Start the dive into whatever current is running and let it carry you back toward the pier.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

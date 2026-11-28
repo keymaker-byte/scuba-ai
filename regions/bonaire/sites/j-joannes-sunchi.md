@@ -25,14 +25,9 @@ A boat dive on the south-southwest shore of Klein Bonaire whose name means Joann
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually light, and at times moderate.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually light, and at times moderate.
 
 ## Wind
 

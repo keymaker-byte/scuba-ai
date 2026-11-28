@@ -27,14 +27,9 @@ Bonaire's northernmost dive site, a remote rocky bay inside Washington Slagbaai 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | southwest, 230°, along the shore toward the south side of the bay |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Southwest, 230°, along the shore toward the south side of the bay. Changeable, from still to very strong, and stronger the further the dive pushes off the terrace into open water. A rising current can carry divers past the planned exit; turn with enough gas to swim back against it.
 * **Drivers.** The east to southeast trade winds, which run strongest from late morning into the afternoon. The current can sit still for days, then run hard when the trades pick up or shift.
-* **Character.** Changeable, from still to very strong, and stronger the further the dive pushes off the terrace into open water. A rising current can carry divers past the planned exit; turn with enough gas to swim back against it.
 * **Rip currents.** Water running back out to sea funnels through the channels between coral formations in the shallows, faster than it looks from the surface.
 
 ## Wind

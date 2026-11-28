@@ -24,14 +24,9 @@ A boat dive on the south shore of Klein Bonaire toward the islet's west end, set
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually limited to moderate. When it runs, it runs along the shore, at times west toward the islet's southwest point.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually limited to moderate. When it runs, it runs along the shore, at times west toward the islet's southwest point.
 
 ## Wind
 

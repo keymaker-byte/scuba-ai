@@ -30,14 +30,8 @@ A popular shore site on Bonaire's northwest coast at the end of the coastal road
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | west-northwest, 295° |
-| **Typical speed** | Not established |
-
-* **Character.** Usually light, often slack, and at times moderate to strong. The usual set runs west-northwest along the coast, the direction of the shore drift that ends at this platform. On some days it reverses and runs east-southeast, 115°.
-* **Drivers.** Not established.
+* **Type.** Wind driven.
+* **Usual set.** West-northwest, 295°. Along the coast, the direction of the shore drift that ends at this platform. Usually light, often slack, and at times moderate to strong. On some days it reverses and runs east-southeast, 115°.
 * **Shelter.** Where the current runs, it is strongest along the outer reef and on the ridge crests, and weaker on the shallow terrace and in the valleys between the ridges.
 * **Plan.** Check the set at the start of the dive and swim the first half into it, so the return to the platform runs with the current. When the set runs east-southeast, the open reef lies down-current and the reserve lies up-current; keep the dive short and close to the terrace, or choose another day.
 

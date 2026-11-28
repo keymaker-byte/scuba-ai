@@ -28,14 +28,9 @@ Vista Blue is a shore site on EEG Boulevard, about 13 km south of Kralendijk on 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** The current can change direction or build suddenly during a dive. It runs strongest along the reef slope and weakest on the terrace. Check its direction before entering, start the dive into it, and drift back to the entry. On a day it runs too strong to swim against, drift north with it, exit at the next beach and walk back along the road.
 * **Drivers.** The east to southeast trade winds. The current runs along the reef in either direction, from still water on some days to a strong drift on others, and runs hard when the trades pick up or shift. It often runs strongest in the afternoon.
-* **Character.** The current can change direction or build suddenly during a dive. It runs strongest along the reef slope and weakest on the terrace. Check its direction before entering, start the dive into it, and drift back to the entry. On a day it runs too strong to swim against, drift north with it, exit at the next beach and walk back along the road.
 
 ## Wind
 

@@ -26,12 +26,8 @@ A broad, shallow reef plateau of sea fans and soft coral on Bonaire's east coast
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | north, 0° |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** North, 0°.
 * **Drivers.** The trade winds, blowing from the east-northeast through east-southeast. The drift strengthens when the trades pick up or shift.
 * **Drift.** The site is dived as a guided drift with the boat following, usually northward along the reef. On most days the current over the plateau runs mild to minimal, and it can change in strength and direction during a dive.
 * **Surge.** Waves breaking over the shallow plateau put a strong surge on it, strongest in the shallows among the sea fans.

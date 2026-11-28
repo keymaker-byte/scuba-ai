@@ -30,13 +30,8 @@ A shore dive on Bonaire's northwest coast road south of the Radio Nederland towe
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drift.** Usually slack or a light drift along the shore, building at times to a moderate current along the slope.
+* **Type.** Wind driven.
+* **Usual set.** Usually slack or a light drift along the shore, building at times to a moderate current along the slope.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades pick up or shift.
 
 ## Wind

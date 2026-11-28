@@ -26,14 +26,9 @@ A boat dive on Bonaire's west coast north of Kralendijk, directly opposite the h
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift. What reverses it is not established.
-* **Character.** Usually light, and strong at times.
+* **Type.** Wind driven.
+* **Usual set.** Usually light, and strong at times.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

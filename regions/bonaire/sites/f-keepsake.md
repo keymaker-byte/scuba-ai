@@ -25,12 +25,7 @@ A boat dive on Klein Bonaire's south side, toward its east end, where a sand and
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades pick up or shift.
 
 ## Wind

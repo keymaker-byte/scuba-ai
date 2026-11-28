@@ -29,14 +29,9 @@ The Lake is a shore site on the southern coast road about 5 km south of Kralendi
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually light or slack on the terrace, and stronger along the reefs past the inner reef, where it runs along the shore in either direction. At times it runs strong enough to turn a dive back. Check its direction before entering and start the dive into it.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually light or slack on the terrace, and stronger along the reefs past the inner reef, where it runs along the shore in either direction. At times it runs strong enough to turn a dive back. Check its direction before entering and start the dive into it.
 
 ## Wind
 

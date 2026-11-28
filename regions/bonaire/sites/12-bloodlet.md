@@ -24,14 +24,9 @@ A boat dive on Bonaire's northwest coast below the low rock shore of the coastal
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trades. The current can sit still for days, then run harder when the trades strengthen or shift. What reverses it is not established.
-* **Character.** Runs along the coast, usually light and at times strong.
+* **Type.** Wind driven.
+* **Usual set.** Runs along the coast, usually light and at times strong.
+* **Drivers.** The east to southeast trades. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

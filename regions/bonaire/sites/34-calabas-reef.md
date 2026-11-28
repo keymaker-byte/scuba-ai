@@ -29,14 +29,9 @@ The house reef of Divi Flamingo Beach Resort on J.A. Abraham Boulevard, just sou
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift. What sets its direction on a given day is not established.
-* **Character.** Usually slight or absent. In very strong trades a slight current can run along the reef, mostly along the deeper slope. Check its direction before entering and start the dive into it.
+* **Type.** Wind driven.
+* **Usual set.** Usually slight or absent. In very strong trades a slight current can run along the reef, mostly along the deeper slope. Check its direction before entering and start the dive into it.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
 
 ## Wind
 

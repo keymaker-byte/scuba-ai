@@ -29,14 +29,9 @@ Salt City is a double reef shore site on EEG Boulevard, about 250 m south of Sal
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually light to moderate along the reef, and strong at times. Check its direction before entering, and start the dive into it.
 * **Drivers.** The east to southeast trade winds. The current runs along the reef and can stay slack for long spells, then run when the trades strengthen or shift.
-* **Character.** Usually light to moderate along the reef, and strong at times. Check its direction before entering, and start the dive into it.
 
 ## Wind
 

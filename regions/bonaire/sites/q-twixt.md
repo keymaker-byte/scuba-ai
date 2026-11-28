@@ -7,7 +7,7 @@ A boat dive on the west side of Klein Bonaire, facing open sea away from Bonaire
 | **Location** | West side of Klein Bonaire, facing west-northwest across the open Caribbean Sea, Bonaire National Marine Park |
 | **Coordinates** | 12.153658, -68.330133 (8.8 m, on the terrace about 160 m off the shore) |
 | **Type** | Boat |
-| **Depth range** | Not established; the terrace sits at about 8 to 10 m |
+| **Depth range** | 8 to 10 m on the terrace |
 
 ## Getting there
 
@@ -23,12 +23,7 @@ A boat dive on the west side of Klein Bonaire, facing open sea away from Bonaire
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
 
 ## Wind
@@ -48,10 +43,6 @@ A boat dive on the west side of Klein Bonaire, facing open sea away from Bonaire
 ## Temperature
 
 * **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water holds one temperature from the surface to recreational depth. A wetsuit or dive skin is standard.
-
-## Marine life
-
-* **Overall.** Not established.
 
 ## Hazards
 

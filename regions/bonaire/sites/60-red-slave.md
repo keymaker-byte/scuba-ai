@@ -30,14 +30,9 @@ Red Slave is a shore site on EEG Boulevard at the southern tip of Bonaire, the s
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | southeast, 145°, along the shore toward the southern point |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Southeast, 145°, along the shore toward the southern point. The current changes direction and strength within minutes, and runs in layers: the surface and the water at depth can differ in both strength and direction. It is often strongest along the reef slope and through the sand chutes, and a calm surface says little about the water below.
 * **Drivers.** The east to southeast trade winds. A strong trade drives the set southeast past the point. On many days the water is still or slight, and on some the set runs northwest along the shore.
-* **Character.** The current changes direction and strength within minutes, and runs in layers: the surface and the water at depth can differ in both strength and direction. It is often strongest along the reef slope and through the sand chutes, and a calm surface says little about the water below.
 * **Past the point.** A southeast set carries a diver along the reef, past the southern point and away from the shore toward open sea, where the coast turns onto a rough windward shore with no easy exit.
 * **Planning.** Check the set before descending. On a southeast set, start northwest into it and turn back early so the return runs with it. On a northwest set, keep the dive north of the entry and drift with the set only as far as the gas for the swim back allows. Exits lie along the shore to the north.
 

@@ -30,14 +30,9 @@ Jeannie's Glory is a shore site on EEG Boulevard, about 400 m north of Salt Pier
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Light to moderate along the reef, at times strong enough to make the swim back hard. It can run differently on the terrace and on the slope below. Check its direction at depth before entering the reef, and start the dive into it.
 * **Drivers.** The east to southeast trade winds. The current runs north or south along the reef and can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Light to moderate along the reef, at times strong enough to make the swim back hard. It can run differently on the terrace and on the slope below. Check its direction at depth before entering the reef, and start the dive into it.
 
 ## Wind
 

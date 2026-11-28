@@ -24,14 +24,9 @@ A boat dive on the northwest tip of Klein Bonaire, also known as Punt P'abou, na
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually slight along the wall, and strong on some days, enough to sweep a diver who lingers at the surface away from the mooring.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually slight along the wall, and strong on some days, enough to sweep a diver who lingers at the surface away from the mooring.
 
 ## Wind
 

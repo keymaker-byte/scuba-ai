@@ -24,14 +24,9 @@ A boat dive on the west side of Klein Bonaire, also listed as Johanna's Revenge;
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually mild in the lee of the islet, enough for a gentle drift along the reef, and can run moderate on a day of strong or shifting trades.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually mild in the lee of the islet, enough for a gentle drift along the reef, and can run moderate on a day of strong or shifting trades.
 
 ## Wind
 

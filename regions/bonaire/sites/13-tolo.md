@@ -28,12 +28,7 @@ A shore site on Bonaire's northwest coast off a long stretch of coral beach, bel
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
 * **Drivers.** The east to southeast trade winds. The current is usually mild or still on the reef, and can run harder when the trades pick up or shift.
 * **The point.** West of the entry, past the rocky point, the current often reverses and speeds up, running with the outbound swim. A dive that suddenly feels easy on the way out has passed it, and the swim back runs against it.
 * **Surface.** The surface can run rough with a stronger set than the reef below; start the dive into the current and keep enough gas to swim back to the entry.

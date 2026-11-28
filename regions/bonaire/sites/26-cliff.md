@@ -30,14 +30,9 @@ A short vertical wall on Bonaire's west coast north of Kralendijk, the house ree
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift. What reverses it is not established.
-* **Character.** Usually limited along the wall, and occasionally strong enough to make the return swim hard work.
+* **Type.** Wind driven.
+* **Usual set.** Usually limited along the wall, and occasionally strong enough to make the return swim hard work.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

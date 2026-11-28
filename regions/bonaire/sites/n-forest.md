@@ -25,14 +25,9 @@ A boat dive off a small rocky peninsula on the south side of Klein Bonaire, towa
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually mild to moderate along the slope.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually mild to moderate along the slope.
 
 ## Wind
 

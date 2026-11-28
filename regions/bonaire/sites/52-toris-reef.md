@@ -29,12 +29,8 @@ A shore dive on EEG Boulevard below the Cargill salt works, entered through the 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | south, 190° |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** South, 190°.
 * **Drivers.** The east to southeast trade winds. The current is usually light or absent along the reef, and runs along the shore when the trades strengthen or shift.
 * **The channel.** When the salt works open the gate, water flows through the channel and across the shallows, from limited to strong, and at irregular times. Check the flow in the channel before entering.
 

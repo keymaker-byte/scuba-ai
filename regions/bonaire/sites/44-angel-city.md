@@ -30,14 +30,9 @@ A double reef shore site on EEG Boulevard about 5 km south of Kralendijk, opposi
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually mild, at times moderate along the outer reef. Check its direction before entering and start the dive into it.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually mild, at times moderate along the outer reef. Check its direction before entering and start the dive into it.
 
 ## Wind
 

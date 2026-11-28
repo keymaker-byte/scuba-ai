@@ -24,14 +24,9 @@ A boat dive on the south shore of Klein Bonaire, facing the open Caribbean Sea. 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually mild, and at times strong. Strong surface winds put a current on the surface.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually mild, and at times strong. Strong surface winds put a current on the surface.
 
 ## Wind
 

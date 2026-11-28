@@ -28,14 +28,8 @@ A small, remote sandy cove on Bonaire's northwest coast, also called Doblet, rea
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Character.** Weak to barely noticeable on most days, and stronger on some. Check the current at the start of the dive and plan to return to the entry.
-* **Drivers.** Not established for this site.
+* **Type.** Wind driven.
+* **Usual set.** Weak to barely noticeable on most days, and stronger on some. Check the current at the start of the dive and plan to return to the entry.
 
 ## Wind
 

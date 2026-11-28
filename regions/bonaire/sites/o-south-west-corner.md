@@ -24,14 +24,9 @@ A boat dive off Klein Bonaire's southwest tip, where the islet's south and west 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Ranges from mild to strong. Currents meet around the point and run strongest there; the shallows close to the shore sit out of the strongest of it.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Ranges from mild to strong. Currents meet around the point and run strongest there; the shallows close to the shore sit out of the strongest of it.
 * **Drift.** A common plan starts on the reef to the east and drifts west along the south shore onto the corner.
 
 ## Wind

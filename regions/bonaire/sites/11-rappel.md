@@ -25,14 +25,9 @@ One of Bonaire's most popular boat dives, below a sheer cliff on the northwest c
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east trades. The current can sit still for days, then run harder when the trades strengthen or shift. What reverses it is not established.
-* **Character.** Usually light to still, and strong at times.
+* **Type.** Wind driven.
+* **Usual set.** Usually light to still, and strong at times.
+* **Drivers.** The east trades. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

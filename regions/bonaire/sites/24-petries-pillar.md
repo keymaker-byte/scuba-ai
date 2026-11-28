@@ -25,14 +25,9 @@ A boat dive on Bonaire's west coast north of Kralendijk, named by Captain Don St
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift. What reverses it is not established.
-* **Character.** Usually light, and moderate at times.
+* **Type.** Wind driven.
+* **Usual set.** Usually light, and moderate at times.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

@@ -30,14 +30,9 @@ Cai is a shore dive on Bonaire's east coast at Lac Cai, where the deep channel t
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | south, 170°, seaward out of the channel |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** South, 170°, seaward out of the channel. The outflow is often strong in the channel and changes direction and strength within a single dive, and a side set can push a diver across the channel on the way out. Along the wall the water is at times nearly still.
 * **Drivers.** The trade wind waves that break over the barrier reef push water into Lac Bay, and the bay drains back to sea through this channel, so a strong trade and a high swell drive a strong outflow. A falling tide adds to it. On calm days the channel can run slack.
-* **Character.** The outflow is often strong in the channel and changes direction and strength within a single dive, and a side set can push a diver across the channel on the way out. Along the wall the water is at times nearly still.
 * **Planning.** The outflow carries a diver out along the channel and opposes the swim back, so turn early, with a generous reserve.
 
 ## Wind

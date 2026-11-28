@@ -27,14 +27,9 @@ The southern of two routes at Boka Slagbaai and the southernmost dive site insid
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually light inside the bay and at times strong, and it can strengthen during a dive and run against the swim back to the beach. Turn with enough gas to swim back against it.
 * **Drivers.** The trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
-* **Character.** Usually light inside the bay and at times strong, and it can strengthen during a dive and run against the swim back to the beach. Turn with enough gas to swim back against it.
 
 ## Wind
 

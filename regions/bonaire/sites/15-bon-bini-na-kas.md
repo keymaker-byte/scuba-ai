@@ -24,14 +24,9 @@ A boat dive on Bonaire's northwest coast below a large overhanging cliff, its na
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trades. The current can sit still for days, then run harder when the trades strengthen or shift. What reverses it is not established.
-* **Character.** Usually slight over the gently sloping bottom.
+* **Type.** Wind driven.
+* **Usual set.** Usually slight over the gently sloping bottom.
+* **Drivers.** The east to southeast trades. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

@@ -26,14 +26,9 @@ A sand-floored hole in the shallow reef plateau off Bonaire's east coast, just s
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** The site is dived as a guided drift with the boat following, and the current ranges from nearly still water in the hole to a drift across the plateau. It can change in strength and direction during a dive.
 * **Drivers.** The trade winds, blowing from the east-northeast through east-southeast. The current can sit still for days, then run as a steady drift when the trades pick up or shift.
-* **Drift.** The site is dived as a guided drift with the boat following, and the current ranges from nearly still water in the hole to a drift across the plateau. It can change in strength and direction during a dive.
 * **Surge.** Waves breaking over the shallow plateau put surge on the plateau around the hole, strongest on the crossing between the hole and the sea fans.
 
 ## Wind

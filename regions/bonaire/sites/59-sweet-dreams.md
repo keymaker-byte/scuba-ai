@@ -28,14 +28,9 @@ Sweet Dreams is a shore site on EEG Boulevard on Bonaire's south coast, off a sm
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Weakest on the terrace and strongest along the reef slope. Check its direction before entering, start the dive into it, and drift back to the entry.
 * **Drivers.** The east to southeast trade winds. The current runs along the shore, northwest or southeast, and is still or slight on most days and strong on others.
-* **Character.** Weakest on the terrace and strongest along the reef slope. Check its direction before entering, start the dive into it, and drift back to the entry.
 * **Drift.** On a day with a northwest set, the reef slope makes a drift dive northwest along the coast, exiting at the next entry up the shore. Plan the exit before descending and carry a surface marker buoy.
 
 ## Wind

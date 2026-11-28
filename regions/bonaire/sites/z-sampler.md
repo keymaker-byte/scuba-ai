@@ -24,14 +24,9 @@ A boat dive on the north coast of Klein Bonaire, the islet's northernmost site a
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually slight, and the site is commonly dived with little or no current. When the trades strengthen, the water they push onto the islet can set harder along the north side.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually slight, and the site is commonly dived with little or no current. When the trades strengthen, the water they push onto the islet can set harder along the north side.
 
 ## Wind
 

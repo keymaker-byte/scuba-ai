@@ -29,14 +29,9 @@ Alice in Wonderland is a shore site on EEG Boulevard south of Kralendijk, entere
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | south-southeast, 157°, along the shore |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** South-southeast, 157°, along the shore. Usually slight or absent, at most a light drift along the reef. Check its direction before entering and start the dive into it.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually slight or absent, at most a light drift along the reef. Check its direction before entering and start the dive into it.
 
 ## Wind
 

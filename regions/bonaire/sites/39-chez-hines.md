@@ -26,14 +26,9 @@ A boat dive off the villas of South Belnem, the name the site also goes by, abou
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually slight on the plateau and stronger on the deeper reef, at times strong. The boat briefing sets the start of the dive by the direction it runs on the day; start into it.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually slight on the plateau and stronger on the deeper reef, at times strong. The boat briefing sets the start of the dive by the direction it runs on the day; start into it.
 
 ## Wind
 

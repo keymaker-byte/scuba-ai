@@ -28,14 +28,9 @@ A small cove in Washington Slagbaai National Park, the old landing of the Washin
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | south-southeast, 163°, along the shore |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** South-southeast, 163°, along the shore. The cove stays sheltered, while current and swell build quickly on the open reef beyond it. The current runs from slight to strong and can change strength within a single dive, enough to carry a diver past the cove.
 * **Drivers.** The east to southeast trade winds, which run strongest from late morning into the afternoon. The current can sit still for days, then run hard when the trades pick up or shift; early morning usually brings the calmest water.
-* **Character.** The cove stays sheltered, while current and swell build quickly on the open reef beyond it. The current runs from slight to strong and can change strength within a single dive, enough to carry a diver past the cove.
 * **Exits.** The shore either side of the cove is rock and cliff, hard to climb out on; a diver carried past the beach faces a long swim back or a climb.
 
 ## Wind

@@ -29,14 +29,9 @@ A small sand beach in Belnem, on EEG Boulevard about 3 km south of Kralendijk on
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually slight or absent at the site, at times a light current along the reef. Check its direction before entering and start the dive into it.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually slight or absent at the site, at times a light current along the reef. Check its direction before entering and start the dive into it.
 
 ## Wind
 

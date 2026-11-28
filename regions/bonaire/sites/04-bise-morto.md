@@ -28,14 +28,9 @@ A remote site in Washington Slagbaai National Park, on the park's northwest coas
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** The current runs from slight to strong along this stretch of the park's coast.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades pick up or shift; early morning usually brings the calmest water.
-* **Character.** The current runs from slight to strong along this stretch of the park's coast.
 * **Exits.** The shore either side of the beach is rock and cliff; a diver carried past the beach faces a long swim back.
 
 ## Wind

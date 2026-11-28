@@ -27,14 +27,9 @@ A small rubble beach between low limestone cliffs on the northwest coast of Wash
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Moderate to strong, and changeable: it commonly reverses direction during a single dive, so a dive started into the current can end with the current against the swim home. Turn with enough gas to swim back against it.
 * **Drivers.** The east to southeast trade winds, with north winds driving a markedly stronger current. The current can sit still for days, then run hard when the trades pick up or shift.
-* **Character.** Moderate to strong, and changeable: it commonly reverses direction during a single dive, so a dive started into the current can end with the current against the swim home. Turn with enough gas to swim back against it.
 * **Rip currents.** Water running back out to sea pulls seaward through the shallows, strongest with surf on the beach. Swim across a rip, parallel to the shore, to get out of it.
 
 ## Wind

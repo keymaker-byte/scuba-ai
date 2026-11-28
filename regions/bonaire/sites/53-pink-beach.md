@@ -27,14 +27,9 @@ Pink Beach is a shore site on EEG Boulevard, about 1.9 km south of Salt Pier on 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Weakest in the shallows of the terrace and strongest along the reef slope and the drop-off. Check its direction before entering, start the dive into it, and drift back to the entry.
 * **Drivers.** The east to southeast trade winds. The current runs north or south along the shore, ranging from still to strong from one day to the next, and strengthens when the trades strengthen or shift.
-* **Character.** Weakest in the shallows of the terrace and strongest along the reef slope and the drop-off. Check its direction before entering, start the dive into it, and drift back to the entry.
 * **To the south.** Toward the point about 1.2 km south the current turns swirling and stronger, and the shore there offers a poor exit. Keep the dive north of it and the return toward the beach.
 
 ## Wind

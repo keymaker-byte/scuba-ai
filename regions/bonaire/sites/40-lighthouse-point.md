@@ -31,15 +31,10 @@ Lighthouse Point is the reef off Punt Vierkant, the bulge in the coast south of 
 
 The point concentrates the current running along this stretch of coast, and it sets along the slope and the terrace edge.
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | north, 0° |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** North, 0°. The current can strengthen suddenly close to shore and switch direction during a dive. A dive planned against it on the way out can return into it once it turns.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run hard when the trades strengthen or shift.
 * **Reversal.** On some days it sets south, 180°, running strongly along the slope from the north.
-* **Character.** The current can strengthen suddenly close to shore and switch direction during a dive. A dive planned against it on the way out can return into it once it turns.
 
 ## Wind
 

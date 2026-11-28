@@ -30,14 +30,9 @@ Bonaire's best known wreck, a 72 m cargo ship lying on her starboard side on the
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually slack to light at the wreck, and at times strong enough to lengthen the swim home. Check its direction at the surface and swim to the up-current buoy first.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually slack to light at the wreck, and at times strong enough to lengthen the swim home. Check its direction at the surface and swim to the up-current buoy first.
 
 ## Wind
 

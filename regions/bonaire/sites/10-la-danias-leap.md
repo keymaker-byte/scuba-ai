@@ -29,14 +29,9 @@ One of Bonaire's few true vertical walls, on the northwest coast east of Karpata
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | west-northwest, 290°, along the coast toward Karpata |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east trades. The current can sit still for days, then run harder when the trades strengthen or shift. What reverses it is not established.
-* **Character.** Usually light, from still to a gentle push toward Karpata, and at times strong. It can run stronger where the wall gives way to the Karpata ridges, where swimming higher on the reef top takes the edge off, and over the ridge crests, with the valleys between them sheltered.
+* **Type.** Wind driven.
+* **Usual set.** West-northwest, 290°, along the coast toward Karpata. Usually light, from still to a gentle push toward Karpata, and at times strong. It can run stronger where the wall gives way to the Karpata ridges, where swimming higher on the reef top takes the edge off, and over the ridge crests, with the valleys between them sheltered.
+* **Drivers.** The east trades. The current can sit still for days, then run harder when the trades strengthen or shift.
 * **Reversal.** On some days the set reverses and runs east-southeast, away from the only exit. Check the set before entering, from the mooring line or the water off the ledge, or by diving a neighbouring site first.
 
 ## Wind

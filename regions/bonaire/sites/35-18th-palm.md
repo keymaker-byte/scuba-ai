@@ -28,14 +28,9 @@ The house reef of Plaza Resort on Bonaire's west coast south of Kralendijk, name
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually mild or barely felt, which makes the site a common choice for training and night dives.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift.
-* **Character.** Usually mild or barely felt, which makes the site a common choice for training and night dives.
 
 ## Wind
 

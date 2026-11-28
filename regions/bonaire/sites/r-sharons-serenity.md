@@ -23,14 +23,9 @@ A boat dive at Klein Bonaire's southwest corner, named for Sharon, who once work
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually mild in the lee of the islet, and can run moderate along the slope on a day of strong or shifting trades.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually mild in the lee of the islet, and can run moderate along the slope on a day of strong or shifting trades.
 
 ## Wind
 

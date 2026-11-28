@@ -25,14 +25,9 @@ A boat dive on the north side of Klein Bonaire, named for its knife-like coral f
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually slight over the terrace and along the slope, and strong on some days.
 * **Drivers.** The east to southeast trade winds, which blow along this shore from the east and off the islet from the southeast. A north wind brings more water movement to this shore. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually slight over the terrace and along the slope, and strong on some days.
 
 ## Wind
 

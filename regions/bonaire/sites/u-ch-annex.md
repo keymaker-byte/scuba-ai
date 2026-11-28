@@ -7,14 +7,14 @@ A boat dive on the west side of Klein Bonaire toward its northwest tip, marked s
 | **Location** | West side of Klein Bonaire, toward its northwest tip, Bonaire National Marine Park, Caribbean Sea |
 | **Coordinates** | 12.163097, -68.324103 (9.3 m, on the terrace about 100 m off the shore) |
 | **Type** | Boat |
-| **Depth range** | Not established |
+| **Depth range** | 6 to 11 m on the terrace |
 
 ## Getting there
 
 * **Entry.** From a dive operator's boat, once the site reopens.
 * **Parking.** Not applicable.
 * **Access.** Closed to diving. Confirm status with STINAPA before planning a dive here. When open, the site is reached only by boat from Kralendijk; Klein Bonaire is open to visitors from 07:00 to 19:00, and a valid STINAPA nature fee is required.
-* **Facilities.** Not established.
+* **Facilities.** None.
 
 ## Navigation and landmarks
 
@@ -23,12 +23,7 @@ A boat dive on the west side of Klein Bonaire toward its northwest tip, marked s
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
 
 ## Wind
@@ -48,10 +43,6 @@ A boat dive on the west side of Klein Bonaire toward its northwest tip, marked s
 ## Temperature
 
 * **At depth.** 26 to 29 °C year round, coolest around February and March, warmest around August through October. The water holds one temperature from the surface to recreational depth. A wetsuit or dive skin is standard.
-
-## Marine life
-
-* **Overall.** Not established.
 
 ## Hazards
 

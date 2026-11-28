@@ -27,14 +27,9 @@ Willemstoren Lighthouse is a shore site at Bonaire's southern tip, below the isl
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** The current runs along the shore, east-northeast or west-southwest, and can reverse between days, build suddenly during a dive, or meet an opposing flow so the two clash. It is weakest on the terrace and strongest along the reef slope. Check its direction before entering, start the dive into it, and turn back at once when a constant fight against it sets in.
 * **Drivers.** The east to southeast trade winds. The current can sit still or slight for days, then run hard when the trades pick up or shift.
-* **Character.** The current runs along the shore, east-northeast or west-southwest, and can reverse between days, build suddenly during a dive, or meet an opposing flow so the two clash. It is weakest on the terrace and strongest along the reef slope. Check its direction before entering, start the dive into it, and turn back at once when a constant fight against it sets in.
 * **Drift.** With any real current the reef slope quickly becomes a drift dive. The coast holds few safe exits, so plan the dive to return to the entry, and carry a surface marker buoy.
 
 ## Wind

@@ -28,14 +28,9 @@ A narrow public beach on EEG Boulevard just south of Flamingo Airport's runway, 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually slight, at times moderate along the reef, and at times setting south along the shore. Check its direction before entering and start the dive into it.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually slight, at times moderate along the reef, and at times setting south along the shore. Check its direction before entering and start the dive into it.
 
 ## Wind
 

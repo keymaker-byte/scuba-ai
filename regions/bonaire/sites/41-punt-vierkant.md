@@ -28,14 +28,9 @@ Punt Vierkant, Dutch for square point, is a shore site on EEG Boulevard about 5 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually mild on the terrace and stronger along the reefs, at times strong. Check its direction before entering and start the dive into it.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually mild on the terrace and stronger along the reefs, at times strong. Check its direction before entering and start the dive into it.
 
 ## Wind
 

@@ -28,14 +28,9 @@ Kralendijk's town pier, a working cargo and cruise pier running out from the wat
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** The harbour is sheltered and the current under the pier is usually mild. It strengthens in bad weather.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift. Tugs and ships manoeuvring at the pier throw a strong local current through the pilings from their propellers.
-* **Character.** The harbour is sheltered and the current under the pier is usually mild. It strengthens in bad weather.
 
 ## Wind
 

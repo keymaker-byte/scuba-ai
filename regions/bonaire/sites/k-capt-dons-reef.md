@@ -24,14 +24,9 @@ A boat dive on the south coast of Klein Bonaire, named for Don Stewart, Bonaire'
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually mild to moderate, and at times strong enough to push a diver around in the shallows.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually mild to moderate, and at times strong enough to push a diver around in the shallows.
 
 ## Wind
 

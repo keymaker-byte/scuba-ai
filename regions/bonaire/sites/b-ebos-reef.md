@@ -24,14 +24,9 @@ A boat dive on Klein Bonaire's north shore, facing Bonaire across the channel, n
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** The current here is often light, but it can run strongly along the reef, and its direction varies and is hard to predict. Read it at the surface before descending, swim into it first, and let it carry you back toward the mooring at the end of the dive.
 * **Drivers.** The east to northeast trade winds. The north and east sides of Klein Bonaire take the strongest current around the islet, where the trades push water against it, and the current runs stronger when the trades blow hard.
-* **Variable set.** The current here is often light, but it can run strongly along the reef, and its direction varies and is hard to predict. Read it at the surface before descending, swim into it first, and let it carry you back toward the mooring at the end of the dive.
 
 ## Wind
 

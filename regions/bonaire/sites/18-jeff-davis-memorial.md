@@ -29,13 +29,8 @@ A shore dive on Bonaire's northwest coast road north of Kralendijk, named for Je
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drift.** Usually limited, at most a light to moderate drift along the reef.
+* **Type.** Wind driven.
+* **Usual set.** Usually limited, at most a light to moderate drift along the reef.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades pick up or shift.
 
 ## Wind

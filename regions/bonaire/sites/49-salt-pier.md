@@ -28,14 +28,9 @@ The Cargill salt works loading pier on EEG Boulevard south of Kralendijk, where 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually little or none under the pier, at times strong at the outer pilings and over the reef slope. The pilings give shelter from it; check its direction before entering and start the dive into it.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually little or none under the pier, at times strong at the outer pilings and over the reef slope. The pilings give shelter from it; check its direction before entering and start the dive into it.
 
 ## Wind
 

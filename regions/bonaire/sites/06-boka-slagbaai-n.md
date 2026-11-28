@@ -27,14 +27,9 @@ The northern of two routes at Boka Slagbaai, a sheltered bay in Washington Slagb
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually light inside the bay, which is sheltered from the east, and at times strong enough to slow the swim back. Turn with enough gas to swim back to the beach against it.
 * **Drivers.** The trade winds. The current can sit still for days, then run hard when the trades pick up or shift.
-* **Character.** Usually light inside the bay, which is sheltered from the east, and at times strong enough to slow the swim back. Turn with enough gas to swim back to the beach against it.
 
 ## Wind
 

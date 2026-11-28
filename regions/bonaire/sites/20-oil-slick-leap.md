@@ -28,12 +28,7 @@ One of the best known shore dives on Bonaire's west coast, about 7 km north of K
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
 * **Drivers.** The east to southeast trade winds. The current is usually slight here, and can sit still for days, then run when the trades pick up or shift.
 * **On the day.** The mooring buoy line shows any set right after entry, and the return to the ladder is planned against it.
 

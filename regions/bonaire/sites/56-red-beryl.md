@@ -29,12 +29,8 @@ Red Beryl is a shore site on EEG Boulevard, about 11.5 km south of Kralendijk on
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | northwest, 323°, along the shore |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Northwest, 323°, along the shore.
 * **Drivers.** The east to southeast trade winds. The current is usually limited, and runs fairly strong at times when the trades strengthen.
 * **Depth.** The current can run stronger along the deeper wall than on the terrace, at times in a different direction. Check it at the reef edge before descending the wall.
 

@@ -29,14 +29,9 @@ Something Special, also known as Pali Grandi, is a shore site on the Kralendijk 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established; it runs north along the reef on some days and south on others |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift. What sets its direction on a given day is not established.
-* **Character.** Usually slight, at times strong, and it can change during a dive and run differently at night than by day. Check its direction before entering, start the dive into it, and let it carry you back toward the entry.
+* **Type.** Wind driven.
+* **Usual set.** Usually slight, at times strong, and it can change during a dive and run differently at night than by day. Check its direction before entering, start the dive into it, and let it carry you back toward the entry.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

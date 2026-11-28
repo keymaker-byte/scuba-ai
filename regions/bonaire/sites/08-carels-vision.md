@@ -29,14 +29,8 @@ A remote site on Bonaire's northwest coast, between the BOPEC oil terminal and N
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | west, 270° |
-| **Typical speed** | Not established |
-
-* **Character.** Moderate on most days, and strong on some. A strong westward set carries a diver away from the beach, and there are few places along this coast to get out of the water, so check the current at the start of the dive and plan to return to the entry.
-* **Drivers.** Not established for this site.
+* **Type.** Wind driven.
+* **Usual set.** West, 270°. Moderate on most days, and strong on some. A strong westward set carries a diver away from the beach, and there are few places along this coast to get out of the water, so check the current at the start of the dive and plan to return to the entry.
 
 ## Wind
 

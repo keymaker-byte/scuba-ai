@@ -30,12 +30,7 @@ Larry's Lair is a double reef shore site on EEG Boulevard, about 780 m north of 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
 
 ## Wind

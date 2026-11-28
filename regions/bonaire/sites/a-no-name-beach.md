@@ -26,14 +26,9 @@ The reef directly in front of No Name Beach, the long white sand beach on the no
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | west, 270° |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** West, 270°. Usually little or none in front of the beach, and weakest close to shore. It can run strong along the reef and at times switches direction.
 * **Drivers.** The east to southeast trade winds set the current west along the north coast. It can sit still for days, then run harder when the trades pick up or shift.
-* **Character.** Usually little or none in front of the beach, and weakest close to shore. It can run strong along the reef and at times switches direction.
 
 ## Wind
 

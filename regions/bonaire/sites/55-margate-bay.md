@@ -29,14 +29,9 @@ A shore dive on Bonaire's southwest coast, reached across a small salina beside 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually mild, at times strong, and it can change direction during a dive. It runs north or south along the reef; check its direction before entering and start the dive into it, returning with it in the shallows.
 * **Drivers.** The east to southeast trade winds. The current can stay slack for days, then run hard when the trades strengthen or shift.
-* **Character.** Usually mild, at times strong, and it can change direction during a dive. It runs north or south along the reef; check its direction before entering and start the dive into it, returning with it in the shallows.
 
 ## Wind
 

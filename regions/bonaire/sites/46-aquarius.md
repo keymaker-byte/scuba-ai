@@ -29,14 +29,9 @@ Aquarius is a double reef shore site on EEG Boulevard, about 1.7 km north of Sal
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Light to moderate along the reef. Check its direction before entering, and start the dive into it.
 * **Drivers.** The east to southeast trade winds. The current runs north or south along the reef and can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Light to moderate along the reef. Check its direction before entering, and start the dive into it.
 
 ## Wind
 

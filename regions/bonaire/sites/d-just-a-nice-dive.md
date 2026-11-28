@@ -24,14 +24,9 @@ A relaxed boat dive off Klein Bonaire's east point, facing Kralendijk across the
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Current is usually slight, and boats often run the site as a gentle drift along the reef.
 * **Drivers.** The east to southeast trade winds, which push water against Klein Bonaire's north and east sides. The current can sit still for days, then run when the trades pick up or shift.
-* **Character.** Current is usually slight, and boats often run the site as a gentle drift along the reef.
 
 ## Wind
 

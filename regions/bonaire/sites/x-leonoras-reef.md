@@ -25,14 +25,9 @@ A boat dive toward the west end of Klein Bonaire's north coast. A flat, shallow 
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually slight, at times moderate.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run when the trades strengthen or shift.
-* **Character.** Usually slight, at times moderate.
 
 ## Wind
 

@@ -29,14 +29,9 @@ The house reef of Captain Don's Habitat on Bonaire's west coast north of Kralend
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
-* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift. What reverses it is not established.
-* **Character.** Usually slight to none, and occasionally strong along the reef. Start the dive into whatever current is running and let it carry you back.
+* **Type.** Wind driven.
+* **Usual set.** Usually slight to none, and occasionally strong along the reef. Start the dive into whatever current is running and let it carry you back.
+* **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades strengthen or shift.
 
 ## Wind
 

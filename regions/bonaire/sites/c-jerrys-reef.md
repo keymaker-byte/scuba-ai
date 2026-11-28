@@ -26,14 +26,9 @@ A sponge garden on Klein Bonaire's north side, also known as Jerry's Sponges and
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | Wind driven |
-| **Usual set** | Not established |
-| **Typical speed** | Not established |
-
+* **Type.** Wind driven.
+* **Usual set.** Usually light.
 * **Drivers.** The east to southeast trade winds. The current can sit still for days, then run harder when the trades pick up or shift.
-* **Strength.** Usually light.
 
 ## Wind
 
