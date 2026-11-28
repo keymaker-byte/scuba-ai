@@ -27,9 +27,7 @@ A deep, glacially carved lake in Olympic National Park on the Olympic Peninsula,
 
 ## Current
 
-| | |
-|---|---|
-| **Current type** | None: the water holds still at depth, and wind drives only a surface drift |
+* **Type.** None: the water holds still at depth, and wind drives only a surface drift.
 
 ## Wind
 
