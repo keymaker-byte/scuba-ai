@@ -21,4 +21,4 @@ python3 tools/pnwdiving_viz.py --max-age 3       # only reports from the last 3 
 python3 tools/pnwdiving_viz.py --raw             # feet, as the reporter wrote it
 ```
 
-Reads exactly the public summary table, converted to metres. The page is cached for `pnwdiving_viz.cache_hours` in `tool-config.json` (default 6); `--refresh` bypasses the cache. Reports are dated in `pnwdiving_viz.default_tz`, overridden with `--tz`.
+Reads exactly the public summary table, converted to metres. The page is cached for `pnwdiving_viz.cache_hours` in `tool-config.jsonc` (default 6); `--refresh` bypasses the cache. Reports are dated in `pnwdiving_viz.default_tz`, overridden with `--tz`.

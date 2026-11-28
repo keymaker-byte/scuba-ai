@@ -1,0 +1,95 @@
+// Tool configuration for the scuba diving workspace. Copy this file to tool-config.jsonc (gitignored) and
+// fill in the values marked <...>. It is JSON with comments: a // runs to the end of its line.
+//
+// The top-level settings are shared by every tool. Each section below is one tool's own, named after its
+// script in tools/, and a tool reads only its own section. A key left out falls back to the default
+// written beside it. Paths: ~ expands to home, a relative path resolves against the workspace root.
+{
+  // The contact address sent in the User-Agent of every request to a service that asks automated clients
+  // for one: NWS (required, the forecast stops without it), NCEI and OpenStreetMap downloads, MediaWiki.
+  "user_agent_email": "<your-email>@example.com",
+
+  "subsurface_log": {
+    // The Subsurface logbook the dive log tool reads (never writes). The SUBSURFACE_XML environment
+    // variable, when set, takes its place.
+    "file": "~/Library/Application Support/Subsurface/<your-log>.xml"
+  },
+
+  "current": {
+    // m/s at the bottom: `window` reports the spans of the day under it, and the map colours its current
+    // layer by it. Default 0.25.
+    "max_speed_ms": 0.25
+  },
+
+  "shore_exposure": {
+    // km: the farthest a fetch is measured, and the search radius for the shoreline. A capped reading
+    // means open water as far as fetch matters. Default 30.
+    "max_fetch_km": 30,
+    // m of shoreline either side of the nearest shore point averaged into a shore facing. Default 250.
+    "shore_span_m": 250
+  },
+
+  "pnwdiving_viz": {
+    // hours the PNW Diving home page is kept before it is fetched again; --refresh skips it. Default 6.
+    "cache_hours": 1,
+    // The IANA zone the reports are dated in, overridden with --tz. Default America/Los_Angeles.
+    "default_tz": "America/Los_Angeles"
+  },
+
+  "forecast": {
+    // Wind call, m/s sustained at 10 m, read against the site's sectors:
+    //   Bad sectors: go under go_below_ms, marginal up to nogo_above_ms, no go above it.
+    //   Short fetch and Mixed sectors: the same two bands, each moved up by short_fetch_shift_ms.
+    //   A gust more than gust_margin_ms above the sustained speed moves a Bad or Short call up a band.
+    //   Fine sectors: go up to offshore_marginal_ms, marginal above it, for the surface drift offshore.
+    "go_below_ms": 5,              // default 5, the top of Beaufort 3: wavelets, scattered whitecaps
+    "nogo_above_ms": 8,            // default 8, the top of Beaufort 4: small waves, frequent whitecaps
+    "short_fetch_shift_ms": 3,     // default 3
+    "gust_margin_ms": 3,           // default 3
+    "offshore_marginal_ms": 8,     // default 8
+
+    // Waves call, m of significant wave height, where the waves come from onshore or cross-shore at the
+    // entry: go under waves_go_below_m, marginal up to waves_nogo_above_m, no go above it. Waves from
+    // offshore are go.
+    "waves_go_below_m": 0.5,       // default 0.5
+    "waves_nogo_above_m": 1.0,     // default 1.0
+
+    // Weather call. Fog is fog in the forecast or a visibility under fog_visibility_m (m); thunder is
+    // thunderstorms in the forecast or, on NWS, a chance of thunder at thunder_probability_pct (%) or more.
+    "fog_visibility_m": 1000,      // default 1000
+    "thunder_probability_pct": 15, // default 15
+    // Each call below is one of "go", "marginal", "no go" or "note".
+    "fog_call": "no go",           // default "no go": the entry and the shore drop out of sight from the water
+    "thunder_call": "no go",       // default "no go": a diver on the surface is the highest point on the water
+
+    // The band an NWS alert puts on a dive, by the last word of its event, for an event that concerns
+    // the water, the wind, the air or the shore. Any other event prints as not about the water.
+    "warning_call": "no go",       // default "no go": Gale Warning, Special Marine Warning, ...
+    "watch_call": "marginal",      // default "marginal": Storm Watch, Coastal Flood Watch, ...
+    "advisory_call": "marginal",   // default "marginal": Small Craft Advisory, Dense Fog Advisory, ...
+    "statement_call": "note",      // default "note": Special Weather Statement, Beach Hazards Statement, ...
+
+    // km: a wave or ocean model grid point farther than this from the dive area is flagged, its reading
+    // the open water out there. Default 5.
+    "grid_far_km": 5,
+
+    // Open-Meteo model ids. The wind is read from two models, the first primary, each with its own call;
+    // the weather from one; the waves from two; the surface current and water temperature from one.
+    "wind_model": "ecmwf_ifs",                 // default ecmwf_ifs, ECMWF IFS HRES at 9 km
+    "wind_cross_check_model": "gfs_seamless",  // default gfs_seamless, NOAA GFS
+    "weather_model": "ecmwf_ifs",              // default ecmwf_ifs
+    "wave_model": "meteofrance_wave",          // default meteofrance_wave, MFWAM at about 8 km
+    "wave_cross_check_model": "ecmwf_wam025",  // default ecmwf_wam025, ECMWF WAM at about 25 km
+    "ocean_model": "meteofrance_currents"      // default meteofrance_currents, Mercator SMOC at about 8 km
+  },
+
+  "diversatlas": {
+    // Required: the Divers Atlas API key. The tool stops without it, and a 401 means it is no longer valid.
+    "api_key": "<required>"
+  },
+
+  "diveatlas": {
+    // hours the Dive Atlas site index is kept before it is built again. Default 1.
+    "cache_hours": 1
+  }
+}

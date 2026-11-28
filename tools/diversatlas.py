@@ -13,24 +13,24 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+import os
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib import config  # noqa: E402
 
 DATABASE_URL = "https://loefamhnvuxtegojrcgr.supabase.co"
 LIST_COLUMNS = "site_id,slug,name,latitude,longitude,site_type,country,region_state"
 
 
 def _cfg(key, default):
-    """Read this tool's section of tool-config.json; missing file or key -> default."""
-    try:
-        with open(Path(__file__).resolve().parent.parent / "tool-config.json") as f:
-            return json.load(f).get("diversatlas", {}).get(key, default)
-    except (OSError, ValueError):
-        return default
+    """This tool's section of tool-config.jsonc; a missing file or key gives the default."""
+    return config.get("diversatlas", key, default)
 
 
 def _query(table, params):
     key = _cfg("api_key", None)
     if not key or key.startswith("<"):
-        sys.exit("diversatlas.api_key not set in tool-config.json")
+        sys.exit("diversatlas.api_key not set in tool-config.jsonc")
     url = f"{DATABASE_URL}/rest/v1/{table}?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(url, headers={"apikey": key, "Authorization": f"Bearer {key}"})
     try:

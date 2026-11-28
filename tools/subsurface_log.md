@@ -1,6 +1,6 @@
 # Subsurface dive log
 
-Subsurface's saved logbook, read through a read-only tool: Subsurface owns the file, and this tool never writes it. Its path is set in `subsurface_log.file` in `tool-config.json`.
+Subsurface's saved logbook, read through a read-only tool: Subsurface owns the file, and this tool never writes it. Its path is set in `subsurface_log.file` in `tool-config.jsonc`.
 
 What any dive log is for: user-specific experience, a site's depth range, gas consumption, water temperature, viz by season, hazards hit, and how the current actually ran on dives done. Two levels live in it. The per-dive aggregates (max depth, temperature, gas, visibility, current, the site) answer the daily questions; the full profile (depth and the rest, sampled every few seconds) places the deepest point, the turn and the ascent on the clock, which is what an ascent-behaviour read needs. Read the free-text notes: notes are where *"anxiety again… down current"* lives, the thing that could actually hurt you, and the hazards are in the prose. Weight the subjective fields carefully; a visibility or current value is weak on its own, trustworthy only in aggregate. Times are local, so a sample's time is seconds into the dive and its clock time is the dive start plus that offset. The logbook is a snapshot refreshed after diving, so recent dives, or notes added since, are missing until the next refresh, never wrong, and it is large, so read it through this tool rather than opening it whole.
 

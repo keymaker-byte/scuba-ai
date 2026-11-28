@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lib import shapes  # noqa: E402
+from lib import config, shapes  # noqa: E402
 
 R_KM = 6371.0
 POINTS = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
@@ -25,18 +25,13 @@ POINTS = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
 
 
 def _cfg(key, default):
-    """Read this tool's section of tool-config.json; missing file or key -> default."""
-    try:
-        with open(Path(__file__).resolve().parent.parent / "tool-config.json") as f:
-            return json.load(f).get("shore_exposure", {}).get(key, default)
-    except (OSError, ValueError):
-        return default
+    """This tool's section of tool-config.jsonc; a missing file or key gives the default."""
+    return config.get("shore_exposure", key, default)
 
 
 MAX_FETCH_KM = _cfg("max_fetch_km", 30)
 SHORE_SPAN_M = _cfg("shore_span_m", 250)
-_email = _cfg("user_agent_email", None)
-USER_AGENT = f"dive-planning ({_email})" if _email else "dive-planning"
+USER_AGENT = config.user_agent()
 shapes.USER_AGENT = USER_AGENT
 
 

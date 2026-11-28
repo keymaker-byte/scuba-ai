@@ -29,7 +29,7 @@ from datetime import date, datetime, timedelta, timezone
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import lib.tidal_astronomy as astro  # noqa: E402
-from lib import chs_tides, foreman, map_depth, shapes, tide  # noqa: E402
+from lib import chs_tides, config, foreman, map_depth, shapes, tide  # noqa: E402
 from lib.adcirc import WALK_STEP_M, read_vel_header, read_vel_nodes  # noqa: E402
 from lib.blend import (ABOVE_BOTTOM, DEG, EXACT_KM, EXTEND_KM, LINE_STEP_M, MIN_AMP, NEIGHBOURS,  # noqa: E402
                        PRIOR, REACH_KM, SOFTEN_KM, UTC, Mesh, Refused, blend_at, extract_point, floor_km,
@@ -63,12 +63,8 @@ def coverage():
 
 
 def _blend_cfg(key, default):
-    """The current tool's own setting in tool-config.json, which the current layer colours by."""
-    try:
-        with open(os.path.join(WORKSPACE, "tool-config.json")) as f:
-            return json.load(f).get("current", {}).get(key, default)
-    except (OSError, ValueError):
-        return default
+    """The current tool's own setting in tool-config.jsonc, which the current layer colours by."""
+    return config.get("current", key, default)
 
 
 # --- the tidal current layer -----------------------------------------------------------------

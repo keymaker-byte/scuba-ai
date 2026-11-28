@@ -40,22 +40,21 @@ Planning a new dive is handled by the `create-dive-plan` skill: it holds the pla
 
 ## Tools
 
-- @tool-config.json
+- @tool-config.jsonc
 - @tools/tide.md
 - @tools/current.md
 - @tools/map_export.md
 - @tools/depth.md
 - @tools/shore_exposure.md
-- @tools/nws_forecast.md
-- @tools/open_meteo_wind.md
+- @tools/forecast.md
 - @tools/pnwdiving_viz.md
 - @tools/subsurface_log.md
 - @tools/diversatlas.md
 - @tools/diveatlas.md
 
-`tool-config.json` holds personal data and is gitignored, so a fresh clone of this workspace won't have it. If it's missing at session start, don't proceed, tell the user it's missing and ask them to copy `tool-config_template.json` to the real filename and fill it in, then continue once it exists.
+`tool-config.jsonc` holds personal data and is gitignored, so a fresh clone of this workspace won't have it. If it's missing at session start, don't proceed, tell the user it's missing and ask them to copy `tool-config_template.jsonc` to the real filename and fill it in, then continue once it exists.
 
-Use these tools when writing a new region file, a new dive site file, planning a dive, or answering questions for the user. Each tool lives in `tools/`, one self-contained markdown file per tool (`tools/<name>.md`), paired with its `tools/<name>.py` script. Each tool reads its own parameters from its own subsection of `tool-config.json`. The workspace-wide tools, `depth.md`, `tide.md`, `current.md`, `shore_exposure.md`, `subsurface_log.md` and `diversatlas.md`, run in every region, and how each is used is held by the `create-dive-site` and `create-dive-plan` skills. A region's two conventions files name only what is specific to that region: its datum, its current type, the region-only tools it uses (the wind forecast, visibility reports), its research sources, and any region-specific rule about how a workspace-wide tool reads there.
+Use these tools when writing a new region file, a new dive site file, planning a dive, or answering questions for the user. Each tool lives in `tools/`, one self-contained markdown file per tool (`tools/<name>.md`), paired with its `tools/<name>.py` script. Each tool reads its own parameters from its own subsection of `tool-config.jsonc`, through `tools/lib/config.py`, and the contact address any service asks for from the file's one top-level `user_agent_email`. The file is JSON with `//` comments, each parameter explained beside it; a new parameter takes its comment, with its default, in both the file and `tool-config_template.jsonc`. The workspace-wide tools, `depth.md`, `tide.md`, `current.md`, `shore_exposure.md`, `forecast.md`, `subsurface_log.md` and `diversatlas.md`, run in every region, and how each is used is held by the `create-dive-site` and `create-dive-plan` skills. A region's two conventions files name only what is specific to that region: its datum, its current type, the region-only tools it uses (visibility reports), its research sources, and any region-specific rule about how a workspace-wide tool reads there.
 
 If a tool errors out, an API is unreachable, or a site is down, stop and report it to the user rather than working around it. Never substitute a cached value, a plausible estimate, a different station, or a different bin to paper over the gap, and never present a plan or a site file as complete when a source it depends on failed. Say plainly what failed and what it was supposed to provide, and wait for the user before continuing. This matters because a plan built on partial data looks exactly like one built on complete data. A missing current window or a silently skipped tide check does not announce itself in the output, and by the time it matters it is a diver in the water holding a plan that was never actually checked.
 

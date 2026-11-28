@@ -20,7 +20,7 @@ This skill holds what applies in every region: the order of the work, the worksp
 All work happens in a worktree on its own branch off `main`, opened before any file is touched. Run every command here from the root of the main checkout.
 
 - **Main is clean.** Uncommitted changes in the main checkout to any of the four files below stop the run; ask the user to commit or discard them.
-- **Create it, then link the ignored files.** Name it by region and slug, since a slug is unique only within its region; a leftover branch or folder of that name is reported, never reused or deleted. The worktree lacks the gitignored files the tools need, such as `tool-config.json` and `tools/db/`, so link each one in as git lists them, in one command:
+- **Create it, then link the ignored files.** Name it by region and slug, since a slug is unique only within its region; a leftover branch or folder of that name is reported, never reused or deleted. The worktree lacks the gitignored files the tools need, such as `tool-config.jsonc` and `tools/db/`, so link each one in as git lists them, in one command:
 
   ```sh
   W=.claude/worktrees/<region>-<slug>; git worktree add "$W" -b site/<region>/<slug> main

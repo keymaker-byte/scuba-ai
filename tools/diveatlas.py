@@ -15,6 +15,10 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+import os
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib import config  # noqa: E402
 
 API = "https://diveatlas.org/api.php"
 CACHE = Path(__file__).parent / "db" / "diveatlas_index.json"
@@ -22,17 +26,12 @@ FT = 0.3048
 
 
 def _cfg(key, default):
-    """Read this tool's section of tool-config.json; missing file or key -> default."""
-    try:
-        with open(Path(__file__).resolve().parent.parent / "tool-config.json") as f:
-            return json.load(f).get("diveatlas", {}).get(key, default)
-    except (OSError, ValueError):
-        return default
+    """This tool's section of tool-config.jsonc; a missing file or key gives the default."""
+    return config.get("diveatlas", key, default)
 
 
 CACHE_HOURS = _cfg("cache_hours", 1)
-_email = _cfg("user_agent_email", None)
-USER_AGENT = f"dive-planning ({_email})" if _email else "dive-planning"
+USER_AGENT = config.user_agent()
 
 
 def _api(params):

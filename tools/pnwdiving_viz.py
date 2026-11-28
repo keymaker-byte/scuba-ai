@@ -16,18 +16,18 @@ import urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
+import os
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib import config  # noqa: E402
 
 HOME = "https://pnwdiving.com/"
 CACHE = Path(__file__).parent / "db" / "pnwdiving_home.html"
 
 
 def _cfg(key, default):
-    """Read this tool's section of tool-config.json; missing file or key -> default."""
-    try:
-        with open(Path(__file__).resolve().parent.parent / "tool-config.json") as f:
-            return json.load(f).get("pnwdiving_viz", {}).get(key, default)
-    except (OSError, ValueError):
-        return default
+    """This tool's section of tool-config.jsonc; a missing file or key gives the default."""
+    return config.get("pnwdiving_viz", key, default)
 
 
 CACHE_HOURS = _cfg("cache_hours", 6)

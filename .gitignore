@@ -4,7 +4,7 @@
 temp/
 tools/db/
 __pycache__/
-tool-config.json
+tool-config.jsonc
 .claude/worktrees/
 
 # Map layers written by tools/map_export.py: published as release assets, restored by the Pages workflow

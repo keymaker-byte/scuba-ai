@@ -42,18 +42,15 @@ DATUM = "NAVD 88"   # the ninth arc-second DEM's vertical datum
 
 
 def _cfg(key, default=None):
-    """Read this tool's section of tool-config.json; missing file or key -> default."""
-    try:
-        with open(os.path.join(ROOT, "tool-config.json")) as f:
-            return json.load(f).get("depth", {}).get(key, default)
-    except (OSError, ValueError):
-        return default
+    """The depth tool's section of tool-config.jsonc; a missing file or key gives the default."""
+    from lib import config
+    return config.get("depth", key, default)
 
 
 def _user_agent():
-    """Contact email for the User-Agent comes from tool-config.json (depth.user_agent_email)."""
-    email = _cfg("user_agent_email")
-    return f"dive-planning ({email})" if email else "dive-planning"
+    """The User-Agent carries tool-config.jsonc's top-level user_agent_email."""
+    from lib import config
+    return config.user_agent()
 
 
 UA = _user_agent()

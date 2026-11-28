@@ -16,23 +16,21 @@ from xml.etree.ElementTree import iterparse, ParseError
 
 
 def _log_path(env):
-    """Resolve the logbook path: env var, else tool-config.json subsurface_log.file.
+    """Resolve the logbook path: env var, else tool-config.jsonc subsurface_log.file.
     Relative paths resolve against the workspace root; ~ expands. None if nothing is set."""
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     raw = os.environ.get(env)
     if not raw:
-        try:
-            with open(os.path.join(root, "tool-config.json")) as f:
-                raw = json.load(f).get("subsurface_log", {}).get("file")
-        except (OSError, ValueError):
-            raw = None
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from lib import config
+        raw = config.get("subsurface_log", "file")
     if not raw:
         return None
     p = os.path.expanduser(raw)
     return p if os.path.isabs(p) else os.path.join(root, p)
 
 
-# Path is machine-specific, so it lives in tool-config.json (subsurface_log.file), not here.
+# Path is machine-specific, so it lives in tool-config.jsonc (subsurface_log.file), not here.
 LOG = _log_path("SUBSURFACE_XML")
 
 # Value-with-unit -> metric float. Subsurface writes the unit, so convert off the suffix.
@@ -70,12 +68,12 @@ def parse_dives():
     """Stream the log. Build the site table (it precedes the dives), then yield dive dicts."""
     if LOG is None:
         sys.exit("Subsurface file not configured. Its location is specific to this machine, so "
-                 "set subsurface_log.file in tool-config.json (or the SUBSURFACE_XML env var) "
+                 "set subsurface_log.file in tool-config.jsonc (or the SUBSURFACE_XML env var) "
                  "to your saved logbook. If you do not use Subsurface, this source does not apply.")
     if not os.path.exists(LOG):
         sys.exit(f"Subsurface log not found: {LOG}\n"
                  f"Save your logbook from Subsurface (File > Save), or fix subsurface_log.file "
-                 f"in tool-config.json.")
+                 f"in tool-config.jsonc.")
     sites = {}
     try:
         for _, el in iterparse(LOG, events=("end",)):

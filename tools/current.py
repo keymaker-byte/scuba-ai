@@ -26,7 +26,7 @@ from lib.adcirc import DATABASES, read_vel_header, read_vel_nodes  # noqa: E402
 from lib.adcirc import selftest as adcirc_selftest  # noqa: E402
 from lib.current_harmonics import events, series  # noqa: E402
 from lib.current_stations import NETWORKS, cx  # noqa: E402
-from lib import chs_stations, noaa_stations  # noqa: E402
+from lib import chs_stations, config, noaa_stations  # noqa: E402
 from lib.datums import LAKE, MEANING as DATUMS  # noqa: E402
 from lib.seabed import Seabed  # noqa: E402
 from lib.tcd import legacy as legacy_harmonics, selftest as legacy_selftest, velocity  # noqa: E402
@@ -42,12 +42,8 @@ BANDS_KM = [(0, 2), (2, 6), (6, REACH_KM), (REACH_KM, None)]
 
 
 def _cfg(key, default):
-    """Read this tool's section of tool-config.json; missing file or key -> default."""
-    try:
-        with open(os.path.join(WORKSPACE, "tool-config.json")) as f:
-            return json.load(f).get("current", {}).get(key, default)
-    except (OSError, ValueError):
-        return default
+    """This tool's section of tool-config.jsonc; a missing file or key gives the default."""
+    return config.get("current", key, default)
 
 
 def resolve_tz(name):

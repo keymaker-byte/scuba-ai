@@ -20,7 +20,7 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 - `tools/` — one self-contained markdown doc per tool (what it's for, its caveats, its CLI), paired with its `.py` script.
 - `.claude/skills/` — Claude Code skills, self-contained workflows for a specific task, each triggered automatically when the request matches.
 - `map.html` — a map of every dive site, colored by shore or boat access, with entry point pins for shore dives. Reads from `map/data.js`, which every site file has an entry in.
-- `tool-config.json` - holds personal data (tool parameters) and is gitignored. `tool-config_template.json` is included as a starting point for setting up your own.
+- `tool-config.jsonc` - holds personal data (tool parameters) and is gitignored. `tool-config_template.jsonc` is included as a starting point for setting up your own.
 
 ## Regions currently covered
 
@@ -40,14 +40,13 @@ This is a planning aid, not a dive plan by itself and not a substitute for train
 | [Current](tools/current.md) | ADCIRC ENPAC15 and EC2015, NOAA CO-OPS, CHS | The tidal current at any point and height above the seabed: the ADCIRC field corrected bin by bin by the NOAA and CHS stations around it, exact at the stations; the current tool for sites and plans. | `current.py` |
 | [Map export](tools/map_export.md) | Current, Depth (NCEI coastal DEM), NOAA CO-OPS | Writes the map viewer's tidal current, depth and tide station layers over the areas in `map/coverage.json`, with the same library functions the tools answer with. | `map_export.py` |
 | [Depth](tools/depth.md) | NOAA NCEI, NOAA VDatum, GSC, DCBD, Royal Netherlands Navy | Seabed depth at any point below the datum of the water there (MLLW in US water, CHS Chart Datum in Canadian water, the surface in a lake, each named as in `tools/lib/datums.py`), from whichever bathymetry covers it or the one on a datum asked for, kept locally; today the NCEI coastal DEM on the US coasts, with MLLW from VDatum's grids, the GSC West Coast DEM on Canada's west coast, and around Bonaire the DCBD coastal bathymetry with the Royal Netherlands Navy's 2019 and 1970s surveys past its edge, joined by seams. | `depth.py` |
-| [NWS point forecast](tools/nws_forecast.md) | National Weather Service | Hourly wind speed, direction and gusts, wave height, air temperature and rain at a US coordinate. | `nws_forecast.py` |
-| [Open-Meteo wind](tools/open_meteo_wind.md) | Open-Meteo (ECMWF IFS + GFS) | Hourly wind speed, direction and gusts at any coordinate worldwide, for regions outside NWS coverage; ECMWF as the primary model, GFS as an independent cross-check. | `open_meteo_wind.py` |
+| [Forecast](tools/forecast.md) | National Weather Service, Open-Meteo (ECMWF IFS + GFS, MFWAM + ECMWF WAM, Mercator SMOC) | Hourly wind with its go / no go call against the site's sectors, waves and swell with their call against the entry's shore, the surface current and water temperature, the weather (air temperature, sky, rain, fog, thunder) and the NWS warnings in effect, each block from the source that covers the site: NWS in US water, Open-Meteo anywhere. | `forecast.py` |
 | [PNW Diving](tools/pnwdiving_viz.md) | pnwdiving.com | Recent visibility reports by site, from the public summary table, cached locally. | `pnwdiving_viz.py` |
 | [Subsurface dive log](tools/subsurface_log.md) | Subsurface logbook | Read-only access to a Subsurface dive log: list dives, show a dive's aggregates and notes, or pull its full depth/temperature/pressure profile. | `subsurface_log.py` |
 | [Divers Atlas](tools/diversatlas.md) | diversatlas.org | Community dive site records worldwide (pin, depth, visibility, entry and parking notes, points of interest, safety notes), found by coordinate. | `diversatlas.py` |
 | [Dive Atlas](tools/diveatlas.md) | diveatlas.org | Community dive site wiki: pin, depth range, skill level and a guidebook-style write-up (access, hazards, life, facilities), found by coordinate. | `diveatlas.py` |
 
-Each tool reads parameters from its own subsection of `tool-config.json` (a missing key falls back to a built-in default) and prints metric units in local time.
+Each tool reads parameters from its own subsection of `tool-config.jsonc` (a missing key falls back to a built-in default) and prints metric units in local time.
 
 ## Skills
 

@@ -156,4 +156,4 @@ Each answer prints the depth below the water's datum with the datum's name, the 
 python3 tools/depth.py fetch 47.0 -123.5 49.0 -122.0 48.0 -124.75 48.5 -123.5
 ```
 
-`depth.user_agent_email` in `tool-config.json` sets the contact address sent in the User-Agent of a download.
+`tool-config.jsonc`'s top-level `user_agent_email` sets the contact address sent in the User-Agent of a download.

@@ -59,4 +59,4 @@ python3 tools/current.py verify [--name <region>]                               
 python3 tools/current.py selftest [--db <database>]                                             # after a change to tools/lib/adcirc.py or tools/lib/tcd.py
 ```
 
-`window`'s threshold defaults to `current.max_speed_ms` in `tool-config.json`. `verify-stations` also takes `--name <region>` for every station of a region, or station IDs as an extract lists them. A built region keeps its box, so naming one alone rebuilds it as it was.
+`window`'s threshold defaults to `current.max_speed_ms` in `tool-config.jsonc`. `verify-stations` also takes `--name <region>` for every station of a region, or station IDs as an extract lists them. A built region keeps its box, so naming one alone rebuilds it as it was.
