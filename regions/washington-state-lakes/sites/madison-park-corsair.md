@@ -1,6 +1,6 @@
 # Madison Park Corsair
 
-The broken wreck of a US Navy FG-1D Corsair fighter on the bed of Lake Washington, a shore dive from the swimming beach at Madison Park in Seattle. The plane, BuNo 87833, collided with another Corsair from Naval Air Station Sand Point during a formation exercise on 29 July 1950; its pilot bailed out and parachuted into the lake, and the plane struck the water hard a short way off this shore and broke apart. Wings, fuselage, landing gear and ammunition boxes now lie scattered over about 90 m of silty bottom at 21 to 27 m, in dark water below the summer thermocline. The headline hazards are boat traffic on the open lake over the wreck and the dark, cold water at its depth.
+The broken wreck of a US Navy FG-1D Corsair fighter on the bed of Lake Washington, a shore dive from the swimming beach at Madison Park in Seattle. The plane, BuNo 87833, flown by squadron VA-891, collided with another of the squadron's Corsairs from Naval Air Station Seattle at Sand Point during a formation exercise on 29 July 1950; its pilot bailed out and parachuted into the lake, and the plane struck the water hard a short way off this shore and broke apart. Wings, fuselage, landing gear and ammunition boxes now lie scattered over about 90 m of silty bottom at 21 to 27 m, in dark water below the summer thermocline. The headline hazards are boat traffic on the open lake over the wreck and the dark, cold water at its depth.
 
 | | |
 |---|---|
@@ -15,7 +15,7 @@ The broken wreck of a US Navy FG-1D Corsair fighter on the bed of Lake Washingto
 
 * **Entry.** Walk down the lawn to the swimming beach and enter from the sand at its south end, beside the tall apartment building. The water is about 1.5 m deep 20 m out from the entry. The dive area is 163 m out, east-southeast, 114°, over 24.2 m of water.
 * **Parking.** Street parking around the park, at the top of the lawn above the beach.
-* **Access.** A Seattle city park, open 4 a.m. to 11:30 p.m. In summer the beach is a lifeguarded designated swimming area, and city code requires written permission from the Chief of Police, through the Seattle Police Harbor Patrol, to dive within 91 m of a patrolled designated swimming area. City code also requires a diver flag, and the blue and white Alpha flag does not satisfy it.
+* **Access.** A Seattle city park, open 4 a.m. to 11:30 p.m. From mid to late June through Labor Day the beach is a lifeguarded designated swimming area, and city code requires written permission from the Chief of Police, through the Seattle Police Harbor Patrol, to dive within 91 m of a patrolled designated swimming area. City code bars powered boats from within 91 m of a swimming beach, and also requires a diver flag, and the blue and white Alpha flag does not satisfy it.
 * **Facilities.** A bathhouse with restrooms, benches, a play area and tennis courts. In summer a swimming raft with diving boards sits off the beach.
 
 ## Navigation and landmarks
@@ -61,8 +61,8 @@ The swim out runs 63° off the entry shore's facing, to the right of straight ou
 
 ## Hazards
 
-* **Boat traffic.** The wreck lies out in the open lake, in the busy boat traffic running to and from the channel under the SR 520 bridge in boating season. Seattle's 7 knot (13 km/h) speed limit holds within 91 m of the shore, and the wreck lies beyond it. Surface with a diver flag or marker buoy deployed, listen for engines before ascending, and make the ascent up the slope toward the beach. Winter brings far less traffic.
-* **The swimming area.** In summer swimmers crowd the beach and the water off it, and diving within 91 m of the patrolled swimming area needs written permission from the Chief of Police, through the Seattle Police Harbor Patrol.
+* **Boat traffic.** The wreck lies out in the open lake, in the busy boat traffic running to and from the channel under the SR 520 bridge in boating season. Seattle's 7 knot (13 km/h) speed limit holds within 91 m of the shore, and in the lifeguard season powered boats are barred from within 91 m of the swimming beach; the wreck lies beyond both. Surface with a diver flag or marker buoy deployed, listen for engines before ascending, and make the ascent up the slope toward the beach. Winter brings far less traffic.
+* **The swimming area.** From mid to late June through Labor Day swimmers crowd the beach and the water off it, and diving within 91 m of the patrolled swimming area needs written permission from the Chief of Police, through the Seattle Police Harbor Patrol.
 * **Darkness and depth.** The wreck lies at 21 to 27 m in dark water, at a depth that takes a careful eye on the computer and the gas. Plan a turn depth and turn pressure before leaving the beach.
 * **The long swim.** The dive area is 163 m from the entry, a long surface swim each way in a drysuit, and a long underwater return on the gas left at the wreck.
 * **Sharp metal.** The wreck is torn and twisted metal with sharp edges.
