@@ -55,6 +55,9 @@ SPREAD_M = 10    # the spread of depths reported around a point
 SEARCH_M = 100   # how far a point with no data searches for the nearest pixel that has some
 
 
+GAP_M = 30.0   # how far a pixel with no data looks for the grid's water around it, for gap()
+
+
 UA = ncei.UA
 
 
@@ -357,6 +360,33 @@ def spread(t, x, y, row, col, radius_m):
     if not have:
         return None
     return -max(have), -min(have), (len(vals) - len(have)) / len(vals)
+
+
+def gap(t, x, y, row, col, open_deg=180.0):
+    """(depth, nearest pixel's distance, pixels used) at UTM (x, y), a pixel with no data between
+    the grid's water: its pixels under water within GAP_M lie on opposite sides of it, leaving no
+    empty angle of open_deg or more, and their depths are weighted by the inverse square of the
+    distance. None where that water lies to one side: past the survey's deep edge, between it and
+    the shore, or beside ground above water."""
+    k = int(GAP_M / t.sx) + 1
+    wet, bins = [], set()
+    for rr in range(row - k, row + k + 1):
+        for cc in range(col - k, col + k + 1):
+            v = t.fast(rr, cc)
+            if v is None or v >= 0:
+                continue
+            cx, cy = centre(t, rr, cc)
+            d = math.hypot(cx - x, cy - y)
+            if 0 < d <= GAP_M:
+                wet.append((d, -v))
+                bins.add(int(math.degrees(math.atan2(cy - y, cx - x)) % 360))
+    if not wet:
+        return None
+    b = sorted(bins)
+    if max([b[0] + 360 - b[-1]] + [q - p for p, q in zip(b, b[1:])]) >= open_deg:
+        return None
+    w = [1 / d ** 2 for d, _ in wet]
+    return sum(wi * z for wi, (_, z) in zip(w, wet)) / sum(w), min(d for d, _ in wet), len(wet)
 
 
 def answer(lat, lon):

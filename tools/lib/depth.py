@@ -88,9 +88,27 @@ class Dcbd:
 
     def answer(self, lat, lon):
         a = dcbd.answer(lat, lon)
+        if a.get("nodata"):
+            a = self._gap(lat, lon, a)
         r = a.pop("dem")
         key = datums.NONE if a["water"] == "sea" else None
         return {**a, "key": key, "source": f"{self.name}, {r['source']} (~{r['res_m']:.0f} m)", "reading": r}
+
+    def _gap(self, lat, lon, a):
+        """A pixel with no data between the grid's water (dcbd.gap) answers from that water, at
+        sea, where the 2019 survey holds no cell: there the survey reads the bottom DCBD did not
+        reach, a notch in its deep edge deeper than the edge around it."""
+        x, y = dcbd.utm(lat, lon)
+        if nlhs.in_box(lat, lon) and nlhs.raw(x, y) is not None:
+            return a
+        t = a["dem"]["tile"]
+        g = dcbd.gap(t, x, y, a["dem"]["row"], a["dem"]["col"])
+        if g is None or ncei.inland(lat, lon):
+            return a
+        z, d, used = g
+        return {**a, "water": "sea", "nodata": False, "depth": z, "datum": dcbd.DATUM, "why": None,
+                "detail": f"a gap in the grid between its water, interpolated from {used} pixels under water "
+                          f"within {dcbd.GAP_M:.0f} m on opposite sides, the nearest {d:.0f} m away"}
 
     def fetch(self, boxes, workers):
         """The grid, when any box touches it; the number that failed."""
@@ -340,11 +358,13 @@ LEGACY_SEAM = _LegacySeam()
 
 class Nlhs:
     """The Royal Netherlands Navy Hydrographic Service's 2019 multibeam survey of Bonaire's
-    leeward coast, a 20 m grid from about 1 m to 230 m deep: `lib/nlhs.py`'s order from
-    SeaDataNet, saved by hand, read where the DCBD survey has no data, interpolated between cell
-    centres, and lined up with DCBD by the offset measured where both hold flat bottom."""
+    leeward coast and the south half of its east coast, a 20 m grid from about 1 m to 230 m deep:
+    `lib/nlhs.py`'s order from SeaDataNet, saved by hand, read where the DCBD survey has no data,
+    interpolated between cell centres, and lined up with DCBD by the offset measured where both
+    hold flat bottom."""
     name = nlhs.NAME
-    coverage = "Bonaire's leeward coast from Karpata to the Invisibles, 1 to 230 m, from the Navy's 2019 survey"
+    coverage = ("Bonaire's leeward coast from Karpata to the Invisibles and its east coast from the south tip "
+                "to 12.16° N, 1 to 230 m, from the Navy's 2019 survey")
 
     def covers(self, lat, lon):
         return _navy_domain(lat, lon)
