@@ -34,7 +34,7 @@ Possession Sound's tidal exchange: weak over the flat, stronger at the pier's ou
 * **Type.** Tidal.
 * **Flood.** Sets east-southeast, 102°, along the shore toward Port Gardner, at peaks of about 0.1 m/s.
 * **Ebb.** Sets west-northwest, 282°, at about the same strength.
-* **Diveable window.** The predicted current stays under 0.25 m/s through the whole tidal cycle on every day of the year. Which slack holds best is not established.
+* **Diveable window.** The predicted current stays under 0.25 m/s through the whole tidal cycle on every day of the year.
 * **Outer end.** The water off the pier's outer end can run strong on an ebb, well above the predicted speed; time the dive for a slack.
 
 ## Wind

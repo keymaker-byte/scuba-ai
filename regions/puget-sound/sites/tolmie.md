@@ -24,10 +24,10 @@ Shore dive at Tolmie State Park on the south shore of Nisqually Reach, between J
 * **The flat.** Nearly level sand, sea lettuce and sand dollars from the beach out about 400 m, sloping gently to about 1.3 m below MLLW at its outer edge. It is awash about 300 m out at a zero tide and dries farther out on a minus tide. A good snorkel at high tide, and a long, featureless swim on scuba.
 * **The slope.** Between about 400 and 550 m out on the line to the barges, the bottom drops from about 1 m to about 14 m below MLLW, then flattens onto the sand around the barges.
 * **The heading.** Swim out from the footbridge on a compass heading of about 035° (050° true) toward the marker buoy. The buoy is white with faded orange bands and small at this distance; at high tide it is hard to pick out from the water until halfway out. Take the heading on shore before entering.
-* **The shallow barge.** The innermost of the three, inshore of the other two on the line out from the footbridge, in shallower water. Its position and depth are not established.
+* **The shallow barge.** The innermost of the three, inshore of the other two on the line out from the footbridge, in shallower water.
 * **The intermediate barge.** At about 47.12453, -122.77040, about 590 m from the entry on a bearing of 047°, west-northwest of the buoy. It stands about 2.5 m off a seabed about 14 m below MLLW, its top about 11.5 m.
 * **The outer barge.** At about 47.12417, -122.76964, about 610 m from the entry on a bearing of 054° and 70 m southeast of the intermediate barge. It lies beside the buoy's mooring block, its top about 12 m below MLLW, and the seabed along its outside (east) wall about 16 m, the deepest part of the dive.
-* **North of the buoy.** A larger, more intact wooden barge lies a long swim north of the buoy, past scattered tires, with holes rotted through its hull into the compartments. Its position is not established.
+* **North of the buoy.** A larger, more intact wooden barge lies a long swim north of the buoy, past scattered tires, with holes rotted through its hull into the compartments.
 * **Compass deviation.** Metal in and around the barges pulls a compass off near them. Take bearings a few metres clear of the wreckage.
 * **The way back.** Reverse the heading, about 215° on the compass (230° true), up the slope and across the flat to the footbridge. Ascend up or beside the buoy line and check for boats before starting the swim in.
 

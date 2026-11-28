@@ -31,7 +31,7 @@ Shore dive on the Mukilteo waterfront, on the south shore of Possession Sound at
 * **Flood.** Sets north-northeast.
 * **Ebb.** Sets south-southwest, the weaker of the two.
 * **Deep layer.** The deep water goes properly slack on the tidal cycle and can be planned from the predicted slack.
-* **Shallow layer.** Along this shore the shallow water shows a persistent eastward drift that does not follow the tide. Whether it ever reverses is not established, so treat the shallows as potentially always setting east.
+* **Shallow layer.** Along this shore the shallow water shows a persistent eastward drift that does not follow the tide. Treat the shallows as setting east on any tide.
 * **Diveable window.** Long on most days; the shallow eastward drift runs regardless.
 
 ## Wind

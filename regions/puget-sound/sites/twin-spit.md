@@ -15,7 +15,7 @@ A small public beach at the end of NE Twin Spits Road near Hansville, on the Kit
 
 * **Entry.** Straight down from the road end onto the small public beach and into the water. The surface swim is short: the bottom reaches 5 m below MLLW about 60 m out and 14.0 m below MLLW at the dive area, 107 m out on a bearing of 302°.
 * **Parking.** A few free spaces at the road end, limited, and the beach itself is the only staging area. Read the posted signs on arrival.
-* **Access.** From State Route 104, Hansville Road runs north about 13 km toward Hansville; turn left onto NE Twin Spits Road and follow it west past the Foulweather Bluff Preserve trailhead to its end. The public access is a narrow strip between private properties on both sides, so keep gear and people on the access and the beach in front of it. Hours are not established; follow the posted signs.
+* **Access.** From State Route 104, Hansville Road runs north about 13 km toward Hansville; turn left onto NE Twin Spits Road and follow it west past the Foulweather Bluff Preserve trailhead to its end. The public access is a narrow strip between private properties on both sides, so keep gear and people on the access and the beach in front of it. Follow the posted signs for hours.
 * **Facilities.** None.
 
 ## Navigation and landmarks
@@ -66,7 +66,7 @@ The tide here swings the depth by nearly 3 m on a typical day, so the depth on t
 
 ## Visibility
 
-* **Season.** Low through the spring and summer plankton blooms, often under 6 m on the slope, despite the exchange at the canal entrance. The best season at this site is not established.
+* **Season.** Low through the spring and summer plankton blooms, often under 6 m on the slope, despite the exchange at the canal entrance.
 * **Shallows.** The shallows can read worse than the slope on an incoming tide.
 * **Silt.** The bottom is fine silt, and fins on it erase the visibility for anyone following.
 
