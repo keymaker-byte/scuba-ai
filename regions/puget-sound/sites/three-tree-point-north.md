@@ -27,6 +27,20 @@ The reef is spread across a broad area and is easy to miss piecemeal, so most di
 * **Substrate.** Sandy cobble in the shallows, turning to silty sand at the top of the slope where eelgrass grows between about 5 and 8 m, then back to sandy cobble partway down. Below roughly 27 m it is silt and sand with little structure.
 * **Return and safety stop.** Come back up the slope and drift the shallows toward the entry, finishing with a safety stop over the sand, where the small animals reward a slow look.
 
+## Depth
+
+* **Typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m.
+* **Tidal swing.** East Passage swings 3 to 5 m between high and low water here, a large fraction of the reef's depth, so depths are given against the MLLW chart datum and a low tide reads several metres shallower than a high.
+
+| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
+|---|---|---|---|
+| Eelgrass band | 5 to 8 m | 3.7 to 6.7 m | 9.1 to 12.1 m |
+| Shallow tire cluster | 13 m | 11.7 m | 17.1 m |
+| Sunken cabin cruiser, bow | 14 m | 12.7 m | 18.1 m |
+| Deeper tire cluster | 18 m | 16.7 m | 22.1 m |
+| Fiberform boat | 21 m | 19.7 m | 25.1 m |
+| Base of reef, silt line | 27 m | 25.7 m | 31.1 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -48,25 +62,6 @@ The beach faces north to northwest across East Passage.
 * **Short fetch.** West (W), onshore over 4.8 km, and north-northeast (NNE), onshore over 3.7 km.
 * **Mixed.** Southwest (SW), cross-shore over 6.2 km.
 * **Fine.** Northeast clockwise through south-southwest (NE-SSW), offshore off the point and the land behind the beach, or cross-shore over 1.3 km or less; and west-southwest (WSW), cross-shore over 4.9 km.
-
-## Depth and tide
-
-East Passage swings 3 to 5 m between high and low water here, a large fraction of the reef's depth, so depths are given against the MLLW chart datum and a low tide reads several metres shallower than a high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Des Moines, East Passage (9446248), about 7.1 km south-southeast on the same shore |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m |
-
-| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
-|---|---|---|---|
-| Eelgrass band | 5 to 8 m | 3.7 to 6.7 m | 9.1 to 12.1 m |
-| Shallow tire cluster | 13 m | 11.7 m | 17.1 m |
-| Sunken cabin cruiser, bow | 14 m | 12.7 m | 18.1 m |
-| Deeper tire cluster | 18 m | 16.7 m | 22.1 m |
-| Fiberform boat | 21 m | 19.7 m | 25.1 m |
-| Base of reef, silt line | 27 m | 25.7 m | 31.1 m |
 
 ## Visibility
 

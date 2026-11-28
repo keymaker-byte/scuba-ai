@@ -30,6 +30,17 @@ Shore dive at the southeast end of Seacrest Park on the West Seattle waterfront,
 * **Deep wreckage.** A large piece of steel boat hull lies on the deep silt beyond the pilings, near 28 m, to the northwest when heading straight out from them. Beyond the hull the slope continues down over open silt.
 * **Debris.** Old dinghies, tires and scattered junk lie across the northwest half of the cove toward the fishing pier; individual pieces shift and silt over through the years.
 
+## Depth
+
+* **Typical range.** Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m.
+* **Tidal swing.** Elliott Bay swings 3 to 5 m between high and low water, so depths are given against the MLLW chart datum: a feature reads shallower at a low and deeper at a high, and a large minus tide exposes much of the rocky shore.
+
+| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
+|---|---|---|---|
+| Upper slope, 75 m out | 11 m | 9.7 m | 15.0 m |
+| Mid-slope at the site coordinate | 21 m | 19.7 m | 25.0 m |
+| Monolith, about 190 m out | 30 m | 28.7 m | 34.0 m |
+
 ## Current
 
 Current is negligible here. The cove sits deep inside Elliott Bay, sheltered from the main tidal streams, and stays diveable through the whole cycle on any exchange; pick the entry time for tide height, daylight and visibility.
@@ -51,22 +62,6 @@ The beach faces northeast across Elliott Bay toward downtown Seattle.
 * **Short fetch.** North through east-southeast (N-ESE), onshore over 1.1 to 4.3 km across the bay onto the entry, which builds chop on the rocks; a northerly has the longest fetch, in through the bay mouth.
 * **Mixed.** North-northwest (NNW), cross-shore over 5.6 km down the Sound, running chop along the beach.
 * **Fine.** Southeast clockwise through northwest (SE-NW): offshore from south through west-northwest, blocked by the West Seattle hill behind the park, and cross-shore under 1 km from southeast, south-southeast and northwest.
-
-## Depth and tide
-
-Elliott Bay swings 3 to 5 m between high and low water, so depths are given against the MLLW chart datum: a feature reads shallower at a low and deeper at a high, and a large minus tide exposes much of the rocky shore.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 3.3 km east-northeast across the bay |
-| **Series** | Full series |
-| **Typical range** | Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m |
-
-| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
-|---|---|---|---|
-| Upper slope, 75 m out | 11 m | 9.7 m | 15.0 m |
-| Mid-slope at the site coordinate | 21 m | 19.7 m | 25.0 m |
-| Monolith, about 190 m out | 30 m | 28.7 m | 34.0 m |
 
 ## Visibility
 

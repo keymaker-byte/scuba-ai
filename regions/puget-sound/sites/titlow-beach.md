@@ -29,6 +29,19 @@ Shore dive at Titlow Park in Tacoma, on the east shore of the Tacoma Narrows sou
 * **The slope.** West of the pilings the bottom flattens to shell and gravel, then drops away into the Narrows, past 25 m about 500 m out.
 * **The way back.** The pilings are the reference: from the shelves, follow the shore north to the slip, then swim the bearing back in on 119°.
 
+## Depth
+
+* **Typical range.** Median daily 3.78 m, up to 5.52 m on the year's biggest exchange; 2026 span -1.34 m to +4.40 m.
+* **Tidal swing.** The South Sound's tides are large, and the tide swings the depth here by up to about 5.5 m, so the pilings read from barely 3 m at a big minus tide to almost 10 m at a high. A high tide makes for the better dive among the pilings.
+
+| Feature | Below MLLW | At a -1.34 m low | At a +4.40 m high |
+|---|---|---|---|
+| Pilings, south end of the slip | 4.3 m | 3.0 m | 8.7 m |
+| Dive site coordinate, among the pilings | 5.1 m | 3.8 m | 9.5 m |
+| Pilings, north end of the slip | 5.2 m | 3.9 m | 9.6 m |
+| Barge remains | 6.4 m | 5.1 m | 10.8 m |
+| Southern shelves | 6 to 12 m | 4.7 to 10.7 m | 10.4 to 16.4 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -49,24 +62,6 @@ The beach faces west across the Narrows toward the Gig Harbor peninsula, about 1
 * **Bad.** South through southwest (S-SW), which come up from the South Sound past Day Island and Fox Island and push chop onto the beach, and north (N), the strong northerlies funnelled down the Narrows.
 * **Short fetch.** West-southwest through north-northwest (WSW-NNW), onshore over 2.0 to 3.9 km across the Narrows.
 * **Fine.** North-northeast clockwise through south-southeast (NNE-SSE), offshore off the bluff behind the park, or cross-shore over 310 m or less.
-
-## Depth and tide
-
-The South Sound's tides are large, and the tide swings the depth here by up to about 5.5 m, so the pilings read from barely 3 m at a big minus tide to almost 10 m at a high. A high tide makes for the better dive among the pilings.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Tacoma Narrows Bridge (9446486), about 2.7 km north on the same shore of the Narrows |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.78 m, up to 5.52 m on the year's biggest exchange; 2026 span -1.34 m to +4.40 m |
-
-| Feature | Below MLLW | At a -1.34 m low | At a +4.40 m high |
-|---|---|---|---|
-| Pilings, south end of the slip | 4.3 m | 3.0 m | 8.7 m |
-| Dive site coordinate, among the pilings | 5.1 m | 3.8 m | 9.5 m |
-| Pilings, north end of the slip | 5.2 m | 3.9 m | 9.6 m |
-| Barge remains | 6.4 m | 5.1 m | 10.8 m |
-| Southern shelves | 6 to 12 m | 4.7 to 10.7 m | 10.4 to 16.4 m |
 
 ## Visibility
 

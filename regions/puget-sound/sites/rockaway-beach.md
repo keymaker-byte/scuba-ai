@@ -25,6 +25,17 @@ Natural rock reef shore dive on the southeast shore of Bainbridge Island, at the
 * **The reef.** Narrow and easy to miss in a single pass: a rock rib running roughly west to east, outcrops and cracks rising up to about 3 m off the surrounding sand, in places extending further south than older maps of the site show.
 * **South along the rib.** Ropes at the far end of the reef lead toward two more fingers of the same system, known locally as Metridium Wall and Leiker's Reef. Both are a real surface swim from this entry, or better reached by boat or kayak, and not worth pushing to except in calm, settled conditions.
 
+## Depth
+
+* **Typical range.** Median daily 3.45 m, up to 5.10 m on the year's biggest exchange; 2026 span -1.30 m to +4.00 m.
+* **Tidal swing.** The site sits on the open main basin, and tide swings the depth here by several metres, enough to change which parts of the reef are comfortably worked at a given hour.
+
+| Feature | Below MLLW | At a -1.30 m low | At a +4.00 m high |
+|---|---|---|---|
+| Shallow ledges | 8 to 11 m | 6.7 to 9.7 m | 12.0 to 15.0 m |
+| Main reef, working depth | 15 to 18 m | 13.7 to 16.7 m | 19.0 to 22.0 m |
+| Outer edge of the rock rib | about 26 m | about 24.7 m | about 30.0 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -45,22 +56,6 @@ The beach faces east-northeast across the main basin toward Alki Point and West 
 * **Short fetch.** North (N), onshore over 2.6 km, and east-southeast (ESE), onshore over 1.2 km.
 * **Mixed.** Southeast (SE), cross-shore over 10.4 km.
 * **Fine.** South-southeast clockwise through north-northwest (SSE-NNW): offshore from south through west-northwest, blocked by the point and the wooded shore behind the cove, and cross-shore under 1.4 km from south-southeast, northwest and north-northwest.
-
-## Depth and tide
-
-The site sits on the open main basin, and tide swings the depth here by several metres, enough to change which parts of the reef are comfortably worked at a given hour.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Port Blakely (9445913), about 1.1 km west-southwest on the same shore, just inside the mouth of the harbor |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.45 m, up to 5.10 m on the year's biggest exchange; 2026 span -1.30 m to +4.00 m |
-
-| Feature | Below MLLW | At a -1.30 m low | At a +4.00 m high |
-|---|---|---|---|
-| Shallow ledges | 8 to 11 m | 6.7 to 9.7 m | 12.0 to 15.0 m |
-| Main reef, working depth | 15 to 18 m | 13.7 to 16.7 m | 19.0 to 22.0 m |
-| Outer edge of the rock rib | about 26 m | about 24.7 m | about 30.0 m |
 
 ## Visibility
 

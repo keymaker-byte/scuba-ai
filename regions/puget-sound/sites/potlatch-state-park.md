@@ -27,6 +27,19 @@ Potlatch State Park is a shore dive off a long cobble and eelgrass beach on the 
 * **Foot of the slope.** At about 46 m below MLLW, some 320 m from the entry, the bottom flattens into the deep basin of the canal.
 * **Getting home.** The slope runs north and south along the shore, so the way home is always upslope. Come back up to the drop-off, then follow 274°, the reciprocal of the 94° swim out, across the flat to the beach, or make the ascent away from the buoys and swim in on the surface.
 
+## Depth
+
+* **Typical range.** Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m.
+* **Tidal swing.** Hood Canal carries one of the largest tides in the region, and it decides both how far out the water starts and how deep every feature reads. A big high puts more than 4 m over the flat and moves the top of the drop-off to 8.8 to 10.3 m; a minus tide dries much of the flat and brings the buoy line up to 3.1 to 4.6 m.
+
+| Feature | Below MLLW | At a -1.40 m low | At a +4.32 m high |
+|---|---|---|---|
+| Eelgrass flat | 0 to 3 m | Dry to 1.6 m | 4.3 to 7.3 m |
+| Top of the drop-off, buoy line | 4.5 to 6 m | 3.1 to 4.6 m | 8.8 to 10.3 m |
+| Site coordinate | 18.1 m | 16.7 m | 22.4 m |
+| Sea whip field | 20 to 37 m | 18.6 to 35.6 m | 24.3 to 41.3 m |
+| Foot of the slope | 46 m | 44.6 m | 50.3 m |
+
 ## Current
 
 Potlatch is dived independently of the tide. The water here barely moves on any exchange, far under any speed that would close the site.
@@ -51,24 +64,6 @@ The beach is a straight east-facing shore. The water opens east across the canal
 * **Short fetch.** Northeast through east-northeast (NE-ENE) and east-southeast through south-southeast (ESE-SSE), onshore over 2.1 to 4.1 km across the canal, short fetch but straight onto the beach.
 * **Mixed.** North-northeast (NNE), over 14.6 km, blows up the length of the canal nearly parallel to the shore and runs a swell along the beach past the entry.
 * **Fine.** South clockwise through north (S-N): offshore from southwest through north-northwest, blocked by the high ground behind the park and the highway, and cross-shore over 1.0 to 1.3 km from south, south-southwest and north.
-
-## Depth and tide
-
-Hood Canal carries one of the largest tides in the region, and it decides both how far out the water starts and how deep every feature reads. A big high puts more than 4 m over the flat and moves the top of the drop-off to 8.8 to 10.3 m; a minus tide dries much of the flat and brings the buoy line up to 3.1 to 4.6 m.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Union (9445478), about 4.2 km east, across Annas Bay at the Great Bend |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m |
-
-| Feature | Below MLLW | At a -1.40 m low | At a +4.32 m high |
-|---|---|---|---|
-| Eelgrass flat | 0 to 3 m | Dry to 1.6 m | 4.3 to 7.3 m |
-| Top of the drop-off, buoy line | 4.5 to 6 m | 3.1 to 4.6 m | 8.8 to 10.3 m |
-| Site coordinate | 18.1 m | 16.7 m | 22.4 m |
-| Sea whip field | 20 to 37 m | 18.6 to 35.6 m | 24.3 to 41.3 m |
-| Foot of the slope | 46 m | 44.6 m | 50.3 m |
 
 ## Visibility
 

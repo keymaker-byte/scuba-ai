@@ -25,6 +25,12 @@ Shore dive on the Mukilteo waterfront, on the south shore of Possession Sound at
 * **The geodome.** A geodesic dome about 6 m across, built of PVC, decades old and heavily encrusted with jingle shells. Its top sits about 15.4 m below MLLW datum, reached on a straight descent a few minutes off the beach. Copper rockfish shelter inside it, around a statue of an angel set at its centre.
 * **Ferry terminal.** 47.9503, -122.2964, about 470 m east of the entry on a bearing of 080°. Opened December 2020.
 
+## Depth
+
+* **Typical range.** Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m.
+* **Tidal swing.** Possession Sound swings up to about 5 m between high and low water here, so depths are relative to the tide and given against the MLLW chart datum.
+* **Geodome.** The geodome top, at about 15.4 m below datum, reads about 14.1 m below the surface at the year's lowest low of -1.30 m, and about 19.3 m at its highest high of +3.85 m.
+
 ## Current
 
 * **Type.** Tidal.
@@ -47,18 +53,6 @@ The beach faces north to northwest, into Possession Sound.
 * **Short fetch.** West-northwest (WNW), onshore over 3.8 km.
 * **Mixed.** East-northeast (ENE), over 5.8 km, and west-southwest (WSW), over 5.2 km, cross-shore.
 * **Fine.** East through southwest (E-SW): offshore from east-southeast through southwest, where the beach stays flat regardless of speed, and cross-shore over 460 m from the east; and west (W), cross-shore over 3.7 km.
-
-## Depth and tide
-
-Possession Sound swings up to about 5 m between high and low water here, so depths are relative to the tide and given against the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Glendale, Whidbey Island (9447814), about 4.2 km west-southwest across Possession Sound |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m |
-
-The geodome top, at about 15.4 m below datum, reads about 14.1 m below the surface at the year's lowest low of -1.30 m, and about 19.3 m at its highest high of +3.85 m.
 
 ## Visibility
 

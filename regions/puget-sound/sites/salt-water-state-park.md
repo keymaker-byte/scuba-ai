@@ -26,6 +26,17 @@ Shore dive at Saltwater State Park in Des Moines, on the mainland shore of East 
 * **Eelgrass.** Inshore of the reef, where the sandy cobble shallows give way to clean sand, an eelgrass bed grows.
 * **Old tire debris.** A larger field of tire debris from the original reef remains scattered further out and to the north of the maintained dive area. It is not part of the marked route and is easy to wander into by accident; stick to the guide lines.
 
+## Depth
+
+* **Typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m.
+* **Tidal swing.** East Passage swings up to about 5 m between high and low water here, and combined with the long entry flat, the tide governs this dive as much through the walk and swim as through the reef's own depth.
+
+| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
+|---|---|---|---|
+| Reef fingers begin | 7.6 m | 6.3 m | 11.7 m |
+| Mid reef, buoy line | 12.4 m | 11.1 m | 16.5 m |
+| Base of reef, edge of drop off | 20.4 m | 19.1 m | 24.5 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -46,22 +57,6 @@ The beach faces west across East Passage toward Vashon Island.
 * **Short fetch.** South-southwest (SSW), onshore over 4.0 km, and west-northwest (WNW), onshore over 3.9 km.
 * **Mixed.** North-northwest (NNW), cross-shore over 9.2 km.
 * **Fine.** North clockwise through south (N-S): offshore from north-northeast through southeast, off the wooded bluff behind the park, and cross-shore under 3.0 km from north, south-southeast and south.
-
-## Depth and tide
-
-East Passage swings up to about 5 m between high and low water here, and combined with the long entry flat, the tide governs this dive as much through the walk and swim as through the reef's own depth.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Des Moines, East Passage (9446248), about 3.0 km north on the same shore |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m |
-
-| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
-|---|---|---|---|
-| Reef fingers begin | 7.6 m | 6.3 m | 11.7 m |
-| Mid reef, buoy line | 12.4 m | 11.1 m | 16.5 m |
-| Base of reef, edge of drop off | 20.4 m | 19.1 m | 24.5 m |
 
 ## Visibility
 

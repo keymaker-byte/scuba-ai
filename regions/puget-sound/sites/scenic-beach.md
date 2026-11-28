@@ -25,6 +25,17 @@ Scenic Beach State Park is a gently sloping sand and cobble beach on the east sh
 * **Eelgrass band.** Cobble gives way to eelgrass over sand from about 1.5 m below MLLW; passing through it inbound means the exit is close.
 * **Sea whip beds.** On the deep sand straight out from the stairs, from roughly 18 m below MLLW down the slope. They are the far turn point of the standard dive.
 
+## Depth
+
+* **Typical range.** Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m.
+* **Tidal swing.** Hood Canal swings harder than the main basin, and on this gentle slope the tide moves the waterline a long way horizontally as well as vertically: a high tide puts the eelgrass comfortably underwater and shortens the swim, a minus tide adds a long wade and pushes every feature shallower than the datum figure.
+
+| Feature | Below MLLW | At a -1.39 m low | At a +4.00 m high |
+|---|---|---|---|
+| Eelgrass edge | about 1.5 m | about 0.1 m, wading depth | about 5.5 m |
+| Sea whip beds | 18 to 20 m | 16.6 to 18.6 m | 22.0 to 24.0 m |
+| Sand slope beyond | past 20 m | past 18.6 m | past 24.0 m |
+
 ## Current
 
 The current here is weak at every stage of the tide, running parallel to the beach along the canal axis, and the site can be dived at any time.
@@ -48,22 +59,6 @@ The beach faces north-northwest across Hood Canal toward the Toandos Peninsula a
 * **Short fetch.** North-northeast (NNE), onshore over 4.5 km, and west through west-northwest (W-WNW), onshore over 3.9 to 4.7 km.
 * **Mixed.** Northeast through east-northeast (NE-ENE), over 5.4 to 8.3 km, and west-southwest (WSW), over 10.8 km, cross-shore, running up and down the canal roughly parallel to the shore and building a swell that passes the beach rather than driving into it.
 * **Fine.** East through southwest (E-SW): offshore from east through south-southwest, off the Kitsap high ground behind the park, leaving the beach in the lee, and cross-shore over 3.0 km from the southwest.
-
-## Depth and tide
-
-Hood Canal swings harder than the main basin, and on this gentle slope the tide moves the waterline a long way horizontally as well as vertically: a high tide puts the eelgrass comfortably underwater and shortens the swim, a minus tide adds a long wade and pushes every feature shallower than the datum figure.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Seabeck, Seabeck Bay (9445303), about 2.0 km east-southeast |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m |
-
-| Feature | Below MLLW | At a -1.39 m low | At a +4.00 m high |
-|---|---|---|---|
-| Eelgrass edge | about 1.5 m | about 0.1 m, wading depth | about 5.5 m |
-| Sea whip beds | 18 to 20 m | 16.6 to 18.6 m | 22.0 to 24.0 m |
-| Sand slope beyond | past 20 m | past 18.6 m | past 24.0 m |
 
 ## Visibility
 

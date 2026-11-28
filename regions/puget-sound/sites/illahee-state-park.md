@@ -24,6 +24,16 @@ Illahee State Park sits on the Kitsap Peninsula's east shore in Bremerton, on th
 * **Past the pilings.** Beyond the pier, the sand bottom drops gradually, reaching the site's usual working depth, about 13.6 m, roughly 200 m out.
 * **Depth creep.** The same sand slope keeps dropping past that point, reaching roughly 25 to 30 m within another 100 to 200 m. Most of the life described below sits well inside that, above the working depth.
 
+## Depth
+
+* **Typical range.** Median daily 3.56 m, up to 5.26 m on the year's biggest exchange; 2026 span -1.35 m to +4.12 m.
+* **Tidal swing.** Tide swings the depth here by a few metres across a normal day.
+
+| Feature | Below MLLW | At a -1.35 m low | At a +4.12 m high |
+|---|---|---|---|
+| Pilings, inner pier | 1.8 m | 0.5 m | 5.9 m |
+| Outer slope, working depth | 13.6 m | 12.3 m | 17.7 m |
+
 ## Current
 
 Current here is negligible at every stage of the tide, at the surface and depth-averaged alike, so this is not a slack-tide dive.
@@ -45,21 +55,6 @@ The site faces northeast, across the Port Orchard reach toward Bainbridge Island
 
 * **Short fetch.** North through east-southeast (N-ESE), onshore over 1.3 to 3.1 km, the open fetch down the reach from Agate Passage and across the water to Bainbridge Island.
 * **Fine.** Southeast clockwise through north-northwest (SE-NNW): offshore from south through west-northwest, blocked by the Kitsap Peninsula landmass behind the site, and cross-shore under 3.1 km from southeast, south-southeast, northwest and north-northwest.
-
-## Depth and tide
-
-Tide swings the depth here by a few metres across a normal day.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Brownsville, Port Orchard (9445832), about 5.9 km north-northwest on the same shore |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.56 m, up to 5.26 m on the year's biggest exchange; 2026 span -1.35 m to +4.12 m |
-
-| Feature | Below MLLW | At a -1.35 m low | At a +4.12 m high |
-|---|---|---|---|
-| Pilings, inner pier | 1.8 m | 0.5 m | 5.9 m |
-| Outer slope, working depth | 13.6 m | 12.3 m | 17.7 m |
 
 ## Visibility
 

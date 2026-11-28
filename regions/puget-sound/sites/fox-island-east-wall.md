@@ -28,6 +28,19 @@ Shore dive off the Fox Island Fishing Pier at Toy Point, the eastern tip of Fox 
 * **Below the ledges.** The bottom slopes on as cobble and shell past 30 m, with a few low shelves and little of the walls' life.
 * **The way back.** Ascend hugging the contours of the wall all the way to the surface, and check position before surfacing; the public beach is the stretch in front of the trail and the fence.
 
+## Depth
+
+* **Typical range.** Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m.
+* **Tidal swing.** South Sound tides are large, and the tide swings the depth here by up to about 6 m, so the base of the deeper ledge reads anywhere from about 20 to 26 m on the gauge.
+
+| Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |
+|---|---|---|---|
+| Top of the shallow southern ledge | 2 m | 0.6 m | 6.8 m |
+| Base of the northern ledge | 7 m | 5.6 m | 11.8 m |
+| Base of the shallow southern ledge | 9 to 12 m | 7.6 to 10.6 m | 13.8 to 16.8 m |
+| Dive site coordinate | 16.4 m | 15.0 m | 21.2 m |
+| Base of the deeper southern ledge, southern ridges | 21 m | 19.6 m | 25.8 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -48,24 +61,6 @@ The beach faces east-southeast across the south end of the Narrows toward Day Is
 * **Short fetch.** East-northeast through south-southeast (ENE-SSE), onshore over 1.7 to 2.1 km across to Day Island.
 * **Mixed.** South-southwest (SSW), cross-shore over 7.8 km.
 * **Fine.** Southwest clockwise through north-northwest (SW-NNW), offshore off the island behind the park, and north-northeast through northeast (NNE-NE), cross-shore under 4.2 km.
-
-## Depth and tide
-
-South Sound tides are large, and the tide swings the depth here by up to about 6 m, so the base of the deeper ledge reads anywhere from about 20 to 26 m on the gauge.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Steilacoom, Cormorant Passage (9446714), about 6.2 km south, south of the Narrows sill in the same basin |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m |
-
-| Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |
-|---|---|---|---|
-| Top of the shallow southern ledge | 2 m | 0.6 m | 6.8 m |
-| Base of the northern ledge | 7 m | 5.6 m | 11.8 m |
-| Base of the shallow southern ledge | 9 to 12 m | 7.6 to 10.6 m | 13.8 to 16.8 m |
-| Dive site coordinate | 16.4 m | 15.0 m | 21.2 m |
-| Base of the deeper southern ledge, southern ridges | 21 m | 19.6 m | 25.8 m |
 
 ## Visibility
 

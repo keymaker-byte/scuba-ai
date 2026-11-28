@@ -25,6 +25,11 @@ A shore dive from the sand beach of Golden Gardens Park in Ballard, Seattle, on 
 * **The slope.** Plain sand and silt falling steadily west: about 19 m below MLLW at 120 m from the entry, 29 m at 170 m, 36 m at 220 m and past 50 m at 370 m. The bottom is bare and featureless, so depth is position: downhill is out, uphill is home.
 * **The marina breakwater.** The north end of Shilshole Bay Marina's breakwater and the Eddie Vine boat ramp lie about 500 m south of the entry; the boat channel at the marina's north entrance is the edge of the site.
 
+## Depth
+
+* **Typical range.** Median daily 3.35 m, up to 4.98 m on the year's biggest exchange; 2026 span -1.30 m to +3.89 m.
+* **Tidal swing.** The tide swings up to about 5 m here, so depths are given against MLLW.
+
 ## Current
 
 The beach lies off the main tidal stream of the Sound, and the current here is gentle on every exchange.
@@ -47,16 +52,6 @@ The beach faces southwest across Puget Sound toward Bainbridge Island, with Mead
 * **Short fetch.** South-southwest (SSW), onshore over 2.8 km across Shilshole Bay, enough for a short chop on the entry.
 * **Mixed.** Northwest through north-northwest (NW-NNW), along the shore past Meadow Point over 8.3 to 21.2 km. North-northwest is the beach's strongest sailing wind, running chop down the length of the shore past the entry.
 * **Fine.** North clockwise through south (N-S): offshore from north through east-southeast, north quartering off the beach past Meadow Point and the rest off the park and the bluff behind it; cross-shore from southeast and south-southeast over less than 1 km; and onshore from south over 710 m, sheltered by the marina breakwater and the bluff to the south.
-
-## Depth and tide
-
-The tide swings up to about 5 m here, so depths are given against MLLW.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Meadow Point, Shilshole Bay (9447265), about 0.5 km south-southeast of the dive area |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.35 m, up to 4.98 m on the year's biggest exchange; 2026 span -1.30 m to +3.89 m |
 
 ## Visibility
 

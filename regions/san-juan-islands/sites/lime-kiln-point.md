@@ -26,6 +26,18 @@ Shore dive below the Lime Kiln lighthouse in Lime Kiln Point State Park, on the 
 * **North of the lighthouse.** The slope runs past 25 m within about 130 m north-northwest of the dive coordinate, with a small wall near the base of the dived slope running north from below the lighthouse, holding rockfish schools and wolf eel dens under its ledges.
 * **Hydrophone.** A research hydrophone array off the lighthouse, cabled to it, records orca calls. Leave it undisturbed.
 
+## Depth
+
+* **Typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 to +2.70 m.
+* **Tidal swing.** The site swings about 2.2 m between high and low water on a typical day, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
+|---|---|---|---|
+| Dive coordinate, top of the wall at the kelp edge | 8.9 m | 7.8 m | 11.6 m |
+| Wall, 15 m west of the dive coordinate | 19.1 m | 18.0 m | 21.8 m |
+| Wall, 37 m west of the dive coordinate | 31.8 m | 30.7 m | 34.5 m |
+| Wall, 66 m west of the dive coordinate | 38.0 m | 36.9 m | 40.7 m |
+
 ## Current
 
 Haro Strait's tidal stream runs along the point, setting north-northwest on the flood and south-southeast on the ebb, and the point bends and splits it close inshore.
@@ -49,23 +61,6 @@ Haro Strait's tidal stream runs along the point, setting north-northwest on the 
 * **Bad.** South through west-northwest (S-WNW), onshore over 11.6 to more than 30 km of open water across Haro Strait and up from the Strait of Juan de Fuca, driving wind waves straight onto the cleft and the rocks of the entry.
 * **Mixed.** South-southeast (SSE), along the shore over more than 30 km, and northwest (NW), along the shore over 12.1 km, each running swell past the entry.
 * **Fine.** North-northwest clockwise through southeast (NNW-SE), blocked by the island itself, with 690 m of fetch at most.
-
-## Depth and tide
-
-The site swings about 2.2 m between high and low water on a typical day, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Kanaka Bay, San Juan Island (9449856), about 6.2 km southeast |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 to +2.70 m |
-
-| Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
-|---|---|---|---|
-| Dive coordinate, top of the wall at the kelp edge | 8.9 m | 7.8 m | 11.6 m |
-| Wall, 15 m west of the dive coordinate | 19.1 m | 18.0 m | 21.8 m |
-| Wall, 37 m west of the dive coordinate | 31.8 m | 30.7 m | 34.5 m |
-| Wall, 66 m west of the dive coordinate | 38.0 m | 36.9 m | 40.7 m |
 
 ## Visibility
 

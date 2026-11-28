@@ -27,6 +27,16 @@ Shore dive at Seacrest Park on the West Seattle waterfront, also known as Alki C
 * **I-beams.** Steel I-beams and girders from the marina days stand on the deeper slope, roughly 26 to 33 m down depending on tide, and are the usual deep objective.
 * **Depth as a guide.** The bottom is a moderate, even, silty slope falling away to the northeast, so depth reads as distance from shore: up the slope is home in any visibility. It steepens quickly, reaching about 40 m only 150 m off the beach.
 
+## Depth
+
+* **Typical range.** Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m.
+* **Tidal swing.** Elliott Bay swings 3 to 5 m between high and low water, so depths are given against the MLLW chart datum: a feature reads shallower at a low and deeper at a high.
+
+| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
+|---|---|---|---|
+| Honey Bear remains | 8 m | 6.7 m | 12.0 m |
+| Mid-slope at the site coordinate | 24 m | 22.7 m | 28.0 m |
+
 ## Current
 
 Current is not a planning factor here. The cove sits deep inside Elliott Bay, away from the main tidal streams, and stays diveable through the whole cycle on any exchange; pick the entry time for tide height, boat traffic and daylight rather than slack.
@@ -48,21 +58,6 @@ The beach faces northeast across Elliott Bay. With almost no tidal stream, the r
 * **Short fetch.** North through east-southeast (N-ESE), onshore over 1.7 to 4.8 km across the bay onto the entry, which builds chop on the beach; a northerly has the longest fetch, in through the bay mouth.
 * **Mixed.** North-northwest (NNW), cross-shore over 5.5 km down the Sound.
 * **Fine.** Southeast clockwise through northwest (SE-NW): offshore from south through west-northwest, blocked by the West Seattle hill behind the park, and cross-shore under 1 km from southeast, south-southeast and northwest. The cove is often calm when the beach around the point is blown out, which makes it the standing bad-weather alternative.
-
-## Depth and tide
-
-Elliott Bay swings 3 to 5 m between high and low water, so depths are given against the MLLW chart datum: a feature reads shallower at a low and deeper at a high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 3.3 km east-northeast across the bay |
-| **Series** | Full series |
-| **Typical range** | Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m |
-
-| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
-|---|---|---|---|
-| Honey Bear remains | 8 m | 6.7 m | 12.0 m |
-| Mid-slope at the site coordinate | 24 m | 22.7 m | 28.0 m |
 
 ## Visibility
 

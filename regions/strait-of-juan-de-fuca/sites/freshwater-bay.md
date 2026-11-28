@@ -27,6 +27,18 @@ Freshwater Bay opens north onto the Strait of Juan de Fuca between Angeles Point
 * **West of the rock.** Observatory Point Reef continues along the rugged bluffs toward Striped Peak, a boat dive in its own right, not part of this shore crossing.
 * **West shore.** Private property beyond the park boundary; stay off the beach there.
 
+## Depth
+
+* **Typical range.** Median daily 2.10 m, up to 3.25 m on the year's biggest exchange; 2026 span -0.98 m to +2.44 m.
+* **Tidal swing.** The strait's tide swings up to about 3.3 m in a day here, so depths are given below the MLLW chart datum. The boat ramp itself dries at low water.
+
+| Feature | Below MLLW | At a -0.98 m low | At a +2.44 m high |
+|---|---|---|---|
+| Crossing, deepest point | 5.4 m | 4.4 m | 7.8 m |
+| Reef top, bay side | 4.5 m | 3.5 m | 6.9 m |
+| Reef edge | 11.5 m | 10.5 m | 13.9 m |
+| Bachelor Rock's outer wall | 17.6 m | 16.6 m | 20.0 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -48,23 +60,6 @@ The bay opens roughly north onto the strait, between Angeles Point to the east a
 * **Short fetch.** East-southeast (ESE), onshore over 4.2 km, putting chop on the crossing.
 * **Mixed.** Northwest through north-northwest (NW-NNW), cross-shore over 26 km to more than 30 km, which runs a swell past the rock and the entry.
 * **Fine.** Southeast clockwise through west-northwest: cross-shore over 2 km or less from the southeast and south-southeast, and offshore from south through west-northwest, off the land and behind Observatory Point. West is the region's prevailing summer wind, and Bachelor Rock sits right at the edge of the bay, so a westerly can put waves on the rock's west side; the dive works the east side, but check the rock under any west wind.
-
-## Depth and tide
-
-The strait's tide swings up to about 3.3 m in a day here, so depths are given below the MLLW chart datum. The boat ramp itself dries at low water.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Crescent Bay tide station (9443826), about 6.7 km west |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.10 m, up to 3.25 m on the year's biggest exchange; 2026 span -0.98 m to +2.44 m |
-
-| Feature | Below MLLW | At a -0.98 m low | At a +2.44 m high |
-|---|---|---|---|
-| Crossing, deepest point | 5.4 m | 4.4 m | 7.8 m |
-| Reef top, bay side | 4.5 m | 3.5 m | 6.9 m |
-| Reef edge | 11.5 m | 10.5 m | 13.9 m |
-| Bachelor Rock's outer wall | 17.6 m | 16.6 m | 20.0 m |
 
 ## Visibility
 

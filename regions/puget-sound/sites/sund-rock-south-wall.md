@@ -24,6 +24,15 @@ Sund Rock South Wall is a boulder-strewn rock wall on the west shore of Hood Can
 * **Boulder formations.** Reached directly from the footpath entry, right onto the wall with no swim needed. Boulder formations between 6 and 15 m, holding some of the best wolf eel and octopus dens on the property.
 * **Getting home.** The wall itself is the landmark. Keep it on one shoulder outbound and the other inbound, and the shallow water over the boulder formations leads back to the entry.
 
+## Depth
+
+* **Typical range.** Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m.
+* **Tidal swing.** Hood Canal swings up to about 5.6 m in a day here, and the tide is the single biggest control on how the site reads. A high tide adds several metres to every feature and floods the shallow bench, which is why the site is usually dived on a tide of 3 m or more. Those high daytime tides fall in winter, which is also when the visibility is best.
+
+| Feature | Below MLLW | At a -1.40 m low | At a +4.32 m high |
+|---|---|---|---|
+| Boulder formations | 6 to 15 m | 4.6 to 13.6 m | 10.3 to 19.3 m |
+
 ## Current
 
 Sund Rock South Wall is dived independently of the tide. The current in the channel stays gentle even on a large exchange and is weaker again inshore in the bay, so there is no slack window to hit and no exchange size that closes the site.
@@ -47,20 +56,6 @@ The bay opens east and northeast onto Hood Canal, backed by the steep ground of 
 * **Short fetch.** North-northeast (NNE), onshore over 3.4 km, and east-northeast through southeast (ENE-SE), onshore over 2.0 to 3.1 km across the canal; though the fetch is short, they blow straight into the entry.
 * **Mixed.** South (S), cross-shore over 10.5 km up the canal, roughly parallel to the shore, so it builds a swell that passes the entry rather than driving into it.
 * **Fine.** South-southwest clockwise through north (SSW-N), offshore and blocked by the high ground behind the site or under 600 m of fetch; and south-southeast (SSE), cross-shore over 3.0 km.
-
-## Depth and tide
-
-Hood Canal swings up to about 5.6 m in a day here, and the tide is the single biggest control on how the site reads. A high tide adds several metres to every feature and floods the shallow bench, which is why the site is usually dived on a tide of 3 m or more. Those high daytime tides fall in winter, which is also when the visibility is best.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Union (9445478), about 8.6 km south, down the canal at the Great Bend |
-| **Series** | Full series |
-| **Typical range** | Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m |
-
-| Feature | Below MLLW | At a -1.40 m low | At a +4.32 m high |
-|---|---|---|---|
-| Boulder formations | 6 to 15 m | 4.6 to 13.6 m | 10.3 to 19.3 m |
 
 ## Visibility
 

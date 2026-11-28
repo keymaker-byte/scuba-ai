@@ -27,6 +27,20 @@ Shore dive from the beach of Eagle Cove County Park, a wide, secluded south-faci
 * **East side.** Along the east shore the cove rounds an unnamed rocky point, still inside the cove, into a second small, shallow rocky bay. The bottom on this side deepens slowly.
 * **Kelp.** In summer bull kelp grows along both sides of the cove over a thick understory of smaller kelps, forming a canopy that dims the light below to twilight.
 
+## Depth
+
+* **Typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 m to +2.70 m.
+* **Tidal swing.** The site swings about 2.2 m between an average high and low water, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
+|---|---|---|---|
+| Edge of the sand flat, 135 m out from the entry | 0.9 m | Dry | 3.6 m |
+| Dive coordinate, middle of the cove | 7.5 m | 6.4 m | 10.2 m |
+| Mouth of the cove, 145 m south of the dive coordinate | 14.4 m | 13.3 m | 17.1 m |
+| Off the west shore inside Eagle Point, 240 m west-southwest of the dive coordinate | 15.2 m | 14.1 m | 17.9 m |
+| Off the tip of Eagle Point | 9.8 m | 8.7 m | 12.5 m |
+| Drop-off 40 m south of the tip of Eagle Point | 43.0 m | 41.9 m | 45.7 m |
+
 ## Current
 
 The cove sits beside the tidal stream of Haro Strait and the eastern Strait of Juan de Fuca, which drives a clockwise eddy through it on the flood.
@@ -51,25 +65,6 @@ The beach faces south-southeast out of the cove's mouth, while the dive area's n
 * **Bad.** Southeast through southwest (SE-SW), onshore over 21.5 km to more than 30 km of open water across the Strait of Juan de Fuca, driving wind waves and swell into the mouth of the cove and onto the beach.
 * **Mixed.** West-southwest (WSW), along the shore over more than 30 km, running swell past Eagle Point into the mouth of the cove.
 * **Fine.** West clockwise through east-southeast (W-ESE), blocked by Eagle Point and the island itself, with 510 m of fetch at most.
-
-## Depth and tide
-
-The site swings about 2.2 m between an average high and low water, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Kanaka Bay, San Juan Island (9449856), about 4.8 km northwest |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 m to +2.70 m |
-
-| Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
-|---|---|---|---|
-| Edge of the sand flat, 135 m out from the entry | 0.9 m | Dry | 3.6 m |
-| Dive coordinate, middle of the cove | 7.5 m | 6.4 m | 10.2 m |
-| Mouth of the cove, 145 m south of the dive coordinate | 14.4 m | 13.3 m | 17.1 m |
-| Off the west shore inside Eagle Point, 240 m west-southwest of the dive coordinate | 15.2 m | 14.1 m | 17.9 m |
-| Off the tip of Eagle Point | 9.8 m | 8.7 m | 12.5 m |
-| Drop-off 40 m south of the tip of Eagle Point | 43.0 m | 41.9 m | 45.7 m |
 
 ## Visibility
 

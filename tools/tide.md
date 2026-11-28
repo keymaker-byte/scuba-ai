@@ -75,7 +75,7 @@ Standard library only.
 python3 tools/tide.py stations --near <lat> <lon> --datum <K>                                       # find a station on the site's datum, then verify its name
 python3 tools/tide.py predict STATION_ID --date 2026-07-12 --tz <IANA_ZONE> --file <slug.json>      # high/low water and the day's range
 python3 tools/tide.py at STATION_ID --time "2026-07-12 09:18" --tz <IANA_ZONE> --file <slug.json>   # tide height at a moment
-python3 tools/tide.py range STATION_ID --year 2026 --tz <IANA_ZONE> --file <slug.json>              # site file: the "Typical range" row
+python3 tools/tide.py range STATION_ID --year 2026 --tz <IANA_ZONE> --file <slug.json>              # site file: the "Typical range" bullet
 python3 tools/tide.py project STATION_ID --date 2026-07-12 --tz <IANA_ZONE> --file <slug.json>      # planning: the site's seabed_m to depth below surface, all day
 python3 tools/tide.py project STATION_ID --datum-depth 15.4 --datum <K> --date 2026-07-12 --tz <IANA_ZONE>   # planning: any datum depth
 python3 tools/tide.py normalize STATION_ID --time "2026-07-12 09:21" --depth 14.5 --tz <IANA_ZONE> --file <slug.json>  # logging: observed depth to depth below the datum

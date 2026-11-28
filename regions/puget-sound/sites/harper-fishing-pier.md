@@ -26,6 +26,17 @@ Shore dive off the Port of Bremerton's public fishing pier at Harper, on Yukon H
 * **Small wreck.** The fiberglass hull of a 5 to 6 m boat lies a short kick from the Barbara G, slightly deeper, joined to it by a short line.
 * **Bottle and brick field.** Old bottles, jars and bricks from the landing and the brickworks that once stood here are scattered around the pier and its old dolphin sites, thickest out around 12 m below MLLW off the pier end.
 
+## Depth
+
+* **Typical range.** Median daily 3.48 m, up to 5.13 m on the year's biggest exchange; 2026 span -1.30 m to +4.04 m.
+* **Tidal swing.** The site is shallow enough that the tide changes its character: at a big low the pier end is barely 3 m deep, at a high it is over 8 m.
+
+| Feature | Below MLLW | At a -1.30 m low | At a +4.04 m high |
+|---|---|---|---|
+| Pier end float | 4.3 m | 3.0 m | 8.3 m |
+| Barbara G and small wreck | 7 m | 5.7 m | 11.0 m |
+| Bottle field | 12 m | 10.7 m | 16.0 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -45,22 +56,6 @@ The beach faces east-northeast across Yukon Harbor toward Blake Island, with the
 * **Bad.** North (N), onshore over 5.7 km, and east (E), onshore over 9.3 km, blow straight in across the harbor and the open channel past Blake Island, building chop on the float entry and the rocky exit.
 * **Short fetch.** North-northeast through east-northeast (NNE-ENE), onshore over 2.0 to 2.5 km, and east-southeast (ESE), onshore over 3.5 km.
 * **Fine.** Southeast clockwise through north-northwest (SE-NNW): offshore from south through west-northwest, Puget Sound's usual storm direction, blowing off the land behind the beach and leaving the harbor calm, and cross-shore under 4.5 km from southeast, south-southeast, northwest and north-northwest.
-
-## Depth and tide
-
-The site is shallow enough that the tide changes its character: at a big low the pier end is barely 3 m deep, at a high it is over 8 m.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Harper, Yukon Harbor (9445993), about 0.1 km northeast, at the pier end |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.48 m, up to 5.13 m on the year's biggest exchange; 2026 span -1.30 m to +4.04 m |
-
-| Feature | Below MLLW | At a -1.30 m low | At a +4.04 m high |
-|---|---|---|---|
-| Pier end float | 4.3 m | 3.0 m | 8.3 m |
-| Barbara G and small wreck | 7 m | 5.7 m | 11.0 m |
-| Bottle field | 12 m | 10.7 m | 16.0 m |
 
 ## Visibility
 

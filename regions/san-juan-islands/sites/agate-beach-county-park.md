@@ -28,6 +28,18 @@ Shore dive into Outer Bay from Agate Beach County Park, a cobble beach at the so
 * **South shore.** Rock and kelp along the bay's south side, running out toward Iceberg Point.
 * **Mouth of the bay.** West of the rocks the floor slopes down to 12 m and then 18 m below MLLW at the dive coordinate, opening onto the deep water off Iceberg Point.
 
+## Depth
+
+* **Typical range.** Median daily 2.25 m, up to 3.64 m; 2026 span -1.18 m to +2.63 m.
+* **Tidal swing.** The site swings about 2.3 m between an average high and low water, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.18 m low | At a +2.63 m high |
+|---|---|---|---|
+| Cobble shallows, 80 m out from the entry | 0.7 m | Dry | 3.3 m |
+| Outer side of the near rock, 200 m out | 3.5 m | 2.3 m | 6.1 m |
+| Outside the gap between Shark Fin Rock and Outer Rock, 560 m out | 9.0 m | 7.8 m | 11.6 m |
+| Dive coordinate, mouth of the bay | 18.0 m | 16.8 m | 20.6 m |
+
 ## Current
 
 Outer Bay sits off the tidal stream of the eastern Strait of Juan de Fuca, which runs fast outside the mouth while the inner bay stays slow.
@@ -51,23 +63,6 @@ The beach faces west out of the bay's mouth, past Iceberg Island to the open str
 * **Bad.** Southwest through west (SW-W), onshore over 27 to more than 30 km of open water across the Strait of Juan de Fuca, driving wind waves and swell into the bay and surge onto the cobble beach.
 * **Short fetch.** West-northwest through north-northwest (WNW-NNW), onshore over 1.9 to 2.6 km, building chop across the mouth of the bay onto the beach.
 * **Fine.** North clockwise through south-southwest (N-SSW), blocked by the island itself and by the headland running out to Iceberg Point, with 790 m of fetch at most.
-
-## Depth and tide
-
-The site swings about 2.3 m between an average high and low water, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Richardson, Lopez Island (9449982), about 2.0 km north-northwest |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.25 m, up to 3.64 m; 2026 span -1.18 m to +2.63 m |
-
-| Feature | Below MLLW | At a -1.18 m low | At a +2.63 m high |
-|---|---|---|---|
-| Cobble shallows, 80 m out from the entry | 0.7 m | Dry | 3.3 m |
-| Outer side of the near rock, 200 m out | 3.5 m | 2.3 m | 6.1 m |
-| Outside the gap between Shark Fin Rock and Outer Rock, 560 m out | 9.0 m | 7.8 m | 11.6 m |
-| Dive coordinate, mouth of the bay | 18.0 m | 16.8 m | 20.6 m |
 
 ## Visibility
 

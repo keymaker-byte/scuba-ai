@@ -23,6 +23,11 @@ Suquamish Dock is a long public dock and boat ramp on the Suquamish waterfront, 
 * **The dock.** Metal pilings, thick with kelp, run the length of the dock, which is unusually long because the bottom underneath it slopes so gently.
 * **Bottle ground.** The sandy bottom near the dock carries old bottles and glass, remnants of the site's long use as a village and trading location going back to well before the dock itself; much of it is heavily barnacle encrusted.
 
+## Depth
+
+* **Typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
+* **Tidal swing.** The tide swings up to about 5 m here, nearly the whole depth at the dock: the 5.3 m bottom off the dock end reads about 4.0 m at the year's lowest low and about 9.3 m at its highest high.
+
 ## Current
 
 Negligible at every stage of the tide. This stretch of Port Madison sits off to the side of Agate Passage's main flow, and it shows: the water here barely moves all day, while the passage itself, a couple of kilometres south, runs hard.
@@ -40,16 +45,6 @@ Negligible at every stage of the tide. This stretch of Port Madison sits off to 
 * **Bad.** East through east-southeast (E-ESE), onshore over 11.8 to 13.2 km down the length of Port Madison.
 * **Short fetch.** East-northeast (ENE), and southeast through south-southeast (SE-SSE), onshore over 2.7 to 4.5 km.
 * **Fine.** South clockwise through northeast (S-NE), offshore off the waterfront, cross-shore over 2.8 km or less, or onshore under 1 km.
-
-## Depth and tide
-
-The tide swings up to about 5 m here, nearly the whole depth at the dock: the 5.3 m bottom off the dock end reads about 4.0 m at the year's lowest low and about 9.3 m at its highest high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Port Madison (9445753), about 3.2 km southeast |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m |
 
 ## Visibility
 

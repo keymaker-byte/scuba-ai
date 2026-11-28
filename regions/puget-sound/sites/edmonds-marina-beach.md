@@ -25,6 +25,16 @@ Shore dive at Marina Beach Park in Edmonds, at the southwest end of the Port of 
 * **The drop-off.** Beyond about 150 to 200 m the bottom steepens sharply, from a couple of metres below datum to over 20 m in a short distance, the edge older accounts describe as being near the end of the pier.
 * **The old dock remnants.** Below and beyond the drop-off, in 18 to 20 m or more, a scatter of rubble and a few piling stumps mark what is left of the oil dock, still referred to locally as the old oil rig.
 
+## Depth
+
+* **Typical range.** Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m.
+* **Tidal swing.** Edmonds swings up to about 4.9 m between high and low water, a large share of the sand flat's depth, so depths are given against the MLLW chart datum. The old dock remnants past the drop-off stay diveable across the whole range.
+
+| Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |
+|---|---|---|---|
+| Drop-off edge | 13 m | 11.7 m | 16.8 m |
+| Old dock remnants | about 19 m | about 17.7 m | about 22.8 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -44,21 +54,6 @@ The beach faces roughly west, across the main basin toward the south end of Whid
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over 6.5 to 20.0 km across the main basin, builds chop on the long surface swim.
 * **Mixed.** North-northwest through north (NNW-N), over 13.1 to 21.7 km, and south (S), over 11.6 km, cross-shore, running a swell along the beach.
 * **Fine.** North-northeast clockwise through south-southeast (NNE-SSE): offshore from north-northeast through southeast, off the land side, and cross-shore over 1.2 km from south-southeast, leave the entry sheltered.
-
-## Depth and tide
-
-Edmonds swings up to about 4.9 m between high and low water, a large share of the sand flat's depth, so depths are given against the MLLW chart datum. The old dock remnants past the drop-off stay diveable across the whole range.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Edmonds (9447427), about 1.5 km northeast on the same shore |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m |
-
-| Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |
-|---|---|---|---|
-| Drop-off edge | 13 m | 11.7 m | 16.8 m |
-| Old dock remnants | about 19 m | about 17.7 m | about 22.8 m |
 
 ## Visibility
 

@@ -25,6 +25,16 @@ Sekiu Jetty is a shore dive in the town of Sekiu, on the western reach of the St
 * **The bottom.** Gravel and sand slope gently beyond the rocks, with bands of eelgrass in the shallows and out past the rock field.
 * **Staying found.** It is easy to get turned around inside the maze of rock and kelp, and easy to drift shallow while working around the rock piles. Watch compass and depth continuously.
 
+## Depth
+
+* **Typical range.** Median daily 2.21 m, up to 3.85 m on the year's biggest exchange; 2026 span -0.98 m to +3.04 m.
+* **Tidal swing.** The strait's tide swings up to about 3.9 m in a day here, so depths are given below the MLLW chart datum.
+
+| Feature | Below MLLW | At a -0.98 m low | At a +3.04 m high |
+|---|---|---|---|
+| Rocky area edge | 10.7 m | 9.7 m | 13.7 m |
+| Sandy, shell covered bottom | 20.7 m | 19.7 m | 23.7 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -45,21 +55,6 @@ The entry faces into Clallam Bay, with the open strait beyond it.
 * **Short fetch.** East-southeast (ESE), onshore over 3.2 km across Clallam Bay, putting chop on the entry.
 * **Mixed.** Northwest through north-northwest (NW-NNW), cross-shore over more than 30 km up the open strait, with a long, unbroken fetch to the Pacific, running a swell past the entry.
 * **Fine.** Southeast clockwise through west-northwest: cross-shore over 1.6 km or less from the southeast and south-southeast, and offshore from south through west-northwest, off the land.
-
-## Depth and tide
-
-The strait's tide swings up to about 3.9 m in a day here, so depths are given below the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Sekiu, Clallam Bay tide station (9443361), about 0.6 km south, in the same bay |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.21 m, up to 3.85 m on the year's biggest exchange; 2026 span -0.98 m to +3.04 m |
-
-| Feature | Below MLLW | At a -0.98 m low | At a +3.04 m high |
-|---|---|---|---|
-| Rocky area edge | 10.7 m | 9.7 m | 13.7 m |
-| Sandy, shell covered bottom | 20.7 m | 19.7 m | 23.7 m |
 
 ## Visibility
 

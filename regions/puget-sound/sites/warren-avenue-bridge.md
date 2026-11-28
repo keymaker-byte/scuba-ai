@@ -24,6 +24,11 @@ Warren Avenue Bridge crosses Port Washington Narrows in Bremerton, the tidal cut
 * **The bridge overhead.** On a bright day with decent visibility, the shimmering outline of the bridge above is enough to steer between the pylons. In lower visibility, carry a compass to hold a line between them.
 * **Boulders at the outer pylons.** Boulders piled around the bases of the second and third pylons hold fish and invertebrates, and schools of small perch often cloud the water around them.
 
+## Depth
+
+* **Typical range.** Median daily 3.47 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.29 m to +4.08 m.
+* **Tidal swing.** The dive area sits in shallow water relative to the tidal range here, so the swing between a big low and a big high changes the working depth by more than half: the 8.3 m point between the pylons reads about 7.0 m at the year's lowest low of -1.29 m and about 12.4 m at its highest high of +4.08 m.
+
 ## Current
 
 * **Type.** Tidal.
@@ -41,16 +46,6 @@ Warren Avenue Bridge crosses Port Washington Narrows in Bremerton, the tidal cut
 A narrow inland cut through residential Bremerton, with land close on both sides.
 
 * **Fine.** All directions (N-NNW). The surrounding shore leaves little open water for wind to build a fetch across, no more than 1.5 km from any direction.
-
-## Depth and tide
-
-The dive area sits in shallow water relative to the tidal range here, so the swing between a big low and a big high changes the working depth by more than half: the 8.3 m point between the pylons reads about 7.0 m at the year's lowest low of -1.29 m and about 12.4 m at its highest high of +4.08 m.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Bremerton, Sinclair Inlet, Port Orchard (9445958), about 2.0 km south-southeast |
-| **Series** | Full series |
-| **Typical range** | Median daily 3.47 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.29 m to +4.08 m |
 
 ## Visibility
 

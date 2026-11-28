@@ -27,6 +27,18 @@ Shore dive off the long sand and cobble beach of Ed Munro Seahurst Park in Burie
 * **The deep slope.** North of the eelgrass the sand descends steadily, and seaward of the barge it steepens, passing 20 m within a short swim.
 * **Return.** Head east back up the slope and follow the shallows south to the stream mouth.
 
+## Depth
+
+* **Typical range.** Median daily 3.49 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.32 m to +4.04 m.
+* **Tidal swing.** The tide swings 3 to 5 m here, a large share of the barge's depth, so depths are given against the MLLW chart datum. A low tide reads several metres shallower than a high.
+
+| Feature | Below MLLW | At a -1.32 m low | At a +4.04 m high |
+|---|---|---|---|
+| Barge, shallow end | 9 m | 7.7 m | 13.0 m |
+| Barge search contour | 11 m | 9.7 m | 15.0 m |
+| Barge, deep end | 12 m | 10.7 m | 16.0 m |
+| Deep sand slope | 24 m | 22.7 m | 28.0 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -48,23 +60,6 @@ The beach faces west-northwest across the main basin toward Vashon Island.
 * **Short fetch.** North-northwest through north (NNW-N), onshore over 1.3 to 2.2 km.
 * **Mixed.** South-southwest through southwest (SSW-SW), cross-shore over 7.5 to 9.5 km, running along the shore up East Passage and roughening the beach.
 * **Fine.** North-northeast clockwise through south (NNE-S): offshore from east-northeast through south, blowing off the wooded bluff behind the beach, and cross-shore under 1 km from north-northeast and northeast.
-
-## Depth and tide
-
-The tide swings 3 to 5 m here, a large share of the barge's depth, so depths are given against the MLLW chart datum. A low tide reads several metres shallower than a high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Point Vashon, Vashon Island (9446025), about 8.1 km west-northwest across the Sound |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.49 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.32 m to +4.04 m |
-
-| Feature | Below MLLW | At a -1.32 m low | At a +4.04 m high |
-|---|---|---|---|
-| Barge, shallow end | 9 m | 7.7 m | 13.0 m |
-| Barge search contour | 11 m | 9.7 m | 15.0 m |
-| Barge, deep end | 12 m | 10.7 m | 16.0 m |
-| Deep sand slope | 24 m | 22.7 m | 28.0 m |
 
 ## Visibility
 

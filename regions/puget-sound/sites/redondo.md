@@ -29,6 +29,19 @@ Shore dive at Redondo Beach in Des Moines, on the mainland shore of East Passage
 * **The plain.** Below the boats the slope eases into a silty plain at about 28 to 31 m below MLLW, which reaches about 300 m from the stairs before the bottom falls away again, past 40 m within another 100 m. It holds scattered bottles and debris, and it is a long swim back to the slope from its outer edge.
 * **Finding the way back.** The bottom has humps and hollows that mislead: the bottom rises in places away from shore, so uphill can lead the wrong way. Southeast generally leads back toward the pier. Take a bearing before leaving the deep line, and check the compass before starting back up from the deep end of the site.
 
+## Depth
+
+* **Typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 to +4.08 m.
+* **Tidal swing.** East Passage swings up to about 5 m between high and low water here, enough to leave the flat in front of the stairs dry on a minus tide and to put the plain past 34 m below the surface at a big high.
+
+| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
+|---|---|---|---|
+| Flat in front of the stairs | 0.2 m | dry | 4.3 m |
+| Upper slope, just past the pier end | 7.7 m | 6.4 m | 11.8 m |
+| Mid slope | 21.2 m | 19.9 m | 25.3 m |
+| Plain at the foot of the slope | 30.1 m | 28.8 m | 34.2 m |
+| Lip of the deeper drop beyond the plain | 35.0 m | 33.7 m | 39.1 m |
+
 ## Current
 
 The water on the slope moves far less than in East Passage offshore, and the current that matters here comes in short bursts along the shallows on the biggest exchanges.
@@ -52,24 +65,6 @@ The beach faces west-northwest across East Passage toward Vashon Island, with op
 * **Short fetch.** Southwest (SW), onshore over 1.4 km, enough to put a short chop on the flat in front of the stairs.
 * **Mixed.** North (N), cross-shore over 5.2 km, running chop along the beach.
 * **Fine.** North-northeast clockwise through south-southwest (NNE-SSW): offshore from northeast through south-southeast, off the hillside behind the beach, and cross-shore over under 1 km from north-northeast, south and south-southwest.
-
-## Depth and tide
-
-East Passage swings up to about 5 m between high and low water here, enough to leave the flat in front of the stairs dry on a minus tide and to put the plain past 34 m below the surface at a big high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Des Moines, East Passage (9446248), about 5.6 km north on the same shore |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 to +4.08 m |
-
-| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
-|---|---|---|---|
-| Flat in front of the stairs | 0.2 m | dry | 4.3 m |
-| Upper slope, just past the pier end | 7.7 m | 6.4 m | 11.8 m |
-| Mid slope | 21.2 m | 19.9 m | 25.3 m |
-| Plain at the foot of the slope | 30.1 m | 28.8 m | 34.2 m |
-| Lip of the deeper drop beyond the plain | 35.0 m | 33.7 m | 39.1 m |
 
 ## Visibility
 

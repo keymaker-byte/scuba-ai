@@ -25,6 +25,16 @@ One Mile Beach is a shore dive on the Strait of Juan de Fuca about 1.6 km west o
 * **The drop-off.** The slope steepens sharply beyond about 20 m below MLLW; stay on the shelf rather than following it down.
 * **Staying found.** The rock and kelp cover breaks up the terrain into a maze. Watch compass and depth continuously.
 
+## Depth
+
+* **Typical range.** Median daily 2.21 m, up to 3.85 m on the year's biggest exchange; 2026 span -0.98 m to +3.04 m.
+* **Tidal swing.** The strait's tide swings up to about 3.9 m in a day here, so depths are given below the MLLW chart datum.
+
+| Feature | Below MLLW | At a -0.98 m low | At a +3.04 m high |
+|---|---|---|---|
+| Rock and kelp ledge | 12.1 m | 11.1 m | 15.1 m |
+| Edge of the drop-off | 19.5 m | 18.5 m | 22.5 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -44,21 +54,6 @@ The beach faces north into the open strait.
 * **Bad.** Northwest clockwise through east-northeast (NW-ENE), onshore over 22 km to more than 30 km, straight up the open strait with a long, unbroken fetch to the Pacific, or across it.
 * **Mixed.** East (E), cross-shore over more than 30 km down the strait, which runs a swell along the beach past the entry.
 * **Fine.** East-southeast clockwise through west-northwest: offshore from southeast through west-southwest, off the land, and cross-shore over 5 km or less from the east-southeast, west and west-northwest.
-
-## Depth and tide
-
-The strait's tide swings up to about 3.9 m in a day here, so depths are given below the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Sekiu, Clallam Bay tide station (9443361), about 1.9 km southeast, in Clallam Bay |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.21 m, up to 3.85 m on the year's biggest exchange; 2026 span -0.98 m to +3.04 m |
-
-| Feature | Below MLLW | At a -0.98 m low | At a +3.04 m high |
-|---|---|---|---|
-| Rock and kelp ledge | 12.1 m | 11.1 m | 15.1 m |
-| Edge of the drop-off | 19.5 m | 18.5 m | 22.5 m |
 
 ## Visibility
 

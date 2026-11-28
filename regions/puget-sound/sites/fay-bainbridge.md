@@ -23,6 +23,16 @@ Sand and eelgrass shore dive at the northeast tip of Bainbridge Island, facing o
 * **Descent.** No reef or artificial structure to navigate by. An eelgrass band runs along the shallows, thinning into open sand as the bottom drops away.
 * **The slope.** Follow the sand straight down from the entry to the usual working depth, about 22 m below MLLW. Beyond that the same slope keeps dropping, well past 55 m, outside NDL range.
 
+## Depth
+
+* **Typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
+* **Tidal swing.** The site sits open to the main basin, and tide swings the depth here by several metres across a normal day.
+
+| Feature | Below MLLW | At a -1.30 m low | At a +3.96 m high |
+|---|---|---|---|
+| Mid slope | 13.8 m | 12.5 m | 17.8 m |
+| Working depth | 21.9 m | 20.6 m | 25.9 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -42,21 +52,6 @@ The beach faces roughly east-northeast, open across the main basin toward Posses
 * **Bad.** North-northeast through southeast (NNE-SE), onshore over 5.1 to 11.6 km, which runs a long fetch up the main basin onto this beach.
 * **Mixed.** South-southeast (SSE), over 20.5 km, and north-northwest (NNW), over 5.3 km, cross-shore, running a swell along the beach.
 * **Fine.** South through northwest (S-NW), offshore from south-southwest through northwest, blocked by Bainbridge Island's own landmass behind the beach, and cross-shore over 4.3 km from the south; and north (N), cross-shore over 4.5 km.
-
-## Depth and tide
-
-The site sits open to the main basin, and tide swings the depth here by several metres across a normal day.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Port Madison (9445753), about 1.6 km west on the same shore |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m |
-
-| Feature | Below MLLW | At a -1.30 m low | At a +3.96 m high |
-|---|---|---|---|
-| Mid slope | 13.8 m | 12.5 m | 17.8 m |
-| Working depth | 21.9 m | 20.6 m | 25.9 m |
 
 ## Visibility
 

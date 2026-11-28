@@ -29,6 +29,24 @@ Shore dive off the Maplewild Avenue street-end beach on the south side of Three 
 * **The older wreck line.** A compass heading of 135° magnetic from the access leads southeast down the slope toward the car remains, dumped decades ago and now in advanced decay and hard to recognise.
 * **Return.** Work back up the slope to the eelgrass and swim the shallows to the entry, finishing with a safety stop over the sand.
 
+## Depth
+
+* **Typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m.
+* **Tidal swing.** East Passage swings about 3.5 to 5.2 m between high and low water here, a large fraction of the depth of the shallower features, so depths are given against the MLLW chart datum and a low tide reads several metres shallower than a high.
+
+| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
+|---|---|---|---|
+| Lone tire | 5.5 m | 4.2 m | 9.6 m |
+| Tire stack | 9 m | 7.7 m | 13.1 m |
+| Three boats, east | 9 to 11 m | 7.7 to 9.7 m | 13.1 to 15.1 m |
+| Old car and square gas tank | 14 m | 12.7 m | 18.1 m |
+| Circular plate | 15 m | 13.7 m | 19.1 m |
+| Old car and barrels | 18 m | 16.7 m | 22.1 m |
+| Aircraft drop tank | 18 m | 16.7 m | 22.1 m |
+| Overturned canoe | 20 m | 18.7 m | 24.1 m |
+| Deep tires | 24 to 27 m | 22.7 to 25.7 m | 28.1 to 31.1 m |
+| Bucket and cylinder | 27 m | 25.7 m | 31.1 m |
+
 ## Current
 
 The current runs strong along this shore, and the shoreline set runs west toward the point on both exchanges.
@@ -51,29 +69,6 @@ The beach faces due south across East Passage toward Vashon Island, with the poi
 * **Bad.** South-southeast through southwest (SSE-SW), onshore over 5.9 to 10.8 km of open water down East Passage and across to Vashon, which builds chop on the entry.
 * **Short fetch.** East-southeast through southeast (ESE-SE), onshore over 1.7 to 2.9 km.
 * **Fine.** West-southwest clockwise through east (WSW-E): offshore from west-northwest through northeast, west-northwest over 4.5 km of water past the point and the rest over 140 m or less off the land behind the beach, and cross-shore over 4.8 km or less from west-southwest and west, and 380 m or less from east-northeast and east.
-
-## Depth and tide
-
-East Passage swings about 3.5 to 5.2 m between high and low water here, a large fraction of the depth of the shallower features, so depths are given against the MLLW chart datum and a low tide reads several metres shallower than a high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Des Moines, East Passage (9446248), about 6.7 km southeast on the same shore |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m |
-
-| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
-|---|---|---|---|
-| Lone tire | 5.5 m | 4.2 m | 9.6 m |
-| Tire stack | 9 m | 7.7 m | 13.1 m |
-| Three boats, east | 9 to 11 m | 7.7 to 9.7 m | 13.1 to 15.1 m |
-| Old car and square gas tank | 14 m | 12.7 m | 18.1 m |
-| Circular plate | 15 m | 13.7 m | 19.1 m |
-| Old car and barrels | 18 m | 16.7 m | 22.1 m |
-| Aircraft drop tank | 18 m | 16.7 m | 22.1 m |
-| Overturned canoe | 20 m | 18.7 m | 24.1 m |
-| Deep tires | 24 to 27 m | 22.7 to 25.7 m | 28.1 to 31.1 m |
-| Bucket and cylinder | 27 m | 25.7 m | 31.1 m |
 
 ## Visibility
 

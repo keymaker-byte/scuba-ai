@@ -28,6 +28,18 @@ Shore dive at Reuben Tarte County Park, also known as Reuben Tarte Picnic Area, 
 * **Southeast of the knoll.** A second dive follows the rocky ledges and boulders off the knoll and around it to the south, past a second pebble beach south of the knoll. The bottom sits about 12 m below MLLW some 70 m off the knoll's east side.
 * **Open slope.** The bottom keeps falling northeast of the cove mouth, reaching about 28 m below MLLW at 100 m from the dive coordinate and about 33 m at 150 m.
 
+## Depth
+
+* **Typical range.** Median daily 2.35 m, up to 3.76 m; 2026 span -1.21 m to +2.74 m.
+* **Tidal swing.** The site swings about 2.4 m between an average high and low water, and up to 3.8 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.21 m low | At a +2.74 m high |
+|---|---|---|---|
+| Off the cove mouth, dive coordinate | 7.9 m | 6.7 m | 10.6 m |
+| Off the knoll's east side | 11.8 m | 10.6 m | 14.5 m |
+| Boulders, 50 m north of the dive coordinate | 16.1 m | 14.9 m | 18.8 m |
+| Open slope, 150 m northeast of the dive coordinate | 32.8 m | 31.6 m | 35.5 m |
+
 ## Current
 
 Three channels converge at this corner of the island and drive the flow around the cove.
@@ -52,23 +64,6 @@ Three channels converge at this corner of the island and drive the flow around t
 * **Short fetch.** East (E), onshore over 3.4 km, enough to raise chop in the cove.
 * **Mixed.** East-southeast through southeast (ESE-SE), cross-shore over 6.7 to 8.2 km, running swell past the entry.
 * **Fine.** South-southeast clockwise through north-northwest (SSE-NNW), blocked by the island itself, with 680 m of fetch at most.
-
-## Depth and tide
-
-The site swings about 2.4 m between an average high and low water, and up to 3.8 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Roche Harbor, San Juan Island (9449834), about 4.2 km west |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.35 m, up to 3.76 m; 2026 span -1.21 m to +2.74 m |
-
-| Feature | Below MLLW | At a -1.21 m low | At a +2.74 m high |
-|---|---|---|---|
-| Off the cove mouth, dive coordinate | 7.9 m | 6.7 m | 10.6 m |
-| Off the knoll's east side | 11.8 m | 10.6 m | 14.5 m |
-| Boulders, 50 m north of the dive coordinate | 16.1 m | 14.9 m | 18.8 m |
-| Open slope, 150 m northeast of the dive coordinate | 32.8 m | 31.6 m | 35.5 m |
 
 ## Visibility
 

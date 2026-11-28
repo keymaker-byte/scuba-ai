@@ -30,6 +30,21 @@ Shore dive at the end of Kamus Drive on the southwest shore of Fox Island, at th
 * **The boiler.** A large steel boiler from an old wreck, about 13 m long and 3.4 m across, lies on the slope at about 16 to 20 m below MLLW, about 100 m south-southeast along the shore from the road end, in front of a short seawall of pilings driven into the beach below abandoned beach cabins. It lies east to west, with cutouts in its sides and octopus dens beneath it. It is charted as a wreck. It is a separate dive from the ledge, entered from the beach in front of the seawall, about a 50 m swim out; reaching it from the ledge along the contour is a long swim.
 * **The way back.** Return up the slope on the reciprocal heading, toward the northeast, and come up through the sand dollar beds to the road end. Surface close to shore and check position against the boulders at the road end before swimming in.
 
+## Depth
+
+* **Typical range.** Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m.
+* **Tidal swing.** South Sound tides are large, and the tide swings the depth here by up to about 6 m. On a big minus tide the sand dollar beds dry out to the top of the slope, and the exposed bottom in front of the beach is soft mud.
+
+| Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |
+|---|---|---|---|
+| Top of the slope, outer edge of the sand dollar beds | 1 m | Dry | 5.8 m |
+| Turn along the contour toward the ledge | 12 m | 10.6 m | 16.8 m |
+| Top of the ledge | 14 m | 12.6 m | 18.8 m |
+| Dive site coordinate | 16.3 m | 14.9 m | 21.1 m |
+| Base of the ledge | 16.5 m | 15.1 m | 21.3 m |
+| Boiler | 16 to 20 m | 14.6 to 18.6 m | 20.8 to 24.8 m |
+| Slope below the ledge | past 30 m | past 28.6 m | past 34.8 m |
+
 ## Current
 
 The beach sits out of the main stream between the Tacoma Narrows and Carr Inlet, and on most tides the water over the slope and the ledge barely moves.
@@ -53,26 +68,6 @@ The beach faces west-southwest across the mouth of Carr Inlet toward McNeil Isla
 * **Short fetch.** South-southwest through west-southwest (SSW-WSW), onshore over 3.0 to 3.8 km across to McNeil Island, enough to build a chop on the entry.
 * **Mixed.** South-southeast (SSE), cross-shore over 7.7 km, and northwest (NW), cross-shore over 11.4 km down Carr Inlet, each running a swell along the beach past the entry.
 * **Fine.** North-northwest clockwise through southeast (NNW-SE), offshore off the island behind the beach, or cross-shore over 1.1 km or less.
-
-## Depth and tide
-
-South Sound tides are large, and the tide swings the depth here by up to about 6 m. On a big minus tide the sand dollar beds dry out to the top of the slope, and the exposed bottom in front of the beach is soft mud.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Steilacoom, Cormorant Passage (9446714), about 7.7 km south-southeast, across open water in the same basin |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m |
-
-| Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |
-|---|---|---|---|
-| Top of the slope, outer edge of the sand dollar beds | 1 m | Dry | 5.8 m |
-| Turn along the contour toward the ledge | 12 m | 10.6 m | 16.8 m |
-| Top of the ledge | 14 m | 12.6 m | 18.8 m |
-| Dive site coordinate | 16.3 m | 14.9 m | 21.1 m |
-| Base of the ledge | 16.5 m | 15.1 m | 21.3 m |
-| Boiler | 16 to 20 m | 14.6 to 18.6 m | 20.8 to 24.8 m |
-| Slope below the ledge | past 30 m | past 28.6 m | past 34.8 m |
 
 ## Visibility
 

@@ -28,6 +28,11 @@ Port Washington Narrows is the tidal cut through Bremerton joining Dyes Inlet to
 * **Warren Avenue Bridge.** The midpoint, and the deepest water of the drift, about 9 m below MLLW between its pylons. Passing beneath it is the cue to start working toward the north shore.
 * **The approach to the exit.** Past the Warren Avenue Bridge the channel shoals quickly to a shallow flat along the north shore. Begin angling toward the north shore within about 300 m of the bridge so the current carries you onto the take-out beach rather than past it.
 
+## Depth
+
+* **Typical range.** Median daily 3.47 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.29 m to +4.08 m.
+* **Tidal swing.** The drift runs through shallow water relative to the tidal range, so the tide changes the working depth substantially: a 6 m point at MLLW reads under 5 m on a big low and over 10 m on a big high. On a low tide the shallow flat at the exit becomes a long wade to the beach.
+
 ## Current
 
 * **Type.** Tidal.
@@ -46,16 +51,6 @@ A narrow inland cut through residential Bremerton, with land close on both sides
 
 * **Short fetch.** South through south-southwest (S-SSW), onshore over 2.5 to 3.3 km up Sinclair Inlet, the one direction with any fetch to the Manette entry.
 * **Fine.** Southwest clockwise through south-southeast (SW-SSE); the surrounding shore leaves little open water for wind to build across.
-
-## Depth and tide
-
-The drift runs through shallow water relative to the tidal range, so the tide changes the working depth substantially: a 6 m point at MLLW reads under 5 m on a big low and over 10 m on a big high. On a low tide the shallow flat at the exit becomes a long wade to the beach.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Bremerton, Sinclair Inlet, Port Orchard (9445958), about 1.0 km south-southwest |
-| **Series** | Full series |
-| **Typical range** | Median daily 3.47 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.29 m to +4.08 m |
 
 ## Visibility
 

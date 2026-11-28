@@ -26,6 +26,21 @@ The Fox Island Bridge crosses the west end of Hale Passage, joining Fox Island t
 * **The large piers.** From the first large pier at the dive area the bottom drops pier by pier, past 10 m below MLLW some 150 m out along the bridge and to about 16 m at the middle of the passage, some 350 m out. The central piers are the largest and carry the most life, and dive like a short wall.
 * **Compass work.** The next pier is often out of sight. Take a heading along the bridge, 15° true, outbound and the reciprocal, 195° true, home, and swim pier to pier on it.
 
+## Depth
+
+* **Typical range.** Median daily 4.03 m, up to 5.81 m on the year's biggest exchange; 2026 span -1.36 m to +4.68 m.
+* **Tidal swing.** The tide swings about 4 m on a typical day here and close to 6 m on the largest, so the same pier reads very differently at a low and a high.
+
+Seabed along the bridge, by distance out from the Fox Island abutment, and as it reads at a 0.0 m low and a +4.0 m high:
+
+| Feature | Below MLLW | At a 0.0 m low | At a +4.0 m high |
+|---|---|---|---|
+| **Inshore piles, 30 to 60 m** | 2 to 5 m | 2 to 5 m | 6 to 9 m |
+| **First large pier, the dive area, 90 m** | 6.9 m | 6.9 m | 10.9 m |
+| **150 m** | 9.6 m | 9.6 m | 13.6 m |
+| **210 m** | 13.3 m | 13.3 m | 17.3 m |
+| **Middle of the passage, 350 m** | 16.4 m | 16.4 m | 20.4 m |
+
 ## Current
 
 The passage narrows to its shallowest at the bridge, and the exchange between Carr Inlet and the Tacoma Narrows runs fastest where the piers meet the shore.
@@ -47,26 +62,6 @@ The site faces across the narrow west end of Hale Passage, about 550 m to the ma
 
 * **Short fetch.** West-northwest through northwest (WNW-NW), onshore over 1.3 to 2.6 km from the mouth of Carr Inlet. Wind from these directions raises chop on the entry beach and the surface swim along the jetty.
 * **Fine.** North-northwest clockwise through west (NNW-W). North-northwest through northeast is onshore but crosses under 1 km of the passage; east-northeast and east are cross-shore, along the passage, over 0.7 to 1.7 km; east-southeast through southwest is offshore, with Fox Island behind the beach; west-southwest and west are cross-shore over under 1 km.
-
-## Depth and tide
-
-The tide swings about 4 m on a typical day here and close to 6 m on the largest, so the same pier reads very differently at a low and a high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Arletta, Hale Passage (9446491), about 0.5 km north-northwest, on the mainland shore just west of the bridge's north end |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 4.03 m, up to 5.81 m on the year's biggest exchange; 2026 span -1.36 m to +4.68 m |
-
-Seabed along the bridge, by distance out from the Fox Island abutment, and as it reads at a 0.0 m low and a +4.0 m high:
-
-| Feature | Below MLLW | At a 0.0 m low | At a +4.0 m high |
-|---|---|---|---|
-| **Inshore piles, 30 to 60 m** | 2 to 5 m | 2 to 5 m | 6 to 9 m |
-| **First large pier, the dive area, 90 m** | 6.9 m | 6.9 m | 10.9 m |
-| **150 m** | 9.6 m | 9.6 m | 13.6 m |
-| **210 m** | 13.3 m | 13.3 m | 17.3 m |
-| **Middle of the passage, 350 m** | 16.4 m | 16.4 m | 20.4 m |
 
 ## Visibility
 

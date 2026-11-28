@@ -25,6 +25,16 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 * **Abandoned ferry pier and pylons.** Northeast of the wharf, in the deeper water toward open water; the four offshore pylons are the far point of the dive.
 * **Bottom transition.** Sandy, with patches of eelgrass, from the beach out to about 5 to 6 m below MLLW; beyond that the bottom turns to soft silty mud, where the wharf and pier debris settles.
 
+## Depth
+
+* **Typical range.** Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m.
+* **Tidal swing.** The tide swings the site's depth by up to about 4 m on the year's biggest exchange. The deep end, off the pylons, runs from about 10 m at low water to about 15 m at high; the water off the current wharf runs about 5 to 9 m across the same swing.
+
+| Feature | Below MLLW | At a -1.22 m low | At a +3.04 m high |
+|---|---|---|---|
+| Off the current Union Wharf | 5.8 m | 4.6 m | 8.8 m |
+| Off the ferry pier pylons | 11.6 m | 10.4 m | 14.6 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -48,21 +58,6 @@ The beach faces south-southeast, out across Port Townsend Bay.
 
 * **Bad.** Northeast through south-southwest (NE-SSW), with several kilometres of open fetch across the bay toward Indian Island and Marrowstone Island, 2.9 to 11.6 km.
 * **Fine.** Southwest clockwise through north-northeast (SW-NNE), off the town bluff, or cross-shore over 4.5 km or less.
-
-## Depth and tide
-
-The tide swings the site's depth by up to about 4 m on the year's biggest exchange. The deep end, off the pylons, runs from about 10 m at low water to about 15 m at high; the water off the current wharf runs about 5 to 9 m across the same swing.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Port Townsend (9444900), about 0.4 km west |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m |
-
-| Feature | Below MLLW | At a -1.22 m low | At a +3.04 m high |
-|---|---|---|---|
-| Off the current Union Wharf | 5.8 m | 4.6 m | 8.8 m |
-| Off the ferry pier pylons | 11.6 m | 10.4 m | 14.6 m |
 
 ## Visibility
 

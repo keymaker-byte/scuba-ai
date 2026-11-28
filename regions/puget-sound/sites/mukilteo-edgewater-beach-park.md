@@ -27,6 +27,18 @@ A Port of Everett beach on the Mukilteo waterfront, on the south shore of Posses
 * **Tire pile and bottle fields.** A pile of large tractor tires lies off the end of the pilings, with old bottle fields on the soft bottom around the pier's outer end.
 * **Ferry terminal.** About 560 m west-southwest of the entry, on a bearing of 248°.
 
+## Depth
+
+* **Typical range.** Median daily 3.24 m, up to 5.14 m on the year's biggest exchange; 2026 span -1.30 to +3.99 m.
+* **Tidal swing.** Possession Sound swings up to about 5 m between high and low water here, which decides how far the flat is walked and how deep the pier's end reads.
+* **At low and high.** At the year's lowest low of -1.30 m the flat dries for about 110 m out from the entry and the dive area reads 11.7 m below the surface; at its highest high of +3.99 m the whole flat is covered and the dive area reads 17.0 m.
+
+| Feature | Distance from entry | Below MLLW |
+|---|---|---|
+| **Water's edge at datum** | 60 m | 0 m |
+| **Edge of the flat** | 140 m | 2.2 m |
+| **Dive area, near the pier's end** | 222 m | 13.0 m |
+
 ## Current
 
 Possession Sound's tidal exchange: weak over the flat, stronger at the pier's outer end.
@@ -48,24 +60,6 @@ Possession Sound's tidal exchange: weak over the flat, stronger at the pier's ou
 * **Short fetch.** West-northwest (WNW), onshore over 4.96 km, enough for a short chop on the entry.
 * **Mixed.** West-southwest (WSW), cross-shore over 6.4 km, running a chop along the beach past the entry.
 * **Fine.** East-northeast clockwise through southwest (ENE-SW): cross-shore over 380 m to 4.6 km from the east-northeast and east, and offshore from east-southeast through southwest, where the beach lies under the Mukilteo shore 200 to 390 m upwind. West (W) is also fine, cross-shore over 4.6 km.
-
-## Depth and tide
-
-Possession Sound swings up to about 5 m between high and low water here, which decides how far the flat is walked and how deep the pier's end reads.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Everett (9447659), about 5.7 km east-northeast in Port Gardner |
-| **Series** | Full series |
-| **Typical range** | Median daily 3.24 m, up to 5.14 m on the year's biggest exchange; 2026 span -1.30 to +3.99 m |
-
-| Feature | Distance from entry | Below MLLW |
-|---|---|---|
-| **Water's edge at datum** | 60 m | 0 m |
-| **Edge of the flat** | 140 m | 2.2 m |
-| **Dive area, near the pier's end** | 222 m | 13.0 m |
-
-At the year's lowest low of -1.30 m the flat dries for about 110 m out from the entry and the dive area reads 11.7 m below the surface; at its highest high of +3.99 m the whole flat is covered and the dive area reads 17.0 m.
 
 ## Visibility
 

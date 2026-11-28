@@ -26,6 +26,16 @@ Ediz Hook is the long sand spit that curls out from the base of Port Angeles and
 * **Working the site.** The productive shallow diving runs along a stretch of the inside shore between Harborview Park, toward the spit's outer end, and a cell tower further back down the road; this entry sits within that stretch. Conditions can differ site to site along it.
 * **The Rockpile.** Further out toward the Coast Guard Air Station, a separate reef loaded with large rockfish. Boat access only since 2001; not reachable from this shore entry.
 
+## Depth
+
+* **Typical range.** Median daily 2.13 m, up to 3.39 m on the year's biggest exchange; 2026 span -1.10 m to +2.47 m.
+* **Tidal swing.** The harbor's tide swings up to about 3.4 m in a day, so depths are given below the MLLW chart datum. The shallow entry flat can dry at a low spring tide.
+
+| Feature | Below MLLW | At a -1.10 m low | At a +2.47 m high |
+|---|---|---|---|
+| Shoreline at the entry | 0.1 m | dries | 2.6 m |
+| Reef edge | 18.5 m | 17.4 m | 21.0 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -46,21 +56,6 @@ The inside shore looks into Port Angeles Harbor, sheltered from the open strait 
 * **Short fetch.** Southeast through west-southwest (SE-WSW), onshore over 2.0 to 4.1 km of harbor water, enough to put chop on the entry.
 * **Mixed.** East-southeast (ESE), cross-shore over 6.5 km down the length of the harbor, which runs a swell past the entry.
 * **Fine.** West clockwise through east: offshore from northwest through east-northeast, blocked entirely by the spit, and cross-shore over 1.2 km or less from the east and from west through west-northwest.
-
-## Depth and tide
-
-The harbor's tide swings up to about 3.4 m in a day, so depths are given below the MLLW chart datum. The shallow entry flat can dry at a low spring tide.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Ediz Hook, Port Angeles tide station (9444122), about 1.3 km east, on the hook itself |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.13 m, up to 3.39 m on the year's biggest exchange; 2026 span -1.10 m to +2.47 m |
-
-| Feature | Below MLLW | At a -1.10 m low | At a +2.47 m high |
-|---|---|---|---|
-| Shoreline at the entry | 0.1 m | dries | 2.6 m |
-| Reef edge | 18.5 m | 17.4 m | 21.0 m |
 
 ## Visibility
 

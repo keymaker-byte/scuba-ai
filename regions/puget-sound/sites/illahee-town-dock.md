@@ -24,6 +24,16 @@ Illahee Town Dock is a Port of Illahee community pier and boat ramp on the Kitsa
 * **The tire reef.** Sits roughly 100 to 160 m out, where the bottom runs about 6 to 9 m below MLLW. Bound clumps of tires, a dozen or two tires each, run in lines connected by rope, many of them partly buried in the sand.
 * **Past the reef.** The sand continues out past the tires to the site's usual working depth, about 14 m, roughly 210 m out, then keeps dropping more gently from there.
 
+## Depth
+
+* **Typical range.** Median daily 3.56 m, up to 5.26 m on the year's biggest exchange; 2026 span -1.35 m to +4.12 m.
+* **Tidal swing.** Tide swings the depth here by a few metres across a normal day.
+
+| Feature | Below MLLW | At a -1.35 m low | At a +4.12 m high |
+|---|---|---|---|
+| Tire reef | 7.7 m | 6.4 m | 11.8 m |
+| Outer slope, working depth | 14.0 m | 12.7 m | 18.1 m |
+
 ## Current
 
 Current here is negligible at every stage of the tide, at the surface and depth-averaged alike, so this is not a slack-tide dive.
@@ -44,21 +54,6 @@ The site faces east, across the Port Orchard reach toward Bainbridge Island.
 
 * **Short fetch.** North-northeast through southeast (NNE-SE), onshore over 1.5 to 2.9 km, the open fetch across the reach to Bainbridge Island.
 * **Fine.** South-southeast clockwise through north (SSE-N): offshore from south-southwest through northwest, blocked by the Kitsap Peninsula landmass behind the site, and cross-shore under 4.1 km from south-southeast, south, north-northwest and north.
-
-## Depth and tide
-
-Tide swings the depth here by a few metres across a normal day.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Brownsville, Port Orchard (9445832), about 4.6 km north-northwest on the same shore |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.56 m, up to 5.26 m on the year's biggest exchange; 2026 span -1.35 m to +4.12 m |
-
-| Feature | Below MLLW | At a -1.35 m low | At a +4.12 m high |
-|---|---|---|---|
-| Tire reef | 7.7 m | 6.4 m | 11.8 m |
-| Outer slope, working depth | 14.0 m | 12.7 m | 18.1 m |
 
 ## Visibility
 

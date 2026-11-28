@@ -26,6 +26,19 @@ Shore dive from the boat ramp in Smallpox Bay, the small sandy cove at the south
 * **Around the points.** From about 3 m below MLLW at the points the rock drops in ledges past large boulders and undercuts, to about 18 m some 75 m west of the dive coordinate, then eases to about 19 m at 150 m.
 * **Low Island.** The small rocky island about 350 m north-northwest, off North Bay, is a National Wildlife Refuge island closed to landing.
 
+## Depth
+
+* **Typical range.** Median daily 2.33 m, up to 3.66 m; 2026 span -1.11 m to +2.77 m.
+* **Tidal swing.** The site swings about 2.3 m between an average high and low water, and up to 3.7 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.11 m low | At a +2.77 m high |
+|---|---|---|---|
+| Middle of the bay mouth | 2.8 m | 1.7 m | 5.6 m |
+| Dive coordinate, off the north point's tip | 9.4 m | 8.3 m | 12.2 m |
+| Off the north point's west face, 155 m north of the dive coordinate | 12.6 m | 11.5 m | 15.4 m |
+| Reef slope, 75 m west of the dive coordinate | 18.0 m | 16.9 m | 20.8 m |
+| Reef slope, 150 m west of the dive coordinate | 18.9 m | 17.8 m | 21.7 m |
+
 ## Current
 
 Haro Strait's tidal stream runs along this shore, setting northeast on the flood and southwest on the ebb past the mouth of the bay.
@@ -47,24 +60,6 @@ Haro Strait's tidal stream runs along this shore, setting northeast on the flood
 
 * **Bad.** South-southwest through northwest (SSW-NW), onshore over 8.2 to 21.9 km of open water across Haro Strait, driving wind waves into the mouth of the bay and onto the ramp.
 * **Fine.** North-northwest clockwise through south (NNW-S), blocked by the island itself and the bay's two points, with 1.3 km of fetch at most.
-
-## Depth and tide
-
-The site swings about 2.3 m between an average high and low water, and up to 3.7 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Hanbury Point, San Juan Island (9449828), about 4.6 km north |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.33 m, up to 3.66 m; 2026 span -1.11 m to +2.77 m |
-
-| Feature | Below MLLW | At a -1.11 m low | At a +2.77 m high |
-|---|---|---|---|
-| Middle of the bay mouth | 2.8 m | 1.7 m | 5.6 m |
-| Dive coordinate, off the north point's tip | 9.4 m | 8.3 m | 12.2 m |
-| Off the north point's west face, 155 m north of the dive coordinate | 12.6 m | 11.5 m | 15.4 m |
-| Reef slope, 75 m west of the dive coordinate | 18.0 m | 16.9 m | 20.8 m |
-| Reef slope, 150 m west of the dive coordinate | 18.9 m | 17.8 m | 21.7 m |
 
 ## Visibility
 

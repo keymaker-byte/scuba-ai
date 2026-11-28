@@ -37,6 +37,18 @@ Finding the ledge from the surface:
 
 Safety stops work at the shallow north-northeast end of the ledge, or on the sandy slope.
 
+## Depth
+
+* **Typical range.** Median daily 2.49 m, up to 3.79 m on the year's biggest exchange; 2026 span -1.07 m to +2.89 m.
+* **Tidal swing.** The pass swings roughly 2 to 4 m between high and low water, so depths are given relative to the MLLW chart datum. A low tide reads shallower than the datum figure; a high tide reads deeper.
+
+| Feature | Below MLLW | At a -1.07 m low | At a +2.89 m high |
+|---|---|---|---|
+| Top of near ledge | 7.9 m | 6.8 m | 10.8 m |
+| Southwest end of that ledge | 17.4 m | 16.3 m | 20.3 m |
+| Outer rock structure | 22.3 m | 21.2 m | 25.2 m |
+| Outer structure, deepest | 23.5 m | 22.4 m | 26.4 m |
+
 ## Current
 
 Diveable on the slack before the ebb only. Do not dive on a flood exchange or at the slack before a flood.
@@ -59,23 +71,6 @@ The entry beach is on the north shore of the pass, facing south-southwest toward
 
 * **Bad.** West-southwest (WSW), onshore over 10.1 km, straight up the axis of the pass from its Rosario Strait opening.
 * **Fine.** West clockwise through southwest (W-SW): offshore from northwest through east-northeast, and under 2.1 km of fetch from every other direction.
-
-## Depth and tide
-
-The pass swings roughly 2 to 4 m between high and low water, so depths are given relative to the MLLW chart datum. A low tide reads shallower than the datum figure; a high tide reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Burrows Bay (Allan Island) (9448683), about 3.4 km south |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.49 m, up to 3.79 m on the year's biggest exchange; 2026 span -1.07 m to +2.89 m |
-
-| Feature | Below MLLW | At a -1.07 m low | At a +2.89 m high |
-|---|---|---|---|
-| Top of near ledge | 7.9 m | 6.8 m | 10.8 m |
-| Southwest end of that ledge | 17.4 m | 16.3 m | 20.3 m |
-| Outer rock structure | 22.3 m | 21.2 m | 25.2 m |
-| Outer structure, deepest | 23.5 m | 22.4 m | 26.4 m |
 
 ## Visibility
 

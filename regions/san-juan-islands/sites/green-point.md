@@ -25,6 +25,16 @@ Shore dive on the low, rocky point at the northwest corner of Washington Park, a
 * **Rounding the point.** The shoreline curves north as it wraps around Green Point. The rock continues out to the point itself, where the bottom drops toward the channel, reaching about 15.6 m below datum.
 * **Exit.** Return to the entry stairs. An alternative exit onto a jumble of basalt rocks northwest of the point, beyond Green Point itself, exists but is awkward and best avoided.
 
+## Depth
+
+* **Typical range.** Median daily 2.44 m, up to 3.88 m on the year's biggest exchange; 2026 span -1.25 m to +2.83 m.
+* **Tidal swing.** The site swings roughly 2.5 m between an average high and low water, more around the solstices, so depths are quoted against the MLLW chart datum: a low reads shallower than the datum figure, a high deeper.
+
+| Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |
+|---|---|---|---|
+| Entry rocks | 2.6 m | 1.4 m | 5.4 m |
+| Green Point drop-off | 15.6 m | 14.4 m | 18.4 m |
+
 ## Current
 
 The point is current sensitive: missing the window by even a little brings on current strong enough to force a dive to turn back well short of its target depth.
@@ -47,21 +57,6 @@ Green Point faces open water to the north and northwest, toward Burrows Bay and 
 * **Short fetch.** North (N), onshore over 4.8 km.
 * **Mixed.** West-southwest through west (WSW-W), cross-shore over 6.9 to 9.1 km.
 * **Fine.** East-northeast clockwise through southwest (ENE-SW): offshore from east-southeast through southwest, sheltered by the park's own peninsula, and cross-shore under 1 km from east-northeast and east.
-
-## Depth and tide
-
-The site swings roughly 2.5 m between an average high and low water, more around the solstices, so depths are quoted against the MLLW chart datum: a low reads shallower than the datum figure, a high deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Ship Harbor, Fidalgo Island (9448772), about 1.9 km east-northeast |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.44 m, up to 3.88 m on the year's biggest exchange; 2026 span -1.25 m to +2.83 m |
-
-| Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |
-|---|---|---|---|
-| Entry rocks | 2.6 m | 1.4 m | 5.4 m |
-| Green Point drop-off | 15.6 m | 14.4 m | 18.4 m |
 
 ## Visibility
 

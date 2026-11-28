@@ -26,6 +26,18 @@ Small rock formation in the cove on the Orcas Island side of Obstruction Pass, r
 * **Inside channel.** A narrow, shallow channel runs through the rock formation on its inshore side, about 1 to 5 m below MLLW, its smooth rock sides covered in limpets and chitons.
 * **The return.** Move to the inshore side of the rock before starting back, where the inshore current carries the swim toward the county pier.
 
+## Depth
+
+* **Typical range.** Median daily 2.57 m, up to 3.92 m; 2026 span -1.12 m to +2.98 m.
+* **Tidal swing.** The site swings about 2.6 m on a median day, and up to 3.9 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper. The top of the rock stands above the water at low tide.
+
+| Feature | Below MLLW | At a -1.12 m low | At a +2.98 m high |
+|---|---|---|---|
+| Inside channel | 1 to 5 m | 0 to 4 m | 4 to 8 m |
+| Swim across the cove | 2 to 6 m | 1 to 5 m | 5 to 9 m |
+| West side, dive coordinate | 14.5 m | 13.4 m | 17.5 m |
+| Bottom past the ledges, south and southwest | 19.0 m | 17.9 m | 22.0 m |
+
 ## Current
 
 The rock sits in the cove off the main channel of Obstruction Pass, and the channel flow wraps into the cove as a counter-clockwise eddy along the Orcas shore.
@@ -49,23 +61,6 @@ The entry shore faces the cove and Obstruction Island across the pass; the dive 
 * **Bad.** East-southeast through southeast (ESE-SE), onshore over 5.7 to 9.4 km of open water down the east entrance of the pass, building chop on the beach and across the swim out.
 * **Mixed.** Southwest (SW), cross-shore over 7.3 km down the west entrance of the pass, running swell past the entry.
 * **Fine.** South-southeast through south-southwest (SSE-SSW), blocked by Obstruction Island 410 to 670 m across the pass, and west-southwest clockwise through east (WSW-E), blocked by Orcas Island itself, with 570 m of fetch at most.
-
-## Depth and tide
-
-The site swings about 2.6 m on a median day, and up to 3.9 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper. The top of the rock stands above the water at low tide.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Peavine Pass (TWC1165), about 1.0 km |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.57 m, up to 3.92 m; 2026 span -1.12 m to +2.98 m |
-
-| Feature | Below MLLW | At a -1.12 m low | At a +2.98 m high |
-|---|---|---|---|
-| Inside channel | 1 to 5 m | 0 to 4 m | 4 to 8 m |
-| Swim across the cove | 2 to 6 m | 1 to 5 m | 5 to 9 m |
-| West side, dive coordinate | 14.5 m | 13.4 m | 17.5 m |
-| Bottom past the ledges, south and southwest | 19.0 m | 17.9 m | 22.0 m |
 
 ## Visibility
 

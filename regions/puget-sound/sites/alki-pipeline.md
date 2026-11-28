@@ -74,6 +74,18 @@ Important! southwest is up; north is down-right.
 | G | 340 m | The crossbar, the true end of the pipe | 14 m |
 | H | 365 m | Two rock piles and two small blocks beyond the crossbar | 16 m |
 
+## Depth
+
+* **Typical range.** Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m.
+* **Profile.** The site is shallow the whole way, sloping gradually from the shallows at the reef start to about 8 to 11 m below datum at the apparent end of the pipe, and a metre or so deeper at the true end.
+* **Tidal swing.** The main basin swings 3 to 5 m between high and low water here, a large fraction of the site's total depth, so depths are given against the MLLW chart datum and a low tide reads noticeably shallower than a high.
+* **Entry.** A higher tide also makes the entry and the surface swim out easier, covering the cobble and shortening the walk to water.
+
+| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
+|---|---|---|---|
+| Apparent end of pipe | 11 m | 9.7 m | 15.0 m |
+| True end of pipe | 12 m | 10.7 m | 16.0 m |
+
 ## Current
 
 Currents here are light to moderate, and the site dives easily inside the point, but Alki Point sits just northwest and accelerates the flow close to and off the point, so a slack is worth planning. Local practice is to dive the slack before the ebb, entering the water well ahead of it.
@@ -96,23 +108,6 @@ The beach faces southwest into the open main basin.
 * **Short fetch.** South-southeast (SSE), onshore over 4.0 km, putting chop on the entry.
 * **Mixed.** West-northwest through northwest (WNW-NW), cross-shore over 7.8 to 8.0 km, running a swell along the beach.
 * **Fine.** North-northwest clockwise through southeast (NNW-SE): offshore from north-northwest through east, blowing off the West Seattle land behind the beach, and cross-shore under 1.1 km from east-southeast and southeast.
-
-## Depth and tide
-
-The site is shallow the whole way, sloping gradually from the shallows at the reef start to about 8 to 11 m below datum at the apparent end of the pipe, and a metre or so deeper at the true end. The main basin swings 3 to 5 m between high and low water here, a large fraction of the site's total depth, so depths are given against the MLLW chart datum and a low tide reads noticeably shallower than a high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 6.8 km east-northeast |
-| **Series** | Full series |
-| **Typical range** | Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m |
-
-| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
-|---|---|---|---|
-| Apparent end of pipe | 11 m | 9.7 m | 15.0 m |
-| True end of pipe | 12 m | 10.7 m | 16.0 m |
-
-A higher tide also makes the entry and the surface swim out easier, covering the cobble and shortening the walk to water.
 
 ## Visibility
 

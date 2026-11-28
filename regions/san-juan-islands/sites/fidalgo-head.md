@@ -25,6 +25,15 @@ Shore dive across the shallow bay at Washington Park, on the west end of Fidalgo
 * **Working the head.** Explore along the base of the rock, moving toward or away from the outer third depending on how much of the swim is left in the plan.
 * **Exit.** There is no exit on Fidalgo Head. The dive returns across the bay to the same stairs.
 
+## Depth
+
+* **Typical range.** Median daily 2.44 m, up to 3.88 m on the year's biggest exchange; 2026 span -1.25 m to +2.83 m.
+* **Tidal swing.** The site swings roughly 2.5 m between an average high and low water, more around the solstices, so depths are quoted against the MLLW chart datum: a low reads shallower than the datum figure, a high deeper.
+
+| Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |
+|---|---|---|---|
+| Outer rock into sand | 11.7 m | 10.5 m | 14.5 m |
+
 ## Current
 
 Fidalgo Head sits where the flow through Burrows Pass meets the open water off the headland. Expect current to matter on every dive here.
@@ -47,20 +56,6 @@ The entry is on the sheltered bay; Fidalgo Head sits on the north side of Burrow
 * **Short fetch.** Southeast (SE) and south-southwest (SSW), onshore over about 1 km.
 * **Mixed.** West through west-northwest (W-WNW), cross-shore over 5.3 to 7.6 km off Rosario Strait.
 * **Fine.** Northwest clockwise through east-southeast (NW-ESE), offshore, the north blocked by the park's own high ground, and east up the narrow throat of Burrows Pass with little room to build a fetch even when it blows; and south-southeast through south (SSE-S), onshore under 1 km across the bay.
-
-## Depth and tide
-
-The site swings roughly 2.5 m between an average high and low water, more around the solstices, so depths are quoted against the MLLW chart datum: a low reads shallower than the datum figure, a high deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Ship Harbor, Fidalgo Island (9448772), about 2.5 km northeast |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.44 m, up to 3.88 m on the year's biggest exchange; 2026 span -1.25 m to +2.83 m |
-
-| Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |
-|---|---|---|---|
-| Outer rock into sand | 11.7 m | 10.5 m | 14.5 m |
 
 ## Visibility
 

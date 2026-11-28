@@ -25,6 +25,17 @@ Shore dive off a historic Mosquito Fleet steamer dock on the southwest shore of 
 * **The drop.** Beyond the dock end the sand steepens sharply, losing roughly a metre of depth for every five to six metres out. Most of the life is above about 9 m; the deeper slope is open and plain.
 * **Bottles.** The Mosquito Fleet called here for decades, so old glass turns up in the sand around the dock.
 
+## Depth
+
+* **Typical range.** Median daily 3.45 m, up to 5.11 m on the year's biggest exchange; 2026 span -1.31 m to +4.00 m.
+* **Tidal swing.** The dock sits in very shallow water, so the tide changes the dive under it more than the depth figure suggests: at a big low the dock end is barely 2 m deep, at a high it is over 7 m.
+
+| Feature | Below MLLW | At a -1.31 m low | At a +4.00 m high |
+|---|---|---|---|
+| Dock end | 3.2 m | 1.9 m | 7.2 m |
+| Slope, about 30 m past the dock end | 9 m | 7.7 m | 13.0 m |
+| Slope, about 80 m past the dock end | 17 m | 15.7 m | 21.0 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -44,22 +55,6 @@ The beach faces west-southwest across Port Orchard toward Bremerton, with Port O
 * **Bad.** South-southwest (SSW), onshore over 6.3 km.
 * **Short fetch.** Southwest through northwest (SW-NW), onshore over 1.2 to 2.0 km of open water.
 * **Fine.** North-northwest clockwise through south (NNW-S): offshore from north-northeast through southeast, blocked by the island behind the beach, and cross-shore under 3.1 km along Port Orchard from north-northwest, north, south-southeast and south.
-
-## Depth and tide
-
-The dock sits in very shallow water, so the tide changes the dive under it more than the depth figure suggests: at a big low the dock end is barely 2 m deep, at a high it is over 7 m.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Clam Bay, Rich Passage (9445938), about 3.9 km southeast |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.45 m, up to 5.11 m on the year's biggest exchange; 2026 span -1.31 m to +4.00 m |
-
-| Feature | Below MLLW | At a -1.31 m low | At a +4.00 m high |
-|---|---|---|---|
-| Dock end | 3.2 m | 1.9 m | 7.2 m |
-| Slope, about 30 m past the dock end | 9 m | 7.7 m | 13.0 m |
-| Slope, about 80 m past the dock end | 17 m | 15.7 m | 21.0 m |
 
 ## Visibility
 

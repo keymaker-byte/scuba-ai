@@ -24,6 +24,12 @@ Kayak Point County Park sits on the east shore of Port Susan, a bay of Puget Sou
 * **Depth as compass.** The slope drops quickly and steadily offshore, so depth alone gives direction: shallow is shoreward.
 * **Bottom composition.** Silty sand near shore grading to mud further down the slope, consistent with the featureless, soft character of the site.
 
+## Depth
+
+* **Typical range.** Median daily 3.39 m, up to 5.02 m on the year's biggest exchange; 2026 span -1.30 m to +3.92 m.
+* **Tidal swing.** Port Susan swings up to about 5 m between high and low water, so depths are given against the MLLW chart datum.
+* **At the dive point.** The 28 m dive point reads about 26.7 m below the surface at the year's lowest low of -1.30 m, and about 31.9 m at its highest high of +3.92 m.
+
 ## Current
 
 * **Type.** Tidal.
@@ -43,18 +49,6 @@ The beach faces west to northwest across Port Susan, toward Camano Island.
 * **Bad.** West through north-northwest (W-NNW), onshore over 5.7 to 12.1 km, with open fetch across the bay to Camano Island and up Port Susan.
 * **Short fetch.** North through north-northeast (N-NNE), onshore over 1.0 to 3.1 km.
 * **Fine.** Northeast clockwise through west-southwest (NE-WSW): offshore from east through south-southwest over the mainland, which keeps the beach flat, and cross-shore under 4.4 km from northeast, east-northeast, southwest and west-southwest.
-
-## Depth and tide
-
-Port Susan swings up to about 5 m between high and low water, so depths are given against the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Kayak Point (9448094), about 0.2 km east-northeast, at the site |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.39 m, up to 5.02 m on the year's biggest exchange; 2026 span -1.30 m to +3.92 m |
-
-The 28 m dive point reads about 26.7 m below the surface at the year's lowest low of -1.30 m, and about 31.9 m at its highest high of +3.92 m.
 
 ## Visibility
 

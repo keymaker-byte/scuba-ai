@@ -68,6 +68,18 @@ Important! north is up-right.
 | H | 149 m | Loose tires | 10 m |
 | I | 165 m | Large tire pile, the end of the rope | 10 m |
 
+## Depth
+
+* **Typical range.** Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m.
+* **Profile.** The bottom is an even slope from an eelgrass band in the shallows, across the top of the slope near 6 to 7 m, down to about 24 m below datum where it eases into a flatter grade.
+* **Tidal swing.** Elliott Bay swings 3 to 5 m between high and low water, so depths are given against the MLLW chart datum: a low reads shallower than the datum figure, a high deeper.
+
+| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
+|---|---|---|---|
+| Eelgrass shallows, top of slope | 6.7 m | 5.4 m | 10.7 m |
+| Guide rope and debris line | 10 to 17 m | 8.7 to 15.7 m | 14.0 to 21.0 m |
+| Base of the main slope | 24 m | 22.7 m | 28.0 m |
+
 ## Current
 
 Currents are usually mild here and the site dives as a benign training beach, but Alki Point sits just southwest and accelerates the flow nearby, so a slack is still worth planning. The flow floods for most of the cycle and reverses only through the second half of the ebb, which makes the slack before the flood the more reliable window; slack tends to fall about an hour before maximum ebb.
@@ -89,22 +101,6 @@ The beach faces north-northwest across Elliott Bay.
 * **Bad.** West clockwise through north-northeast (W-NNE), onshore over 6.0 to 19.9 km of open fetch across Elliott Bay and up the main basin past the point, which builds chop on the entry.
 * **Mixed.** Northeast (NE), over 5.9 km, and west-southwest (WSW), over 10.2 km, cross-shore, each running a swell along the beach past the entry.
 * **Fine.** East-northeast clockwise through southwest (ENE-SW): offshore from east through south-southwest, blowing off the West Seattle land behind the beach, and cross-shore under 1 km from east-northeast and southwest.
-
-## Depth and tide
-
-The bottom is an even slope from an eelgrass band in the shallows, across the top of the slope near 6 to 7 m, down to about 24 m below datum where it eases into a flatter grade. Elliott Bay swings 3 to 5 m between high and low water, so depths are given against the MLLW chart datum: a low reads shallower than the datum figure, a high deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Seattle (Madison St.), Elliott Bay (9447130), about 6.2 km east-northeast |
-| **Series** | Full series |
-| **Typical range** | Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m |
-
-| Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |
-|---|---|---|---|
-| Eelgrass shallows, top of slope | 6.7 m | 5.4 m | 10.7 m |
-| Guide rope and debris line | 10 to 17 m | 8.7 to 15.7 m | 14.0 to 21.0 m |
-| Base of the main slope | 24 m | 22.7 m | 28.0 m |
 
 ## Visibility
 

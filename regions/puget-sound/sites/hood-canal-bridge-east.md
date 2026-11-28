@@ -27,6 +27,11 @@ The east end of the Hood Canal Bridge stands on a line of concrete piers running
 * **Old bridge debris.** Pieces of old bridge structure lie scattered on the bottom around the piers.
 * **Descent.** Submerge on the upstream side of a pier, so the surface current holds the diver against the pier.
 
+## Depth
+
+* **Typical range.** Median daily 3.08 m, up to 4.62 m on the year's biggest exchange; 2026 span -1.25 m to +3.57 m.
+* **Tidal swing.** The tide swings over 3 m on a typical day here: the 9.9 m dive area reads about 8.7 m at the year's lowest low and about 13.5 m at its highest high.
+
 ## Current
 
 All of Hood Canal fills and drains through the channel beneath the bridge.
@@ -52,16 +57,6 @@ The swim out runs 57° off the entry shore's facing, along the shore to the brid
 * **Short fetch.** West-northwest through north (WNW-N), onshore over 2.2 to 3.6 km, enough to raise a chop on the entry.
 * **Mixed.** North-northeast (NNE), along the shore over 5.6 km, and southwest (SW), along the shore over 15.2 km along the length of the canal, each running a wind swell past the entry.
 * **Fine.** Northeast through south-southwest (NE-SSW): offshore from east-northeast through south, where the Kitsap shore lies within 300 m upwind, and cross-shore over less than 5 km of fetch at either end.
-
-## Depth and tide
-
-The tide swings over 3 m on a typical day here: the 9.9 m dive area reads about 8.7 m at the year's lowest low and about 13.5 m at its highest high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Port Gamble (9445059), about 2.5 km east-northeast, at the mouth of Port Gamble Bay |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.08 m, up to 4.62 m on the year's biggest exchange; 2026 span -1.25 m to +3.57 m |
 
 ## Visibility
 

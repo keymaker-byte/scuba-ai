@@ -28,6 +28,17 @@ The jetty is the spine of the dive, worked out along the boulders and back. Work
 * **The end of the jetty.** Where the boulders run out into the current. The far end and the opposite (west) face can be explored when the current allows, but the flow is strongest here.
 * **Wharf pilings.** About 230 m east of the jetty, a group of old wharf pilings stands over sand at roughly 6 to 11 m, covered in plumose anemones and feather duster worms, a separate and more sheltered dive. It tolerates the exchanges better than the jetty and can be drifted between the pilings and the jetty on a flood or an ebb, but current still runs here, so slack is the safe default, especially on the ebb.
 
+## Depth
+
+* **Typical range.** Median daily 2.65 m, up to 4.10 m on the year's biggest exchange; 2026 span -1.25 m to +3.04 m.
+* **Tidal swing.** Admiralty Inlet swings roughly 2.7 m between high and low water here on a typical day, more on a big exchange, so depths are given relative to the MLLW chart datum. A low tide reads shallower than the datum figure; a high tide reads deeper.
+* **Wharf pilings.** The wharf pilings east of the jetty stand over sand at roughly 6 to 11 m below datum.
+
+| Feature | Below MLLW | At a -1.25 m low | At a +3.04 m high |
+|---|---|---|---|
+| Octopus den, shallows | 8.1 m | 6.9 m | 11.1 m |
+| Sand at the end of the jetty | about 19 m | about 17.8 m | about 22.0 m |
+
 ## Current
 
 Current is the defining constraint, strong and erratic, and it does not behave simply. Plan from a current table, not a tide table.
@@ -52,23 +63,6 @@ The park faces Admiralty Bay, open to the south and southeast down Admiralty Inl
 * **Short fetch.** East-northeast through east (ENE-E), onshore over 1.9 to 4.2 km.
 * **Mixed.** South-southwest through southwest (SSW-SW), cross-shore over 6.7 to 12.3 km.
 * **Fine.** West-southwest clockwise through northeast (WSW-NE): offshore from west-southwest through north, and cross-shore under 330 m from north-northeast and northeast.
-
-## Depth and tide
-
-Admiralty Inlet swings roughly 2.7 m between high and low water here on a typical day, more on a big exchange, so depths are given relative to the MLLW chart datum. A low tide reads shallower than the datum figure; a high tide reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Admiralty Head (9447905), about 0.3 km northeast on the same shore |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.65 m, up to 4.10 m on the year's biggest exchange; 2026 span -1.25 m to +3.04 m |
-
-| Feature | Below MLLW | At a -1.25 m low | At a +3.04 m high |
-|---|---|---|---|
-| Octopus den, shallows | 8.1 m | 6.9 m | 11.1 m |
-| Sand at the end of the jetty | about 19 m | about 17.8 m | about 22.0 m |
-
-The wharf pilings east of the jetty stand over sand at roughly 6 to 11 m below datum.
 
 ## Visibility
 

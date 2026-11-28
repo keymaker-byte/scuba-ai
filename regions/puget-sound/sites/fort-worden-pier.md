@@ -25,6 +25,12 @@ A shore dive at the Port Townsend Marine Science Center pier, inside Fort Worden
 * **Boat launch.** On the north side of the pier, closed to swimming and diving. Keep clear and stay south of the pier line.
 * **Sand to mud.** The bottom is bright sand close to the pier, changing to silt and mud further out and deeper, where it gradually falls away beyond the reef.
 
+## Depth
+
+* **Typical range.** Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m.
+* **Tidal swing.** Admiralty Inlet's tide swings a few metres a day here, enough to move the pier's working depth by a body length or more between a low and a high.
+* **At low and high.** The pier end and reef, at about 6.5 m below MLLW, read about 5.3 m below the surface at the year's lowest low of -1.22 m, and about 9.5 m at its highest high of +3.04 m. The outer sand at the dive coordinate, about 10.7 m below datum, reads about 9.5 m at the same low and about 13.7 m at the same high.
+
 ## Current
 
 * **Type.** Tidal.
@@ -44,18 +50,6 @@ The beach faces east-southeast across the entrance to Port Townsend Bay and Admi
 
 * **Bad.** Northeast through south-southeast (NE-SSE), onshore over 5.5 to 12.3 km across Admiralty Inlet.
 * **Fine.** South clockwise through north-northeast (S-NNE): offshore from southwest through north-northwest over the park and the peninsula, and cross-shore under 1 km from south, south-southwest, north and north-northeast.
-
-## Depth and tide
-
-Admiralty Inlet's tide swings a few metres a day here, enough to move the pier's working depth by a body length or more between a low and a high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Port Townsend (9444900), about 2.7 km south, around Point Hudson in Port Townsend Bay |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m |
-
-The pier end and reef, at about 6.5 m below MLLW, read about 5.3 m below the surface at the year's lowest low of -1.22 m, and about 9.5 m at its highest high of +3.04 m. The outer sand at the dive coordinate, about 10.7 m below datum, reads about 9.5 m at the same low and about 13.7 m at the same high.
 
 ## Visibility
 

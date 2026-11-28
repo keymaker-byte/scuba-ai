@@ -109,6 +109,16 @@ Important! north is to the right.
 
 The `#` column is the Edmonds to Kingston ferry lane, immediately west of the DeLion Dry Dock, off limits and never to be entered.
 
+## Depth
+
+* **Typical range.** Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m.
+* **Tidal swing.** The park is shallow and the bottom is gentle, so the tide is a large fraction of the depth and also decides how far the beach is exposed. Edmonds swings up to about 4.9 m between high and low water, so depths are given against the MLLW chart datum. A low tide reads shallower than the datum figure and lengthens the walk across the exposed beach; a high tide reads deeper and covers the beach for an easier entry.
+* **Working depth.** The deepest ground lies at the south end toward the ferry, inside the off-limits zone, so most diving stays between about 8 and 12 m below datum.
+
+| Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |
+|---|---|---|---|
+| Deepest ground, south near ferry | about 13 m | about 11.7 m | about 16.8 m |
+
 ## Current
 
 Current is a secondary factor here and the site is genuinely mild for the Sound, but it does run, driven by wind and by the ferry's propeller wash as much as by the tide. The real concern is not a fierce channel but being set sideways toward the ferry lane without noticing.
@@ -131,22 +141,6 @@ The beach faces roughly west to northwest, onto the open main basin of Puget Sou
 * **Bad.** West clockwise through north-northeast (W-NNE), onshore over 7.3 to 20.9 km, with open fetch across the basin, builds chop and surge on the entry and swell over the shallow structures. A strong onshore wind is felt as surge close to shore even when the deeper water is calmer. A rock breakwater just north of the entry gives the beach some shelter from a north wind, but not from northwest.
 * **Mixed.** Southwest through west-southwest (SW-WSW), cross-shore over 8.8 to 9.1 km.
 * **Fine.** Northeast clockwise through south-southwest (NE-SSW): offshore from east through south-southwest, and cross-shore under 1.6 km from northeast and east-northeast, leave the entry sheltered.
-
-## Depth and tide
-
-The park is shallow and the bottom is gentle, so the tide is a large fraction of the depth and also decides how far the beach is exposed. Edmonds swings up to about 4.9 m between high and low water, so depths are given against the MLLW chart datum. A low tide reads shallower than the datum figure and lengthens the walk across the exposed beach; a high tide reads deeper and covers the beach for an easier entry.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Edmonds (9447427), about 0.3 km south-southeast, at the site |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m |
-
-| Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |
-|---|---|---|---|
-| Deepest ground, south near ferry | about 13 m | about 11.7 m | about 16.8 m |
-
-The deepest ground lies at the south end toward the ferry, inside the off-limits zone, so most diving stays between about 8 and 12 m below datum.
 
 ## Visibility
 

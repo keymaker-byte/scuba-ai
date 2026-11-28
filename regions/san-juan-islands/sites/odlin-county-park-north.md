@@ -25,6 +25,17 @@ Rocky shoreline at the north end of Odlin County Park on Lopez Island, entered b
 * **The slope.** The bottom drops steeply away from the shoreline: about 4.3 m below MLLW some 110 m out from the entry, 11.5 m at 160 m, 20.9 m at 240 m and 27.3 m at the dive coordinate. North toward Upright Head it becomes a steep cobble slope with the occasional large boulder.
 * **The return.** Turn back along the shoreline toward the pier, keeping the rock on the left, and surface inside the bay.
 
+## Depth
+
+* **Typical range.** Median daily 2.39 m, up to 3.93 m; 2026 span -1.17 m to +2.94 m.
+* **Tidal swing.** The site swings about 2.4 m on a median day, and up to 3.9 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.17 m low | At a +2.94 m high |
+|---|---|---|---|
+| Shallows off the entry, 70 to 110 m out | 2.0 to 4.3 m | 0.8 to 3.1 m | 4.9 to 7.2 m |
+| Slope, 240 m out | 20.9 m | 19.7 m | 23.8 m |
+| Dive coordinate | 27.3 m | 26.1 m | 30.2 m |
+
 ## Current
 
 The site sits on the east shore of Upright Channel, which joins Harney Channel to the north with San Juan Channel to the southwest. The water off the shoreline runs with the channel, and the bay to the south holds slacker water.
@@ -48,22 +59,6 @@ The shoreline faces straight across Upright Channel toward Shaw Island, with Upr
 * **Bad.** West-southwest (WSW), onshore over 7.4 km of open water down Upright Channel, building chop on the entry and along the shoreline.
 * **Short fetch.** Southwest (SW), onshore over 1.9 km, and west through north-northwest (W-NNW), onshore over 1.6 to 3.5 km across Upright Channel, raising chop on the entry.
 * **Fine.** North clockwise through south-southwest (N-SSW). North and north-northeast run along the shore; northeast through south-southeast blow off Upright Head and Lopez Island with 100 to 420 m of fetch; south and south-southwest run along the shore with under 600 m of fetch.
-
-## Depth and tide
-
-The site swings about 2.4 m on a median day, and up to 3.9 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Upright Head, Lopez Island (9449911), about 1.3 km north-northeast |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.39 m, up to 3.93 m; 2026 span -1.17 m to +2.94 m |
-
-| Feature | Below MLLW | At a -1.17 m low | At a +2.94 m high |
-|---|---|---|---|
-| Shallows off the entry, 70 to 110 m out | 2.0 to 4.3 m | 0.8 to 3.1 m | 4.9 to 7.2 m |
-| Slope, 240 m out | 20.9 m | 19.7 m | 23.8 m |
-| Dive coordinate | 27.3 m | 26.1 m | 30.2 m |
 
 ## Visibility
 

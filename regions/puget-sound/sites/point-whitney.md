@@ -27,6 +27,18 @@ Point Whitney is a shore dive on Hood Canal at the Washington Department of Fish
 * **Sea whip field.** Beyond the pipe's end, from about 30 m, a dense sea whip field runs along the slope. It is well past recreational no-decompression limits and out of scope for a plan built to this workspace's rules; treat the pipe's end as the actual turn point.
 * **Getting home.** The pipe holds one heading the whole way out, so following it back is the whole return. There is no second landmark to navigate off, so keep a hand or a light on the pipe through any hazy stretch rather than free-swimming over it.
 
+## Depth
+
+* **Typical range.** Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m.
+* **Tidal swing.** Hood Canal's tide swings more here than in the main basin of the Sound, and at Point Whitney it moves the pipe and its blocks a long way vertically. A high tide floods the shallow run several metres deeper than the datum figure; a low tide can leave the top of the pipe close to the surface.
+
+| Feature | Below MLLW | At a -1.39 m low | At a +4.00 m high |
+|---|---|---|---|
+| Pipe start, at the fence gap | about 4.6 m | about 3.2 m | about 8.6 m |
+| Concrete dividers alongside the pipe | 9 to 10 m | 7.6 to 8.6 m | 13.0 to 14.0 m |
+| Pipe end and its deep supports | 26 to 30 m | 24.6 to 28.6 m | 30.0 to 34.0 m |
+| Sea whip field beyond | from about 30 m | from about 28.6 m | from about 34.0 m |
+
 ## Current
 
 Current here is negligible at every stage of the tide, at the surface and depth-averaged alike, which is why the site is dived on any tide rather than timed to a slack.
@@ -49,23 +61,6 @@ The beach faces north, out across the mouth of Dabob Bay into Hood Canal.
 * **Bad.** Northeast (NE), onshore over 6.7 km, the open fetch up the canal and across the bay mouth.
 * **Short fetch.** Northwest through north-northeast (NW-NNE), onshore over 1.4 to 3.4 km.
 * **Fine.** East-northeast clockwise through west-northwest (ENE-WNW): offshore from east-southeast through southwest, blocked by the high ground inland toward Brinnon, and under 4.8 km of fetch from every other direction.
-
-## Depth and tide
-
-Hood Canal's tide swings more here than in the main basin of the Sound, and at Point Whitney it moves the pipe and its blocks a long way vertically. A high tide floods the shallow run several metres deeper than the datum figure; a low tide can leave the top of the pipe close to the surface.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Whitney Point, Dabob Bay (9445246), about 0.3 km south-southeast |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m |
-
-| Feature | Below MLLW | At a -1.39 m low | At a +4.00 m high |
-|---|---|---|---|
-| Pipe start, at the fence gap | about 4.6 m | about 3.2 m | about 8.6 m |
-| Concrete dividers alongside the pipe | 9 to 10 m | 7.6 to 8.6 m | 13.0 to 14.0 m |
-| Pipe end and its deep supports | 26 to 30 m | 24.6 to 28.6 m | 30.0 to 34.0 m |
-| Sea whip field beyond | from about 30 m | from about 28.6 m | from about 34.0 m |
 
 ## Visibility
 

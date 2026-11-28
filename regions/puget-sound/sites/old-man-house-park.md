@@ -24,6 +24,11 @@ Old Man House Park is a small Suquamish Tribe park on the Kitsap Peninsula shore
 * **Up the channel.** Following the shore south and slightly east leads back up the passage toward the Agate Pass Bridge, about 1.6 km away. This runs against the ebb, the direction a drift dive rides down to this beach, so it is a swim rather than a drift.
 * **Eelgrass.** An eelgrass bed grows off the park, thinning out into open sand and gravel further from shore.
 
+## Depth
+
+* **Typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
+* **Tidal swing.** The tide swings up to about 5 m here, a large share of this shallow site's depth: the 9.0 m point off the park reads about 7.7 m at the year's lowest low and about 13.0 m at its highest high.
+
 ## Current
 
 * **Type.** Tidal.
@@ -44,16 +49,6 @@ The beach faces southeast across the north mouth of Agate Passage into Port Madi
 * **Short fetch.** South-southwest (SSW), onshore over 1.2 km.
 * **Mixed.** East-northeast (ENE), cross-shore over 13.2 km.
 * **Fine.** Southeast through south (SE-S), onshore under 1 km across the pass mouth; and southwest clockwise through northeast (SW-NE), offshore from west through north-northeast and cross-shore under 3.6 km.
-
-## Depth and tide
-
-The tide swings up to about 5 m here, a large share of this shallow site's depth: the 9.0 m point off the park reads about 7.7 m at the year's lowest low and about 13.0 m at its highest high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Port Madison (9445753), about 3.0 km southeast |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m |
 
 ## Visibility
 

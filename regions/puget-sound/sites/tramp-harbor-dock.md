@@ -24,6 +24,20 @@ Shore dive beside a former oil dock turned public fishing pier on the east side 
 * **The bottle garden.** From the pilings about three quarters of the way out, where the bottom is around 6 m below MLLW, take a compass bearing on Robinson Point, the low point on the southeast skyline, and swim 10 to 30 kicks on it. Old bottles lie scattered across the sand, many of them occupied.
 * **The slope.** Past the dock end the flat sand steepens gradually toward the middle of the harbor and keeps going past 20 m. Most of the life is on the shallower sand and around the dock.
 
+## Depth
+
+* **Typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m.
+* **Tidal swing.** The tide matters more here than the current: the site is shallow, so a big exchange changes the dive along the dock considerably, and on a minus tide the inner end of the dock is dry.
+
+| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
+|---|---|---|---|
+| Dock, about 40 m out from the bulkhead | 0.9 m | dries | 5.0 m |
+| Dock, three quarters of the way out | 6.0 m | 4.7 m | 10.1 m |
+| Dock end | 8.9 m | 7.6 m | 13.0 m |
+| Slope, about 35 m past the dock end | 12.5 m | 11.2 m | 16.6 m |
+| Slope, about 70 m past the dock end | 16 m | 14.7 m | 20.1 m |
+| Slope, about 150 m past the dock end | 20 m | 18.7 m | 24.1 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -43,25 +57,6 @@ The beach faces east-northeast across Tramp Harbor into East Passage, with the i
 * **Bad.** North through east-southeast (N-ESE). North winds blow down the length of East Passage straight into the harbor over the longest fetch, building chop on the entry and the surface swim; northeast through east-southeast cross East Passage from the Des Moines shore, onshore over 5.8 to 8.9 km.
 * **Short fetch.** Southeast (SE), onshore over 2.1 km.
 * **Fine.** South-southeast clockwise through north-northwest (SSE-NNW), offshore and blocked by the island, or cross-shore over 1.3 km or less; south winds are largely blocked by Maury Island.
-
-## Depth and tide
-
-The tide matters more here than the current: the site is shallow, so a big exchange changes the dive along the dock considerably, and on a minus tide the inner end of the dock is dry.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Des Moines, East Passage (9446248), about 8.3 km east across East Passage |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m |
-
-| Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |
-|---|---|---|---|
-| Dock, about 40 m out from the bulkhead | 0.9 m | dries | 5.0 m |
-| Dock, three quarters of the way out | 6.0 m | 4.7 m | 10.1 m |
-| Dock end | 8.9 m | 7.6 m | 13.0 m |
-| Slope, about 35 m past the dock end | 12.5 m | 11.2 m | 16.6 m |
-| Slope, about 70 m past the dock end | 16 m | 14.7 m | 20.1 m |
-| Slope, about 150 m past the dock end | 20 m | 18.7 m | 24.1 m |
 
 ## Visibility
 

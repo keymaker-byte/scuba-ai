@@ -28,6 +28,20 @@ Shore dive from the beach of Doe Bay Resort and Retreat on the southeast shore o
 * **Open slope.** Beyond the southeast shore's rock the bottom falls toward Rosario Strait, passing 20 m below MLLW 80 m east-southeast of the dive coordinate and 30 m some 180 m to the southeast.
 * **Southwest shoreline.** The rocks along the southwest shore meet a silty sand bottom, with a large eelgrass bed in slightly deeper water beyond and silty mud past that. The bottom off this shore lies about 6.8 m below MLLW some 250 m south of the entry. The shallower rock formations on this side are full of holes and crevices, and a dive light shows the animals sheltering in them.
 
+## Depth
+
+* **Typical range.** Median daily 2.46 m, up to 3.83 m; 2026 span -1.16 m to +2.86 m.
+* **Tidal swing.** The site swings about 2.5 m between high and low water on a median day, and up to 3.8 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.16 m low | At a +2.86 m high |
+|---|---|---|---|
+| Silty bottom, 80 m off the beach | 3.5 m | 2.3 m | 6.4 m |
+| Southwest shelf, 250 m south of the entry | 6.8 m | 5.6 m | 9.7 m |
+| Base of the ledge and wall | 8.0 m | 6.8 m | 10.9 m |
+| Foot of the rock, dive coordinate | 14.8 m | 13.6 m | 17.7 m |
+| Open slope, 80 m east-southeast of the dive coordinate | 20.0 m | 18.8 m | 22.9 m |
+| Open slope, 180 m southeast of the dive coordinate | 30.4 m | 29.2 m | 33.3 m |
+
 ## Current
 
 The inner bay is sheltered, and the Rosario Strait exchange sets past the points and over the open slope.
@@ -49,25 +63,6 @@ The inner bay is sheltered, and the Rosario Strait exchange sets past the points
 * **Bad.** East through south (E-S), onshore over 5.7 to 22.1 km of open water across Rosario Strait, building wind swell on the beach and the swim out.
 * **Short fetch.** South-southwest (SSW), onshore over 4.1 km, enough to raise chop in the bay.
 * **Fine.** Southwest clockwise through east-northeast (SW-ENE), blocked by the bay's own shores and Orcas Island, with 480 m of fetch at most.
-
-## Depth and tide
-
-The site swings about 2.5 m between high and low water on a median day, and up to 3.8 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Tide Point, Cypress Island (9448918), about 6.3 km south-southeast |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.46 m, up to 3.83 m; 2026 span -1.16 m to +2.86 m |
-
-| Feature | Below MLLW | At a -1.16 m low | At a +2.86 m high |
-|---|---|---|---|
-| Silty bottom, 80 m off the beach | 3.5 m | 2.3 m | 6.4 m |
-| Southwest shelf, 250 m south of the entry | 6.8 m | 5.6 m | 9.7 m |
-| Base of the ledge and wall | 8.0 m | 6.8 m | 10.9 m |
-| Foot of the rock, dive coordinate | 14.8 m | 13.6 m | 17.7 m |
-| Open slope, 80 m east-southeast of the dive coordinate | 20.0 m | 18.8 m | 22.9 m |
-| Open slope, 180 m southeast of the dive coordinate | 30.4 m | 29.2 m | 33.3 m |
 
 ## Visibility
 

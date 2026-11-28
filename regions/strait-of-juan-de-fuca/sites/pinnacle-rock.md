@@ -26,6 +26,16 @@ Pinnacle Rock is a shore dive on the Strait of Juan de Fuca between Sekiu and Ne
 * **Direction.** Open in either direction along the shore from the entry; there is no single fixed route.
 * **Staying found.** The rocks and kelp break the ground into a maze. Watch compass and depth continuously.
 
+## Depth
+
+* **Typical range.** Median daily 2.35 m, up to 3.94 m on the year's biggest exchange; 2026 span -0.89 m to +3.15 m.
+* **Tidal swing.** The strait's tide swings up to about 3.9 m in a day here, so depths are given below the MLLW chart datum.
+
+| Feature | Below MLLW | At a -0.89 m low | At a +3.15 m high |
+|---|---|---|---|
+| Inner edge of the kelp bed | 3.0 m | 2.1 m | 6.2 m |
+| Outer edge of the kelp bed | 10.7 m | 9.8 m | 13.9 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -45,21 +55,6 @@ The beach faces northeast into the open strait, with a long, unbroken fetch to t
 * **Bad.** North-northwest clockwise through east (NNW-E), onshore over 22 km to more than 30 km of open strait.
 * **Mixed.** East-southeast (ESE) and northwest (NW), cross-shore over more than 30 km each, running a swell along the shore past the entry.
 * **Fine.** Southeast clockwise through west-northwest: offshore from south-southeast through west, off the land, and cross-shore over 1.5 km or less from the southeast and west-northwest.
-
-## Depth and tide
-
-The strait's tide swings up to about 3.9 m in a day here, so depths are given below the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Neah Bay tide station (9443090), about 11 km west-northwest, on the same shore |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.35 m, up to 3.94 m on the year's biggest exchange; 2026 span -0.89 m to +3.15 m |
-
-| Feature | Below MLLW | At a -0.89 m low | At a +3.15 m high |
-|---|---|---|---|
-| Inner edge of the kelp bed | 3.0 m | 2.1 m | 6.2 m |
-| Outer edge of the kelp bed | 10.7 m | 9.8 m | 13.9 m |
 
 ## Visibility
 

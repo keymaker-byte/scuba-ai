@@ -25,6 +25,17 @@ A small public beach at the end of NE Twin Spits Road near Hansville, on the Kit
 * **The slope.** Eelgrass in the shallows, then featureless silt, falling evenly west-northwest: about 5 m at 60 m from the entry, 14 m at 107 m, 20 m at 140 m, 28 m at 180 m and 36 m at 255 m below MLLW. Downhill is out, uphill is home, and depth is position on the return.
 * **Sea pen and sea whip zone.** From about 15 to 18 m below MLLW down the slope.
 
+## Depth
+
+* **Typical range.** Median daily 2.93 m, up to 4.60 m on the year's biggest exchange; 2026 span -1.18 m to +3.56 m.
+* **Tidal swing.** The tide here swings the depth by nearly 3 m on a typical day, so the depth on the computer changes noticeably between a low and a high slack.
+
+| Feature | Below MLLW | At a -1.18 m low | At a +3.56 m high |
+|---|---|---|---|
+| Private dock | about 4.5 m | about 3.3 m | about 8.1 m |
+| Dive area | 14.0 m | 12.8 m | 17.6 m |
+| Sea pens and sea whips | 15 to 18 m | 13.8 to 16.8 m | 18.6 to 21.6 m |
+
 ## Current
 
 The site sits inside the Hood Canal entrance, out of the strongest water off Foulweather Bluff, and the current here is mild to moderate. Time the dive to slack, since the floods run past a comfortable speed on the slope.
@@ -47,22 +58,6 @@ The beach faces north-northwest, with land closing it in within about 500 m from
 * **Bad.** West-northwest through northwest (WNW-NW), onshore over 5.4 to 6.7 km of open water across the canal entrance, building chop straight onto the beach.
 * **Short fetch.** West (W), onshore over 3.0 km, enough to chop up the entry in a strong blow.
 * **Fine.** North-northwest clockwise through west-southwest (NNW-WSW): onshore over 410 to 520 m from north-northwest through north-northeast, inside the shelter of the land to the north; cross-shore over short fetch from northeast and east-northeast and from southwest and west-southwest; and offshore from east through south-southwest, off the land behind the beach.
-
-## Depth and tide
-
-The tide here swings the depth by nearly 3 m on a typical day, so the depth on the computer changes noticeably between a low and a high slack.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Foulweather Bluff (9445016), within 0.1 km |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.93 m, up to 4.60 m on the year's biggest exchange; 2026 span -1.18 m to +3.56 m |
-
-| Feature | Below MLLW | At a -1.18 m low | At a +3.56 m high |
-|---|---|---|---|
-| Private dock | about 4.5 m | about 3.3 m | about 8.1 m |
-| Dive area | 14.0 m | 12.8 m | 17.6 m |
-| Sea pens and sea whips | 15 to 18 m | 13.8 to 16.8 m | 18.6 to 21.6 m |
 
 ## Visibility
 

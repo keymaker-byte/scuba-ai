@@ -24,6 +24,11 @@ Picnic Point is a shore dive on the east shore of Possession Sound, on the mainl
 * **Eelgrass line.** The eelgrass bed marks the shallow, subtidal edge of the site, roughly the upper half of the slope. Most of the animals concentrate above it and just below it.
 * **The stream mouth.** A small stream runs out of the woods above the park and crosses the beach, a landmark for orienting along the shoreline before entering.
 
+## Depth
+
+* **Typical range.** Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m.
+* **Tidal swing.** Possession Sound swings up to about 5 m between high and low water here, so depths are given against the MLLW chart datum.
+
 ## Current
 
 * **Type.** Tidal.
@@ -44,16 +49,6 @@ The beach faces west across Possession Sound and the main basin toward Whidbey I
 * **Short fetch.** Northwest (NW), onshore over 4.2 km.
 * **Mixed.** North-northwest through north (NNW-N), cross-shore over 6.1 to 24.0 km.
 * **Fine.** North-northeast clockwise through south (NNE-S): offshore from north-northeast through southeast, off the land side of the park, and cross-shore under 3.4 km from south-southeast and south.
-
-## Depth and tide
-
-Possession Sound swings up to about 5 m between high and low water here, so depths are given against the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Glendale, Whidbey Island (9447814), about 6.8 km north-northwest |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m |
 
 ## Visibility
 

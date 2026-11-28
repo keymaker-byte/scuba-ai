@@ -92,8 +92,8 @@ Done when searches stop producing new pages, every relevant page is read or repo
 Produce every depth figure on the region's datum, the one the site conventions' Depth section names, by the rules below and any region-specific rule the Depth section adds.
 
 - **Seabed depth.** `depth.md` at the dive area coordinate, on the region's datum: the `seabed_m` step 3 wrote, stated in the Coordinates row.
-- **Tide station.** On a tidal datum (`MLLW`, `CHS`), a `tide.md` station on that datum in the same body of water as the site, found with `stations --near --datum <K>`, its name and position verified; the site conventions add how a station is chosen in the region's own water. `LAKE` and `NONE` take no station, and the site file has no Depth and tide section.
-- **Typical range.** `tide.md`'s `range` at the station for the current year: the median and the largest daily range, and the year's span.
+- **Tide station.** On a tidal datum (`MLLW`, `CHS`), a `tide.md` station on that datum in the same body of water as the site, found with `stations --near --datum <K>`, its name and position verified; the site conventions add how a station is chosen in the region's own water. The station is a working input for the figures below and stays out of the site file. `LAKE` and `NONE` take no station, and their Depth section carries no Typical range or Tidal swing bullet.
+- **Typical range.** `tide.md`'s `range` at the station for the current year: the median and the largest daily range, and the year's span, written as the Depth section's Typical range bullet.
 - **Depth range.** The dive log's maximum depths and the research sources. On a tidal datum each logged maximum is normalized to the datum with `tide.md`'s `normalize` at the moment it was reached, taken from the dive's profile; on `LAKE` and `NONE` the logged depth stands as it is.
 - **The arithmetic.** Tide height is signed, negative on a minus tide, and the same on every datum:
 
@@ -230,6 +230,18 @@ Two to five sentences: what the site is, where, its character, and its headline 
 
 Optional, for a site with a mapped line or trail: a short description of how it runs and where the entry meets it, a diagram, and a table of features by distance along it with their datum depth.
 
+## Depth
+
+* **Typical range.** Tidal regions only: median and maximum daily range, and the year's span.
+* **Tidal swing.** Tidal regions only: how much the tide swings the depth here.
+* **Topic.** Further depth behaviour, each led by a bold topic: the bottom's profile, the working depth, how a feature reads at a low and a high, what the water level does to the entry.
+
+Optional table of features by depth. The low and high columns are for tidal regions only, each headed with the tide height it reads at; on `LAKE` and `NONE` the table keeps the first two columns, the second headed Depth.
+
+| Feature | Below <datum> | At a <height> m low | At a <height> m high |
+|---|---|---|---|
+| Feature name, and its distance or bearing where it helps | Depth below the datum | Depth below the surface at the low | Depth below the surface at the high |
+
 ## Current
 
 Optional sentence on what dominates the current. Tidal and wind driven only.
@@ -255,18 +267,6 @@ Optional prose on the shoreline's shape where the bearing alone doesn't carry it
 * **Short fetch.** Each Short fetch sector, its fetch range, and why it spoils the entry.
 * **Mixed.** Each Mixed sector, its fetch range, and the swell it runs past the entry.
 * **Fine.** The Fine directions and what blocks them (a bluff, a headland, a breakwater).
-
-## Depth and tide
-
-Tidal regions only. One line on how much the tide swings the depth here.
-
-| | |
-|---|---|
-| **Tide station** | Name, ID, and distance |
-| **Series** | High and low water only, or full series |
-| **Typical range** | Median and maximum daily range, and the year's span |
-
-Optional table of features by datum depth, and how they read at a low and a high.
 
 ## Visibility
 

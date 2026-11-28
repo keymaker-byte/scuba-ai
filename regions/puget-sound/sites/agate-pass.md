@@ -26,6 +26,11 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 * **Old Man House Park.** The take-out for the drift, on the Suquamish shore at the north end of the pass, about 1.6 km from the bridge along the channel. A diver who misses it is carried on into the open water of Port Madison.
 * **Point Bolin.** A kelp fringed rocky point on the Kitsap Peninsula shore south of the pass, marking its southern approach from the Puget Sound side.
 
+## Depth
+
+* **Typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
+* **Tidal swing.** The tide swings up to about 5.1 m in a day here, so depths are given below the MLLW chart datum.
+
 ## Current
 
 * **Type.** Tidal.
@@ -44,16 +49,6 @@ The pass runs roughly north to south between wooded, steep shores, about 270 m w
 
 * **Mixed.** Northeast (NE), over 5.2 km, and south-southwest (SSW), over 8.0 km, cross-shore at the entry along the channel's own axis. Wind blowing along the length of the channel is the one direction that can raise chop.
 * **Fine.** East-northeast through south (ENE-S), offshore; and southwest clockwise through north-northeast (SW-NNE), under 2 km of fetch across and along the narrow channel. The high wooded banks block much of it regardless.
-
-## Depth and tide
-
-The tide swings up to about 5.1 m in a day here, so depths are given below the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Port Madison (9445753), about 3.2 km east-southeast, on Bainbridge Island's north shore in Port Madison, past the north end of the pass |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m |
 
 ## Visibility
 

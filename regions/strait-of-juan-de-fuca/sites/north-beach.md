@@ -25,6 +25,16 @@ North Beach County Park sits on the Quimper Peninsula between McCurdy Point and 
 * **Point Wilson.** East along the beach, past the county park boundary into Fort Worden State Park, marked by Battery Kinzie on the bluff above the point. It marks the edge of the site: the flood sets this way, and Admiralty Inlet's stronger, different current begins beyond it.
 * **McCurdy Point.** West along the shore, the other bound of this stretch of beach.
 
+## Depth
+
+* **Typical range.** Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m.
+* **Tidal swing.** The tide swings up to about 4.1 m in a day here, so depths are given below the MLLW chart datum.
+
+| Feature | Below MLLW | At a -1.22 m low | At a +3.04 m high |
+|---|---|---|---|
+| Inner kelp edge | 6.1 m | 4.9 m | 9.1 m |
+| Outer kelp edge | 8.2 m | 7.0 m | 11.2 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -44,21 +54,6 @@ The beach faces north into the mouth of Admiralty Inlet, open to the Strait of J
 * **Bad.** West-northwest through northeast (WNW-NE), onshore over 7.5 km to more than 30 km, either a long fetch up the open strait or across the mouth of the inlet.
 * **Mixed.** East-northeast through east (ENE-E), cross-shore over 7.8 to 13.1 km, and west (W), cross-shore over 24.3 km up the strait, each running a swell along the beach past the entry.
 * **Fine.** East-southeast clockwise through west-southwest: offshore from east-southeast through southwest, off the land, and cross-shore over 2.3 km from the west-southwest. A southerly blows off the land here and leaves the beach calm while south-facing shores nearby are blown out.
-
-## Depth and tide
-
-The tide swings up to about 4.1 m in a day here, so depths are given below the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Port Townsend tide station (9444900), about 4.1 km south-southeast, around Point Wilson in Port Townsend Bay |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m |
-
-| Feature | Below MLLW | At a -1.22 m low | At a +3.04 m high |
-|---|---|---|---|
-| Inner kelp edge | 6.1 m | 4.9 m | 9.1 m |
-| Outer kelp edge | 8.2 m | 7.0 m | 11.2 m |
 
 ## Visibility
 

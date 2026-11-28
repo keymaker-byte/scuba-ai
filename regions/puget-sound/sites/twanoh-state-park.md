@@ -29,6 +29,18 @@ Twanoh State Park is a shore dive off the south shore of Hood Canal, on the arm 
 * **Boat ramp.** The single boat ramp sits at the west end of the park, 307 m west-southwest of the entry. Stay well clear of it.
 * **Getting home.** The slope runs along the shore, so the way home is always upslope. Come back up to the eelgrass, then follow 225°, the reciprocal of the 45° swim out, to the beach, and ascend in the shallows or inside the roped swimming area, away from boat traffic.
 
+## Depth
+
+* **Typical range.** Median daily 3.66 m, up to 5.44 m on the year's biggest exchange; 2026 span -1.42 m to +4.24 m.
+* **Tidal swing.** The south end of Hood Canal carries one of the largest tides in the region, and it decides both how far the walk out runs and how deep every feature reads. A big high adds more than 4 m to every depth; a minus tide uncovers the top of the eelgrass and brings the tube anemone band up to 7.6 to 10.6 m.
+
+| Feature | Below MLLW | At a -1.42 m low | At a +4.24 m high |
+|---|---|---|---|
+| Eelgrass | 1 to 4 m | Dry to 2.6 m | 5.2 to 8.2 m |
+| Tube anemone band | 9 to 12 m | 7.6 to 10.6 m | 13.2 to 16.2 m |
+| Site coordinate | 12.9 m | 11.5 m | 17.1 m |
+| Floor of the canal | 27 to 32 m | 25.6 to 30.6 m | 31.2 to 36.2 m |
+
 ## Current
 
 Twanoh is dived independently of the tidal current. The water here barely moves on any exchange, far under any speed that would close the site.
@@ -52,23 +64,6 @@ The beach is a straight shore facing across the arm of the canal toward the Kits
 * **Bad.** East-northeast (ENE), onshore over 6.0 km down the arm from Lynch Cove, and builds chop straight onto the beach and the surface swim.
 * **Short fetch.** North-northwest through northeast (NNW-NE), onshore over 1.8 to 4.8 km across the arm, and east (E), onshore over 1.1 km, both straight onto the beach and the surface swim.
 * **Fine.** East-southeast clockwise through northwest (ESE-NW): offshore from south-southeast through west, off the land behind the park, and cross-shore over 300 m to 1.9 km from east-southeast, southeast, west-northwest and northwest.
-
-## Depth and tide
-
-The south end of Hood Canal carries one of the largest tides in the region, and it decides both how far the walk out runs and how deep every feature reads. A big high adds more than 4 m to every depth; a minus tide uncovers the top of the eelgrass and brings the tube anemone band up to 7.6 to 10.6 m.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Lynch Cove Dock (9445441), about 6.7 km northeast, in the same arm of the canal |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.66 m, up to 5.44 m on the year's biggest exchange; 2026 span -1.42 m to +4.24 m |
-
-| Feature | Below MLLW | At a -1.42 m low | At a +4.24 m high |
-|---|---|---|---|
-| Eelgrass | 1 to 4 m | Dry to 2.6 m | 5.2 to 8.2 m |
-| Tube anemone band | 9 to 12 m | 7.6 to 10.6 m | 13.2 to 16.2 m |
-| Site coordinate | 12.9 m | 11.5 m | 17.1 m |
-| Floor of the canal | 27 to 32 m | 25.6 to 30.6 m | 31.2 to 36.2 m |
 
 ## Visibility
 

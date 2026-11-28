@@ -27,6 +27,20 @@ Octopus Hole is a rock wall in a marine conservation area on the west shore of H
 * **Deep wall.** Below the shallow wall the bottom drops off quickly again over cobble and mud to a second, smaller wall whose top lies at about 21 m below MLLW, nearly straight out from the entry. Sea whips grow on the cobble around and below it, and the water past it falls away into the deep canal. A bearing from shore easily overshoots it.
 * **Getting home.** Follow the base of the shallow wall south, then return north along its top to see what was missed, keeping the wall on the other shoulder. The north end and the buoy lead back to the bearing home, a reciprocal of 325°.
 
+## Depth
+
+* **Typical range.** Median daily 3.39 m, up to 5.12 m on the year's biggest exchange; 2026 span -1.40 m to +3.92 m.
+* **Tidal swing.** Hood Canal has a large tide here, and it is the biggest control on how the site reads. A high tide adds up to about 3.9 m to every feature, putting the top of the shallow wall at 9 to 11 m and the deep wall near 25 m; a minus tide brings the top of the shallow wall up to about 4 to 6 m. Plan the depth of a deep-wall dive against the tide on the day, since its no-decompression limit on EAN32 shortens quickly as the water rises.
+
+| Feature | Below MLLW | At a -1.40 m low | At a +3.92 m high |
+|---|---|---|---|
+| Top of the shallow wall | 5 to 7 m | 3.6 to 5.6 m | 8.9 to 10.9 m |
+| Buoy anchor | 9 to 12 m | 7.6 to 10.6 m | 12.9 to 15.9 m |
+| Base of the shallow wall | 15 m | 13.6 m | 18.9 m |
+| Site coordinate | 16.8 m | 15.4 m | 20.7 m |
+| Top of the deep wall | 21 m | 19.6 m | 24.9 m |
+| Sea whips below the deep wall | 25 m | 23.6 m | 28.9 m |
+
 ## Current
 
 Octopus Hole is dived independently of the tide. The water here moves gently through the whole column, even on the largest exchanges, well under any speed that would close the site.
@@ -51,25 +65,6 @@ The beach faces east-southeast across Hood Canal, here about 2 km wide, backed b
 * **Short fetch.** East-northeast through south-southeast (ENE-SSE), onshore over 2.2 to 3.7 km across the canal, short fetch but straight onto the beach.
 * **Mixed.** South (S), over 5.5 km, runs up the canal roughly parallel to the shore, building a swell that runs past the entry along the shore.
 * **Fine.** South-southwest clockwise through north-northeast (SSW-NNE): offshore from southwest through north-northwest, blocked by the high ground behind the site, and cross-shore under 2.0 km from south-southwest, north and north-northeast.
-
-## Depth and tide
-
-Hood Canal has a large tide here, and it is the biggest control on how the site reads. A high tide adds up to about 3.9 m to every feature, putting the top of the shallow wall at 9 to 11 m and the deep wall near 25 m; a minus tide brings the top of the shallow wall up to about 4 to 6 m. Plan the depth of a deep-wall dive against the tide on the day, since its no-decompression limit on EAN32 shortens quickly as the water rises.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Ayock Point (9445388), about 8.3 km north-northeast, up the canal on the same side of the Great Bend |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.39 m, up to 5.12 m on the year's biggest exchange; 2026 span -1.40 m to +3.92 m |
-
-| Feature | Below MLLW | At a -1.40 m low | At a +3.92 m high |
-|---|---|---|---|
-| Top of the shallow wall | 5 to 7 m | 3.6 to 5.6 m | 8.9 to 10.9 m |
-| Buoy anchor | 9 to 12 m | 7.6 to 10.6 m | 12.9 to 15.9 m |
-| Base of the shallow wall | 15 m | 13.6 m | 18.9 m |
-| Site coordinate | 16.8 m | 15.4 m | 20.7 m |
-| Top of the deep wall | 21 m | 19.6 m | 24.9 m |
-| Sea whips below the deep wall | 25 m | 23.6 m | 28.9 m |
 
 ## Visibility
 

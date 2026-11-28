@@ -30,6 +30,19 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 * **From the north end of the beach.** Lining up with the northernmost volleyball net and swimming out on 270° meets a guide line running north and south; follow it south to the pipeline.
 * **The way back.** Follow the pipeline and its guide line back to the junction box, then the shore-parallel line south and back up the slope on a heading of about 100° to the pavilion. Coming back close to the bottom keeps a diver clear of boats over the flat.
 
+## Depth
+
+* **Typical range.** Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m.
+* **Tidal swing.** South Sound tides are large, and the tide swings the depth here by up to about 6 m. At a big minus tide the flat in front of the beach is nearly dry and the slope begins in barely a metre of water.
+
+| Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |
+|---|---|---|---|
+| Top of the slope | 2 m | 0.6 m | 6.8 m |
+| Foot of the slope, shore-parallel line | 7.4 m | 6.0 m | 12.2 m |
+| Junction box, Santa boat | 10.5 m | 9.1 m | 15.3 m |
+| Collapsed northern boat, bow | 11.5 m | 10.1 m | 16.3 m |
+| Pipeline, deep end of the usual dive | 28 m | 26.6 m | 32.8 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -49,24 +62,6 @@ The beach faces west-northwest across the South Sound toward Fox Island and Ketr
 
 * **Bad.** Southwest through north (SW-N), onshore over 5.1 to 17.2 km from west through north, the strong northerlies coming down out of the Narrows. Southwesterlies come up Nisqually Reach over a long fetch and push chop onto the beach.
 * **Fine.** North-northeast clockwise through south-southwest (NNE-SSW), offshore off the bluff behind the park, or cross-shore over 1.9 km or less.
-
-## Depth and tide
-
-South Sound tides are large, and the tide swings the depth here by up to about 6 m. At a big minus tide the flat in front of the beach is nearly dry and the slope begins in barely a metre of water.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Steilacoom, Cormorant Passage (9446714), about 1.0 km west-southwest |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m |
-
-| Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |
-|---|---|---|---|
-| Top of the slope | 2 m | 0.6 m | 6.8 m |
-| Foot of the slope, shore-parallel line | 7.4 m | 6.0 m | 12.2 m |
-| Junction box, Santa boat | 10.5 m | 9.1 m | 15.3 m |
-| Collapsed northern boat, bow | 11.5 m | 10.1 m | 16.3 m |
-| Pipeline, deep end of the usual dive | 28 m | 26.6 m | 32.8 m |
 
 ## Visibility
 

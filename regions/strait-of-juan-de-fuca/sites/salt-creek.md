@@ -26,6 +26,16 @@ Shore dive off Tongue Point, inside the Tongue Point Marine Life Sanctuary at Sa
 * **Exit landmark.** Pick a landmark, or leave a marker, ashore before entering. Exit channels through the rock are easy to see from the shoreline but hard to pick out looking inshore from the water, and the point to head for has to be chosen before the dive, not searched for during it.
 * **Choosing an exit.** A narrow cobblestone beach, a channel between rocks, or a low rock in the lee of another rock all give some shelter from surge. Avoid climbing out over rock where waves are breaking, and swim to Crescent Bay for a sand beach exit if nothing else along the east shore looks safe.
 
+## Depth
+
+* **Typical range.** Median daily 2.10 m, up to 3.25 m on the year's biggest exchange; 2026 span -0.98 m to +2.44 m.
+* **Tidal swing.** The strait's tide swings up to about 3.3 m in a day here, so depths are given below the MLLW chart datum.
+
+| Feature | Below MLLW | At a -0.98 m low | At a +2.44 m high |
+|---|---|---|---|
+| Reef edge | 13.7 m | 12.7 m | 16.1 m |
+| Outer boulders | 18.5 m | 17.5 m | 20.9 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -47,21 +57,6 @@ Tongue Point faces north into the open strait, with Crescent Bay opening to the 
 * **Bad.** Northwest clockwise through east-northeast (NW-ENE), onshore over 18.8 km to more than 30 km, straight across the strait or along it.
 * **Mixed.** East (E), cross-shore over more than 30 km, and west through west-northwest (W-WNW), cross-shore over 21.6 km to more than 30 km down the strait's open axis from the Pacific, each running a swell along the shore past the entry.
 * **Fine.** East-southeast clockwise through west-southwest: offshore from southeast through west-southwest, off the land, and cross-shore over 1.7 km from the east-southeast.
-
-## Depth and tide
-
-The strait's tide swings up to about 3.3 m in a day here, so depths are given below the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Crescent Bay tide station (9443826), about 1.7 km west-southwest |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.10 m, up to 3.25 m on the year's biggest exchange; 2026 span -0.98 m to +2.44 m |
-
-| Feature | Below MLLW | At a -0.98 m low | At a +2.44 m high |
-|---|---|---|---|
-| Reef edge | 13.7 m | 12.7 m | 16.1 m |
-| Outer boulders | 18.5 m | 17.5 m | 20.9 m |
 
 ## Visibility
 

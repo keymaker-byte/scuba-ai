@@ -24,6 +24,12 @@ Camano Island State Park sits at the southwest tip of Camano Island, facing Sara
 * **Camano Head.** The point itself sits just south of the site, where Saratoga Passage meets the channel that runs around to Port Susan. That confluence is the source of the current here.
 * **Kelp.** A summer kelp bed marks the shallower structure and is worth working before heading down the slope.
 
+## Depth
+
+* **Typical range.** Median daily 3.42 m, up to 5.40 m on the year's biggest exchange; 2026 span -1.39 m to +4.16 m.
+* **Tidal swing.** Saratoga Passage swings up to about 5.4 m between high and low water, so depths are given against the MLLW chart datum.
+* **At the dive point.** The 28.8 m dive point reads about 27.4 m below the surface at the year's lowest low of -1.39 m, and about 33.0 m at its highest high of +4.16 m.
+
 ## Current
 
 * **Type.** Tidal.
@@ -44,18 +50,6 @@ The beach faces across Saratoga Passage toward Whidbey Island.
 * **Short fetch.** South through southwest (S-SW), onshore over 2.7 to 3.4 km.
 * **Mixed.** East-southeast (ESE), over 5.8 km, and west through west-northwest (W-WNW), over 5.0 to 6.1 km, cross-shore.
 * **Fine.** Northwest clockwise through east (NW-E): offshore from northwest through east-northeast, blocked by the island itself, and cross-shore over 2.7 km from the east.
-
-## Depth and tide
-
-Saratoga Passage swings up to about 5.4 m between high and low water, so depths are given against the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Greenbank, Whidbey Island (9447883), about 6.0 km west-southwest across the passage |
-| **Series** | Full series |
-| **Typical range** | Median daily 3.42 m, up to 5.40 m on the year's biggest exchange; 2026 span -1.39 m to +4.16 m |
-
-The 28.8 m dive point reads about 27.4 m below the surface at the year's lowest low of -1.39 m, and about 33.0 m at its highest high of +4.16 m.
 
 ## Visibility
 

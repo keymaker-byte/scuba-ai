@@ -25,6 +25,18 @@ Rock wall along the west side of Frost Island, reached from the tip of Spencer S
 * **The wall.** Rock ledges and short walls run in both directions along the base of Frost Island. The stretch north of the spit carries less sediment and more life. The dive coordinate sits at the foot of this wall about 150 m north of the crossing, 17.2 m below MLLW, and the foot of the wall runs 20 to 23 m below MLLW for 100 to 150 m further north.
 * **The return.** Turn back south along the wall to the crossing, then recross the channel on the bottom to the point. On the slack before ebb, the building ebb sets southeast and carries the return; on the slack before flood, the building flood sets northwest, away from the crossing, so turn early.
 
+## Depth
+
+* **Typical range.** Median daily 2.46 m, up to 3.87 m; 2026 span -1.25 m to +2.83 m.
+* **Tidal swing.** The site swings about 2.5 m on a median day, and up to 3.9 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |
+|---|---|---|---|
+| Channel floor on the crossing | 23.3 m | 22.1 m | 26.1 m |
+| Foot of the wall across from the point | 19.6 m | 18.4 m | 22.4 m |
+| Dive coordinate, wall north of the spit | 17.2 m | 16.0 m | 20.0 m |
+| Foot of the wall, 100 to 150 m further north | 20 to 23 m | 19 to 22 m | 23 to 26 m |
+
 ## Current
 
 The channel between the spit and Frost Island carries the exchange between Lopez Sound and the water north of Lopez Island, and sets northwest on the flood and southeast on the ebb.
@@ -47,23 +59,6 @@ The entry is the point of the spit, with water on three sides; the dive area fac
 * **Bad.** North (N), onshore over 9.4 km of open water up the channel and beyond it, building chop on the point and across the crossing.
 * **Short fetch.** North-northeast (NNE), onshore over 3.8 km, and northwest (NW), onshore over 2.2 km, raising chop on the point.
 * **Fine.** Northeast clockwise through west-northwest (NE-WNW), blocked by Frost Island across the channel and by Lopez Island and the spit itself, and north-northwest (NNW), with 740 m of fetch.
-
-## Depth and tide
-
-The site swings about 2.5 m on a median day, and up to 3.9 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Armitage Island, Thatcher Pass (9449932), about 3.9 km east |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.46 m, up to 3.87 m; 2026 span -1.25 m to +2.83 m |
-
-| Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |
-|---|---|---|---|
-| Channel floor on the crossing | 23.3 m | 22.1 m | 26.1 m |
-| Foot of the wall across from the point | 19.6 m | 18.4 m | 22.4 m |
-| Dive coordinate, wall north of the spit | 17.2 m | 16.0 m | 20.0 m |
-| Foot of the wall, 100 to 150 m further north | 20 to 23 m | 19 to 22 m | 23 to 26 m |
 
 ## Visibility
 

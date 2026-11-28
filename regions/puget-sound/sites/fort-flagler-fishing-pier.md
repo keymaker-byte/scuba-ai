@@ -25,6 +25,12 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 * **The rubble reef.** Large concrete cylinders and slabs lie beyond the old pier's end, connected by a line along the bottom in places. They are the site's main attraction, each riddled with holes sheltering fish and crabs.
 * **Featureless sand north of the line.** The bottom north of the old pier is flat, open sand with almost nothing to navigate by; carry a compass and do not wander off the pier line and rubble field without one.
 
+## Depth
+
+* **Typical range.** Median daily 2.77 m, up to 4.22 m on the year's biggest exchange; 2026 span -1.25 m to +3.16 m.
+* **Tidal swing.** Admiralty Inlet's tide swings a few metres a day here, and because the outer reef sits on an open, gently sloping bottom, that swing moves the working depth several metres between a low and a high.
+* **At the reef point.** The 15 m reef point reads about 13.8 m below the surface at the year's lowest low of -1.25 m, and about 18.2 m at its highest high of +3.16 m.
+
 ## Current
 
 * **Type.** Tidal.
@@ -44,18 +50,6 @@ The beach faces east across Admiralty Inlet toward Whidbey Island.
 * **Bad.** Northeast through south-southeast (NE-SSE), onshore over 6.2 to 20.6 km, with open fetch running the length of the inlet in both directions.
 * **Mixed.** North-northeast (NNE), cross-shore over 8.7 km.
 * **Fine.** South clockwise through north (S-N): offshore from southwest through north-northwest over Marrowstone Island, and cross-shore under 1.4 km from south, south-southwest and north.
-
-## Depth and tide
-
-Admiralty Inlet's tide swings a few metres a day here, and because the outer reef sits on an open, gently sloping bottom, that swing moves the working depth several metres between a low and a high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Marrowstone Point (9444972), about 0.1 km west-northwest, at the old pier site |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.77 m, up to 4.22 m on the year's biggest exchange; 2026 span -1.25 m to +3.16 m |
-
-The 15 m reef point reads about 13.8 m below the surface at the year's lowest low of -1.25 m, and about 18.2 m at its highest high of +3.16 m.
 
 ## Visibility
 

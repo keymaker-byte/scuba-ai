@@ -26,6 +26,20 @@ Shore dive off South Beach, the longest public beach in the San Juan Islands, in
 * **The sand.** Past the eelgrass, at the dive coordinate, open sand slopes very gently offshore: about 9 m below MLLW at 250 m from the entry and 11 m at 400 m. A few isolated rocks lie scattered on the bottom from about 8 m down.
 * **Shelf edge.** About 450 m out, at roughly 12 m below MLLW, the shelf ends and the bottom drops steeply into the strait: about 23 m at 550 m from the entry and 30.5 m at 600 m. The shore dive stays on the shelf.
 
+## Depth
+
+* **Typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 to +2.70 m.
+* **Tidal swing.** The site swings about 2.2 m between high and low water on a typical day, and up to 3.6 m on the year's biggest exchange, a large share of a dive this shallow, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
+|---|---|---|---|
+| Shallows, 75 m south of the entry | 2.1 m | 1.0 m | 4.8 m |
+| Eelgrass bands | 2 to 5 m | 0.9 to 3.9 m | 4.7 to 7.7 m |
+| Dive coordinate, 192 m south of the entry | 7.0 m | 5.9 m | 9.7 m |
+| Sand, 400 m south of the entry | 11.0 m | 9.9 m | 13.7 m |
+| Shelf edge, 450 m south of the entry | 11.9 m | 10.8 m | 14.6 m |
+| Slope, 600 m south of the entry | 30.5 m | 29.4 m | 33.2 m |
+
 ## Current
 
 The flow along the beach is weak on the shelf, and the strong tidal stream runs offshore of it, through the strait and into San Juan Channel around Cattle Point.
@@ -47,25 +61,6 @@ The flow along the beach is weak on the shelf, and the strong tidal stream runs 
 * **Bad.** East-southeast through southwest (ESE-SW), onshore over 9.2 to more than 30 km of open water across the eastern Strait of Juan de Fuca, driving wind waves straight onto the beach and building surf on the entry and exit.
 * **Mixed.** West-southwest through west (WSW-W), along the shore over 19.1 to more than 30 km, running swell along the beach past the entry.
 * **Fine.** West-northwest clockwise through east (WNW-E), blocked by the island itself, with 1.5 km of fetch at most.
-
-## Depth and tide
-
-The site swings about 2.2 m between high and low water on a typical day, and up to 3.6 m on the year's biggest exchange, a large share of a dive this shallow, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Kanaka Bay, San Juan Island (9449856), about 6.5 km northwest |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 to +2.70 m |
-
-| Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
-|---|---|---|---|
-| Shallows, 75 m south of the entry | 2.1 m | 1.0 m | 4.8 m |
-| Eelgrass bands | 2 to 5 m | 0.9 to 3.9 m | 4.7 to 7.7 m |
-| Dive coordinate, 192 m south of the entry | 7.0 m | 5.9 m | 9.7 m |
-| Sand, 400 m south of the entry | 11.0 m | 9.9 m | 13.7 m |
-| Shelf edge, 450 m south of the entry | 11.9 m | 10.8 m | 14.6 m |
-| Slope, 600 m south of the entry | 30.5 m | 29.4 m | 33.2 m |
 
 ## Visibility
 

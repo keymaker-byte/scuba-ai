@@ -27,6 +27,11 @@ Four separate dives run from the one beach. Working from the sand entry at the s
 * **North cliffs.** From the northwest end of the beach, enter at the public beach boundary and swim out to the base of the rock cliffs along the north side of the bay.
 * **Northwest Island.** A small island about 0.3 km off the bay, reached by a long swim continuing past the north cliffs. The bottom between the beach and the island is flat sand with no reference to shore, so take a compass heading. Outside the island and around its points are tall walls running from the surface past 30 m; the inside, east face is boulders and cascading shelves down to about 14 m where it flattens into the cove.
 
+## Depth
+
+* **Typical range.** Median daily 2.38 m, up to 3.80 m on the year's biggest exchange; 2026 span -1.20 m to +2.77 m.
+* **Tidal swing.** Rosario Bay swings roughly 2 to 4 m between high and low water, so depths are given against the MLLW chart datum. A low tide reads shallower than the datum figure, a high tide deeper.
+
 ## Current
 
 Dive at slack, and on a low exchange. The strait runs fast, and the offshore legs are unforgiving of a late window.
@@ -48,16 +53,6 @@ The bay opens west to northwest onto Rosario Strait, sheltered by Rosario Head t
 * **Bad.** Southwest through west-northwest (SW-WNW), onshore over 12.2 km to more than 30 km, straight into the bay off the strait, building chop on the entry and a head sea on the surface swim.
 * **Mixed.** South through south-southwest (S-SSW), cross-shore over 5.4 km to more than 30 km down the strait.
 * **Fine.** Northwest clockwise through south-southeast (NW-SSE): offshore from northeast through south-southeast, blocked by the high ground behind the beach, and onshore or cross-shore under 1 km from northwest through north-northeast.
-
-## Depth and tide
-
-Rosario Bay swings roughly 2 to 4 m between high and low water, so depths are given against the MLLW chart datum. A low tide reads shallower than the datum figure, a high tide deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Deception Pass State Park, Bowman Bay, Fidalgo Island (9448614), about 1.1 km east-southeast |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.38 m, up to 3.80 m on the year's biggest exchange; 2026 span -1.20 m to +2.77 m |
 
 ## Visibility
 

@@ -31,6 +31,21 @@ Shore dive at Tolmie State Park on the south shore of Nisqually Reach, between J
 * **Compass deviation.** Metal in and around the barges pulls a compass off near them. Take bearings a few metres clear of the wreckage.
 * **The way back.** Reverse the heading, about 215° on the compass (230° true), up the slope and across the flat to the footbridge. Ascend up or beside the buoy line and check for boats before starting the swim in.
 
+## Depth
+
+* **Typical range.** Median daily 4.27 m, up to 6.16 m on the year's biggest exchange; 2026 span -1.44 m to +4.96 m.
+* **Tidal swing.** South Sound tides are large, and the tide swings the depth here by up to about 6 m. At a big minus tide the flat dries nearly 400 m out from the beach, close to the top of the slope.
+
+| Feature | Below MLLW | At a -1.44 m low | At a +4.96 m high |
+|---|---|---|---|
+| Flat, 300 m out | 0.1 m | Dry | 5.1 m |
+| Flat, 400 m out | 1.3 m | Dry | 6.3 m |
+| Intermediate barge, top | 11.5 m | 10.1 m | 16.5 m |
+| Outer barge, top | 12 m | 10.6 m | 17 m |
+| Seabed at the intermediate barge | 13.9 m | 12.5 m | 18.9 m |
+| Foot of the slope | 14 m | 12.6 m | 19 m |
+| Seabed along the outer barge's east wall | 16 m | 14.6 m | 21 m |
+
 ## Current
 
 The barges lie in a shallow bay off the main stream of Nisqually Reach, and the water over them moves slowly.
@@ -55,26 +70,6 @@ The beach faces northeast across Nisqually Reach toward Anderson Island and the 
 * **Short fetch.** North (N), onshore over 4.8 km, and northeast through east-northeast (NE-ENE), onshore over 3.7 to 3.9 km. Each raises a chop on the swim and over the shallow flat.
 * **Mixed.** North-northwest (NNW), cross-shore over 19.1 km of open water, running a swell along the beach and across the swim.
 * **Fine.** Southeast clockwise through northwest, offshore off the wooded shore and bluffs behind the park, or cross-shore over 2.0 km or less. The beach lies in the lee of southerly storm winds.
-
-## Depth and tide
-
-South Sound tides are large, and the tide swings the depth here by up to about 6 m. At a big minus tide the flat dries nearly 400 m out from the beach, close to the top of the slope.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Devils Head, Drayton Passage (9446671), about 4.7 km north |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 4.27 m, up to 6.16 m on the year's biggest exchange; 2026 span -1.44 m to +4.96 m |
-
-| Feature | Below MLLW | At a -1.44 m low | At a +4.96 m high |
-|---|---|---|---|
-| Flat, 300 m out | 0.1 m | Dry | 5.1 m |
-| Flat, 400 m out | 1.3 m | Dry | 6.3 m |
-| Intermediate barge, top | 11.5 m | 10.1 m | 16.5 m |
-| Outer barge, top | 12 m | 10.6 m | 17 m |
-| Seabed at the intermediate barge | 13.9 m | 12.5 m | 18.9 m |
-| Foot of the slope | 14 m | 12.6 m | 19 m |
-| Seabed along the outer barge's east wall | 16 m | 14.6 m | 21 m |
 
 ## Visibility
 

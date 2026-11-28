@@ -25,6 +25,18 @@ Shore dive on the Mukilteo waterfront, on the shoreline south of Elliott Point i
 * **The clay banks.** Low clay banks, 0.3 to 3 m high and pocked with holes, cut across the slope in a band running roughly 12 to 22 m below datum. A shallower bank lies further north along the same shelf, around 7 to 8 m.
 * **Past the banks.** Below the lowest bank the slope eases and keeps going into water well past diving depth; there is nothing to follow it out for.
 
+## Depth
+
+* **Typical range.** Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m.
+* **Tidal swing.** Possession Sound swings up to about 5 m between high and low water here, so depths are relative to the tide and given against the MLLW chart datum.
+
+| Feature | Below MLLW | At a -1.30 m low | At a +3.85 m high |
+|---|---|---|---|
+| Shelf break | 6.5 m | 5.2 m | 10.4 m |
+| Upper clay bank | 12 m | 10.7 m | 15.9 m |
+| Middle clay bank | 18 m | 16.7 m | 21.9 m |
+| Lower clay bank | 22 m | 20.7 m | 25.9 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -45,23 +57,6 @@ The beach faces west across Possession Sound toward Whidbey Island.
 * **Short fetch.** West through northwest (W-NW), onshore over 3.2 to 4.4 km.
 * **Mixed.** North through north-northeast (N-NNE), over 6.5 to 11.0 km, and south-southwest (SSW), over more than 30 km, cross-shore.
 * **Fine.** Northeast clockwise through south (NE-S): offshore from northeast through south-southeast, blowing off the bluff behind the park, and cross-shore over 570 m from the south.
-
-## Depth and tide
-
-Possession Sound swings up to about 5 m between high and low water here, so depths are relative to the tide and given against the MLLW chart datum.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Glendale, Whidbey Island (9447814), about 3.6 km west-southwest across Possession Sound |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m |
-
-| Feature | Below MLLW | At a -1.30 m low | At a +3.85 m high |
-|---|---|---|---|
-| Shelf break | 6.5 m | 5.2 m | 10.4 m |
-| Upper clay bank | 12 m | 10.7 m | 15.9 m |
-| Middle clay bank | 18 m | 16.7 m | 21.9 m |
-| Lower clay bank | 22 m | 20.7 m | 25.9 m |
 
 ## Visibility
 

@@ -26,6 +26,21 @@ Shore dive in a small pebble cove on the west side of San Juan Island, just sout
 * **Boulder field.** Beyond the kelp and eelgrass along the shores, the bottom opens onto a field of large boulders crowded with urchins.
 * **Choosing a side.** Both sides make a full dive. The richest life lies on the rock outside the bay, and the current grows stronger and less predictable toward the mouth.
 
+## Depth
+
+* **Typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 m to +2.70 m.
+* **Tidal swing.** The site swings about 2.2 m between an average high and low water, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
+|---|---|---|---|
+| Inner bay, about 105 m west-southwest of the entry | 2.6 m | 1.5 m | 5.3 m |
+| West side, below the rock formation, 86 m west-northwest of the dive coordinate | 7.2 m | 6.1 m | 9.9 m |
+| Dive coordinate, mid-bay | 7.5 m | 6.4 m | 10.2 m |
+| Below the east wall, 111 m southeast of the dive coordinate | 11.2 m | 10.1 m | 13.9 m |
+| East side ledge, 187 m south-southeast of the dive coordinate | 15.1 m | 14.0 m | 17.8 m |
+| Bay mouth, 81 m south-southwest of the dive coordinate | 19.0 m | 17.9 m | 21.7 m |
+| Outer west shore slope, 147 m west of the dive coordinate | 21.3 m | 20.2 m | 24.0 m |
+
 ## Current
 
 Haro Strait's tidal stream runs past the mouth of the bay, and inside it the flow breaks into eddies that set in different directions along each shore.
@@ -53,26 +68,6 @@ The bay opens south-southwest between its two rock shores.
 * **Bad.** South-southeast through west (SSE-W), onshore over 11 to more than 30 km of open water across Haro Strait, driving wind waves and surge straight into the bay and onto the beach.
 * **Mixed.** West-northwest (WNW), along the shore over 17.5 km, running a swell past the mouth of the bay.
 * **Fine.** Northwest clockwise through southeast (NW-SE), blocked by the island itself and the bay's two shores, with 240 m of fetch at most.
-
-## Depth and tide
-
-The site swings about 2.2 m between an average high and low water, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Kanaka Bay, San Juan Island (9449856), about 5.6 km southeast |
-| **Series** | Full series |
-| **Typical range** | Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 m to +2.70 m |
-
-| Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
-|---|---|---|---|
-| Inner bay, about 105 m west-southwest of the entry | 2.6 m | 1.5 m | 5.3 m |
-| West side, below the rock formation, 86 m west-northwest of the dive coordinate | 7.2 m | 6.1 m | 9.9 m |
-| Dive coordinate, mid-bay | 7.5 m | 6.4 m | 10.2 m |
-| Below the east wall, 111 m southeast of the dive coordinate | 11.2 m | 10.1 m | 13.9 m |
-| East side ledge, 187 m south-southeast of the dive coordinate | 15.1 m | 14.0 m | 17.8 m |
-| Bay mouth, 81 m south-southwest of the dive coordinate | 19.0 m | 17.9 m | 21.7 m |
-| Outer west shore slope, 147 m west of the dive coordinate | 21.3 m | 20.2 m | 24.0 m |
 
 ## Visibility
 

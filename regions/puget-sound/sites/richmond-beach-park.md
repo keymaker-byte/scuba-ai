@@ -27,6 +27,20 @@ Shore dive on the main basin of Puget Sound at Shoreline, just north of Seattle,
 * **Return.** Come back on about 050°, which closes the loop toward the entry rather than retracing the outbound leg. A short side excursion to the southeast off the return track crosses another patch of metal debris. Safety stop over the shelf on the way in.
 * **Substrate.** Sandy cobble in the shallows, sand only by about 0.5 to 1 m below MLLW, plain sand across most of the shelf and slope apart from the scattered debris itself.
 
+## Depth
+
+* **Typical range.** Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m.
+* **Tidal swing.** The shelf is shallow enough that the tide is a large fraction of the working depth: Edmonds swings up to about 4.9 m between high and low water, the cobble edge dries on a big minus tide, and the shallow bench then sits under about 1 m of water.
+
+| Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |
+|---|---|---|---|
+| Cobble to sand transition | 0.6 m | dries | 4.4 m |
+| Shallow bench | 2.4 m | 1.1 m | 6.2 m |
+| Debris field begins | 3.0 m | 1.7 m | 6.8 m |
+| Debris field ends, top of the drop | 7.6 to 8.2 m | 6.3 to 6.9 m | 11.4 to 12.0 m |
+| Cinderblock and rope trail, anchor chain | 10.7 m | 9.4 m | 14.5 m |
+| Concrete anchor blocks, chain, propeller | 14.3 to 15.2 m | 13.0 to 13.9 m | 18.1 to 19.0 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -47,25 +61,6 @@ The beach faces generally west-southwest across the main basin, open enough for 
 * **Short fetch.** South-southeast (SSE), onshore over 1.2 km.
 * **Mixed.** West-northwest through northwest (WNW-NW), cross-shore over 9.6 to 12.6 km.
 * **Fine.** North-northwest clockwise through southeast (NNW-SE): offshore from north-northwest through east, off the bluff behind the park, and cross-shore under 1 km from east-southeast and southeast.
-
-## Depth and tide
-
-The shelf is shallow enough that the tide is a large fraction of the working depth: Edmonds swings up to about 4.9 m between high and low water, the cobble edge dries on a big minus tide, and the shallow bench then sits under about 1 m of water.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Edmonds (9447427), about 5.6 km north, same shore of the main basin |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m |
-
-| Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |
-|---|---|---|---|
-| Cobble to sand transition | 0.6 m | dries | 4.4 m |
-| Shallow bench | 2.4 m | 1.1 m | 6.2 m |
-| Debris field begins | 3.0 m | 1.7 m | 6.8 m |
-| Debris field ends, top of the drop | 7.6 to 8.2 m | 6.3 to 6.9 m | 11.4 to 12.0 m |
-| Cinderblock and rope trail, anchor chain | 10.7 m | 9.4 m | 14.5 m |
-| Concrete anchor blocks, chain, propeller | 14.3 to 15.2 m | 13.0 to 13.9 m | 18.1 to 19.0 m |
 
 ## Visibility
 

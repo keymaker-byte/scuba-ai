@@ -28,6 +28,18 @@ Shore dive at Sunrise Beach Park, north of Gig Harbor on the west shore of Colvo
 * **Below the wall.** Collapsed rock and boulders cascade from the base at about 15 m down the slope past 30 m, fading into sand around 30 m and beyond.
 * **Mooring buoys.** Two dive mooring buoys mark the north and south ends of the reef, and their lines make a convenient descent and ascent.
 
+## Depth
+
+* **Typical range.** Median daily 3.58 m, up to 5.25 m on the year's biggest exchange; 2026 span -1.30 m to +4.16 m.
+* **Tidal swing.** The tide swings up to about 5 m here, so the top of the wall can read anywhere from about 7 to 13 m on the gauge.
+
+| Feature | Below MLLW | At a -1.30 m low | At a +4.16 m high |
+|---|---|---|---|
+| Top of the wall | 8.5 m | 7.2 m | 12.7 m |
+| Mid wall, dive site coordinate | 11.7 m | 10.4 m | 15.9 m |
+| Base of the wall | 15.0 m | 13.7 m | 19.2 m |
+| Boulder slope, below the north end | 24.0 m | 22.7 m | 28.2 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -47,23 +59,6 @@ The beach faces east-southeast across Colvos Passage toward Vashon Island, about
 * **Bad.** North through north-northeast (N-NNE), down the length of Colvos Passage, which builds a short steep chop against the beach; southeast (SE), onshore over 13.2 km; and south (S), which comes up Colvos Passage from Dalco Passage over 5.7 km and puts chop on the surface swim.
 * **Short fetch.** Northeast through east-southeast (NE-ESE), and south-southeast (SSE), onshore over 2.1 to 4.2 km across the passage, and usually minor.
 * **Fine.** South-southwest clockwise through north-northwest (SSW-NNW), offshore off the wooded bluff behind the park, or cross-shore over 3.5 km.
-
-## Depth and tide
-
-The tide swings up to about 5 m here, so the top of the wall can read anywhere from about 7 to 13 m on the gauge.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Gig Harbor (9446369), about 2.6 km west-southwest, inside the harbor |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.58 m, up to 5.25 m on the year's biggest exchange; 2026 span -1.30 m to +4.16 m |
-
-| Feature | Below MLLW | At a -1.30 m low | At a +4.16 m high |
-|---|---|---|---|
-| Top of the wall | 8.5 m | 7.2 m | 12.7 m |
-| Mid wall, dive site coordinate | 11.7 m | 10.4 m | 15.9 m |
-| Base of the wall | 15.0 m | 13.7 m | 19.2 m |
-| Boulder slope, below the north end | 24.0 m | 22.7 m | 28.2 m |
 
 ## Visibility
 

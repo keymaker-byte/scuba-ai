@@ -26,6 +26,11 @@ The west end of the Hood Canal Bridge meets the Olympic Peninsula shore at Shine
 * **The working support.** The in-use bridge structure stands beside the pontoon, with traffic rumbling overhead audible even at depth.
 * **The return.** The return to shore runs on the reverse compass bearing. Descending back to the bottom and following it home keeps the diver in the weaker current near the seabed and away from boat traffic at the surface.
 
+## Depth
+
+* **Typical range.** Median daily 3.08 m, up to 4.62 m on the year's biggest exchange; 2026 span -1.25 m to +3.57 m.
+* **Tidal swing.** The tide swings over 3 m on a typical day here: the 18.7 m dive area reads about 17.5 m at the year's lowest low and about 22.3 m at its highest high.
+
 ## Current
 
 All of Hood Canal fills and drains through the channel beneath the bridge.
@@ -49,16 +54,6 @@ The swim out runs 50° off the entry shore's facing, along the shore toward the 
 * **Short fetch.** East-northeast through south (ENE-S), onshore over 2.2 to 4.7 km across the canal entrance, enough to raise a chop on the beach.
 * **Mixed.** Northeast (NE), along the shore over 5.3 km, and south-southwest through southwest (SSW-SW), along the shore over 7.0 to 12.0 km down the length of the canal, each running a wind swell past the entry.
 * **Fine.** West-southwest clockwise through north-northeast (WSW-NNE): offshore from west-southwest through north, with the Olympic Peninsula shore within 600 m upwind from west through north, and cross-shore over 1.9 km from north-northeast.
-
-## Depth and tide
-
-The tide swings over 3 m on a typical day here: the 18.7 m dive area reads about 17.5 m at the year's lowest low and about 22.3 m at its highest high.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Port Gamble (9445059), about 4.2 km east, at the mouth of Port Gamble Bay |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.08 m, up to 4.62 m on the year's biggest exchange; 2026 span -1.25 m to +3.57 m |
 
 ## Visibility
 

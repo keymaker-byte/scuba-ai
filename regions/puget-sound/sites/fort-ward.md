@@ -24,6 +24,16 @@ Shore dive on the southwest shore of Bainbridge Island, on Rich Passage between 
 * **The slope.** Sand and cobble, gently graded, with scattered boulders and rock the further out you go. Most of the life is worked in the upper part of this slope, roughly the top 18 m.
 * **The Cribs.** Old submarine net anchors from the fort's WWII defenses, a jumble of metal now grown over with plumose anemones, sit within this same depth band off the park's shore. Worth searching out for the octopus and wolf eel den sites in and around the structure.
 
+## Depth
+
+* **Typical range.** Median daily 3.45 m, up to 5.11 m on the year's biggest exchange; 2026 span -1.31 m to +4.00 m.
+* **Tidal swing.** The site sits open to Rich Passage, and tide swings the depth here by several metres across a normal day.
+
+| Feature | Below MLLW | At a -1.31 m low | At a +4.00 m high |
+|---|---|---|---|
+| Mid slope | 11.4 m | 10.1 m | 15.4 m |
+| Working depth, the Cribs | 17.7 m | 16.4 m | 21.7 m |
+
 ## Current
 
 * **Type.** Tidal.
@@ -43,21 +53,6 @@ The beach faces west-southwest across Rich Passage toward the Kitsap Peninsula s
 * **Short fetch.** South through west-northwest (S-WNW), onshore over 1.1 to 2.3 km across the passage, builds meaningful chop here.
 * **Mixed.** South-southeast (SSE), cross-shore over 10.8 km up the passage from the main basin.
 * **Fine.** Northwest clockwise through southeast (NW-SE): offshore from north through east-southeast, blocked by Bainbridge Island's own landmass behind the beach, and cross-shore under 2.4 km from southeast, northwest and north-northwest, down the passage from Sinclair Inlet.
-
-## Depth and tide
-
-The site sits open to Rich Passage, and tide swings the depth here by several metres across a normal day.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Clam Bay, Rich Passage (9445938), about 1.6 km south-southwest across Rich Passage |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 3.45 m, up to 5.11 m on the year's biggest exchange; 2026 span -1.31 m to +4.00 m |
-
-| Feature | Below MLLW | At a -1.31 m low | At a +4.00 m high |
-|---|---|---|---|
-| Mid slope | 11.4 m | 10.1 m | 15.4 m |
-| Working depth, the Cribs | 17.7 m | 16.4 m | 21.7 m |
 
 ## Visibility
 

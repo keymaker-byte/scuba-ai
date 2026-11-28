@@ -26,6 +26,22 @@ Shore dive from the north beach of San Juan County Park, on the west side of San
 * **North-northwest slope.** From the island's north end a rocky bottom slopes away to the north-northwest, about 12 m below MLLW some 90 m out.
 * **The wall.** About 135 m north-northwest of the island, at about 24 m below MLLW, the slope breaks into a near-vertical wall that drops to about 34 m at 175 m out. The bottom keeps falling past 40 m beyond it. The water below about 18 m often runs clearer than the shallows.
 
+## Depth
+
+* **Typical range.** Median daily 2.33 m, up to 3.66 m; 2026 span -1.11 m to +2.77 m.
+* **Tidal swing.** The site swings about 2.3 m between an average high and low water, and up to 3.7 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
+
+| Feature | Below MLLW | At a -1.11 m low | At a +2.77 m high |
+|---|---|---|---|
+| Mouth of North Bay | 8.3 m | 7.2 m | 11.1 m |
+| Dive coordinate, 65 m east of the island | 8.5 m | 7.4 m | 11.3 m |
+| Deepest part of the channel | 13.1 m | 12.0 m | 15.9 m |
+| Off the south end, 70 m south of the island | 7.3 m | 6.2 m | 10.1 m |
+| North-northwest slope, 90 m from the island | 11.6 m | 10.5 m | 14.4 m |
+| Top of the wall, 135 m north-northwest | 24.1 m | 23.0 m | 26.9 m |
+| Foot of the wall, 175 m north-northwest | 33.8 m | 32.7 m | 36.6 m |
+| Beyond the wall, 215 m north-northwest | 40.6 m | 39.5 m | 43.4 m |
+
 ## Current
 
 Haro Strait's tidal stream runs past the island, setting northeast on the flood and southwest on the ebb, and the channel between the island and the park carries strong rips when it runs.
@@ -51,27 +67,6 @@ Low Island stands between the dive coordinate and the open strait to the west, s
 * **Bad.** Southwest through west-southwest (SW-WSW), onshore over 12.2 to 13.6 km of open water, and west-northwest through northwest (WNW-NW), onshore over 14.2 to 20.1 km, driving wind waves across the channel onto the beach.
 * **Mixed.** South-southwest (SSW), cross-shore over 13.7 km, running swell past the entry.
 * **Fine.** West (W), sheltered by Low Island, with 40 to 240 m of fetch. North-northwest clockwise through south (NNW-S), blocked by San Juan Island, with 920 m of fetch at most.
-
-## Depth and tide
-
-The site swings about 2.3 m between an average high and low water, and up to 3.7 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
-
-| | |
-|---|---|
-| **Tide station** | NOAA Hanbury Point, San Juan Island (9449828), about 4.3 km north |
-| **Series** | High and low water only |
-| **Typical range** | Median daily 2.33 m, up to 3.66 m; 2026 span -1.11 m to +2.77 m |
-
-| Feature | Below MLLW | At a -1.11 m low | At a +2.77 m high |
-|---|---|---|---|
-| Mouth of North Bay | 8.3 m | 7.2 m | 11.1 m |
-| Dive coordinate, 65 m east of the island | 8.5 m | 7.4 m | 11.3 m |
-| Deepest part of the channel | 13.1 m | 12.0 m | 15.9 m |
-| Off the south end, 70 m south of the island | 7.3 m | 6.2 m | 10.1 m |
-| North-northwest slope, 90 m from the island | 11.6 m | 10.5 m | 14.4 m |
-| Top of the wall, 135 m north-northwest | 24.1 m | 23.0 m | 26.9 m |
-| Foot of the wall, 175 m north-northwest | 33.8 m | 32.7 m | 36.6 m |
-| Beyond the wall, 215 m north-northwest | 40.6 m | 39.5 m | 43.4 m |
 
 ## Visibility
 
