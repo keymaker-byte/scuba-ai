@@ -15,6 +15,7 @@ Freshwater lakes in Washington State deep and clear enough to be worth diving.
 | Site | Description |
 |---|---|
 | [Lake Crescent East Beach](sites/lake-crescent-east-beach.md) | South shore near the east end of Lake Crescent in Olympic National Park, a deep, exceptionally clear glacial lake where a narrow shelf breaks into a steep slope past a house-sized boulder garden, a sunken wooden barge and a submerged forest, home to the lake's endemic trout. |
+| [Mercer Island Sunken Forest](sites/mercer-island-sunken-forest.md) | Off Clarke Beach Park on Mercer Island's southeast shore in Lake Washington, a drowned stand of old-growth trees carried into the lake by an earthquake landslide about a thousand years ago, its bare trunks standing and lying across a dark, silty slope from about 12 to 18 m a short swim past the park's dock. |
 | [Sledgehammer Point](sites/sledgehammer-point.md) | A sheer wall off US 101 at the east end of Lake Crescent, entered from the welcome sign pullout, with ledges to one side and a cliff to the other dropping past 90 m through some of the clearest fresh water in the region, home to sculpin, crayfish and the lake's endemic trout. |
 
 ## Dive shops and air fills
