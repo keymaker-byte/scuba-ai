@@ -14,7 +14,7 @@ A shore dive off a small Olmsted park on the west shore of Lake Washington in Se
 ## Getting there
 
 * **Entry.** From the parking, cross the upper lawn to one of the two sets of stairs built into the old seawall, walk down to the lower lawn and the beach, and enter over small, smooth river pebble. The bottom slopes gently: 2.5 m at 20 m out, 5.8 m at 40 m, 9.3 m at 60 m and 13.6 m at 80 m, where the wall begins. The dive area is a 116 m swim out, east, 94°, over 25.1 m of water.
-* **Parking.** A small lot at the top of the park at 200 Lake Washington Blvd E, with limited street parking nearby. Park only in the marked spaces and keep clear of private driveways; illegal parking is ticketed and towed. Arrive early on a summer day. The parking cost is not established.
+* **Parking.** A small lot at the top of the park at 200 Lake Washington Blvd E, with limited street parking nearby. Park only in the marked spaces and keep clear of private driveways; illegal parking is ticketed and towed. Arrive early on a summer day.
 * **Access.** Seattle Parks, open 6 AM to 10 PM. Seattle's water rules restrict diving to daylight hours and require the dive site to be marked with a diver's flag,. The park is divided by a visual barrier: clothing is required in the upper area, west of the barrier and the stairs, and clothing-optional use is allowed in the lower areas east of them, the beach included. Toplessness is allowed throughout the park. Dogs are barred from the beach, smoking is prohibited, and so is alcohol without a permit. The beach is unguarded.
 * **Facilities.** Lawns, trash receptacles and the stairs down to the beach.
 
@@ -49,7 +49,7 @@ A shore dive off a small Olmsted park on the west shore of Lake Washington in Se
 
 ## Temperature
 
-* **At depth.** The lake stratifies from late March or early April to early December, and the water below the thermocline stays about 10 °C or colder through summer. After the lake mixes in December it cools top to bottom, coldest in late January and February, and runs below 10 °C through winter; the winter low at depth is not established. Drysuit protocol applies year round.
+* **At depth.** The lake stratifies from late March or early April to early December, and the water below the thermocline stays about 10 °C or colder through summer. After the lake mixes in December it cools top to bottom, coldest in late January and February, and runs below 10 °C through winter. Drysuit protocol applies year round.
 * **Surface layer.** The warm surface layer runs about 10 m deep over a thermocline near 10 to 12 m. It peaks at 22 to 23 °C in August and tops 20 °C on more than 40 days each summer.
 
 ## Marine life

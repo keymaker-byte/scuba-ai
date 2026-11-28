@@ -23,7 +23,7 @@ The broken wreck of a US Navy FG-1D Corsair fighter on the bed of Lake Washingto
 * **The beach.** A grassy park slopes down to a beach about 120 m long, with cement steps along its north part and a short stretch of sand at its south end, beside the tall apartment building.
 * **The slope.** Straight out east from the entry the bottom slopes steadily: about 4 m deep 50 m from the entry, 8 m at 80 m, 13 m at 100 m and 17 m at 120 m, reaching about 21 m at 140 m and 25 m at 160 m.
 * **Finding the wreck.** The debris lies to the right of straight out from the beach. Swim out from the south end of the beach, near the apartment building, to about 21 m, then turn right, south along the slope, to the debris. Heading east-southeast, 114°, from the entry, the bottom reads about 20 m at 145 m out, 24.2 m at the dive area 163 m out, and 27 m at 185 m.
-* **The wreck.** A tangle of pieces scattered over about 90 m: broken wings in one place, the crumpled fuselage in another, with the landing gear and ammunition boxes among them. Some parts were raised in 1983. The exact layout of the debris field is not established.
+* **The wreck.** A tangle of pieces scattered over about 90 m: broken wings in one place, the crumpled fuselage in another, with the landing gear and ammunition boxes among them. Some parts were raised in 1983.
 * **Beyond.** Past the wreck the bottom keeps sloping east, through about 31 m at 225 m out and 34 m at 285 m.
 
 ## Current
@@ -48,11 +48,10 @@ The swim out runs 63° off the entry shore's facing, to the right of straight ou
 
 * **Darkness at depth.** The water at the wreck's depth, below the summer thermocline, is dark. Carry a primary light.
 * **Silt.** The bottom is soft silt, which clouds the water around a diver who stirs it.
-* **Seasons.** How visibility at the wreck varies through the year is not established.
 
 ## Temperature
 
-* **At depth.** In late summer the water below the thermocline runs about 10 to 11 °C at the wreck's depth, and the lake runs cold top to bottom through winter; the winter temperature at depth is not established. Drysuit protocol applies year round.
+* **At depth.** In late summer the water below the thermocline runs about 10 to 11 °C at the wreck's depth, and the lake runs cold top to bottom through winter. Drysuit protocol applies year round.
 * **Surface layer.** Warms to about 23 °C in late summer, over a thermocline running from about 11 to 21 m, through which the temperature falls about 1 °C a metre.
 
 ## Marine life

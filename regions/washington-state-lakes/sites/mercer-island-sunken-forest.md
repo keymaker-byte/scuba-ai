@@ -47,11 +47,10 @@ The entry sits on the island's southeast shore, facing down the south end of the
 ## Visibility
 
 * **At depth.** Low and murky, and dark among the trees even in daylight; a primary light is essential. Fine silt covers the bottom and a careless fin kick drops the visibility to nothing in seconds.
-* **Through the season.** Visibility figures by season are not established.
 
 ## Temperature
 
-* **At depth.** Cold year round below the thermocline, colder than the calm surface suggests. Figures at the forest's depth are not established. Dive it in a drysuit.
+* **At depth.** Cold year round below the thermocline, colder than the calm surface suggests. Dive it in a drysuit.
 * **Surface layer.** Warms through summer while the lake is stratified, from late March to early November, then cools as the lake mixes in late fall.
 
 ## Marine life

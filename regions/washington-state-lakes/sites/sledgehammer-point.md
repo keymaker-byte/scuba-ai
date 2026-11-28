@@ -24,7 +24,7 @@ A wall dive straight off US 101 at the east end of Lake Crescent in Olympic Nati
 * **Ledges to the right.** Heading right from the entry, toward the north-northeast, the wall breaks into a series of ledges, the gentler side of the site.
 * **The wall to the left.** Heading left, toward the south-southwest and on along the shore west, the shore is a sheer wall, most impressive the farther west it runs.
 * **Straight out.** Off the entry the bottom runs about 18 m deep 20 m from shore, 27.7 m at the dive area, 40 m at 55 m out and 67 m at 80 m out, reaching about 87 m deep at 105 m out and levelling out at 93 to 96 m beyond 120 m.
-* **The truck.** A truck lies at about 49 m off this shore, past sport diving depth; its exact position is not established.
+* **The truck.** A truck lies at about 49 m off this shore, past sport diving depth.
 
 ## Current
 
