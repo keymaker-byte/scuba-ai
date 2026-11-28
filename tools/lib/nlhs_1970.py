@@ -369,8 +369,9 @@ _beh = None
 
 def _behind():
     """(state, x0, y0, cols, rows): one byte per BEHIND_CELL_M cell over the DCBD grid's extent and
-    BEHIND_PAD around it, 0 the open sea, 1 behind the finer surveys, 2 the finer surveys' water,
-    land, or a hole in the finer surveys away from land. Worked out once, a few seconds, and kept in
+    BEHIND_PAD around it, 0 the open sea, 1 behind the finer surveys in a patch three cells wide
+    or more (a lagoon or wetland), 3 behind them in a narrower one (a pocket of the strip along the
+    shore), 2 the finer surveys' water, land, or a hole in the finer surveys away from land. Worked out once, a few seconds, and kept in
     behind.bin beside the surveys, worked out again whenever a survey, the DCBD grid or the
     coastline changes."""
     global _beh
@@ -385,7 +386,7 @@ def _behind():
     stamp = json.dumps({"nlhs": nlhs.grid()["id"],
                         "dcbd": {k: dcbd.index().get(k) for k in ("fetched", "zip_size", "member")},
                         "coast": sum(len(v) for v in _coastline().values()),
-                        "cell": cell, "pad": BEHIND_PAD}, sort_keys=True).encode()
+                        "cell": cell, "pad": BEHIND_PAD, "kinds": 2}, sort_keys=True).encode()
     path = os.path.join(DB, "behind.bin")
     n = cols * rows
     if os.path.exists(path):
@@ -443,8 +444,11 @@ def _behind():
                     comp.append(q)
             k += 1
         if touches:
+            inside = set(comp)
+            wide = any(all(q in inside for q in (p - 1, p + 1, p - cols, p + cols, p - cols - 1, p - cols + 1,
+                                                  p + cols - 1, p + cols + 1)) for p in comp)
             for p in comp:
-                state[p] = 1
+                state[p] = 1 if wide else 3
     with open(path + ".part", "wb") as f:
         f.write(stamp + b"\n" + bytes(state))
     os.replace(path + ".part", path)
@@ -452,20 +456,27 @@ def _behind():
     return _beh
 
 
-def behind(x, y):
+def behind(x, y, kinds=(1, 3)):
     """Whether UTM (x, y) lies behind the finer surveys: in a cell behind them, or in a cell of
     their water or of land beside such a cell and beside no cell of the open sea, so a point at
-    the patch's rim, outside the finer surveys' own pixels, counts with the patch."""
+    the patch's rim, outside the finer surveys' own pixels, counts with the patch. `kinds` picks
+    the patches: both, or (1,) a lagoon or wetland alone (wetland())."""
     st, x0, y0, cols, rows = _behind()
     ci, cj = int((x - x0) // BEHIND_CELL_M), int((y - y0) // BEHIND_CELL_M)
     if not (0 <= ci < cols and 0 <= cj < rows):
         return False
     here = st[cj * cols + ci]
     if here != 2:
-        return here == 1
+        return here in kinds
     around = [st[j * cols + i] for i in range(max(0, ci - 1), min(cols, ci + 2))
               for j in range(max(0, cj - 1), min(rows, cj + 2))]
-    return 1 in around and 0 not in around
+    return any(k in around for k in kinds) and 0 not in around
+
+
+def wetland(x, y):
+    """Whether UTM (x, y) lies behind the finer surveys in a lagoon or wetland three cells wide or
+    more, such as Lac Bay's, the narrower pockets of the strip along the shore left out."""
+    return behind(x, y, (1,))
 
 
 def enclosed(x, y):

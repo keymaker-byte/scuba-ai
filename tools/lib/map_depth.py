@@ -68,6 +68,7 @@ SOURCE_ZOOM = {
     chain.DCBD_NAVY.name: 14,     # the 40 m band past DCBD's edge, at the 2019 survey's zoom
     nlhs.NAME: 14,                # 20 m cells, drawn at about 9 m
     chain.LEGACY_SEAM.name: 13,   # the 100 m band past the finer surveys
+    chain.SHORE.name: 16,         # the strip between the coastline and DCBD's first pixel, at DCBD's zoom
     nlhs_1970.NAME: 12,           # soundings hundreds of metres apart
 }
 LAKE_SOURCE = chain.Ncei.name    # lakes come from the NCEI DEM alone
@@ -325,9 +326,10 @@ class Reader:
     # -- the generic way: the depth tool's own answer at every pixel --
 
     def generic(self, z, lats, lons, inside, onland):
-        """Around Bonaire. Finer than the 2019 survey's zoom only DCBD's own pixels are kept, and
-        DCBD answers first wherever it holds water, so those are read straight from its grid; at the
-        survey's zoom only the survey's box can hold anything kept."""
+        """Around Bonaire. Finer than the 2019 survey's zoom only DCBD's own pixels and the shore
+        strip beside them are kept: DCBD answers first wherever it holds water, so those are read
+        straight from its grid, and the strip answers wherever it covers a point. At the survey's
+        zoom only the survey's box can hold anything else kept."""
         vals, kinds, zooms, srcs = [0] * 65536, bytearray(65536), bytearray(65536), {}
         dz = SOURCE_ZOOM[dcbd.NAME]
         dt = dcbd.tile()
@@ -344,6 +346,13 @@ class Reader:
                             vals[i], kinds[i], zooms[i], srcs[i] = v, WATER_OF[datums.NONE], dz, dcbd.NAME
                         continue
                 if z > SOURCE_ZOOM[nlhs.NAME] or (z == SOURCE_ZOOM[nlhs.NAME] and not nlhs.in_box(lat, lon)):
+                    # finer than the 2019 survey only the shore strip is kept beside DCBD, and it
+                    # answers wherever it covers a point, every source before it silent there
+                    d = chain.SHORE.depth_at(lat, lon)
+                    v = encode(d) if d is not None else 0
+                    if v:
+                        vals[i], kinds[i], zooms[i] = v, WATER_OF[datums.NONE], SOURCE_ZOOM[chain.SHORE.name]
+                        srcs[i] = chain.SHORE.name
                     continue
                 try:
                     src, r = chain.answer_on(lat, lon)

@@ -160,13 +160,14 @@ def _legacy_domain(lat, lon):
     LEGACY_ENCLOSED_M in three of the four quadrants around it (a patch they left unsurveyed), so
     the strip between the shore and DCBD's first pixel, which the soundings never resolved, takes
     no depth from them. Water behind the finer surveys, a lagoon or wetland the open sea reaches
-    only through their water or over land (nlhs_1970.behind), takes none either."""
+    only through their water or over land (nlhs_1970.behind), takes none either, nor does the shore
+    strip, which takes its own depth (_shore)."""
     if not nlhs_1970.in_box(lat, lon) or _dcbd_state(lat, lon) != "none":
         return False
     x, y = dcbd.utm(lat, lon)
     if nlhs.in_box(lat, lon) and nlhs.raw(x, y) is not None:
         return False
-    if ncei.inland(lat, lon) or nlhs_1970.behind(x, y):
+    if ncei.inland(lat, lon) or nlhs_1970.behind(x, y) or _shore(lat, lon) is not None:
         return False
     found = [e for f in (_dcbd_edge, _navy_edge_raw) if (e := f(x, y, LEGACY_SEAWARD_M))]
     if not found:
@@ -354,6 +355,87 @@ class _LegacySeam(Seam):
 
 DCBD_NAVY = _DcbdNavySeam()
 LEGACY_SEAM = _LegacySeam()
+
+
+# --- Bonaire's shore strip ---------------------------------------------------------------------
+#
+# DCBD's grid starts a few metres off the waterline, and between its first pixel and the coastline
+# lies a strip no survey reached. Its depth runs from nothing at OpenStreetMap's coastline, the
+# waterline by definition, to the finer surveys' depth at their nearest edge point, in proportion
+# to the distance across. The strip is water at sea within SHORE_M across, the coastline on one
+# side and the finer surveys on the other, where neither DCBD (its pixels, or a gap between its
+# water) nor the 2019 survey answers, and outside a lagoon or wetland behind the finer surveys,
+# such as Lac Bay's (nlhs_1970.wetland). It answers before the 1970s soundings, whose tracks
+# never reached the shore.
+
+SHORE_M = 60.0   # the widest the strip is, coastline to the finer surveys' edge
+
+
+def _shore(lat, lon):
+    """(distance to the coastline, distance to the finer surveys' edge, their depth there) at a
+    point in Bonaire's shore strip, or None."""
+    if not dcbd.in_box(lat, lon) or _dcbd_state(lat, lon) != "none":
+        return None
+    x, y = dcbd.utm(lat, lon)
+    c = nlhs_1970.coast_point(x, y, SHORE_M)
+    if c is None:
+        return None
+    if nlhs.in_box(lat, lon) and nlhs.raw(x, y) is not None:
+        return None
+    found = [e for f in (_dcbd_edge, _navy_edge) if (e := f(x, y, SHORE_M - c[0]))]
+    if not found:
+        return None
+    de, ex, ey, ze = min(found)
+    dc, cx, cy = c
+    if (cx - x) * (ex - x) + (cy - y) * (ey - y) >= 0:
+        return None   # the coastline and the edge lie to the same side: not across the strip
+    if ncei.inland(lat, lon) or nlhs_1970.wetland(x, y):
+        return None
+    t = dcbd.tile()
+    row, col = dcbd.pixel_utm(t, x, y)
+    if dcbd.gap(t, x, y, row, col) is not None:
+        return None
+    return dc, de, max(0.0, ze)
+
+
+class ShoreStrip:
+    """Bonaire's shore strip: the water between OpenStreetMap's coastline and the finer surveys'
+    first pixel, its depth running from nothing at the coastline to theirs at their edge."""
+    name = "Bonaire shore strip"
+    coverage = "the strip between Bonaire's coastline and the finer surveys' first pixel"
+
+    def covers(self, lat, lon):
+        return _shore(lat, lon) is not None
+
+    def depth_at(self, lat, lon):
+        s = _shore(lat, lon)
+        if s is None:
+            return None
+        dc, de, ze = s
+        return ze * dc / (dc + de) if dc + de > 0 else 0.0
+
+    def answer(self, lat, lon):
+        dc, de, ze = _shore(lat, lon)
+        z = ze * dc / (dc + de) if dc + de > 0 else 0.0
+        return {"water": "sea", "depth": z, "datum": dcbd.DATUM, "key": datums.NONE, "why": None,
+                "detail": f"between the coastline, {dc:.0f} m away, and the finer surveys' edge, {de:.0f} m away, "
+                          f"which reads {ze:.1f} m: no survey reached this strip, so its depth runs from nothing "
+                          f"at the waterline to theirs at the edge",
+                "source": self.name, "reading": None}
+
+    def fetch(self, boxes, workers):
+        return 0   # it reads the coastline and the surveys beside it, each fetched as its own source
+
+    def verify(self, lat, lon, a):
+        print(f"  {self.name} reads the coastline and the finer surveys beside it; verify a point on those surveys")
+        return True
+
+    def selftest(self):
+        print(f"{self.name}: nothing of its own to check; it reads the coastline and the finer surveys")
+        return True
+
+
+SHORE = ShoreStrip()
 
 
 class Nlhs:
@@ -574,7 +656,7 @@ class NceiGscSeam:
 
 NCEI_GSC = NceiGscSeam()
 
-SOURCES = (Dcbd, lambda: DCBD_NAVY, Nlhs, lambda: LEGACY_SEAM, Nlhs1970, Ncei, lambda: NCEI_GSC, Gsc)
+SOURCES = (Dcbd, lambda: DCBD_NAVY, Nlhs, lambda: SHORE, lambda: LEGACY_SEAM, Nlhs1970, Ncei, lambda: NCEI_GSC, Gsc)
 
 
 def sources():
