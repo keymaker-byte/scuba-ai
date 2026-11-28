@@ -236,7 +236,7 @@ Optional, for a site with a mapped line or trail: a short description of how it 
 * **Tidal swing.** Tidal regions only: how much the tide swings the depth here.
 * **Topic.** Further depth behaviour, each led by a bold topic: the bottom's profile, the working depth, how a feature reads at a low and a high, what the water level does to the entry.
 
-Optional table of features by depth. The low and high columns are for tidal regions only, each headed with the tide height it reads at; on `LAKE` and `NONE` the table keeps the first two columns, the second headed Depth.
+Optional table of features by depth. The low and high columns are for tidal regions only, each headed with the tide height it reads at.
 
 | Feature | Below <datum> | At a <height> m low | At a <height> m high |
 |---|---|---|---|
