@@ -29,7 +29,7 @@ Potlatch State Park is a shore dive off a long cobble and eelgrass beach on the 
 
 ## Depth
 
-* **Typical range.** Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m.
+* **Tide typical range.** Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m.
 * **Tidal swing.** Hood Canal carries one of the largest tides in the region, and it decides both how far out the water starts and how deep every feature reads. A big high puts more than 4 m over the flat and moves the top of the drop-off to 8.8 to 10.3 m; a minus tide dries much of the flat and brings the buoy line up to 3.1 to 4.6 m.
 
 | Feature | Below MLLW | At a -1.40 m low | At a +4.32 m high |

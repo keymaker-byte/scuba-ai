@@ -30,7 +30,7 @@ Shore dive off the Fox Island Fishing Pier at Toy Point, the eastern tip of Fox 
 
 ## Depth
 
-* **Typical range.** Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m.
+* **Tide typical range.** Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m.
 * **Tidal swing.** South Sound tides are large, and the tide swings the depth here by up to about 6 m, so the base of the deeper ledge reads anywhere from about 20 to 26 m on the gauge.
 
 | Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |

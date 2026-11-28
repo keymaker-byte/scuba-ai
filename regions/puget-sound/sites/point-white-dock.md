@@ -27,7 +27,7 @@ Shore dive off a historic Mosquito Fleet steamer dock on the southwest shore of 
 
 ## Depth
 
-* **Typical range.** Median daily 3.45 m, up to 5.11 m on the year's biggest exchange; 2026 span -1.31 m to +4.00 m.
+* **Tide typical range.** Median daily 3.45 m, up to 5.11 m on the year's biggest exchange; 2026 span -1.31 m to +4.00 m.
 * **Tidal swing.** The dock sits in very shallow water, so the tide changes the dive under it more than the depth figure suggests: at a big low the dock end is barely 2 m deep, at a high it is over 7 m.
 
 | Feature | Below MLLW | At a -1.31 m low | At a +4.00 m high |

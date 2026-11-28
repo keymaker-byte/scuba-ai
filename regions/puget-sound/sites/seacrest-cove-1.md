@@ -32,7 +32,7 @@ Shore dive at the southeast end of Seacrest Park on the West Seattle waterfront,
 
 ## Depth
 
-* **Typical range.** Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m.
+* **Tide typical range.** Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m.
 * **Tidal swing.** Elliott Bay swings 3 to 5 m between high and low water, so depths are given against the MLLW chart datum: a feature reads shallower at a low and deeper at a high, and a large minus tide exposes much of the rocky shore.
 
 | Feature | Below MLLW | At a -1.31 m low | At a +3.96 m high |

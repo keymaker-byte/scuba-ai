@@ -30,7 +30,7 @@ The jetty is the spine of the dive, worked out along the boulders and back. Work
 
 ## Depth
 
-* **Typical range.** Median daily 2.65 m, up to 4.10 m on the year's biggest exchange; 2026 span -1.25 m to +3.04 m.
+* **Tide typical range.** Median daily 2.65 m, up to 4.10 m on the year's biggest exchange; 2026 span -1.25 m to +3.04 m.
 * **Tidal swing.** Admiralty Inlet swings roughly 2.7 m between high and low water here on a typical day, more on a big exchange, so depths are given relative to the MLLW chart datum. A low tide reads shallower than the datum figure; a high tide reads deeper.
 * **Wharf pilings.** The wharf pilings east of the jetty stand over sand at roughly 6 to 11 m below datum.
 

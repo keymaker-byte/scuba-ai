@@ -26,7 +26,7 @@ Illahee Town Dock is a Port of Illahee community pier and boat ramp on the Kitsa
 
 ## Depth
 
-* **Typical range.** Median daily 3.56 m, up to 5.26 m on the year's biggest exchange; 2026 span -1.35 m to +4.12 m.
+* **Tide typical range.** Median daily 3.56 m, up to 5.26 m on the year's biggest exchange; 2026 span -1.35 m to +4.12 m.
 * **Tidal swing.** Tide swings the depth here by a few metres across a normal day.
 
 | Feature | Below MLLW | At a -1.35 m low | At a +4.12 m high |

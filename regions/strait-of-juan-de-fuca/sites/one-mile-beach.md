@@ -27,7 +27,7 @@ One Mile Beach is a shore dive on the Strait of Juan de Fuca about 1.6 km west o
 
 ## Depth
 
-* **Typical range.** Median daily 2.21 m, up to 3.85 m on the year's biggest exchange; 2026 span -0.98 m to +3.04 m.
+* **Tide typical range.** Median daily 2.21 m, up to 3.85 m on the year's biggest exchange; 2026 span -0.98 m to +3.04 m.
 * **Tidal swing.** The strait's tide swings up to about 3.9 m in a day here, so depths are given below the MLLW chart datum.
 
 | Feature | Below MLLW | At a -0.98 m low | At a +3.04 m high |
@@ -57,7 +57,7 @@ The beach faces north into the open strait.
 
 ## Visibility
 
-* **Typical range.** Runs roughly 5 to 9 m in summer and early fall, occasionally reaching into the low teens of metres. A swell event or a bloom can drop it under 2 m.
+* **Visibility typical range.** Runs roughly 5 to 9 m in summer and early fall, occasionally reaching into the low teens of metres. A swell event or a bloom can drop it under 2 m.
 * **Season.** Best conditions tend to run summer into early fall, matching the kelp forest's own peak.
 
 ## Temperature

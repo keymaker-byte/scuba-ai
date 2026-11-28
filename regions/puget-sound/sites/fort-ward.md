@@ -26,7 +26,7 @@ Shore dive on the southwest shore of Bainbridge Island, on Rich Passage between 
 
 ## Depth
 
-* **Typical range.** Median daily 3.45 m, up to 5.11 m on the year's biggest exchange; 2026 span -1.31 m to +4.00 m.
+* **Tide typical range.** Median daily 3.45 m, up to 5.11 m on the year's biggest exchange; 2026 span -1.31 m to +4.00 m.
 * **Tidal swing.** The site sits open to Rich Passage, and tide swings the depth here by several metres across a normal day.
 
 | Feature | Below MLLW | At a -1.31 m low | At a +4.00 m high |

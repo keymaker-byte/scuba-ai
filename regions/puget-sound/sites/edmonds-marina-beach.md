@@ -27,7 +27,7 @@ Shore dive at Marina Beach Park in Edmonds, at the southwest end of the Port of 
 
 ## Depth
 
-* **Typical range.** Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m.
+* **Tide typical range.** Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m.
 * **Tidal swing.** Edmonds swings up to about 4.9 m between high and low water, a large share of the sand flat's depth, so depths are given against the MLLW chart datum. The old dock remnants past the drop-off stay diveable across the whole range.
 
 | Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |

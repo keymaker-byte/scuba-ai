@@ -31,7 +31,7 @@ Shore dive off the Maplewild Avenue street-end beach on the south side of Three 
 
 ## Depth
 
-* **Typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m.
+* **Tide typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m.
 * **Tidal swing.** East Passage swings about 3.5 to 5.2 m between high and low water here, a large fraction of the depth of the shallower features, so depths are given against the MLLW chart datum and a low tide reads several metres shallower than a high.
 
 | Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |

@@ -27,7 +27,7 @@ Scenic Beach State Park is a gently sloping sand and cobble beach on the east sh
 
 ## Depth
 
-* **Typical range.** Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m.
+* **Tide typical range.** Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m.
 * **Tidal swing.** Hood Canal swings harder than the main basin, and on this gentle slope the tide moves the waterline a long way horizontally as well as vertically: a high tide puts the eelgrass comfortably underwater and shortens the swim, a minus tide adds a long wade and pushes every feature shallower than the datum figure.
 
 | Feature | Below MLLW | At a -1.39 m low | At a +4.00 m high |

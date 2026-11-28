@@ -33,7 +33,7 @@ Shore dive at Tolmie State Park on the south shore of Nisqually Reach, between J
 
 ## Depth
 
-* **Typical range.** Median daily 4.27 m, up to 6.16 m on the year's biggest exchange; 2026 span -1.44 m to +4.96 m.
+* **Tide typical range.** Median daily 4.27 m, up to 6.16 m on the year's biggest exchange; 2026 span -1.44 m to +4.96 m.
 * **Tidal swing.** South Sound tides are large, and the tide swings the depth here by up to about 6 m. At a big minus tide the flat dries nearly 400 m out from the beach, close to the top of the slope.
 
 | Feature | Below MLLW | At a -1.44 m low | At a +4.96 m high |

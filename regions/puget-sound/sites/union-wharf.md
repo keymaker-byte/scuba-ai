@@ -27,7 +27,7 @@ A shore dive on the Port Townsend downtown waterfront, built around the wreckage
 
 ## Depth
 
-* **Typical range.** Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m.
+* **Tide typical range.** Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m.
 * **Tidal swing.** The tide swings the site's depth by up to about 4 m on the year's biggest exchange. The deep end, off the pylons, runs from about 10 m at low water to about 15 m at high; the water off the current wharf runs about 5 to 9 m across the same swing.
 
 | Feature | Below MLLW | At a -1.22 m low | At a +3.04 m high |

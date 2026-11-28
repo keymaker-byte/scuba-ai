@@ -29,7 +29,7 @@ Freshwater Bay opens north onto the Strait of Juan de Fuca between Angeles Point
 
 ## Depth
 
-* **Typical range.** Median daily 2.10 m, up to 3.25 m on the year's biggest exchange; 2026 span -0.98 m to +2.44 m.
+* **Tide typical range.** Median daily 2.10 m, up to 3.25 m on the year's biggest exchange; 2026 span -0.98 m to +2.44 m.
 * **Tidal swing.** The strait's tide swings up to about 3.3 m in a day here, so depths are given below the MLLW chart datum. The boat ramp itself dries at low water.
 
 | Feature | Below MLLW | At a -0.98 m low | At a +2.44 m high |

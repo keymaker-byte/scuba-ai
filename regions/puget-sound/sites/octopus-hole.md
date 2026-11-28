@@ -29,7 +29,7 @@ Octopus Hole is a rock wall in a marine conservation area on the west shore of H
 
 ## Depth
 
-* **Typical range.** Median daily 3.39 m, up to 5.12 m on the year's biggest exchange; 2026 span -1.40 m to +3.92 m.
+* **Tide typical range.** Median daily 3.39 m, up to 5.12 m on the year's biggest exchange; 2026 span -1.40 m to +3.92 m.
 * **Tidal swing.** Hood Canal has a large tide here, and it is the biggest control on how the site reads. A high tide adds up to about 3.9 m to every feature, putting the top of the shallow wall at 9 to 11 m and the deep wall near 25 m; a minus tide brings the top of the shallow wall up to about 4 to 6 m. Plan the depth of a deep-wall dive against the tide on the day, since its no-decompression limit on EAN32 shortens quickly as the water rises.
 
 | Feature | Below MLLW | At a -1.40 m low | At a +3.92 m high |

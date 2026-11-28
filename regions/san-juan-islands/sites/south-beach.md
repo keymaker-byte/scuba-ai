@@ -28,7 +28,7 @@ Shore dive off South Beach, the longest public beach in the San Juan Islands, in
 
 ## Depth
 
-* **Typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 to +2.70 m.
+* **Tide typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 to +2.70 m.
 * **Tidal swing.** The site swings about 2.2 m between high and low water on a typical day, and up to 3.6 m on the year's biggest exchange, a large share of a dive this shallow, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
 
 | Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |

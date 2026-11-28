@@ -27,7 +27,7 @@ Shore dive on the Mukilteo waterfront, on the south shore of Possession Sound at
 
 ## Depth
 
-* **Typical range.** Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m.
+* **Tide typical range.** Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m.
 * **Tidal swing.** Possession Sound swings up to about 5 m between high and low water here, so depths are relative to the tide and given against the MLLW chart datum.
 * **Geodome.** The geodome top, at about 15.4 m below datum, reads about 14.1 m below the surface at the year's lowest low of -1.30 m, and about 19.3 m at its highest high of +3.85 m.
 

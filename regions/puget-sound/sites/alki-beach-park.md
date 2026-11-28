@@ -70,7 +70,7 @@ Important! north is up-right.
 
 ## Depth
 
-* **Typical range.** Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m.
+* **Tide typical range.** Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m.
 * **Profile.** The bottom is an even slope from an eelgrass band in the shallows, across the top of the slope near 6 to 7 m, down to about 24 m below datum where it eases into a flatter grade.
 * **Tidal swing.** Elliott Bay swings 3 to 5 m between high and low water, so depths are given against the MLLW chart datum: a low reads shallower than the datum figure, a high deeper.
 

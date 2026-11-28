@@ -26,7 +26,7 @@ Kayak Point County Park sits on the east shore of Port Susan, a bay of Puget Sou
 
 ## Depth
 
-* **Typical range.** Median daily 3.39 m, up to 5.02 m on the year's biggest exchange; 2026 span -1.30 m to +3.92 m.
+* **Tide typical range.** Median daily 3.39 m, up to 5.02 m on the year's biggest exchange; 2026 span -1.30 m to +3.92 m.
 * **Tidal swing.** Port Susan swings up to about 5 m between high and low water, so depths are given against the MLLW chart datum.
 * **At the dive point.** The 28 m dive point reads about 26.7 m below the surface at the year's lowest low of -1.30 m, and about 31.9 m at its highest high of +3.92 m.
 

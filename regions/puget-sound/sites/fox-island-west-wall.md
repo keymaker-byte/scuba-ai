@@ -32,7 +32,7 @@ Shore dive at the end of Kamus Drive on the southwest shore of Fox Island, at th
 
 ## Depth
 
-* **Typical range.** Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m.
+* **Tide typical range.** Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m.
 * **Tidal swing.** South Sound tides are large, and the tide swings the depth here by up to about 6 m. On a big minus tide the sand dollar beds dry out to the top of the slope, and the exposed bottom in front of the beach is soft mud.
 
 | Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |

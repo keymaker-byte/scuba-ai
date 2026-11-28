@@ -26,7 +26,7 @@ Camano Island State Park sits at the southwest tip of Camano Island, facing Sara
 
 ## Depth
 
-* **Typical range.** Median daily 3.42 m, up to 5.40 m on the year's biggest exchange; 2026 span -1.39 m to +4.16 m.
+* **Tide typical range.** Median daily 3.42 m, up to 5.40 m on the year's biggest exchange; 2026 span -1.39 m to +4.16 m.
 * **Tidal swing.** Saratoga Passage swings up to about 5.4 m between high and low water, so depths are given against the MLLW chart datum.
 * **At the dive point.** The 28.8 m dive point reads about 27.4 m below the surface at the year's lowest low of -1.39 m, and about 33.0 m at its highest high of +4.16 m.
 

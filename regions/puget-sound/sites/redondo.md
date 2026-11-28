@@ -31,7 +31,7 @@ Shore dive at Redondo Beach in Des Moines, on the mainland shore of East Passage
 
 ## Depth
 
-* **Typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 to +4.08 m.
+* **Tide typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 to +4.08 m.
 * **Tidal swing.** East Passage swings up to about 5 m between high and low water here, enough to leave the flat in front of the stairs dry on a minus tide and to put the plain past 34 m below the surface at a big high.
 
 | Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |

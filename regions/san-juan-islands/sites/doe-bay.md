@@ -30,7 +30,7 @@ Shore dive from the beach of Doe Bay Resort and Retreat on the southeast shore o
 
 ## Depth
 
-* **Typical range.** Median daily 2.46 m, up to 3.83 m; 2026 span -1.16 m to +2.86 m.
+* **Tide typical range.** Median daily 2.46 m, up to 3.83 m; 2026 span -1.16 m to +2.86 m.
 * **Tidal swing.** The site swings about 2.5 m between high and low water on a median day, and up to 3.8 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
 
 | Feature | Below MLLW | At a -1.16 m low | At a +2.86 m high |

@@ -27,7 +27,7 @@ North Beach County Park sits on the Quimper Peninsula between McCurdy Point and 
 
 ## Depth
 
-* **Typical range.** Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m.
+* **Tide typical range.** Median daily 2.62 m, up to 4.07 m on the year's biggest exchange; 2026 span -1.22 m to +3.04 m.
 * **Tidal swing.** The tide swings up to about 4.1 m in a day here, so depths are given below the MLLW chart datum.
 
 | Feature | Below MLLW | At a -1.22 m low | At a +3.04 m high |

@@ -39,7 +39,7 @@ Safety stops work at the shallow north-northeast end of the ledge, or on the san
 
 ## Depth
 
-* **Typical range.** Median daily 2.49 m, up to 3.79 m on the year's biggest exchange; 2026 span -1.07 m to +2.89 m.
+* **Tide typical range.** Median daily 2.49 m, up to 3.79 m on the year's biggest exchange; 2026 span -1.07 m to +2.89 m.
 * **Tidal swing.** The pass swings roughly 2 to 4 m between high and low water, so depths are given relative to the MLLW chart datum. A low tide reads shallower than the datum figure; a high tide reads deeper.
 
 | Feature | Below MLLW | At a -1.07 m low | At a +2.89 m high |

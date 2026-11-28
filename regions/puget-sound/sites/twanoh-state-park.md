@@ -31,7 +31,7 @@ Twanoh State Park is a shore dive off the south shore of Hood Canal, on the arm 
 
 ## Depth
 
-* **Typical range.** Median daily 3.66 m, up to 5.44 m on the year's biggest exchange; 2026 span -1.42 m to +4.24 m.
+* **Tide typical range.** Median daily 3.66 m, up to 5.44 m on the year's biggest exchange; 2026 span -1.42 m to +4.24 m.
 * **Tidal swing.** The south end of Hood Canal carries one of the largest tides in the region, and it decides both how far the walk out runs and how deep every feature reads. A big high adds more than 4 m to every depth; a minus tide uncovers the top of the eelgrass and brings the tube anemone band up to 7.6 to 10.6 m.
 
 | Feature | Below MLLW | At a -1.42 m low | At a +4.24 m high |

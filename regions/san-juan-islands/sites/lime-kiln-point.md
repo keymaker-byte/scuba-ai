@@ -28,7 +28,7 @@ Shore dive below the Lime Kiln lighthouse in Lime Kiln Point State Park, on the 
 
 ## Depth
 
-* **Typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 to +2.70 m.
+* **Tide typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 to +2.70 m.
 * **Tidal swing.** The site swings about 2.2 m between high and low water on a typical day, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
 
 | Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
@@ -64,7 +64,7 @@ Haro Strait's tidal stream runs along the point, setting north-northwest on the 
 
 ## Visibility
 
-* **Typical range.** About 3 to 12 m.
+* **Visibility typical range.** About 3 to 12 m.
 * **Season.** Autumn and winter bring the clearest water. Spring and summer plankton blooms and jellies cloud the top 10 m or so, usually with clearer water below.
 
 ## Temperature

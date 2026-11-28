@@ -28,7 +28,7 @@ Agate Pass is a narrow, high current tidal strait separating the north end of Ba
 
 ## Depth
 
-* **Typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
+* **Tide typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
 * **Tidal swing.** The tide swings up to about 5.1 m in a day here, so depths are given below the MLLW chart datum.
 
 ## Current

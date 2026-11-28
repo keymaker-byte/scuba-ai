@@ -26,7 +26,7 @@ Shore dive beside a former oil dock turned public fishing pier on the east side 
 
 ## Depth
 
-* **Typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m.
+* **Tide typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m.
 * **Tidal swing.** The tide matters more here than the current: the site is shallow, so a big exchange changes the dive along the dock considerably, and on a minus tide the inner end of the dock is dry.
 
 | Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |

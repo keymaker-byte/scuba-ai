@@ -29,7 +29,7 @@ Shore dive on the main basin of Puget Sound at Shoreline, just north of Seattle,
 
 ## Depth
 
-* **Typical range.** Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m.
+* **Tide typical range.** Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m.
 * **Tidal swing.** The shelf is shallow enough that the tide is a large fraction of the working depth: Edmonds swings up to about 4.9 m between high and low water, the cobble edge dries on a big minus tide, and the shallow bench then sits under about 1 m of water.
 
 | Feature | Below MLLW | At a -1.30 m low | At a +3.81 m high |

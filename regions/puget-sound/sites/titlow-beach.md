@@ -31,7 +31,7 @@ Shore dive at Titlow Park in Tacoma, on the east shore of the Tacoma Narrows sou
 
 ## Depth
 
-* **Typical range.** Median daily 3.78 m, up to 5.52 m on the year's biggest exchange; 2026 span -1.34 m to +4.40 m.
+* **Tide typical range.** Median daily 3.78 m, up to 5.52 m on the year's biggest exchange; 2026 span -1.34 m to +4.40 m.
 * **Tidal swing.** The South Sound's tides are large, and the tide swings the depth here by up to about 5.5 m, so the pilings read from barely 3 m at a big minus tide to almost 10 m at a high. A high tide makes for the better dive among the pilings.
 
 | Feature | Below MLLW | At a -1.34 m low | At a +4.40 m high |

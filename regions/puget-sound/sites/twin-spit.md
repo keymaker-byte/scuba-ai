@@ -27,7 +27,7 @@ A small public beach at the end of NE Twin Spits Road near Hansville, on the Kit
 
 ## Depth
 
-* **Typical range.** Median daily 2.93 m, up to 4.60 m on the year's biggest exchange; 2026 span -1.18 m to +3.56 m.
+* **Tide typical range.** Median daily 2.93 m, up to 4.60 m on the year's biggest exchange; 2026 span -1.18 m to +3.56 m.
 * **Tidal swing.** The tide here swings the depth by nearly 3 m on a typical day, so the depth on the computer changes noticeably between a low and a high slack.
 
 | Feature | Below MLLW | At a -1.18 m low | At a +3.56 m high |

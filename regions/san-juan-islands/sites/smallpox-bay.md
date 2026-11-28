@@ -28,7 +28,7 @@ Shore dive from the boat ramp in Smallpox Bay, the small sandy cove at the south
 
 ## Depth
 
-* **Typical range.** Median daily 2.33 m, up to 3.66 m; 2026 span -1.11 m to +2.77 m.
+* **Tide typical range.** Median daily 2.33 m, up to 3.66 m; 2026 span -1.11 m to +2.77 m.
 * **Tidal swing.** The site swings about 2.3 m between an average high and low water, and up to 3.7 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
 
 | Feature | Below MLLW | At a -1.11 m low | At a +2.77 m high |
@@ -63,7 +63,7 @@ Haro Strait's tidal stream runs along this shore, setting northeast on the flood
 
 ## Visibility
 
-* **Typical range.** About 3 to 9 m, often silty, especially over the soft bottom of the bay.
+* **Visibility typical range.** About 3 to 9 m, often silty, especially over the soft bottom of the bay.
 * **Season.** Winter brings the clearest water; spring and summer plankton blooms cut it, worst in the shallows.
 
 ## Temperature

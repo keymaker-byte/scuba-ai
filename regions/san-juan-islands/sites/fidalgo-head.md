@@ -27,7 +27,7 @@ Shore dive across the shallow bay at Washington Park, on the west end of Fidalgo
 
 ## Depth
 
-* **Typical range.** Median daily 2.44 m, up to 3.88 m on the year's biggest exchange; 2026 span -1.25 m to +2.83 m.
+* **Tide typical range.** Median daily 2.44 m, up to 3.88 m on the year's biggest exchange; 2026 span -1.25 m to +2.83 m.
 * **Tidal swing.** The site swings roughly 2.5 m between an average high and low water, more around the solstices, so depths are quoted against the MLLW chart datum: a low reads shallower than the datum figure, a high deeper.
 
 | Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |

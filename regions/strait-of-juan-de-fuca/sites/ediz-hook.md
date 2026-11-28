@@ -28,7 +28,7 @@ Ediz Hook is the long sand spit that curls out from the base of Port Angeles and
 
 ## Depth
 
-* **Typical range.** Median daily 2.13 m, up to 3.39 m on the year's biggest exchange; 2026 span -1.10 m to +2.47 m.
+* **Tide typical range.** Median daily 2.13 m, up to 3.39 m on the year's biggest exchange; 2026 span -1.10 m to +2.47 m.
 * **Tidal swing.** The harbor's tide swings up to about 3.4 m in a day, so depths are given below the MLLW chart datum. The shallow entry flat can dry at a low spring tide.
 
 | Feature | Below MLLW | At a -1.10 m low | At a +2.47 m high |

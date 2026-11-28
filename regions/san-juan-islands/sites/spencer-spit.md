@@ -27,7 +27,7 @@ Rock wall along the west side of Frost Island, reached from the tip of Spencer S
 
 ## Depth
 
-* **Typical range.** Median daily 2.46 m, up to 3.87 m; 2026 span -1.25 m to +2.83 m.
+* **Tide typical range.** Median daily 2.46 m, up to 3.87 m; 2026 span -1.25 m to +2.83 m.
 * **Tidal swing.** The site swings about 2.5 m on a median day, and up to 3.9 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
 
 | Feature | Below MLLW | At a -1.25 m low | At a +2.83 m high |

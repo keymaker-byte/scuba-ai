@@ -32,7 +32,7 @@ Shore dive at Sunnyside Beach Park in Steilacoom, on the South Puget Sound shore
 
 ## Depth
 
-* **Typical range.** Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m.
+* **Tide typical range.** Median daily 4.11 m, up to 5.90 m on the year's biggest exchange; 2026 span -1.38 m to +4.76 m.
 * **Tidal swing.** South Sound tides are large, and the tide swings the depth here by up to about 6 m. At a big minus tide the flat in front of the beach is nearly dry and the slope begins in barely a metre of water.
 
 | Feature | Below MLLW | At a -1.38 m low | At a +4.76 m high |

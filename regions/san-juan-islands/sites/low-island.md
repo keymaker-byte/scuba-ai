@@ -28,7 +28,7 @@ Shore dive from the north beach of San Juan County Park, on the west side of San
 
 ## Depth
 
-* **Typical range.** Median daily 2.33 m, up to 3.66 m; 2026 span -1.11 m to +2.77 m.
+* **Tide typical range.** Median daily 2.33 m, up to 3.66 m; 2026 span -1.11 m to +2.77 m.
 * **Tidal swing.** The site swings about 2.3 m between an average high and low water, and up to 3.7 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
 
 | Feature | Below MLLW | At a -1.11 m low | At a +2.77 m high |
@@ -70,7 +70,7 @@ Low Island stands between the dive coordinate and the open strait to the west, s
 
 ## Visibility
 
-* **Typical range.** About 3 to 9 m or better at depth, with the shallows often worse.
+* **Visibility typical range.** About 3 to 9 m or better at depth, with the shallows often worse.
 * **Season.** Spring before the bloom reaches 9 m or more. Summer plankton can cut the shallows to about 1.5 m while the water below about 18 m stays clearer. Winter brings the clearest water.
 
 ## Temperature

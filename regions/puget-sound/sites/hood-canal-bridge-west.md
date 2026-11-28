@@ -28,7 +28,7 @@ The west end of the Hood Canal Bridge meets the Olympic Peninsula shore at Shine
 
 ## Depth
 
-* **Typical range.** Median daily 3.08 m, up to 4.62 m on the year's biggest exchange; 2026 span -1.25 m to +3.57 m.
+* **Tide typical range.** Median daily 3.08 m, up to 4.62 m on the year's biggest exchange; 2026 span -1.25 m to +3.57 m.
 * **Tidal swing.** The tide swings over 3 m on a typical day here: the 18.7 m dive area reads about 17.5 m at the year's lowest low and about 22.3 m at its highest high.
 
 ## Current
@@ -57,7 +57,7 @@ The swim out runs 50° off the entry shore's facing, along the shore toward the 
 
 ## Visibility
 
-* **Typical range.** Usually 1.5 to 4.5 m, often snowy with suspended particles, and under 1.5 m at its worst.
+* **Visibility typical range.** Usually 1.5 to 4.5 m, often snowy with suspended particles, and under 1.5 m at its worst.
 * **Current.** The current stirs the bottom, so visibility runs best near slack.
 * **Season.** Plankton blooms cut visibility hardest in spring and summer.
 * **Light.** Ambient light fades quickly at depth under the bridge; bring a light.

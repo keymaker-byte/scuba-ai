@@ -27,7 +27,7 @@ Natural rock reef shore dive on the southeast shore of Bainbridge Island, at the
 
 ## Depth
 
-* **Typical range.** Median daily 3.45 m, up to 5.10 m on the year's biggest exchange; 2026 span -1.30 m to +4.00 m.
+* **Tide typical range.** Median daily 3.45 m, up to 5.10 m on the year's biggest exchange; 2026 span -1.30 m to +4.00 m.
 * **Tidal swing.** The site sits on the open main basin, and tide swings the depth here by several metres, enough to change which parts of the reef are comfortably worked at a given hour.
 
 | Feature | Below MLLW | At a -1.30 m low | At a +4.00 m high |

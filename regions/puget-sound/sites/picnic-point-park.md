@@ -26,7 +26,7 @@ Picnic Point is a shore dive on the east shore of Possession Sound, on the mainl
 
 ## Depth
 
-* **Typical range.** Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m.
+* **Tide typical range.** Median daily 3.32 m, up to 4.94 m on the year's biggest exchange; 2026 span -1.30 m to +3.85 m.
 * **Tidal swing.** Possession Sound swings up to about 5 m between high and low water here, so depths are given against the MLLW chart datum.
 
 ## Current

@@ -28,7 +28,7 @@ The Fox Island Bridge crosses the west end of Hale Passage, joining Fox Island t
 
 ## Depth
 
-* **Typical range.** Median daily 4.03 m, up to 5.81 m on the year's biggest exchange; 2026 span -1.36 m to +4.68 m.
+* **Tide typical range.** Median daily 4.03 m, up to 5.81 m on the year's biggest exchange; 2026 span -1.36 m to +4.68 m.
 * **Tidal swing.** The tide swings about 4 m on a typical day here and close to 6 m on the largest, so the same pier reads very differently at a low and a high.
 
 Seabed along the bridge, by distance out from the Fox Island abutment, and as it reads at a 0.0 m low and a +4.0 m high:

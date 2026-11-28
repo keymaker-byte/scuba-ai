@@ -26,7 +26,7 @@ Sund Rock South Wall is a boulder-strewn rock wall on the west shore of Hood Can
 
 ## Depth
 
-* **Typical range.** Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m.
+* **Tide typical range.** Median daily 3.46 m, up to 5.56 m on the year's biggest exchange; 2026 span -1.40 m to +4.32 m.
 * **Tidal swing.** Hood Canal swings up to about 5.6 m in a day here, and the tide is the single biggest control on how the site reads. A high tide adds several metres to every feature and floods the shallow bench, which is why the site is usually dived on a tide of 3 m or more. Those high daytime tides fall in winter, which is also when the visibility is best.
 
 | Feature | Below MLLW | At a -1.40 m low | At a +4.32 m high |

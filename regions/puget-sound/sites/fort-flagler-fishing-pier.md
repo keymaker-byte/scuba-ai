@@ -27,7 +27,7 @@ A shore dive on the east side of Marrowstone Island, straight into Admiralty Inl
 
 ## Depth
 
-* **Typical range.** Median daily 2.77 m, up to 4.22 m on the year's biggest exchange; 2026 span -1.25 m to +3.16 m.
+* **Tide typical range.** Median daily 2.77 m, up to 4.22 m on the year's biggest exchange; 2026 span -1.25 m to +3.16 m.
 * **Tidal swing.** Admiralty Inlet's tide swings a few metres a day here, and because the outer reef sits on an open, gently sloping bottom, that swing moves the working depth several metres between a low and a high.
 * **At the reef point.** The 15 m reef point reads about 13.8 m below the surface at the year's lowest low of -1.25 m, and about 18.2 m at its highest high of +3.16 m.
 

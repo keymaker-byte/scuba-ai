@@ -29,7 +29,7 @@ Point Whitney is a shore dive on Hood Canal at the Washington Department of Fish
 
 ## Depth
 
-* **Typical range.** Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m.
+* **Tide typical range.** Median daily 3.46 m, up to 5.18 m on the year's biggest exchange; 2026 span -1.39 m to +4.00 m.
 * **Tidal swing.** Hood Canal's tide swings more here than in the main basin of the Sound, and at Point Whitney it moves the pipe and its blocks a long way vertically. A high tide floods the shallow run several metres deeper than the datum figure; a low tide can leave the top of the pipe close to the surface.
 
 | Feature | Below MLLW | At a -1.39 m low | At a +4.00 m high |

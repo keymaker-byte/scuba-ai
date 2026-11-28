@@ -29,7 +29,7 @@ A Port of Everett beach on the Mukilteo waterfront, on the south shore of Posses
 
 ## Depth
 
-* **Typical range.** Median daily 3.24 m, up to 5.14 m on the year's biggest exchange; 2026 span -1.30 to +3.99 m.
+* **Tide typical range.** Median daily 3.24 m, up to 5.14 m on the year's biggest exchange; 2026 span -1.30 to +3.99 m.
 * **Tidal swing.** Possession Sound swings up to about 5 m between high and low water here, which decides how far the flat is walked and how deep the pier's end reads.
 * **At low and high.** At the year's lowest low of -1.30 m the flat dries for about 110 m out from the entry and the dive area reads 11.7 m below the surface; at its highest high of +3.99 m the whole flat is covered and the dive area reads 17.0 m.
 

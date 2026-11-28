@@ -30,7 +30,7 @@ Shore dive into Outer Bay from Agate Beach County Park, a cobble beach at the so
 
 ## Depth
 
-* **Typical range.** Median daily 2.25 m, up to 3.64 m; 2026 span -1.18 m to +2.63 m.
+* **Tide typical range.** Median daily 2.25 m, up to 3.64 m; 2026 span -1.18 m to +2.63 m.
 * **Tidal swing.** The site swings about 2.3 m between an average high and low water, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
 
 | Feature | Below MLLW | At a -1.18 m low | At a +2.63 m high |
@@ -66,7 +66,7 @@ The beach faces west out of the bay's mouth, past Iceberg Island to the open str
 
 ## Visibility
 
-* **Typical range.** Often milky and cloudy, down to about 1.5 m.
+* **Visibility typical range.** Often milky and cloudy, down to about 1.5 m.
 * **Season.** Winter and early spring bring the clearest water; late spring and summer plankton blooms cut it.
 
 ## Temperature

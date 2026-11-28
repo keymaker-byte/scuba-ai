@@ -30,7 +30,7 @@ Shore dive at Sunrise Beach Park, north of Gig Harbor on the west shore of Colvo
 
 ## Depth
 
-* **Typical range.** Median daily 3.58 m, up to 5.25 m on the year's biggest exchange; 2026 span -1.30 m to +4.16 m.
+* **Tide typical range.** Median daily 3.58 m, up to 5.25 m on the year's biggest exchange; 2026 span -1.30 m to +4.16 m.
 * **Tidal swing.** The tide swings up to about 5 m here, so the top of the wall can read anywhere from about 7 to 13 m on the gauge.
 
 | Feature | Below MLLW | At a -1.30 m low | At a +4.16 m high |

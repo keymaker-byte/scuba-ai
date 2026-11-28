@@ -30,7 +30,7 @@ Shore dive at Reuben Tarte County Park, also known as Reuben Tarte Picnic Area, 
 
 ## Depth
 
-* **Typical range.** Median daily 2.35 m, up to 3.76 m; 2026 span -1.21 m to +2.74 m.
+* **Tide typical range.** Median daily 2.35 m, up to 3.76 m; 2026 span -1.21 m to +2.74 m.
 * **Tidal swing.** The site swings about 2.4 m between an average high and low water, and up to 3.8 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
 
 | Feature | Below MLLW | At a -1.21 m low | At a +2.74 m high |
@@ -67,7 +67,7 @@ Three channels converge at this corner of the island and drive the flow around t
 
 ## Visibility
 
-* **Typical range.** About 3 to 9 m. The water is haziest when the current is running and clearest before the spring bloom.
+* **Visibility typical range.** About 3 to 9 m. The water is haziest when the current is running and clearest before the spring bloom.
 * **Season.** Spring before the bloom reaches about 9 m; summer and early autumn plankton bring it down.
 * **Tide.** Running current lowers it toward the bottom of the range.
 

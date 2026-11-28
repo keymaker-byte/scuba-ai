@@ -29,7 +29,7 @@ Shore dive off the long sand and cobble beach of Ed Munro Seahurst Park in Burie
 
 ## Depth
 
-* **Typical range.** Median daily 3.49 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.32 m to +4.04 m.
+* **Tide typical range.** Median daily 3.49 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.32 m to +4.04 m.
 * **Tidal swing.** The tide swings 3 to 5 m here, a large share of the barge's depth, so depths are given against the MLLW chart datum. A low tide reads several metres shallower than a high.
 
 | Feature | Below MLLW | At a -1.32 m low | At a +4.04 m high |

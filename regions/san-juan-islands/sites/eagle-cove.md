@@ -29,7 +29,7 @@ Shore dive from the beach of Eagle Cove County Park, a wide, secluded south-faci
 
 ## Depth
 
-* **Typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 m to +2.70 m.
+* **Tide typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 m to +2.70 m.
 * **Tidal swing.** The site swings about 2.2 m between an average high and low water, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
 
 | Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
@@ -68,7 +68,7 @@ The beach faces south-southeast out of the cove's mouth, while the dive area's n
 
 ## Visibility
 
-* **Typical range.** About 3 to 12 m, lower in the shallows than out on the rock.
+* **Visibility typical range.** About 3 to 12 m, lower in the shallows than out on the rock.
 * **Season.** Winter and early spring bring the clearest water; late spring and summer plankton blooms cut it, worst in the shallows.
 
 ## Temperature

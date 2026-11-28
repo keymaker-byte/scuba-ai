@@ -25,7 +25,7 @@ Suquamish Dock is a long public dock and boat ramp on the Suquamish waterfront, 
 
 ## Depth
 
-* **Typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
+* **Tide typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
 * **Tidal swing.** The tide swings up to about 5 m here, nearly the whole depth at the dock: the 5.3 m bottom off the dock end reads about 4.0 m at the year's lowest low and about 9.3 m at its highest high.
 
 ## Current

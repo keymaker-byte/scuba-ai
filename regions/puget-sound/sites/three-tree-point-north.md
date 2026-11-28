@@ -29,7 +29,7 @@ The reef is spread across a broad area and is easy to miss piecemeal, so most di
 
 ## Depth
 
-* **Typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m.
+* **Tide typical range.** Median daily 3.52 m, up to 5.20 m on the year's biggest exchange; 2026 span -1.32 m to +4.08 m.
 * **Tidal swing.** East Passage swings 3 to 5 m between high and low water here, a large fraction of the reef's depth, so depths are given against the MLLW chart datum and a low tide reads several metres shallower than a high.
 
 | Feature | Below MLLW | At a -1.32 m low | At a +4.08 m high |

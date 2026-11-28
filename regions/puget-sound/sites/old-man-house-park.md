@@ -26,7 +26,7 @@ Old Man House Park is a small Suquamish Tribe park on the Kitsap Peninsula shore
 
 ## Depth
 
-* **Typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
+* **Tide typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
 * **Tidal swing.** The tide swings up to about 5 m here, a large share of this shallow site's depth: the 9.0 m point off the park reads about 7.7 m at the year's lowest low and about 13.0 m at its highest high.
 
 ## Current

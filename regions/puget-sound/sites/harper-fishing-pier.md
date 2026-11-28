@@ -28,7 +28,7 @@ Shore dive off the Port of Bremerton's public fishing pier at Harper, on Yukon H
 
 ## Depth
 
-* **Typical range.** Median daily 3.48 m, up to 5.13 m on the year's biggest exchange; 2026 span -1.30 m to +4.04 m.
+* **Tide typical range.** Median daily 3.48 m, up to 5.13 m on the year's biggest exchange; 2026 span -1.30 m to +4.04 m.
 * **Tidal swing.** The site is shallow enough that the tide changes its character: at a big low the pier end is barely 3 m deep, at a high it is over 8 m.
 
 | Feature | Below MLLW | At a -1.30 m low | At a +4.04 m high |

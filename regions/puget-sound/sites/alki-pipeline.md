@@ -76,7 +76,7 @@ Important! southwest is up; north is down-right.
 
 ## Depth
 
-* **Typical range.** Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m.
+* **Tide typical range.** Median daily 3.42 m, up to 5.07 m on the year's biggest exchange; 2026 span -1.31 m to +3.96 m.
 * **Profile.** The site is shallow the whole way, sloping gradually from the shallows at the reef start to about 8 to 11 m below datum at the apparent end of the pipe, and a metre or so deeper at the true end.
 * **Tidal swing.** The main basin swings 3 to 5 m between high and low water here, a large fraction of the site's total depth, so depths are given against the MLLW chart datum and a low tide reads noticeably shallower than a high.
 * **Entry.** A higher tide also makes the entry and the surface swim out easier, covering the cobble and shortening the walk to water.

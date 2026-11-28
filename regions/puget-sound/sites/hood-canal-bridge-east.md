@@ -29,7 +29,7 @@ The east end of the Hood Canal Bridge stands on a line of concrete piers running
 
 ## Depth
 
-* **Typical range.** Median daily 3.08 m, up to 4.62 m on the year's biggest exchange; 2026 span -1.25 m to +3.57 m.
+* **Tide typical range.** Median daily 3.08 m, up to 4.62 m on the year's biggest exchange; 2026 span -1.25 m to +3.57 m.
 * **Tidal swing.** The tide swings over 3 m on a typical day here: the 9.9 m dive area reads about 8.7 m at the year's lowest low and about 13.5 m at its highest high.
 
 ## Current
@@ -60,7 +60,7 @@ The swim out runs 57° off the entry shore's facing, along the shore to the brid
 
 ## Visibility
 
-* **Typical range.** Usually 1.5 to 4.5 m, often snowy with suspended particles, and under 1.5 m at its worst.
+* **Visibility typical range.** Usually 1.5 to 4.5 m, often snowy with suspended particles, and under 1.5 m at its worst.
 * **Silt.** The current stirs the fine silt off the sand slope, so visibility is often poor at the piers and best once the water settles near slack.
 * **Season.** Plankton blooms cut visibility hardest in spring and summer.
 

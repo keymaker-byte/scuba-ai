@@ -217,7 +217,7 @@ def cmd_range(a):
     print(f"  max daily range      {hi_day[1]:.2f} m  on {hi_day[0]}")
     print(f"  min daily range      {lo_day[1]:.2f} m  on {lo_day[0]}")
     print(f"  year span            {min(e[2] for e in inyear):+.2f} m to {max(e[2] for e in inyear):+.2f} m")
-    print("\n  Use these for a site file's \"Typical range\" row: median as \"typical,\"")
+    print("\n  Use these for a site file's \"Tide typical range\" bullet: median as \"typical,\"")
     print("  max daily range as \"up to,\" year span as printed.")
 
 

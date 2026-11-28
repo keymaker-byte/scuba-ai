@@ -29,7 +29,7 @@ Four separate dives run from the one beach. Working from the sand entry at the s
 
 ## Depth
 
-* **Typical range.** Median daily 2.38 m, up to 3.80 m on the year's biggest exchange; 2026 span -1.20 m to +2.77 m.
+* **Tide typical range.** Median daily 2.38 m, up to 3.80 m on the year's biggest exchange; 2026 span -1.20 m to +2.77 m.
 * **Tidal swing.** Rosario Bay swings roughly 2 to 4 m between high and low water, so depths are given against the MLLW chart datum. A low tide reads shallower than the datum figure, a high tide deeper.
 
 ## Current

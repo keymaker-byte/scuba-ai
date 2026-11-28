@@ -25,7 +25,7 @@ Sand and eelgrass shore dive at the northeast tip of Bainbridge Island, facing o
 
 ## Depth
 
-* **Typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
+* **Tide typical range.** Median daily 3.42 m, up to 5.06 m on the year's biggest exchange; 2026 span -1.30 m to +3.96 m.
 * **Tidal swing.** The site sits open to the main basin, and tide swings the depth here by several metres across a normal day.
 
 | Feature | Below MLLW | At a -1.30 m low | At a +3.96 m high |

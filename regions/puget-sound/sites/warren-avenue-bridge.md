@@ -26,7 +26,7 @@ Warren Avenue Bridge crosses Port Washington Narrows in Bremerton, the tidal cut
 
 ## Depth
 
-* **Typical range.** Median daily 3.47 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.29 m to +4.08 m.
+* **Tide typical range.** Median daily 3.47 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.29 m to +4.08 m.
 * **Tidal swing.** The dive area sits in shallow water relative to the tidal range here, so the swing between a big low and a big high changes the working depth by more than half: the 8.3 m point between the pylons reads about 7.0 m at the year's lowest low of -1.29 m and about 12.4 m at its highest high of +4.08 m.
 
 ## Current

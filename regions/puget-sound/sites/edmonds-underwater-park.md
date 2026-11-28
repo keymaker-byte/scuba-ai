@@ -111,7 +111,7 @@ The `#` column is the Edmonds to Kingston ferry lane, immediately west of the De
 
 ## Depth
 
-* **Typical range.** Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m.
+* **Tide typical range.** Median daily 3.29 m, up to 4.90 m on the year's biggest exchange; 2026 span -1.30 m to +3.81 m.
 * **Tidal swing.** The park is shallow and the bottom is gentle, so the tide is a large fraction of the depth and also decides how far the beach is exposed. Edmonds swings up to about 4.9 m between high and low water, so depths are given against the MLLW chart datum. A low tide reads shallower than the datum figure and lengthens the walk across the exposed beach; a high tide reads deeper and covers the beach for an easier entry.
 * **Working depth.** The deepest ground lies at the south end toward the ferry, inside the off-limits zone, so most diving stays between about 8 and 12 m below datum.
 

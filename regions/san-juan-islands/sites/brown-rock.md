@@ -28,7 +28,7 @@ Small rock formation in the cove on the Orcas Island side of Obstruction Pass, r
 
 ## Depth
 
-* **Typical range.** Median daily 2.57 m, up to 3.92 m; 2026 span -1.12 m to +2.98 m.
+* **Tide typical range.** Median daily 2.57 m, up to 3.92 m; 2026 span -1.12 m to +2.98 m.
 * **Tidal swing.** The site swings about 2.6 m on a median day, and up to 3.9 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper. The top of the rock stands above the water at low tide.
 
 | Feature | Below MLLW | At a -1.12 m low | At a +2.98 m high |

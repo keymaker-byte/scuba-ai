@@ -27,7 +27,7 @@ A shore dive from the sand beach of Golden Gardens Park in Ballard, Seattle, on 
 
 ## Depth
 
-* **Typical range.** Median daily 3.35 m, up to 4.98 m on the year's biggest exchange; 2026 span -1.30 m to +3.89 m.
+* **Tide typical range.** Median daily 3.35 m, up to 4.98 m on the year's biggest exchange; 2026 span -1.30 m to +3.89 m.
 * **Tidal swing.** The tide swings up to about 5 m here, so depths are given against MLLW.
 
 ## Current

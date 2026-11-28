@@ -28,7 +28,7 @@ Shore dive in a small pebble cove on the west side of San Juan Island, just sout
 
 ## Depth
 
-* **Typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 m to +2.70 m.
+* **Tide typical range.** Median daily 2.24 m, up to 3.64 m; 2026 span -1.11 m to +2.70 m.
 * **Tidal swing.** The site swings about 2.2 m between an average high and low water, and up to 3.6 m on the year's biggest exchange, so depths are quoted against the MLLW chart datum: a minus tide reads shallower than the datum figure, and any height above MLLW reads deeper.
 
 | Feature | Below MLLW | At a -1.11 m low | At a +2.70 m high |
@@ -71,7 +71,7 @@ The bay opens south-southwest between its two rock shores.
 
 ## Visibility
 
-* **Typical range.** About 4.5 to 9 m or more, often murkier over the silty floor of the inner bay.
+* **Visibility typical range.** About 4.5 to 9 m or more, often murkier over the silty floor of the inner bay.
 * **Season.** Winter brings the clearest water; spring and summer plankton blooms cut it, worst in the shallows.
 
 ## Temperature

@@ -30,7 +30,7 @@ Port Washington Narrows is the tidal cut through Bremerton joining Dyes Inlet to
 
 ## Depth
 
-* **Typical range.** Median daily 3.47 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.29 m to +4.08 m.
+* **Tide typical range.** Median daily 3.47 m, up to 5.16 m on the year's biggest exchange; 2026 span -1.29 m to +4.08 m.
 * **Tidal swing.** The drift runs through shallow water relative to the tidal range, so the tide changes the working depth substantially: a 6 m point at MLLW reads under 5 m on a big low and over 10 m on a big high. On a low tide the shallow flat at the exit becomes a long wade to the beach.
 
 ## Current
